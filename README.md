@@ -1,6 +1,6 @@
 # Doki Doki True Route
 
-To install, please find the download links on the reddit thread:
+To install, please find the download links in the reddit thread:
 https://www.reddit.com/r/DDLCMods/comments/84tlpi/wip_doki_doki_true_route/
 
 Here is a link to my discord server if you need help or want to talk about it: https://discord.gg/bd6q3N2
