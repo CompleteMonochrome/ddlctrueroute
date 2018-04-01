@@ -7,17 +7,17 @@ Here is a link to my discord server if you need help or want to talk about it: h
 
 Note: To get to the original content, you must write your poems for Monika in Act One. Otherwise the game will play out exactly the same as the normal DDLC.
 
-Features:
+**Features:**
 
-    Multiple endings for each arc
-    Several hours of new original content
-    New poems by every Doki
-    Your choices affect what happens to the Dokis and how they act (starting mainly from the new content)
-    Custom Start (once you reach part two of the mod you can start from any day in the new content though starting from a day you haven't played yet will spoil you!)
-    Some new original music tracks
-    Monika!
+- Multiple endings for each arc
+- Several hours of new original content
+- New poems by every Doki
+- Your choices affect what happens to the Dokis and how they act (starting mainly from the new content)
+- Custom Start (once you reach part two of the mod you can start from any day in the new content though starting from a day you haven't played yet will spoil you!)
+- Some new original music tracks
+- Monika!
 
-Mod Description:
+**Mod Description:**
 
 Part One (Base Game)
 
@@ -27,10 +27,10 @@ Part Two (New Content)
 
 Successfully making Monika want to help everyone will unlock the new content the mod has to offer. She and Sayori work together to try and fix everyone else's problems but they soon realize things aren't as easy as they thought it would be. They need the help of the player to make sure that everyone ends up with a happy ending...but there's a looming presence that is affecting Monika...
 
-Credits:
+**Credits:**
 
-    Proofreaders: the people of my discord server
-    Background Art: petan, mugenjohncel, BIGLOBE
-    Character Art: Monika After Story Team (particularly: Ryuse [for the new Monika leaning sprite], TheAloofPotato, NotSoGiantDad, Daydreamer, Danymations, Yuro Foxclaw, Therationalpi), Reddit users /u/SovietSpartan, /u/singusasongpianoman, /u/Drealengo, Discord users Malukah Maker, bman and finally MUGかぶり and wingzofdarkness from lemmasoft forums
-    Music: G-RiNe Project, ScubDomino and Reddit users: /u/Zerorurariro and /u/-ShInIgAmIsAmA-
-    Special Thanks: /r/DDLCMods Discord server, Creativetacos
+- Proofreaders: the people of my discord server
+- Background Art: petan, mugenjohncel, BIGLOBE
+- Character Art: Monika After Story Team (particularly: Ryuse [for the new Monika leaning sprite], TheAloofPotato, NotSoGiantDad, Daydreamer, Danymations, Yuro Foxclaw, Therationalpi), Reddit users /u/SovietSpartan, /u/singusasongpianoman, /u/Drealengo, Discord users Malukah Maker, bman and finally MUGかぶり and wingzofdarkness from lemmasoft forums
+- Music: G-RiNe Project, ScubDomino and Reddit users: /u/Zerorurariro and /u/-ShInIgAmIsAmA-
+- Special Thanks: /r/DDLCMods Discord server, Creativetacos
