@@ -1602,7 +1602,6 @@ label ch11_end:
         menu:
             m "...are you sure?"
             "Yes.":
-                $ ch11_monika_dinner = True
                 mc "I've never been more sure of anything in my life."
                 m 1bi "W-What?"
                 mc "I'm glad you accepted my invitation."
@@ -1620,7 +1619,6 @@ label ch11_end:
                 m 1bl "R-Right."
                 jump ch11_dinner
             "No.":
-                $ ch11_monika_dinner = False
                 mc "On second thought..."
                 mc "Monika, I--"
                 m 1be "There's no need."
@@ -2352,6 +2350,7 @@ label ch11_dinner:
             "It won't take long to get some idea of what's going on anyway."
             "Besides..."
             "It's only two chapters so it's not going to take me much time."
+            $ ch11_monika_dinner = True
             if persistent.ch11_task[2]:
                 $ ch11_did_all_tasks = True
                 "Still, I feel like I know what's coming in the manga."
@@ -2396,6 +2395,7 @@ label ch11_dinner:
             "I guess that's all there is to the first volume of that manga."
             "I'm glad I managed to experience and read it..."
             "But I still have to write a poem tomorrow and it's probably gonna be pretty bad."
+            $ ch11_monika_dinner = True
             if persistent.ch11_task[2]:
                 $ ch11_badpoem = False
                 $ ch11_did_all_tasks = True

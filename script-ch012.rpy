@@ -395,7 +395,7 @@ label ch12_main:
         m 2e "It just makes everything a little more complicated for everyone else."
     else:
         m 1c "You should have told us about this before today, Sayori."
-        m "It's irresponsible for you to be making decisions that could affect the club like this."
+        m "It's irresponsible for you to make decisions that could affect the club like this."
     show sayori 2d zorder 3 at f41
     show monika zorder 2 at t44
     s "You're right..."
@@ -547,7 +547,7 @@ label ch12_main:
                 mc "Everyone else seems to be getting this sense of something bad..."
                 mc "I'm not sure I am."
                 mc "If there was something I could do then I'd do it."
-                mc "But I can't promises that I can't keep."
+                mc "But I can't make promises that I can't keep."
                 mc "So I can't really say that I'll help her."
                 mc "And I don't really want to."
                 "That last part came out suddenly..."
@@ -595,7 +595,7 @@ label ch12_main:
                 show sayori zorder 2 at t21
                 show monika 3e zorder 3 at f22
                 m "At the same time, you can't really blame [player] for this."
-                m "He's just honestly saying what on his mind."
+                m "He's just honestly saying what's on his mind."
                 m "Isn't it better to tell the truth than lie to someone you care about...?"
                 show sayori 1f zorder 3 at f21
                 show monika zorder 2 at t22
@@ -672,7 +672,7 @@ label ch12_main:
     show sayori 1f at h41
     "Sayori tries to stand tall."
     s "Alright, everybody..."
-    s "Its time to share our poems."
+    s "It's time to share our poems."
     # Read everyone's poems
     $ y_ranaway = False
     $ s_ranaway = False
@@ -932,7 +932,7 @@ label ch12_play:
         mc "Control...me...?"
         m 2b "Well, that's partially inaccurate."
         m "I'm still able to control you now but it's through Monika's influence now and not my own."
-        mc "This sounds ridicolous."
+        mc "This sounds ridiculous."
         m 2e "It definitely does."
         mc "So why are you telling me any of this at all?"
         m 2h "When I obtained Monika's memories there was this deep feeling of...something."
@@ -1058,7 +1058,7 @@ label ch12_play:
     s 4l "Well, let's just say you might not like him."
     mc "Might not like him...?"
     "I don't dislike a lot of people so Sayori narrowed down the list of people I can think of by a lot."
-    "I don't know why any of those people could come to watch us read off pieces of paper though..."
+    "I don't know why any of those people would come to watch us read off pieces of paper though..."
     s 1d "Anyway, you should get ready."
     if not ch11_read_manga and not ch11_did_all_tasks:
         s "Especially since I know you didn't really have time to finish the manga..."
@@ -1095,12 +1095,12 @@ label ch12_play:
         mc "Ah...not really."
         mc "I kinda looked over it a little and it looks like one of them is having trouble with a family member or something..."
         s "Well, it might be important that you really know what's going on in the story."
-        s 1d "Still, I guess it doesn't really matter since you all you really have to do is read."
+        s 1d "Still, I guess it doesn't really matter since all you really have to do is read."
     s 2q "I'll go get everybody else, then we can start."
     scene bg gym with wipeleft_scene
     play music t5 fadeout 1.0
     "It's time for the start of the second play."
-    "We all decided I play the main male character..."
+    "We all decided that I play the main male character..."
     "...who happens to be the most useless one in the volume."
     "Though I guess it makes the most sense that I play this role."
     "The personalities of the other characters suit everyone else more than me..."
@@ -1121,7 +1121,7 @@ label ch12_play:
     mc "So hand him over, and nobody else has to get hurt."
     show sayori 2j zorder 2 at t11
     s "I don't think so."
-    s "You're going to have to get through us first if you want to get to him."
+    s "You'll have to get through us first if you want to get to him."
     mc "Fine by me."
     "The line directly after that is by male protagonist."
     "I think his name was Maemi Chino or something."
@@ -1218,7 +1218,7 @@ label ch12_play:
         "I hear a faint whisper in my head..."
         "Do I really want to do this?"
         label ch12_strawberry2:
-        "I'm going to look ridicolous..."
+        "I'm going to look ridiculous..."
         window auto
         menu:
             "But it's for Sayori...right?"
@@ -1231,13 +1231,13 @@ label ch12_play:
                 "This is too weird."
                 "I really don't want to do this."
                 "Even if it's just in front of the other members of the Literature Club..."
-                "They'll probably think less of me for doing something so ridicolous."
+                "They'll probably think less of me for doing something so ridiculous."
                 mc "Sayori..."
                 mc "I'm not doing this."
                 show sayori 1h zorder 2 at t11
                 s "W-What...?"
                 s "W-Why not?"
-                mc "I'm going to look ridicolous..."
+                mc "I'm going to look ridiculous..."
                 mc "And is this really necessary...?"
                 mc "It seems like such a childish thing to be doing."
                 s 1j "[player]..."
@@ -1463,7 +1463,7 @@ label ch12_play:
                 m 2e "I suppose it is called the {i}last resort{/i} for a reason."
     else:
         m 2c "Perhaps this way could be right..."
-        m "I've doubted your ability to make use strawberries, Maemi."
+        m "I've doubted your ability to make use of strawberries, Maemi."
         m 2f "I've often wondered why you were born with such a gift and not me..."
         m 2g "In fact, if it weren't for Saika's pleas that you do have the ability to move within a time stop..."
         m "...then I would never believe you have that sort of power at all."
@@ -1526,7 +1526,7 @@ label ch12_play:
         s 1k "Yet..."
         s "I can't help but feel you deserve one more chance."
         s "A chance at redemption, like Monika."
-        s 1j "I'm going to tone down Natsuk's reluctance..."
+        s 1j "I'm going to tone down Natsuki's reluctance..."
         s 1h "It's only going to work this one time...if you do anything again she'll remember..."
         s "And this would have been for nothing..."
         s "You know..."
@@ -1591,6 +1591,12 @@ label ch12_play:
     "It's none other than..."
     show dadsuki 1h zorder 2 at t11
     d "You?!"
+    d "What are you in doing here?"
+    show natsuki 1a zorder 3 at f31
+    n "D-Dad?!"
+    n "W-What's the big idea?"
+    show natsuki zorder 2 at t31
+    show yuri 1a zorder 3 at f33
     call screen dialog(message="End of Update...", ok_action=Quit(confirm=False))
     return
 
