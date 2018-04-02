@@ -403,7 +403,7 @@ label ch12_main:
     s "I really should have told you guys..."
     s 2c "But to be honest, it was kind of a last minute thing..."
     s "I wasn't even sure if I could convince the president if I could use the space."
-    s "It's kind of a miracle he agreed."
+    s "It's a miracle he agreed."
     show sayori zorder 2 at t41
     "Sayori looks around the room."
     "I think she's looking for approval but can't find any."
