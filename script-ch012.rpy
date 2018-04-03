@@ -974,7 +974,7 @@ label ch12_play:
         m "I'm not sure if 'person' is really the right word to describe me."
         mc "What in the world are you talking about?"
         m 1a "You have noticed me acting differently, right?"
-        m "Surely you aren't that dense."
+        m "Surely you aren't {i}that{/i} dense."
         mc "Um...I guess you have been."
         mc "Though this still doesn't explain why you look and sound like Monika..."
         mc "Or the reason you're telling me any of this at all."
@@ -1047,10 +1047,10 @@ label ch12_play:
     mc "So you did prepare another one..."
     show sayori 4q at t11
     s "Of course I did!"
-    s "I knew no one else would and it would be pretty bad if we didn't know what we were doing."
+    s "I knew no one else would, and it would be pretty bad if we didn't know what we were doing."
     s 4d "Especially with our special guest arriving soon."
     mc "Oh, I was meaning to ask."
-    s "Who the special guest is?"
+    s "Who is the special guest?"
     s "I think you're probably familiar with him."
     mc "Are you going to tell me his name?"
     s 4q "I think that's best left as a surprise, [player]."
@@ -1134,7 +1134,7 @@ label ch12_play:
     s 4d "It was kinda funny..."
     show natsuki 1b zorder 3 at f31
     n "Sayori, come on."
-    n 1e "The rest of us haven't even said a line yet and you're already going off script."
+    n 1e "The rest of us haven't even said a line yet, and you're already going off script."
     show natsuki zorder 2 at t31
     show sayori 3l zorder 3 at f11
     s "Sorry, Natsuki..."
