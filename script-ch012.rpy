@@ -1591,7 +1591,7 @@ label ch12_play:
     "It's none other than..."
     show dadsuki 1h zorder 2 at t11
     d "You?!"
-    d "What are you in doing here?"
+    d "What are you doing in here?"
     show natsuki 1a zorder 3 at f31
     n "D-Dad?!"
     n "W-What's the big idea?"
@@ -1622,7 +1622,7 @@ label ch12_play:
     show monika zorder 2 at t41
     show dadsuki zorder 3 at f43
     d "School?!"
-    d "What am I doing here?"
+    d "Why would she tell me to come here...?"
     call screen dialog(message="End of Update...", ok_action=Quit(confirm=False))
     return
 
