@@ -28,7 +28,7 @@ label ch12_main:
     scene bg club_day with dissolve_scene_half
     play music t2
     "Sayori told me on the phone this morning that she would meet me in the club."
-    "I haven't seen her since yesterday but it's not like I'm worried for her or anything."
+    "I haven't seen her since yesterday, but it's not like I'm worried for her or anything."
     "She's more than capable of handling herself."
     "Somehow I'm the first one in the clubroom."
     "It's a little strange being here alone."
@@ -38,7 +38,7 @@ label ch12_main:
         $ monika_type = 0
         show monika 1e zorder 2 at t11
         m "Hi [player]..."
-        m "Sleep well?"
+        m "Slept well?"
         mc "I suppose."
         m "That's good."
         m 2e "I hope you aren't too worn out from everything."
@@ -147,7 +147,7 @@ label ch12_main:
         m "It's a little irresponsible of her, don't you think?"
         mc "Um..."
         "Something about Monika seems kinda off."
-        "I can't quite figure it out but it's almost like she's got a completely different personality."
+        "I can't quite figure it out, but it's almost like she's got a completely different personality."
         "Or has she always been like this?"
         "I haven't really noticed it until now..."
         mc "Not really?"
@@ -533,7 +533,7 @@ label ch12_main:
             "I'll do what I can.":
                 mc "Natsuki is my friend."
                 mc "So it would be wrong not to help."
-                mc "Or at least do all I can to try."
+                mc "Or at least, do all I can to try."
             "Why would I help Natsuki?" if ch12_natsuki_help:
                 $ ch12_natsuki_help = False
                 $ sayori_personality += 1
