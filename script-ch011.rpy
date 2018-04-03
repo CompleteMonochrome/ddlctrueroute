@@ -849,7 +849,6 @@ label ch11_main:
     return
 
 label ch11_end:
-    $ ch11_read_manga = True
     "It's a shame it didn't last longer."
     "But I'm home now and it looks like there's still time to visit Natsuki."
     "Something tells me I should bring my bag with me to Natsuki's house."
@@ -2090,6 +2089,7 @@ label ch11_end:
     "I don't mind writing poems anyway and if Sayori thinks we should share poems tomorrow then..."
     "I should probably do what she says."
     $ ch11_did_all_tasks = True
+    $ ch11_read_manga = True
     $ ch11_badpoem = False
     return
 

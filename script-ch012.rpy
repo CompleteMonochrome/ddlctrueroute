@@ -1597,6 +1597,32 @@ label ch12_play:
     n "W-What's the big idea?"
     show natsuki zorder 2 at t31
     show yuri 1a zorder 3 at f33
+    y "Natsuki...this is your father?"
+    y "Is this perhaps the 'special guest' that Sayori was talking about?"
+    y "But why would she keep something like this secret..."
+    show dadsuki zorder 3 at f11
+    show yuri zorder 2 at t33
+    d "Listen, I don't know what's going on here."
+    d "Why are you clowns even here?"
+    show dadsuki zorder 2 at t11
+    mc "I could be asking you the same question."
+    show dadsuki zorder 3 at f11
+    d "You're the delivery boy, aren't you?"
+    d "I was just told to come here if I ever wanted a chance at seeing her again."
+    d "I would take any chance at seeing her again..."
+    d "That still doesn't explain why any of you are here."
+    show monika 1a zorder 3 at f41
+    show natsuki zorder 2 at t42
+    show dadsuki zorder 2 at t43
+    show yuri zorder 2 at t44
+    if monika_type == 0:
+        m "Well, you're actually at our school."
+    else:
+        m "Because we're at school."
+    show monika zorder 2 at t41
+    show dadsuki zorder 3 at f43
+    d "School?!"
+    d "What am I doing here?"
     call screen dialog(message="End of Update...", ok_action=Quit(confirm=False))
     return
 
