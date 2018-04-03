@@ -1591,7 +1591,7 @@ label ch12_play:
     "It's none other than..."
     show dadsuki 1h zorder 2 at t11
     d "You?!"
-    d "What are you in doing here?"
+    d "What are you doing in here?"
     show natsuki 1a zorder 3 at f31
     n "D-Dad?!"
     n "W-What's the big idea?"
