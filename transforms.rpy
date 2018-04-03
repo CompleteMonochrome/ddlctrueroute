@@ -80,7 +80,16 @@ transform lhide:
     on hide:
         easeout .25 xcenter -300
 
-
+transform t51:
+    tcommon(176)
+transform t52:
+    tcommon(408)
+transform t53:
+    tcommon(640)
+transform t54:
+    tcommon(872)
+transform t55:
+    tcommon(1104)
 transform t41:
     tcommon(200)
 transform t42:
@@ -102,6 +111,16 @@ transform t22:
 transform t11:
     tcommon(640)
 
+transform i51:
+    tinstant(176)
+transform i52:
+    tinstant(408)
+transform i53:
+    tinstant(640)
+transform i54:
+    tinstant(872)
+transform i55:
+    tinstant(1104)
 transform i41:
     tinstant(200)
 transform i42:
@@ -123,6 +142,16 @@ transform i22:
 transform i11:
     tinstant(640)
 
+transform f51:
+    focus(176)
+transform f52:
+    focus(408)
+transform f53:
+    focus(640)
+transform f54:
+    focus(872)
+transform f55:
+    focus(1104)
 transform f41:
     focus(200)
 transform f42:
@@ -144,6 +173,16 @@ transform f22:
 transform f11:
     focus(640)
 
+transform s51:
+    sink(176)
+transform s52:
+    sink(408)
+transform s53:
+    sink(640)
+transform s54:
+    sink(872)
+transform s55:
+    sink(1104)
 transform s41:
     sink(200)
 transform s42:
@@ -165,6 +204,16 @@ transform s22:
 transform s11:
     sink(640)
 
+transform h51:
+    hop(176)
+transform h52:
+    hop(408)
+transform h53:
+    hop(640)
+transform h54:
+    hop(872)
+transform h55:
+    hop(1104)
 transform h41:
     hop(200)
 transform h42:
@@ -186,6 +235,16 @@ transform h22:
 transform h11:
     hop(640)
 
+transform hf51:
+    hopfocus(176)
+transform hf52:
+    hopfocus(408)
+transform hf53:
+    hopfocus(640)
+transform hf54:
+    hopfocus(872)
+transform hf55:
+    hopfocus(1104)
 transform hf41:
     hopfocus(200)
 transform hf42:
@@ -207,6 +266,16 @@ transform hf22:
 transform hf11:
     hopfocus(640)
 
+transform d51:
+    dip(176)
+transform d52:
+    dip(408)
+transform d53:
+    dip(640)
+transform d54:
+    dip(872)
+transform d55:
+    dip(1104)
 transform d41:
     dip(200)
 transform d42:
@@ -228,6 +297,16 @@ transform d22:
 transform d11:
     dip(640)
 
+transform l51:
+    leftin(176)
+transform l52:
+    leftin(408)
+transform l53:
+    leftin(640)
+transform l54:
+    leftin(872)
+transform l55:
+    leftin(1104)
 transform l41:
     leftin(200)
 transform l42:
