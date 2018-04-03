@@ -1,16 +1,11 @@
 init python:
     if not persistent.n_playday[4]:
         def yuu_placecheck(event, interact=True, **kwargs):
-<<<<<<< HEAD
-            #try:
-            #    renpy.file("../characters/yasuhiro.chr")
-            #except:
-=======
             try:
-                #renpy.file("../characters/yasuhiro.chr")
+                renpy.file("../characters/yasuhiro.chr")
+                renpy.jump("ch12_yuuplace")
             except:
->>>>>>> 32310bf929d9d1cb88a1d84373d98c31a13688fa
-                #renpy.jump("ch10_delete")
+                # Something here soon
 
 label ch12_main:
     # Setup Call for currentuser
@@ -1899,14 +1894,9 @@ label ch12_play:
     s "I didn't think I'd need your help either."
     s "But it seems that I can't just restore people out of thin air."
     s "Do you know what that means?"
-<<<<<<< HEAD
     return
 
-label ch12_yuucreate:
-=======
-
 label ch12_yuuplace:
->>>>>>> 32310bf929d9d1cb88a1d84373d98c31a13688fa
     return
 
 label ch12_end:
