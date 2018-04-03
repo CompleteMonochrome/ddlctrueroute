@@ -546,7 +546,7 @@ label ch12_main:
                 mc "Or any of you, really..."
                 mc "Everyone else seems to be getting this sense of something bad..."
                 mc "I'm not sure I am."
-                mc "If there was something I could do then I'd do it."
+                mc "If there was something I could do, then I'd do it."
                 mc "But I can't make promises that I can't keep."
                 mc "So I can't really say that I'll help her."
                 mc "And I don't really want to."
@@ -596,7 +596,7 @@ label ch12_main:
                 show monika 3e zorder 3 at f22
                 m "At the same time, you can't really blame [player] for this."
                 m "He's just honestly saying what's on his mind."
-                m "Isn't it better to tell the truth than lie to someone you care about...?"
+                m "Isn't it better to tell the truth than to lie to someone you care about...?"
                 show sayori 1f zorder 3 at f21
                 show monika zorder 2 at t22
                 s "That's..."
