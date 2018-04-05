@@ -809,7 +809,7 @@ label natsuki_exclusive_3:
     n "Well, this may seem odd..."
     n "But do you remember my first poem?"
     mc "Uh..."
-    "I try my hardest to try and remember her poem."
+    "I try my hardest to try to remember her poem."
     "My memory fails me, so instead of lying I'm just going to be honest."
     "I figure that giving her a bad answer will probably make her feel worse."
     mc "Well, I honestly can't..."

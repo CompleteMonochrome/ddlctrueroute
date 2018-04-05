@@ -56,6 +56,11 @@ init python:
         except: pass
         try: open(config.basedir + "/characters/yasuhiro.chr", "wb").write(renpy.file("yasuhiro.chr").read())
         except: pass
+    def insert_momsuki_character():
+        try: os.remove(config.basedir + "/characters/yuu.chr")
+        except: pass
+        try: open(config.basedir + "/characters/yuu.chr", "wb").write(renpy.file("yuu.chr").read())
+        except: pass
     def pause(time=None):
         if not time:
             renpy.ui.saybehavior(afm=" ")

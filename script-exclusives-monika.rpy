@@ -245,7 +245,7 @@ label monika_exclusive_2:
     show monika 2m at t11
     m "That's really nice of you to say..."
     m "...But I'm afraid it's more complicated than you think."
-    "She clearly seems uncomfortable about this, I'll try and change the topic."
+    "She clearly seems uncomfortable about this, I'll try to change the topic."
     mc "So where's Sayori? I saw her here a few moments ago."
     m 1a "Ah, she just left to get supplies for posters we're making for the festival."
     m "You know crayons, poster paper and some stationery."

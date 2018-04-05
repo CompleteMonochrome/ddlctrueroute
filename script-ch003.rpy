@@ -121,7 +121,7 @@ label ch3_main:
             $ ignore_sayori = False
             $ sayori_save += 1
             pass
-        "Try and have fun like Sayori said.":
+        "Try to have fun like Sayori said.":
             $ ignore_sayori = True
             jump ch3_ignore
     "I timidly approach Monika, who is shuffling through some papers at her desk."
@@ -230,7 +230,7 @@ label ch3_main:
         jump ch3_start_none
 
 label ch3_ignore:
-    "Well, she did say I should try and have fun."
+    "Well, she did say I should try to have fun."
     "Maybe somebody wants to talk."
     jump ch3_activities
 
@@ -605,12 +605,12 @@ label ch3_start_monikab:
     m 1b "It's just what I've been thinking about lately."
     m "I think it might even be affecting the way I write my poems."
     mc "In that case..."
-    mc "I think I'd try and find a way to escape."
+    mc "I think I'd try to find a way to escape."
     mc "Or at least, make contact with the real world."
     mc "If that's not possible, I'd make the most of the situation."
-    mc "I'd try and find the limits of the world."
+    mc "I'd try to find the limits of the world."
     mc "Maybe cause a glitch in the simulation."
-    mc "To try and break it--"
+    mc "To try to break it--"
     mc "Ahaha, this sounds like something in an anime I've seen..."
     mc "But right now, you're probably thinking I'm weird."
     m 1e "No, not at all!"
@@ -618,11 +618,11 @@ label ch3_start_monikab:
     m "If anything, I'm the weird one."
     m "So please, go on."
     mc "Alright..."
-    mc "I wouldn't try and fully break the simulation though."
+    mc "I wouldn't try to fully break the simulation though."
     mc "It could affect the other people within it."
     mc "After all, their whole lives may have been simulated."
     mc "How would they react, especially if they weren't expecting it like me?"
-    mc "Maybe I'd try and backup the people in case something goes wrong..."
+    mc "Maybe I'd try to backup the people in case something goes wrong..."
     mc "But other than that, I'm kinda clueless where to go from there."
     m 1a "That's quite interesting."
     mc "Oh?"

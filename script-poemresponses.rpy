@@ -961,7 +961,7 @@ label ch2_n_med:
                 n 2q "Whatever it is, I don't get it..."
                 n "...Oh, yeah, I guess I'm supposed to show you my poem."
                 n "Here."
-            else:    
+            else:
                 n 2c "Come to think of it, this kind of reminds me of Sayori's poem from yesterday..."
                 mc "Eh? You think so?"
                 n 2j "Yeah. Well I guess if you've been friends with her for so long, you might be on the same wavelength."
@@ -2607,7 +2607,7 @@ label m_monika_1:
     if poemsread == 0:
         "The poem must be terrible."
         "I can already tell this was a mistake."
-    else:     
+    else:
         "Was the poem that bad?"
         "The others didn't seem to think it was {i}that{/i} bad."
     mc "It's not very good, is it?"
@@ -2720,7 +2720,7 @@ label m_monika_2:
     m 2d "This..."
     m 1a "Your writing is certainly improving, at least in my opinion."
     m 4c "It's starting to feel like your actively trying to write abstract poems."
-    mc "Well, I did put a bit more time to try and make it more abstract."
+    mc "Well, I did put a bit more time to try to make it more abstract."
     m 2a "What's inspiring you to write like this?"
     m 5 "It isn't me, is it?"
     "It's true my writing has become a little abstract, maybe Monika {i}has{/i} inspired me."
@@ -2861,7 +2861,7 @@ label m_monika_3:
         else:
             "What's this? Maybe this is a little too abstract for her tastes."
         "She's just standing there with her eyes closed, maybe I should say something."
-        mc "S-Sorry I thought I'd try and make it more abstract this time."
+        mc "S-Sorry I thought I'd try to make it more abstract this time."
         mc "I think I went a bit overboard."
         m 1p "No it's not that."
     m 1m "This poem, just gets me...a lot."

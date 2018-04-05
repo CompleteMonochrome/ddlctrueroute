@@ -1,11 +1,8 @@
 init python:
     if not persistent.n_playday[4]:
         def yuu_placecheck(event, interact=True, **kwargs):
-            try:
-                renpy.file("../characters/yasuhiro.chr")
+            if renpy.loadable("../characters/yuu.chr")
                 renpy.jump("ch12_yuuplace")
-            except:
-                # Something here soon
 
 label ch12_main:
     # Setup Call for currentuser
@@ -313,7 +310,7 @@ label ch12_main:
     n "Something feels wrong about today."
     n 2m "Like something bad is going to happen?"
     n "That's why I can't wait for it to be over."
-    n 2c "But I suppose I'll try and enjoy it..."
+    n 2c "But I suppose I'll try to enjoy it..."
     show natsuki zorder 2 at t32
     show monika zorder 3 at f33
     if monika_type == 0:
@@ -1264,7 +1261,7 @@ label ch12_play:
                 s "Oh no..."
                 s "I have to do it, don't I?"
                 show sayori zorder 2 at t11
-                mc "What are you going to have to do?{nw}"
+                mc "What are you going to do?{nw}"
                 show screen tear(20, 0.1, 0.1, 0, 40)
                 window hide(None)
                 play sound "sfx/s_kill_glitch1.ogg"
@@ -1297,12 +1294,12 @@ label ch12_play:
     "But honestly..."
     "This feeling that I have is making it seem like I could care less."
     show sayori 1d zorder 2 at t11
-    s "Try and use your power Maemi, I'll do the same."
+    s "Try to use your power Maemi, I'll do the same."
     "Their power is some sort of time manipulation ability."
     "In the manga, it stops time and allows them to finish off the thugs pretty quickly."
     "However, in the scene only Saika can activate the ability properly."
     mc "It's not working!"
-    s 2e "Then...just try and keep up."
+    s 2e "Then...just try to keep up."
     "We start running around the gym without a care in the world."
     show sayori 4q
     "I can't help but feel like I'm actually having fun..."
@@ -1355,12 +1352,12 @@ label ch12_play:
     show natsuki 1q zorder 3 at f42
     show sayori zorder 2 at t44
     n "There's nothing you can do, Saika..."
-    n "Even with your powers of time manipulation, it's far too late to do anything in the past."
+    n "Even with your powers of time manipulation, it's far too late to do change the past."
     n 2s "You can't change what's happened, not like this."
     show natsuki zorder 2 at t42
     show sayori 2k zorder 3 at f44
     s "Maybe if Maemi and I combine our strength..."
-    s "If he can control his ability, just for a litte bit, then..."
+    s "If he could control his ability, just for a litte bit, then..."
     show natsuki 1y zorder 3 at f42
     show sayori zorder 2 at t44
     n "Hah! I doubt it."
@@ -1508,6 +1505,8 @@ label ch12_play:
             renpy.music.play(track, loop=True)
         pause 1.0
         stop music
+        $ config.skipping = False
+        $ config.allow_skipping = False
         s 1i "Time's frozen."
         s 1j "You did know I can manipulate time, right?"
         s "Just like that character in the manga..."
@@ -1539,14 +1538,14 @@ label ch12_play:
         s 1h "It's only going to work this one time...if you do anything again she'll remember..."
         s "And this would have been for nothing..."
         s "You know..."
-        s 1k "I haven't touched anybody's character files to change their personalities up until now."
+        s 1k "I hate doing things like this..."
         # Just for effect
         python:
             try: os.remove(config.basedir + "/characters/natsuki.chr")
             except: pass
             try: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsukismall.chr").read())
             except: pass
-        s "You're making me do terrible things..."
+        s "You're making me do really terrible things just to let them be happy..."
         s "I really h--{nw}"
         $ persistent.n_playday[3] = True
         $ _history_list = []
@@ -1563,6 +1562,7 @@ label ch12_play:
         stop sound
         hide screen tear
         window show(None)
+        $ config.allow_skipping = True
         jump ch12_strawberry4
     else:
         n 1k "Even with Saika's help, it seems like an impossible task."
@@ -1758,7 +1758,7 @@ label ch12_play:
     show dadsuki zorder 3 at f43
     d "I know she's coming..."
     d "I heard her voice."
-    d "She told me to meet her here."
+    d "Then someone else told me to go here if I ever wanted to see her again..."
     d "I'll take any chance..."
     d "...I just want to see her face again..."
     show yuri zorder 3 at f44
@@ -1864,39 +1864,202 @@ label ch12_play:
     else:
         m "Who knows?"
         m "Probably off doing--"
-    show monika zorder 2 at t44
+    show monika zorder 2 at t41
     "The gym doors suddenly burst open again."
     show sayori 1a zorder 3 at f51
-    show natsuki zorder 2 at t52
-    show yuri zorder 2 at t53
+    show monika zorder 2 at t52
+    show natsuki zorder 2 at t53
     show dadsuki zorder 2 at t54
-    show monika zorder 2 at t55
+    show yuri zorder 2 at t55
     s "Alright, everybody!"
     s "I'm back!"
-    s "Just a second..."
-    python:
-        currentpos = get_pos()
-        startpos = currentpos - 0.3
-        if startpos < 0: startpos = 0
-        track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/t9.ogg"
-        renpy.music.play(track, loop=True)
-    pause 1.0
-    stop music
-    s "I'm going to need you to do something for me."
-    s "I've frozen them in time."
-    s "It's an ability I've learned to use ever since I got the manga."
-    if persistent.n_playday[3]:
-        s "But, you already knew that."
-    s "Anyway, I've done this because..."
-    s "I need you to do something for me."
-    s "I have to ask you to make a file for me."
-    s "Strange, right?"
-    s "I didn't think I'd need your help either."
-    s "But it seems that I can't just restore people out of thin air."
-    s "Do you know what that means?"
-    return
+    if check_some_house:
+        s "Just a second..."
+        python:
+            currentpos = get_pos()
+            startpos = currentpos - 0.3
+            if startpos < 0: startpos = 0
+            track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/t9.ogg"
+            renpy.music.play(track, loop=True)
+        pause 1.0
+        stop music
+        $ config.skipping = False
+        $ config.allow_skipping = False
+        s "I'm going to need you to do something for me."
+        s "I've frozen them in time."
+        s "It's an ability I've learned to use ever since I got the manga."
+        if persistent.n_playday[3]:
+            s "But, you already knew that."
+        s "Anyway, I've done this because..."
+        s "I need you to do something for me."
+        s "I have to ask you to make a file for me."
+        s "Strange, right?"
+        s "I didn't think I'd need your help either."
+        s "But it seems that I can't just restore people out of thin air."
+        s "Do you know what that means?"
+        s "She was dead, before now."
+        s "I tried looking for her for a long time, you have to believe me."
+        s "I even looked deep into the files of the game itself..."
+        s "But..."
+        s "All I found was broken pieces of what once was."
+        s "It's not like I could just eat a strawberry to before it all happened..."
+        s "I wasn't the president of the Literature Club when it happened so I wouldn't have any strawberries in the first place."
+        s "Also, changing an event like that in Natsuki's life could change the whole future..."
+        s "I could never have become president, Natsuki may never have joined the club and you might never have been here..."
+        s "Anyway..."
+        s "I could only find scattered pieces of her, it's like she wasn't a 'full' person..."
+        s "...or that she died."
+        s "I didn't really want to think about that..."
+        if persistent.sayori_natsuki_bad_ending:
+            s "But both of us know all too well that she was a person before everything..."
+        else:
+            s "But everything suggests that she was a person before all of this."
+        s "I guess that's why I searched so long, you know?"
+        s "Time might not have passed for you but I spent weeks of my own time looking."
+        s "And the only thing I can think of happening is that she ended her own life."
+        s "Maybe she wanted to come back to her life with Yasuhiro and Natsuki..."
+        s "But knew it would only bring everyone pain."
+        s "So she probably just..."
+        s "...well, let's not dwell on the details."
+        $ s.display_args["callback"] = yuu_placecheck
+        s "I froze time, right now, for your help."
+        s "So I'd really appreciate it if you could."
+        s "Just call it 'yuu.chr' and put it into the characters folder."
+        s "You can just copy one of our character files if you need to..."
+        s "I just need a base to work with so that I know what to look for in the game files."
+        s "Your representation of a character file and mine are completely different..."
+        s "So it's easier for you to do this."
+        s "Right now, would be perfect."
+        s "I suppose I could always try something..."
+        s "It might not work and you might not be what you're hoping for..."
+        s "...unless you're actually hoping for a bad ending."
+        s "But that's not true...right?"
+        s "I hope it isn't..."
+        s "Any time now would be good."
+        s "Like...maybe now?"
+        s "No?"
+        if persistent.n_playday[3]:
+            s "Who am I kidding?"
+            s "You're going for a bad ending, aren't you?"
+            s "You've already tried once today, what's stopping you from trying again?"
+            s "Nothing..."
+        s "Please, just create the file."
+        s "I don't need to open the console to check if it's there."
+        s "I can feel it."
+        s "As soon as you create it, it should all be good..."
+        s "..."
+        s "You aren't going to do it, are you?"
+        s "I suppose this other path will have to do, won't it?"
+        $ s.display_args["callback"] = None
+        s "It's definitely not how I wanted this to go but..."
+        s "This is what you want and I can't do anything about it..."
+        jump ch12_yuunoplace
+    else:
+        s "It looks like our special guest has arrived!"
 
 label ch12_yuuplace:
+    $ persistent.n_playday[4] = True
+    $ s.display_args["callback"] = None
+    s "Oh...you actually did it."
+    s "Thank you so much."
+    s "I know what to look for in the game files now..."
+    s "...at least, I think so."
+    s "Just wait a second..."
+    pause 1.0
+    $ insert_momsuki_character()
+    s "There, that should do it."
+    s "I'm not sure if this will work...but it's our best choice, right?"
+    s "It's better than leaving Natsuki and the others to deal with it themselves."
+    s "..."
+    s "Are you wondering how Yasuhiro heard her voice?"
+    s "It's pretty sad..."
+    s "It was the only thing of her that I could find that was still 'whole'."
+    s "I just played her voice through the phone..."
+    s "She said \"I love you\"...I guess that's why he actually agreed to come."
+    if check_whole_house:
+        s "He probably would have acted a lot different today if you didn't check all of Natsuki's house."
+        s "When we saw everything that happened..."
+        s "I felt...sorry for him."
+        s "And I'll be honest with you..."
+        s "I changed him a little bit...I had to."
+        s "I didn't change who he was, or what he knows..."
+        s "I just brought back that feeling of..."
+        s "...love."
+    s "..."
+    s "Look, I know I can be a bit demanding sometimes..."
+    s "If you hate me for it, then I can't blame you."
+    s "But I won't stop, not until everyone get their happy ending."
+    s "Sorry, I've already taken up more of your time than I needed to."
+    s "The rest of them won't experience what the two of us just did."
+    $ audio.t9b = "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
+    play music t9b fadein 0.5
+    pause 0.5
+    $ config.allow_skipping = True
+    s "Oh, it's our special guest!"
+    s "Welcome! I wasn't expecting you to arrive so early~"
+    show sayori zorder 2 at t51
+    show dadsuki zorder 3 at f54
+    d "That voice..."
+    d "You were the one on the phone!"
+    d "Where is she? I have to see her!"
+    show sayori zorder 3 at f51
+    show dadsuki zorder 2 at t54
+    s "Heeeeey, calm down."
+    s "I don't know what you're talking about."
+    s "You're here to watch us perform our play and nothing more."
+    show sayori zorder 2 at t51
+    show dadsuki zorder 3 at f54
+    d "What?!"
+    d "This wasn't part of the agreement..."
+    show natsuki zorder 3 at f53
+    show dadsuki zorder 2 at t54
+    n "Agreement?!"
+    n "Sayori, what did you and my dad talk about?!"
+    n "Why is he the special guest and why did you keep it such a secret?!"
+    show sayori zorder 3 at f51
+    show natsuki zorder 2 at t53
+    s "Natsuki, I know you have a lot of questions."
+    s "I'll answer them all later."
+    s "Right now, we have a play to finish."
+    s "So if you don't mind, {i}Yasuhiro{/i}."
+    show sayori zorder 2 at t51
+    show yuri zorder 3 at f55
+    y "Sayori...H-How do you know Natsuki's dad?"
+    show dadsuki zorder 3 at f54
+    show yuri zorder 2 at t55
+    if check_whole_house:
+        d "I don't know who she is..."
+        d "She just told me that I should be here today..."
+        d "Already I can tell she's...something else."
+    else:
+        d "That's a question I'd like answered too."
+        d "Calling me out of nowhere like that..."
+        d "What kind of person are you?"
+    show sayori zorder 3 at f51
+    show dadsuki zorder 2 at t54
+    s "I think she was asking me, not you."
+    s "Yuri, the truth is..."
+    s "...well, I know him because I wanted to help people."
+    s "That's the truth."
+    show sayori zorder 2 at t51
+    show monika zorder 3 at f52
+    if monika_type == 0:
+        m "You're certainly doing your best, Sayori."
+        m "I know you need to keep some things secret, but maybe telling more would help us understand?"
+    elif monika_type == 1:
+        m "Ahaha, is that really all you've got to say?"
+    else:
+        m "While that's true, I can't help but feel you're hiding something from us."
+    show sayori zorder 3 at f51
+    show monika zorder 2 at t52
+    s "W-What do you mean?"
+    s "There's no other reason behind it."
+    s "I really do just want to help people..."
+    show
+    return
+
+label ch12_yuunoplace:
+    $ config.allow_skipping = False
     return
 
 label ch12_end:

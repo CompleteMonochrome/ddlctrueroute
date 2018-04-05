@@ -19,7 +19,7 @@ label ch6_main:
     s 1f "The next day isn't meant to exist..."
     s 1b "And I know {i}you{/i} helped Monika make Saturday a reality..."
     s "So I looked into figuring how you did it..."
-    s "I thought I'd try and create it while Monika was performing."
+    s "I thought I'd try to create it while Monika was performing."
     s 1k "It turns out that it broke the game..."
     s "I think I know how to prevent that from happening again..."
     s 1d "So there's no need worry about helping me make those files."
@@ -442,7 +442,7 @@ label ch6_main:
     show natsuki 1b zorder 3 at f42
     show sayori zorder 2 at t44
     n "Fine, fine."
-    n "I'll try and enjoy it..."
+    n "I'll try to enjoy it..."
     show yuri 1b zorder 3 at f41
     show natsuki zorder 2 at t42
     y "I'll do the same."
@@ -839,11 +839,11 @@ label ch6_end:
                         "Maybe they'll even think it's better than my last one."
                         "That's unlikely..."
                         "But it feels like I'm putting some thought into it this time."
-        "No." if ch6_no_option:      
+        "No." if ch6_no_option:
             $ sayori_no_count += 1
             $ config.skipping = False
             $ config.allow_skipping = False
-            if bad_choice_first:    
+            if bad_choice_first:
                 if sayori_no_count == 4:
                     $ ch6_no_option = False
                     s 1bf "Are you going to keep trying?"

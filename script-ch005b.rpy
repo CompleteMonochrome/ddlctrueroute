@@ -483,7 +483,7 @@ label ch5_loveyou:
 label ch5_yes:
     m 1m "Ahaha..."
     m "It was nice chatting with--"
-    m 1o "Wait...what?" 
+    m 1o "Wait...what?"
     m "Did you really just say that?"
     m 1g "You really mean it don't you?"
     m "You really love me."
@@ -517,7 +517,7 @@ label ch5_no:
     m 1m "Ahaha..."
     m "It was nice chatting with you again, if only for a little bit."
     m 1q "Even if I expected this, I wanted something else..."
-    m "Maybe that you'd try and convince me to stay."
+    m "Maybe that you'd try to convince me to stay."
     m 1l "What I said..."
     m "I know I sound a little crazy."
     m "In the end, it would have all been for you."
@@ -1054,7 +1054,7 @@ label ch5_mainc:
         mc "I meant what I said on Sunday, I do want to spend more time with you."
         mc "And if helping you means spending more time with you..."
         mc "...then I'm more than happy to help."
-        n 1h "..." 
+        n 1h "..."
         n 1u "F-Fine..."
         n "Make yourself useful."
         "She points to a box on the top shelf of the cupboard."
@@ -1138,7 +1138,7 @@ label ch5_mainc:
         y "But I know what happened between you and Monika..."
         mc "What do you mean?"
         mc "Nothing happened between us."
-        y 4b "Um...there's no need to try and make me feel better, [player]."
+        y 4b "Um...there's no need to try to make me feel better, [player]."
         y "Besides, lying isn't a good thing between friends."
         mc "Lying?"
         mc "Yuri I'm not lying to you."
@@ -1161,7 +1161,7 @@ label ch5_mainc:
             mc "Since when?"
         show yuri 1v
         "Yuri is looking visibly upset."
-        "But Monika really isn't my girlfriend." 
+        "But Monika really isn't my girlfriend."
         "So I have no idea what she's talking about."
         y 2w "Can we just put these decorations up?"
         y "I'd rather do it quietly..."
@@ -1427,7 +1427,7 @@ label ch5_mainc_end:
     show yuri 3v zorder 3 at f21
     show sayori zorder 2 at t22
     y "You're correct..."
-    y "I apologize." 
+    y "I apologize."
     show yuri zorder 2 at t21
     show sayori 1d zorder 3 at f22
     s "No need!"

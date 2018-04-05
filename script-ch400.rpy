@@ -601,7 +601,7 @@ label ch40_main:
         s "I know she's completely gone."
         s "I can't find any trace of her left."
         s "..."
-        s "I can't make you try and help her again..."
+        s "I can't make you try to help her again..."
         s 1d "That's left completely up to you."
         s 4q "Ahaha..."
         s 1t "It's kind of sad, you know?"

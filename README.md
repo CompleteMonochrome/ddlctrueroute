@@ -25,7 +25,7 @@ This mod is a "what-if" mod for the first act of Doki Doki Literature Club, whic
 
 Part Two (New Content)
 
-Successfully making Monika want to help everyone will unlock the new content the mod has to offer. She and Sayori work together to try and fix everyone else's problems but they soon realize things aren't as easy as they thought it would be. They need the help of the player to make sure that everyone ends up with a happy ending...but there's a looming presence that is affecting Monika...
+Successfully making Monika want to help everyone will unlock the new content the mod has to offer. She and Sayori work together to try to fix everyone else's problems but they soon realize things aren't as easy as they thought it would be. They need the help of the player to make sure that everyone ends up with a happy ending...but there's a looming presence that is affecting Monika...
 
 **Credits:**
 

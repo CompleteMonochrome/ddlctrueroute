@@ -85,7 +85,7 @@ label ch9_main:
         m "I think I do..."
         show monika zorder 2 at t21
         show sayori 1j zorder 3 at f22
-        s "I'm gonna try and avoid breaking the game by calling them 'strawberries'."
+        s "I'm gonna try to avoid breaking the game by calling them 'strawberries'."
         s 1b "Okay..."
         s 1c "So basically, every time [player] 'eats' a 'strawberry'..."
         s "...a part of the game opens up that wasn't before."
@@ -99,7 +99,7 @@ label ch9_main:
             show monika 1a zorder 3 at f21
             show sayori zorder 2 at t22
             m "Alright..."
-            m "So when [player] 'ate' a 'strawberry', you used the chance to try and fix Yuri?"
+            m "So when [player] 'ate' a 'strawberry', you used the chance to try to fix Yuri?"
             m 1b "How did you figure out that could happen in the first place?"
             show monika zorder 2 at t21
             show sayori 1b zorder 3 at f22
@@ -247,7 +247,7 @@ label ch9_main:
         s "At this point, you have to know what I'm talking about."
         s 1c "Well..."
         s 1d "I'll just call them 'strawberries' from now on."
-        s "To try and avoid that whole thing..."
+        s "To try to avoid that whole thing..."
         s "Your 'strawberries'..."
         s 1b "The game didn't break, that's good."
         s 1d "Anyway, they have this effect on my world."
@@ -523,7 +523,7 @@ label ch9_yurihospital:
     y 3po "Everything will be back to normal next week and..."
     "Her voice trails off until it's just mumbling."
     mc "Yuri, I chose to be here."
-    mc "So there's no need to try and keep me away."
+    mc "So there's no need to try to keep me away."
     mc "I don't know what you're feeling."
     mc "Or what's wrong with you exactly..."
     mc "But, I'm here for you."
@@ -624,7 +624,7 @@ label ch9_club:
     show monika 1e zorder 3 at f21
     show sayori zorder 2 at t22
     m "Sorry I'm late again!"
-    m "I'll try and tell the instructor to hurry it up for the future."
+    m "I'll try to tell the instructor to hurry it up for the future."
     show monika zorder 2 at t21
     show sayori 1d zorder 3 at f22
     s "That's fine."
@@ -946,7 +946,7 @@ label ch9_school:
     show sayori 1c zorder 3 at f44
     s "Anyway..."
     s "We still have a lot of time left before the meeting is over."
-    s 2a "So we could try and do something fun..."
+    s 2a "So we could try to do something fun..."
     show natsuki 2c zorder 3 at f42
     show sayori zorder 3 at f44
     n "Well, you're always talking about diversifying..."
@@ -1815,7 +1815,7 @@ label ch9_end:
                     m "Through his thoughts or something..."
                     m "I can also affect his mind a little bit..."
                 m 1e "Anyway..."
-                m "I thought I'd try and make him fall asleep."
+                m "I thought I'd try to make him fall asleep."
                 m "And here we are..."
                 m 1a "It's easier on the game if we talk like this."
                 m "That way, he doesn't remember."
