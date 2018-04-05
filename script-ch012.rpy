@@ -1961,6 +1961,11 @@ label ch12_play:
         show dadsuki zorder 3 at f54
         d "That voice..."
         d "You were the person on the phone, weren't you?"
+        d "Where is she?"
+        show dadsuki zorder 2 at t54
+        "Sayori looks at Yasuhiro quizically."
+        show sayori zorder 3 at f51
+        s "Um...where is who?"
 
 label ch12_yuuplace:
     $ persistent.n_playday[4] = True
