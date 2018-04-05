@@ -1957,6 +1957,10 @@ label ch12_play:
     else:
         s "It looks like our special guest has arrived!"
         s "Welcome, I hope you have a great time here!"
+        show sayori zorder 2 at t51
+        show dadsuki zorder 3 at f54
+        d "That voice..."
+        d "You were the person on the phone, weren't you?"
 
 label ch12_yuuplace:
     $ persistent.n_playday[4] = True
