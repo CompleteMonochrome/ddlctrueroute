@@ -1956,6 +1956,7 @@ label ch12_play:
         jump ch12_yuunoplace
     else:
         s "It looks like our special guest has arrived!"
+        s "Welcome, I hope you have a great time here!"
 
 label ch12_yuuplace:
     $ persistent.n_playday[4] = True
