@@ -57,9 +57,9 @@ init python:
         try: open(config.basedir + "/characters/yasuhiro.chr", "wb").write(renpy.file("yasuhiro.chr").read())
         except: pass
     def insert_momsuki_character():
-        try: os.remove(config.basedir + "/characters/yuu.chr")
+        try: os.remove(config.basedir + "/characters/haruki.chr")
         except: pass
-        try: open(config.basedir + "/characters/yuu.chr", "wb").write(renpy.file("yuu.chr").read())
+        try: open(config.basedir + "/characters/haruki.chr", "wb").write(renpy.file("haruki.chr").read())
         except: pass
     def pause(time=None):
         if not time:
@@ -1715,7 +1715,7 @@ default m_name = "Monika"
 default n_name = "Natsuki"
 default y_name = "Yuri"
 default d_name = "Yasuhiro"
-default mo_name = "Yuu"
+default mo_name = "Haruki"
 
 
 
@@ -1822,8 +1822,13 @@ default ch11_read_manga = True
 default ch11_did_all_tasks = False
 default ch11_badpoem = False
 default monika_type = 0
+default ch12_outcome = 0
 default ch12_natsuki_help = True
 default ch12_natsuki_reluctance = 0
+default ch12_haruki_tried = False
+default haruki_personality = [False,False,False]
+default normal_haruki = False
+default yasuhiro_haruki_together = False
 
 default y_gave = False
 default y_ranaway = False
