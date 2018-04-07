@@ -56,10 +56,15 @@ init python:
         except: pass
         try: open(config.basedir + "/characters/yasuhiro.chr", "wb").write(renpy.file("yasuhiro.chr").read())
         except: pass
-    def insert_momsuki_character():
+    def insert_momsuki_character_normal():
         try: os.remove(config.basedir + "/characters/haruki.chr")
         except: pass
-        try: open(config.basedir + "/characters/haruki.chr", "wb").write(renpy.file("haruki.chr").read())
+        try: open(config.basedir + "/characters/haruki.chr", "wb").write(renpy.file("harukinormal.chr").read())
+        except: pass
+    def insert_momsuki_character_broken():
+        try: os.remove(config.basedir + "/characters/haruki.chr")
+        except: pass
+        try: open(config.basedir + "/characters/haruki.chr", "wb").write(renpy.file("harukibroken.chr").read())
         except: pass
     def pause(time=None):
         if not time:
