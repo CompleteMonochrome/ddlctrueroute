@@ -1241,6 +1241,7 @@ image yuri stab_1y2 = "mod_assets/images/yuri/stab/1y2.png"
 image yuri stab_1y3 = "mod_assets/images/yuri/stab/1y3.png"
 image yuri stab_1y4 = "mod_assets/images/yuri/stab/1y4.png"
 image yuri stab_1y7 = "mod_assets/images/yuri/stab/1y7.png"
+image yuri stab_1ya = "mod_assets/images/yuri/stab/1ya.png"
 
 image yuri stab_6_eyes:
     "yuri/stab/6-eyes.png"

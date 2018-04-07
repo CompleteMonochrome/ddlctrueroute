@@ -169,6 +169,10 @@ label start:
         call ch12_play
         call ch12_end
 
+
+        call poem
+
+
         label ch13_skip:
         $ chapter = 13
         call ch13_main

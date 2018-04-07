@@ -808,7 +808,7 @@ label ch8_main:
             y 1y1 "Hi, Emcee."
             y "You're just in time."
             y "Look!"
-            show yuri stab_1 zorder 3 at f31
+            show yuri stab_1ya zorder 3 at f31
             "Yuri pulls out a knife from her pocket."
             "She actually brought a prop for the play..."
             "But how did she know we were going to do this chapter for sure?"
