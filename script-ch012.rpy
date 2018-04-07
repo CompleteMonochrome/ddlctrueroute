@@ -1219,7 +1219,7 @@ label ch12_play:
     s "I can't do this alone!"
     mc "Are you serious...?"
     s "Yeah, come on!"
-    s "You gotta do this if it's gonna work!"
+    s "You gotta do this if you want it to work!"
     if monika_type != 0:
         "I hear a faint whisper in my head..."
         "Do I really want to do this?"
@@ -1297,7 +1297,7 @@ label ch12_play:
     s "Try to use your power Maemi, I'll do the same."
     "Their power is some sort of time manipulation ability."
     "In the manga, it stops time and allows them to finish off the thugs pretty quickly."
-    "However, in the scene only Saika can activate the ability properly."
+    "However, during the scene, only Saika can activate the ability properly."
     mc "It's not working!"
     s 2e "Then...just try to keep up."
     "We start running around the gym without a care in the world."
@@ -2208,7 +2208,7 @@ label ch12_harukiplace:
     show yuri zorder 3 at f44
     y "I think it's a good opportunity for me to practice speaking in front of other people."
     y "I know it might be different for you since he's your father..."
-    y "But Sayori invited him here and he's watching us now."
+    y "But Sayori invited him here, and he's watching us now."
     y "It's not like we can do anything about it now."
     show natsuki zorder 3 at f42
     show yuri zorder 2 at t44
@@ -2368,7 +2368,7 @@ label ch12_harukiplace:
         show natsuki zorder 3 at f32
         n "W-Well, I had a good role model to look up to!"
         n "So it's only..."
-        "Natsuki's voice fades and tears begin to fall from her eyes."
+        "Natsuki's voice fades, and tears begin to fall from her eyes."
         n "Why...?"
         n "Why did you have to leave me and dad alone?"
         n "Why are you here now?!"
@@ -2397,7 +2397,7 @@ label ch12_harukiplace:
         mo "That didn't happen, did it?"
         mo "I made everything worse..."
         mo "I ruined both of your lives and my own."
-        mo "I heard about what Yasuhiro did and I blamed myself for everything."
+        mo "I heard about what Yasuhiro did, and I blamed myself for everything."
         mo "I even considered ending it all..."
         show momsuki zorder 2 at t31
         show natsuki zorder 3 at f32
@@ -2518,7 +2518,7 @@ label ch12_harukiplace:
             show momsuki zorder 3 at f51
             show dadsuki zorder 2 at t53
             mo "If you have to describe it, then you're doing it wrong."
-            mo "What's coming from your heart?"
+            mo "You should say what's coming from your heart."
             show momsuki zorder 2 at t51
             show dadsuki zorder 3 at f53
             d "My heart...?"
@@ -2736,9 +2736,9 @@ label ch12_harukiplace:
             n "...even though he did all these terrible things to me."
             n "But seeing you again..."
             n "And hearing what [player] said to me before..."
-            n "It's made me realize..."
+            n "Made me realize..."
             "Natsuki pauses for a moment then stares at Yasuhiro."
-            n "You aren't the dad I loved."
+            n "That you aren't the dad I loved."
             n "That person died when mom left..."
             n "And...this monster."
             n "He doesn't deserve a second chance."
@@ -2828,7 +2828,7 @@ label ch12_harukiplace:
             hide natsuki
             show monika zorder 2 at t31
             show sayori zorder 2 at f32
-            "Natsuki waves goodbye and her mother smiles at us before they both exit the gym."
+            "Natsuki waves goodbye, and her mother smiles at us before they both exit the gym."
             s "You two were pretty quiet throughout all of that."
             show sayori zorder 2 at t32
             show yuri zorder 3 at f33
@@ -2869,7 +2869,7 @@ label ch12_harukiplace:
                 m "It helps that you were all distracted during the whole thing to really notice."
             show monika zorder 2 at t31
             show sayori zorder 3 at f32
-            
+
             $ ch12_outcome = 2
     else:
         mo "Let go of me."
