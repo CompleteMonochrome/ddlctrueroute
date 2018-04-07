@@ -39,7 +39,7 @@ label choose_start:
     s "Oh..."
     s "Well, it doesn't matter."
     s "Let's keep going."
-    
+
     menu:
         s "Which part are you starting from? The options that show up are in the right order of events...I think..."
         "Festival Day.":
@@ -462,6 +462,7 @@ label choose_start:
             stop music fadeout 1.0
             jump ch10_skip
         "Second Visit.":
+            $ insert_dadsuki_character()
             if y_appeal == 3 and play_firstpart and did_all_tasks:
                 s "You were given a chance to go see Yuri at the hospital, right?"
                 s "So..."
@@ -541,3 +542,135 @@ label choose_start:
             $ quick_menu = True
             stop music fadeout 1.0
             jump ch11_skip
+        "Play Day.":
+            $ insert_dadsuki_character()
+            if y_appeal == 3 and play_firstpart and did_all_tasks:
+                s "You were given a chance to go see Yuri at the hospital, right?"
+                s "So..."
+                menu:
+                    s "Did you?"
+                    "Yes.":
+                        $ visited_yuri_hospital = True
+                        if sayori_confess:
+                            $ sayori_dumped = True
+                            $ sayori_personality += 1
+                            s "I..."
+                            s "I see."
+                            s "Sorry, just..."
+                            s "I just need a little time to think."
+                        else:
+                            s "I see."
+                        s "..."
+                        s "Did you..."
+                        menu:
+                            s "...go on a date?"
+                            "Yes.":
+                                $ yuri_date = True
+                            "No.":
+                                $ yuri_date = False
+                    "No.":
+                        $ visited_yuri_hospital = False
+                        $ yuri_date = False
+                        s "Oh, okay."
+            else:
+                $ visited_yuri_hospital = False
+                $ yuri_date = False
+            s "Hmm..."
+            s "Apparently you visited Natsuki's house twice!"
+            s "What did you do the first time?"
+            menu:
+                s "Did you do anything aside from reading the manga?"
+                "Checked closed rooms.":
+                    $ natsuki_approval += 1
+                    s "I see."
+                    s "That seems like an invasion of privacy but..."
+                    s "I'm not judging! It's probably important."
+                    label custom_ch11_roomcheck:
+                    menu:
+                        s "Which rooms did you check?"
+                        "First room upstairs." if not persistent.natsuki_house[0]:
+                            $ persistent.natsuki_house[0] = True
+                            $ talkabout_natsuki_house[0] = True
+                            jump custom_ch11_roomcheck
+                        "Second room upstairs." if not persistent.natsuki_house[1]:
+                            $ persistent.natsuki_house[1] = True
+                            $ talkabout_natsuki_house[1] = True
+                            jump custom_ch11_roomcheck
+                        "Closed room downstairs." if not persistent.natsuki_house[2]:
+                            $ persistent.natsuki_house[2] = True
+                            $ talkabout_natsuki_house[2] = True
+                            jump custom_ch11_roomcheck
+                        "Living room." if not persistent.natsuki_house[3]:
+                            $ persistent.natsuki_house[3] = True
+                            $ talkabout_natsuki_house[3] = True
+                            jump custom_ch11_roomcheck
+                        "Done.":
+                            pass
+                "Stayed in her room.":
+                    $ natsuki_approval -= 1
+                    s "Really?"
+                    s "The other option sounded more appropriate..."
+                    s "Oh well..."
+            # Check if player checked rooms
+            if persistent.natsuki_house[0] and persistent.natsuki_house[1] and persistent.natsuki_house[2] and persistent.natsuki_house[3]:
+                $ check_whole_house = True
+            if persistent.natsuki_house[0] or persistent.natsuki_house[1] or persistent.natsuki_house[2] or persistent.natsuki_house[3]:
+                $ check_some_house = True
+            # Set varables to false later to prevent errors in upcoming custom starts
+            $ persistent.natsuki_house = [False, False, False, False]
+
+            $ ch11_did_all_tasks = True
+            $ ch11_read_manga = True
+            $ ch11_badpoem = False
+            s "I can just feel how close we are..."
+            if m_appeal == 3 and did_all_tasks:
+                $ ch11_monika_talked = True
+                s "Monika went over to your house to warn you about something, right?"
+                menu:
+                    s "What did you do after that?"
+                    "Had dinner with her.":
+                        $ ch11_monika_dinner = True
+                        s "You did?"
+                        s "That's..."
+                        s "Um...none of my business."
+                        s "What happened after dinner?"
+                        menu:
+                            s "Did you read the manga, write a poem or do the impossible?"
+                            "Read the manga.":
+                                $ ch11_read_manga = True
+                                $ ch11_badpoem = True
+                                $ ch11_did_all_tasks = False
+                            "Wrote a poem.":
+                                $ ch11_read_manga = False
+                                $ ch11_badpoem = False
+                                $ ch11_did_all_tasks = False
+                            "Did the impossible.":
+                                $ ch11_read_manga = True
+                                $ ch11_badpoem = False
+                                $ ch11_did_all_tasks = True
+                    "Turned her down.":
+                        $ ch11_monika_dinner = False
+                s "Oh."
+
+            s "Last question."
+            menu:
+                s "Who did you write your fourth poem for?"
+                "Sayori.":
+                    $ natarcpoemwinner[0] = "sayori"
+                    $ s_appeal += 1
+                "Monika.":
+                    $ natarcpoemwinner[0] = "monika"
+                    $ m_appeal += 1
+                "Natsuki.":
+                    $ natarcpoemwinner[0] = "natsuki"
+                    $ n_appeal += 1
+                "Yuri.":
+                    $ natarcpoemwinner[0] = "yuri"
+                    $ y_appeal += 1
+
+            s "I guess this is it."
+            s "I hope we can get Natsuki through this with the best outcome."
+            $ s_name = "Sayori"
+            $ quick_menu = True
+            stop music fadeout 1.0
+            jump ch12_skip
