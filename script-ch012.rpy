@@ -2713,7 +2713,13 @@ label ch12_harukiplace:
             show dadsuki zorder 2 at t43
             mo "I don't know if that's possible."
             mo "But...I'm willing to give it a shot..."
-            mo "...if Natsuki agrees to this."
+            mo "...if Natsuki agrees to it."
+            show momsuki zorder 2 at t41
+            show natsuki zorder 3 at f42
+            n "H-Huh?"
+            n "W-What do you mean?"
+            show momsuki zorder 3 at f41
+            show natsuki zorder 3 at f42
             mo "Natsuki, do you think I should give your father another chance?"
             mo "Think about it carefully, please."
             mo "I'm willing to try again, if you are."
@@ -2832,8 +2838,38 @@ label ch12_harukiplace:
             show yuri zorder 2 at t33
             mc "Yeah, that whole thing just felt surreal."
             mc "The odds of both of Natsuki's parents being here..."
-            mc "Especially since her mom left her out of the blue..."
+            mc "Especially her mom who she hasn't seen in such a long time..."
             mc "I'm just speechless, really."
+            show sayori zorder 3 at f32
+            s "That's okay."
+            s "It's still sinking in for me too."
+            s "Especially that whole keyboard...thing with Monika."
+            show monika zorder 3 at f31
+            show sayori zorder 2 at t32
+            if monika_type == 0:
+                m "Ahaha, sorry."
+                m "It probably wasn't the best way to deal with him."
+                m "But we would have had to deal with him one way or another."
+            else:
+                m "Well, no one else was going to do anything."
+                m "So I took it upon myself to deal with him."
+            show monika zorder 2 at t31
+            show yuri zorder 3 at f33
+            y "That was some good initiative on your behalf, Monika."
+            y "I didn't even see or hear you come in after you left."
+            show monika zorder 3 at f31
+            show yuri zorder 2 at t33
+            if monika_type == 0:
+                m "Ah..."
+                m "Well, I was rather discreet about it."
+                m "Yasuhiro positioned himself in a good enough spot that he didn't notice anything."
+                m "I think you were all distracted to notice me too."
+            else:
+                m "You could say sneaking around is one of my strong suits..."
+                m "It helps that you were all distracted during the whole thing to really notice."
+            show monika zorder 2 at t31
+            show sayori zorder 3 at f32
+            
             $ ch12_outcome = 2
     else:
         mo "Let go of me."
