@@ -1,7 +1,7 @@
 init python:
     if not persistent.n_playday[4]:
         def haruki_placecheck(event, interact=True, **kwargs):
-            if renpy.loadable("../characters/haruki.chr")
+            if renpy.loadable("../characters/haruki.chr"):
                 renpy.jump("ch12_harukiplace")
 
 label ch12_main:
@@ -868,7 +868,8 @@ label ch12_play:
         mc "The numbers? What in the world are you talking about?"
         m 1f "I don't know how I know this..."
         m "But there are three numbers you need to remember because they'll be really important for when our guest arrives."
-        m 1g "I don't even know if Sayori has the power to stop whatever's coming if you don't figure it out soon..."
+        m 1g "I don't even know if you'll even get to use those numbers..."
+        m "If you do, I hope you know what they mean."
         m "I'll be doing all I can to help too..."
         m "But I don't think that's enough for what's coming."
         mc "I can't understand a word you're talking about, Monika."
@@ -1219,7 +1220,7 @@ label ch12_play:
     s "I can't do this alone!"
     mc "Are you serious...?"
     s "Yeah, come on!"
-    s "You gotta do this if it's gonna work!"
+    s "You gotta do this if you want it to work!"
     if monika_type != 0:
         "I hear a faint whisper in my head..."
         "Do I really want to do this?"
@@ -1297,7 +1298,7 @@ label ch12_play:
     s "Try to use your power Maemi, I'll do the same."
     "Their power is some sort of time manipulation ability."
     "In the manga, it stops time and allows them to finish off the thugs pretty quickly."
-    "However, in the scene only Saika can activate the ability properly."
+    "However, during the scene, only Saika can activate the ability properly."
     mc "It's not working!"
     s 2e "Then...just try to keep up."
     "We start running around the gym without a care in the world."
@@ -1604,26 +1605,26 @@ label ch12_play:
     show dadsuki 1h zorder 2 at t11
     d "You?!"
     d "What are you doing in here?"
-    show natsuki 1a zorder 3 at f31
+    show natsuki 2p zorder 3 at f31
     n "D-Dad?!"
     n "W-What's the big idea?"
     show natsuki zorder 2 at t31
-    show yuri 1a zorder 3 at f33
+    show yuri 2ph zorder 3 at f33
     y "Natsuki...this is your father?"
     y "Is this perhaps the 'special guest' that Sayori was talking about?"
     y "But why would she keep something like this secret..."
-    show dadsuki zorder 3 at f11
+    show dadsuki 1e zorder 3 at f11
     show yuri zorder 2 at t33
     d "Listen, I don't know what's going on here."
     d "Why are you clowns even here?"
     show dadsuki zorder 2 at t11
     mc "I could be asking you the same question."
-    show dadsuki zorder 3 at f11
+    show dadsuki 1c zorder 3 at f11
     d "You're the delivery boy, aren't you?"
     d "I was just told to come here if I ever wanted a chance at seeing her again."
-    d "I would take any chance at seeing her again..."
-    d "That still doesn't explain why any of you are here."
-    show monika 1a zorder 3 at f41
+    d 1k "I would take any chance at seeing her again..."
+    d 1e "That still doesn't explain why any of you are here."
+    show monika 3a zorder 3 at f41
     show natsuki zorder 2 at t42
     show dadsuki zorder 2 at t43
     show yuri zorder 2 at t44
@@ -1632,108 +1633,109 @@ label ch12_play:
     else:
         m "Because we're at school."
     show monika zorder 2 at t41
-    show dadsuki zorder 3 at f43
+    show dadsuki 1l zorder 3 at f43
     d "School?!"
     d "Why would she tell me to come here...?"
-    show natsuki zorder 3 at f42
+    show natsuki 2m zorder 3 at f42
     show dadsuki zorder 2 at t43
     n "Dad, who are you talking about?"
     n "Were you looking for me...?"
     show natsuki zorder 2 at t42
-    show dadsuki zorder 3 at f43
+    show dadsuki 1h zorder 3 at f43
     d "Looking for you? Why would I be doing that?"
     d "Some spoiled little--"
+    show dadsuki 1e
     "Yasuhiro suddenly stops and looks around at each one of us."
     "He decides not to finish what he was going to say."
     d "No, {i}Natsuki{/i}, I was looking for someone else."
-    d "Someone the both of us have been searching for, for a long time."
-    show natsuki zorder 3 at f42
+    d 1c "Someone the both of us have been searching for, for a long time."
+    show natsuki 2c zorder 3 at f42
     show dadsuki zorder 2 at t43
     n "Searching for...?"
     n "Dad, you aren't making any sense..."
-    n "If you're talking about who you think you are then why would she be here..."
-    n "She's long gone and the both of us know it."
+    n 1q "If you're talking about who you think you are then why would she be here..."
+    n 1r "She's long gone and the both of us know it."
     show natsuki zorder 2 at t42
-    show dadsuki zorder 3 at f43
+    show dadsuki 1a zorder 3 at f43
     d "No..."
     d "She's not."
     show monika zorder 3 at f41
     show dadsuki zorder 2 at t43
     if monika_type == 0:
-        m "But...that's impossible..."
+        m 1o "But...that's impossible..."
         m "She's..."
     else:
-        m "This is quite amusing."
+        m 1j "This is quite amusing."
     show monika zorder 2 at t41
-    show dadsuki zorder 3 at f43
+    show dadsuki 1f zorder 3 at f43
     d "This is a family matter."
     d "It has nothing to do with the rest of you."
     d "Leave Natsuki here."
     show dadsuki zorder 2 at t43
     mc "No."
     mc "Don't do any of that."
-    show dadsuki zorder 3 at f43
+    show dadsuki 1h zorder 3 at f43
     d "Boy..."
     d "Who are you to tell me what to do?"
     d "You know nothing!"
     show dadsuki zorder 2 at t43
     mc "As a matter of fact, I know a lot."
     mc "Natsuki told me a lot of things about you, Yasuhiro."
-    show dadsuki zorder 3 at f43
+    show dadsuki 1d zorder 3 at f43
     d "What?!"
     "Yasuhiro looks directly at Natsuki."
-    d "You..."
+    d 1e "You..."
     d "If I ever see her again then--"
     show monika zorder 3 at f41
     show dadsuki zorder 2 at t43
     if monika_type == 0:
-        m "Excuse me, Yasuhiro, was it?"
+        m 2e "Excuse me, Yasuhiro, was it?"
         m "Think about what you're doing, just for a second."
     else:
-        m "This is really quite interesting."
-        m "You really don't know the extent of what you're getting yourself into, do you {i}Yasuhiro{/i}?"
+        m 2a "This is really quite interesting."
+        m 2b "You really don't know the extent of what you're getting yourself into, do you {i}Yasuhiro{/i}?"
     show monika zorder 2 at t41
     show dadsuki zorder 3 at f43
-    d "Who are you to say anything?!"
+    d 1h "What?!"
     d "You know nothing of what I've been through."
     d "You don't know the things that I've done just to deal with life."
     show monika zorder 3 at f41
     show dadsuki zorder 2 at t43
     if check_whole_house and (monika_type == 0 or monika_type == 1):
         if monika_type == 0:
-            m "I know a lot more than you think, Yasuhiro."
+            m 2m "I know a lot more than you think, Yasuhiro."
             m "In fact, almost everything..."
         else:
-            m "Ahaha, I know all too well."
+            m 2k "Ahaha, I know all too well."
             m "It's pathetic, really."
     elif check_some_house and  (monika_type == 0 or monika_type == 1):
         if monika_type == 0:
-            m "I know something, even if it's just a bit of the truth."
+            m 2f "I know something, even if it's just a bit of the truth."
             m "You're out of line with what you've done."
         else:
-            m "I'm not completely clueless to your affairs, Yasuhiro."
+            m 2h "I'm not completely clueless to your affairs, Yasuhiro."
             m "Even if I am missing some of the truth."
     else:
         if monika_type == 0:
-            m "Maybe not, but just because you've experienced pain in the past..."
+            m 2g "Maybe not, but just because you've experienced pain in the past..."
             m "It isn't an excuse for acting like this."
         else:
-            m "I don't need nor want to hear it."
+            m 2i "I don't need nor want to hear it."
             m "In fact, I could care less about you."
     show monika zorder 2 at t41
-    show dadsuki zorder 3 at f43
+    show dadsuki 1f zorder 3 at f43
     d "Y-You!"
     d "You're going to get what's coming to you, you know that."
     show monika zorder 3 at f41
     show dadsuki zorder 2 at t43
     if monika_type == 0:
-        m "Oh...I definitely know that."
+        m 1n "Oh...I definitely know that."
         m "That's why I have to make the most of the time I have now."
     else:
-        m "Maybe."
+        m 1a "Maybe."
         m "I doesn't matter for what's happening right now."
     show monika zorder 2 at t41
-    show yuri zorder 3 at f44
+    show yuri 3pf zorder 3 at f44
     y "Um..."
     y "[player] and Monika you seem to know Natsuki's dad..."
     y "Have you met before?"
@@ -1742,16 +1744,16 @@ label ch12_play:
     mc "I don't think you'd believe me if I told you."
     show monika zorder 3 at f41
     if monika_type == 0:
-        m "I don't know him personally, Yuri."
+        m 1e "I don't know him personally, Yuri."
         m "That's all I can really say."
     elif monika_type == 1:
-        m "Oh. Well, I don't know him very well."
+        m 1c "Oh. Well, I don't know him very well."
         m "I guess you could say it's just a feeling."
     else:
-        m "Not really, Yuri..."
+        m 1d "Not really, Yuri..."
         m "And I don't really plan on continue our acquaintance."
     show monika zorder 2 at t41
-    show natsuki zorder 3 at f42
+    show natsuki 1g zorder 3 at f42
     n "H-How do you know she's even here, dad?"
     n "T-There's no way she'd go here, and today of all times."
     show natsuki zorder 2 at t42
@@ -1759,45 +1761,46 @@ label ch12_play:
     stop music_poem fadeout 3.0
     play music t9 fadein 3.0
     if check_whole_house:
-        "He doesn't look angry anymore...just concerned."
-        show dadsuki zorder 3 at f43
+        "He doesn't look angry anymore, just..."
+        "...concerned."
+        show dadsuki 1k zorder 3 at f43
         d "I know she's coming..."
         d "I heard her voice."
         d "Then someone else told me to go here if I ever wanted to see her again..."
-        d "I'll take any chance..."
+        d 1j "I'll take any chance..."
         d "...I just want to see her face again..."
     else:
         "Yasuhiro's face looks visibly more impatient."
-        show dadsuki zorder 3 at f43
-        d "I'm just waiting for her to arrive."
-        d "I heard the sound of her voice on the phone."
-        d "Someone told me that she would be here."
-    show yuri zorder 3 at f44
+        show dadsuki 1g zorder 3 at f43
+        d "I'm just waiting for someone that knows where she is to arrive."
+        d "I heard the sound of Haruki's voice on the phone."
+        d "And that someone told me she knows where Haruki is."
+    show yuri 3pt zorder 3 at f44
     show dadsuki zorder 2 at t43
     "Yuri starts tugging at me."
     y "{i}(Do you know what who they're talking about?){/i}"
     y "{i}(I'm a little confused about this whole situation...){/i}"
-    show natsuki zorder 3 at f42
+    show natsuki 2u zorder 3 at f42
     show yuri zorder 2 at t44
     n "Yuri..."
     n "He's talking about my mom."
     n "He's been looking for her for so long..."
-    n "I thought he gave up...I know I did, a long time ago..."
+    n 2s "I thought he gave up...I know I did, a long time ago..."
     show natsuki zorder 2 at t42
     show dadsuki zorder 3 at f43
     if check_whole_house:
-        d "I could never stop looking for her..."
+        d 1k "I could never stop looking for her..."
         d "She was my everything..."
         d "And now all I have left of her..."
         d "...is you."
-        d "I've..."
+        d 1n "I've..."
         "Yasuhiro looks down at himself."
         d "I've been a terrible father ever since she left, haven't I?"
-        d "I've done things that I shouldn't have because I blamed you for her leaving..."
+        d 1l "I've done things that I shouldn't have because I blamed you for her leaving..."
         d "Even though I knew..."
-        d "...{i}I knew{/i}, Natsuki..."
+        d 1j "...{i}I knew{/i}, Natsuki..."
         d "...that she left, because of me."
-        d "And still I..."
+        d 1k "And still I..."
         show dadsuki zorder 2 at t43
         "Despte his actions not being excusable..."
         "I can hear the remorse in his voice."
@@ -1805,82 +1808,83 @@ label ch12_play:
         "But what caused this change of heart?"
         show monika zorder 3 at f41
         if monika_type == 0:
-            m "Having second thoughts on your actions?"
+            m 1f "Having second thoughts on your actions?"
             m "I didn't really expect that coming from you..."
         else:
-            m "Feeling remorse, are you? That's interesting."
+            m 1c "Feeling remorse, are you? That's interesting."
             m "I wonder why..."
         show monika zorder 2 at t41
-        show dadsuki zorder 3 at f43
+        show dadsuki  zorder 3 at f43
         d "W-Why am I feeling like this all of a sudden...?"
-        d "T-These are not my feelings..."
+        d 1n "T-These are not my feelings..."
         d "...are they?"
         d "I haven't felt so..."
-        d "...so terrible before."
+        d 1k "...so terrible before."
         d "It's all coming in at once...why?"
     else:
-        d "I've never given up looking for her."
+        d 1c "I've never given up looking for her."
         d "She was--"
         d "{i}Is{/i} my world."
         d "I won't stop searching until I see her again."
-        d "I know I've done some terrible things on the way."
+        d 1a "I know I've done some terrible things on the way."
         d "But as long as I get to see her again, then it will all be worth it..."
         show dadsuki zorder 2 at t43
         "He doesn't sound at all sorry for what he did to Natsuki."
         "I can only imagine what he'll do if Natsuki's mom doesn't actually arrrive here..."
         show monika zorder 3 at f41
         if monika_type == 0:
-            m "You really don't care about Natsuki, don't you?"
+            m 1h "You really don't care about Natsuki, don't you?"
             m "Do you really think she'll accept you after what you've done to your daughter?"
         else:
-            m "Do you even care about your daughter?"
+            m 1d "Do you even care about your daughter?"
             m "From the way you're acting, it really seems like you only care about her mom."
         show monika zorder 2 at t41
-        show dadsuki zorder 3 at f43
+        show dadsuki 1c zorder 3 at f43
         d "..."
         d "You sure talk a lot, don't you?"
-        d "Maybe you should silence that mouth of yours before it lands you in trouble."
+        d 1b "Maybe you should silence that mouth of yours before it lands you in trouble."
         d "You need to learn your place."
-    show natsuki zorder 3 at f42
+    show natsuki 4h zorder 3 at f42
     show dadsuki zorder 2 at t43
     n "..."
     n "Dad..."
     n "Are you sure it was mom?"
-    n "She's been gone for..."
+    n 4n "She's been gone for..."
     show natsuki zorder 2 at t42
     show dadsuki zorder 3 at f43
     if check_some_house:
-        d "Natsuki, I..."
+        d 1l "Natsuki, I..."
         d "Sigh..."
         d "I know it's like I'm just clinging on to hope."
-        d "But it was definitely her voice!"
+        d 1i "But it was definitely her voice!"
         d "You may not believe me but I know what I heard!"
     else:
-        d "I know what I heard."
+        d 1e "I know what I heard."
         d "It was her voice."
         d "If I wasn't sure, I wouldn't be here right now."
     show dadsuki zorder 2 at t43
     show yuri zorder 3 at f44
-    y "This doesn't make any sense..."
+    y 3pf "This doesn't make any sense..."
     y "Why would Natsuki's father be our special guest?"
-    y "And where is Sayori...?"
+    y 3ph "And where is Sayori...?"
     show monika zorder 3 at f41
     show yuri zorder 2 at t44
     if monika_type == 0:
-        m "She's probably doing something important."
+        m 1e "She's probably doing something important."
         m "We have to give her some--"
     elif monika_type == 1:
-        m "Probably running away from her responsibility."
+        m 1l "Probably running away from her responsibility."
         m "It sure sounds like something she would--"
     else:
-        m "Who knows?"
+        m 1h "Who knows?"
         m "Probably off doing--"
     $ ch12_outcome = 0
     $ ch12_haruki_tried = False
     $ yasuhiro_haruki_together = False
+    $ persistent.n_playday[4] = False
     show monika zorder 2 at t41
     "The gym doors suddenly burst open again."
-    show sayori 1a zorder 3 at f51
+    show sayori 2a zorder 3 at f51
     show monika zorder 2 at t52
     show natsuki zorder 2 at t53
     show dadsuki zorder 2 at t54
@@ -1889,7 +1893,7 @@ label ch12_play:
     s "Alright, everybody!"
     s "I'm back!"
     if check_some_house and not ch12_haruki_tried:
-        s "Just a second..."
+        s 2d "Just a second..."
         python:
             currentpos = get_pos()
             startpos = currentpos - 0.3
@@ -1900,87 +1904,78 @@ label ch12_play:
         stop music
         $ config.skipping = False
         $ config.allow_skipping = False
-        s "I'm going to need you to do something for me."
         s "I've frozen them in time."
-        s "It's an ability I've learned to use ever since I got the manga."
+        s "It's an ability I've learned to use from before I got the manga."
         if persistent.n_playday[3]:
             s "But, you already knew that."
-        s "Anyway, I've done this because..."
+        s 2c "Anyway, I've done this because..."
         s "I need you to do something for me."
         s "I have to ask you to make a file for me."
-        s "Strange, right?"
+        s 2b "Strange, right?"
         s "I didn't think I'd need your help either."
         s "But it seems that I can't just restore people out of thin air."
         s "Do you know what that means?"
-        s "She was dead, before now."
+        s 2k "She was dead, before now."
         s "I tried looking for her for a long time, you have to believe me."
         s "I even looked deep into the files of the game itself..."
         s "But..."
-        s "All I found was broken pieces of what once was."
-        s "It's not like I could just eat a strawberry to before it all happened..."
+        s "All I found was broken pieces of who she was."
+        s 2f "It's not like I could just eat a strawberry to before it all happened..."
         s "I wasn't the president of the Literature Club when it happened so I wouldn't have any strawberries in the first place."
-        s "Also, changing an event like that in Natsuki's life could change the whole future..."
+        s 2g "Also, changing an event like that in Natsuki's life could change the whole future..."
         s "I could never have become president, Natsuki may never have joined the club and you might never have been here..."
-        s "Anyway..."
+        s 2c "Anyway..."
         s "I could only find scattered pieces of her, it's like she wasn't a 'full' person..."
-        s "...or that she died."
+        s 2k "...or that she died."
         s "I didn't really want to think about that..."
         if persistent.sayori_natsuki_bad_ending:
             s "But both of us know all too well that she was a person before everything..."
         else:
             s "But everything suggests that she was a person before all of this."
-        s "I guess that's why I searched so long, you know?"
+        s 2h "I guess that's why I searched so long, you know?"
         s "Time might not have passed for you but I spent weeks of my own time looking."
-        s "And the only thing I can think of happening is that she ended her own life."
-        s "Maybe she wanted to come back to her life with Yasuhiro and Natsuki..."
+        s "And the only thing that makes sense is that she ended her own life."
+        s 2k "Maybe she wanted to come back to her life with Yasuhiro and Natsuki..."
         s "But knew it would only bring everyone pain."
         s "So she probably just..."
-        s "...well, let's not dwell on the details."
+        s 2l "...well, let's not dwell on the details."
         $ s.display_args["callback"] = haruki_placecheck
-        s "I froze time, right now, for your help."
+        s 2d "Remember the reason I froze time."
+        s "It was for your help."
         s "So I'd really appreciate it if you could."
-        s "Just call it 'haruki.chr' and put it into the characters folder."
+        s "Just create a file called 'haruki.chr' and put it into the characters folder."
         s "You can just copy one of our character files if you need to..."
-        s "I just need a base to work with so that I know what to look for in the game files."
+        s 2b "I just need a base to work with so that I know what to look for in the game files."
         s "Your representation of a character file and mine are completely different..."
         s "So it's easier for you to do this."
-        s "Right now, would be perfect."
-        s "I suppose I could always try something..."
-        s "It might not work and you might not be what you're hoping for..."
-        s "...unless you're actually hoping for a bad ending."
+        s 2a "Right now, would be perfect."
+        s 2b "I suppose I could always try something..."
+        s "It might not work and it might not be what you're hoping for..."
+        s 2k "...unless you're actually hoping for a bad ending."
         s "But that's not true...right?"
         s "I hope it isn't..."
-        s "Any time now would be good."
+        s 2f "Any time now would be good."
         s "Like...maybe now?"
         s "No?"
         if persistent.n_playday[3]:
-            s "Who am I kidding?"
+            s 2h "Who am I kidding?"
             s "You're going for a bad ending, aren't you?"
             s "You've already tried once today, what's stopping you from trying again?"
             s "Nothing..."
-        s "Please, just create the file."
+        s 2k "Please, just create the file."
         s "I don't need to open the console to check if it's there."
         s "I can feel it."
         s "As soon as you create it, it should all be good..."
         s "..."
-        s "You aren't going to do it, are you?"
+        s 2i "You aren't going to do it, are you?"
         s "I suppose this other path will have to do, won't it?"
         $ s.display_args["callback"] = None
-        s "It's definitely not how I wanted this to go but..."
+        s 2j "It's definitely not how I wanted this to go but..."
         s "This is what you want and I can't do anything about it..."
         jump ch12_harukinoplace
     else:
-        s "It looks like our special guest has arrived!"
-        s "Welcome, I hope you have a great time here!"
-        show sayori zorder 2 at t51
-        show dadsuki zorder 3 at f54
-        d "That voice..."
-        d "You were the person on the phone, weren't you?"
-        d "Where is she?"
-        show dadsuki zorder 2 at t54
-        "Sayori looks at Yasuhiro quizically."
-        show sayori zorder 3 at f51
-        s "Um...where is who?"
+        jump ch12_noharukicont
+    return
 
 label ch12_harukiplace:
     $ persistent.n_playday[4] = True
@@ -1989,21 +1984,21 @@ label ch12_harukiplace:
     $ normal_haruki = False
     if sayori_personality > 0:
         $ sayori_personality -= 1
-    s "Oh...you actually did it."
-    s "Thank you so much."
+    s 2c "Oh...you actually did it."
+    s 2d "Thank you so much."
     s "I know what to look for in the game files now..."
     s "...at least, I think so."
-    s "Just wait a second..."
-    s "What's this?"
+    s 2b "Just wait a second..."
+    s 2c "What's this?"
     s "She's still missing part of her character..."
-    s "We're so close..."
+    s 2g "We're so close..."
     s "I think we have to make it for her."
-    s "This is...too much for me."
+    s 2h "This is...too much for me."
     s "I don't want to do this..."
     s "Besides, you have to know more about her than I do!"
     s "I know almost nothing except for the little details we found at Natsuki's house..."
     s "You must know more!"
-    s "I'm gonna leave this up to you..."
+    s 2k "I'm gonna leave this up to you..."
     menu:
         s "What kind of personality did she have?"
         "Carefree.":
@@ -2016,7 +2011,7 @@ label ch12_harukiplace:
             $ haruki_personality[0] = False
         "Forgiving.":
             $ haruki_personality[0] = False
-    s "I hope you're right..."
+    s 2h "I hope you're right..."
     menu:
         s "What was her...favourite hobby?"
         "Acting.":
@@ -2029,7 +2024,7 @@ label ch12_harukiplace:
             $ haruki_personality[1] = False
         "Modelling.":
             $ haruki_personality[1] = False
-    s "Now..."
+    s 2k "Now..."
     s "This next one is...pretty sensitive."
     s "So please be careful."
     menu:
@@ -2038,98 +2033,101 @@ label ch12_harukiplace:
             $ haruki_personality[2] = False
         "Still in love.":
             $ haruki_personality[2] = True
-    $ insert_momsuki_character()
     if haruki_personality[0] and haruki_personality[1] and haruki_personality[2]:
         $ normal_haruki = True
-    s "Alright, that should do it."
+        $ insert_momsuki_character_normal()
+    else:
+        $ insert_momsuki_character_broken()
+    s 2d "Alright, that should do it."
     s "I'm not entirely sure if this will work with your choices...but it's our best bet, right?"
     s "It's one of the limitations of seeing the future...the decisions made by you are..."
-    s "Never mind."
+    s 2k "Never mind."
     s "..."
     s "Are you wondering how Yasuhiro heard her voice?"
-    s "It's pretty sad..."
-    s "It was the only thing of her that I could find that was still 'whole'."
+    s 2u "It's pretty sad..."
+    s "It was the only thing of Haruki that I could find that was still 'whole'."
     s "I just played her voice through the phone..."
     s "She said \"I love you\"...I guess that's why he actually agreed to come."
     if check_whole_house:
-        s "He probably would have acted a lot different today if you didn't check all of Natsuki's house."
+        s 2k "He probably would have acted a lot different today if you didn't check all of Natsuki's house."
         s "When we saw everything that happened..."
         s "I felt...sorry for him."
-        s "And I'll be honest with you..."
+        s 2g "And I'll be honest with you..."
         s "I changed him a little bit...I had to."
-        s "I didn't change who he was, or what he knows..."
+        s 2h "I didn't change who he was, or what he knows..."
         s "I just brought back that feeling of..."
-        s "...love."
+        s 2t "...love."
     s "..."
-    s "Look, I know I can be a bit demanding sometimes..."
+    s 2d "Look, I know I can be a bit demanding sometimes..."
     s "If you hate me for it, then I can't blame you."
-    s "But I won't stop, not until everyone get their happy ending."
+    s 2k "But I won't stop, not until everyone get their happy ending."
     s "Sorry, I've already taken up more of your time than I needed to."
+    s "I'll unfreeze time..."
     s "The rest of them won't experience what the two of us just did."
     $ audio.t9b = "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
     play music t9b fadein 0.5
     pause 0.5
     $ config.allow_skipping = True
-    s "Oh, it's our special guest!"
+    s 2q "Oh, it's our special guest!"
     s "Welcome! I wasn't expecting you to arrive so early~"
     show sayori zorder 2 at t51
-    show dadsuki zorder 3 at f54
+    show dadsuki 1a zorder 3 at f54
     d "That voice..."
     d "You were the one on the phone!"
-    d "Where is she? I have to see her!"
-    show sayori zorder 3 at f51
+    d 1j "Where is she? I have to see her!"
+    show sayori 2g zorder 3 at f51
     show dadsuki zorder 2 at t54
     s "Heeeeey, calm down."
     s "I don't know what you're talking about."
-    s "You're here to watch us perform our play and nothing more."
+    s 2h "You're here to watch us perform our play and nothing more."
     show sayori zorder 2 at t51
-    show dadsuki zorder 3 at f54
+    show dadsuki 1h zorder 3 at f54
     d "What?!"
     d "This wasn't part of the agreement..."
-    show natsuki zorder 3 at f53
+    show natsuki 2g zorder 3 at f53
     show dadsuki zorder 2 at t54
     n "Agreement?!"
     n "Sayori, what did you and my dad talk about?!"
-    n "Why is he the special guest and why did you keep it such a secret?!"
-    show sayori zorder 3 at f51
+    n 2f "Why is he the special guest and why did you keep that secret?!"
+    show sayori 1d zorder 3 at f51
     show natsuki zorder 2 at t53
     s "Natsuki, I know you have a lot of questions."
     s "I'll answer them all later."
     s "Right now, we have a play to finish."
-    s "So if you don't mind, {i}Yasuhiro{/i}."
+    s 1j "So if you don't mind, {i}Yasuhiro{/i}."
     show sayori zorder 2 at t51
-    show yuri zorder 3 at f55
+    show yuri 2pq zorder 3 at f55
     y "Sayori...H-How do you know Natsuki's dad?"
     show dadsuki zorder 3 at f54
     show yuri zorder 2 at t55
     if check_whole_house:
-        d "I don't know who she is..."
+        d 1k "I don't know who she is..."
         d "She just told me that I should be here today..."
         d "Already I can tell she's...something else."
     else:
-        d "That's a question I'd like answered too."
+        d 1g "That's a question I'd like answered too."
         d "Calling me out of nowhere like that..."
         d "What kind of person are you?"
     show sayori zorder 3 at f51
     show dadsuki zorder 2 at t54
-    s "I think she was asking me, not you."
-    s "Yuri, the truth is..."
-    s "...well, I know him because I wanted to help people."
+    s 1j "I think she was asking me, not you."
+    s 1k "Yuri, the truth is..."
+    s 1l "...well, I know him because I wanted to help people."
     s "That's the truth."
     show sayori zorder 2 at t51
     show monika zorder 3 at f52
     if monika_type == 0:
-        m "You're certainly doing your best, Sayori."
+        m 1e "You're certainly doing your best, Sayori."
         m "I know you need to keep some things secret, but maybe telling more would help us understand?"
     elif monika_type == 1:
-        m "Ahaha, is that really all you've got to say?"
+        m 1n "Ahaha, is that really all you've got to say?"
     else:
-        m "While that's true, I can't help but feel you're hiding something from us."
+        m 1h "While that's true, I can't help but feel you're hiding something from us."
     show sayori zorder 3 at f51
     show monika zorder 2 at t52
     s "W-What do you mean?"
     s "There's no other reason behind it."
-    s "I really do just want to help people..."
+    s 1q "I really do just want to help people..."
     show sayori zorder 2 at f51
     show dadsuki zorder 3 at f54
     d "So help me then."
@@ -2137,33 +2135,36 @@ label ch12_harukiplace:
     "Sayori looks at him with a curious expression."
     show sayori zorder 3 at t43
     "She moves next to Yasuhiro and whispers something in his ear."
+    show dadsuki 1l
     "The look on Yasuhiro's face shifts to one of shock."
     "He looks at Sayori as if caught completely by surprise as to what she just said."
     show monika zorder 2 at t51
     show natsuki zorder 2 at t52
-    show sayori zorder 3 at f53
+    show sayori 1d zorder 3 at f53
     show dadsuki zorder 2 at d54
     s "I hope that explains everything."
     s "You don't have to say anthing."
     s "All you have to do is watch."
-    show natsuki zorder 3 at f52
+    show natsuki 1c zorder 3 at f52
     show sayori zorder 2 at t53
     n "Sayori?!"
     n "What did you say to him?"
-    n "I've never seen my dad so--"
+    n 1h "I've never seen my dad so--"
     show natsuki zorder 2 at t52
-    show sayori zorder 3 at f53
+    show sayori 1a zorder 3 at f53
     s "Oh, it was nothing really."
     s "You shouldn't worry about it, Natsuki."
     s "He's just here to watch us, so just pretend he isn't here."
-    s "Please, Yasuhiro, take a seat."
+    s 1d "Please, Yasuhiro, take a seat."
     show sayori zorder 2 at t53
     show dadsuki zorder 3 at f54
     if check_whole_house:
-        d "..."
+        d 1k "..."
     else:
-        d "Fine."
-    show sayori zorder 2 at t41
+        d 1e "Fine."
+    show dadsuki at thide
+    hide dadsuki
+    show monika zorder 2 at t41
     show natsuki zorder 2 at t42
     show sayori zorder 2 at t43
     show yuri zorder 2 at t44
@@ -2172,57 +2173,57 @@ label ch12_harukiplace:
         "He looks down and momentarily covers his face with his hands before looking up at the stage."
     else:
         "He crosses his arms and starts tapping his foot impatiently."
-    show sayori zorder 3 at f43
+    show sayori 4q zorder 3 at f43
     play music t5 fadeout 2.0
     s "Alright, everbody!"
     s "It's time to continue with the play!"
-    show natsuki zorder 3 at f42
+    show natsuki 1m zorder 3 at f42
     show sayori zorder 2 at t43
     n "Sayori..."
     "Natsuki whispers to the group."
     n "You can't seriously expect me to do this in front of my dad!"
-    n "This is way too weird!"
+    n 1q "This is way too weird!"
     show natsuki zorder 2 at t42
-    show sayori zorder 3 at f43
+    show sayori 3h zorder 3 at f43
     s "Natsuki, you have to do this."
-    s "Just pretend he isn't there, it'll be fine."
-    show natsuki zorder 3 at f42
+    s 3d "Just pretend he isn't there, it'll be fine."
+    show natsuki 3r zorder 3 at f42
     show sayori zorder 2 at t43
     n "But--"
     show monika zorder 3 at f41
     show natsuki zorder 2 at t42
     if monika_type == 0:
-        m "I think Sayori knows what she's doing, Natsuki."
+        m 2e "I think Sayori knows what she's doing, Natsuki."
         m "You should listen to her."
     else:
-        m "Maybe you should listen to what Sayori says, Natsuki."
+        m 2a "Maybe you should listen to what Sayori says, Natsuki."
         m "It might be important for later."
     show monika zorder 2 at t41
-    show yuri zorder 3 at f44
+    show yuri 2ps zorder 3 at f44
     y "I agree with Monika."
-    show natsuki zorder 3 at f42
+    show natsuki 3o zorder 3 at f42
     show yuri zorder 2 at t44
     n "Y-You what?!"
     n "Yuri, I expected you out of everyone to be uncomfortable doing this!"
     show natsuki zorder 2 at t42
-    show yuri zorder 3 at f44
+    show yuri 2pf zorder 3 at f44
     y "I think it's a good opportunity for me to practice speaking in front of other people."
     y "I know it might be different for you since he's your father..."
-    y "But Sayori invited him here and he's watching us now."
-    y "It's not like we can do anything about it now."
+    y "But Sayori invited him here, and he's watching us."
+    y 2ph "It's not like we can do anything about it now."
     show natsuki zorder 3 at f42
     show yuri zorder 2 at t44
-    n 1o "Uuuuuu...!"
-    n "T-There's nothing I can do to change anyone's mind, is there?"
-    n "Fine, fine."
-    n "I suppose there really is no use in doing anything that I want, is there?"
+    n 3o "Uuuuuu...!"
+    n 3r "T-There's nothing I can do to change anyone's mind, is there?"
+    n "Fine, fine. I'll just try to ignore him..."
+    n 3s "I suppose there really is no use in doing anything that I want, is there?"
     show natsuki zorder 2 at t42
-    show sayori zorder 3 at f43
+    show sayori 3d zorder 3 at f43
     s "Natsuki, it's really not like that..."
     s "I promise, you'll get what you want after today."
     s "So please, just finish this off, okay?"
     "Natsuki doesn't look convinced but nods her head."
-    s "Great, so where were we?"
+    s 3a "Great, so where were we?"
     s "Oh, right!"
     $ currentpos = get_pos()
     $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>bgm/5_natsuki.ogg"
@@ -2233,31 +2234,31 @@ label ch12_harukiplace:
     s 4r "You all are."
     s 4d "So really...all you have to do is ask us for help."
     s "You know we'd want nothing more than for you to be happy."
-    show monika zorder 3 at f41
+    show monika 1h zorder 3 at f41
     show sayori zorder 2 at t43
     m "Those are inspiring words, Saika."
-    m "I just hope you're able to back them up, otherwise all you've given is false hope."
-    m "And what follows false hope, is an even greater despair."
+    m 1i "I just hope you're able to back them up, otherwise all you've given is false hope."
+    m 1o "And what follows false hope, is an even greater despair."
     show monika zorder 2 at t41
-    show sayori zorder 3 at f43
+    show sayori 2f zorder 3 at f43
     s "Martha, we always have to hope for the best."
     s "It's the best outlook to life."
-    show monika zorder 3 at f41
+    show monika 1h zorder 3 at f41
     show sayori zorder 2 at t43
     m "I'm not that naive anymore, Saika."
-    m "I've been hoping for the best most of my life, but I've learned to expect the worst."
+    m 1i "I've been hoping for the best most of my life, but I've learned to expect the worst."
     m "So forgive me if I don't see eye to eye with you on some things."
-    m "It's just my view of this harsh reality, where the perfect outcome is impossible..."
+    m 1o "It's just my view of this harsh reality, where the perfect outcome is impossible..."
     "Monika didn't even need to read off the script when she read her last couple of lines."
     "She said it with such meaning too, it's almost like she's a natural at acting."
-    m "But it doesn't matter what I think anyway."
-    m "I've already agreed to help you with your plan first."
+    m 1m "But it doesn't matter what I think anyway."
+    m 1e "I've already agreed to help you with your plan first."
     show monika zorder 2 at t41
     mc "I know this isn't your ideal way of doing things."
     mc "It isn't the ideal way of doing things at all, really."
     mc "But Nozomi deserves the best outcome."
     mc "I'm going to try my best to make sure of it, even if it kills me."
-    show yuri zorder 3 at f44
+    show yuri 2pb zorder 3 at f44
     y "Ah, Maemi."
     y "Your dedication to the Ronin is something to admire..."
     y "...though don't you think that's a little too far?"
@@ -2278,47 +2279,47 @@ label ch12_harukiplace:
     "I pace around the gym, suprisingly the others are playing along as if they were frozen too."
     "I think I even caught Yasuhiro freeze for a little bit."
     mc "This is bad...this is bad...this is--"
-    show sayori zorder 3 at f43
+    show sayori 2m zorder 3 at f43
     s "E-Eh? When did you get over there Maemi?"
     s "You were in front of a me just a second ago."
-    show monika zorder 3 at f41
+    show monika 1c zorder 3 at f41
     show sayori zorder 2 at t43
     m "Hmm..."
     m "He performed a time stop, didn't he?"
-    m "Quite suprising."
+    m 2d "Quite suprising."
     m "Am I right?"
     show monika zorder 2 at t41
     mc "I-I think you're right."
     mc "But--"
-    show sayori zorder 3 at f43
+    show sayori 4q zorder 3 at f43
     s "That's great! We can help Nozomi now!"
     s "We should do it now because--"
     show sayori zorder 2 at t43
     mc "Saikia, I--"
-    show sayori zorder 3 at f43
+    show sayori 4r zorder 3 at f43
     s "The sooner we help her, the sooner our team is back in top shape!"
     s "Ehehe, I'm so excited!"
     show sayori zorder 2 at t43
-    show yuri zorder 3 at f44
+    show yuri 2pq zorder 3 at f44
     y "I think you're missing an important detail here, Saika."
     y "You were surprised when he appeared somewhere else."
-    show sayori zorder 3 at f43
+    show sayori 4a zorder 3 at f43
     show yuri zorder 2 at t44
-    s "So?"
-    show natsuki zorder 3 at f42
+    s "So...?"
+    show natsuki 2g zorder 3 at f42
     show sayori zorder 2 at t43
     n "Saika, don't you get what Yoshiko is trying to say?"
     n "Maemi froze you in his time stop too!"
-    n "He's..."
+    n 2h "He's..."
     show natsuki zorder 2 at t42
-    show sayori zorder 3 at f43
+    show sayori 3e zorder 3 at f43
     s "You're right..."
-    s "Why did that--"
+    s 3l "Why did that--"
     show sayori zorder 2 at t43
     $ mo_name = "???"
     "A sound echoes from the entrance of the gym."
-    "There is now another person that's arrived."
-    "Sayori said it was a special guest, so who's this other person?"
+    "There's another person standing there."
+    "Sayori said special guest, she didn't say anything about {i}guests{/i}."
     "I look towards Yasuhiro and immediately he gets up from his seat."
     "Who is this person that has Yasuhiro so excited?"
     "Could it actually be Natsuki's mom?"
@@ -2333,76 +2334,78 @@ label ch12_harukiplace:
     hide yuri at thide
     hide yuri
     show momsuki 1a zorder 2 at t31
-    if haruki_personality:
+    if normal_haruki:
         mo "Um...what's going on here?"
         mo "Is this some sort of rehearsal?"
     else:
         mo "This looks like some sort of disaster."
         mo "I suppose that's to be expected."
-    show dadsuki 1a zorder 3 at f33
+    show dadsuki 1i zorder 3 at f33
     if check_whole_house:
         d "H-Haruki, you're actually here!"
-        d "I didn't think you'd come!"
+        d 1k "I didn't think you'd come!"
         d "I--"
     else:
-        d "So she wasn't lying..."
+        d 1f "So she wasn't lying..."
         d "Haruki, I need to talk to you."
         d "There's a few things that I must--"
-    $ mo_name = "???"
-    show natsuki 1a zorder 3 at f32
+    $ mo_name = "Haruki"
+    show natsuki 1m zorder 3 at f32
     show dadsuki zorder 2 at t33
     n "Mom?!"
     show natsuki at hf21
     "Natsuki runs over to Haruki and embraces her."
-    n "Mom, it's really you!"
+    n 1t "Mom, it's really you!"
     show momsuki zorder 3 at f31
     show natsuki zorder 2 at t32
-    if haruki_personality:
+    if normal_haruki:
         stop music_poem fadeout 2.0
         play music t9 fadein 2.0
-        mo "Natsuki? It's been so long..."
+        mo 1f "Natsuki? It's been so long..."
         mo "I'm surprised you still remember the appearance of your mother..."
         mo "My...how you've grown."
         mo "You're growing up to be a fine young lady."
         show momsuki zorder 2 at t31
-        show natsuki zorder 3 at f32
+        show natsuki 4t zorder 3 at f32
         n "W-Well, I had a good role model to look up to!"
         n "So it's only..."
-        "Natsuki's voice fades and tears begin to fall from her eyes."
+        show natsuki 42h
+        "Natsuki's voice fades, and tears begin to fall from her eyes."
         n "Why...?"
-        n "Why did you have to leave me and dad alone?"
+        n 42i "Why did you have to leave me and dad alone?"
         n "Why are you here now?!"
         n "Why--"
         show natsuki zorder 2 at t32
         show dadsuki zorder 3 at f33
         if check_whole_house:
-            d "Haruki..."
+            d 1i "Haruki..."
         else:
-            d "I need to speak with her."
-        show momsuki zorder 3 at f31
+            d 1e "I need to speak with her."
+        show momsuki 1i zorder 3 at f31
         show natsuki zorder 2 at t32
         mo "Wait your turn, Yasuhiro."
+        show dadsuki 1l
         "Yasuhiro looks suprised but reluctantly agrees."
-        mo "I'm sorry Natsuki..."
+        mo 1g "I'm sorry Natsuki..."
         mo "For everything."
-        mo "I know you might not be able to forgive me..."
+        mo 1h "I know you might not be able to forgive me..."
         mo "I just left you in the middle of the night, without even saying goodbye."
-        mo "Some mother I am, right?"
+        mo 1e "Some mother I am, right?"
         mo "The truth is..."
         mo "...it really hurt for me to leave."
         mo "The night that I left..."
-        mo "I thought about it for a long time."
+        mo 1h "I thought about it for a long time."
         mo "I thought that you and your father would be happier without me."
         mo "But..."
-        mo "That didn't happen, did it?"
+        mo 1e "That didn't happen, did it?"
         mo "I made everything worse..."
         mo "I ruined both of your lives and my own."
-        mo "I heard about what Yasuhiro did and I blamed myself for everything."
+        mo 1h "I heard about what Yasuhiro did, and I blamed myself for everything."
         mo "I even considered ending it all..."
         show momsuki zorder 2 at t31
-        show natsuki zorder 3 at f32
+        show natsuki 1n zorder 3 at f32
         n "M-Mom! Don't talk like that!"
-        show momsuki zorder 3 at f31
+        show momsuki 1g zorder 3 at f31
         show natsuki zorder 2 at t32
         mo "No...I have to be honest with you."
         mo "I thought I ended my own life."
@@ -2414,48 +2417,48 @@ label ch12_harukiplace:
         show sayori 1a zorder 3 at f44
         s "Well!"
         s "It's nice to see you all together again."
-        show momsuki zorder 3 at f41
+        show momsuki 1a zorder 3 at f41
         show sayori zorder 2 at t44
         mo "Hmm...that voice."
         mo "It sounds really familiar somehow..."
-        mo "I know! It's the voice that was telling me to go here today..."
+        mo 1b "I know! It's the voice that was telling me to go here today..."
         show momsuki zorder 2 at t41
-        show sayori zorder 3 at f44
+        show sayori 1l zorder 3 at f44
         s "Ehehe, I think you might be mistaken."
         s "I don't even know what you're doing here."
-        s "It is a pretty strange coincidence that you came here the same time that Yasuhiro did though!"
-        show momsuki zorder 3 at f41
+        s 1d "It is a pretty strange coincidence that you came here the same time that Yasuhiro did though!"
+        show momsuki 1f zorder 3 at f41
         show sayori zorder 2 at t44
         mo "Very strange indeed..."
         show momsuki zorder 2 at t41
         if check_whole_house:
-            show dadsuki zorder 3 at f43
+            show dadsuki 1i zorder 3 at f43
             d "Haruki..."
             d "I know you don't want to listen to me right now."
             d "But please, just hear me out."
-            show momsuki zorder 3 at f41
+            show momsuki 1i zorder 3 at f41
             show dadsuki zorder 2 at t43
             mo "Okay, okay! You have my attention."
             mo "Just make it quick."
             show momsuki zorder 2 at t41
-            show dadsuki zorder 3 at f43
+            show dadsuki 1k zorder 3 at f43
             d "I'm sorry."
             d "Sorry for everything I've done."
             d "I know it was my fault that you left."
             d "I took everything I had for granted."
-            d "Everything."
+            d 1o "Everything."
             d "I didn't realize that I lost a part of myself until it was far too late."
-            d "But now..."
+            d 1k "But now..."
             d "I feel so different...it's almost terrifying."
-            show momsuki zorder 3 at f41
+            show momsuki 1h zorder 3 at f41
             show dadsuki zorder 2 at t43
             mo "Get to the point, Yasuhiro."
             show momsuki zorder 2 at t41
-            show dadsuki zorder 3 at f43
+            show dadsuki 1j zorder 3 at f43
             d "I guess what I'm trying to say is..."
             d "Will you come back...?"
             show dadsuki zorder 2 at t43
-            show dadsuki zorder 2 at s43
+            show dadsuki 1k zorder 2 at s43
             "Yasuhiro looks down as if afraid to meet Haruki's gaze."
             show momsuki zorder 2 at t51
             show natsuki zorder 2 at t52
@@ -2469,99 +2472,100 @@ label ch12_harukiplace:
             else:
                 m "This doesn't really seem like something we should be hearing."
                 m "Do you want us to leave?"
-            show momsuki zorder 3 at f51
+            show momsuki 1f zorder 3 at f51
             show monika zorder 2 at t55
             mo "No, do stay."
             mo "You've heard this much. You leaving now would serve no point."
-            mo "Listen well, Yasuhiro."
-            mo "What you've done to our little girl is inexcusable."
+            mo 1d "Listen well, Yasuhiro."
+            mo 1i "What you've done to our little girl is inexcusable."
             mo "I mean you turned the room of our portrait into..."
             mo "...you know."
-            mo "But seeing you like this..."
+            mo 1e "But seeing you like this..."
             mo "It almost makes me think you've actually learned your lesson."
             mo "So..."
-            mo "I'm going to ask our daughter."
+            mo 1g "I'm going to ask our daughter."
             mo "Natsuki?"
             show momsuki zorder 2 at t51
-            show natsuki zorder 3 at f52
+            show natsuki 5h zorder 3 at f52
             n "Y-Yeah...?"
-            show momsuki zorder 3 at f51
+            show momsuki  zorder 3 at f51
             show natsuki zorder 2 at t52
             mo "What do you think?"
-            mo "You know he's made your life a living hell ever since I've left."
+            mo 1h "You know he's made your life a living hell ever since I've left."
             mo "It wasn't hard to find that out from the rumors that were spreading."
             mo "Even after all that..."
             mo "...do you still love him?"
             show momsuki zorder 2 at t51
-            show natsuki zorder 3 at f52
+            show natsuki 5s zorder 3 at f52
             n "You're right about him putting me through a living hell."
             n "He hasn't treated me the best ever since you left..."
-            n "And I've only been coping because..."
+            n 5u "And I've only been coping because..."
             n "...because of my friends."
             n "But..."
             n "I really can't imagine a life without dad."
             n "Back when you were still together...he was..."
             n "...such a good person. I-I can't forget that part of him..."
-            n "S-So..."
-            "With every word Natsukis saying, it's like Yasuhiro looks more and more in pain."
-            n "Yes..."
+            n 5i "S-So..."
+            "With every word Natsuki says, it's like Yasuhiro looks more and more in pain."
+            n 5r "Yes..."
             n "I still love him."
             show momsuki zorder 3 at f51
             show natsuki zorder 2 at t52
             mo "Hmm..."
-            mo "And what about you, Yasuhiro?"
+            mo 1h "And what about you, Yasuhiro?"
             mo "What are your feelings towards our daughter?"
             show momsuki zorder 2 at t51
             show dadsuki zorder 3 at t53
-            show dadsuki zorder 3 at f53
+            show dadsuki 1j zorder 3 at f53
             d "I...don't really know how to describe it."
-            show momsuki zorder 3 at f51
+            show momsuki 1e zorder 3 at f51
             show dadsuki zorder 2 at t53
             mo "If you have to describe it, then you're doing it wrong."
-            mo "What's coming from your heart?"
+            mo "You should say what's coming from your heart."
             show momsuki zorder 2 at t51
-            show dadsuki zorder 3 at f53
+            show dadsuki 1k zorder 3 at f53
             d "My heart...?"
             "Yasuhiro takes a deep breath."
             d "There's this sense of regret."
             d "Regret that I did the wrong things..."
-            d "Regret that I could have prevented all of this from happening..."
+            d 1o "Regret that I could have prevented all of this from happening..."
             d "And..."
-            d "...there's this warm feeling too."
+            d 1m "...there's this warm feeling too."
             d "It's something I haven't felt for a long time."
-            d "It makes me feel like I could do anything for you..."
+            d 1n "It makes me feel like I could do anything for you..."
             d "...and for Natsuki."
             d "Despite it's warmth, it almost feels like...a scary feeling."
-            d "It's like if anyone hurt either of you..."
+            d 1k "It's like if anyone hurt either of you..."
             d "...well, it would hurt me too..."
-            show momsuki zorder 3 at f51
+            show momsuki 1h zorder 3 at f51
             show dadsuki zorder 2 at t53
             mo "So...that's it, is it?"
             mo "..."
-            mo "Yasuhiro..."
+            mo 1g "Yasuhiro..."
             mo "I think that warrants a private discussion."
             show momsuki zorder 2 at t51
-            show dadsuki zorder 3 at f53
+            show dadsuki  zorder 3 at f53
             d "Ah...I see."
             d "Well, no matter what happens..."
-            d "I'm glad I got to see your beautiful face again, Haruki."
+            d 1m "I'm glad I got to see your beautiful face again, Haruki."
             d "I'll understand if--"
-            show momsuki zorder 3 at f51
+            show momsuki 1f zorder 3 at f51
             show dadsuki zorder 2 at t53
             mo "Just..."
             mo "...follow me outside, okay?"
             mo "Excuse us for a moment."
-            mo "Natsuki, be a dear and stay in here, okay?"
+            mo "Natsuki, be a dear and wait for us, okay?"
             show momsuki zorder 2 at t51
-            show natsuki zorder 3 at f52
+            show natsuki 5m zorder 3 at f52
             n "O-Okay..."
-            show momsuki zorder 3 at f51
+            show momsuki 1b zorder 3 at f51
             show natsuki zorder 2 at t52
             mo "I'll see you later, sweetheart."
             "She beams at Natsuki."
-            mo "Yasuhiro, let's go."
+            mo 1g "Yasuhiro, let's go."
             mo "There's a lot of things we have to talk about..."
             show momsuki zorder 2 at t51
+            show dadsuki 1p
             "Yasuhiro looks at Haruki and lets out a sad smile."
             show momsuki at lhide
             hide momsuki
@@ -2569,28 +2573,28 @@ label ch12_harukiplace:
             show dadsuki
             show natsuki zorder 2 at t41
             show monika zorder 2 at t42
-            show sayori zorder 3 at f43
+            show sayori 1d zorder 3 at f43
             s "Well..."
             s "That was certainly something."
             s "You and Yuri were pretty quiet during that whole thing."
-            show yuri 1a zorder 3 at f44
+            show yuri 2pq zorder 3 at f44
             y "S-Sorry..."
             y "Just that whole thing..."
             y "What happened just caught me by surprise."
-            y "I don't think this is something I'm going to forget for a while."
+            y 2pl "I don't think this is something I'm going to forget for a while."
             show yuri zorder 2 at t44
             mc "Yuri's right."
             mc "I'm just speechless at the whole thing."
             mc "It almost feels too surreal to be..."
             mc "...well, real."
-            show sayori zorder 3 at f43
+            show sayori 2d zorder 3 at f43
             s "What about you, Natsuki?"
             s "Are you okay?"
-            show natsuki zorder 3 at f41
+            show natsuki 1m zorder 3 at f41
             show sayori zorder 2 at t43
             n "I..."
             n "I don't know."
-            n "I can't believe this is happening to me right now."
+            n 1n "I can't believe this is happening to me right now."
             n "Um..."
             n "I'm gonna need some time to think, okay?"
             show natsuki zorder 2 at t41
@@ -2603,19 +2607,72 @@ label ch12_harukiplace:
             show monika zorder 2 at t32
             show yuri zorder 2 at t33
             "Natsuki looks at us, as if not believing what just happened, then exits the gym through the door her parents didn't."
+            show monika zorder 3 at f32
+            if monika_type == 0:
+                m 1m "I have to wonder..."
+                m "...if something like this is still possible for me."
+            elif monika_type == 1:
+                m 1e "You do like getting the happy endings, don't you?"
+            else:
+                m 1a "That was...interesting."
+            show sayori 1b zorder 3 at f31
+            show monika zorder 2 at t32
+            s "What do you mean?"
+            show sayori zorder 2 at t31
+            show monika 1l zorder 3 at f32
+            m "Oh, nothing~"
+            show sayori 1a  zorder 3 at f31
+            show monika zorder 2 at t32
+            s "If you say so..."
+            s 1d "I don't know about you guys but I'm pretty tired after this whole day."
+            s "So I think we should call the end of the meeting there."
+            show sayori zorder 2 at t31
+            show yuri 2pa zorder 3 at f33
+            y "It does seem like an appropiate time to end the meeting."
+            show monika zorder 3 at f32
+            show yuri zorder 2 at t33
+            if monika_type == 0:
+                m 1e "I suppose I should get going then."
+                m "See you all tomorrow."
+            else:
+                m 1a "So the day is finally over."
+                m "I can't wait until tomorrow."
+                m "Until then, goodbye."
+            show monika at thide
+            hide monika
+            show sayori zorder 2 at t21
+            show yuri zorder 2 at t22
+            "Monika gives a final wave of goodbye before leaving the gym through the same door as Natsuki."
+            show sayori 2d zorder 3 at f21
+            s "This really is the best possible thing that could have happened, isn't it?"
+            s "Thank you..."
+            "Sayori smiles at me."
+            show sayori zorder 2 at t21
+            mc "Eh? What did I do?"
+            show sayori zorder 3 at f21
+            s "Everything..."
+            s "Anyway, I have some things I have to do for tomorrow."
+            s "See you later, [player] and Yuri."
+            show sayori zorder 2 at t21
+            mc "Alright, see you tomorrow."
+            show sayori at thide
+            hide sayori
+            show yuri zorder 2 at t11
+            "Sayori exits the gym, almost skipping."
+            "She seems way too happy about this whole thing."
             $ ch12_outcome = 3
         else:
-            show dadsuki zorder 3 at hf43
+            show dadsuki 1h zorder 3 at hf43
             d "Haruki!"
             d "I've waited long enough."
             d "We have to talk, right now."
-            show momsuki zorder 3 at f41
+            show momsuki 1i zorder 3 at f41
             show dadsuki zorder 2 at t43
             mo "Okay, Yasuhiro."
             mo "You have my attention."
             mo "I better like what you have to say."
             show momsuki zorder 2 at t41
-            show dadsuki zorder 3 at f43
+            show dadsuki 1g zorder 3 at f43
             d "We should go outside for this."
             d "Everyone else doesn't have to hear what I have to say."
             show momsuki zorder 3 at f41
@@ -2623,40 +2680,40 @@ label ch12_harukiplace:
             mo "Whatever you have to say to me..."
             mo "Natsuki deserves to hear too."
             show momsuki zorder 2 at t41
-            show dadsuki zorder 3 at f43
+            show dadsuki 1e zorder 3 at f43
             d "And what of the rest of them?"
-            show momsuki zorder 3 at f41
+            show momsuki 1h zorder 3 at f41
             show dadsuki zorder 2 at t43
             mo "I'm not liking what I'm hearing, Yasuhiro."
             mo "So say what you have to or I'm leaving."
             show momsuki zorder 2 at t41
-            show dadsuki zorder 3 at f43
+            show dadsuki 1c zorder 3 at f43
             d "Fine."
             d "I need you to come back to me."
             d "I can't live properly without you."
             d "Life's been terrible ever since you left me."
-            show momsuki zorder 3 at f41
+            show momsuki 1e zorder 3 at f41
             show dadsuki zorder 2 at t43
             mo "And who's fault do you suppose that is?"
             mo "Have you ever considered that you made my life terrible, Yasuhiro?"
             show momsuki zorder 2 at t41
-            show dadsuki zorder 3 at f43
+            show dadsuki 1a zorder 3 at f43
             d "..."
             d "I guess that is my fault."
             d "But you didn't have to leave me for that..."
             d "We could have--"
-            show momsuki zorder 3 at f41
+            show momsuki 1i zorder 3 at f41
             show dadsuki zorder 2 at t43
             mo "There you are again, talking only about yourself."
             mo "Have you forgotten about Natsuki?"
             mo "You're a selfish person, Yasuhiro."
-            mo "When I saw you here today, I thought that maybe..."
+            mo 1g "When I saw you here today, I thought that maybe..."
             mo "...{i}maybe{/i} you would have changed."
-            mo "I guess that's just wishful thinking, isn't it?"
+            mo 1h "I guess that's just wishful thinking, isn't it?"
             show momsuki zorder 2 at t41
-            show natsuki zorder 3 at f42
+            show natsuki 1h zorder 3 at f42
             n "Mom..."
-            show momsuki zorder 3 at f41
+            show momsuki 1h zorder 3 at f41
             show natsuki zorder 2 at t42
             mo "I know he's made your life a living hell, Natsuki."
             mo "It wasn't hard to believe what people were saying about your father..."
@@ -2673,7 +2730,7 @@ label ch12_harukiplace:
             else:
                 m "Excuse me, but I can't help but say that this has nothing to do with us."
                 m "This is a family matter so it should really be a private conversation."
-            show momsuki zorder 3 at f51
+            show momsuki 1g zorder 3 at f51
             show monika zorder 2 at t55
             mo "It's too late for that now, isn't it?"
             mo "Besides...I want everyone here to witness what Yasuhiro has to say."
@@ -2681,17 +2738,17 @@ label ch12_harukiplace:
             show momsuki zorder 2 at t51
             show monika zorder 3 at f55
             if monika_type == 0 or monika_type == 1:
-                m "I see..."
+                m 1m "I see..."
                 m "Then you'll excuse me for a moment."
             else:
-                m "Alright."
+                m 1h "Alright."
                 m "Then I'll need something if this is continuing."
             show momsuki zorder 3 at f51
             show monika zorder 2 at t55
             show monika at lhide
             hide monika
             "Monika quickly leaves the gym."
-            show momsuki zorder 3 at f41
+            show momsuki 1f zorder 3 at f41
             show natsuki zorder 2 at t42
             show dadsuki zorder 2 at t43
             show sayori zorder 2 at t44
@@ -2701,53 +2758,49 @@ label ch12_harukiplace:
             show momsuki zorder 2 at t41
             "Suprisingly, no one else leaves."
             "I guess they're all as interested as I am to see how this ends."
-            show dadsuki zorder 3 at f43
+            show dadsuki 1i zorder 3 at f43
             d "Sigh..."
             d "Look, I just want things to be back the way they were."
             d "The two--"
             d "The three of us, living together as a family again."
-            d "We can bake together..."
+            d 1k "We can bake together..."
             d "We can look after Natsuki together."
             d "We can live a happy life...together."
-            show momsuki zorder 3 at f41
+            show momsuki 1h zorder 3 at f41
             show dadsuki zorder 2 at t43
             mo "I don't know if that's possible."
-            mo "But...I'm willing to give it a shot..."
-            mo "...if Natsuki agrees to it."
-            show momsuki zorder 2 at t41
-            show natsuki zorder 3 at f42
-            n "H-Huh?"
-            n "W-What do you mean?"
-            show momsuki zorder 3 at f41
-            show natsuki zorder 3 at f42
-            mo "Natsuki, do you think I should give your father another chance?"
+            mo "But...I'll give it a shot..."
+            mo "...if Natsuki is willing."
+            mo 1g "Natsuki, do you think I should give your father another chance?"
             mo "Think about it carefully, please."
-            mo "I'm willing to try again, if you are."
+            mo "The three of us can try to start again, if you want..."
             show momsuki zorder 2 at t41
+            show natsuki 1k
             "Natsuki looks at her mother with innocent eyes."
             "She looks deep in thought."
-            show natsuki zorder 3 at f42
+            show natsuki 1m zorder 3 at f42
             n "Mom..."
             n "I really want things to go back to the way they were..."
-            n "From before you left."
+            n 1q "From before you left."
             n "But..."
-            n "Dad has changed..."
+            n 1r "Dad has changed..."
             n "I wanted to stay with him because he was the only real family I had left and because I thought I still loved him..."
             n "...even though he did all these terrible things to me."
-            n "But seeing you again..."
+            n 1s "But seeing you again..."
             n "And hearing what [player] said to me before..."
-            n "It's made me realize..."
+            n "...made me realize..."
+            show natsuki 1m
             "Natsuki pauses for a moment then stares at Yasuhiro."
             n "You aren't the dad I loved."
-            n "That person died when mom left..."
+            n 1n "That person died when mom left..."
             n "And...this monster."
             n "He doesn't deserve a second chance."
             show natsuki zorder 2 at t42
-            show dadsuki zorder 3 at f43
+            show dadsuki 1h zorder 3 at f43
             d "You little brat!"
             d "I should have taught you more discipline."
             d "When you get back to the house, you're--"
-            show momsuki zorder 3 at f41
+            show momsuki 1i zorder 3 at f41
             show dadsuki zorder 2 at t43
             mo "You're not going to the house, Yasuhiro."
             mo "That house is signed under my name."
@@ -2755,14 +2808,14 @@ label ch12_harukiplace:
             mo "Or have you forgotten that much about me?"
             mo "You're lucky I don't call the police right now."
             show momsuki zorder 2 at t41
-            show dadsuki zorder 3 at f43
+            show dadsuki 1g zorder 3 at f43
             d "This..."
             d "This isn't fair."
-            d "I deserve better than this!"
+            d 1h "I deserve better than this!"
             d "I deserve--"
             play sound "sfx/smack.ogg"
             pause 0.25
-            show dadsuki 1a:
+            show dadsuki 1h:
                 1.3
                 easeout_cubic 0.5 yoffset 300
             pause 1.55
@@ -2783,41 +2836,42 @@ label ch12_harukiplace:
             "Monika suddenly appears with a keyboard by her side."
             "She must have hit him on the head with it so hard that it knocked him out."
             "Everyone is surprised at what she did and the strength it must have taken to do that."
-            show natsuki zorder 3 at f42
+            show natsuki 1p zorder 3 at f42
             n "M-Monika?!"
             n "H-How did you--"
             n "W-Why would you--"
             n "Where did you even find that?!"
             show natsuki zorder 2 at t42
             "Monika simply smiles at Natsuki."
-            show momsuki zorder 3 at f41
+            show momsuki 1g zorder 3 at f41
             show natsuki zorder 2 at t42
             mo "Well..."
             mo "That's certainly one way to deal with him."
-            mo "I appreciate your help, uh..."
+            mo 1e "I appreciate your help, uh..."
             show momsuki zorder 2 at t41
-            show monika zorder 3 at f43
+            show monika 1a zorder 3 at f43
             if monika_type == 0:
                 m "It's Monika."
             elif monika_type == 1:
                 m "The name's Monika."
             else:
                 m "Mar--"
-                m "Monika."
-            show momsuki zorder 3 at f41
+                m 1l "Monika."
+            show momsuki 1f zorder 3 at f41
             show monika zorder 2 at t43
             mo "Right."
             mo "Thank you again for the help, Monika."
-            mo "I'm going to call for help to get rid of Yasuhiro."
+            mo 1g "I'm going to call help to get rid of Yasuhiro."
             mo "Natsuki, why don't you come with me for a minute?"
             mo "I'd like to speak with you..."
             mo "...in private this time."
             show momsuki zorder 2 at t41
+            show natsuki 1c
             "Natsuki looks back at us."
-            show sayori zorder 3 at f44
+            show sayori 1d zorder 3 at f44
             s "Go ahead!"
-            s "We'll still be here~"
-            show natsuki zorder 3 at f42
+            s "You two really need to talk~"
+            show natsuki 1q zorder 3 at f42
             show sayori zorder 2 at t44
             n "A-Alright..."
             n "I'll see you guys later..."
@@ -2827,54 +2881,65 @@ label ch12_harukiplace:
             show natsuki at lhide
             hide natsuki
             show monika zorder 2 at t31
-            show sayori zorder 2 at f32
-            "Natsuki waves goodbye and her mother smiles at us before they both exit the gym."
+            show sayori 1a zorder 2 at f32
+            "Natsuki waves goodbye, and her mother smiles at us before they both exit the gym."
             s "You two were pretty quiet throughout all of that."
             show sayori zorder 2 at t32
-            show yuri zorder 3 at f33
+            show yuri 2pq zorder 3 at f33
             y "I was just a little astonished..."
             y "Both of Natsuki's parents meeting her today and it ending up like that..."
-            y "Well...it's something I'll remember for a long time."
+            y 2ps "Well...it's something I'll remember for a long time."
             show yuri zorder 2 at t33
             mc "Yeah, that whole thing just felt surreal."
             mc "The odds of both of Natsuki's parents being here..."
-            mc "Especially her mom who she hasn't seen in such a long time..."
+            mc "Especially since her mom left her in the middle of the night..."
             mc "I'm just speechless, really."
-            show sayori zorder 3 at f32
-            s "That's okay."
-            s "It's still sinking in for me too."
-            s "Especially that whole keyboard...thing with Monika."
+            show sayori 1d zorder 3 at f32
+            s "It was a pretty weird thing to happen, right?"
+            s 1l "Especally that whole keyboard thing with Monika!"
+            s 1d "Anyway, there isn't really a point continuing without Natsuki."
+            s "So you guys can go home now!"
             show monika zorder 3 at f31
             show sayori zorder 2 at t32
             if monika_type == 0:
-                m "Ahaha, sorry."
-                m "It probably wasn't the best way to deal with him."
-                m "But we would have had to deal with him one way or another."
+                m 1m "{i}(An ending like this...){/i}"
+                m "{i}(Even if it wasn't ideal...){/i}"
+                m "{i}(Could it still be possible for me?){/i}"
+            elif monika_type == 1:
+                m 1e "{i}(You were always one to go for endings like this...){/i}"
+                m "{i}(I guess I shouldn't be surprised.){/i}"
             else:
-                m "Well, no one else was going to do anything."
-                m "So I took it upon myself to deal with him."
+                m 1j "{i}(Ugh, finally...){/i}"
             show monika zorder 2 at t31
-            show yuri zorder 3 at f33
-            y "That was some good initiative on your behalf, Monika."
-            y "I didn't even see or hear you come in after you left."
-            show monika zorder 3 at f31
-            show yuri zorder 2 at t33
+            show sayori 1c zorder 3 at f32
+            s "What was that?"
+            show monika 3l zorder 3 at f31
+            show sayori zorder 2 at t32
+            m "Nothing~"
             if monika_type == 0:
-                m "Ah..."
-                m "Well, I was rather discreet about it."
-                m "Yasuhiro positioned himself in a good enough spot that he didn't notice anything."
-                m "I think you were all distracted to notice me too."
+                m 3e "I'm ready to head home now."
+                m "I'll see you all tomorrow."
             else:
-                m "You could say sneaking around is one of my strong suits..."
-                m "It helps that you were all distracted during the whole thing to really notice."
-            show monika zorder 2 at t31
-            show sayori zorder 3 at f32
-            
+                m 3b "I'm just glad today is finally over."
+                m "I can't wait for tomorrow."
+            show monika at thide
+            hide monika
+            show sayori zorder 2 at t21
+            show yuri zorder 2 at t22
+            "Monika exits the gym through the door that Natsuki and her mom didn't go through."
+            show sayori 1a zorder 3 at f21
+            s "You two should probably go as well."
+            s "I'm just gonna stay here for a while to make sure Yasuhiro is properly {i}taken care{/i} of."
+            s 1d "I need to check a few things before that though, so I'll see you both tomorrow~"
+            show sayori at thide
+            hide sayori
+            show yuri zorder 2 at t11
+            "Sayori looks around for a couple of seconds before heading into the gym's storage shed."
             $ ch12_outcome = 2
     else:
-        mo "Let go of me."
+        mo 1i "Let go of me."
         show momsuki zorder 2 at t31
-        show natsuki zorder 3 at f32
+        show natsuki 1m zorder 3 at f32
         stop music_poem fadeout 2.0
         n "W-What?"
         n "D-Don't you know who I am?"
@@ -2885,71 +2950,74 @@ label ch12_harukiplace:
         mo "I'm not here for you."
         mo "The day I left you and Yasuhiro was the happiest day of my life, I want you to know that."
         show momsuki zorder 2 at t31
-        show natsuki zorder 3 at f32
+        show natsuki 12h zorder 3 at f32
         n "M-Mom..."
         n "W-Why are you...?"
         show natsuki at lhide
         hide natsuki
         "Natsuki runs away from the gym, with tears in her eyes."
-        show dadsuki zorder 3 at f33
+        show dadsuki 1l zorder 3 at f33
         if check_whole_house:
             d "Haruki...?"
             d "What's wrong with you?"
             d "..."
-            d "You aren't Haruki, are you?"
+            d 1k "You aren't Haruki, are you?"
             d "Y-You look like her but..."
         else:
-            d "That was cold."
+            d 1f "That was cold."
             d "Especially coming from you."
             d "You were the one who knew how to console her when she needed it."
-            d "That was..."
+            d 1c "That was..."
             d "...definitely not that."
-        show sayori zorder 3 at f32
-        show dadsuki zorder 2 at t33
+        show momsuki zorder 2 at t41
+        show natsuki zorder 2 at t42
+        show dadsuki zorder 2 at t43
+        show sayori 1f zorder 3 at f44
         s "Yasuhiro's right..."
         s "This is all wrong."
         s "You aren't the real Haruki."
-        show momsuki zorder 3 at f31
-        show sayori zorder 2 at t32
+        show momsuki 1d zorder 3 at f41
+        show sayori zorder 2 at t44
         mo "And what would you know about me, girl?"
         mo "Come to think of it, I recognize your voice!"
-        mo "There's like an echo in my mind that sounds just like you..."
+        mo 1a "There's like an echo in my mind that sounds just like you..."
         mo "And it told me to come here."
-        mo "Now that it's gone, I can be on my way."
-        show momsuki zorder 2 at t31
-        show dadsuki zorder 3 at f33
+        mo 1b "Now that it's gone, I can be on my way."
+        show momsuki zorder 2 at t41
+        show dadsuki 1i zorder 3 at f43
         d "You're not staying?"
         d "You came all this way just to drive your own daughter away?"
-        show momsuki zorder 3 at f31
-        show dadsuki zorder 2 at t33
+        show momsuki 1i zorder 3 at f41
+        show dadsuki zorder 2 at t43
         mo "Ahaha, do you think I don't know what you've done to her?"
         mo "You've ruined her life, even more than I have."
         mo "I've kept up with your deeds, Yasuhiro so don't lecture me about driving my daughter away."
         mo "Why don't you just--"
-        show momsuki zorder 2 at t31
-        show sayori zorder 3 at f32
+        show momsuki zorder 2 at t41
+        show sayori 1g  zorder 3 at f44
         s "No..."
-        s "This is all wrong."
         s "We must have messed up Haruki's personality..."
-        show momsuki zorder 3 at f31
-        show sayori zorder 2 at t32
+        show momsuki zorder 3 at f41
+        show sayori zorder 2 at t44
         mo "Who in the world are you talking to?"
-        mo "And what do you mean you messed up my personality?"
-        mo "I've never been better."
-        show momsuki zorder 2 at t31
-        show sayori zorder 3 at f32
+        mo 1d "And what do you mean you messed up my personality?"
+        mo 1c "I've never been better."
+        mo "Now that I'm free from my pathetic daughter and my sorry excuse for a husband..."
+        mo 1b "I can finally do what I've wanted to do with my life."
+        show momsuki zorder 2 at t41
+        show sayori 1k zorder 3 at f44
         s "..."
         $ config.skipping = False
         $ config.allow_skipping = False
         s "I don't want to mess it up even more."
-        s "It's your choice from here..."
+        s 1f "It's your choice from here..."
         s "If you continue, then I'll eat a strawberry from before you put her character file in."
         s "If you want to try to reassemble her again for Natsuki's happy ending..."
-        s "Well, anything is better than what's happening right now."
+        s 1h "Well, anything is better than what's happening right now."
         s "I hope you didn't do this intentionally..."
-        s "I can't really know that, can I?"
+        s 1k "I can't really know that, can I?"
         s "I suppose I'll just give you the benefit of the doubt."
-        s "I'm going to eat a strawberry now."
+        s 1h "I'm going to eat a strawberry now."
         s "See you."
         $ ch12_haruki_tried = True
         $ delete_character("haruki")
@@ -2957,11 +3025,19 @@ label ch12_harukiplace:
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
-        show sayori 1a zorder 3 at f51
-        show monika zorder 2 at t52
-        show natsuki zorder 2 at t53
-        show dadsuki zorder 2 at t54
-        show yuri zorder 2 at t55
+        show sayori 2a zorder 3 at f51
+        if monika_type == 0:
+            show monika 1e zorder 2 at t52
+        elif monika_type == 1:
+            show monika 1l zorder 2 at t52
+        else:
+            show monika 1h zorder 2 at t52
+        show natsuki 4n zorder 2 at t53
+        if check_whole_house:
+            show dadsuki 1i zorder 2 at t54
+        else:
+            show dadsuki 1e zorder 2 at t54
+        show yuri 3ph zorder 2 at t55
         play music t9 fadein 0.5
         pause 0.5
         stop sound
@@ -2969,11 +3045,1070 @@ label ch12_harukiplace:
         window show(None)
         $ config.allow_skipping = True
         jump ch12_strawberry5
+    y 2pa "That just leaves the two of us."
+    y "I hope that wasn't too weird for you."
+    y 2ph "Natsuki seeing both her parents like that..."
+    mc "It's not your fault that was weird."
+    mc "Besides, I'm happy for her."
+    mc "She's going to be okay, I just know it."
+    y "I'm getting that feeling too..."
+    y 2pf "Anyway..."
+    if visited_yuri_hospital:
+        y 3pb "Ready to walk home, [player]?"
+        mc "Yeah, let's go."
+    else:
+        y 3ps "I suppose I'll see you tomorrow as well."
+        mc "You can count on it, Yuri."
     return
 
 label ch12_harukinoplace:
+    s "But..."
+    s 2k "Could this be the right way to do it?"
+    s "What would have happened if you actually made her a character file?"
+    s "Would it really have been her?"
+    s "..."
+    s 2f "Maybe this is the right thing to do..."
+    s 2g "I guess we'll never really know until we go through with it, right?"
+    if check_whole_house:
+        s "I tried something..."
+        s 2k "It might not have been the most ethical thing I've done..."
+        s "But I was hoping that you would create the character file."
+        s 2d "I guess it's still better in the end for Natsuki, isn't it?"
+    else:
+        s 2d "I'm a bit relieved."
+        s "I was going to try something with Yasuhiro but decided against it."
+        s "It would have been wrong, changing him like that."
+    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+    if not list(set(process_list).intersection(stream_list)):
+        if currentuser != "" and currentuser.lower() != player.lower():
+            s "Alright, [currentuser]..."
+            s "We'll do it your way."
     $ config.allow_skipping = True
+    $ audio.t9b = "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
+    play music t9b fadein 0.5
+    pause 0.5
+    label ch12_noharukicont:
+    s 2q "It looks like our special guest has arrived!"
+    s "Welcome, I hope you have a great time here!"
+    show sayori zorder 2 at t51
+    show dadsuki 1a zorder 3 at f54
+    d "That voice..."
+    d "You were the one on the phone!"
+    d 1j "Where is she? I have to see her!"
+    show sayori 2n
+    show dadsuki zorder 2 at t54
+    "Sayori looks at Yasuhiro quizically."
+    show sayori 2l zorder 3 at f51
+    s "Um...where is who?"
+    show sayori zorder 2 at t51
+    show dadsuki 1e zorder 3 at f54
+    d "You know exactly who I'm talking about."
+    d "I didn't come all this way for nothing."
+    if check_whole_house:
+        d 1i "So please...tell me where she is."
+    else:
+        d 1h "So I demand you tell me where she is, right now!"
+    show natsuki 2f zorder 3 at f53
+    show dadsuki zorder 2 at t54
+    n "What is going on?!"
+    n "Sayori, tell us what's happening!"
+    show sayori 2d zorder 3 at f51
+    show natsuki zorder 2 at t53
+    s "Your guess is as good as mine, Natsuki."
+    "Sayori turns her attention to Yasuhiro."
+    s "I'm sorry, Yasuhiro."
+    s "But I'm afraid I have no idea what you're talking about."
+    s 2a "But now that you're here, why don't you stay and enjoy this little performance we have going on?"
+    s "I'm sure it will be really fun!"
+    show sayori zorder 2 at t51
+    show dadsuki zorder 3 at f54
+    if check_whole_house:
+        d 1k "But..."
+        d "I just wanted..."
+        d "...to see her again."
+    else:
+        d 1e "Are you playing me for a fool?"
+        d "It was definitely your voice I heard on the phone after Haruki's."
+    show sayori 1c zorder 3 at f51
+    show dadsuki zorder 2 at t54
+    s "Well, what did the phone on the voice say?"
+    s "Was she going to meet you in here?"
+    show sayori zorder 2 at t51
+    show dadsuki zorder 3 at f54
+    if check_whole_house:
+        d 1i "But it was your voice, you should know!"
+        "Yasuhiro looks at Sayori sadly."
+        d "I guess I have no choice."
+        d "I have to wait...if I ever want to see her again."
+    else:
+        d 1h "This is stupid."
+        "Yasuhiro gives Sayori a malicious look."
+        d "But, if I must..."
+        d "I'll wait here."
+    show sayori 4q zorder 3 at f51
+    show dadsuki zorder 2 at t54
+    s "Great! Why don't you grab a seat?"
+    s "You know, it's an interesting choice to meet...I mean who would want to meet at a school's gym?"
+    show sayori zorder 2 at t51
+    show dadsuki 1c zorder 3 at f54
+    d "The waiting is going to be the worst...isn't it?"
+    d "This wasn't part of the agreement..."
+    show natsuki 2g zorder 3 at f53
+    show dadsuki zorder 2 at t54
+    n "Agreement?!"
+    n "Sayori, what did you and my dad talk about?!"
+    n 2f "Why is he the special guest and why did you keep that secret?!"
+    show sayori 1d zorder 3 at f51
+    show natsuki zorder 2 at t53
+    s "Natsuki, I know you have a lot of questions."
+    s "I'll answer them all later."
+    s "Right now, we have a play to finish."
+    s 1j "So if you don't mind, {i}Yasuhiro{/i}."
+    show sayori zorder 2 at t51
+    show yuri 2pq zorder 3 at f55
+    y "Sayori...H-How do you know Natsuki's dad?"
+    show dadsuki zorder 3 at f54
+    show yuri zorder 2 at t55
+    if check_whole_house:
+        d 1k "I don't know who she is..."
+        d "She just told me that I should be here today..."
+        d "Already I can tell she's...something else."
+    else:
+        d 1g "That's a question I'd like answered too."
+        d "Calling me out of nowhere like that..."
+        d "What kind of person are you?"
+    show sayori zorder 3 at f51
+    show dadsuki zorder 2 at t54
+    s 1j "I think she was asking me, not you."
+    s 1k "Yuri, the truth is..."
+    s 1l "...well, I know him because I wanted to help people."
+    s "That's the truth."
+    show sayori zorder 2 at t51
+    show monika zorder 3 at f52
+    if monika_type == 0:
+        m 1e "You're certainly doing your best, Sayori."
+        m "I know you need to keep some things secret, but maybe telling more would help us understand?"
+    elif monika_type == 1:
+        m 1n "Ahaha, is that really all you've got to say?"
+    else:
+        m 1h "While that's true, I can't help but feel you're hiding something from us."
+    show sayori zorder 3 at f51
+    show monika zorder 2 at t52
+    s "W-What do you mean?"
+    s "There's no other reason behind it."
+    s 1q "I really do just want to help people..."
+    show sayori zorder 2 at f51
+    show dadsuki zorder 3 at f54
+    d "So help me then."
+    show dadsuki zorder 4 at t54
+    "Sayori looks at him with a curious expression."
+    show sayori zorder 3 at t43
+    "She moves next to Yasuhiro and whispers something in his ear."
+    show dadsuki 1l
+    "The look on Yasuhiro's face shifts to one of shock."
+    "He looks at Sayori as if caught completely by surprise as to what she just said."
+    show monika zorder 2 at t51
+    show natsuki zorder 2 at t52
+    show sayori 1d zorder 3 at f53
+    show dadsuki zorder 2 at d54
+    s "I hope that explains everything."
+    s "You don't have to say anthing."
+    s "All you have to do is watch."
+    show natsuki 1c zorder 3 at f52
+    show sayori zorder 2 at t53
+    n "Sayori?!"
+    n "What did you say to him?"
+    n 1h "I've never seen my dad so--"
+    show natsuki zorder 2 at t52
+    show sayori 1a zorder 3 at f53
+    s "Oh, it was nothing really."
+    s "You shouldn't worry about it, Natsuki."
+    s "He's just here to watch us, so just pretend he isn't here."
+    s 1d "Please, Yasuhiro, take a seat."
+    show sayori zorder 2 at t53
+    show dadsuki zorder 3 at f54
+    if check_whole_house:
+        d 1k "..."
+    else:
+        d 1e "Fine."
+    show dadsuki at thide
+    hide dadsuki
+    show monika zorder 2 at t41
+    show natsuki zorder 2 at t42
+    show sayori zorder 2 at t43
+    show yuri zorder 2 at t44
+    "With a defeated look on his face, he grabs a seat from a pile of chairs and places it in front of our performing area."
+    if check_whole_house:
+        "He looks down and momentarily covers his face with his hands before looking up at the stage."
+    else:
+        "He crosses his arms and starts tapping his foot impatiently."
+    show sayori 4q zorder 3 at f43
+    play music t5 fadeout 2.0
+    s "Alright, everbody!"
+    s "It's time to continue with the play!"
+    show natsuki 1m zorder 3 at f42
+    show sayori zorder 2 at t43
+    n "Sayori..."
+    "Natsuki whispers to the group."
+    n "You can't seriously expect me to do this in front of my dad!"
+    n 1q "This is way too weird!"
+    show natsuki zorder 2 at t42
+    show sayori 3h zorder 3 at f43
+    s "Natsuki, you have to do this."
+    s 3d "Just pretend he isn't there, it'll be fine."
+    show natsuki 3r zorder 3 at f42
+    show sayori zorder 2 at t43
+    n "But--"
+    show monika zorder 3 at f41
+    show natsuki zorder 2 at t42
+    if monika_type == 0:
+        m 2e "I think Sayori knows what she's doing, Natsuki."
+        m "You should listen to her."
+    else:
+        m 2a "Maybe you should listen to what Sayori says, Natsuki."
+        m "It might be important for later."
+    show monika zorder 2 at t41
+    show yuri 2ps zorder 3 at f44
+    y "I agree with Monika."
+    show natsuki 3o zorder 3 at f42
+    show yuri zorder 2 at t44
+    n "Y-You what?!"
+    n "Yuri, I expected you out of everyone to be uncomfortable doing this!"
+    show natsuki zorder 2 at t42
+    show yuri 2pf zorder 3 at f44
+    y "I think it's a good opportunity for me to practice speaking in front of other people."
+    y "I know it might be different for you since he's your father..."
+    y "But Sayori invited him here, and he's watching us."
+    y 2ph "It's not like we can do anything about it now."
+    show natsuki zorder 3 at f42
+    show yuri zorder 2 at t44
+    n 3o "Uuuuuu...!"
+    n 3r "T-There's nothing I can do to change anyone's mind, is there?"
+    n "Fine, fine. I'll just try to ignore him..."
+    n 3s "I suppose there really is no use in doing anything that I want, is there?"
+    show natsuki zorder 2 at t42
+    show sayori 3d zorder 3 at f43
+    s "Natsuki, it's really not like that..."
+    s "I promise, you'll get what you want after today."
+    s "So please, just finish this off, okay?"
+    "Natsuki doesn't look convinced but nods her head."
+    s 3a "Great, so where were we?"
+    s "Oh, right!"
+    $ currentpos = get_pos()
+    $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>bgm/5_natsuki.ogg"
+    stop music fadeout 1.0
+    $ renpy.music.play(audio.t5b, channel="music_poem", fadein=1.0, tight=True)
+    "Sayori quickly changes her whole composure and expression."
+    s 4d "You're an important part of the team, Nozomi."
+    s 4r "You all are."
+    s 4d "So really...all you have to do is ask us for help."
+    s "You know we'd want nothing more than for you to be happy."
+    show monika 1h zorder 3 at f41
+    show sayori zorder 2 at t43
+    m "Those are inspiring words, Saika."
+    m 1i "I just hope you're able to back them up, otherwise all you've given is false hope."
+    m 1o "And what follows false hope, is an even greater despair."
+    show monika zorder 2 at t41
+    show sayori 2f zorder 3 at f43
+    s "Martha, we always have to hope for the best."
+    s "It's the best outlook to life."
+    show monika 1h zorder 3 at f41
+    show sayori zorder 2 at t43
+    m "I'm not that naive anymore, Saika."
+    m 1i "I've been hoping for the best most of my life, but I've learned to expect the worst."
+    m "So forgive me if I don't see eye to eye with you on some things."
+    m 1o "It's just my view of this harsh reality, where the perfect outcome is impossible..."
+    "Monika didn't even need to read off the script when she read her last couple of lines."
+    "She said it with such meaning too, it's almost like she's a natural at acting."
+    m 1m "But it doesn't matter what I think anyway."
+    m 1e "I've already agreed to help you with your plan first."
+    show monika zorder 2 at t41
+    mc "I know this isn't your ideal way of doing things."
+    mc "It isn't the ideal way of doing things at all, really."
+    mc "But Nozomi deserves the best outcome."
+    mc "I'm going to try my best to make sure of it, even if it kills me."
+    show yuri 2pb zorder 3 at f44
+    y "Ah, Maemi."
+    y "Your dedication to the Ronin is something to admire..."
+    y "...though don't you think that's a little too far?"
+    show yuri zorder 2 at t44
+    mc "I'd go to any lengths for the Ronin."
+    mc "But I suppose you're right, dying would be a very bleak outcome."
+    mc "I just hope my power awakens soon."
+    mc "It's not like I can just snap my fingers and activate it, can I?"
+    "My character snaps his fingers at this point and finds himself the only person moving."
+    mc "Uh...what's going on?"
+    mc "Is this a time stop?"
+    mc "Saika? You're frozen too?"
+    mc "But she's a shinobi like me."
+    mc "So why...?"
+    mc "Oh no..."
+    mc "Did I do this?"
+    mc "How do I stop it?"
+    "I pace around the gym, suprisingly the others are playing along as if they were frozen too."
+    "I think I even caught Yasuhiro freeze for a little bit."
+    mc "This is bad...this is bad...this is--"
+    show sayori 2m zorder 3 at f43
+    s "E-Eh? When did you get over there Maemi?"
+    s "You were in front of a me just a second ago."
+    show monika 1c zorder 3 at f41
+    show sayori zorder 2 at t43
+    m "Hmm..."
+    m "He performed a time stop, didn't he?"
+    m 2d "Quite suprising."
+    m "Am I right?"
+    show monika zorder 2 at t41
+    mc "I-I think you're right."
+    mc "But--"
+    show sayori 4q zorder 3 at f43
+    s "That's great! We can help Nozomi now!"
+    s "We should do it now because--"
+    show sayori zorder 2 at t43
+    mc "Saikia, I--"
+    show sayori 4r zorder 3 at f43
+    s "The sooner we help her, the sooner our team is back in top shape!"
+    s "Ehehe, I'm so excited!"
+    show sayori zorder 2 at t43
+    show yuri 2pq zorder 3 at f44
+    y "I think you're missing an important detail here, Saika."
+    y "You were surprised when he appeared somewhere else."
+    show sayori 4a zorder 3 at f43
+    show yuri zorder 2 at t44
+    s "So...?"
+    show natsuki 2g zorder 3 at f42
+    show sayori zorder 2 at t43
+    n "Saika, don't you get what Yoshiko is trying to say?"
+    n "Maemi froze you in his time stop too!"
+    n 2h "He's..."
+    show natsuki zorder 2 at t42
+    show sayori 3e zorder 3 at f43
+    s "You're right..."
+    s 3l "Why did that escape my mind?"
+    show sayori zorder 2 at t43
+    show yuri 3ps zorder 3 at f44
+    y "You do tend to get a bit excited..."
+    show sayori 3q zorder 3 at f43
+    show yuri zorder 2 at t44
+    s "Ehehe, you're right..."
+    s 3r "That's really weird, isn't it?"
+    s "I thought I would be immune to time stops since I'm a shinobi and everything."
+    show monika 1q zorder 3 at f41
+    show sayori zorder 2 at t43
+    m "That's an incredibly powerful power you seem to have developed, Maemi."
+    m "The ability to stop people who can manipulate time."
+    m 2e "Well done, Maemi."
+    m "Perhaps I have underestimated you."
+    show monika zorder 2 at t41
+    mc "That's great and everything. There's just one drawback."
+    mc "I can't control it. I think I just froze you all accidentally..."
+    mc "Then I panicked then you all unfroze."
+    show monika 1h zorder 3 at f41
+    m "Now that...could be a problem."
+    m "You can't control your powers and you've got a dangerous ability."
+    m 1i "I suddenly have a very different opinion of you, Maemi."
+    m "We aren't safe around you."
+    show monika zorder 2 at t41
+    show sayori 1h zorder 3 at f43
+    s "Calm down, Martha!"
+    s "It's not like Maemi can help it."
+    s 1i "Besides, I doubt he'd use his powers for evil."
+    s 1k "That would just be absurd!"
+    s "Even if he did, I would have sensed his ill intent a long time ago."
+    show sayori zorder 2 at t43
+    show yuri 2pe zorder 3 at f44
+    y "But he didn't know he could stop shinobi with a time stop a long time ago..."
+    y "Try sensing him for ill intent again, Saika."
+    show sayori 2h zorder 3 at f43
+    show yuri zorder 2 at t44
+    s "No! No way!"
+    s "There's no way Maemi would just betray us like that."
+    show sayori zorder 2 at t43
+    mc "I would never betray the Ronin..."
+    mc "But if it makes you all feel safer, then..."
+    show monika 3h zorder 3 at f41
+    m "I agree with Yoshiko."
+    m "Sensing his ill intent again would be the most appropiate thing to do right now."
+    show monika zorder 2 at t41
+    show sayori 1j zorder 3 at f43
+    s "Why are you both so suspicious towards Maemi now that he's activated his powers?"
+    s "He's done nothing but help ever since he's joined!"
+    s "I trust him with my life."
+    show natsuki 1m zorder 3 at f42
+    show sayori zorder 2 at t43
+    n "This is all my fault, isn't it?"
+    n 1n "If I just dealt with my father earlier, then..."
+    "Yasuhiro's attention suddenly shifts from watching the door of the gym to Natsuki."
+    "It's as if her saying 'father' made him pay closer attention to what's going on."
+    n "...we wouldn't even have to talk about this."
+    show natsuki zorder 2 at t42
+    show sayori 1d zorder 3 at f43
+    s "Nozomi, that's not true at all."
+    s "Maemi would have had to learn to use his powers sooner or later."
+    s "And we'd be having this exact same conversation."
+    show natsuki 1k zorder 3 at f42
+    show sayori zorder 2 at t43
+    n "But..."
+    show natsuki 1o
+    "Natsuki looks slightly to the right and meets Yasuhiro's gaze."
+    n "B-B-B...!"
+    "She suddenly freezes in place. It's as if she's petrified."
+    show monika zorder 3 at f41
+    show natsuki zorder 2 at t42
+    if monika_type == 0:
+        m 1f "Natsuki?"
+        m "Is something wrong?"
+    else:
+        m 1c "What's happening?"
+        m "Why did Natsuki stop talking?"
+    show monika zorder 2 at t41
+    show sayori 1c zorder 3 at f43
+    s "I think she's a little nervous."
+    s "She must have accidentally looked at her dad."
+    s "Natsuki!"
+    "Sayori starts waving her hands in front of Natsuki's face."
+    "It doesn't seem to be doing anything."
+    s 1h "I think she's too shocked to do anything..."
+    s "What do we do...?"
+    show sayori zorder 2 at t43
+    "Yasuhiro suddenly gets up from his seat."
+    show dadsuki 1c zorder 3 at f51
+    show monika zorder 2 at t52
+    show natsuki zorder 2 at t53
+    show sayori zorder 2 at t54
+    show yuri zorder 2 at t55
+    if check_whole_house:
+        d 1i "Natsuki..."
+        d "You remind me of your mother when she first started acting."
+        d "She was so nervous back then, like you right now."
+        d 1k "You might be nervous because of different reasons."
+        d "For Haruki.."
+        d 1m "She had to perform in front of a large crowd of people in the theatre..."
+        d "But you..."
+        d 1k "You have to perform in front of me."
+        show dadsuki zorder 2 at t51
+        show sayori 1j zorder 3 at f54
+        s "What point are you getting at here, Yasuhiro?"
+        s "There's no--"
+        show monika 1e zorder 3 at f52
+        show sayori zorder 2 at t54
+        if monika_type == 0:
+            m "I think we should hear him out, Sayori."
+            m "He seems...different."
+        else:
+            m "Let's hear him out."
+            m "I'd like to hear what he has to say."
+        show dadsuki 1b zorder 3 at f51
+        show monika zorder 2 at t52
+        d "Thank you..."
+        stop music_poem fadeout 2.0
+        play music t9 fadein 2.0
+        d 1n "Listen, Natsuki."
+        d "I know you have no reason to care about what I have to say."
+        d "In fact, you probably don't want to listen to what I have to say."
+        d 1k "You probably hate me for what I've done to you."
+        d "I know it wasn't right."
+        d "I know I've blamed you for all the bad things that have happened ever since..."
+        d "...your mother left us."
+        d "Ironic, I was the reason she left...wasn't I?"
+        show dadsuki zorder 2 at t51
+        show sayori 1i zorder 3 at f54
+        s "Wow. I think she already knew all these things about you, Yasuhiro."
+        s "So what exactly are you trying to say here?"
+        show dadsuki 1l zorder 3 at f51
+        show sayori zorder 2 at t54
+        d "I guess what I'm trying to say is."
+        d "I'm sorry, for everything."
+        d 1m "Seeing you acting just then, it brought back memories of your mother."
+        d "So...I'm going to tell you something."
+        d "The same thing I said to her on the night of her first performance..."
+        d 1l "Smile."
+        show dadsuki zorder 2 at t51
+        "Natsuki's expression eases a little bit."
+        "She turns away from everyone and covers her face."
+        "I hear a soft sound coming from her, almost like a whimper."
+        show dadsuki 1n zorder 3 at f51
+        d "Oh dear...I've made everything worse, haven't I?"
+        d "I'm sorry."
+        d "It's better if I just leave."
+        show dadsuki zorder 2 at t51
+        show yuri 2pi zorder 3 at f55
+        y "I don't think that's true..."
+        y "You got her to move again."
+        y "I think she wants to be comforted."
+        show dadsuki 1k zorder 3 at f51
+        show yuri zorder 2 at t55
+        d "Ah..."
+        d "That was never my specialty."
+        show dadsuki zorder 2 at t51
+        show monika zorder 3 at f52
+        if monika_type == 0:
+            m 1f "You're trying to help your daughter, aren't you?"
+            m "Are you really going to let something like that stop you?"
+        else:
+            m 1h "So you said all those words and you can't even back them up."
+            m "Well done, Yasuhiro."
+        show dadsuki 1l zorder 3 at f51
+        show monika zorder 2 at t52
+        d "..."
+        d "You're right."
+        d "Excuse me."
+        show monika zorder 2 at t51
+        show dadsuki zorder 2 at t52
+        "Yasuhiro moves towards Natsuki."
+        "She briefly turns and looks at him before turning away again."
+        d 1k "Natsuki."
+        d "You know I was never really good at this."
+        d "But...here goes nothing."
+        scene black with dissolve_cg
+        "Yasuhiro pulls Natsuki into a tight embrace from behind."
+        "She seems to be resisting his embrace a little bit."
+        d "I've been a terrible person for so long, Natsuki."
+        d "I haven't been a father..."
+        d "I've been a monster."
+        d "I used to be the person that would get you through the dark times."
+        d "But lately I've been the person who would put you through the dark times."
+        d "It's not something you can just forgive so easily."
+        "Natsuki looks as if she is easing off her resistance."
+        d "I don't deserve your forgiveness."
+        d "I don't deserve your love."
+        d "But you deserve mine."
+        d "Why it's taken me thing long to realize it..."
+        d "...I'll never know."
+        d "So..."
+        d "Please, go on."
+        d "And smile, if not for me...for your mother. In hopes that that she is watching from wherever she is now."
+        "Natsuki doesn't react."
+        d "That's how it is...?"
+        d "I guess I deserve this."
+        d "Sorry for bothering you, Natsuki."
+        "Yasuhiro tries to release his embrace but Natsuki holds him tight."
+        d "...?"
+        n "D-Dad..."
+        "Tears stream from Natsuki's eyes."
+        n "Y-You idiot...!"
+        n "W-Why do you have to say those things...?"
+        n "Y-You don't mean any of it!"
+        d "I meant every word."
+        "There's a moment of silence, with Natsuki and Yasuhiro just stuck in an embrace."
+        "It seems to pass by really slowly, but the rest of us don't say anything."
+        n "D-Dad..."
+        n "I-I can't smile..."
+        n "N-Not when I'm like this..."
+        n "I..."
+        n "I-I just want things to go back to how they were before..."
+        n "When we were all together..."
+        d "I want nothing more than that too..."
+        d "I don't know if we can ever get back to that time."
+        n "..."
+        d "But...we can try, can't we?"
+        n "Y-Yeah..."
+        "Natsuki wipes her face as Yasuhiro releases his embrace."
+        stop music fadeout 2.0
+        scene bg gym
+        show monika 1e zorder 2 at i51
+        show dadsuki 1m zorder 2 at i52
+        show natsuki 1u zorder 2 at i53
+        show sayori 1t zorder 2 at i54
+        show yuri 2ps zorder 2 at i55
+        with dissolve_cg
+        show sayori zorder 3 at f54
+        play music t8 fadein 1.0
+        s "This..."
+        s "I wasn't expecting this to happen."
+        s "But..."
+        s "I guess it all worked out!"
+        show natsuki zorder 3 at f53
+        show sayori zorder 2 at t54
+        n "L-Listen, Sayori..."
+        "Natsuki tries her best to speak through her tears."
+        n 1w "I-I don't know what was on your mind when you invited my dad here."
+        n 1x "Sometimes I think you don't know what you're doing..."
+        n 1n "But..."
+        n "...thank you."
+        show natsuki zorder 2 at t53
+        show sayori 1q
+        "Sayori simply beams at Natsuki."
+        show dadsuki zorder 3 at f52
+        d "Sorry for making you like this, Natsuki."
+        d "It's probably going to be hard for you to finish your little play like that."
+        show dadsuki zorder 2 at t52
+        show natsuki 2s zorder 3 at f53
+        n "W-Well..."
+        n "It's okay, I guess."
+        show natsuki zorder 2 at t53
+        show sayori 1d zorder 3 at f54
+        s "Do you guys want a moment?"
+        s "We can leave..."
+        s "This is way more important than some play."
+        show dadsuki 1p zorder 3 at f52
+        show sayori zorder 2 at t54
+        d "I think we should talk for a little bit, Natsuki."
+        d "But if you want to finish up here first..."
+        d "Then, go ahead. I can wait."
+        show dadsuki zorder 2 at t52
+        "Natsuki thinks for a moment. She looks at us then back at Yasuhiro."
+        show monika zorder 3 at f51
+        if monika_type == 0:
+            m 1e "I think you should talk to him, Natsuki."
+            m "Like Sayori said, this is way more important than some play."
+        else:
+            m 1a "Just talk to him, Natsuki."
+            m "Don't worry about us."
+        show monika zorder 2 at t51
+        show yuri 2pb zorder 3 at f55
+        y "I agree with Monika."
+        y "This is obviously an important time in your life."
+        y "So you should make the most of it."
+        show natsuki 1n zorder 3 at f53
+        show yuri zorder 2 at t55
+        n "You guys..."
+        n "..."
+        n "Alright, I've made up my mind."
+        n "Dad...?"
+        show dadsuki 1m zorder 3 at f52
+        show natsuki zorder 2 at t53
+        d "Yes?"
+        show dadsuki zorder 2 at t52
+        show natsuki 2q zorder 3 at f53
+        n "I-I'd like to talk to you, outside."
+        n "Just the two of us."
+        show dadsuki 1p zorder 3 at f52
+        show natsuki zorder 2 at t53
+        d "Of course..."
+        show dadsuki zorder 2 at t52
+        show natsuki 2ps zorder 3 at f53
+        n "S-See you guys tomorrow..."
+        show dadsuki at lhide
+        hide dadsuki
+        show natsuki at lhide
+        hide natsuki
+        show monika zorder 2 at t31
+        show sayori zorder 2 at t32
+        show yuri zorder 2 at t33
+        "Natsuki waves us goodbye and exits the gym, with her dad behind her."
+        show sayori 2t zorder 3 at f32
+        s "I'm so happy for her!"
+        s "She's got her dad back..."
+        show sayori zorder 2 at t32
+        show yuri 2ps zorder 3 at f33
+        y "It does look that way..."
+        y 2ph "I have to wonder what the whole thing about Natsuki's mom is though..."
+        y 2pt "He seemed pretty confident that she would be here."
+        show sayori 2d zorder 3 at f32
+        show yuri zorder 2 at t33
+        s "I think some things are better left hidden, don't you think?"
+        s "What matters is that Natsuki got her happy ending..."
+        show monika zorder 3 at f31
+        show sayori zorder 2 at t32
+        if monika_type == 0:
+            m 1e "I hope so, Sayori."
+        else:
+            m 1j "You'd hope so..."
+        show monika zorder 2 at t31
+        show sayori 1c zorder 3 at f32
+        s "Anyway..."
+        s "I don't think she's going to be back here for the rest of today."
+        s 1q "So I guess that's the end of the meeting."
+        s "Ehehe, I hope to see you all tomorrow."
+        show sayori zorder 2 at t32
+        show yuri 3pf zorder 3 at f33
+        y "That's it?"
+        y "That was a pretty abrupt end to the whole thing."
+        show yuri zorder 2 at t33
+        mc "I think it ended pretty well."
+        mc "It could have gone worse, I'm sure."
+        mc "Still, it's hard to believe this is what caused Yasuhiro to finally realize how much Natsuki meant to him."
+        show sayori 1d zorder 3 at f32
+        s "Oh, you have no idea."
+        s "But never mind that, let's all head home."
+        s "I think we all deserve a good rest after today."
+        s "I'll let Natsuki know that we're going to be leaving myself."
+        show monika 1a zorder 3 at f31
+        if monika_type == 0:
+            m "Alright, Sayori."
+            m "I'll see you all tomorrow..."
+        elif monika_type == 1:
+            m "Okay, Sayori~"
+            m "I can't wait for tomorrow."
+        else:
+            m "Fine by me."
+            m "I'm ready for this day to be over."
+        show monika at thide
+        hide monika
+        show yuri zorder 2 at t21
+        show sayori zorder 2 at t22
+        "Monika quickly leaves the gym through the door Natsuki and Yasuhiro didn't go through."
+        show sayori 1b zorder 3 at f22
+        s "Well, I don't know about the two of you."
+        s 1l "But I'm all ready to sleep!"
+        s "I'm gonna run home, bye [player]!"
+        show sayori zorder 2 at t22
+        mc "You're going to run home when you're tired...?"
+        show sayori zorder 3 at f22
+        s 1q "Yeah!"
+        show sayori zorder 2 at t22
+        mc "Alright...I guess I'll see you later, Sayori."
+        show sayori at thide
+        hide sayori
+        show yuri zorder 2 at t11
+        "Sayori grabs her bag and leaves the gym."
+        "She stops once she steps outside and says something to who I can only assume is Natsuki before waving goodbye."
+        $ ch12_outcome = 1
+    else:
+        d 1h "This..."
+        d "This is pathetic."
+        stop music_poem fadeout 2.0
+        d 1g "Are you really wasting my time with this sorry excuse you call a play?"
+        d "I've been patient until now but this is getting out of hand."
+        d 1c "Are you trying to make me feel some remorse?"
+        d "Is that it?"
+        show dadsuki zorder 2 at t51
+        show sayori 1g zorder 3 at f54
+        s "E-Eh? What are you talking about?"
+        show dadsuki 1e zorder 3 at f51
+        show sayori zorder 2 at t54
+        d "I'm done playing your games."
+        d "Tell me where she is, or you'll pay the price."
+        show dadsuki zorder 2 at t51
+        show sayori 1j zorder 3 at f54
+        s "Are you threatening me?"
+        s "I suggest you watch yourself, Yasuhiro."
+        show sayori zorder 2 at t54
+        "I've never seen Sayori so serious before."
+        "I guess she doesn't take threats lightly?"
+        show monika 1l zorder 3 at f52
+        if monika_type == 0:
+            m "Ahaha, wow...Sayori..."
+            m "...that almost sounded like a threat."
+        else:
+            m "You're getting serious now, Sayori."
+            m "This sure makes things lot more interesting."
+        show monika zorder 2 at t52
+        show natsuki 2r zorder 3 at hf53
+        n "G-Guys!"
+        "Natsuki is suddenly able to move again."
+        "I guess she just wants them to stop fighting so much that she got over her nerves."
+        n "We don't have to do this..."
+        n 2s "Can we just get back to the play...?"
+        show dadsuki 1g zorder 3 at f51
+        show natsuki zorder 2 at t53
+        d "You're moving again I see."
+        d "That doesn't give you reason to talk, does it?"
+        d 1e "No one asked for you to speak."
+        d "Do you honestly think anyone really cares about what you have to say?"
+        d 1h "Do you?!"
+        show natsuki 1n
+        "Natsuki doesn't say anything but it looks like she's on the verge of tears."
+        d 1f "I didn't think so."
+        d "So just keep your mouth shut and this will all be over soon."
+        show dadsuki zorder 2 at t51
+        show sayori 2j zorder 3 at f54
+        play music t9g fadein 3.0
+        s "..."
+        s "You're really pushing your boundaries, Yasuhiro."
+        s "So you better apologize to Natsuki, right now."
+        show dadsuki 1m zorder 3 at f51
+        show sayori zorder 2 at t54
+        d "Ahahahahahaha!"
+        d "Are you seriously tell me what to do?"
+        d 1f "You have no idea what you're getting into, girl."
+        show dadsuki zorder 2 at t51
+        show sayori 2k zorder 3 at f54
+        s "I'm sorry for this, Natsuki."
+        s "I didn't know this was going to go so badly."
+        s "So I want to make it up to you."
+        s 2j "I'm going to fix this myself."
+        s "You just have to give me the word, Natsuki."
+        show natsuki 1u zorder 3 at f52
+        show sayori zorder 2 at t54
+        n "...?"
+        show natsuki zorder 2 at t52
+        show sayori 2d zorder 3 at f54
+        s "The answer to this question."
+        s "I want you to think about it carefully, okay?"
+        "Natsuki manages to let out a nod."
+        s "Do you still love your dad?"
+        s 2k "Actually, let me rephrase that."
+        s 2h "Do you have any other feelings except resentment towards Yasuhiro?"
+        s "You see how he's treating you."
+        s 2g "Do you really think this will improve for you?"
+        s "He has no shame in treating you like this in public."
+        s 1d "Just give me the word, and it'll all be over."
+        s "It's your choice, Natsuki."
+        show sayori zorder 2 at t54
+        "Natsuki looks at Sayori sadly then at Yasuhiro."
+        show dadsuki 1b zorder 3 at f51
+        d "Do you really think you can just solve this whole thing like that?"
+        d "You're in way over your head."
+        d 1f "What makes you think I won't hurt you or everyone else here?"
+        d "I know my way around the law."
+        d "You can't touch me but I can make all of your lives a living hell."
+        d "So...what are you going to do?"
+        "There's a brief silence in the room."
+        "You could cut the tension in the air with a knife."
+        d "She won't say anything."
+        d "Now that I've told her to shut up."
+        show natsuki 1f
+        "Natsuki starts looking angry."
+        d 1g "Unlike all of you, she knows her place."
+        d "Now--"
+        show dadsuki zorder 2 at t51
+        show natsuki 1e zorder 3 at f52
+        n "No."
+        "Natsuki suddenly interrupts Yasuhiro."
+        n "I've had enough."
+        n 1q "I still love my dad..."
+        n 1r "But this person..."
+        n "He looks like my dad, but it isn't him."
+        n 1s "I lost my dad a long time ago."
+        n "I didn't realize it until I heard [player] say it before."
+        n "Sayori saying it now, it's just confirmed everything..."
+        n 1f "This is...some sort of bitter monster..."
+        n "So...to answer your question."
+        n 1e "I don't care what you do to him."
+        n "I don't know this person."
+        show dadsuki 1b zorder 3 at f51
+        show natsuki zorder 2 at t52
+        d "You little brat."
+        d "You think this changes anything?"
+        d 1f "When you get home, you're--"
+        show sayori 1a zorder 3 at f54
+        s "That's all I needed to hear."
+        "Sayori takes a deep breath."
+        s 1d "I'll be right back."
+        show monika 2c zorder 3 at f52
+        show sayori zorder 2 at t54
+        if monika_type == 0:
+            m "Sayori..."
+            m "Where are you planing on going?"
+        else:
+            m "Hm."
+            m "Sayori, where are you going?"
+        show monika zorder 2 at t52
+        show sayori zorder 3 at f54
+        s "A place where I can fix this..."
+        show sayori at thide
+        hide sayori
+        show dadsuki zorder 2 at t41
+        show monika zorder 2 at t42
+        show natsuki zorder 2 at t43
+        show yuri zorder 2 at t44
+        "Sayori runs towards the entrance of the gym."
+        show dadsuki 1b zorder 3 at f41
+        d "Ha! What was that meant to be?"
+        d "She's running from her problems."
+        d 1f "You should have done the same, Natsuki."
+        d "Now you have no one to protect you."
+        show dasuki zorder 2 at t41
+        show yuri 3pr zorder 3 at f44
+        y "That's not true!"
+        "Yuri takes a step forward."
+        play music t8 fadeout 2.0
+        y "If you want to hurt Natsuki, then you're going to have to go through me."
+        show dadsuki 1m zorder 3 at f41
+        show yuri zorder 2 at t44
+        d "That's quite brave of you."
+        d 1f "But ultimately, it will end the same."
+        show dadsuki zorder 2 at t41
+        mc "You'll have to go through me too."
+        mc "Natsuki is my friend and if you want to hurt her, then you'll have to go through me."
+        show dadsuki zorder 3 at f41
+        d "Ahahahaha, you stupid boy."
+        d "Do you really think you can stop me?"
+        show dadsuki zorder 2 at t41
+        show monika zorder 3 at f42
+        if monika_type == 0:
+            m 1f "You really don't want to do this, Yasuhiro."
+        elif monika_type == 1:
+            m 1e "I suggest you stop while you're only a little behind, Yasuhiro."
+        else:
+            m 1a "Finally. I've been waiting for something like this to happen."
+        show monika zorder 2 at t42
+        "Monika takes a step forward as well."
+        "Natsuki looks at all of us in disbelief."
+        show natsuki 1c zorder 3 at f43
+        n "G-Guys..."
+        n 1n "...thank you."
+        show dadsuki 1h zorder 3 at f41
+        show natsuki zorder 2 at t43
+        d "Do you seriously think you stand a chance?"
+        d "I'll beat you all to a pulp."
+        show sayori 1h zorder 3 at f51
+        show dadsuki zorder 2 at t52
+        show monika zorder 2 at t53
+        show natsuki zorder 2 at t54
+        show yuri zorder 2 at t55
+        s "There he is."
+        "Sayori enters the gym, from the door opposite where she exited."
+        "Police officers enter the gym and surround Yasuhiro."
+        show sayori zorder 2 at t51
+        show dadsuki  zorder 3 at f53
+        d "What's happening here?"
+        d "When did you get the police involved?!"
+        scene black with dissolve_cg
+        "One of them suddenly tackles Yasuhiro to the ground and handcuffs him."
+        d "You can't do this!"
+        d "You don't have any charges against me."
+        "Police Officer" "\"You have charges of domestic abuse against you.\""
+        "Police Officer" "\"We have undeniable evidence.\""
+        "Police Officer" "\"So have fun sitting in a prison cell for a couple of years, sir.\""
+        d "What?!"
+        d "No!"
+        d "This can't be happening!"
+        d "Natsuki, do something!"
+        d "Say something!"
+        d "Tell them they're lying!"
+        "Natsuki does nothing as Yasuhiro is taken away by the police."
+        d "No!"
+        d "I'll destroy you all!"
+        d "When I get out, I'll--"
+        "The police close the door to the gym."
+        n "..."
+        s "Natsuki, it's over."
+        "Police Officer" "\"Ah...well, you and this {i}Natsuki{/i} need to give a statement.\""
+        "Police Officer" "\"That is, if you actually want him to be convicted properly.\""
+        s "Oh, right! I'll give you mine in a minute but can you give Natsuki a break until tomorrow?"
+        s "I think she's still processing what just happened."
+        "Police Officer" "\"Of course, ma'am..\""
+        "The final officer gives a friendly nod and exits the gym."
+        scene bg gym
+        show sayori 1g zorder 2 at i41
+        show monika 1f zorder 2 at i42
+        show natsuki 1g zorder 2 at i43
+        show yuri 3pf zorder 2 at i44
+        with dissolve_cg
+        show sayori zorder 3 at f41
+        s "Well...how are you feeling, Natsuki?"
+        s "What just happened is a lot to take in."
+        show sayori zorder 2 at t41
+        show natsuki 1q zorder 3 at f43
+        n "I'm..."
+        "Natsuki's voice quietens down."
+        n 1s "...grateful for friends like you guys..."
+        n "I think I need to just go home and rest."
+        show sayori 1d zorder 3 at f41
+        show natsuki zorder 2 at t43
+        s "Alright..."
+        s "Will you be okay?"
+        show sayori zorder 2 at t41
+        show natsuki 1u zorder 3 at f43
+        n "I don't know..."
+        n "I'll...see you guys tomorrow."
+        show natsuki at thide
+        hide natsuki
+        show sayori zorder 2 at t31
+        show monika zorder 2 at t32
+        show yuri zorder 2 at t33
+        "Natsuki avoids letting us see her face and exits the gym from the door the police didn't go through."
+        show monika zorder 3 at f32
+        if monika_type == 0:
+            m 1m "Today was certainly something~"
+        else:
+            m 1l "What an interesting outcome to a strange day."
+        show monika zorder 2 at t32
+        show yuri 2pq zorder 3 at f33
+        y "Yeah..."
+        y "That was a little too much excitement for one day."
+        show yuri zorder 2 at t33
+        mc "Agreed."
+        mc "I have to ask you something, Sayori."
+        show sayori 1c zorder 3 at f31
+        s "Huh? What is it?"
+        show sayori zorder 2 at t31
+        mc "Why did you invite Yasuhiro in the first place?"
+        mc "And how did you manage to get the police here so quickly?"
+        mc "You left a few minutes before they arrived and it's not like they were here already."
+        show sayori 1l zorder 3 at f31
+        s "Ehehe, maybe those are questions you'll be asking yourself for the rest of your life~"
+        show sayori zorder 2 at t31
+        show monika zorder 3 at f32
+        if monika_type == 0:
+            m 1e "It's probably better that way."
+        elif monika_type == 1:
+            m 1j "I suppose that's for the best, isn't it...?"
+        else:
+            m 1h "I'm a bit curious too, though I doubt you'd tell me."
+        show sayori 1d zorder 3 at f31
+        show monika zorder 2 at t32
+        s "Anyway..."
+        s "We all deserve a rest after today."
+        s "I know we didn't get to finish the play, but Natsuki's wellbeing is more important."
+        show sayori zorder 2 at t31
+        show monika zorder 3 at f32
+        if monika_type == 0:
+            m "I'm just glad today ended without anything terrible happening..."
+            m "I hope it's the same for tomrrow..."
+        else:
+            m "So the day is finally over."
+            m "I'll see you three soon."
+        show monika at thide
+        hide monika
+        show sayori zorder 2 at t21
+        show yuri zorder 2 at t22
+        "Monika leaves through the same door Natsuki did."
+        show sayori 2d zorder 3 at f21
+        s "I know today was pretty intense."
+        s "I hope it hasn't put either of you from the Literature Club."
+        show sayori zorder 2 at t21
+        show yuri 3pf zorder 3 at f22
+        y "No..."
+        y "I just hope nothing like that ever happens again."
+        show sayori 2k zorder 3 at f21
+        show yuri zorder 2 at t22
+        s "I feel the same, Yuri."
+        s 2a "Anyway, I gotta go give the police my statement."
+        s "See you tomorrow, guys!"
+        show sayori at thide
+        hide sayori
+        show yuri zorder 2 at t11
+        "Sayori waves goodbye before going out the door the police did a few minutes ago."
+        $ ch12_outcome = 0
+    y 2pf "You know, this isn't something I expected to be seeing when I joined the Literature Club."
+    mc "Yeah..."
+    mc "Not just this part of it...the whole day felt really weird."
+    y 2pg "You've got that right..."
+    y 2pf "Anyway..."
+    if visited_yuri_hospital:
+        y 3pb "Ready to walk home, [player]?"
+        mc "Yeah, let's go."
+    else:
+        y 3ps "I suppose I'll see you tomorrow as well."
+        mc "You can count on it, Yuri."
     return
 
 label ch12_end:
+    scene bg residential_day with wipeleft_scene
+    play music t2 fadeout 2.0
+    if visited_yuri_hospital:
+        "After walking Yuri to her house, I head home."
+    else:
+        "I walk home slowly, still not quite believing what just happened."
+    "The events of today are still fresh in my head."
+    if ch12_outcome == 0:
+        "Yasuhiro getting arrested like that..."
+    elif ch12_outcome == 1:
+        "Yasuhiro and Natsuki reconciling like that..."
+    elif ch12_outcome == 2:
+        "Natsuki's mom reuniting with her like that and Monika knocking Yasuhiro out..."
+    else:
+        "Natsuki's family becoming whole again..."
+    "While it was certainly interesting, I hope stuff like that doesn't happen too often."
+    "I'm not in the Literature Club for that kind of thing."
+    if monika_type != 0:
+        "As I cross into the final turn before my street, someone blocks my way."
+        "It's Monika."
+        if ch12_natsuki_reluctance >= 2:
+            show monika 3b zorder 2 at t11
+            m "Hello, [player]."
+            m "Did you have fun today?"
+        else:
+            show monika 3b zorder 2 at t11
+            m "[player]."
+            m "You've disapppointed me."
+    else:
+        "I hope tomorrow is less weird."
+        "I don't know about everyone else, but life feels...complete."
+        "It's like I've done what I've set out to do."
+        "Which is weird, since I still have my whole life ahead of me."
+    call screen dialog(message="End of Update!", ok_action=Quit(confirm=False))
     return

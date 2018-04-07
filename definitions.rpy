@@ -56,10 +56,15 @@ init python:
         except: pass
         try: open(config.basedir + "/characters/yasuhiro.chr", "wb").write(renpy.file("yasuhiro.chr").read())
         except: pass
-    def insert_momsuki_character():
+    def insert_momsuki_character_normal():
         try: os.remove(config.basedir + "/characters/haruki.chr")
         except: pass
-        try: open(config.basedir + "/characters/haruki.chr", "wb").write(renpy.file("haruki.chr").read())
+        try: open(config.basedir + "/characters/haruki.chr", "wb").write(renpy.file("harukinormal.chr").read())
+        except: pass
+    def insert_momsuki_character_broken():
+        try: os.remove(config.basedir + "/characters/haruki.chr")
+        except: pass
+        try: open(config.basedir + "/characters/haruki.chr", "wb").write(renpy.file("harukibroken.chr").read())
         except: pass
     def pause(time=None):
         if not time:
@@ -1236,6 +1241,7 @@ image yuri stab_1y2 = "mod_assets/images/yuri/stab/1y2.png"
 image yuri stab_1y3 = "mod_assets/images/yuri/stab/1y3.png"
 image yuri stab_1y4 = "mod_assets/images/yuri/stab/1y4.png"
 image yuri stab_1y7 = "mod_assets/images/yuri/stab/1y7.png"
+image yuri stab_1ya = "mod_assets/images/yuri/stab/1ya.png"
 
 image yuri stab_6_eyes:
     "yuri/stab/6-eyes.png"
@@ -1657,6 +1663,14 @@ image dadsuki 1e = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1
 image dadsuki 1f = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1f.png")
 image dadsuki 1g = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1g.png")
 image dadsuki 1h = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1h.png")
+image dadsuki 1i = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1i.png")
+image dadsuki 1j = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1j.png")
+image dadsuki 1k = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1k.png")
+image dadsuki 1l = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1l.png")
+image dadsuki 1m = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1m.png")
+image dadsuki 1n = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1n.png")
+image dadsuki 1o = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1o.png")
+image dadsuki 1p = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1p.png")
 
 # Momsuki
 image momsuki 1 = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1a.png")
@@ -1668,6 +1682,7 @@ image momsuki 1e = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1
 image momsuki 1f = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1f.png")
 image momsuki 1g = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1g.png")
 image momsuki 1h = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1h.png")
+image momsuki 1i = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1i.png")
 
 define narrator = Character(ctc="ctc", ctc_position="fixed")
 define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")

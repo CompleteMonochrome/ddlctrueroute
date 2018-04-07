@@ -1847,7 +1847,7 @@ label ch11_end:
         show monika zorder 2 at t21
         show sayori 1bq zorder 3 at f22
         s "Ehehe..."
-        s "I would have done it myself, [player] but I really have a lot of planning to do for tomorrow."
+        s "I would have done it myself, [player], but I really have a lot of planning to do for tomorrow."
         s 1br "Seeing as we're doing the play and all."
         show sayori zorder 2 at t22
         mc "Right..."
