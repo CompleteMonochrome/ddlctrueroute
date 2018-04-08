@@ -2243,7 +2243,7 @@ label ch12_harukiplace:
     s 4d "You're an important part of the team, Nozomi."
     s 4r "You all are."
     s 4d "So really...all you have to do is ask us for help."
-    s "You know we'd want nothing more than for you to be happy."
+    s "You know that we'd do anything to make you happy..."
     show monika 1h zorder 3 at f41
     show sayori zorder 2 at t43
     m "Those are inspiring words, Saika."
@@ -3313,7 +3313,7 @@ label ch12_harukinoplace:
     s 4d "You're an important part of the team, Nozomi."
     s 4r "You all are."
     s 4d "So really...all you have to do is ask us for help."
-    s "You know we'd want nothing more than for you to be happy."
+    s "You know that we'd do anything to make you happy..."
     show monika 1h zorder 3 at f41
     show sayori zorder 2 at t43
     m "Those are inspiring words, Saika."
