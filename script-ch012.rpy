@@ -1981,14 +1981,14 @@ label ch12_play:
     return
 
 label ch12_harukiplace:
-    $ persistent.n_playday[4] = True
-    $ s.display_args["callback"] = None
-    $ m.display_args["callback"] = None
-    $ narrator.display_args["callback"] = None
-    $ haruki_personality = [False,False,False]
-    $ normal_haruki = False
-    if sayori_personality > 0:
-        $ sayori_personality -= 1
+    python:
+        persistent.n_playday[4] = True
+        s.display_args["callback"] = None
+        m.display_args["callback"] = None
+        narrator.display_args["callback"] = None
+        haruki_personality = [False,False,False]
+        if sayori_personality > 0:
+            sayori_personality -= 1
     s 2c "Oh...you actually did it."
     s 2d "Thank you so much."
     s "I know what to look for in the game files now..."
@@ -2038,10 +2038,12 @@ label ch12_harukiplace:
             $ haruki_personality[2] = False
         "Still in love.":
             $ haruki_personality[2] = True
+    $ normal_haruki = False
     if haruki_personality[0] and haruki_personality[1] and haruki_personality[2]:
         $ normal_haruki = True
         $ insert_momsuki_character_normal()
     else:
+        $ normal_haruki = False
         $ insert_momsuki_character_broken()
     s 2d "Alright, that should do it."
     s "I'm not entirely sure if this will work with your choices...but it's our best bet, right?"
@@ -2265,7 +2267,7 @@ label ch12_harukiplace:
     mc "I'm going to try my best to make sure of it, even if it kills me."
     show yuri 2pb zorder 3 at f44
     y "Ah, Maemi."
-    y "Your dedication to the Ronin is something to admire..."
+    y "Your dedication to the Ronin is something to be admired..."
     y "...though don't you think that's a little too far?"
     show yuri zorder 2 at t44
     mc "I'd go to any lengths for the Ronin."
@@ -3030,6 +3032,7 @@ label ch12_harukiplace:
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
+        hide momsuki
         show sayori 2a zorder 3 at f51
         if monika_type == 0:
             show monika 1e zorder 2 at t52
