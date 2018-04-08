@@ -1,8 +1,7 @@
 init python:
-    if not persistent.n_playday[4]:
-        def haruki_placecheck(event, interact=True, **kwargs):
-            if renpy.loadable("../characters/haruki.chr"):
-                renpy.jump("ch12_harukiplace")
+    def haruki_placecheck(event, interact=True, **kwargs):
+        if renpy.exists("../characters/haruki.chr"):
+            renpy.jump("ch12_harukiplace")
 
 label ch12_main:
     # Setup Call for currentuser
@@ -27,7 +26,6 @@ label ch12_main:
     # Set Variables and Reset Persistent for New Playthrough
     $ monika_type = 2
     $ ch12_natsuki_help = True
-    $ ch12_natsuki_reluctance = 0
     $ persistent.ch11_task = [False,False,False]
     $ persistent.n_playday = [False,False,False,False,False,False]
 
@@ -688,6 +686,7 @@ label ch12_main:
 
 label ch12_play:
     $ persistent.n_playday = [False,False,False,False,False,False]
+    $ ch12_natsuki_reluctance = 1
     stop music fadeout 1.0
     scene bg club_day with wipeleft_scene
     play music t3
@@ -1482,7 +1481,7 @@ label ch12_play:
     n "I appreciate the 'encouragement', Martha."
     label ch12_strawberry4:
     n 2h "But do you really think that Maemi can do this...?"
-    if ch12_natsuki_reluctance >= 2 and not persistent.n_playday[3]:
+    if ch12_natsuki_reluctance >= 3 and not persistent.n_playday[3]:
         n 1n "Even with Saika's help, it--"
         "Natsuki suddenly breaks character."
         n 1r "I don't..."
@@ -1557,8 +1556,8 @@ label ch12_play:
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
         show yuri 2pr zorder 2 at t41
-        show monika 2e zorder 2 at t42
-        show natsuki 1g zorder 2 at f43
+        show natsuki 1g zorder 2 at f42
+        show monika 2e zorder 2 at t43
         show sayori 2n zorder 3 at t44
         $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>bgm/5_natsuki.ogg"
         $ renpy.music.play(audio.t5b, channel="music_poem", fadein=1.0, tight=True)
@@ -1733,7 +1732,7 @@ label ch12_play:
         m "That's why I have to make the most of the time I have now."
     else:
         m 1a "Maybe."
-        m "I doesn't matter for what's happening right now."
+        m "It doesn't matter for what's happening right now."
     show monika zorder 2 at t41
     show yuri 3pf zorder 3 at f44
     y "Um..."
@@ -1940,6 +1939,8 @@ label ch12_play:
         s "So she probably just..."
         s 2l "...well, let's not dwell on the details."
         $ s.display_args["callback"] = haruki_placecheck
+        $ m.display_args["callback"] = haruki_placecheck
+        $ narrator.display_args["callback"] = haruki_placecheck
         s 2d "Remember the reason I froze time."
         s "It was for your help."
         s "So I'd really appreciate it if you could."
@@ -1968,8 +1969,13 @@ label ch12_play:
         s "As soon as you create it, it should all be good..."
         s "..."
         s 2i "You aren't going to do it, are you?"
+        # Test if this works for some people?
+        if renpy.exists("../characters/haruki.chr"):
+            jump ch12_harukiplace
         s "I suppose this other path will have to do, won't it?"
         $ s.display_args["callback"] = None
+        $ m.display_args["callback"] = None
+        $ narrator.display_args["callback"] = None
         s 2j "It's definitely not how I wanted this to go but..."
         s "This is what you want and I can't do anything about it..."
         jump ch12_harukinoplace
@@ -1978,12 +1984,14 @@ label ch12_play:
     return
 
 label ch12_harukiplace:
-    $ persistent.n_playday[4] = True
-    $ s.display_args["callback"] = None
-    $ haruki_personality = [False,False,False]
-    $ normal_haruki = False
-    if sayori_personality > 0:
-        $ sayori_personality -= 1
+    python:
+        persistent.n_playday[4] = True
+        s.display_args["callback"] = None
+        m.display_args["callback"] = None
+        narrator.display_args["callback"] = None
+        haruki_personality = [False,False,False]
+        if sayori_personality > 0:
+            sayori_personality -= 1
     s 2c "Oh...you actually did it."
     s 2d "Thank you so much."
     s "I know what to look for in the game files now..."
@@ -2033,10 +2041,12 @@ label ch12_harukiplace:
             $ haruki_personality[2] = False
         "Still in love.":
             $ haruki_personality[2] = True
+    $ normal_haruki = False
     if haruki_personality[0] and haruki_personality[1] and haruki_personality[2]:
         $ normal_haruki = True
         $ insert_momsuki_character_normal()
     else:
+        $ normal_haruki = False
         $ insert_momsuki_character_broken()
     s 2d "Alright, that should do it."
     s "I'm not entirely sure if this will work with your choices...but it's our best bet, right?"
@@ -2233,7 +2243,7 @@ label ch12_harukiplace:
     s 4d "You're an important part of the team, Nozomi."
     s 4r "You all are."
     s 4d "So really...all you have to do is ask us for help."
-    s "You know we'd want nothing more than for you to be happy."
+    s "You know that we'd do anything to make you happy..."
     show monika 1h zorder 3 at f41
     show sayori zorder 2 at t43
     m "Those are inspiring words, Saika."
@@ -2260,7 +2270,7 @@ label ch12_harukiplace:
     mc "I'm going to try my best to make sure of it, even if it kills me."
     show yuri 2pb zorder 3 at f44
     y "Ah, Maemi."
-    y "Your dedication to the Ronin is something to admire..."
+    y "Your dedication to the Ronin is something to be admired..."
     y "...though don't you think that's a little too far?"
     show yuri zorder 2 at t44
     mc "I'd go to any lengths for the Ronin."
@@ -2364,7 +2374,7 @@ label ch12_harukiplace:
         mo 1f "Natsuki? It's been so long..."
         mo "I'm surprised you still remember the appearance of your mother..."
         mo "My...how you've grown."
-        mo "You're growing up to be a fine young lady."
+        mo "You're turning up to be a fine young lady."
         show momsuki zorder 2 at t31
         show natsuki 4t zorder 3 at f32
         n "W-Well, I had a good role model to look up to!"
@@ -2382,7 +2392,7 @@ label ch12_harukiplace:
         else:
             d 1e "I need to speak with her."
         show momsuki 1i zorder 3 at f31
-        show natsuki zorder 2 at t32
+        show dadsuki zorder 2 at t33
         mo "Wait your turn, Yasuhiro."
         show dadsuki 1l
         "Yasuhiro looks suprised but reluctantly agrees."
@@ -2570,7 +2580,7 @@ label ch12_harukiplace:
             show momsuki at lhide
             hide momsuki
             show dadsuki at lhide
-            show dadsuki
+            hide dadsuki
             show natsuki zorder 2 at t41
             show monika zorder 2 at t42
             show sayori 1d zorder 3 at f43
@@ -3025,6 +3035,7 @@ label ch12_harukiplace:
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
+        hide momsuki
         show sayori 2a zorder 3 at f51
         if monika_type == 0:
             show monika 1e zorder 2 at t52
@@ -3302,7 +3313,7 @@ label ch12_harukinoplace:
     s 4d "You're an important part of the team, Nozomi."
     s 4r "You all are."
     s 4d "So really...all you have to do is ask us for help."
-    s "You know we'd want nothing more than for you to be happy."
+    s "You know that we'd do anything to make you happy..."
     show monika 1h zorder 3 at f41
     show sayori zorder 2 at t43
     m "Those are inspiring words, Saika."
@@ -3394,7 +3405,7 @@ label ch12_harukinoplace:
     s "I thought I would be immune to time stops since I'm a shinobi and everything."
     show monika 1q zorder 3 at f41
     show sayori zorder 2 at t43
-    m "That's an incredibly powerful power you seem to have developed, Maemi."
+    m "That's an incredibly powerful ability you seem to have developed, Maemi."
     m "The ability to stop people who can manipulate time."
     m 2e "Well done, Maemi."
     m "Perhaps I have underestimated you."
@@ -4097,7 +4108,7 @@ label ch12_end:
     if monika_type != 0:
         "As I cross into the final turn before my street, someone blocks my way."
         "It's Monika."
-        if ch12_natsuki_reluctance >= 2:
+        if ch12_natsuki_reluctance >= 3:
             show monika 3b zorder 2 at t11
             m "Hello, [player]."
             m "Did you have fun today?"
