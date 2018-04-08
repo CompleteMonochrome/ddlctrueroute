@@ -1969,6 +1969,9 @@ label ch12_play:
         s "As soon as you create it, it should all be good..."
         s "..."
         s 2i "You aren't going to do it, are you?"
+        # Test if this works for some people?
+        if renpy.exists("../characters/haruki.chr"):
+            jump ch12_harukiplace
         s "I suppose this other path will have to do, won't it?"
         $ s.display_args["callback"] = None
         $ m.display_args["callback"] = None
