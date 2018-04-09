@@ -2727,7 +2727,7 @@ label ch12_harukiplace:
             mo "...and what he was doing to you..."
             show momsuki zorder 2 at t51
             show natsuki zorder 2 at t52
-            show yasuhiro zorder 2 at t53
+            show dadsuki zorder 2 at t53
             show sayori zorder 2 at t54
             show monika 1e zorder 3 at f55
             if monika_type == 0:
@@ -2754,11 +2754,11 @@ label ch12_harukiplace:
             show monika zorder 2 at t55
             show monika at lhide
             hide monika
-            "Monika quickly leaves the gym."
             show momsuki 1f zorder 3 at f41
             show natsuki zorder 2 at t42
             show dadsuki zorder 2 at t43
             show sayori zorder 2 at t44
+            "Monika quickly leaves the gym."
             mo "Of course..."
             mo "None of you should have to watch this if you don't want to..."
             mo "So leave now if you're feeling uncomfortable."
