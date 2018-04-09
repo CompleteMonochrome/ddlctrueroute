@@ -1527,12 +1527,14 @@ label showpoem(poem=None, music=True, track=None, revert_music=True, img=None, w
         stop music fadeout 2.0
         $ renpy.music.play(audio.t5b, channel="music_poem", fadein=2.0, tight=True)
     window hide
+    $ renpy.game.preferences.afm_enable = False
     if paper:
         show screen poem(poem, paper=paper)
     else:
         show screen poem(poem)
     if not persistent.first_poem:
         $ persistent.first_poem = True
+        $ renpy.save_persistent()
         show expression "gui/poem_dismiss.png" as poem_dismiss:
             xpos 1050 ypos 590
     with Dissolve(1)
