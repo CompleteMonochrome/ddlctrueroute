@@ -25,11 +25,6 @@ label ch11_main:
             except:
                 pass
 
-    # Apparently Broken?
-    if visited_yuri_hospital and sayori_confess:
-        $ sayori_dumped = True
-    else:
-        $ sayori_dumped = False
     scene black with dissolve_scene_full
 
     python:
@@ -359,8 +354,6 @@ label ch11_main:
         mc "Does it matter?"
         y 2bq "Not really..."
         y "But I want you to have a choice on what we do."
-        $ ch11_yuri_choice = "birdseed"
-        $ ch11_yuri_store = "pet store"
         show yuri 2bs
         menu:
             y "So what do you think we should get?"
@@ -1449,8 +1442,6 @@ label ch11_end:
     scene bg residential_day
     with wipeleft_scene
     play music t2 fadeout 2.0
-    $ ch11_monika_talked = False
-    $ ch11_monika_dinner = False
     "I'm just wondering how Natsuki is doing right now."
     "How hard is her dad going to punish her?"
     "..."
@@ -1601,6 +1592,7 @@ label ch11_end:
         menu:
             m "...are you sure?"
             "Yes.":
+                $ ch11_monika_dinner = True
                 mc "I've never been more sure of anything in my life."
                 m 1bi "W-What?"
                 mc "I'm glad you accepted my invitation."
@@ -2089,8 +2081,6 @@ label ch11_end:
     "I don't mind writing poems anyway and if Sayori thinks we should share poems tomorrow then..."
     "I should probably do what she says."
     $ ch11_did_all_tasks = True
-    $ ch11_read_manga = True
-    $ ch11_badpoem = False
     return
 
 
@@ -2340,7 +2330,6 @@ label ch11_dinner:
     menu:
         "So, what should I do...?"
         "Write a poem.":
-            $ ch11_badpoem = False
             $ ch11_read_manga = False
             $ persistent.ch11_task[0] = True
             if persistent.ch11_task[1]:
@@ -2350,7 +2339,6 @@ label ch11_dinner:
             "It won't take long to get some idea of what's going on anyway."
             "Besides..."
             "It's only two chapters so it's not going to take me much time."
-            $ ch11_monika_dinner = True
             if persistent.ch11_task[2]:
                 $ ch11_did_all_tasks = True
                 "Still, I feel like I know what's coming in the manga."
@@ -2364,7 +2352,6 @@ label ch11_dinner:
                 "I just hope that's the case."
         "Read Sweet Oppression.":
             $ ch11_badpoem = True
-            $ ch11_read_manga = True
             $ persistent.ch11_task[1] = True
             if persistent.ch11_task[0]:
                 $ persistent.ch11_task[2] = True
@@ -2395,7 +2382,6 @@ label ch11_dinner:
             "I guess that's all there is to the first volume of that manga."
             "I'm glad I managed to experience and read it..."
             "But I still have to write a poem tomorrow and it's probably gonna be pretty bad."
-            $ ch11_monika_dinner = True
             if persistent.ch11_task[2]:
                 $ ch11_badpoem = False
                 $ ch11_did_all_tasks = True
@@ -2414,7 +2400,8 @@ label ch11_dinner:
 label ch11_bad:
     if not persistent.sayori_natsuki_bad_ending:
         play music mendglitch fadeout 2.0
-        $ natsuki_approval -= 1
+        if natsuki_approval > 0:
+            $ natsuki_approval -= 1
         python:
             try: os.remove(config.basedir + "/characters/natsuki.chr")
             except: pass

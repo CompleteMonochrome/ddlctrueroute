@@ -22,10 +22,7 @@ label ch12_main:
             except:
                 pass
 
-    # Choose Start of Meeting - Normal Monika, Converted Monika, Markovika
     # Set Variables and Reset Persistent for New Playthrough
-    $ monika_type = 2
-    $ ch12_natsuki_help = True
     $ persistent.ch11_task = [False,False,False]
     $ persistent.n_playday = [False,False,False,False,False,False]
 
@@ -541,6 +538,8 @@ label ch12_main:
             "Why would I help Natsuki?" if ch12_natsuki_help:
                 $ ch12_natsuki_help = False
                 $ sayori_personality += 1
+                if natsuki_approval > 0:
+                    $ natsuki_approval -= 1
                 mc "Sayori..."
                 show sayori 1c zorder 3 at f41
                 s "Yes, [player]?"
@@ -677,16 +676,10 @@ label ch12_main:
     "Sayori tries to stand tall."
     s "Alright, everybody..."
     s "It's time to share our poems."
-    # Read everyone's poems
-    $ y_ranaway = False
-    $ s_ranaway = False
-    $ n_ranaway = False
-    $ m_ranaway = False
     return
 
 label ch12_play:
     $ persistent.n_playday = [False,False,False,False,False,False]
-    $ ch12_natsuki_reluctance = 1
     stop music fadeout 1.0
     scene bg club_day with wipeleft_scene
     play music t3
@@ -1407,6 +1400,8 @@ label ch12_play:
                 $ persistent.n_playday[1] = True
                 $ ch12_natsuki_reluctance += 1
                 $ sayori_personality += 1
+                if natsuki_approval > 0:
+                    $ natsuki_approval -= 1
                 mc "This plan of yours..."
                 mc "Although I don't like the idea of resorting to..."
                 mc "...you know..."
@@ -1877,9 +1872,6 @@ label ch12_play:
     else:
         m 1h "Who knows?"
         m "Probably off doing--"
-    $ ch12_outcome = 0
-    $ ch12_haruki_tried = False
-    $ yasuhiro_haruki_together = False
     $ persistent.n_playday[4] = False
     show monika zorder 2 at t41
     "The gym doors suddenly burst open again."
@@ -1989,7 +1981,6 @@ label ch12_harukiplace:
         s.display_args["callback"] = None
         m.display_args["callback"] = None
         narrator.display_args["callback"] = None
-        haruki_personality = [False,False,False]
         if sayori_personality > 0:
             sayori_personality -= 1
     s 2c "Oh...you actually did it."
@@ -2041,7 +2032,6 @@ label ch12_harukiplace:
             $ haruki_personality[2] = False
         "Still in love.":
             $ haruki_personality[2] = True
-    $ normal_haruki = False
     if haruki_personality[0] and haruki_personality[1] and haruki_personality[2]:
         $ normal_haruki = True
         $ insert_momsuki_character_normal()
@@ -2442,6 +2432,7 @@ label ch12_harukiplace:
         mo "Very strange indeed..."
         show momsuki zorder 2 at t41
         if check_whole_house:
+            $ natsuki_approval += 2
             show dadsuki 1i zorder 3 at f43
             d "Haruki..."
             d "I know you don't want to listen to me right now."
@@ -2672,6 +2663,7 @@ label ch12_harukiplace:
             "She seems way too happy about this whole thing."
             $ ch12_outcome = 3
         else:
+            $ natsuki_approval += 1
             show dadsuki 1h zorder 3 at hf43
             d "Haruki!"
             d "I've waited long enough."
@@ -3488,6 +3480,7 @@ label ch12_harukinoplace:
     show sayori zorder 2 at t54
     show yuri zorder 2 at t55
     if check_whole_house:
+        $ natsuki_approval += 1
         d 1i "Natsuki..."
         d "You remind me of your mother when she first started acting."
         d "She was so nervous back then, like you right now."
@@ -3766,6 +3759,8 @@ label ch12_harukinoplace:
         "She stops once she steps outside and says something to who I can only assume is Natsuki before waving goodbye."
         $ ch12_outcome = 1
     else:
+        if natsuki_approval > 0:
+            $ natsuki_approval -= 1
         d 1h "This..."
         d "This is pathetic."
         stop music_poem fadeout 2.0
@@ -4122,4 +4117,5 @@ label ch12_end:
         "It's like I've done what I've set out to do."
         "Which is weird, since I still have my whole life ahead of me."
     call screen dialog(message="End of Update!", ok_action=Quit(confirm=False))
+    $ persistent.arc_clear[1] = True
     return

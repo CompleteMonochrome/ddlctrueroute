@@ -246,10 +246,6 @@ label ch7_main:
     with dissolve_scene_full
     play music t2
 
-    $ natsuki_approval = 4
-    $ yuri_approval = 4
-    $ needs_to_read = False
-
     if did_all_tasks and not read_book:
         "I had a look at the first chapter of the Portrait of Markov this morning..."
         "And it seemed exactly like something in my memory..."
@@ -609,7 +605,8 @@ label ch7_main:
         stop sound
         hide screen tear
     else:
-        $ yuri_approval -= 1
+        if yuri_approval > 0:
+            $ yuri_approval -= 1
         mc "Well..."
         mc "Not much."
         mc "Do you mind filling me in on some lost details?"

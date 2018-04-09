@@ -11,8 +11,6 @@ init python:
 
 label ch10_main:
     python:
-        persistent.yasuhiro_deleted = None
-        ch10_del_jump = "_nat_house"
         process_list = []
         currentuser = ""
         if renpy.windows:
@@ -511,7 +509,6 @@ label ch10_main:
     mc "Um..."
     "That sounds kinda..."
     "...well, not like Sayori."
-    $ go_nat_house = [False, False]
     label ch10_nat_house_strawberry:
     s 1bd "So, you're gonna go right?"
     window auto
@@ -702,7 +699,6 @@ label ch10_nat_house:
     show natsuki zorder 2 at thide
     hide natsuki
     $ persistent.natsuki_house = [False, False, False, False]
-    $ talkabout_natsuki_house = [False, False, False, False]
     "Natsuki leaves the room and walks to one of the closed doors."
     "She looks back at me before entering and closing the door behind her."
     "I can't help but wonder what Natsuki is hiding in her home."
@@ -882,7 +878,8 @@ label ch10_nat_house:
             "Before I can start reflecting on that, Natsuki emerges from the door in the hallway."
             jump ch10_natsuki_back
         "Stay in here.":
-            $ natsuki_approval -= 1
+            if natsuki_approval > 0:
+                $ natsuki_approval -= 1
             "Despite the back of head telling me to explore Natsuki's house."
             "My common sense is telling me that that's probably a bad idea."
             "I barely know Natsuki outside the literature club."
@@ -1150,8 +1147,6 @@ label ch10_nat_house:
     stop music
     with close_eyes
 
-    $ check_whole_house = False
-    $ check_some_house = False
     if persistent.natsuki_house[0] and persistent.natsuki_house[1] and persistent.natsuki_house[2] and persistent.natsuki_house[3]:
         $ check_whole_house = True
         $ check_some_house = True

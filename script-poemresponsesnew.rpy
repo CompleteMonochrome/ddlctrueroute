@@ -1172,7 +1172,8 @@ label ch6_n_good:
 label ch7_n_bad:
     if not read_book:
         jump ch7_n_med
-    $ natsuki_approval -= 1
+    if natsuki_approval > 0:
+        $ natsuki_approval -= 1
     n 2e "Do I even need to say anything about this?"
     mc "What do you mean?"
     n "This is terrible."

@@ -79,7 +79,8 @@ label ch8_main:
             s "From all that excitement..."
             s "You are a terrible person, [player]."
             if not persistent.sayori_yuri_bad_ending:
-                $ yuri_approval -= 1
+                if yuri_approval > 0:
+                    $ yuri_approval -= 1
                 s "But..."
                 s "I know that you can do better."
                 s "You have to do better."
@@ -137,7 +138,6 @@ label ch8_main:
                 $ persistent.sayori_end_early = True
                 $ renpy.quit()
     else:
-        $ gave_book_to_monika = False
         # Has to read the book
         if needs_to_read:
             scene bg library
@@ -392,6 +392,7 @@ label ch8_main:
             show sayori zorder 2 at t33
             y "Hello."
 
+            # Initialize Variables for Play
             $ persistent.y_playday = [False,False]
             $ playalong = False
             $ stopher = False
@@ -489,7 +490,8 @@ label ch8_main:
             menu:
                 m "Natsuki's chapter or Sayori's chapter?"
                 "Natsuki.":
-                    $ yuri_approval -= 1
+                    if yuri_approval > 0:
+                        $ yuri_approval -= 1
                     $ sayori_personality += 1
                     show sayori zorder 3 at f44
                     if sayori_personality == 0:
@@ -892,7 +894,8 @@ label ch8_main:
                     $ persistent.y_playday[1] = True
                     $ stopher = True
                     if not persistent.y_playday[0]:
-                        $ yuri_approval -= 1
+                        if yuri_approval > 0:
+                            $ yuri_approval -= 1
                     else:
                         $ yuri_approval += 2
                     "This isn't part of the script..."
@@ -1963,8 +1966,6 @@ label ch8_end:
                     "I don't have time to think about that."
                     "I'm still in the club and it's getting late."
     else:
-        if gave_book_to_monika == None:
-            $ gave_book_to_monika = False
         m 3e "You should get home, [player]."
         m "I don't want you to spend some extra time here, just for me."
         m "I can clean up the club, myself."

@@ -602,8 +602,6 @@ label ch9_yurihospital:
 
 # Go to Club Instead of Hospital
 label ch9_club:
-    $ yuri_date = False
-    $ visited_yuri_hospital = False
     scene bg club_day with wipeleft_scene
     "After a long school day, it's finally time to go to the literature club."
     "Sayori and Natsuki are already inside."
@@ -835,15 +833,11 @@ label ch9_club:
     show sayori zorder 2 at t33
     m "That would probably be best."
     m "I'll start putting the desks back to how they were."
-    $ s_ranaway = False
-    $ m_ranaway = False
-    $ n_ranaway = False
     $ y_ranaway = True
     return
 
 # Go to Club From Hospital
 label ch9_school:
-    $ yuri_date = False
     scene bg corridor with wipeleft_scene
     play music t2 fadeout 1.0
     "I decide it's probably best that we go back to school."
@@ -1031,10 +1025,6 @@ label ch9_school:
     show sayori zorder 2 at t44
     m "That would probably be best."
     m "I'll start putting the desks back to how they were."
-    $ s_ranaway = False
-    $ m_ranaway = False
-    $ n_ranaway = False
-    $ y_ranaway = False
     return
 
 # Go to Restaurant from Hospital
@@ -1399,6 +1389,7 @@ label ch9_yuridate:
     return
 
 label ch9_end:
+    $ y_ranaway = False
     if yuri_date:
         scene bg house
         with wipeleft_scene

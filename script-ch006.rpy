@@ -710,7 +710,6 @@ label ch6_end:
     s "I do know her better than anyone..."
     s "Which is how I know it has to be you."
     s 1bf "So please [player], I'm gonna ask you one more time..."
-    $ ch6_no_option = True
     label yuri_talk:
     show sayori 1bj
     menu:
