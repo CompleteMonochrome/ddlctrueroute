@@ -708,7 +708,7 @@ label yuri_kill_3:
     $ consolehistory = []
     call updateconsole ("os.remove(\"characters/yuri.chr\")", "yuri.chr deleted successfully.")
     $ delete_character("yuri")
-        $ pause(1.0)
+    $ pause(1.0)
     call updateconsole ("os.remove(\"characters/natsuki.chr\")", "natsuki.chr deleted successfully.")
     $ delete_character("natsuki")
     $ pause(1.0)
