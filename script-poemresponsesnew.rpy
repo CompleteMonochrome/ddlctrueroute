@@ -831,6 +831,7 @@ label ch7_m_end:
         m 3b "Here's Monika's Writing Tip of the Day!"
         m "Sometimes when you're looking over your work, you might...um..."
         m 3g "...what's happening to me?"
+        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
         if not list(set(process_list).intersection(stream_list)):
             if currentuser != "" and currentuser.lower() != player.lower():
                 m "[currentuser]...I'm so scared..."

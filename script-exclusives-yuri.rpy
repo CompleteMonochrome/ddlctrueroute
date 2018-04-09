@@ -942,6 +942,7 @@ label yuri_exclusive_4:
                     y 1brs "Then just keep playing."
                     y "This is all a game to you after all, isn't it?"
                     y 1bvs "If only you knew what this felt like."
+                    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
                     if not list(set(process_list).intersection(stream_list)):
                         if currentuser != "" and currentuser.lower() != player.lower():
                             y "Please, [currentuser]..."

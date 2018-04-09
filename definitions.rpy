@@ -1764,6 +1764,13 @@ default y_readpoem = False
 default m_readpoem = False
 
 
+default n_read3 = False
+default y_read3 = False
+
+
+default n_poemearly = False
+
+
 default poemsread = 0
 
 

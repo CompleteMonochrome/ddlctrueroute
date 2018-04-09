@@ -1560,7 +1560,7 @@ label ch4_end:
 
         # Had to do this here for some reason it wouldn't detect the splash screen call
 
-        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
 
         if not list(set(process_list).intersection(stream_list)):
             if currentuser != "" and currentuser.lower() != player.lower():

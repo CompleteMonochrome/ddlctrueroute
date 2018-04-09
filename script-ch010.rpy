@@ -195,7 +195,7 @@ label ch10_main:
         m 1bf "Is that me that's doing that?"
         m "Or the book?"
         m 1bg "Honestly...I don't know."
-        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
         if not list(set(process_list).intersection(stream_list)):
             if currentuser != "" and currentuser.lower() != player.lower():
                 m "[currentuser]..."

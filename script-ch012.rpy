@@ -871,7 +871,7 @@ label ch12_play:
         m 1f "Sigh..."
         m "The only thing I know is that it's got something to do with characters."
         m "I hope you figure it out soon..."
-        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
         if not list(set(process_list).intersection(stream_list)):
             if currentuser != "" and currentuser.lower() != player.lower():
                 m "...[currentuser]."
@@ -912,7 +912,7 @@ label ch12_play:
         m "For doing it this late."
         m 2b "Did you perhaps, plan this all out?"
         m "Maybe this isn't the only save you have, [player]."
-        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
         if not list(set(process_list).intersection(stream_list)):
             if currentuser != "" and currentuser.lower() != player.lower():
                 m "Or should I say..."
@@ -3086,7 +3086,7 @@ label ch12_harukinoplace:
         s 2d "I'm a bit relieved."
         s "I was going to try something with Yasuhiro but decided against it."
         s "It would have been wrong, changing him like that."
-    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
     if not list(set(process_list).intersection(stream_list)):
         if currentuser != "" and currentuser.lower() != player.lower():
             s "Alright, [currentuser]..."

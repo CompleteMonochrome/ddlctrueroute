@@ -117,7 +117,7 @@ label ch9_main:
             show sayori 1d zorder 3 at f22
             s "Okay..."
             s "There's one more thing."
-            $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+            $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
             if not list(set(process_list).intersection(stream_list)):
                 if currentuser != "" and currentuser.lower() != player.lower():
                     s "[currentuser]..."
@@ -219,7 +219,7 @@ label ch9_main:
         m "And really the only thought that's helping me keep it together..."
         m 1e "...is you."
         m 1q "I don't know how long the effects of that book will last..."
-        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
         if not list(set(process_list).intersection(stream_list)):
             if currentuser != "" and currentuser.lower() != player.lower():
                 m "[currentuser]..."

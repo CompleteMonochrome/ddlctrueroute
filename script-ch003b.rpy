@@ -575,7 +575,7 @@ label ch3_maind:
     m "You're so thoughtful, [player]."
     m 4c "I hope you realized I'm not talking to that 'you' in the game."
     m "I'm talking to {i}you{/i}, [player]."
-    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
     if not list(set(process_list).intersection(stream_list)):
         if currentuser != "" and currentuser.lower() != player.lower():
             m 4d "Or..."

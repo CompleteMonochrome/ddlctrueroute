@@ -154,7 +154,7 @@ label ch7_main:
     show monika zorder 2 at t22
     s 1d "[player]..."
     s "The real one."
-    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
     if not list(set(process_list).intersection(stream_list)):
         if currentuser != "" and currentuser.lower() != player.lower():
             s "Or should I say [currentuser]...?"

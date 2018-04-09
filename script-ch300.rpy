@@ -394,7 +394,7 @@ label ch30_postpoem:
     m "Are you ready to spend our eternity together, [player]?"
     m "I have so many things to talk about!"
     m "Where do I start...?"
-    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
     if list(set(process_list).intersection(stream_list)):
         call ch30_stream
     label ch3_badstart:

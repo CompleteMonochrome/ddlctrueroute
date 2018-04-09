@@ -923,6 +923,7 @@ label monika_exclusive_4:
     if m_appeal == 2 and did_all_tasks:
         m 1bf "So please, get rid of it as soon as you can."
         m "Burn it, throw it in the bin, do whatever you need to."
+        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
         if not list(set(process_list).intersection(stream_list)):
             if currentuser != "" and currentuser.lower() != player.lower():
                 m "[currentuser]..."

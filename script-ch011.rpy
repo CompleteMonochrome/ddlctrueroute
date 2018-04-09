@@ -1657,7 +1657,7 @@ label ch11_end:
                 m "Goodbye...[player]."
                 mc "I'll see you tomorrow, Monika."
                 m "Y-Yeah..."
-                $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+                $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
                 if not list(set(process_list).intersection(stream_list)):
                     if currentuser != "" and currentuser.lower() != player.lower():
                         m "One last thing."
