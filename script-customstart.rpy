@@ -50,6 +50,7 @@ label choose_start:
             $ quick_menu = True
             $ s_name = "Sayori"
             stop music fadeout 1.0
+            $ renpy.save_persistent()
             jump ch5_skip
         "Yuri's problem.":
             jump custom_yuristart
@@ -97,6 +98,7 @@ label choose_start:
             $ quick_menu = True
             $ s_name = "Sayori"
             stop music fadeout 1.0
+            $ renpy.save_persistent()
             jump ch6_skip
 
         "Continuing the Book Day.":
@@ -162,6 +164,7 @@ label choose_start:
             $ s_name = "Sayori"
             $ quick_menu = True
             stop music fadeout 1.0
+            $ renpy.save_persistent()
             jump ch7_skip
 
         "Play Day.":
@@ -266,6 +269,7 @@ label choose_start:
             $ s_name = "Sayori"
             $ quick_menu = True
             stop music fadeout 1.0
+            $ renpy.save_persistent()
             jump ch8_redirect
 
     label custom_natstart:
@@ -418,6 +422,7 @@ label choose_start:
             $ s_name = "Sayori"
             $ quick_menu = True
             stop music fadeout 1.0
+            $ renpy.save_persistent()
             jump ch9_skip
         "Visit Day.":
             if y_appeal == 3 and play_firstpart and did_all_tasks:
@@ -460,6 +465,7 @@ label choose_start:
             $ s_name = "Sayori"
             $ quick_menu = True
             stop music fadeout 1.0
+            $ renpy.save_persistent()
             jump ch10_skip
         "Second Visit.":
             $ insert_dadsuki_character()
@@ -541,6 +547,7 @@ label choose_start:
             $ s_name = "Sayori"
             $ quick_menu = True
             stop music fadeout 1.0
+            $ renpy.save_persistent()
             jump ch11_skip
         "Play Day.":
             $ insert_dadsuki_character()
@@ -673,4 +680,5 @@ label choose_start:
             $ s_name = "Sayori"
             $ quick_menu = True
             stop music fadeout 1.0
+            $ renpy.save_persistent()
             jump ch12_skip

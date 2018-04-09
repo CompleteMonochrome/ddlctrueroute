@@ -3,10 +3,10 @@ label ch3_mainb:
     stop music fadeout 1.0
     scene bg residential_day
     with dissolve_scene_full
-    pause 0.25
+    $ pause(0.25)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     play music t2g
@@ -116,10 +116,10 @@ label ch3_mainc:
     stop music
     scene bg residential_day
     with dissolve_scene_full
-    pause 0.25
+    $ pause(0.25)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     play music t3g
@@ -511,10 +511,10 @@ label ch3_maind:
     stop music fadeout 1.0
     scene bg residential_day
     with dissolve_scene_full
-    pause 0.25
+    $ pause(0.25)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     play music t2g
@@ -642,14 +642,15 @@ label ch3_maine:
         $ persistent.dialogue_change[0] = True
     elif act_one_dialogue[1]:
         $ persistent.dialogue_change[1] = True
+    $ renpy.save_persistent()
 
     stop music
     scene bg residential_day
     with dissolve_scene_full
-    pause 0.25
+    $ pause(0.25)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     play music t3g
@@ -662,7 +663,7 @@ label ch3_maine:
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.5
+    $ pause(0.5)
     stop sound
     hide screen tear
     window show(None)
@@ -691,7 +692,7 @@ label ch3_maine:
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     window show(None)
@@ -710,8 +711,9 @@ label ch3_maine:
     $ persistent.monika_change = False
     $ persistent.anticheat = renpy.random.randint(100000, 999999)
     $ persistent.autoload = "ch3_maine2"
+    $ renpy.save_persistent()
     $ renpy.full_restart(transition=None, label="splashscreen")
-    
+
 label ch3_maine2:
     python:
         process_list = []
@@ -728,7 +730,7 @@ label ch3_maine2:
                         currentuser = user
             except:
                 pass
-                
+
     $ persistent.autoload = "ch3_maine2"
     $ config.allow_skipping = False
     $ persistent.monika_ch3_skip = True
@@ -736,6 +738,7 @@ label ch3_maine2:
     $ persistent.monika_reload = 0
     $ persistent.yuri_kill = 0
     $ persistent.monika_kill = False
+    $ renpy.save_persistent()
     $ m.display_args["callback"] = slow_nodismiss
     $ m.what_args["slow_abortable"] = config.developer
     if not config.developer:
@@ -743,9 +746,9 @@ label ch3_maine2:
     $ m_name = "Monika"
     scene white
     play music "bgm/monika-start.ogg" noloop
-    pause 0.5
+    $ pause(0.5)
     show splash-glitch2 with Dissolve(0.5, alpha=True)
-    pause 2.0
+    $ pause(2.0)
     hide splash-glitch2 with Dissolve(0.5, alpha=True)
     scene black
     stop music
@@ -753,6 +756,7 @@ label ch3_maine2:
     m "Uh, can you hear me?"
     m "...Is it working?"
     $ persistent.clear[9] = True
+    $ renpy.save_persistent()
     show mask_2
     show mask_3
     show room_mask as rm:
@@ -784,6 +788,7 @@ label ch3_maine3:
     if not config.developer:
         $ style.say_dialogue = style.default_monika
     $ persistent.autoload = "ch3_maine3"
+    $ renpy.save_persistent()
     show mask_2
     show mask_3
     show room_mask as rm:
@@ -794,7 +799,7 @@ label ch3_maine3:
         pos (935,200)
     show monika_bg
     show monika_bg_highlight
-    play music m1        
+    play music m1
     menu:
         "Yes.":
             pass
@@ -862,6 +867,7 @@ label ch3_maine3:
     if not config.developer:
         $ style.say_dialogue = style.default_monika
     $ persistent.autoload = "ch3_maine3"
+    $ renpy.save_persistent()
     show mask_2
     show mask_3
     show room_mask as rm:

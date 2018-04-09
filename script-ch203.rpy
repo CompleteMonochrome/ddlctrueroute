@@ -31,7 +31,7 @@ label ch203_main:
         show noface2
         with dissolve_scene_half
         play sound "sfx/gnid.ogg"
-        pause 7
+        $ pause(7)
         $ quick_menu = True
         scene bg club_day2
         show yuri 2 zorder 2 at i11
@@ -90,7 +90,7 @@ label ch203_main:
         n 12f "..."
         show natsuki at thide
         hide natsuki
-        pause 1.0
+        $ pause(1.0)
         show monika 1g at l31
         m "Aw, man..."
         m "I'm the last one here again!"
@@ -397,7 +397,7 @@ label ch203_end:
         stop music
         scene white
         show yuripupils zorder 10
-        pause 3.0
+        $ pause(3.0)
         show bg club_day:
             alpha 0.05
             yoffset 0 ytile 2
@@ -555,7 +555,7 @@ label yuri_kill:
     $ quick_menu = False
     window hide(None)
     stop music
-    pause 1.0
+    $ pause(1.0)
 
 
     window auto
@@ -564,6 +564,7 @@ label yuri_kill:
 label yuri_kill_1:
     window auto
     $ persistent.autoload = "yuri_kill_1"
+    $ renpy.save_persistent()
     $ quick_menu = False
     stop music
     scene bg club_day
@@ -579,35 +580,46 @@ label yuri_kill_1:
     $ style.say_dialogue = style.normal
 
     play sound "sfx/yuri-kill.ogg"
-    pause 1.43
+    $ starttime = datetime.datetime.now()
+
+    $ pause(1.43 - (datetime.datetime.now() - starttime).total_seconds())
     show yuri stab_1
-    pause 0.75
+
+    $ pause(2.18 - (datetime.datetime.now() - starttime).total_seconds())
     show yuri stab_2
     show blood:
         pos (610,485)
-    pause 1.25
+
+    $ pause(3.43 - (datetime.datetime.now() - starttime).total_seconds())
     show yuri stab_3
-    pause 0.75
+
+    $ pause(4.18 - (datetime.datetime.now() - starttime).total_seconds())
     show yuri stab_2
     show blood:
         pos (610,485)
     show yuri stab_4 with ImageDissolve("images/yuri/stab/4_wipe.png", 0.25)
-    pause 1.25
+
+    $ pause(5.68 - (datetime.datetime.now() - starttime).total_seconds())
     show yuri stab_5
-    pause 0.70
+
+    $ pause(6.38 - (datetime.datetime.now() - starttime).total_seconds())
     show yuri stab_6:
         2.55
         easeout_cubic 0.5 yoffset 300
     show blood as blood2:
         pos (635,335)
-    pause 2.55
+
+    $ pause(8.93 - (datetime.datetime.now() - starttime).total_seconds())
     hide blood
     hide blood2
-    pause 0.25
+
+    $ pause(9.18 - (datetime.datetime.now() - starttime).total_seconds())
     play sound fall
-    pause 0.25
+
+    $ pause(9.43 - (datetime.datetime.now() - starttime).total_seconds())
     scene black
-    pause 2.0
+
+    $ pause(11.43 - (datetime.datetime.now() - starttime).total_seconds())
 
     scene black
     show y_kill
@@ -615,6 +627,7 @@ label yuri_kill_1:
 label yuri_kill_2:
     $ quick_menu = True
     $ persistent.autoload = "yuri_kill_2"
+    $ renpy.save_persistent()
     python:
         _history_list = []
         m.add_history(None, "", """Welcome to the Literature Club! It's always been a dream of mine to make something special out of the things I love. Now that you're a club member, you can help me make that dream come true in this cute game!Every day is full of chit-chat and fun activities with all of my adorable and unique club members:Sayori, the youthful bundle of sunshine who values happiness the most;Natsuki, the deceivingly cute girl who packs an assertive punch;Yuri, the timid and mysterious one who finds comfort in the world of books;...And, of course, Monika, the leader of the club! That's me!I'm super excited for you to make friends with everyone and help the Literature Club become a more intimate place for all my members. But I can tell already that you're a sweetheart—will you promise to spend the most time with me?Welcome to the Literature Club! It's always been a dream of mine to make something special out of the things I love. Now that you're a club member, you can help me make that dream come true in this cute game!Every day is full of chit-chat and fun activities with all of my adorable and unique club members:Sayori, the youthful bundle of sunshine who values happiness the most;Natsuki, the deceivingly cute girl who packs an assertive punch;Yuri, the timid and mysterious one who finds comfort in the world of books;...And, of course, Monika, the leader of the club! That's me!I'm super excited for you to make friends with everyone and help the Literature Club become a more intimate place for all my members. But I can tell already that you're a sweetheart—will you promise to spend the most time with me?Welcome to the Literature Club! It's always been a dream of mine to make something special out of the things I love. Now that you're a club member, you can help me make that dream come true in this cute game!Every day is full of chit-chat and fun activities with all of my adorable and unique club members:Sayori, the youthful bundle of sunshine who values happiness the most;Natsuki, the deceivingly cute girl who packs an assertive punch;Yuri, the timid and mysterious one who finds comfort in the world of books;...And, of course, Monika, the leader of the club! That's me!I'm super excited for you to make friends with everyone and help the Literature Club become a more intimate place for all my members. But I can tell already that you're a sweetheart—will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with""")
@@ -646,6 +659,7 @@ label yuri_kill_3:
         try: os.remove(config.basedir + "/have a nice weekend!")
         except: pass
     $ persistent.autoload = "yuri_kill_3"
+    $ renpy.save_persistent()
     $ config.skipping = False
     $ config.allow_skipping = False
     $ allow_skipping = False
@@ -666,11 +680,11 @@ label yuri_kill_3:
     show natsuki scream at h11
     n "EYAH!"
     n "AAAAAAAAAAAAAAAHHHH!!!"
-    pause 1.0
+    $ pause(1.0)
     show natsuki scream at h11
-    pause 0.75
+    $ pause(0.75)
     show natsuki vomit at h11
-    pause 1.25
+    $ pause(1.25)
     show natsuki at lhide
     hide natsuki
     "Natsuki runs away."
@@ -694,10 +708,10 @@ label yuri_kill_3:
     $ consolehistory = []
     call updateconsole ("os.remove(\"characters/yuri.chr\")", "yuri.chr deleted successfully.")
     $ delete_character("yuri")
-    pause 1.0
+        $ pause(1.0)
     call updateconsole ("os.remove(\"characters/natsuki.chr\")", "natsuki.chr deleted successfully.")
     $ delete_character("natsuki")
-    pause 1.0
+    $ pause(1.0)
     m 2a "I'm almost done."
     m 2j "I just want to have a cupcake real quick!"
     $ gtext = glitchtext(10)
@@ -710,12 +724,13 @@ label yuri_kill_3:
     m 2a "This should only take a second."
 
     show screen tear(8, offtimeMult=1, ontimeMult=10)
-    pause 1.5
+    $ pause(1.5)
 
     $ delete_all_saves()
     $ persistent.playthrough = 3
     $ persistent.anticheat = renpy.random.randint(100000, 999999)
     $ persistent.autoload = "ch30_main"
+    $ renpy.save_persistent()
     $ renpy.full_restart(transition=None, label="splashscreen")
 
     return

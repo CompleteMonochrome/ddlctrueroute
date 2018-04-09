@@ -568,7 +568,7 @@ label ch11_main:
         "Time almost seems to slow down as the knife is in the air."
         "And just as the knife touches the water..."
         play sound "mod_assets/sfx/splash.ogg"
-        pause 2.0
+        $ pause(2.0)
         "It speeds up again."
         "As the knife sinks into the water, I can feel a ripple."
         "Not just from the water, but from within me too."
@@ -637,7 +637,7 @@ label ch11_main:
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.5
+        $ pause(0.5)
         stop sound
         scene bg house
         play music t2
@@ -828,7 +828,7 @@ label ch11_main:
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.5
+        $ pause(0.5)
         stop sound
         scene bg house
         play music t2
@@ -1457,6 +1457,7 @@ label ch11_end:
     "I still have to write a poem as well..."
     "I'll probably have enough time to do both, if there isn't any distractions along the way."
     $ persistent.ch11_task = [False,False,False]
+    $ renpy.save_persistent()
     show monika 2ba zorder 2 at t11
     m "Hi [player]~"
     "Monika appears out of seemingly nowhere."
@@ -1675,10 +1676,10 @@ label ch11_end:
                     m.add_history(None, "Monika", """Even if I can't be, at least they will be...""")
                     m.add_history(None, "Monika", """After all, they deserve it more than me.""")
                 show screen tear(8, offtimeMult=1, ontimeMult=10)
-                pause 1.0
+                $ pause(1.0)
                 scene bg bedroom
                 hide screen tear
-                pause 1.0
+                $ pause(1.0)
                 window show(None)
     else:
         m 2bc "Someone asked me to make sure you were okay."
@@ -2334,6 +2335,7 @@ label ch11_dinner:
             $ persistent.ch11_task[0] = True
             if persistent.ch11_task[1]:
                 $ persistent.ch11_task[2] = True
+            $ renpy.save_persistent()
             "It's best to write a good poem for tomorrow."
             "I'll probably end up skimming a lot of the manga tomorrow morning."
             "It won't take long to get some idea of what's going on anyway."
@@ -2355,6 +2357,7 @@ label ch11_dinner:
             $ persistent.ch11_task[1] = True
             if persistent.ch11_task[0]:
                 $ persistent.ch11_task[2] = True
+            $ renpy.save_persistent()
             "It's probably a good idea to read the manga."
             "I can just write a bad poem for tomorrow..."
             "Besides..."
@@ -2455,7 +2458,7 @@ label ch11_bad:
         s "Fine.{nw}"
         show screen tear(20, 0.1, 0.1, 0, 40)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.25
+        $ pause(0.25)
         stop sound
         scene bg residential_day
         hide screen tear
@@ -2476,11 +2479,11 @@ label ch11_bad:
             if startpos < 0: startpos = 0
             track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/2.ogg"
             renpy.music.play(track, loop=True)
-        pause 1.0
+        $ pause(1.0)
         $ gtext = glitchtext(48)
         "{cps=60}[gtext]{/cps}{nw}"
         show screen tear(8, offtimeMult=1, ontimeMult=10)
-        pause 1.5
+        $ pause(1.5)
         hide screen tear
         window hide(None)
         scene black with trueblack
@@ -2499,7 +2502,7 @@ label ch11_bad:
         "It's possible that it was only there because Sayori told me to go here randomly..."
         show screen tear(20, 0.1, 0.1, 0, 40)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.25
+        $ pause(0.25)
         hide screen tear
         "Wait..."
         "Why did I go here in the first place...?"
@@ -2574,7 +2577,7 @@ label ch11_bad:
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.25
+        $ pause(0.25)
         stop sound
         hide screen tear
         window show(None)
@@ -2589,7 +2592,7 @@ label ch11_bad:
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.25
+        $ pause(0.25)
         scene bg club_day
         stop sound
         hide screen tear
@@ -2647,15 +2650,16 @@ label ch11_bad:
         python:
             try: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsukismall.chr").read())
             except: pass
-        pause 0.5
+        $ pause(0.5)
         call hideconsole
         $ persistent.sayori_natsuki_bad_ending = True
+        $ renpy.save_persistent()
         $ config.allow_skipping = True
         s 1k "Goodbye, everyone."
         s "Hopefully this works...{nw}"
         show screen tear(20, 0.1, 0.1, 0, 40)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 2.0
+        $ pause(2.0)
         stop sound
         scene black
         show sayori 1k zorder 2 at i11
@@ -2687,7 +2691,7 @@ label ch11_bad:
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.25
+        $ pause(0.25)
         stop sound
         hide screen tear
         window show(None)
@@ -2702,6 +2706,7 @@ label ch11_bad:
         s 1bc "It looks like the game is trying to readjust itself."
         if persistent.yasuhiro_deleted:
             $ persistent.yasuhiro_deleted = None
+            $ renpy.save_persistent()
             s 1bh "It completely skipped the rest of Saturday..."
             s "It's..."
             s "...probably safer if you go through it again."
@@ -2711,9 +2716,9 @@ label ch11_bad:
             show sayori at thide
             hide sayori
             window hide
-            pause 1.5
+            $ pause(1.5)
             play music t2 fadein 2.0
-            pause 1.5
+            $ pause(1.5)
             jump expression "ch10" + ch10_del_jump
         else:
             s "I'm wearing the clothes I was going to wear on Sunday..."
@@ -2723,6 +2728,7 @@ label ch11_bad:
     else:
         label ch11_bad_ending_end:
         $ persistent.autoload = "ch11_bad_ending_end"
+        $ renpy.save_persistent()
         $ delete_all_saves()
         $ config.skipping = False
         $ config.allow_skipping = False
@@ -2752,5 +2758,6 @@ label ch11_bad:
             except: pass
         $ persistent.autoload = ""
         $ persistent.sayori_end_early = True
+        $ renpy.save_persistent()
         $ renpy.quit()
     return

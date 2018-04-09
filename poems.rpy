@@ -892,7 +892,7 @@ Bright, beautiful colors
 Flashing, expanding, piercing
 Red, green, blue
 An endless
-cacophany
+cacophony
 Of meaningless
 noise
 
@@ -919,7 +919,7 @@ Bright, bea t ful c l rs
 Flash ng, exp nd ng, piercing
 Red, green, blue
 An  ndless
-CACOPHANY
+CACOPHONY
 Of meaningless
 noise
 
@@ -1336,7 +1336,7 @@ But what is this feeling?
 
 A familiar sensation, shown through deciept in times past,
 Yet now it feels so real.
-An overarching sensation, a cacophany in my ears that I can't stop.
+An overarching sensation, a cacophony in my ears that I can't stop.
 
 No.
 

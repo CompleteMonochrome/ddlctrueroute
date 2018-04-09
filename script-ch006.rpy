@@ -9,7 +9,7 @@ label ch6_main:
     m 1g "Sayori, if you're listening..."
     m "Did you have anything to do with that?"
     show screen tear(8, offtimeMult=1, ontimeMult=10)
-    pause 2.0
+    $ pause(2.0)
     hide screen tear
     show sayori 1d zorder 3 at i21
     show monika 1c zorder 2 at i22
@@ -129,7 +129,7 @@ label ch6_main:
     show monika 1e zorder 2 at t11
     m "Ah!"
     play sound "sfx/fall2.ogg"
-    pause 1.5
+    $ pause(1.5)
     "Monika drops some of the books she was carrying."
     mc "Did you need some help?"
     m "[player]? I thought you'd be inside by now."
@@ -654,6 +654,7 @@ label ch6_end:
     scene bg house with wipeleft_scene
     show sayori 1ba zorder 2 at t11
     $ persistent.ch6_task = [False,False,False]
+    $ renpy.save_persistent()
     s "Hi [player]~"
     mc "Sayori? What are you doing here?"
     s 2bd "I'd like to ask you for a favor."
@@ -750,7 +751,7 @@ label ch6_end:
             show screen tear(20, 0.1, 0.1, 0, 40)
             window hide(None)
             play sound "sfx/s_kill_glitch1.ogg"
-            pause 0.25
+            $ pause(0.25)
             stop sound
             hide screen tear
             window show(None)
@@ -785,6 +786,7 @@ label ch6_end:
                     $ persistent.ch6_task[0] = True
                     if persistent.ch6_task[1]:
                         $ persistent.ch6_task[2] = True
+                    $ renpy.save_persistent()
                     "Well, I'm sure they won't mind so much if I only read one chapter of the book."
                     "Writing this poem will probably mean more than reading that weird book anyway."
                     "I can't spend too much time doing everybody favors, otherwise I'll have no time to myself."
@@ -807,6 +809,7 @@ label ch6_end:
                     $ persistent.ch6_task[1] = True
                     if persistent.ch6_task[0]:
                         $ persistent.ch6_task[2] = True
+                    $ renpy.save_persistent()
                     "Monika and Sayori really seemed intent on me reading this book."
                     "That's probably for a good reason."
                     "They seem more aware of what's going on than I do."

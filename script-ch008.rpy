@@ -1,8 +1,10 @@
 label ch8_main:
     $ persistent.autoload = ""
+    $ renpy.save_persistent()
     $ quick_menu = True
     if ch7_name == "Yuri" and not needs_to_read:
         $ persistent.yuri_killing = 0
+        $ renpy.save_persistent()
         scene bg y_bedroom
         with wipeleft_scene
         show yuri 1a zorder 1 at t11
@@ -24,6 +26,7 @@ label ch8_main:
         label ch8_yuri_kill:
         $ quick_menu = True
         $ persistent.autoload = "ch8_yuri_kill"
+        $ renpy.save_persistent()
         python:
             _history_list = []
             s.add_history(None, "", """Um...Sorry. I didn't want to have to do this. But I really don't want [player] to get hurt. I'm sure you know this was a bad idea. I should have said something in the meeting. In case you haven't noticed, it's not Yuri talking to you right now. I won't be here for long, so I'll be quick. If you really want to risk [player]'s life here...And ruin everything we've worked for. Then just keep playing. This is all a game to you after all, isn't it? If only you knew what this felt like.If only you knew what this felt like.If only you knew what this felt like.If only you knew what this felt like.If only you knew what this felt like.If only you knew what this felt like.If only you knew what this felt like.If only you knew what this felt like.If only you knew what this felt like.If only you knew what this felt like.If only you knew what this felt like.If only you knew what this felt like.If only you knew what this felt like.If only you knew what this felt like.If only you knew what this felt like.If only you knew what this felt like.""")
@@ -59,7 +62,7 @@ label ch8_main:
             show screen tear(20, 0.1, 0.1, 0, 40)
             window hide(None)
             play sound "sfx/s_kill_glitch1.ogg"
-            pause 0.25
+            $ pause(0.25)
             stop sound
             hide screen tear
             window show(None)
@@ -94,16 +97,17 @@ label ch8_main:
                 $ gtext = glitchtext(10)
                 s "I'm going to give you a chance because of what you did for [gtext]..."
                 stop music fadeout 1.0
-                pause 1.0
+                $ pause(1.0)
                 s "Don't mess this up."
                 $ quick_menu = True
                 $ persistent.autoload = ""
                 $ persistent.sayori_yuri_bad_ending = True
+                $ renpy.save_persistent()
                 $ config.allow_skipping = True
                 $ s_name = "Sayori"
                 $ chapter = 7
                 $ needs_to_read = False
-                pause 1.0
+                $ pause(1.0)
                 scene bg club_day
                 show monika 3i zorder 2 at i41
                 show yuri 2y3 zorder 2 at i42
@@ -136,6 +140,7 @@ label ch8_main:
                 $ delete_character("monika")
                 $ persistent.autoload = ""
                 $ persistent.sayori_end_early = True
+                $ renpy.save_persistent()
                 $ renpy.quit()
     else:
         # Has to read the book
@@ -394,6 +399,7 @@ label ch8_main:
 
             # Initialize Variables for Play
             $ persistent.y_playday = [False,False]
+            $ renpy.save_persistent()
             $ playalong = False
             $ stopher = False
             $ choosechoice = [False,False]
@@ -774,7 +780,7 @@ label ch8_main:
             show screen tear(20, 0.1, 0.1, 0, 40)
             window hide(None)
             play sound "sfx/s_kill_glitch1.ogg"
-            pause 0.25
+            $ pause(0.25)
             stop sound
             hide screen tear
             window show(None)
@@ -832,6 +838,7 @@ label ch8_main:
                 "Should I go along with it or not?"
                 "Play along.":
                     $ persistent.y_playday[0] = True
+                    $ renpy.save_persistent()
                     $ playalong = True
                     if persistent.y_playday[1]:
                         $ yuri_approval += 2
@@ -874,7 +881,7 @@ label ch8_main:
                         show screen tear(20, 0.1, 0.1, 0, 40)
                         window hide(None)
                         play sound "sfx/s_kill_glitch1.ogg"
-                        pause 0.5
+                        $ pause(0.5)
                         stop sound
                         hide screen tear
                         window show(None)
@@ -892,6 +899,7 @@ label ch8_main:
                         s "Just keep going..."
                 "Stop her.":
                     $ persistent.y_playday[1] = True
+                    $ renpy.save_persistent()
                     $ stopher = True
                     if not persistent.y_playday[0]:
                         if yuri_approval > 0:
@@ -923,7 +931,7 @@ label ch8_main:
                         $ style.say_dialogue = style.normal
                         show yuri 3y3
                     play sound "mod_assets/sfx/metaldrop.ogg"
-                    pause 1.5
+                    $ pause(1.5)
                     "Yuri drops the knife and Sayori quickly grabs it."
                     y 3p "Wha...?"
                     "Yuri looks towards me with worried eyes."
@@ -966,7 +974,7 @@ label ch8_main:
                 $ play_firstpart = True
                 "Yuri takes a moment to realize what's just happened."
                 stop music_poem fadeout 0.5
-                pause 0.5
+                $ pause(0.5)
                 play music t9 fadeout 3.0
                 if playalong:
                     show yuri stab_1p
@@ -1059,7 +1067,7 @@ label ch8_main:
                             show screen tear(20, 0.1, 0.1, 0, 40)
                             window hide(None)
                             play sound "sfx/s_kill_glitch1.ogg"
-                            pause 0.25
+                            $ pause(0.25)
                             stop sound
                             hide screen tear
                             window show(None)
@@ -1077,7 +1085,7 @@ label ch8_main:
                                 show screen tear(20, 0.1, 0.1, 0, 40)
                                 window hide(None)
                                 play sound "sfx/s_kill_glitch1.ogg"
-                                pause 0.25
+                                $ pause(0.25)
                                 stop sound
                                 hide screen tear
                                 window show(None)
@@ -1104,7 +1112,7 @@ label ch8_main:
                             show screen tear(20, 0.1, 0.1, 0, 40)
                             window hide(None)
                             play sound "sfx/s_kill_glitch1.ogg"
-                            pause 0.25
+                            $ pause(0.25)
                             stop sound
                             hide screen tear
                             window show(None)
@@ -1122,7 +1130,7 @@ label ch8_main:
                                 show screen tear(20, 0.1, 0.1, 0, 40)
                                 window hide(None)
                                 play sound "sfx/s_kill_glitch1.ogg"
-                                pause 0.25
+                                $ pause(0.25)
                                 stop sound
                                 hide screen tear
                                 window show(None)
@@ -1143,7 +1151,7 @@ label ch8_main:
                             show yuri 1v
                             "Her grip on the knife loosens enough that she actually drops it."
                             play sound "mod_assets/sfx/metaldrop.ogg"
-                            pause 1.5
+                            $ pause(1.5)
                             y "[player]..."
                             y 1w "I don't..."
                             "She pulls herself away from my embrace."
@@ -1200,7 +1208,7 @@ label ch8_main:
                             show screen tear(20, 0.1, 0.1, 0, 40)
                             window hide(None)
                             play sound "sfx/s_kill_glitch1.ogg"
-                            pause 0.25
+                            $ pause(0.25)
                             stop sound
                             hide screen tear
                             window show(None)
@@ -1218,7 +1226,7 @@ label ch8_main:
                                 show screen tear(20, 0.1, 0.1, 0, 40)
                                 window hide(None)
                                 play sound "sfx/s_kill_glitch1.ogg"
-                                pause 0.25
+                                $ pause(0.25)
                                 stop sound
                                 hide screen tear
                                 window show(None)
@@ -1232,7 +1240,7 @@ label ch8_main:
                             show screen tear(20, 0.1, 0.1, 0, 40)
                             window hide(None)
                             play sound "sfx/s_kill_glitch1.ogg"
-                            pause 0.25
+                            $ pause(0.25)
                             stop sound
                             hide screen tear
                             window show(None)
@@ -1250,7 +1258,7 @@ label ch8_main:
                                 show screen tear(20, 0.1, 0.1, 0, 40)
                                 window hide(None)
                                 play sound "sfx/s_kill_glitch1.ogg"
-                                pause 0.25
+                                $ pause(0.25)
                                 stop sound
                                 hide screen tear
                                 window show(None)
@@ -1264,7 +1272,7 @@ label ch8_main:
                             show screen tear(20, 0.1, 0.1, 0, 40)
                             window hide(None)
                             play sound "sfx/s_kill_glitch1.ogg"
-                            pause 0.25
+                            $ pause(0.25)
                             stop sound
                             hide screen tear
                             window show(None)
@@ -1282,7 +1290,7 @@ label ch8_main:
                                 show screen tear(20, 0.1, 0.1, 0, 40)
                                 window hide(None)
                                 play sound "sfx/s_kill_glitch1.ogg"
-                                pause 0.25
+                                $ pause(0.25)
                                 stop sound
                                 hide screen tear
                                 window show(None)
@@ -1414,11 +1422,11 @@ label ch8_end:
         show sayori 1q:
             1.3
             easeout_cubic 0.5 yoffset 300
-        pause 1.55
+        $ pause(1.55)
         play sound fall
-        pause 0.25
+        $ pause(0.25)
         hide sayori
-        pause 0.25
+        $ pause(0.25)
         scene black
         "Sayori suddenly falls to the ground."
         mc "S-Sayori!"
@@ -1429,7 +1437,7 @@ label ch8_end:
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.25
+        $ pause(0.25)
         scene black
         show sayori 1d at i11
         stop sound
@@ -1444,7 +1452,7 @@ label ch8_end:
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.25
+        $ pause(0.25)
         scene black
         show sayori 1d at i11
         stop sound
@@ -1471,7 +1479,7 @@ label ch8_end:
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.25
+        $ pause(0.25)
         scene bg corridor
         show natsuki 4g zorder 2 at i21
         show monika 1e zorder 2 at i22
@@ -2005,4 +2013,5 @@ label ch8_end:
         "I'm left wondering why that book was so important..."
         "I shouldn't think about it too much, I need to get home."
     $ persistent.arc_clear[0] = True
+    $ renpy.save_persistent()
     return

@@ -25,6 +25,7 @@ label ch12_main:
     # Set Variables and Reset Persistent for New Playthrough
     $ persistent.ch11_task = [False,False,False]
     $ persistent.n_playday = [False,False,False,False,False,False]
+    $ renpy.save_persistent()
 
     scene bg club_day with dissolve_scene_half
     play music t2
@@ -679,7 +680,6 @@ label ch12_main:
     return
 
 label ch12_play:
-    $ persistent.n_playday = [False,False,False,False,False,False]
     stop music fadeout 1.0
     scene bg club_day with wipeleft_scene
     play music t3
@@ -1225,6 +1225,7 @@ label ch12_play:
                 pass
             "Stop Sayori." if not persistent.n_playday[0]:
                 $ persistent.n_playday[0] = True
+                $ renpy.save_persistent()
                 $ ch12_natsuki_reluctance += 1
                 $ sayori_personality += 1
                 "This is too weird."
@@ -1398,6 +1399,7 @@ label ch12_play:
             m "So, what will it be?"
             "The easy solution." if not persistent.n_playday[1]:
                 $ persistent.n_playday[1] = True
+                $ renpy.save_persistent()
                 $ ch12_natsuki_reluctance += 1
                 $ sayori_personality += 1
                 if natsuki_approval > 0:
@@ -1546,6 +1548,7 @@ label ch12_play:
         s "You're making me do really terrible things just to let them be happy..."
         s "I really h--{nw}"
         $ persistent.n_playday[3] = True
+        $ renpy.save_persistent()
         $ _history_list = []
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
@@ -1873,6 +1876,7 @@ label ch12_play:
         m 1h "Who knows?"
         m "Probably off doing--"
     $ persistent.n_playday[4] = False
+    $ renpy.save_persistent()
     show monika zorder 2 at t41
     "The gym doors suddenly burst open again."
     show sayori 2a zorder 3 at f51
@@ -1983,6 +1987,7 @@ label ch12_harukiplace:
         narrator.display_args["callback"] = None
         if sayori_personality > 0:
             sayori_personality -= 1
+    $ renpy.save_persistent()
     s 2c "Oh...you actually did it."
     s 2d "Thank you so much."
     s "I know what to look for in the game files now..."
@@ -4118,4 +4123,5 @@ label ch12_end:
         "Which is weird, since I still have my whole life ahead of me."
     call screen dialog(message="End of Update!", ok_action=Quit(confirm=False))
     $ persistent.arc_clear[1] = True
+    $ renpy.save_persistent()
     return

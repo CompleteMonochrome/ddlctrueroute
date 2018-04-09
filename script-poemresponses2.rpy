@@ -34,7 +34,7 @@ label ch23_y_end:
     y "See, aren't I the most thoughtful person in the club?"
     play sound "sfx/glitch2.ogg"
     show yuri glitch
-    pause 0.2
+    $ pause(0.2)
     stop sound
     show yuri 3y2
     hide darkred
@@ -47,7 +47,7 @@ label ch23_y_end:
     y "I think I'm...going to vomit."
     show yuri at lhide
     hide yuri
-    pause 1.0
+    $ pause(1.0)
     return
 label ch21_n_end:
     jump ch1_n_end
@@ -123,7 +123,7 @@ label ch22_n_end2:
     n ghost2 "PLAY WITH ME!!!"
     $ style.say_dialogue = style.normal
     $ quick_menu = False
-    pause 1
+    $ pause(1)
     play sound "sfx/crack.ogg"
     hide natsuki_ghost_blood
     hide n_rects_ghost1
@@ -131,11 +131,11 @@ label ch22_n_end2:
     show natsuki ghost3
     show n_rects_ghost4 onlayer front zorder 4
     show n_rects_ghost5 onlayer front zorder 4
-    pause 0.5
+    $ pause(0.5)
     hide natsuki
     play sound "sfx/run.ogg"
     show natsuki ghost4 onlayer front at i11
-    pause 0.25
+    $ pause(0.25)
     window hide(None)
     hide natsuki onlayer front
     hide n_rects_ghost4 onlayer front
@@ -144,11 +144,11 @@ label ch22_n_end2:
     with None
     window auto
     scene black
-    pause 0.5
+    $ pause(0.5)
     show end:
         xzoom -1
     with dissolve_cg
-    pause 2.0
+    $ pause(2.0)
     scene black
     with None
     $ quick_menu = True
@@ -160,7 +160,7 @@ label ch23_n_end:
     $ renpy.music.stop(channel="music_poem", fadeout=2.0)
     $ style.say_dialogue = style.edited
     show screen tear(8, offtimeMult=1, ontimeMult=10)
-    pause 3.0
+    $ pause(3.0)
     stop music
     hide screen tear
     show natsuki ghost_base
@@ -185,10 +185,10 @@ label ch23_n_end:
     scene white
     play music t1
     show intro with Dissolve(0.5, alpha=True)
-    pause 2.5
+    $ pause(2.5)
     hide intro with Dissolve(0.5, alpha=True)
     show splash_warning "Just Monika." with Dissolve(0.5, alpha=True)
-    pause 1.0
+    $ pause(1.0)
     play music t5
     $ skip_transition = True
 
@@ -202,9 +202,9 @@ label ch22_m_end:
     $ currentpos = get_pos(channel="music_poem")
     $ audio.t5c = "<from " + str(currentpos) + " loop 4.444>bgm/5.ogg"
     stop music_poem fadeout 2.0
-    pause 2
+    $ pause(2)
     show screen tear(20, 0.3, 0.3, 0, 40)
-    pause 0.5
+    $ pause(0.5)
     hide screen tear
     play music t5c
     m 5 "Sorry, I know it's kind of abstract."
@@ -233,10 +233,10 @@ label ch23_m_end:
     if renpy.windows and renpy.game.preferences.fullscreen:
         $ mouse_visible = False
         scene bsod
-        pause 3.0
+        $ pause(3.0)
     else:
         show black zorder 1
-        pause 2.0
+        $ pause(2.0)
     window show(None)
     show monika 1d zorder 11 at i11
     $ quick_menu = True

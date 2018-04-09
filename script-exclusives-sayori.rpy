@@ -154,6 +154,7 @@ label sayori_exclusive_1:
     "I start to button her blazer from the bottom."
     mc "Once you see how much better it looks, you'll change your mind."
     $ persistent.clear[6] = True
+    $ renpy.save_persistent()
     scene s_cg1
     with dissolve_cg
     s "Ehehe~"
@@ -379,6 +380,7 @@ label sayori_exclusive_2:
     s 4g "But it hurts..."
     mc "Just do it for a second."
     $ persistent.clear[7] = True
+    $ renpy.save_persistent()
     scene s_cg2_base1
     show s_cg2_exp2
     with dissolve_cg

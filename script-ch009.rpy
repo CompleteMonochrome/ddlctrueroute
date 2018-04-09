@@ -31,7 +31,7 @@ label ch9_main:
     s "Um..."
     s 1b "Maybe Monika wants to hear this as well."
     show screen tear(8, offtimeMult=1, ontimeMult=10)
-    pause 1.0
+    $ pause(1.0)
     if m_appeal == 3 and did_all_tasks:
         hide screen tear
         show monika 1c zorder 2 at i21
@@ -156,7 +156,7 @@ label ch9_main:
             show screen tear(20, 0.1, 0.1, 0, 40)
             window hide(None)
             play sound "sfx/s_kill_glitch1.ogg"
-            pause 0.25
+            $ pause(0.25)
             stop sound
             hide screen tear
             window show(None)
@@ -203,7 +203,7 @@ label ch9_main:
             s 1d "So..."
             s "I'll see you in the Literature Club."
         show screen tear(8, offtimeMult=1, ontimeMult=10)
-        pause 1.0
+        $ pause(1.0)
         hide screen tear
         hide sayori
         show monika 1f zorder 2 at t11
@@ -274,7 +274,7 @@ label ch9_main:
             show screen tear(20, 0.1, 0.1, 0, 40)
             window hide(None)
             play sound "sfx/s_kill_glitch1.ogg"
-            pause 0.25
+            $ pause(0.25)
             stop sound
             hide screen tear
             window show(None)
@@ -307,7 +307,7 @@ label ch9_main:
             show screen tear(20, 0.1, 0.1, 0, 40)
             window hide(None)
             play sound "sfx/s_kill_glitch1.ogg"
-            pause 0.25
+            $ pause(0.25)
             stop sound
             hide screen tear
             window show(None)
@@ -1143,7 +1143,7 @@ label ch9_yuridate:
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
     show yuri 3a zorder 2 at i11
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     window show(None)
@@ -1476,7 +1476,7 @@ label ch9_end:
         m "Right, [player]?"
         $ style.say_dialogue = style.edited
         play music mkov fadeout 1.0
-        pause 1.0
+        $ pause(1.0)
         mc "Yes, of course."
         mc "How could I forget?"
         mc "I'm sorry."
@@ -1525,13 +1525,13 @@ label ch9_end:
         m 3bh "It's got something to do with the president, right?"
         m 1bc "With Sayori...?"
         m "I've been very careful when I've--"
-        pause 1.0
+        $ pause(1.0)
         m 1bo "Huh?"
         m "What's this...?"
         show monika g6
         m "Ahaha, it's hopeless."
         m "There's nothing you can--"
-        pause 2.0
+        $ pause(2.0)
         m 1bf "[player]."
         m "Listen very carefully."
         m "I don't have a lot of time here."
@@ -1549,7 +1549,7 @@ label ch9_end:
         m "And me..."
         m "Well, there's not much you can do."
         m "Maybe Sayor--"
-        pause 1.5
+        $ pause(1.5)
         m "Ah..."
         m "Maybe Sayori knows about this whole thing."
         m "She can help, maybe..."
@@ -1785,10 +1785,10 @@ label ch9_end:
                 window hide
                 stop music
                 play sound fall
-                pause 0.25
+                $ pause(0.25)
                 scene black
                 with close_eyes
-                pause 1.5
+                $ pause(1.5)
                 window show(None)
                 show monika 1e zorder 3 at t11
                 m 1e "Is it working?"
@@ -1985,7 +1985,7 @@ label ch9_end:
         m "I really hoped we wouldn't have had to do this."
         m 1bh "I should have just said what I needed to straight away."
         scene black
-        pause 0.25
+        $ pause(0.25)
         scene bg bedroom
         show monika 1be zorder 2 at t11
         $ _history_list = []
@@ -2134,13 +2134,13 @@ label ch9_end:
         m 3bh "It's got something to do with the president, right?"
         m "With Sayori...?"
         m "I've been very careful when I've--"
-        pause 1.0
+        $ pause(1.0)
         m 1bo "Huh?"
         m "What's this...?"
         show monika g6
         m "Ahaha, it's hopeless."
         m "There's nothing you can--"
-        pause 2.0
+        $ pause(2.0)
         m 1bf "[player]."
         m "Listen very carefully."
         m "I don't have a lot of time here."
@@ -2158,7 +2158,7 @@ label ch9_end:
         m "And me..."
         m "Well, there's not much you can do."
         m "Maybe Sayor--"
-        pause 1.5
+        $ pause(1.5)
         m "Ah..."
         m "Maybe Sayori knows about this whole thing."
         m "She can help, maybe..."

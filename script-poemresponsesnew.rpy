@@ -2049,7 +2049,7 @@ label ch12_m_start:
         m "Perhaps, that sounded too desperate."
         m 1d "Ehm."
         scene black
-        pause 0.25
+        $ pause(0.25)
         scene bg club_day
         show monika 2a zorder 2 at i11
         $ _history_list = []
@@ -2412,7 +2412,7 @@ label mnew_monika_3:
         m 2f "Forget about it."
         m "I'll make sure you don't remember this whole conversation anyway."
         scene black
-        pause 0.25
+        $ pause(0.25)
         scene bg club_day
         show monika 3j zorder 2 at t11
         $ _history_list = []

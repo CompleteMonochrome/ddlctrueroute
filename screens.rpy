@@ -1,4 +1,4 @@
-    
+
 
 
 
@@ -387,7 +387,7 @@ init -501 screen quick_menu():
 
 
             textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("Skip") action Skip()
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Save") action ShowMenu('save')
             textbutton _("Load") action ShowMenu('load')
@@ -1466,13 +1466,9 @@ init -501 screen confirm(message, yes_action, no_action):
             yalign .5
             spacing 30
 
-        if in_sayori_kill and message == layout.QUIT:
-            add "confirm_glitch" xalign 0.5
-
-        else:
-            label _(message):
-                style "confirm_prompt"
-                xalign 0.5
+        label _(message):
+            style "confirm_prompt"
+            xalign 0.5
 
         hbox:
             xalign 0.5

@@ -26,14 +26,14 @@ label ch100_main:
         if startpos < 0: startpos = 0
         track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/2.ogg"
         renpy.music.play(track, loop=True)
-    pause 1.0
+    $ pause(1.0)
     $ gtext = glitchtext(48)
     s "{cps=60}[gtext]{/cps}{nw}"
-    pause 1.0
+    $ pause(1.0)
     $ gtext = glitchtext(48)
     s "{cps=60}[gtext]{/cps}{nw}"
     show screen tear(8, offtimeMult=1, ontimeMult=10)
-    pause 1.5
+    $ pause(1.5)
     hide screen tear
     window hide(None)
     window auto
@@ -42,6 +42,7 @@ label ch100_main:
     $ persistent.playthrough = 2
     $ persistent.anticheat = renpy.random.randint(100000, 999999)
     $ anticheat = persistent.anticheat
+    $ renpy.save_persistent()
 
     jump ch200_from_ch100
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

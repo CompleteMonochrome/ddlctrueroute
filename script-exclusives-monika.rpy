@@ -156,9 +156,6 @@ label monika_exclusive_1:
     s "Eh??"
     s "That's {i}super{/i} mean!"
     mc "Sorry, but you have to learn to clean up after yourself."
-    #$ persistent.clear[6] = True
-    #scene s_cg1
-    #with dissolve_cg
     s 5 "Ehehe~"
     s "This is so funny."
     mc "What is?"
@@ -172,9 +169,6 @@ label monika_exclusive_1:
     s "Aren't you?"
     mc "Ah--"
     mc "I-I guess..."
-    #scene bg club_day
-    #show sayori 1q zorder 2 at i11
-    #with dissolve_cg
     mc "Well anyway, just focus on trying to wake up a little earlier..."
     s 1j "Only if you focus on going to bed earlier!"
     mc "Fine, fine..."
@@ -664,12 +658,12 @@ label monika_exclusive_3:
     window hide
     stop music
     play sound "sfx/smack.ogg"
-    pause 0.25
+    $ pause(0.25)
     play sound fall
-    pause 0.25
+    $ pause(0.25)
     scene black
     with close_eyes
-    pause 3.0
+    $ pause(3.0)
     window show(None)
     show monika 1e zorder 3 at t11
     m "Uh, can you hear me?"
@@ -714,7 +708,7 @@ label monika_exclusive_3:
     show monika at thide
     hide monika
     window hide
-    pause 2.0
+    $ pause(2.0)
     play music t6
     scene corridor
     show monika 1h at face

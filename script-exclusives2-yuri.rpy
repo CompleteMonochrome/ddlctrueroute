@@ -155,6 +155,7 @@ label yuri_exclusive2_1_ch202:
     mc "Ah, I guess that makes it kind of difficult to turn the page..."
     y "Here..."
     $ persistent.clear[2] = True
+    $ renpy.save_persistent()
     scene y_cg1_base with dissolve_cg
     "Yuri takes her left arm and holds the left side of the book between her thumb and forefinger."
     mc "Ah..."
@@ -348,6 +349,7 @@ label yuri_exclusive2_2_ch202:
 
     $ currentpos = 45.264 - (get_pos() / 2.0)
     $ audio.t6r = "<from " + str(currentpos) + " to 39.817 loop 0>bgm/6r.ogg"
+    $ quick_menu = False
     play music t6r
     show yuri zorder 1 at thide
     hide yuri
@@ -355,37 +357,38 @@ label yuri_exclusive2_2_ch202:
     show vignette zorder 100 at vignetteflicker(-2.030)
     show layer master at rewind
     $ y_name = "???"
-    mc "{cps=*3}Yuri...?{/cps}{nw}"
-    "{cps=*3}I reach the corner and peer around it.{/cps}{nw}"
-    "{cps=*3}Are they in pain...?{/cps}{nw}"
-    "{cps=*3}A sharp inhale, like someone is sucking the air through their teeth.{/cps}{nw}"
-    y "{cps=*3}Khhhhh--{/cps}{nw}"
-    "{cps=*3}It sounds like breathing.{/cps}{nw}"
-    "{cps=*3}It's coming from around the corner...{/cps}{nw}"
-    "{cps=*3}...What's that noise?{/cps}{nw}"
-    y "{cps=*3}....Haah.....haah....{/cps}{nw}"
-    y "{cps=*3}Haah.....haah....{/cps}{nw}"
+    mc "{cps=150}Yuri...?{/cps}{nw}"
+    "{cps=150}I reach the corner and peer around it.{/cps}{nw}"
+    "{cps=150}Are they in pain...?{/cps}{nw}"
+    "{cps=150}A sharp inhale, like someone is sucking the air through their teeth.{/cps}{nw}"
+    y "{cps=150}Khhhhh--{/cps}{nw}"
+    "{cps=150}It sounds like breathing.{/cps}{nw}"
+    "{cps=150}It's coming from around the corner...{/cps}{nw}"
+    "{cps=150}...What's that noise?{/cps}{nw}"
+    y "{cps=150}....Haah.....haah....{/cps}{nw}"
+    y "{cps=150}Haah.....haah....{/cps}{nw}"
     $ y_name = "Yuri"
-    "{cps=*3}I start heading down the hallway.{/cps}{nw}"
-    "{cps=*3}The most logical place for Yuri to be would be the nearest water fountain...{/cps}{nw}"
-    mc "{cps=*3}Let's see...{/cps}{nw}"
+    "{cps=150}I start heading down the hallway.{/cps}{nw}"
+    "{cps=150}The most logical place for Yuri to be would be the nearest water fountain...{/cps}{nw}"
+    mc "{cps=150}Let's see...{/cps}{nw}"
     window hide(None)
     window auto
     scene bg club_day
     show noise zorder 100 at noise_alpha
     show vignette zorder 100 at vignetteflicker(-2.030)
     show layer master at rewind
-    "{cps=*3}I'm bored just waiting here, so I decide to go look for her.{/cps}{nw}"
-    "{cps=*3}Is something holding her up?{/cps}{nw}"
-    "{cps=*3}Yuri said it wouldn't take long...{/cps}{nw}"
-    "{cps=*3}Ten minutes pass.{/cps}{nw}"
-    "{cps=*3}...{/cps}{nw}"
+    "{cps=150}I'm bored just waiting here, so I decide to go look for her.{/cps}{nw}"
+    "{cps=150}Is something holding her up?{/cps}{nw}"
+    "{cps=150}Yuri said it wouldn't take long...{/cps}{nw}"
+    "{cps=150}Ten minutes pass.{/cps}{nw}"
+    "{cps=150}...{/cps}{nw}"
 
     $ del _history_list[-37:]
     if poemwinner[0] == "yuri" and chapter == 3:
         jump yuri_exclusive2_2_ch203
     $ currentpos = 90.528 - (get_pos() * 2.0)
     $ audio.t6r = "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"
+    $ quick_menu = True
     play music t6r
     hide noise
     hide vignette
@@ -493,6 +496,7 @@ label yuri_exclusive2_2_ch202:
     mc "Are you sure...?"
     y "Of course."
     $ persistent.clear[3] = True
+    $ renpy.save_persistent()
     scene y_cg2_bg
     show y_cg2_base
     show y_cg2_details
@@ -563,13 +567,13 @@ label yuri_exclusive2_2_ch202:
     y "...at you."
     hide yuri
     show yuri eyes
-    pause 3.0
+    $ pause(3.0)
     y "...Haah..."
-    pause 3.0
+    $ pause(3.0)
     y "...Haah..."
-    pause 3.0
+    $ pause(3.0)
     y "...Haah..."
-    pause 3.0
+    $ pause(3.0)
     play sound closet_open
     stop music
     show layer master
@@ -594,10 +598,10 @@ label yuri_exclusive2_2_ch203:
     with None
     $ audio.t6g = "<loop 10.893>bgm/6g.ogg"
     play music t6g
-    pause 4.62
+    $ pause(4.62)
     scene bg corridor
     show yuri eyes_base
-    pause 1.0
+    $ pause(1.0)
     show bg glitch:
         yoffset 480 ytile 2
         linear 0.25 yoffset 0
@@ -606,10 +610,11 @@ label yuri_exclusive2_2_ch203:
     $ gtext = glitchtext(80)
     $ currentpos = get_pos()
     play music g1
-    y "[gtext]{nw}"
+    y "{cps=70}[gtext]{nw}"
     stop music
     scene bg corridor
     show yuri 2n at i11
+    $ quick_menu = True
     y "Um..."
     y "Wait..."
     y 2o "How did I..."
@@ -685,7 +690,7 @@ label yuri_exclusive2_2_ch203:
             alpha 0.0
             1.49
             repeat
-    pause 2.0
+    $ pause(2.0)
     $ ad = 40.0
     $ ac = 1.0
     show monika 1 onlayer front at malpha(ac / ad)
