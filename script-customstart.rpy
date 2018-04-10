@@ -54,8 +54,10 @@ label choose_start:
             jump ch5_skip
         "Yuri's problem.":
             jump custom_yuristart
-        "Natsuki's problem.":
+        "Natsuki's problem." if persistent.arc_clear[0]:
             jump custom_natstart
+        "Sayori's problem." if persistent.arc_clear[1]:
+            jump custom_saystart
 
     label custom_yuristart:
     s "Yuri's problem, eh?"
@@ -682,3 +684,11 @@ label choose_start:
             stop music fadeout 1.0
             $ renpy.save_persistent()
             jump ch12_skip
+
+    label custom_saystart:
+    "What."
+    menu:
+        "Yes":
+            jump ch13_skip
+        "No":
+            jump ch13_skip

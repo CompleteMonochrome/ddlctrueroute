@@ -149,6 +149,18 @@ image menu_art_m_locked:
     ycenter 640
     zoom 1.0
 
+image menu_art_m_evil:
+    subpixel True
+    "gui/menu_art_m.png"
+    xcenter 1000
+    ycenter 640
+    zoom 1.00
+    menu_art_move(1.00, 1000, 1.00)
+    30.0
+    "mod_assets/gui/menu_art_m_evil.png"
+    0.3
+    "gui/menu_art_m.png"
+
 image menu_nav:
     "gui/overlay/main_menu.png"
     menu_nav_move

@@ -561,7 +561,10 @@ init -501 screen main_menu() tag menu:
             add "menu_art_s"
         add "menu_particles"
         if persistent.playthrough != 4 and not persistent.monika_gone:
-            add "menu_art_m"
+            if not persistent.arc_clear[0]:
+                add "menu_art_m"
+            else:
+                add "menu_art_m_evil"
         add "menu_fade"
 
     key "K_ESCAPE" action Quit(confirm=False)
