@@ -44,36 +44,29 @@ init python:
         elif persistent.playthrough == 4:
             delete_character("monika")
     def put_small_characters():
-        try: os.remove(config.basedir + "/characters/natsuki.chr")
-        except: pass
-        try: os.remove(config.basedir + "/characters/yuri.chr")
-        except: pass
+        delete_character("natsuki")
+        delete_character("yuri")
         try: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsukismall.chr").read())
         except: pass
         try: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yurismall.chr").read())
         except: pass
     def restore_normal_characters():
-        try: os.remove(config.basedir + "/characters/natsuki.chr")
-        except: pass
-        try: os.remove(config.basedir + "/characters/yuri.chr")
-        except: pass
+        delete_character("natsuki")
+        delete_character("yuri")
         try: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
         except: pass
         try: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
         except: pass
     def insert_dadsuki_character():
-        try: os.remove(config.basedir + "/characters/yasuhiro.chr")
-        except: pass
+        delete_character("yasuhiro")
         try: open(config.basedir + "/characters/yasuhiro.chr", "wb").write(renpy.file("yasuhiro.chr").read())
         except: pass
     def insert_momsuki_character_normal():
-        try: os.remove(config.basedir + "/characters/haruki.chr")
-        except: pass
+        delete_character("haruki")
         try: open(config.basedir + "/characters/haruki.chr", "wb").write(renpy.file("harukinormal.chr").read())
         except: pass
     def insert_momsuki_character_broken():
-        try: os.remove(config.basedir + "/characters/haruki.chr")
-        except: pass
+        delete_character("haruki")
         try: open(config.basedir + "/characters/haruki.chr", "wb").write(renpy.file("harukibroken.chr").read())
         except: pass
     def pause(time=None):
@@ -126,16 +119,20 @@ define audio.t9g = "<loop 1.532>bgm/9g.ogg"
 define audio.t10 = "<loop 5.861>bgm/10.ogg"
 define audio.t10y = "<loop 0>bgm/10-yuri.ogg"
 define audio.td = "<loop 36.782>bgm/d.ogg"
-# Mod Tracks - 11: A Date With You
-define audio.t11y = "<loop 1.300>mod_assets/bgm/11_yuri.ogg"
-define audio.t11n = "<loop 1.300>mod_assets/bgm/11_natsuki.ogg"
-define audio.t11s = "<loop 1.300>mod_assets/bgm/11_sayori.ogg"
-define audio.t11m = "<loop 1.300>mod_assets/bgm/11_monika.ogg"
+# Mod Tracks - 11: Play Time!
+define audio.t11 = "<loop 5.000>mod_assets/bgm/11.ogg"
+# Mod Tracks - 12: A Date With You
+define audio.t12y = "<loop 1.300>mod_assets/bgm/12_yuri.ogg"
+define audio.t12n = "<loop 1.300>mod_assets/bgm/12_natsuki.ogg"
+define audio.t12s = "<loop 1.300>mod_assets/bgm/12_sayori.ogg"
+define audio.t12m = "<loop 1.300>mod_assets/bgm/12_monika.ogg"
+# Mod Tracks - 13: Choices of Hope and Suffering
+define audio.t13 "<loop 1.700>mod_assets/bgm/13.ogg"
 
 define audio.m1 = "<loop 0>bgm/m1.ogg"
 define audio.mend = "<loop 6.424>bgm/monika-end.ogg"
 define audio.mendglitch = "<loop 6.424>mod_assets/bgm/monika-end-pitch.ogg"
-# Markovika Track
+# Mod Tracks - 14: Markovika
 define audio.mkov = "<loop 1.500>mod_assets/bgm/monika-markov.ogg"
 
 define audio.ghostmenu = "<loop 0>bgm/ghostmenu.ogg"
@@ -185,6 +182,8 @@ image bg notebook-glitch = "bg/notebook-glitch.png"
 
 image bg glitch = LiveTile("bg/glitch.jpg")
 
+image markovred = "#f21237"
+image monikared = "#e03638"
 image bg new_house = "bg/house.jpg"
 image bg gym = "mod_assets/images/bg/gym.png"
 image bg rooftop = "mod_assets/images/bg/rooftop.png"

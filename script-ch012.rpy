@@ -101,6 +101,9 @@ label ch12_main:
         show monika g7
         $ currentpos = get_pos()
         play music mkov fadeout 2.0
+        show monikared zorder 5:
+            alpha 0
+            linear 2.0 alpha 1.0
         m "But in the end, it all ended up being meaningless."
         mc "Meaningless?"
         mc "What do you mean?"
@@ -133,6 +136,7 @@ label ch12_main:
         m 1c "Nothing happened..."
         m 1d "Except..."
         m 1e "Well, we can talk more about that later."
+        hide monikared
         $ audio.t2c = "<from " + str(currentpos) + " loop 4.499>bgm/2.ogg"
         play music t2c fadeout 0.5
     else:
@@ -145,6 +149,9 @@ label ch12_main:
         show monika g8
         $ currentpos = get_pos()
         play music mkov fadeout 2.0
+        show markovred zorder 5:
+            alpha 0
+            linear 2.0 alpha 1.0
         m "As did I."
         m "It's a little irresponsible of her, don't you think?"
         mc "Um..."
@@ -176,6 +183,7 @@ label ch12_main:
         m 2b "At least, I hope so."
         mc "Right..."
         m "Ahaha."
+        hide markovred
         $ audio.t2c = "<from " + str(currentpos) + " loop 4.499>bgm/2.ogg"
         play music t2c fadeout 0.5
     show yuri 1a zorder 2 at t31
@@ -626,7 +634,7 @@ label ch12_main:
                 show yuri 1a zorder 2 at t42
                 show natsuki 4s zorder 2 at t43
                 show monika 1n zorder 2 at t44
-                pause 0.25
+                $ pause(0.25)
                 stop sound
                 hide screen tear
                 window show(None)
@@ -956,7 +964,7 @@ label ch12_play:
         stop music
         scene black
         with close_eyes
-        pause 1.0
+        $ pause(1.0)
     else:
         m 1a "I finally have an opportunity."
         "Monika smiles and stares intently at me."
@@ -1013,7 +1021,7 @@ label ch12_play:
         stop music
         scene black
         with close_eyes
-        pause 1.0
+        $ pause(1.0)
     scene bg gym with wipeleft_scene
     play music t6 fadeout 1.0
     "I'm the last one to make it to the gym."
@@ -1261,7 +1269,7 @@ label ch12_play:
                 play sound "sfx/s_kill_glitch1.ogg"
                 hide sayori
                 hide natsuki
-                pause 0.25
+                $ pause(0.25)
                 stop sound
                 hide screen tear
                 window show(None)
@@ -1444,7 +1452,7 @@ label ch12_play:
                 show natsuki 1q zorder 2 at t42
                 show monika 3b zorder 2 at f43
                 show sayori 2n zorder 3 at t44
-                pause 0.25
+                $ pause(0.25)
                 stop sound
                 hide screen tear
                 window show(None)
@@ -1500,7 +1508,7 @@ label ch12_play:
             if startpos < 0: startpos = 0
             track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/5_natsuki.ogg"
             renpy.music.play(track,channel="music_poem",loop=True)
-        pause 1.0
+        $ pause(1.0)
         stop music_poem
         $ config.skipping = False
         $ config.allow_skipping = False
@@ -1559,7 +1567,7 @@ label ch12_play:
         show sayori 2n zorder 3 at t44
         $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>bgm/5_natsuki.ogg"
         $ renpy.music.play(audio.t5b, channel="music_poem", fadein=1.0, tight=True)
-        pause 0.5
+        $ pause(0.5)
         stop sound
         hide screen tear
         window show(None)
@@ -1895,7 +1903,7 @@ label ch12_play:
             if startpos < 0: startpos = 0
             track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/t9.ogg"
             renpy.music.play(track, loop=True)
-        pause 1.0
+        $ pause(1.0)
         stop music
         $ config.skipping = False
         $ config.allow_skipping = False
@@ -2071,7 +2079,7 @@ label ch12_harukiplace:
     s "The rest of them won't experience what the two of us just did."
     $ audio.t9b = "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
     play music t9b fadein 0.5
-    pause 0.5
+    $ pause(0.5)
     $ config.allow_skipping = True
     s 2q "Oh, it's our special guest!"
     s "Welcome! I wasn't expecting you to arrive so early~"
@@ -2804,7 +2812,7 @@ label ch12_harukiplace:
             n "He doesn't deserve a second chance."
             show natsuki zorder 2 at t42
             show dadsuki 1h zorder 3 at f43
-            d "You little brat!"
+            d "You little brat! Are you trying to piss me off?"
             d "I should have taught you more discipline."
             d "When you get back to the house, you're--"
             show momsuki 1i zorder 3 at f41
@@ -2821,15 +2829,15 @@ label ch12_harukiplace:
             d 1h "I deserve better than this!"
             d "I deserve--"
             play sound "sfx/smack.ogg"
-            pause 0.25
+            $ pause(0.25)
             show dadsuki 1h:
                 1.3
                 easeout_cubic 0.5 yoffset 300
-            pause 1.55
+            $ pause(1.55)
             play sound fall
-            pause 0.25
+            $ pause(0.25)
             hide dadsuki
-            pause 0.25
+            $ pause(0.25)
             "Yasuhiro suddenly falls to the ground."
             show monika 1e zorder 3 at f43
             if monika_type == 0:
@@ -3047,7 +3055,7 @@ label ch12_harukiplace:
             show dadsuki 1e zorder 2 at t54
         show yuri 3ph zorder 2 at t55
         play music t9 fadein 0.5
-        pause 0.5
+        $ pause(0.5)
         stop sound
         hide screen tear
         window show(None)
@@ -3094,7 +3102,7 @@ label ch12_harukinoplace:
     $ config.allow_skipping = True
     $ audio.t9b = "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
     play music t9b fadein 0.5
-    pause 0.5
+    $ pause(0.5)
     label ch12_noharukicont:
     s 2q "It looks like our special guest has arrived!"
     s "Welcome, I hope you have a great time here!"
@@ -3880,7 +3888,7 @@ label ch12_harukinoplace:
         n "I don't know this person."
         show dadsuki 1b zorder 3 at f51
         show natsuki zorder 2 at t52
-        d "You little brat."
+        d "You little shit. You're trying to piss me off, aren't you?"
         d "You think this changes anything?"
         d 1f "When you get home, you're--"
         show sayori 1a zorder 3 at f54
@@ -4112,10 +4120,17 @@ label ch12_end:
             show monika 3b zorder 2 at t11
             m "Hello, [player]."
             m "Did you have fun today?"
+            m "I'm so happy you decided to mess with her."
+            m "It really made her confused."
         else:
             show monika 3b zorder 2 at t11
             m "[player]."
             m "You've disapppointed me."
+            m "I really was hoping you'd take those choices I gave you."
+            m "I don't even think Sayori was aware that I did that."
+            m "Are you really trying to make everyone have a happy ending?"
+            m "You know as well as I do that that isn't possible anymore."
+            m "Or are you forgetting who you're talking to right now?"
     else:
         "I hope tomorrow is less weird."
         "I don't know about everyone else, but life feels...complete."

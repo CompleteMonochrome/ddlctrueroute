@@ -1032,7 +1032,7 @@ label ch9_yuridate:
     $ yuri_date = True
     scene bg cafe
     with wipeleft_scene
-    play music t11y fadeout 2.0
+    play music t12y fadeout 2.0
     "I decided to take Yuri to a nearby cafe."
     "I didn't really have much money, but I also didn't want to take her to fast food."
     "I figured that going to the cafe would be the best compromise."
@@ -1476,6 +1476,9 @@ label ch9_end:
         m "Right, [player]?"
         $ style.say_dialogue = style.edited
         play music mkov fadeout 1.0
+        show markovred zorder 5:
+            alpha 0
+            linear 2.0 alpha 1.0
         $ pause(1.0)
         mc "Yes, of course."
         mc "How could I forget?"
@@ -1531,6 +1534,7 @@ label ch9_end:
         show monika g6
         m "Ahaha, it's hopeless."
         m "There's nothing you can--"
+        hide markovred
         $ pause(2.0)
         m 1bf "[player]."
         m "Listen very carefully."
@@ -2067,6 +2071,9 @@ label ch9_end:
         m 3ba "Maybe not."
         show monika g6
         play music mkov fadeout 2.0
+        show markovred zorder 5:
+            alpha 0
+            linear 2.0 alpha 1.0
         m "I can tell this host--"
         m "Um...!"
         m 3bl "That {i}I've{/i}..."
@@ -2140,6 +2147,7 @@ label ch9_end:
         show monika g6
         m "Ahaha, it's hopeless."
         m "There's nothing you can--"
+        hide markovred
         $ pause(2.0)
         m 1bf "[player]."
         m "Listen very carefully."
