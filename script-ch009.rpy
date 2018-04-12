@@ -1475,10 +1475,10 @@ label ch9_end:
         m "You let me in just a couple of moments ago."
         m "Right, [player]?"
         $ style.say_dialogue = style.edited
-        play music mkov fadeout 1.0
         show markovred zorder 5:
             alpha 0
-            linear 2.0 alpha 0.3
+            linear 1.0 alpha 0.3
+        play music mkov fadeout 1.0 fadein 1.0
         $ pause(1.0)
         mc "Yes, of course."
         mc "How could I forget?"
@@ -2070,10 +2070,10 @@ label ch9_end:
         mc "But this is kinda sudden, isn't it?"
         m 3ba "Maybe not."
         show monika g6
-        play music mkov fadeout 2.0
         show markovred zorder 5:
             alpha 0
             linear 2.0 alpha 0.3
+        play music mkov fadeout 2.0 fadein 2.0
         m "I can tell this host--"
         m "Um...!"
         m 3bl "That {i}I've{/i}..."

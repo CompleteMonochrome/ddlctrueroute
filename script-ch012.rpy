@@ -99,11 +99,11 @@ label ch12_main:
         mc "It's not a problem."
         m "I just really appreciate you taking the time for me..."
         show monika g7
-        $ currentpos = get_pos()
-        play music mkov fadeout 2.0
         show monikared zorder 5:
             alpha 0
-            linear 2.0 alpha 0.3
+            linear 2.0 alpha 0.2
+        $ currentpos = get_pos()
+        play music mkov fadeout 2.0 fadein 2.0
         m "But in the end, it all ended up being meaningless."
         mc "Meaningless?"
         mc "What do you mean?"
@@ -136,9 +136,9 @@ label ch12_main:
         m 1c "Nothing happened..."
         m 1d "Except..."
         m 1e "Well, we can talk more about that later."
-        hide monikared
         $ audio.t2c = "<from " + str(currentpos) + " loop 4.499>bgm/2.ogg"
-        play music t2c fadeout 0.5
+        play music t2c fadeout 0.5 fadein 0.5
+        hide monikared
     else:
         $ monika_type = 2
         show monika 1c zorder 2 at t11
@@ -147,11 +147,11 @@ label ch12_main:
         mc "I guess so."
         mc "Though I would have thought Sayori would have been here by now."
         show monika g8
-        $ currentpos = get_pos()
-        play music mkov fadeout 2.0
         show markovred zorder 5:
             alpha 0
             linear 2.0 alpha 0.3
+        $ currentpos = get_pos()
+        play music mkov fadeout 2.0 fadein 2.0
         m "As did I."
         m "It's a little irresponsible of her, don't you think?"
         mc "Um..."
@@ -913,7 +913,7 @@ label ch12_play:
         m 2e "...to make sure she can't listen in."
         mc "To make sure who can't listen in...?"
         m "Alright, now that we're here alone I guess I could finally do that without Sayori getting suspcious."
-        play music mkov fadeout 2.0
+        play music mkov fadeout 2.0 fadein 0.5
         mc "Monika...?"
         m 2a "I'm not entirely sure what you did to make her stop resisting so much..."
         m "But I really have to thank you for that."
@@ -973,7 +973,7 @@ label ch12_play:
         mc "I'm not sure I follow."
         m "Look, I'll be completely honest with you."
         m 2e "I'm not Monika."
-        play music mkov fadeout 2.0
+        play music mkov fadeout 2.0 fadein 0.5
         mc "What...?"
         mc "That doesn't make any sense."
         m "Sure, I may look like her but I'm a completely different person."
@@ -4133,7 +4133,7 @@ label ch12_end:
             m "I suppose I should give you my gratitude."
             mc "For wh--"
             $ currentpos = get_pos()
-            play music mkov fadeout 2.0
+            play music mkov fadeout 2.0 fadein 0.5
             m 2h "I wasn't talking to you."
             m "So you can just watch. It's not like you'll remember this anyway."
             m 2a "I'm directing this at {i}you{/i}."
@@ -4254,7 +4254,7 @@ label ch12_end:
             m "You've disapppointed me."
             mc "What are you--"
             $ currentpos = get_pos()
-            play music mkov fadeout 2.0
+            play music mkov fadeout 2.0 fadein 0.5
             m 2i "No. I'm not talking to you."
             m "I really was hoping you'd take all those choices I gave you."
             m "I don't even think Sayori was aware that I did that."

@@ -1701,10 +1701,10 @@ label ch11_end:
         show monika g6
         m "Oh, who am I kidding?"
         m "I do what I want."
-        play music mkov fadeout 2.0
         show markovred zorder 5:
             alpha 0
             linear 2.0 alpha 0.3
+        play music mkov fadeout 2.0 fadein 2.0
         mc "Do what?"
         m 2bb "Ahaha."
         "Monika lets out a quiet giggle..."
