@@ -298,6 +298,7 @@ label splashscreen:
                 "Yes, delete my existing data.":
                     "Deleting save data...{nw}"
                     python:
+                        delete_character("ûüýþ")
                         delete_all_saves()
                         renpy.loadsave.location.unlink_persistent()
                         renpy.persistent.should_save_persistent = False

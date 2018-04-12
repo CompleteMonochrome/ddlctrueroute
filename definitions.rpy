@@ -127,7 +127,7 @@ define audio.t12n = "<loop 1.300>mod_assets/bgm/12_natsuki.ogg"
 define audio.t12s = "<loop 1.300>mod_assets/bgm/12_sayori.ogg"
 define audio.t12m = "<loop 1.300>mod_assets/bgm/12_monika.ogg"
 # Mod Tracks - 13: Choices of Hope and Suffering
-define audio.t13 "<loop 1.700>mod_assets/bgm/13.ogg"
+define audio.t13 = "<loop 1.700>mod_assets/bgm/13.ogg"
 
 define audio.m1 = "<loop 0>bgm/m1.ogg"
 define audio.mend = "<loop 6.424>bgm/monika-end.ogg"
@@ -1862,6 +1862,7 @@ default ch12_outcome = 0
 default ch12_natsuki_help = True
 default ch12_natsuki_reluctance = 1
 default ch12_haruki_tried = False
+default ch12_markov_agree = False
 default haruki_personality = [False,False,False]
 default normal_haruki = False
 default yasuhiro_haruki_together = False

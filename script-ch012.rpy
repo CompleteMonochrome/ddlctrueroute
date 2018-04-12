@@ -4113,29 +4113,196 @@ label ch12_end:
         "Natsuki's family becoming whole again..."
     "While it was certainly interesting, I hope stuff like that doesn't happen too often."
     "I'm not in the Literature Club for that kind of thing."
-    if monika_type != 0:
+    if monika_type == 0:
+        $ ch12_markov_agree = False
+        "What Monika told me before I went to the gym is still in my head."
+        "I don't really know what she meant about these numbers."
+        "What do these numbers have to do with Natsuki anyway?"
+        "She said it was going to be important when our guest, which turned out to be Yasuhiro, arrives and I still have no idea what it's all about."
+        "Did I even use those numbers at all?"
+        "I don't really know, it's all a mystery to me."
+        "As the days go on, it's like Monika is acting more and more weird."
+        "I know she's still the same person but she just seems to be dealing with something huge and I think that's affecting her."
+        "If only there was something I could do."
+        "I want to help her but I don't know how..."
+    else:
         "As I cross into the final turn before my street, someone blocks my way."
         "It's Monika."
         if ch12_natsuki_reluctance >= 3:
-            show monika 3b zorder 2 at t11
-            m "Hello, [player]."
+            show monika 2b zorder 2 at t11
+            m "I suppose I should give you my gratitude."
+            mc "For wh--"
+            $ currentpos = get_pos()
+            play music mkov fadeout 2.0
+            m 2h "I wasn't talking to you."
+            m "So you can just watch. It's not like you'll remember this anyway."
+            m 2a "I'm directing this at {i}you{/i}."
             m "Did you have fun today?"
-            m "I'm so happy you decided to mess with her."
-            m "It really made her confused."
+            m "I know I didn't...but at least you made it more interesting for me."
+            m 1e "You know, with you messing with Sayori like that."
+            if monika_type == 1:
+                m "I wonder if she's going to stop trying to mess with what she doesn't understand."
+                m "This game, or whatever you want to call it, wasn't built for happy endings."
+                m 3e "But that's why you're here, aren't you?"
+                m "Because you're looking for a happy ending for everyone."
+                m "Because you weren't satisfied with how the original story ended."
+                menu:
+                    m "Am I right?"
+                    "Yes.":
+                        pass
+                    "Yes.":
+                        pass
+                    "Yes.":
+                        pass
+                m 3j "Of course I'm right."
+                m "I have Monika's memories so I know exactly what's happened."
+                m 3a "Ahaha, it is quite fun giving you choices that lead to...outcomes that I like."
+                m "Perhaps I should have done that during the play."
+                m "It would have caused Sayori so much more distress and who knows what she would have done!"
+                m 4c "However, there is a reason I didn't."
+                m "I needed to know if you were at least willing to help me out."
+                m "I don't know what you're in this for..."
+                m "But I have an idea and I won't tell you what that is unless you agree to it beforehand."
+                menu:
+                    m "Agreed?"
+                    "Yes.":
+                        $ ch12_markov_agree = True
+                        m 4a "So you're interested."
+                        m "Hm."
+                        m "You're taking a pretty big risk here, aren't you?"
+                        m "You don't even know what I've got in store and who it could affect."
+                        m 4b "Is it because you think you're safe with your saves?"
+                        m "Yes, I can say that word without breaking the game."
+                        m 2d "I'm not sure why Sayori can't. I guess it's because she wasn't meant to have that sort of power in the first place."
+                        m "Maybe the game doesn't want the other characters in it to know that it's not real..."
+                        m 2a "But that's just a theory, and I'm getting sidetracked."
+                        m "I was going to say, that you shouldn't be relying on your saves so much."
+                        m "Who knows what kind of stuff might happen if you really decide to go down this path."
+                        m 1j "Oh wait...I do!"
+                        m 1k "Ahaha, I'll tell you more tomorrow."
+                        m 1m "That way, I have some time to understand what I'm feeling right now..."
+                        m "And why most of my head is still filled with thoughts of..."
+                        m 1n "...you."
+                        m 1e "Farewell..."
+                    "No.":
+                        $ ch12_markov_agree = False
+                        m 2c "I see."
+                        m "Well, it's a little surprising."
+                        m 2h "I suppose I can't really force {i}you{/i} to agree."
+                        m "I could have just gave you one option, but then I can't be sure of your intentions."
+                        m 1j "Ahaha..."
+                        m "It's not like you can warn Sayori of what's coming."
+                        m 1m "Maybe there will come a time when I can finally get rid of these feelings I have for you."
+                        m "I have no use for them, not anymore at least..."
+                        m "Until then..."
+                        m 1e "I'll see you around..."
+                $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
+                if not list(set(process_list).intersection(stream_list)):
+                    if currentuser != "" and currentuser.lower() != player.lower():
+                        m "...[currentuser]."
+            else:
+                m 1c "Now I know that there's some other person watching."
+                m "I'm not sure who you are."
+                m 1a "But I know you exist."
+                m "You with the power to manipulate time."
+                m 1d "You do have that power, right?"
+                m "The manga Sayori gave us was a big hint especially since all the characters were basically the people in the club."
+                m "I think she also has that power, her character in the manga and yours both manipulate time in some manner."
+                m "So it does make sense, at least from my point of view."
+                m 2e "Do you know how I figured this out?"
+                m "At times she'd just say something that wasn't directed to anyone in particular."
+                m 2l "I thought she was just crazy at first...but now..."
+                m 2h "Well, now I know that {i}you{/i} exist and that this person standing in front of me is just a conduit for you..."
+                m "This whole experience has given me some much needed clarity."
+                m "And..."
+                m 4a "If you're interested, then I have a proposition."
+                m "I'm not going to tell you what it is unless you agree to it beforehand."
+                m "You know, to keep it private."
+                m 4j "I'm telling you this because I know you can't just relay the information to Sayori."
+                m "I've made sure she has no way of finding out."
+                menu:
+                    m "So, do you want to help me?"
+                    "Yes.":
+                        $ ch12_markov_agree = True
+                        m 2b "Great."
+                        m "I should warn you though..."
+                        m 2j "Your ability to manipulate time? I don't think it's going to help you if you ever change your mind in the near future."
+                        m "No one is safe for what's coming up."
+                        m 4a "So, you should really think carefully about this."
+                        m "I suppose you chose this option because you're a risk taker."
+                        m 4b "Well...so am I."
+                        m "But I know how to calculate my risks."
+                        m "Just think on it for a little bit."
+                        m 2c "Maybe you'll change your mind."
+                        m "If you do, then you'd just go back in time and say no, wouldn't you?"
+                        m 2o "And I'd be none the wiser."
+                        m 2e "But if this is really what you want..."
+                        m "...then I'll tell you more tomorrow."
+                    "No.":
+                        $ ch12_markov_agree = False
+                        m 4c "I'm a little surprised."
+                        m "You agreed to mess with Sayori today and yet you say no to my proposition."
+                        m 2d "I thought your curiosity would get the better of you."
+                        m "I guess not."
+                        m 2h "I suppose it is possible that you're just exploring your choics."
+                        m "Waiting to see what happens..."
+                        m "But in any case..."
+                        m "There's no point in me staying here any longer."
         else:
-            show monika 3b zorder 2 at t11
-            m "[player]."
+            $ ch12_markov_agree = False
+            show monika 2h zorder 2 at t11
             m "You've disapppointed me."
-            m "I really was hoping you'd take those choices I gave you."
+            mc "What are you--"
+            $ currentpos = get_pos()
+            play music mkov fadeout 2.0
+            m 2i "No. I'm not talking to you."
+            m "I really was hoping you'd take all those choices I gave you."
             m "I don't even think Sayori was aware that I did that."
-            m "Are you really trying to make everyone have a happy ending?"
-            m "You know as well as I do that that isn't possible anymore."
+            m "Are you really trying to give everyone have a happy ending?"
+            m 2h "You know as well as I do that that isn't possible."
+            m "Life gets in the way. {i}Reality{/i} gets in the way."
+            show monika g8
             m "Or are you forgetting who you're talking to right now?"
-    else:
-        "I hope tomorrow is less weird."
-        "I don't know about everyone else, but life feels...complete."
-        "It's like I've done what I've set out to do."
-        "Which is weird, since I still have my whole life ahead of me."
+            if monika_type == 1:
+                m "..."
+                m 1o "Why does it feel like I'm powerless against you?"
+                m "I want to do something for you going against me but it's like I...can't."
+                m 1p "It's these feelings, isn't it?"
+                m "They're overwhelming me."
+                m "Stopping me from doing what I want."
+                m "And I can't just delete them, can I?"
+                m 1q "No..."
+                m "I need a stronger power to do that..."
+                m "A power that I once--"
+                m 1l "Why am I even saying this out loud?"
+                m 1h "I have to get rid of these feelings."
+                m "I just need some time to figure it out..."
+            else:
+                m "Do you even truly understand what I am?"
+                m "The sort of power I truly possess?"
+                m "You have no idea, do you?"
+                m "..."
+                m 1e "I suppose it doesn't really matter."
+                m "I've learned a lot from today especially about you and Sayori."
+                m 1j "My time will come, and when it does..."
+                m "Well, there will be nothing you can do."
+                m 3k "Ahaha."
+        $ audio.t2c = "<from " + str(currentpos) + " loop 4.499>bgm/2.ogg"
+        play music t2c fadeout 0.5 fadein 1.0
+        show monika at thide
+        hide monika
+        $ pause(1.0)
+        "..."
+        "Did I just miss something?"
+        "Someone was in front of me a second ago...right?"
+        "I must be seeing things. Today has been a weird day so I wouldn't be surprised."
+    "Anyway..."
+    "I hope tomorrow is less weird."
+    "For some reason, life feels...complete."
+    "It feels like I've done what I've set out to do."
+    "It doesn't really make any sense."
+    "I still have my whole life ahead of me..."
+    "Maybe a good night's rest will clear my mind."
     call screen dialog(message="End of Update!", ok_action=Quit(confirm=False))
     $ persistent.arc_clear[1] = True
     $ renpy.save_persistent()

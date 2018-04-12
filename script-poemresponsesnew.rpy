@@ -804,7 +804,7 @@ label ch6_m_end:
     return
 
 label ch7_m_end:
-    if m_appeal == 2 and did_all_tasks:
+    if m_appeal >= 2 and did_all_tasks:
         call showpoem (poem_m7b)
         "I'm getting a sinking feeling from reading that poem."
         "It wasn't because of the quality."
@@ -1171,7 +1171,7 @@ label ch6_n_good:
     jump ch6_n_shared
 
 label ch7_n_bad:
-    if not read_book:
+    if not read_book or did_all_tasks:
         jump ch7_n_med
     if natsuki_approval > 0:
         $ natsuki_approval -= 1
@@ -1426,7 +1426,7 @@ label ch6_y_good:
     jump ch6_y_shared
 
 label ch7_y_bad:
-    if not read_book:
+    if not read_book or did_all_tasks:
         jump ch7_y_med
     y 2q "Um..."
     y "This is..."
@@ -1673,7 +1673,7 @@ label ch6_s_good:
     jump ch6_s_shared
 
 label ch7_s_bad:
-    if not read_book:
+    if not read_book or did_all_tasks:
         jump ch7_s_med
     s 4l "Ahaha..."
     s "Sorry..."
