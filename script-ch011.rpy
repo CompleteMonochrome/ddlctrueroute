@@ -1704,7 +1704,7 @@ label ch11_end:
         play music mkov fadeout 2.0
         show markovred zorder 5:
             alpha 0
-            linear 2.0 alpha 1.0
+            linear 2.0 alpha 0.3
         mc "Do what?"
         m 2bb "Ahaha."
         "Monika lets out a quiet giggle..."

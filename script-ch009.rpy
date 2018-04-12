@@ -1478,7 +1478,7 @@ label ch9_end:
         play music mkov fadeout 1.0
         show markovred zorder 5:
             alpha 0
-            linear 2.0 alpha 1.0
+            linear 2.0 alpha 0.3
         $ pause(1.0)
         mc "Yes, of course."
         mc "How could I forget?"
@@ -2073,7 +2073,7 @@ label ch9_end:
         play music mkov fadeout 2.0
         show markovred zorder 5:
             alpha 0
-            linear 2.0 alpha 1.0
+            linear 2.0 alpha 0.3
         m "I can tell this host--"
         m "Um...!"
         m 3bl "That {i}I've{/i}..."

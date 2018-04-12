@@ -103,7 +103,7 @@ label ch12_main:
         play music mkov fadeout 2.0
         show monikared zorder 5:
             alpha 0
-            linear 2.0 alpha 1.0
+            linear 2.0 alpha 0.3
         m "But in the end, it all ended up being meaningless."
         mc "Meaningless?"
         mc "What do you mean?"
@@ -151,7 +151,7 @@ label ch12_main:
         play music mkov fadeout 2.0
         show markovred zorder 5:
             alpha 0
-            linear 2.0 alpha 1.0
+            linear 2.0 alpha 0.3
         m "As did I."
         m "It's a little irresponsible of her, don't you think?"
         mc "Um..."
