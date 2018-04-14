@@ -1,4 +1,8 @@
 label ch13_main:
+    scene black
+    show sayori 1a zorder 2 at t11
+    with dissolve_scene_full
+    play music mend fadeout 2.0
     s "So..."
     s "About Natsuki..."
     if ch12_outcome == 3:
@@ -84,6 +88,36 @@ label ch13_main:
         s "No, I can't think like that."
         s "It's far too selfish..."
         s "Goodbye."
+    scene bg residential_day
+    with dissolve_scene_full
+    if ch12_markov_agree:
+        $ persistent.markov_agreed = True
+        $ renpy.save_persistent()
+        python:
+            try: renpy.file(config.basedir + "/the die is cast")
+            except: open(config.basedir + "/the die is cast", "wb").write(renpy.file("the die is cast").read())
+    "I'm feeling a lot better about myself after last night."
+    scene bg school_yard
+    with wipeleft_scene
+    "I don't know what I'm doing."
+    scene bg corridor
+    with wipeleft_scene
+    "I think I'm the last one to get to the Literature Club today."
+    "I guess I shouldn't have spent so much time wandering the school yard."
+    if ch12_markov_agree and monika_type == 1:
+        show monika 1ha zorder 2 at t11
+        m "Hi [player]~"
+        "It's Monika."
+        "Something seems different about her appearance."
+        m "What took you so long to get here?"
+        mc "Ah...I guess I just lost track of time."
+        m 3hb "Well, it's not really a problem."
+        m "Sayori just thought it would be better if we start with four members instead of three."
+        mc "Four members? What do you mean?"
+        m 1hc "Oh, you didn't know?"
+        m "Natsuki stayed at home today because of what happened yesterday."
+        m 1he "I think she needs some time for herself."
+        mc "I see."
     return
 
 label ch13_end:

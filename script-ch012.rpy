@@ -3838,10 +3838,10 @@ label ch12_harukinoplace:
         s "So I want to make it up to you."
         s 2j "I'm going to fix this myself."
         s "You just have to give me the word, Natsuki."
-        show natsuki 1u zorder 3 at f52
+        show natsuki 1u zorder 3 at f53
         show sayori zorder 2 at t54
         n "...?"
-        show natsuki zorder 2 at t52
+        show natsuki zorder 2 at t53
         show sayori 2d zorder 3 at f54
         s "The answer to this question."
         s "I want you to think about it carefully, okay?"
@@ -3872,7 +3872,7 @@ label ch12_harukinoplace:
         d 1g "Unlike all of you, she knows her place."
         d "Now--"
         show dadsuki zorder 2 at t51
-        show natsuki 1e zorder 3 at f52
+        show natsuki 1e zorder 3 at f53
         n "No."
         "Natsuki suddenly interrupts Yasuhiro."
         n "I've had enough."
@@ -3887,7 +3887,7 @@ label ch12_harukinoplace:
         n 1e "I don't care what you do to him."
         n "I don't know this person."
         show dadsuki 1b zorder 3 at f51
-        show natsuki zorder 2 at t52
+        show natsuki zorder 2 at t53
         d "You little shit. You're trying to piss me off, aren't you?"
         d "You think this changes anything?"
         d 1f "When you get home, you're--"
@@ -3968,9 +3968,9 @@ label ch12_harukinoplace:
         "One of them suddenly tackles Yasuhiro to the ground and handcuffs him."
         d "You can't do this!"
         d "You don't have any charges against me."
-        "Police Officer" "\"You have charges of domestic abuse against you.\""
-        "Police Officer" "\"We have undeniable evidence.\""
-        "Police Officer" "\"So have fun sitting in a prison cell for a couple of years, sir.\""
+        "Officer" "\"You have charges of domestic abuse against you.\""
+        "Officer" "\"We have undeniable evidence.\""
+        "Officer" "\"So have fun sitting in a prison cell for a couple of years, sir.\""
         d "What?!"
         d "No!"
         d "This can't be happening!"
@@ -3984,11 +3984,11 @@ label ch12_harukinoplace:
         "The police close the door to the gym."
         n "..."
         s "Natsuki, it's over."
-        "Police Officer" "\"Ah...well, you and this {i}Natsuki{/i} need to give a statement.\""
-        "Police Officer" "\"That is, if you actually want him to be convicted properly.\""
+        "Officer" "\"Ah...well, you and this {i}Natsuki{/i} need to give a statement.\""
+        "Officer" "\"That is, if you actually want him to be convicted properly.\""
         s "Oh, right! I'll give you mine in a minute but can you give Natsuki a break until tomorrow?"
         s "I think she's still processing what just happened."
-        "Police Officer" "\"Of course, ma'am..\""
+        "Officer" "\"Of course, ma'am..\""
         "The final officer gives a friendly nod and exits the gym."
         scene bg gym
         show sayori 1g zorder 2 at i41
@@ -4164,7 +4164,7 @@ label ch12_end:
                 m "I don't know what you're in this for..."
                 m "But I have an idea and I won't tell you what that is unless you agree to it beforehand."
                 menu:
-                    m "Agreed?"
+                    m "So...are you willing?"
                     "Yes.":
                         $ ch12_markov_agree = True
                         m 4a "So you're interested."
@@ -4297,13 +4297,14 @@ label ch12_end:
         "Someone was in front of me a second ago...right?"
         "I must be seeing things. Today has been a weird day so I wouldn't be surprised."
     "Anyway..."
+    window auto
     "I hope tomorrow is less weird."
     "For some reason, life feels...complete."
     "It feels like I've done what I've set out to do."
     "It doesn't really make any sense."
     "I still have my whole life ahead of me..."
     "Maybe a good night's rest will clear my mind."
-    call screen dialog(message="End of Update!", ok_action=Quit(confirm=False))
+    $ persistent.n_playday = [False,False,False,False,False,False]
     $ persistent.arc_clear[1] = True
     $ renpy.save_persistent()
     return
