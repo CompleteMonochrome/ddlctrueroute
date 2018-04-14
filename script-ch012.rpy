@@ -516,6 +516,7 @@ label ch12_main:
     label ch12_strawberry1:
     show sayori zorder 2 at t41
     mc "Ah..."
+    window auto
     if monika_type == 0:
         mc "I don't really get what she's feeling right now."
         mc "But I'll try my best to help her."
@@ -1486,6 +1487,7 @@ label ch12_play:
     n "I appreciate the 'encouragement', Martha."
     label ch12_strawberry4:
     n 2h "But do you really think that Maemi can do this...?"
+    window auto
     if ch12_natsuki_reluctance >= 3 and not persistent.n_playday[3]:
         n 1n "Even with Saika's help, it--"
         "Natsuki suddenly breaks character."
@@ -1894,6 +1896,7 @@ label ch12_play:
     show yuri zorder 2 at t55
     label ch12_strawberry5:
     s "Alright, everybody!"
+    window auto
     s "I'm back!"
     if check_some_house and not ch12_haruki_tried:
         s 2d "Just a second..."
@@ -4096,6 +4099,8 @@ label ch12_harukinoplace:
     return
 
 label ch12_end:
+    $ persistent.n_playday = [False,False,False,False,False,False]
+    $ renpy.save_persistent()
     scene bg residential_day with wipeleft_scene
     play music t2 fadeout 2.0
     if visited_yuri_hospital:
@@ -4304,7 +4309,5 @@ label ch12_end:
     "It doesn't really make any sense."
     "I still have my whole life ahead of me..."
     "Maybe a good night's rest will clear my mind."
-    $ persistent.n_playday = [False,False,False,False,False,False]
     $ persistent.arc_clear[1] = True
-    $ renpy.save_persistent()
     return
