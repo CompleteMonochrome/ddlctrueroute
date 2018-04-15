@@ -1,5 +1,5 @@
 define persistent.demo = False
-define persistent.steam = False
+define persistent.steam = ("steamapps" in config.basedir.lower())
 define config.developer = False
 
 python early:
@@ -33,46 +33,54 @@ init python:
         except: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
         try: renpy.file("../characters/sayori.chr")
         except: open(config.basedir + "/characters/sayori.chr", "wb").write(renpy.file("sayori.chr").read())
+    def restore_relevant_characters():
+        restore_all_characters()
+        if persistent.playthrough == 1 or persistent.playthrough == 2:
+            delete_character("sayori")
+        elif persistent.playthrough == 3:
+            delete_character("sayori")
+            delete_character("natsuki")
+            delete_character("yuri")
+        elif persistent.playthrough == 4:
+            delete_character("monika")
     def put_small_characters():
-        try: os.remove(config.basedir + "/characters/natsuki.chr")
-        except: pass
-        try: os.remove(config.basedir + "/characters/yuri.chr")
-        except: pass
+        delete_character("natsuki")
+        delete_character("yuri")
         try: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsukismall.chr").read())
         except: pass
         try: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yurismall.chr").read())
         except: pass
     def restore_normal_characters():
-        try: os.remove(config.basedir + "/characters/natsuki.chr")
-        except: pass
-        try: os.remove(config.basedir + "/characters/yuri.chr")
-        except: pass
+        delete_character("natsuki")
+        delete_character("yuri")
         try: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
         except: pass
         try: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
         except: pass
     def insert_dadsuki_character():
-        try: os.remove(config.basedir + "/characters/yasuhiro.chr")
-        except: pass
+        delete_character("yasuhiro")
         try: open(config.basedir + "/characters/yasuhiro.chr", "wb").write(renpy.file("yasuhiro.chr").read())
         except: pass
     def insert_momsuki_character_normal():
-        try: os.remove(config.basedir + "/characters/haruki.chr")
-        except: pass
+        delete_character("haruki")
         try: open(config.basedir + "/characters/haruki.chr", "wb").write(renpy.file("harukinormal.chr").read())
         except: pass
     def insert_momsuki_character_broken():
-        try: os.remove(config.basedir + "/characters/haruki.chr")
-        except: pass
+        delete_character("haruki")
         try: open(config.basedir + "/characters/haruki.chr", "wb").write(renpy.file("harukibroken.chr").read())
         except: pass
     def pause(time=None):
+        global _windows_hidden
         if not time:
+            _windows_hidden = True
             renpy.ui.saybehavior(afm=" ")
             renpy.ui.interact(mouse='pause', type='pause', roll_forward=None)
+            _windows_hidden = False
             return
         if time <= 0: return
+        _windows_hidden = True
         renpy.pause(time)
+        _windows_hidden = False
 
 
 
@@ -111,16 +119,20 @@ define audio.t9g = "<loop 1.532>bgm/9g.ogg"
 define audio.t10 = "<loop 5.861>bgm/10.ogg"
 define audio.t10y = "<loop 0>bgm/10-yuri.ogg"
 define audio.td = "<loop 36.782>bgm/d.ogg"
-# Mod Tracks - 11: A Date With You
-define audio.t11y = "<loop 1.300>mod_assets/bgm/11_yuri.ogg"
-define audio.t11n = "<loop 1.300>mod_assets/bgm/11_natsuki.ogg"
-define audio.t11s = "<loop 1.300>mod_assets/bgm/11_sayori.ogg"
-define audio.t11m = "<loop 1.300>mod_assets/bgm/11_monika.ogg"
+# Mod Tracks - 11: Play Time!
+define audio.t11 = "<loop 5.000>mod_assets/bgm/11.ogg"
+# Mod Tracks - 12: A Date With You
+define audio.t12y = "<loop 1.300>mod_assets/bgm/12_yuri.ogg"
+define audio.t12n = "<loop 1.300>mod_assets/bgm/12_natsuki.ogg"
+define audio.t12s = "<loop 1.300>mod_assets/bgm/12_sayori.ogg"
+define audio.t12m = "<loop 1.300>mod_assets/bgm/12_monika.ogg"
+# Mod Tracks - 13: Choices of Hope and Suffering
+define audio.t13 = "<loop 1.700>mod_assets/bgm/13.ogg"
 
 define audio.m1 = "<loop 0>bgm/m1.ogg"
 define audio.mend = "<loop 6.424>bgm/monika-end.ogg"
 define audio.mendglitch = "<loop 6.424>mod_assets/bgm/monika-end-pitch.ogg"
-# Markovika Track
+# Mod Tracks - 14: Markovika
 define audio.mkov = "<loop 1.500>mod_assets/bgm/monika-markov.ogg"
 
 define audio.ghostmenu = "<loop 0>bgm/ghostmenu.ogg"
@@ -170,6 +182,8 @@ image bg notebook-glitch = "bg/notebook-glitch.png"
 
 image bg glitch = LiveTile("bg/glitch.jpg")
 
+image markovred = "#f21237"
+image monikared = "#e03638"
 image bg new_house = "bg/house.jpg"
 image bg gym = "mod_assets/images/bg/gym.png"
 image bg rooftop = "mod_assets/images/bg/rooftop.png"
@@ -1467,6 +1481,83 @@ image monika 4gy = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "mo
 image monika 5ga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3ga.png")
 image monika 5gb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3gb.png")
 
+# School Clothes Monika - Hair Down
+image monika 1ha = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/ha.png")
+image monika 1hb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hb.png")
+image monika 1hc = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hc.png")
+image monika 1hd = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hd.png")
+image monika 1he = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/he.png")
+image monika 1hf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hf.png")
+image monika 1hg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hg.png")
+image monika 1hh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hh.png")
+image monika 1hi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hi.png")
+image monika 1hj = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hj.png")
+image monika 1hk = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hk.png")
+image monika 1hl = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hl.png")
+image monika 1hm = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hm.png")
+image monika 1hn = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hn.png")
+image monika 1ho = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/ho.png")
+image monika 1hp = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hp.png")
+image monika 1hq = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hq.png")
+image monika 1hr = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hr.png")
+
+image monika 2ha = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/ha.png")
+image monika 2hb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hb.png")
+image monika 2hc = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hc.png")
+image monika 2hd = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hd.png")
+image monika 2he = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/he.png")
+image monika 2hf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hf.png")
+image monika 2hg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hg.png")
+image monika 2hh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hh.png")
+image monika 2hi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hi.png")
+image monika 2hj = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hj.png")
+image monika 2hk = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hk.png")
+image monika 2hl = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hl.png")
+image monika 2hm = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hm.png")
+image monika 2hn = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hn.png")
+image monika 2ho = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/ho.png")
+image monika 2hp = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hp.png")
+image monika 2hq = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hq.png")
+image monika 2hr = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hr.png")
+
+image monika 3ha = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/ha.png")
+image monika 3hb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hb.png")
+image monika 3hc = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hc.png")
+image monika 3hd = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hd.png")
+image monika 3he = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/he.png")
+image monika 3hf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hf.png")
+image monika 3hg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hg.png")
+image monika 3hh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hh.png")
+image monika 3hi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hi.png")
+image monika 3hj = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hj.png")
+image monika 3hk = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hk.png")
+image monika 3hl = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hl.png")
+image monika 3hm = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hm.png")
+image monika 3hn = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hn.png")
+image monika 3ho = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/ho.png")
+image monika 3hp = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hp.png")
+image monika 3hq = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hq.png")
+image monika 3hr = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/hr.png")
+
+image monika 4ha = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/ha.png")
+image monika 4hb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hb.png")
+image monika 4hc = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hc.png")
+image monika 4hd = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hd.png")
+image monika 4he = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/he.png")
+image monika 4hf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hf.png")
+image monika 4hg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hg.png")
+image monika 4hh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hh.png")
+image monika 4hi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hi.png")
+image monika 4hj = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hj.png")
+image monika 4hk = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hk.png")
+image monika 4hl = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hl.png")
+image monika 4hm = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hm.png")
+image monika 4hn = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hn.png")
+image monika 4ho = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/ho.png")
+image monika 4hp = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hp.png")
+image monika 4hq = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hq.png")
+image monika 4hr = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2hl.png", (0, 0), "mod_assets/images/monika/2hr.png", (0, 0), "mod_assets/images/monika/hr.png")
+
 # Casual Clothes Monika
 image monika 1ba = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "monika/a.png")
 image monika 1bb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "monika/b.png")
@@ -1749,6 +1840,13 @@ default y_readpoem = False
 default m_readpoem = False
 
 
+default n_read3 = False
+default y_read3 = False
+
+
+default n_poemearly = False
+
+
 default poemsread = 0
 
 
@@ -1781,10 +1879,11 @@ default persistent.sayori_yuri_bad_ending = False
 default persistent.sayori_natsuki_bad_ending = False
 default persistent.yuri_killing = 0
 default persistent.sayori_end_early = False
-default persistent.y_playday = [False,False,False,False,False,False]
+default persistent.y_playday = [False,False]
 default persistent.n_playday = [False,False,False,False,False,False]
 default persistent.natsuki_house = [False, False, False, False]
 default persistent.arc_clear = [False,False,False,False,False]
+default persistent.markov_agreed = False
 # Local Save
 default visited_sayori_sat = False
 default canload_ch5b = False
@@ -1836,11 +1935,12 @@ default ch11_monika_dinner = False
 default ch11_read_manga = True
 default ch11_did_all_tasks = False
 default ch11_badpoem = False
-default monika_type = 0
+default monika_type = 2
 default ch12_outcome = 0
 default ch12_natsuki_help = True
 default ch12_natsuki_reluctance = 1
 default ch12_haruki_tried = False
+default ch12_markov_agree = False
 default haruki_personality = [False,False,False]
 default normal_haruki = False
 default yasuhiro_haruki_together = False

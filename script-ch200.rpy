@@ -34,10 +34,10 @@ label ch200_main2:
     m "...[player]?"
     window hide(None)
     show monika g2 zorder 2 at t11
-    pause 0.75
+    $ pause(0.75)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     window show(None)
@@ -84,7 +84,7 @@ label ch200_main2:
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     window show(None)

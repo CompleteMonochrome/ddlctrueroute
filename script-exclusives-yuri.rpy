@@ -140,6 +140,7 @@ label yuri_exclusive_1:
     mc "Ah, I guess that makes it kind of difficult to turn the page..."
     y "Here..."
     $ persistent.clear[2] = True
+    $ renpy.save_persistent()
     scene y_cg1_base with dissolve_cg
     "Yuri takes her left arm and holds the left side of the book between her thumb and forefinger."
     mc "Ah..."
@@ -474,6 +475,7 @@ label yuri_exclusive_2_ch3:
     mc "Are you sure...?"
     y "Of course."
     $ persistent.clear[3] = True
+    $ renpy.save_persistent()
     scene y_cg2_bg
     show y_cg2_base
     show y_cg2_details
@@ -940,6 +942,7 @@ label yuri_exclusive_4:
                     y 1brs "Then just keep playing."
                     y "This is all a game to you after all, isn't it?"
                     y 1bvs "If only you knew what this felt like."
+                    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
                     if not list(set(process_list).intersection(stream_list)):
                         if currentuser != "" and currentuser.lower() != player.lower():
                             y "Please, [currentuser]..."
@@ -1026,7 +1029,7 @@ label yuri_exclusive_4:
             y "I'm not crazy, am I [player]?"
             y 1by1 "We both know I'm just obsessed with you."
             y "There's nothing wrong with that."
-            y 1by3 "Ahaha, anyway...!"        
+            y 1by3 "Ahaha, anyway...!"
             y 1by4 "She started making the other daughter more cold to everyone else."
             y "And the wife started harming herself."
             y 1by1 "She'd find time to be alone and just start ripping through her own skin."

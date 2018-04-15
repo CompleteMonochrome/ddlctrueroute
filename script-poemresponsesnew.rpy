@@ -804,7 +804,7 @@ label ch6_m_end:
     return
 
 label ch7_m_end:
-    if m_appeal == 2 and did_all_tasks:
+    if m_appeal >= 2 and did_all_tasks:
         call showpoem (poem_m7b)
         "I'm getting a sinking feeling from reading that poem."
         "It wasn't because of the quality."
@@ -831,6 +831,7 @@ label ch7_m_end:
         m 3b "Here's Monika's Writing Tip of the Day!"
         m "Sometimes when you're looking over your work, you might...um..."
         m 3g "...what's happening to me?"
+        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
         if not list(set(process_list).intersection(stream_list)):
             if currentuser != "" and currentuser.lower() != player.lower():
                 m "[currentuser]...I'm so scared..."
@@ -1170,9 +1171,10 @@ label ch6_n_good:
     jump ch6_n_shared
 
 label ch7_n_bad:
-    if not read_book:
+    if not read_book or did_all_tasks:
         jump ch7_n_med
-    $ natsuki_approval -= 1
+    if natsuki_approval > 0:
+        $ natsuki_approval -= 1
     n 2e "Do I even need to say anything about this?"
     mc "What do you mean?"
     n "This is terrible."
@@ -1424,7 +1426,7 @@ label ch6_y_good:
     jump ch6_y_shared
 
 label ch7_y_bad:
-    if not read_book:
+    if not read_book or did_all_tasks:
         jump ch7_y_med
     y 2q "Um..."
     y "This is..."
@@ -1671,7 +1673,7 @@ label ch6_s_good:
     jump ch6_s_shared
 
 label ch7_s_bad:
-    if not read_book:
+    if not read_book or did_all_tasks:
         jump ch7_s_med
     s 4l "Ahaha..."
     s "Sorry..."
@@ -2048,7 +2050,7 @@ label ch12_m_start:
         m "Perhaps, that sounded too desperate."
         m 1d "Ehm."
         scene black
-        pause 0.25
+        $ pause(0.25)
         scene bg club_day
         show monika 2a zorder 2 at i11
         $ _history_list = []
@@ -2411,7 +2413,7 @@ label mnew_monika_3:
         m 2f "Forget about it."
         m "I'll make sure you don't remember this whole conversation anyway."
         scene black
-        pause 0.25
+        $ pause(0.25)
         scene bg club_day
         show monika 3j zorder 2 at t11
         $ _history_list = []

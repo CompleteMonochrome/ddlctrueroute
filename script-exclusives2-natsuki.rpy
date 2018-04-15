@@ -7,10 +7,10 @@ init python:
             self.numRects = numRects
             self.areaWidth = areaWidth
             self.areaHeight = areaHeight
-            
+
             for i in range(self.numRects):
                 self.add(self.displayable)
-        
+
         def add(self, d):
             s = self.sm.create(d)
             s.x = (random.random() - 0.5) * self.areaWidth * 2
@@ -18,7 +18,7 @@ init python:
             s.width = random.random() * self.areaWidth / 2
             s.height = random.random() * self.areaHeight / 2
             self.rects.append(s)
-        
+
         def update(self, st):
             for s in self.rects:
                 s.x = (random.random() - 0.5) * self.areaWidth * 2
@@ -167,6 +167,7 @@ label natsuki_exclusive2_1:
     "Typical slice-of-life affair."
     "I kind of grew out of these, since it's rare for the writing to be entertaining enough to make up for the lack of plot."
     $ persistent.clear[0] = True
+    $ renpy.save_persistent()
     scene n_cg1_bg
     show n_cg1_base
     with dissolve_cg

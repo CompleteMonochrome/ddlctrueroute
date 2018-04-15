@@ -133,6 +133,7 @@ label natsuki_exclusive_1:
     "Still, of all the hobbies to pick up from a manga, that's definitely one of the better ones."
     "Not to mention she's really good at it, so who am I to judge?"
     $ persistent.clear[0] = True
+    $ renpy.save_persistent()
     scene n_cg1_bg
     show n_cg1_base
     with dissolve_cg
@@ -385,6 +386,7 @@ label natsuki_exclusive_2_ch3:
     "Natsuki climbs onto the chair, then slowly balances onto her feet."
     "Since she refuses my help, I take a seat with my back against the side of the doorway and simply watch."
     $ persistent.clear[1] = True
+    $ renpy.save_persistent()
     scene n_cg2_bg
     show n_cg2_base
     with dissolve_cg
@@ -470,7 +472,7 @@ label natsuki_exclusive_2_ch3:
         alpha 0
         0.10
         linear 0.10 alpha 1
-    pause 0.20
+    $ pause(0.20)
     stop music
     play sound "sfx/fall2.ogg"
     "{i}Crash!{/i}"

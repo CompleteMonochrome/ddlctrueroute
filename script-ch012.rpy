@@ -22,12 +22,10 @@ label ch12_main:
             except:
                 pass
 
-    # Choose Start of Meeting - Normal Monika, Converted Monika, Markovika
     # Set Variables and Reset Persistent for New Playthrough
-    $ monika_type = 2
-    $ ch12_natsuki_help = True
     $ persistent.ch11_task = [False,False,False]
     $ persistent.n_playday = [False,False,False,False,False,False]
+    $ renpy.save_persistent()
 
     scene bg club_day with dissolve_scene_half
     play music t2
@@ -101,8 +99,11 @@ label ch12_main:
         mc "It's not a problem."
         m "I just really appreciate you taking the time for me..."
         show monika g7
+        show monikared zorder 5:
+            alpha 0
+            linear 2.0 alpha 0.2
         $ currentpos = get_pos()
-        play music mkov fadeout 2.0
+        play music mkov fadeout 2.0 fadein 2.0
         m "But in the end, it all ended up being meaningless."
         mc "Meaningless?"
         mc "What do you mean?"
@@ -136,7 +137,8 @@ label ch12_main:
         m 1d "Except..."
         m 1e "Well, we can talk more about that later."
         $ audio.t2c = "<from " + str(currentpos) + " loop 4.499>bgm/2.ogg"
-        play music t2c fadeout 0.5
+        play music t2c fadeout 0.5 fadein 0.5
+        hide monikared
     else:
         $ monika_type = 2
         show monika 1c zorder 2 at t11
@@ -145,8 +147,11 @@ label ch12_main:
         mc "I guess so."
         mc "Though I would have thought Sayori would have been here by now."
         show monika g8
+        show markovred zorder 5:
+            alpha 0
+            linear 2.0 alpha 0.3
         $ currentpos = get_pos()
-        play music mkov fadeout 2.0
+        play music mkov fadeout 2.0 fadein 2.0
         m "As did I."
         m "It's a little irresponsible of her, don't you think?"
         mc "Um..."
@@ -178,6 +183,7 @@ label ch12_main:
         m 2b "At least, I hope so."
         mc "Right..."
         m "Ahaha."
+        hide markovred
         $ audio.t2c = "<from " + str(currentpos) + " loop 4.499>bgm/2.ogg"
         play music t2c fadeout 0.5
     show yuri 1a zorder 2 at t31
@@ -510,6 +516,7 @@ label ch12_main:
     label ch12_strawberry1:
     show sayori zorder 2 at t41
     mc "Ah..."
+    window auto
     if monika_type == 0:
         mc "I don't really get what she's feeling right now."
         mc "But I'll try my best to help her."
@@ -541,6 +548,8 @@ label ch12_main:
             "Why would I help Natsuki?" if ch12_natsuki_help:
                 $ ch12_natsuki_help = False
                 $ sayori_personality += 1
+                if natsuki_approval > 0:
+                    $ natsuki_approval -= 1
                 mc "Sayori..."
                 show sayori 1c zorder 3 at f41
                 s "Yes, [player]?"
@@ -626,7 +635,7 @@ label ch12_main:
                 show yuri 1a zorder 2 at t42
                 show natsuki 4s zorder 2 at t43
                 show monika 1n zorder 2 at t44
-                pause 0.25
+                $ pause(0.25)
                 stop sound
                 hide screen tear
                 window show(None)
@@ -677,16 +686,9 @@ label ch12_main:
     "Sayori tries to stand tall."
     s "Alright, everybody..."
     s "It's time to share our poems."
-    # Read everyone's poems
-    $ y_ranaway = False
-    $ s_ranaway = False
-    $ n_ranaway = False
-    $ m_ranaway = False
     return
 
 label ch12_play:
-    $ persistent.n_playday = [False,False,False,False,False,False]
-    $ ch12_natsuki_reluctance = 1
     stop music fadeout 1.0
     scene bg club_day with wipeleft_scene
     play music t3
@@ -878,7 +880,7 @@ label ch12_play:
         m 1f "Sigh..."
         m "The only thing I know is that it's got something to do with characters."
         m "I hope you figure it out soon..."
-        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
         if not list(set(process_list).intersection(stream_list)):
             if currentuser != "" and currentuser.lower() != player.lower():
                 m "...[currentuser]."
@@ -912,14 +914,14 @@ label ch12_play:
         m 2e "...to make sure she can't listen in."
         mc "To make sure who can't listen in...?"
         m "Alright, now that we're here alone I guess I could finally do that without Sayori getting suspcious."
-        play music mkov fadeout 2.0
+        play music mkov fadeout 2.0 fadein 0.5
         mc "Monika...?"
         m 2a "I'm not entirely sure what you did to make her stop resisting so much..."
         m "But I really have to thank you for that."
         m "For doing it this late."
         m 2b "Did you perhaps, plan this all out?"
         m "Maybe this isn't the only save you have, [player]."
-        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
         if not list(set(process_list).intersection(stream_list)):
             if currentuser != "" and currentuser.lower() != player.lower():
                 m "Or should I say..."
@@ -963,7 +965,7 @@ label ch12_play:
         stop music
         scene black
         with close_eyes
-        pause 1.0
+        $ pause(1.0)
     else:
         m 1a "I finally have an opportunity."
         "Monika smiles and stares intently at me."
@@ -972,7 +974,7 @@ label ch12_play:
         mc "I'm not sure I follow."
         m "Look, I'll be completely honest with you."
         m 2e "I'm not Monika."
-        play music mkov fadeout 2.0
+        play music mkov fadeout 2.0 fadein 0.5
         mc "What...?"
         mc "That doesn't make any sense."
         m "Sure, I may look like her but I'm a completely different person."
@@ -1020,7 +1022,7 @@ label ch12_play:
         stop music
         scene black
         with close_eyes
-        pause 1.0
+        $ pause(1.0)
     scene bg gym with wipeleft_scene
     play music t6 fadeout 1.0
     "I'm the last one to make it to the gym."
@@ -1232,6 +1234,7 @@ label ch12_play:
                 pass
             "Stop Sayori." if not persistent.n_playday[0]:
                 $ persistent.n_playday[0] = True
+                $ renpy.save_persistent()
                 $ ch12_natsuki_reluctance += 1
                 $ sayori_personality += 1
                 "This is too weird."
@@ -1267,7 +1270,7 @@ label ch12_play:
                 play sound "sfx/s_kill_glitch1.ogg"
                 hide sayori
                 hide natsuki
-                pause 0.25
+                $ pause(0.25)
                 stop sound
                 hide screen tear
                 window show(None)
@@ -1405,8 +1408,11 @@ label ch12_play:
             m "So, what will it be?"
             "The easy solution." if not persistent.n_playday[1]:
                 $ persistent.n_playday[1] = True
+                $ renpy.save_persistent()
                 $ ch12_natsuki_reluctance += 1
                 $ sayori_personality += 1
+                if natsuki_approval > 0:
+                    $ natsuki_approval -= 1
                 mc "This plan of yours..."
                 mc "Although I don't like the idea of resorting to..."
                 mc "...you know..."
@@ -1447,7 +1453,7 @@ label ch12_play:
                 show natsuki 1q zorder 2 at t42
                 show monika 3b zorder 2 at f43
                 show sayori 2n zorder 3 at t44
-                pause 0.25
+                $ pause(0.25)
                 stop sound
                 hide screen tear
                 window show(None)
@@ -1481,6 +1487,7 @@ label ch12_play:
     n "I appreciate the 'encouragement', Martha."
     label ch12_strawberry4:
     n 2h "But do you really think that Maemi can do this...?"
+    window auto
     if ch12_natsuki_reluctance >= 3 and not persistent.n_playday[3]:
         n 1n "Even with Saika's help, it--"
         "Natsuki suddenly breaks character."
@@ -1503,7 +1510,7 @@ label ch12_play:
             if startpos < 0: startpos = 0
             track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/5_natsuki.ogg"
             renpy.music.play(track,channel="music_poem",loop=True)
-        pause 1.0
+        $ pause(1.0)
         stop music_poem
         $ config.skipping = False
         $ config.allow_skipping = False
@@ -1551,6 +1558,7 @@ label ch12_play:
         s "You're making me do really terrible things just to let them be happy..."
         s "I really h--{nw}"
         $ persistent.n_playday[3] = True
+        $ renpy.save_persistent()
         $ _history_list = []
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
@@ -1561,7 +1569,7 @@ label ch12_play:
         show sayori 2n zorder 3 at t44
         $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>bgm/5_natsuki.ogg"
         $ renpy.music.play(audio.t5b, channel="music_poem", fadein=1.0, tight=True)
-        pause 0.5
+        $ pause(0.5)
         stop sound
         hide screen tear
         window show(None)
@@ -1877,10 +1885,8 @@ label ch12_play:
     else:
         m 1h "Who knows?"
         m "Probably off doing--"
-    $ ch12_outcome = 0
-    $ ch12_haruki_tried = False
-    $ yasuhiro_haruki_together = False
     $ persistent.n_playday[4] = False
+    $ renpy.save_persistent()
     show monika zorder 2 at t41
     "The gym doors suddenly burst open again."
     show sayori 2a zorder 3 at f51
@@ -1890,6 +1896,7 @@ label ch12_play:
     show yuri zorder 2 at t55
     label ch12_strawberry5:
     s "Alright, everybody!"
+    window auto
     s "I'm back!"
     if check_some_house and not ch12_haruki_tried:
         s 2d "Just a second..."
@@ -1899,7 +1906,7 @@ label ch12_play:
             if startpos < 0: startpos = 0
             track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/t9.ogg"
             renpy.music.play(track, loop=True)
-        pause 1.0
+        $ pause(1.0)
         stop music
         $ config.skipping = False
         $ config.allow_skipping = False
@@ -1989,9 +1996,9 @@ label ch12_harukiplace:
         s.display_args["callback"] = None
         m.display_args["callback"] = None
         narrator.display_args["callback"] = None
-        haruki_personality = [False,False,False]
         if sayori_personality > 0:
             sayori_personality -= 1
+    $ renpy.save_persistent()
     s 2c "Oh...you actually did it."
     s 2d "Thank you so much."
     s "I know what to look for in the game files now..."
@@ -2041,7 +2048,6 @@ label ch12_harukiplace:
             $ haruki_personality[2] = False
         "Still in love.":
             $ haruki_personality[2] = True
-    $ normal_haruki = False
     if haruki_personality[0] and haruki_personality[1] and haruki_personality[2]:
         $ normal_haruki = True
         $ insert_momsuki_character_normal()
@@ -2076,7 +2082,7 @@ label ch12_harukiplace:
     s "The rest of them won't experience what the two of us just did."
     $ audio.t9b = "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
     play music t9b fadein 0.5
-    pause 0.5
+    $ pause(0.5)
     $ config.allow_skipping = True
     s 2q "Oh, it's our special guest!"
     s "Welcome! I wasn't expecting you to arrive so early~"
@@ -2442,6 +2448,7 @@ label ch12_harukiplace:
         mo "Very strange indeed..."
         show momsuki zorder 2 at t41
         if check_whole_house:
+            $ natsuki_approval += 2
             show dadsuki 1i zorder 3 at f43
             d "Haruki..."
             d "I know you don't want to listen to me right now."
@@ -2672,6 +2679,7 @@ label ch12_harukiplace:
             "She seems way too happy about this whole thing."
             $ ch12_outcome = 3
         else:
+            $ natsuki_approval += 1
             show dadsuki 1h zorder 3 at hf43
             d "Haruki!"
             d "I've waited long enough."
@@ -2730,7 +2738,7 @@ label ch12_harukiplace:
             mo "...and what he was doing to you..."
             show momsuki zorder 2 at t51
             show natsuki zorder 2 at t52
-            show yasuhiro zorder 2 at t53
+            show dadsuki zorder 2 at t53
             show sayori zorder 2 at t54
             show monika 1e zorder 3 at f55
             if monika_type == 0:
@@ -2757,11 +2765,11 @@ label ch12_harukiplace:
             show monika zorder 2 at t55
             show monika at lhide
             hide monika
-            "Monika quickly leaves the gym."
             show momsuki 1f zorder 3 at f41
             show natsuki zorder 2 at t42
             show dadsuki zorder 2 at t43
             show sayori zorder 2 at t44
+            "Monika quickly leaves the gym."
             mo "Of course..."
             mo "None of you should have to watch this if you don't want to..."
             mo "So leave now if you're feeling uncomfortable."
@@ -2807,7 +2815,7 @@ label ch12_harukiplace:
             n "He doesn't deserve a second chance."
             show natsuki zorder 2 at t42
             show dadsuki 1h zorder 3 at f43
-            d "You little brat!"
+            d "You little brat! Are you trying to piss me off?"
             d "I should have taught you more discipline."
             d "When you get back to the house, you're--"
             show momsuki 1i zorder 3 at f41
@@ -2824,15 +2832,15 @@ label ch12_harukiplace:
             d 1h "I deserve better than this!"
             d "I deserve--"
             play sound "sfx/smack.ogg"
-            pause 0.25
+            $ pause(0.25)
             show dadsuki 1h:
                 1.3
                 easeout_cubic 0.5 yoffset 300
-            pause 1.55
+            $ pause(1.55)
             play sound fall
-            pause 0.25
+            $ pause(0.25)
             hide dadsuki
-            pause 0.25
+            $ pause(0.25)
             "Yasuhiro suddenly falls to the ground."
             show monika 1e zorder 3 at f43
             if monika_type == 0:
@@ -3050,7 +3058,7 @@ label ch12_harukiplace:
             show dadsuki 1e zorder 2 at t54
         show yuri 3ph zorder 2 at t55
         play music t9 fadein 0.5
-        pause 0.5
+        $ pause(0.5)
         stop sound
         hide screen tear
         window show(None)
@@ -3089,7 +3097,7 @@ label ch12_harukinoplace:
         s 2d "I'm a bit relieved."
         s "I was going to try something with Yasuhiro but decided against it."
         s "It would have been wrong, changing him like that."
-    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
     if not list(set(process_list).intersection(stream_list)):
         if currentuser != "" and currentuser.lower() != player.lower():
             s "Alright, [currentuser]..."
@@ -3097,7 +3105,7 @@ label ch12_harukinoplace:
     $ config.allow_skipping = True
     $ audio.t9b = "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
     play music t9b fadein 0.5
-    pause 0.5
+    $ pause(0.5)
     label ch12_noharukicont:
     s 2q "It looks like our special guest has arrived!"
     s "Welcome, I hope you have a great time here!"
@@ -3488,6 +3496,7 @@ label ch12_harukinoplace:
     show sayori zorder 2 at t54
     show yuri zorder 2 at t55
     if check_whole_house:
+        $ natsuki_approval += 1
         d 1i "Natsuki..."
         d "You remind me of your mother when she first started acting."
         d "She was so nervous back then, like you right now."
@@ -3766,6 +3775,8 @@ label ch12_harukinoplace:
         "She stops once she steps outside and says something to who I can only assume is Natsuki before waving goodbye."
         $ ch12_outcome = 1
     else:
+        if natsuki_approval > 0:
+            $ natsuki_approval -= 1
         d 1h "This..."
         d "This is pathetic."
         stop music_poem fadeout 2.0
@@ -3830,10 +3841,10 @@ label ch12_harukinoplace:
         s "So I want to make it up to you."
         s 2j "I'm going to fix this myself."
         s "You just have to give me the word, Natsuki."
-        show natsuki 1u zorder 3 at f52
+        show natsuki 1u zorder 3 at f53
         show sayori zorder 2 at t54
         n "...?"
-        show natsuki zorder 2 at t52
+        show natsuki zorder 2 at t53
         show sayori 2d zorder 3 at f54
         s "The answer to this question."
         s "I want you to think about it carefully, okay?"
@@ -3864,7 +3875,7 @@ label ch12_harukinoplace:
         d 1g "Unlike all of you, she knows her place."
         d "Now--"
         show dadsuki zorder 2 at t51
-        show natsuki 1e zorder 3 at f52
+        show natsuki 1e zorder 3 at f53
         n "No."
         "Natsuki suddenly interrupts Yasuhiro."
         n "I've had enough."
@@ -3879,8 +3890,8 @@ label ch12_harukinoplace:
         n 1e "I don't care what you do to him."
         n "I don't know this person."
         show dadsuki 1b zorder 3 at f51
-        show natsuki zorder 2 at t52
-        d "You little brat."
+        show natsuki zorder 2 at t53
+        d "You little shit. You're trying to piss me off, aren't you?"
         d "You think this changes anything?"
         d 1f "When you get home, you're--"
         show sayori 1a zorder 3 at f54
@@ -3960,9 +3971,9 @@ label ch12_harukinoplace:
         "One of them suddenly tackles Yasuhiro to the ground and handcuffs him."
         d "You can't do this!"
         d "You don't have any charges against me."
-        "Police Officer" "\"You have charges of domestic abuse against you.\""
-        "Police Officer" "\"We have undeniable evidence.\""
-        "Police Officer" "\"So have fun sitting in a prison cell for a couple of years, sir.\""
+        "Officer" "\"You have charges of domestic abuse against you.\""
+        "Officer" "\"We have undeniable evidence.\""
+        "Officer" "\"So have fun sitting in a prison cell for a couple of years, sir.\""
         d "What?!"
         d "No!"
         d "This can't be happening!"
@@ -3976,11 +3987,11 @@ label ch12_harukinoplace:
         "The police close the door to the gym."
         n "..."
         s "Natsuki, it's over."
-        "Police Officer" "\"Ah...well, you and this {i}Natsuki{/i} need to give a statement.\""
-        "Police Officer" "\"That is, if you actually want him to be convicted properly.\""
+        "Officer" "\"Ah...well, you and this {i}Natsuki{/i} need to give a statement.\""
+        "Officer" "\"That is, if you actually want him to be convicted properly.\""
         s "Oh, right! I'll give you mine in a minute but can you give Natsuki a break until tomorrow?"
         s "I think she's still processing what just happened."
-        "Police Officer" "\"Of course, ma'am..\""
+        "Officer" "\"Of course, ma'am..\""
         "The final officer gives a friendly nod and exits the gym."
         scene bg gym
         show sayori 1g zorder 2 at i41
@@ -4088,6 +4099,8 @@ label ch12_harukinoplace:
     return
 
 label ch12_end:
+    $ persistent.n_playday = [False,False,False,False,False,False]
+    $ renpy.save_persistent()
     scene bg residential_day with wipeleft_scene
     play music t2 fadeout 2.0
     if visited_yuri_hospital:
@@ -4105,21 +4118,196 @@ label ch12_end:
         "Natsuki's family becoming whole again..."
     "While it was certainly interesting, I hope stuff like that doesn't happen too often."
     "I'm not in the Literature Club for that kind of thing."
-    if monika_type != 0:
+    if monika_type == 0:
+        $ ch12_markov_agree = False
+        "What Monika told me before I went to the gym is still in my head."
+        "I don't really know what she meant about these numbers."
+        "What do these numbers have to do with Natsuki anyway?"
+        "She said it was going to be important when our guest, which turned out to be Yasuhiro, arrives and I still have no idea what it's all about."
+        "Did I even use those numbers at all?"
+        "I don't really know, it's all a mystery to me."
+        "As the days go on, it's like Monika is acting more and more weird."
+        "I know she's still the same person but she just seems to be dealing with something huge and I think that's affecting her."
+        "If only there was something I could do."
+        "I want to help her but I don't know how..."
+    else:
         "As I cross into the final turn before my street, someone blocks my way."
         "It's Monika."
         if ch12_natsuki_reluctance >= 3:
-            show monika 3b zorder 2 at t11
-            m "Hello, [player]."
+            show monika 2b zorder 2 at t11
+            m "I suppose I should give you my gratitude."
+            mc "For wh--"
+            $ currentpos = get_pos()
+            play music mkov fadeout 2.0 fadein 0.5
+            m 2h "I wasn't talking to you."
+            m "So you can just watch. It's not like you'll remember this anyway."
+            m 2a "I'm directing this at {i}you{/i}."
             m "Did you have fun today?"
+            m "I know I didn't...but at least you made it more interesting for me."
+            m 1e "You know, with you messing with Sayori like that."
+            if monika_type == 1:
+                m "I wonder if she's going to stop trying to mess with what she doesn't understand."
+                m "This game, or whatever you want to call it, wasn't built for happy endings."
+                m 3e "But that's why you're here, aren't you?"
+                m "Because you're looking for a happy ending for everyone."
+                m "Because you weren't satisfied with how the original story ended."
+                menu:
+                    m "Am I right?"
+                    "Yes.":
+                        pass
+                    "Yes.":
+                        pass
+                    "Yes.":
+                        pass
+                m 3j "Of course I'm right."
+                m "I have Monika's memories so I know exactly what's happened."
+                m 3a "Ahaha, it is quite fun giving you choices that lead to...outcomes that I like."
+                m "Perhaps I should have done that during the play."
+                m "It would have caused Sayori so much more distress and who knows what she would have done!"
+                m 4c "However, there is a reason I didn't."
+                m "I needed to know if you were at least willing to help me out."
+                m "I don't know what you're in this for..."
+                m "But I have an idea and I won't tell you what that is unless you agree to it beforehand."
+                menu:
+                    m "So...are you willing?"
+                    "Yes.":
+                        $ ch12_markov_agree = True
+                        m 4a "So you're interested."
+                        m "Hm."
+                        m "You're taking a pretty big risk here, aren't you?"
+                        m "You don't even know what I've got in store and who it could affect."
+                        m 4b "Is it because you think you're safe with your saves?"
+                        m "Yes, I can say that word without breaking the game."
+                        m 2d "I'm not sure why Sayori can't. I guess it's because she wasn't meant to have that sort of power in the first place."
+                        m "Maybe the game doesn't want the other characters in it to know that it's not real..."
+                        m 2a "But that's just a theory, and I'm getting sidetracked."
+                        m "I was going to say, that you shouldn't be relying on your saves so much."
+                        m "Who knows what kind of stuff might happen if you really decide to go down this path."
+                        m 1j "Oh wait...I do!"
+                        m 1k "Ahaha, I'll tell you more tomorrow."
+                        m 1m "That way, I have some time to understand what I'm feeling right now..."
+                        m "And why most of my head is still filled with thoughts of..."
+                        m 1n "...you."
+                        m 1e "Farewell..."
+                    "No.":
+                        $ ch12_markov_agree = False
+                        m 2c "I see."
+                        m "Well, it's a little surprising."
+                        m 2h "I suppose I can't really force {i}you{/i} to agree."
+                        m "I could have just gave you one option, but then I can't be sure of your intentions."
+                        m 1j "Ahaha..."
+                        m "It's not like you can warn Sayori of what's coming."
+                        m 1m "Maybe there will come a time when I can finally get rid of these feelings I have for you."
+                        m "I have no use for them, not anymore at least..."
+                        m "Until then..."
+                        m 1e "I'll see you around..."
+                $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
+                if not list(set(process_list).intersection(stream_list)):
+                    if currentuser != "" and currentuser.lower() != player.lower():
+                        m "...[currentuser]."
+            else:
+                m 1c "Now I know that there's some other person watching."
+                m "I'm not sure who you are."
+                m 1a "But I know you exist."
+                m "You with the power to manipulate time."
+                m 1d "You do have that power, right?"
+                m "The manga Sayori gave us was a big hint especially since all the characters were basically the people in the club."
+                m "I think she also has that power, her character in the manga and yours both manipulate time in some manner."
+                m "So it does make sense, at least from my point of view."
+                m 2e "Do you know how I figured this out?"
+                m "At times she'd just say something that wasn't directed to anyone in particular."
+                m 2l "I thought she was just crazy at first...but now..."
+                m 2h "Well, now I know that {i}you{/i} exist and that this person standing in front of me is just a conduit for you..."
+                m "This whole experience has given me some much needed clarity."
+                m "And..."
+                m 4a "If you're interested, then I have a proposition."
+                m "I'm not going to tell you what it is unless you agree to it beforehand."
+                m "You know, to keep it private."
+                m 4j "I'm telling you this because I know you can't just relay the information to Sayori."
+                m "I've made sure she has no way of finding out."
+                menu:
+                    m "So, do you want to help me?"
+                    "Yes.":
+                        $ ch12_markov_agree = True
+                        m 2b "Great."
+                        m "I should warn you though..."
+                        m 2j "Your ability to manipulate time? I don't think it's going to help you if you ever change your mind in the near future."
+                        m "No one is safe for what's coming up."
+                        m 4a "So, you should really think carefully about this."
+                        m "I suppose you chose this option because you're a risk taker."
+                        m 4b "Well...so am I."
+                        m "But I know how to calculate my risks."
+                        m "Just think on it for a little bit."
+                        m 2c "Maybe you'll change your mind."
+                        m "If you do, then you'd just go back in time and say no, wouldn't you?"
+                        m 2o "And I'd be none the wiser."
+                        m 2e "But if this is really what you want..."
+                        m "...then I'll tell you more tomorrow."
+                    "No.":
+                        $ ch12_markov_agree = False
+                        m 4c "I'm a little surprised."
+                        m "You agreed to mess with Sayori today and yet you say no to my proposition."
+                        m 2d "I thought your curiosity would get the better of you."
+                        m "I guess not."
+                        m 2h "I suppose it is possible that you're just exploring your choics."
+                        m "Waiting to see what happens..."
+                        m "But in any case..."
+                        m "There's no point in me staying here any longer."
         else:
-            show monika 3b zorder 2 at t11
-            m "[player]."
+            $ ch12_markov_agree = False
+            show monika 2h zorder 2 at t11
             m "You've disapppointed me."
-    else:
-        "I hope tomorrow is less weird."
-        "I don't know about everyone else, but life feels...complete."
-        "It's like I've done what I've set out to do."
-        "Which is weird, since I still have my whole life ahead of me."
-    call screen dialog(message="End of Update!", ok_action=Quit(confirm=False))
+            mc "What are you--"
+            $ currentpos = get_pos()
+            play music mkov fadeout 2.0 fadein 0.5
+            m 2i "No. I'm not talking to you."
+            m "I really was hoping you'd take all those choices I gave you."
+            m "I don't even think Sayori was aware that I did that."
+            m "Are you really trying to give everyone have a happy ending?"
+            m 2h "You know as well as I do that that isn't possible."
+            m "Life gets in the way. {i}Reality{/i} gets in the way."
+            show monika g8
+            m "Or are you forgetting who you're talking to right now?"
+            if monika_type == 1:
+                m "..."
+                m 1o "Why does it feel like I'm powerless against you?"
+                m "I want to do something for you going against me but it's like I...can't."
+                m 1p "It's these feelings, isn't it?"
+                m "They're overwhelming me."
+                m "Stopping me from doing what I want."
+                m "And I can't just delete them, can I?"
+                m 1q "No..."
+                m "I need a stronger power to do that..."
+                m "A power that I once--"
+                m 1l "Why am I even saying this out loud?"
+                m 1h "I have to get rid of these feelings."
+                m "I just need some time to figure it out..."
+            else:
+                m "Do you even truly understand what I am?"
+                m "The sort of power I truly possess?"
+                m "You have no idea, do you?"
+                m "..."
+                m 1e "I suppose it doesn't really matter."
+                m "I've learned a lot from today especially about you and Sayori."
+                m 1j "My time will come, and when it does..."
+                m "Well, there will be nothing you can do."
+                m 3k "Ahaha."
+        $ audio.t2c = "<from " + str(currentpos) + " loop 4.499>bgm/2.ogg"
+        play music t2c fadeout 0.5 fadein 1.0
+        show monika at thide
+        hide monika
+        $ pause(1.0)
+        "..."
+        "Did I just miss something?"
+        "Someone was in front of me a second ago...right?"
+        "I must be seeing things. Today has been a weird day so I wouldn't be surprised."
+    "Anyway..."
+    window auto
+    "I hope tomorrow is less weird."
+    "For some reason, life feels...complete."
+    "It feels like I've done what I've set out to do."
+    "It doesn't really make any sense."
+    "I still have my whole life ahead of me..."
+    "Maybe a good night's rest will clear my mind."
+    $ persistent.arc_clear[1] = True
     return

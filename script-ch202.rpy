@@ -113,9 +113,9 @@ label ch202_main:
     show yuri zorder 3 at f32
     y 2o "..."
     y "B-But..."
+    show yuri zorder 2 at t32
     if renpy.random.randint(0, 3) == 0:
         $ style.say_dialogue = style.edited
-        show yuri zorder 2 at t32
         show natsuki mouth as nm zorder 3 at i33
         show n_moving_mouth zorder 3:
             xoffset 400
@@ -254,7 +254,7 @@ label ch202_main:
             stop music
             scene black
             window auto
-            pause 2.0
+            $ pause(2.0)
             play music "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"
             jump ch202_main2
         else:
@@ -537,11 +537,11 @@ label ch202_end:
     $ style.say_dialogue = style.normal
     $ currentpos = get_pos() * 2.07
     stop music
-    pause 0.5
+    $ pause(0.5)
     play sound "sfx/stab.ogg"
     show blood_eye zorder 3:
         pos (710,380) zoom 2.5
-    pause 0.75
+    $ pause(0.75)
     stop sound
     play music "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
     hide black

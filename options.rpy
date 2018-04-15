@@ -23,7 +23,7 @@ define gui.show_name = False
 
 
 
-define config.version = "0.7.7"
+define config.version = "0.7.11"
 
 
 
@@ -224,7 +224,7 @@ init python:
     build.classify("game/**.mp3", "audio")
     build.classify("game/**.ogg", "audio")
     build.classify("game/**.ttf", "fonts")
-    build.classify("game/**.otf", "audio")
+    build.classify("game/**.otf", "fonts")
 
     build.classify('**~', None)
     build.classify('**.bak', None)

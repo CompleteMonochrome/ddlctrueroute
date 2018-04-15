@@ -294,7 +294,7 @@ label ch201_end:
             zoom 1.00
         show screen tear(20, 0.1, 0.1, 0, 40, srf)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.25
+        $ pause(0.25)
         hide screen tear
         stop sound
         $ menu_clicked += 1

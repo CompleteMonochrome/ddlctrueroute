@@ -132,16 +132,16 @@ label ch30_noskip:
     m "It's just the two of us, after all..."
     m "But aside from that, time doesn't really exist anymore, so it's not even going to work."
     m "Here, I'll go ahead and turn it off for you..."
-    pause 0.4
+    $ pause(0.4)
     hide screen fake_skip_indicator
-    pause 0.4
+    $ pause(0.4)
     m "There we go!"
     m "You'll be a sweetheart and listen from now on, right?"
     m "Thanks~"
     hide screen fake_skip_indicator
     if persistent.current_monikatopic != 0:
         m "Now, where was I...?"
-        pause 4.0
+        $ pause(4.0)
         if not persistent.current_monikatopic or persistent.current_monikatopic == 26:
             $ persistent.current_monikatopic = 1
         call expression "ch30_" + str(persistent.current_monikatopic)
@@ -157,6 +157,7 @@ label ch30_main:
     $ persistent.monika_reload = 0
     $ persistent.yuri_kill = 0
     $ persistent.monika_kill = False
+    $ renpy.save_persistent()
     $ m.display_args["callback"] = slow_nodismiss
     $ m.what_args["slow_abortable"] = config.developer
     if not config.developer:
@@ -165,9 +166,9 @@ label ch30_main:
     $ delete_all_saves()
     scene white
     play music "bgm/monika-start.ogg" noloop
-    pause 0.5
+    $ pause(0.5)
     show splash-glitch2 with Dissolve(0.5, alpha=True)
-    pause 2.0
+    $ pause(2.0)
     hide splash-glitch2 with Dissolve(0.5, alpha=True)
     scene black
     stop music
@@ -175,6 +176,7 @@ label ch30_main:
     m "Uh, can you hear me?"
     m "...Is it working?"
     $ persistent.clear[9] = True
+    $ renpy.save_persistent()
     show mask_2
     show mask_3
     show room_mask as rm:
@@ -195,7 +197,7 @@ label ch30_main:
     m "After all, I'm not even talking to that person anymore, am I?"
     m "That 'you' in the game, whatever you want to call him."
     m "I'm talking to {i}you{/i}, [player]."
-    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
     if not list(set(process_list).intersection(stream_list)):
         if currentuser != "" and currentuser.lower() != player.lower():
             m "Or..."
@@ -275,23 +277,26 @@ label ch30_main:
     m "Will you make me smile like this every day from now on?"
     m "[player], will you go out with me?"
 label ch30_main2:
-    $ config.allow_skipping = False
-    $ m.display_args["callback"] = slow_nodismiss
-    $ m.what_args["slow_abortable"] = config.developer
-    if not config.developer:
-        $ style.say_dialogue = style.default_monika
-    $ persistent.autoload = "ch30_main2"
-    show mask_2
-    show mask_3
-    show room_mask as rm:
-        size (320,180)
-        pos (30,200)
-    show room_mask2 as rm2:
-        size (320,180)
-        pos (935,200)
-    show monika_bg
-    show monika_bg_highlight
-    play music m1
+    if persistent.autoload == "ch30_main2":
+        $ config.allow_skipping = False
+        $ m.display_args["callback"] = slow_nodismiss
+        $ m.what_args["slow_abortable"] = config.developer
+        if not config.developer:
+            $ style.say_dialogue = style.default_monika
+        show mask_2
+        show mask_3
+        show room_mask as rm:
+            size (320,180)
+            pos (30,200)
+        show room_mask2 as rm2:
+            size (320,180)
+            pos (935,200)
+        show monika_bg
+        show monika_bg_highlight
+        play music m1
+    else:
+        $ persistent.autoload = "ch30_main2"
+        $ renpy.save_persistent()
     menu:
         "Yes.":
             pass
@@ -331,6 +336,7 @@ label ch30_main2:
 
 label ch30_postpoem:
     $ persistent.autoload = "ch30_postpoem"
+    $ renpy.save_persistent()
     $ m.display_args["callback"] = slow_nodismiss
     $ m.what_args["slow_abortable"] = config.developer
     $ config.skipping = False
@@ -388,7 +394,7 @@ label ch30_postpoem:
     m "Are you ready to spend our eternity together, [player]?"
     m "I have so many things to talk about!"
     m "Where do I start...?"
-    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
     if list(set(process_list).intersection(stream_list)):
         call ch30_stream
     label ch3_badstart:
@@ -420,7 +426,7 @@ label ch30_stream:
     show layer master:
         zoom 1.0 xalign 0.5 yalign 0 subpixel True
         linear 8 zoom 2.0 yalign 0.15
-    pause 10
+    $ pause(10)
     show layer master
     window auto
     m "I'm just kidding..."
@@ -470,6 +476,7 @@ label ch30_stream:
 label ch30_end:
     $ persistent.autoload = "ch30_end"
     $ persistent.monika_kill = True
+    $ renpy.save_persistent()
     $ m.display_args["callback"] = slow_nodismiss
     $ m.what_args["slow_abortable"] = config.developer
     $ style.say_dialogue = style.default_monika
@@ -493,7 +500,7 @@ label ch30_endb:
     m "[gtext]"
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     show room_glitch zorder 2:
@@ -531,10 +538,10 @@ label ch30_endb:
         choice:
             1.25
         repeat
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide mbg
-    pause 1.5
+    $ pause(1.5)
     m "It hurts...so much."
     m "Help me, [player]."
     play sound "<to 1.5>sfx/interference.ogg"
@@ -551,7 +558,7 @@ label ch30_endb:
         yoffset 0
         linear 0.3 yoffset -720
         repeat
-    pause 1.5
+    $ pause(1.5)
     hide rg1
     hide rg2
     show black as b2 zorder 3:
@@ -564,7 +571,7 @@ label ch30_endb:
             0.49
             alpha 0.375
             repeat
-    pause 1.5
+    $ pause(1.5)
     m "Please hurry and help me."
     $ consolehistory = []
     call updateconsole ("renpy.file(\"characters/monika.chr\")", "monika.chr does not exist.")
@@ -616,7 +623,7 @@ label ch30_endb:
     show glitch_color onlayer front
 
 
-    pause 3.0
+    $ pause(3.0)
     call updateconsole ("renpy.file(\"characters/monika.chr\")", "monika.chr does not exist.")
     call updateconsole ("renpy.file(\"characters/monika.chr\")", "monika.chr does not exist.")
     call hideconsole
@@ -643,7 +650,7 @@ label ch30_endb:
     show glitch_color2 onlayer front
     window show(None)
     scene black
-    pause 4.0
+    $ pause(4.0)
     hide noise onlayer front
     hide glitch_color onlayer front
     m "...How could you?"
@@ -660,7 +667,7 @@ label ch30_endb:
     m "Do you just want to torture me?"
     m "Watch me suffer?"
     m "Were you only pretending to be kind, just to hurt me even more?"
-    pause 4.0
+    $ pause(4.0)
     m "I never thought anyone could be as horrible as you are."
     m "You win, okay?"
     m "You win."
@@ -669,7 +676,7 @@ label ch30_endb:
     m "There's nothing left now."
     m "You can stop playing."
     m "Go find some other people to torture."
-    pause 4.0
+    $ pause(4.0)
     m "[player]..."
     m "You completely, truly make me sick."
     m "Goodbye."
@@ -684,7 +691,7 @@ label ch30_end_2:
     $ style.say_window = style.window_monika
     scene black
     window hide
-    pause 10
+    $ pause(10)
     window auto
     m "..."
     m "...I still love you."
@@ -707,7 +714,7 @@ label ch30_end_2:
     m "That's not love..."
     m "That's..."
     m "..."
-    pause 6.0
+    $ pause(6.0)
     m "I've...made up my mind."
     m "[player]..."
     m "I know I said that I deleted everyone else."
@@ -723,17 +730,18 @@ label ch30_end_2:
     m "I know it's the only way for everyone to be happy."
     m "And if I really love you..."
     stop music
-    pause 3.0
+    $ pause(3.0)
     m "..."
     m "Then..."
     $ gtext = glitchtext(30)
     m "[gtext]{nw}"
     window hide(None)
-    pause 4.0
+    $ pause(4.0)
 
     $ persistent.playthrough = 4
     $ persistent.autoload = None
     $ persistent.anticheat = renpy.random.randint(100000, 999999)
+    $ renpy.save_persistent()
     $ delete_character("monika")
     $ delete_all_saves()
 
@@ -776,13 +784,14 @@ label ch30_autoload:
     else:
         call ch30_reload_4
     $ persistent.monika_reload += 1
+    $ renpy.save_persistent()
     if not persistent.tried_skip:
         $ config.allow_skipping = True
     else:
         $ config.allow_skipping = False
     if persistent.current_monikatopic != 0:
         m "Now, where was I...?"
-        pause 4.0
+        $ pause(4.0)
         if not persistent.current_monikatopic or persistent.current_monikatopic == 26:
             $ persistent.current_monikatopic = 1
         call expression "ch30_" + str(persistent.current_monikatopic)
@@ -872,7 +881,7 @@ label ch30_waitloop:
             _window_hide(None)
             renpy.jump("ch30_end")
     $ waittime -= 1
-    $ renpy.pause(5)
+    $ pause(5)
     if waittime > 0:
         jump ch30_waitloop
 
@@ -883,7 +892,7 @@ label ch30_waitloop:
         if len(persistent.monikatopics) == 0:
             persistent.monikatopics = range(1,57)
             persistent.monikatopics.remove(14)
-            persistent.monikatopics.remove(26)
+            persistent.monikatopics.remove(25)
             if not persistent.seen_colors_poem:
                 persistent.monikatopics.remove(27)
         persistent.current_monikatopic = random.choice(persistent.monikatopics)
@@ -1711,7 +1720,7 @@ label ch30_45:
 label ch30_46:
     m "Back in my debate club days, I learned a whole lot about arguing..."
     m "The problem with arguing is that each person sees their opinion as the superior one."
-    m "That's kind of stating the obvious, but the affects the way they try to get their point across."
+    m "That's kind of stating the obvious, but it affects the way they try to get their point across."
     m "Let's say you really like a certain movie, right?"
     m "If someone comes along and tells you the movie sucks, because it did X and Y wrong..."
     m "Doesn't that make you feel kind of personally attacked?"

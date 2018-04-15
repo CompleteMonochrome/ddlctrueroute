@@ -55,6 +55,7 @@ label ch5_mainb:
     else:
         $ sayori_confess = False
     $ persistent.monika_gone = True
+    $ renpy.save_persistent()
     $ chances = 3
 
     python:
@@ -83,7 +84,7 @@ label ch5_mainb:
     s "Thanks for being early!"
     mc "Eh? Sayori? You're here really early."
     "Sayori is placing little booklets on each of the desks in the classroom."
-    "They must be the ones she prepared that has all the poems we're performing."
+    "They must be the ones she prepared that have all the poems we're performing."
     "In the end, I found a random poem online that I thought Sayori and the others would like, and submitted it."
     "So, that's the one I'll be performing."
     s 1i "Well, the president does need to be here early."
@@ -263,7 +264,7 @@ label ch5_mainb:
     s "We have to get her back."
     s "You have to remember!"
     s "Please..."
-    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
     if not list(set(process_list).intersection(stream_list)):
         if currentuser != "" and currentuser.lower() != player.lower():
             s "[currentuser]..."
@@ -338,20 +339,21 @@ label ch5_forget:
     "The name does sound familiar, but I can't quite put the pieces together."
     "But she's right, I should probably go help the others."
     "This festival is going to go great, I can just feel it."
-    pause 1.0
+    $ pause(1.0)
     scene black with dissolve_cg
     stop music fadeout 3.0
-    pause 3.0
+    $ pause(3.0)
     $ renpy.call_screen("dialog", "Before I go for good...", ok_action=Return())
     $ renpy.call_screen("dialog", "I've got one more gift for you...", ok_action=Return())
     $ renpy.call_screen("dialog", "The song you asked about...", ok_action=Return())
     python:
         try: renpy.file(config.basedir + "/Sorry.txt")
         except: open(config.basedir + "/Sorry.txt", "wb").write(renpy.file("Sorry.txt").read())
-    pause 2.0
+    $ pause(2.0)
     $ persistent.monika_change = True
     $ persistent.monika_credits = False
     $ persistent.monika_gone = True
+    $ renpy.save_persistent()
     jump credits
 
 label ch5_remember:
@@ -362,7 +364,7 @@ label ch5_remember:
     m "[gtext]"
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     window auto
@@ -374,7 +376,7 @@ label ch5_remember:
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     window show(None)
@@ -403,7 +405,7 @@ label ch5_loveyou:
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     window show(None)
@@ -449,7 +451,7 @@ label ch5_loveyou:
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     window show(None)
@@ -502,14 +504,14 @@ label ch5_yes:
     m 4e "We should get to school."
     m "Can't let all those preparations be for nothing, right?"
     scene black with dissolve_cg
-    pause 2.0
+    $ pause(2.0)
     scene white
     play music t1
     show intro with Dissolve(0.5, alpha=True)
-    pause 2.5
+    $ pause(2.5)
     hide intro with Dissolve(0.5, alpha=True)
     show splash_warning "This game is not suitable for children or those who are easily disturbed.\nThis mod is a fan work, not affiliated with Team Salvato." with Dissolve(0.5, alpha=True)
-    pause 3.0
+    $ pause(3.0)
     $ _history_list = []
     jump ch5_mainc
 
@@ -528,7 +530,7 @@ label ch5_no:
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     window show(None)
@@ -552,21 +554,22 @@ label ch5_no:
     $ gtext = glitchtext(70)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     show monika_body_glitch2 as mbg zorder 3
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide mbg
-    pause 1.5
+    $ pause(1.5)
     hide monika
     show black zorder 4 with dissolve_cg
-    pause 2.0
+    $ pause(2.0)
     $ persistent.monika_change = True
     $ persistent.monika_credits = False
     $ persistent.monika_gone = True
+    $ renpy.save_persistent()
     jump credits
 
 label ch5_comeback:
@@ -583,7 +586,7 @@ label ch5_comeback:
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     window show(None)
@@ -616,21 +619,22 @@ label ch5_comeback:
     $ gtext = glitchtext(70)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     show monika_body_glitch2 as mbg zorder 3
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide mbg
-    pause 1.5
+    $ pause(1.5)
     hide monika
     show black zorder 4 with dissolve_cg
-    pause 2.0
+    $ pause(2.0)
     $ persistent.monika_change = True
     $ persistent.monika_credits = False
     $ persistent.monika_gone = True
+    $ renpy.save_persistent()
     jump credits
 
 label ch5_mainc:
@@ -664,6 +668,7 @@ label ch5_mainc:
     play music t2
     with dissolve_scene_full
     $ persistent.monika_gone = False
+    $ renpy.save_persistent()
     # Setup Variables
     $ chapter = 5
     if persistent.ch4_preparations == "Yuri":
@@ -715,7 +720,7 @@ label ch5_mainc:
     show sayori zorder 2 at t22
     mc "It's not a problem, I wouldn't miss a day like this."
     "Sayori and Monika are placing little booklets on each of the desks in the classroom."
-    "They must be the ones they prepared that has all the poems we're performing."
+    "They must be the ones she prepared that have all the poems we're performing."
     "In the end, I found a random poem online that I thought everyone would like, and submitted it."
     "So, that's the one I'll be performing."
     show monika zorder 2 at t21
@@ -1216,7 +1221,7 @@ label ch5_mainc:
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     window show(None)
@@ -1294,7 +1299,7 @@ label ch5_mainc:
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     window show(None)
@@ -1302,7 +1307,7 @@ label ch5_mainc:
     window auto
     mc "..."
     mc "Well, you've done good so far."
-    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
     if not list(set(process_list).intersection(stream_list)):
         if currentuser != "" and currentuser.lower() != player.lower():
             mc "[currentuser]..."
@@ -1344,7 +1349,7 @@ label ch5_mainc:
     stop music
     scene black
     with close_eyes
-    pause 4.0
+    $ pause(4.0)
     play music t2
     scene bg club_day
     show monika 1n at face
@@ -1542,10 +1547,10 @@ label ch5_mainc_end:
     "The whole club falls silent, either out of respect for Monika or for eagerness of the performance."
     show monika 1j
     play music "<to 9.5>bgm/credits.ogg" noloop
-    pause 9.5
+    $ pause(9.5)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play music g1
-    pause 0.5
+    $ pause(0.5)
     hide screen tear
     $ _history_list = []
     window hide(None)

@@ -1,4 +1,4 @@
-    
+
 
 
 
@@ -387,7 +387,7 @@ init -501 screen quick_menu():
 
 
             textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("Skip") action Skip()
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Save") action ShowMenu('save')
             textbutton _("Load") action ShowMenu('load')
@@ -561,7 +561,10 @@ init -501 screen main_menu() tag menu:
             add "menu_art_s"
         add "menu_particles"
         if persistent.playthrough != 4 and not persistent.monika_gone:
-            add "menu_art_m"
+            if not persistent.arc_clear[0]:
+                add "menu_art_m"
+            else:
+                add "menu_art_m_evil"
         add "menu_fade"
 
     key "K_ESCAPE" action Quit(confirm=False)
@@ -1466,13 +1469,9 @@ init -501 screen confirm(message, yes_action, no_action):
             yalign .5
             spacing 30
 
-        if in_sayori_kill and message == layout.QUIT:
-            add "confirm_glitch" xalign 0.5
-
-        else:
-            label _(message):
-                style "confirm_prompt"
-                xalign 0.5
+        label _(message):
+            style "confirm_prompt"
+            xalign 0.5
 
         hbox:
             xalign 0.5

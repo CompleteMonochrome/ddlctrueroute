@@ -405,8 +405,6 @@ label ch3_start_yuri:
 
 label ch3_start_monika:
     $ m_exclusivewatched = True
-    # $ persistent.dialogue_change[0] = True
-    # $ persistent.dialogue_change[1] = False
     "Their conversation seems to be really tense."
     show sayori 1u zorder 2 at t21
     show monika 1h zorder 2 at t22
@@ -530,8 +528,6 @@ label ch3_start_monika:
 
 label ch3_mid_monikab:
     $ m_exclusivewatched = False
-    # $ persistent.dialogue_change[0] = False
-    # $ persistent.dialogue_change[1] = True
     "I timidly approach Monika, who is shuffling through some papers at her desk."
     show monika 2b zorder 2 at t11
     m "[player]! What's up?"
@@ -547,8 +543,6 @@ label ch3_mid_monikab:
 
 label ch3_start_monikab:
     $ m_exclusivewatched = False
-    # $ persistent.dialogue_change[0] = False
-    # $ persistent.dialogue_change[1] = True
     "Their conversation seems to be really tense."
     show sayori 1u zorder 2 at t21
     show monika 1h zorder 2 at t22

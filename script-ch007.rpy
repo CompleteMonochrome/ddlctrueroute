@@ -13,7 +13,7 @@ label ch7_main:
     m "I wasn't sure if it was by chance that I was here before..."
     m "But I'm guessing it's probably Sayori who's responsible for it."
     show screen tear(8, offtimeMult=1, ontimeMult=10)
-    pause 1.0
+    $ pause(1.0)
     hide screen tear
     show sayori 1f zorder 3 at i21
     show monika 1c zorder 2 at i22
@@ -154,7 +154,7 @@ label ch7_main:
     show monika zorder 2 at t22
     s 1d "[player]..."
     s "The real one."
-    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
     if not list(set(process_list).intersection(stream_list)):
         if currentuser != "" and currentuser.lower() != player.lower():
             s "Or should I say [currentuser]...?"
@@ -224,7 +224,7 @@ label ch7_main:
     s 1g "Well...it's time to wake up."
     s 1k "So we'll find out shortly..."
     show screen tear(8, offtimeMult=1, ontimeMult=10)
-    pause 1.0
+    $ pause(1.0)
     hide screen tear
     hide sayori
     show monika 1f zorder 2 at i11
@@ -242,13 +242,10 @@ label ch7_main:
     stop music fadeout 2.0
 
     $ persistent.ch6_task = [False,False,False]
+    $ renpy.save_persistent()
     scene bg bedroom
     with dissolve_scene_full
     play music t2
-
-    $ natsuki_approval = 4
-    $ yuri_approval = 4
-    $ needs_to_read = False
 
     if did_all_tasks and not read_book:
         "I had a look at the first chapter of the Portrait of Markov this morning..."
@@ -567,7 +564,7 @@ label ch7_main:
         mc "Stop!{nw}"
         show screen tear(20, 0.1, 0.1, 0, 40)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.5
+        $ pause(0.5)
         stop sound
         scene black
         show monika 1e zorder 2 at i11
@@ -605,11 +602,12 @@ label ch7_main:
         $ config.allow_skipping = True
         show screen tear(20, 0.1, 0.1, 0, 40)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.25
+        $ pause(0.25)
         stop sound
         hide screen tear
     else:
-        $ yuri_approval -= 1
+        if yuri_approval > 0:
+            $ yuri_approval -= 1
         mc "Well..."
         mc "Not much."
         mc "Do you mind filling me in on some lost details?"
@@ -737,7 +735,7 @@ label ch7_main:
         $ _history_list = []
         show screen tear(20, 0.1, 0.1, 0, 40)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.5
+        $ pause(0.5)
         stop sound
         scene black
         show monika 1e zorder 2 at i11
@@ -768,7 +766,7 @@ label ch7_main:
         $ config.allow_skipping = True
         show screen tear(20, 0.1, 0.1, 0, 40)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.25
+        $ pause(0.25)
         stop sound
         hide screen tear
     scene bg club_day
@@ -1032,9 +1030,9 @@ label ch7_main:
         "As she walks over to the door, she trips on my bag."
         show yuri 3n zorder 2 at t11
         play sound "sfx/smack.ogg"
-        pause 0.25
+        $ pause(0.25)
         play sound fall
-        pause 0.25
+        $ pause(0.25)
         mc "Sorry!"
         mc "I didn't mean for that to happen."
         mc "Here let me help you up."
@@ -1227,7 +1225,7 @@ label ch7_end:
     show monika 3i
     show natsuki 2q
     stop music fadeout 1.5
-    pause 1.5
+    $ pause(1.5)
     y 2y1 "Good."
     y "[player], I know you want to be with me."
     y "We can go to my house."
@@ -1242,6 +1240,7 @@ label ch7_end:
     label ch7_redo:
     # Here in case they need to be
     $ persistent.autoload = ""
+    $ renpy.save_persistent()
     $ quick_menu = True
 
     s "Because in the end, it's up to him to decide who he reads with."
@@ -1275,6 +1274,7 @@ label ch7_end:
     elif ch7_name == "Yuri":
         $ persistent.sayori_reload_yuri = False
         $ persistent.sayori_reload_yuri_message = True
+        $ renpy.save_persistent()
         "So I guess I'm finishing off the book with [ch7_name] tonight."
         "She sent me her address on my phone."
         "It took me a while to get to her house, seeing as she misspelled the street."
@@ -1335,7 +1335,7 @@ label ch7_end_natsuki:
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     return
 
@@ -1369,7 +1369,7 @@ label ch7_end_yuri:
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     return
 
@@ -1422,7 +1422,7 @@ label ch7_end_monika:
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     return
 
@@ -1459,6 +1459,6 @@ label ch7_end_sayori:
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     return

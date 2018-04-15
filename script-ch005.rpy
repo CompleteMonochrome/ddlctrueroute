@@ -110,7 +110,7 @@ label ch5_main:
     m "Thanks for being early!"
     mc "That's funny, I thought at least Yuri would be here by now."
     "Monika is placing little booklets on each of the desks in the classroom."
-    "They must be the ones she prepared that has all the poems we're performing."
+    "They must be the ones she prepared that have all the poems we're performing."
     "In the end, I found a random poem online that I thought Monika would like, and submitted it."
     "So, that's the one I'll be performing."
     if act_one_dialogue[0]:
@@ -300,6 +300,7 @@ label ch5_main:
     mc "{cps=30}.......Sayo--{/cps}{nw}"
     $ persistent.playthrough = 1
     $ persistent.anticheat = renpy.random.randint(100000, 999999)
+    $ renpy.save_persistent()
     $ delete_character("sayori")
     $ in_sayori_kill = True
     window hide(None)
@@ -309,13 +310,13 @@ label ch5_main:
     show s_kill2
     show s_kill_bg as s_kill_bg at s_kill_bg_start
     show s_kill as s_kill at s_kill_start
-    pause 3.75
+    $ pause(3.75)
     show s_kill_bg2 as s_kill_bg
     show s_kill2 as s_kill
-    pause 0.01
+    $ pause(0.01)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     hide s_kill_bg
@@ -330,26 +331,26 @@ label ch5_main:
         zoom 2.0 xalign 0.5 yalign 0.05
         pause 0.5
         dizzy(1, 1.0)
-    pause 2.0
+    $ pause(2.0)
     show noise zorder 3:
         alpha 0.0
         linear 3.0 alpha 0.25
     show vignette zorder 3:
         alpha 0.0
         linear 3.0 alpha 0.75
-    pause 1.5
+    $ pause(1.5)
     show white zorder 2
     show splash_glitch zorder 2
-    pause 1.5
+    $ pause(1.5)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.2
+    $ pause(0.2)
     stop sound
     hide screen tear
-    pause 4.0
+    $ pause(4.0)
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.2
+    $ pause(0.2)
     stop sound
     hide screen tear
     hide splash_glitch
@@ -357,7 +358,7 @@ label ch5_main:
     show splash_glitch_m zorder 2
     show splash_glitch_n zorder 2
     show splash_glitch_y zorder 2
-    pause 0.75
+    $ pause(0.75)
     hide white
     hide splash_glitch2
     hide splash_glitch_m
@@ -368,15 +369,14 @@ label ch5_main:
         xpos 0.1 ypos 0.05
     show fake_exception2 zorder 2:
         xpos 0.1 ypos 0.15
-    if persistent.dialogue_change[0]:
-        python:
+    python:
+        if persistent.dialogue_change[0]:
             try: sys.modules['renpy.error'].report_exception("You didn't make the file...I couldn't do anything to save her, I'm sorry. I tried what I could but...\nThere's only one way to fix this now, you know this. I have to delete her, or the game will just break...I tried...you tried to change me and it ended up like this.\nMaybe there is no point in changing who I am. I'll just have to make my own ending.", False)
             except: pass
-    else:
-        python:
-            try: sys.modules['renpy.error'].report_exception("Oh jeez...I didn't break anything, did I? Hold on a sec, I can probably fix this...I think...\nActually, you know what? This would probably be a lot easier if I just deleted her. She's the one who's making this so difficult. Ahaha! Well, here's goes nothing.", False)
+        else:
+            try: sys.modules['renpy.error'].report_exception("Oh jeez...I didn't break anything, did I? Hold on a sec, I can probably fix this...I think...\nActually, you know what? This would probably be a lot easier if I just deleted her. She's the one who's making this so difficult. Ahaha! Well, here goes nothing.", False)
             except: pass
-    pause 6.0
+    $ pause(6.0)
 
 
     "..."

@@ -11,8 +11,6 @@ init python:
 
 label ch10_main:
     python:
-        persistent.yasuhiro_deleted = None
-        ch10_del_jump = "_nat_house"
         process_list = []
         currentuser = ""
         if renpy.windows:
@@ -29,11 +27,11 @@ label ch10_main:
                 pass
     scene black
     with dissolve_scene_full
-    pause 1.0
+    $ pause(1.0)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     stop sound
-    pause 0.25
+    $ pause(0.25)
     play sound "sfx/giggle.ogg"
     if m_appeal == 3 and did_all_tasks:
         python:
@@ -47,7 +45,7 @@ label ch10_main:
             except: pass
             try: renpy.file(config.basedir + "/Ehehe.txt")
             except: open(config.basedir + "/Ehehe.txt", "wb").write(renpy.file("Ehehe.txt").read())
-    pause 3.0
+    $ pause(3.0)
     play music mend fadeout 2.0
     if m_appeal == 3 and did_all_tasks:
         show sayori 1bb zorder 3 at f21
@@ -146,7 +144,7 @@ label ch10_main:
         show monika zorder 3 at f22
         m 1bi "Sayori!"
         m "I know that!"
-        pause 1.0
+        $ pause(1.0)
         m 1bo "I..."
         m "I'm sorry."
         m "I shouldn't have..."
@@ -190,14 +188,14 @@ label ch10_main:
         hide sayori
         show monika zorder 2 at i11
         show monika zorder 2 at t11
-        pause 1.0
+        $ pause(1.0)
         hide screen tear
         m "I really shouldn't be hiding anything from her."
         m "..."
         m 1bf "Is that me that's doing that?"
         m "Or the book?"
         m 1bg "Honestly...I don't know."
-        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
         if not list(set(process_list).intersection(stream_list)):
             if currentuser != "" and currentuser.lower() != player.lower():
                 m "[currentuser]..."
@@ -222,7 +220,7 @@ label ch10_main:
         m 1bg "Sorry, I can't do this."
         show screen tear(20, 0.1, 0.1, 0, 40)
         play sound "sfx/s_kill_glitch1.ogg"
-        pause 0.25
+        $ pause(0.25)
         stop sound
         scene bg bedroom
         hide screen tear
@@ -329,10 +327,10 @@ label ch10_main:
     stop music
     window hide
     play sound fall
-    pause 0.25
+    $ pause(0.25)
     scene black
     with close_eyes
-    pause 1.5
+    $ pause(1.5)
     window show(None)
     show sayori 1bd zorder 2 at t11
     s "You weren't expecting that, were you?"
@@ -511,7 +509,6 @@ label ch10_main:
     mc "Um..."
     "That sounds kinda..."
     "...well, not like Sayori."
-    $ go_nat_house = [False, False]
     label ch10_nat_house_strawberry:
     s 1bd "So, you're gonna go right?"
     window auto
@@ -548,7 +545,7 @@ label ch10_main:
             show screen tear(20, 0.1, 0.1, 0, 40)
             window hide(None)
             play sound "sfx/s_kill_glitch1.ogg"
-            pause 0.25
+            $ pause(0.25)
             stop sound
             hide screen tear
             window show(None)
@@ -702,7 +699,7 @@ label ch10_nat_house:
     show natsuki zorder 2 at thide
     hide natsuki
     $ persistent.natsuki_house = [False, False, False, False]
-    $ talkabout_natsuki_house = [False, False, False, False]
+    $ renpy.save_persistent()
     "Natsuki leaves the room and walks to one of the closed doors."
     "She looks back at me before entering and closing the door behind her."
     "I can't help but wonder what Natsuki is hiding in her home."
@@ -727,6 +724,7 @@ label ch10_nat_house:
                 "I wonder where I should go..."
                 "First room upstairs.":
                     $ persistent.natsuki_house[0] = True
+                    $ renpy.save_persistent()
                     $ talkabout_natsuki_house[0] = True
                     "I guess I'll check out one of the rooms upstairs."
                     "I still don't feel comfortable doing this but the voice seems to have stopped."
@@ -772,6 +770,7 @@ label ch10_nat_house:
                     "I quickly close the closet door."
                 "Second room upstairs.":
                     $ persistent.natsuki_house[1] = True
+                    $ renpy.save_persistent()
                     $ talkabout_natsuki_house[1] = True
                     "I guess I'll check out one of the rooms upstairs."
                     "I still don't feel comfortable doing this but the voice seems to have stopped."
@@ -806,6 +805,7 @@ label ch10_nat_house:
                     "I decide there's probably not much to look at in here."
                 "Closed room downstairs.":
                     $ persistent.natsuki_house[2] = True
+                    $ renpy.save_persistent()
                     $ talkabout_natsuki_house[2] = True
                     "There was a room I'm particularly curious about downstairs."
                     "The room behind the door must be big, judging by the layout of the house."
@@ -841,6 +841,7 @@ label ch10_nat_house:
                     "I guess there's nothing wrong after all."
                 "Living room.":
                     $ persistent.natsuki_house[3] = True
+                    $ renpy.save_persistent()
                     $ talkabout_natsuki_house[3] = True
                     "Natsuki seemed intent on me avoiding her living room."
                     "I wonder what she's hiding in there..."
@@ -882,7 +883,8 @@ label ch10_nat_house:
             "Before I can start reflecting on that, Natsuki emerges from the door in the hallway."
             jump ch10_natsuki_back
         "Stay in here.":
-            $ natsuki_approval -= 1
+            if natsuki_approval > 0:
+                $ natsuki_approval -= 1
             "Despite the back of head telling me to explore Natsuki's house."
             "My common sense is telling me that that's probably a bad idea."
             "I barely know Natsuki outside the literature club."
@@ -1081,7 +1083,7 @@ label ch10_nat_house:
             "Maybe her dad is really strict on having people over?"
             "Still, it sounds like he's finally entered the house."
             "I jump off the balcony..."
-            pause 2.0
+            $ pause(2.0)
             "The fall wasn't exactly graceful, but I landed just fine."
             "If she wanted me gone that badly, I probably shouldn't stay around."
             "I decide to head home before anyone notices what I just did."
@@ -1150,8 +1152,6 @@ label ch10_nat_house:
     stop music
     with close_eyes
 
-    $ check_whole_house = False
-    $ check_some_house = False
     if persistent.natsuki_house[0] and persistent.natsuki_house[1] and persistent.natsuki_house[2] and persistent.natsuki_house[3]:
         $ check_whole_house = True
         $ check_some_house = True
@@ -1168,7 +1168,7 @@ label ch10_nat_house:
         $ talkabout_natsuki_house[3] = True
         $ check_some_house = True
 
-    pause 1.0
+    $ pause(1.0)
     play music mend
     if m_appeal == 3 and did_all_tasks:
         show monika 1be zorder 2 at t11
@@ -1224,7 +1224,7 @@ label ch10_nat_house:
             m 1be "Still, I don't think you missed anything."
             m "Except that room that Natsuki went into herself..."
             m "What could be behind that door...?"
-        elif persistent.natsuki_house[0] or persistent.natsuki_house[1] or persistent.natsuki_house[2] or persistent.natsuki_house[3]:
+        elif talkabout_natsuki_house[0] or talkabout_natsuki_house[1] or talkabout_natsuki_house[2] or talkabout_natsuki_house[3]:
             m 1bc "You looked around Natsuki's house, right?"
             m "I mean you can't really answer me but I know you did."
             m "[player] has these memories I can just look over when I want to know what you did."
@@ -1240,7 +1240,7 @@ label ch10_nat_house:
             m "So..."
             m 1bq "I'll just..."
             m "...learn what I have to."
-            if persistent.natsuki_house[0]:
+            if talkabout_natsuki_house[0]:
                 m 1bc "This first room upstairs..."
                 m 1bf "What?"
                 m "What is that...?"
@@ -1250,7 +1250,7 @@ label ch10_nat_house:
                 m "I care too much about you to..."
                 m "Just thinking about it makes me sick."
                 m 1be "What else did you learn?"
-                if persistent.natsuki_house[1]:
+                if talkabout_natsuki_house[1]:
                     label ch11_nhouse1:
                     m 1bd "Huh?"
                     m "I wonder what {i}that{/i} room is for."
@@ -1263,7 +1263,7 @@ label ch10_nat_house:
                     m 1bo "...the room where her dad..."
                     m "Well, we'd better keep looking."
                     m 1bf "What else did..."
-                    if persistent.natsuki_house[2]:
+                    if talkabout_natsuki_house[2]:
                         label ch11_nhouse2:
                         m 1bc "That looks like some sort of living room."
                         m "That's really weird."
@@ -1271,7 +1271,7 @@ label ch10_nat_house:
                         m be "I don't have any ideas about that..."
                         m "Maybe we can learn something about that from Natsuki?"
                         m "I don't know..."
-                        if persistent.natsuki_house[3]:
+                        if talkabout_natsuki_house[3]:
                             m 1bd "Wait a second..."
                             m "That's a living room too."
                             label ch11_nhouse3:
@@ -1281,19 +1281,19 @@ label ch10_nat_house:
                             m "Ah..."
                             m 1bq "Natsuki, if I knew..."
                             m "I'm sorry."
-                    elif persistent.natsuki_house[3]:
+                    elif talkabout_natsuki_house[3]:
                         m 1bc "That's a living room..."
                         jump ch11_nhouse3
-                elif persistent.natsuki_house[2]:
+                elif talkabout_natsuki_house[2]:
                     jump ch11_nhouse2
-                elif persistent.natsuki_house[3]:
+                elif talkabout_natsuki_house[3]:
                     m 1bc "That's a living room..."
                     jump ch11_nhouse3
-            elif persistent.natsuki_house[1]:
+            elif talkabout_natsuki_house[1]:
                 jump ch11_nhouse1
-            elif persistent.natsuki_house[2]:
+            elif talkabout_natsuki_house[2]:
                 jump ch11_nhouse2
-            elif persistent.natsuki_house[3]:
+            elif talkabout_natsuki_house[3]:
                 m 1bc "That's a living room..."
                 jump ch11_nhouse3
             m 1be "So it looks like we know a little bit more about Natsuki..."
@@ -1685,7 +1685,7 @@ label ch10_nat_house:
             s 1bd "Anyway, I've stalled for too long."
             s "You're still wondering what was in the closet and the room Natsuki went into."
             s "The thing in the closet was{nw}"
-        elif persistent.natsuki_house[0] or persistent.natsuki_house[1] or persistent.natsuki_house[2] or persistent.natsuki_house[3]:
+        elif talkabout_natsuki_house[0] or talkabout_natsuki_house[1] or talkabout_natsuki_house[2] or talkabout_natsuki_house[3]:
             s 1bf "I know you didn't do all you could."
             s "Well, at least you looked through her house a little bit."
             s "Before, I used to give you hints, right?"
@@ -1717,7 +1717,7 @@ label ch10_nat_house:
             s 1bb "But I guess I can't really be sure until I look through what you found, right?"
             s "So..."
             s 1bc "Let's see."
-            if persistent.natsuki_house[0]:
+            if talkabout_natsuki_house[0]:
                 s 1bc "You went into her father's room?"
                 s "That's what it was, right?"
                 s "You can tell because of the bed and the manga collection on the shelf."
@@ -1733,7 +1733,7 @@ label ch10_nat_house:
                 s "Sorry..."
                 s "I know you're probably really curious but..."
                 s 1bb "Well, I still have other things to look over, right?"
-                if persistent.natsuki_house[1]:
+                if talkabout_natsuki_house[1]:
                     label ch11_nhouse1s:
                     s 1bc "This other room upstairs..."
                     s "It doesn't look like an ordinary room."
@@ -1750,7 +1750,7 @@ label ch10_nat_house:
                     s 1bk "That's..."
                     s "Never mind."
                     s 1bh "Is there anything else you've found?"
-                    if persistent.natsuki_house[2]:
+                    if talkabout_natsuki_house[2]:
                         label ch11_nhouse2s:
                         s 1bc "This is..."
                         s "That other room downstairs."
@@ -1769,7 +1769,7 @@ label ch10_nat_house:
                         s 1bf "I wish I could have done something sooner..."
                         s "But there's no point reflecting on what could have been."
                         s 1bb "I still need to look over what else you've found, right?"
-                        if persistent.natsuki_house[3]:
+                        if talkabout_natsuki_house[3]:
                             s 1bj "E-Eh...?"
                             s "This is her real living room, right?"
                             label ch11_nhouse3s:
@@ -1786,19 +1786,19 @@ label ch10_nat_house:
                             s "Why would she stay with him in a situation like this?"
                             s "It's so terrible..."
                             s 1bf "Is there something else...?"
-                    elif persistent.natsuki_house[3]:
+                    elif talkabout_natsuki_house[3]:
                         s 1bc "That's a living room..."
                         jump ch11_nhouse3s
-                elif persistent.natsuki_house[2]:
+                elif talkabout_natsuki_house[2]:
                     jump ch11_nhouse2s
-                elif persistent.natsuki_house[3]:
+                elif talkabout_natsuki_house[3]:
                     s 1bc "That's a living room..."
                     jump ch11_nhouse3s
-            elif persistent.natsuki_house[1]:
+            elif talkabout_natsuki_house[1]:
                 jump ch11_nhouse1s
-            elif persistent.natsuki_house[2]:
+            elif talkabout_natsuki_house[2]:
                 jump ch11_nhouse2s
-            elif persistent.natsuki_house[3]:
+            elif talkabout_natsuki_house[3]:
                 s 1bc "That's a living room..."
                 jump ch11_nhouse3s
             s 1bc "Oh..."
@@ -1855,11 +1855,11 @@ label ch10_nat_house:
             s 1bg "I guess I have to do it all myself."
             s "Goodbye.{nw}"
         show screen tear(8, offtimeMult=1, ontimeMult=10)
-        pause 1.0
+        $ pause(1.0)
         scene bg bedroom
         hide screen tear
         play music t2 fadeout 1.0
-        pause 1.0
+        $ pause(1.0)
         window show(None)
         "What the?"
         window auto
@@ -1885,6 +1885,7 @@ label ch10_nat_house:
         "I don't have anything I can cook as well..."
         "Maybe I can go to the shops and--{nw}"
     $ persistent.natsuki_house = [False, False, False, False]
+    $ renpy.save_persistent()
     return
 
 label ch10_end:
@@ -1892,7 +1893,7 @@ label ch10_end:
     stop music
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 0.25
+    $ pause(0.25)
     scene bg shop_afternoon
     stop sound
     hide screen tear
@@ -2063,7 +2064,7 @@ label ch10_delete:
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
     scene black
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     window show(None)
@@ -2073,7 +2074,7 @@ label ch10_delete:
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
-    pause 1.0
+    $ pause(1.0)
     stop sound
     hide screen tear
     window show(None)

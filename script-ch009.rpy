@@ -31,7 +31,7 @@ label ch9_main:
     s "Um..."
     s 1b "Maybe Monika wants to hear this as well."
     show screen tear(8, offtimeMult=1, ontimeMult=10)
-    pause 1.0
+    $ pause(1.0)
     if m_appeal == 3 and did_all_tasks:
         hide screen tear
         show monika 1c zorder 2 at i21
@@ -117,7 +117,7 @@ label ch9_main:
             show sayori 1d zorder 3 at f22
             s "Okay..."
             s "There's one more thing."
-            $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+            $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
             if not list(set(process_list).intersection(stream_list)):
                 if currentuser != "" and currentuser.lower() != player.lower():
                     s "[currentuser]..."
@@ -156,7 +156,7 @@ label ch9_main:
             show screen tear(20, 0.1, 0.1, 0, 40)
             window hide(None)
             play sound "sfx/s_kill_glitch1.ogg"
-            pause 0.25
+            $ pause(0.25)
             stop sound
             hide screen tear
             window show(None)
@@ -203,7 +203,7 @@ label ch9_main:
             s 1d "So..."
             s "I'll see you in the Literature Club."
         show screen tear(8, offtimeMult=1, ontimeMult=10)
-        pause 1.0
+        $ pause(1.0)
         hide screen tear
         hide sayori
         show monika 1f zorder 2 at t11
@@ -219,7 +219,7 @@ label ch9_main:
         m "And really the only thought that's helping me keep it together..."
         m 1e "...is you."
         m 1q "I don't know how long the effects of that book will last..."
-        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe"]
+        $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
         if not list(set(process_list).intersection(stream_list)):
             if currentuser != "" and currentuser.lower() != player.lower():
                 m "[currentuser]..."
@@ -274,7 +274,7 @@ label ch9_main:
             show screen tear(20, 0.1, 0.1, 0, 40)
             window hide(None)
             play sound "sfx/s_kill_glitch1.ogg"
-            pause 0.25
+            $ pause(0.25)
             stop sound
             hide screen tear
             window show(None)
@@ -307,7 +307,7 @@ label ch9_main:
             show screen tear(20, 0.1, 0.1, 0, 40)
             window hide(None)
             play sound "sfx/s_kill_glitch1.ogg"
-            pause 0.25
+            $ pause(0.25)
             stop sound
             hide screen tear
             window show(None)
@@ -602,8 +602,6 @@ label ch9_yurihospital:
 
 # Go to Club Instead of Hospital
 label ch9_club:
-    $ yuri_date = False
-    $ visited_yuri_hospital = False
     scene bg club_day with wipeleft_scene
     "After a long school day, it's finally time to go to the literature club."
     "Sayori and Natsuki are already inside."
@@ -835,15 +833,11 @@ label ch9_club:
     show sayori zorder 2 at t33
     m "That would probably be best."
     m "I'll start putting the desks back to how they were."
-    $ s_ranaway = False
-    $ m_ranaway = False
-    $ n_ranaway = False
     $ y_ranaway = True
     return
 
 # Go to Club From Hospital
 label ch9_school:
-    $ yuri_date = False
     scene bg corridor with wipeleft_scene
     play music t2 fadeout 1.0
     "I decide it's probably best that we go back to school."
@@ -1031,10 +1025,6 @@ label ch9_school:
     show sayori zorder 2 at t44
     m "That would probably be best."
     m "I'll start putting the desks back to how they were."
-    $ s_ranaway = False
-    $ m_ranaway = False
-    $ n_ranaway = False
-    $ y_ranaway = False
     return
 
 # Go to Restaurant from Hospital
@@ -1042,7 +1032,7 @@ label ch9_yuridate:
     $ yuri_date = True
     scene bg cafe
     with wipeleft_scene
-    play music t11y fadeout 2.0
+    play music t12y fadeout 2.0
     "I decided to take Yuri to a nearby cafe."
     "I didn't really have much money, but I also didn't want to take her to fast food."
     "I figured that going to the cafe would be the best compromise."
@@ -1153,7 +1143,7 @@ label ch9_yuridate:
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
     show yuri 3a zorder 2 at i11
-    pause 0.25
+    $ pause(0.25)
     stop sound
     hide screen tear
     window show(None)
@@ -1399,6 +1389,7 @@ label ch9_yuridate:
     return
 
 label ch9_end:
+    $ y_ranaway = False
     if yuri_date:
         scene bg house
         with wipeleft_scene
@@ -1484,8 +1475,11 @@ label ch9_end:
         m "You let me in just a couple of moments ago."
         m "Right, [player]?"
         $ style.say_dialogue = style.edited
-        play music mkov fadeout 1.0
-        pause 1.0
+        show markovred zorder 5:
+            alpha 0
+            linear 1.0 alpha 0.3
+        play music mkov fadeout 1.0 fadein 1.0
+        $ pause(1.0)
         mc "Yes, of course."
         mc "How could I forget?"
         mc "I'm sorry."
@@ -1534,13 +1528,14 @@ label ch9_end:
         m 3bh "It's got something to do with the president, right?"
         m 1bc "With Sayori...?"
         m "I've been very careful when I've--"
-        pause 1.0
+        $ pause(1.0)
         m 1bo "Huh?"
         m "What's this...?"
         show monika g6
         m "Ahaha, it's hopeless."
         m "There's nothing you can--"
-        pause 2.0
+        hide markovred
+        $ pause(2.0)
         m 1bf "[player]."
         m "Listen very carefully."
         m "I don't have a lot of time here."
@@ -1558,7 +1553,7 @@ label ch9_end:
         m "And me..."
         m "Well, there's not much you can do."
         m "Maybe Sayor--"
-        pause 1.5
+        $ pause(1.5)
         m "Ah..."
         m "Maybe Sayori knows about this whole thing."
         m "She can help, maybe..."
@@ -1794,10 +1789,10 @@ label ch9_end:
                 window hide
                 stop music
                 play sound fall
-                pause 0.25
+                $ pause(0.25)
                 scene black
                 with close_eyes
-                pause 1.5
+                $ pause(1.5)
                 window show(None)
                 show monika 1e zorder 3 at t11
                 m 1e "Is it working?"
@@ -1994,7 +1989,7 @@ label ch9_end:
         m "I really hoped we wouldn't have had to do this."
         m 1bh "I should have just said what I needed to straight away."
         scene black
-        pause 0.25
+        $ pause(0.25)
         scene bg bedroom
         show monika 1be zorder 2 at t11
         $ _history_list = []
@@ -2075,7 +2070,10 @@ label ch9_end:
         mc "But this is kinda sudden, isn't it?"
         m 3ba "Maybe not."
         show monika g6
-        play music mkov fadeout 2.0
+        show markovred zorder 5:
+            alpha 0
+            linear 2.0 alpha 0.3
+        play music mkov fadeout 2.0 fadein 2.0
         m "I can tell this host--"
         m "Um...!"
         m 3bl "That {i}I've{/i}..."
@@ -2143,13 +2141,14 @@ label ch9_end:
         m 3bh "It's got something to do with the president, right?"
         m "With Sayori...?"
         m "I've been very careful when I've--"
-        pause 1.0
+        $ pause(1.0)
         m 1bo "Huh?"
         m "What's this...?"
         show monika g6
         m "Ahaha, it's hopeless."
         m "There's nothing you can--"
-        pause 2.0
+        hide markovred
+        $ pause(2.0)
         m 1bf "[player]."
         m "Listen very carefully."
         m "I don't have a lot of time here."
@@ -2167,7 +2166,7 @@ label ch9_end:
         m "And me..."
         m "Well, there's not much you can do."
         m "Maybe Sayor--"
-        pause 1.5
+        $ pause(1.5)
         m "Ah..."
         m "Maybe Sayori knows about this whole thing."
         m "She can help, maybe..."
