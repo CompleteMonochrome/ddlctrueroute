@@ -1904,7 +1904,7 @@ label ch12_play:
             currentpos = get_pos()
             startpos = currentpos - 0.3
             if startpos < 0: startpos = 0
-            track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/t9.ogg"
+            track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/9.ogg"
             renpy.music.play(track, loop=True)
         $ pause(1.0)
         stop music
@@ -4309,5 +4309,7 @@ label ch12_end:
     "It doesn't really make any sense."
     "I still have my whole life ahead of me..."
     "Maybe a good night's rest will clear my mind."
+    call screen dialog(message="To be Continued!\nEnd of Update!", ok_action=Quit(confirm=False))
     $ persistent.arc_clear[1] = True
+    $ renpy.save_persistent()
     return
