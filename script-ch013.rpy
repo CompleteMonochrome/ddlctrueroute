@@ -518,6 +518,25 @@ label ch13_main:
     s "I guess this is the best idea we're going to get, isn't it?"
     s "I wonder if Natsuki would have said anything different."
     s "Oh well..."
+    s "Since we aren't really doing anything today, I thought we could skip to sharing poems."
+    s "There's not really a point sitting here talking about what we could do for the fest--"
+    s "I mean, for \"Inauguration Day\" without Natsuki here."
+    s "The best we could do is come up with books to perform but that's not really fair without her."
+    show yuri zorder 3 at f32
+    show sayori zorder 2 at t33
+    y "That's a fair reason, Sayori."
+    y "We should be considerate of Natsuki's feelings as well."
+    y "Maybe tonight we can all come up with a list of books that we like that would be a good idea to perform."
+    y "And tomorrow we can choose which one we're performing from everyone's options."
+    show yuri zorder 2 at t32
+    show sayori zorder 3 at f33
+    s "Yeah, that would probably be the best way to handle it."
+    s "I guess that's everyone's task for tonight!"
+    s "Everybody choose one or two books you'd like to perform in front of actual people."
+    s "I don't know how long Natsuki is going to be away for so I'll go visit her tonight to make sure everything is okay."
+    show monika zorder 3 at f31
+    show sayori zorder 2 at t33
+
     return
 
 label ch13_end:
