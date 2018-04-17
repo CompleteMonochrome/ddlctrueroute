@@ -259,7 +259,15 @@ Red."""
 
     poem_y6 = Poem(
 author = "yuri",
-title = "Rectification",
+title = "Pointless",
+text = """\
+Why am I here?
+"""
+)
+
+    poem_y6b = Poem(
+author = "yuri",
+title = "Senseless",
 text = """\
 Am I free to do what I wish?
 That feeling of dread is gone, but for how long?
