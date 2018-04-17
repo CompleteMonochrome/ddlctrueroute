@@ -594,25 +594,25 @@ label choose_start:
                     s "I see."
                     s "That seems like an invasion of privacy but..."
                     s "I'm not judging! It's probably important."
-                    label custom_ch11_roomcheck:
+                    label custom_ch11_roomcheck_2:
                     menu:
                         s "Which rooms did you check?"
                         "First room upstairs." if not persistent.natsuki_house[0]:
                             $ persistent.natsuki_house[0] = True
                             $ talkabout_natsuki_house[0] = True
-                            jump custom_ch11_roomcheck
+                            jump custom_ch11_roomcheck_2
                         "Second room upstairs." if not persistent.natsuki_house[1]:
                             $ persistent.natsuki_house[1] = True
                             $ talkabout_natsuki_house[1] = True
-                            jump custom_ch11_roomcheck
+                            jump custom_ch11_roomcheck_2
                         "Closed room downstairs." if not persistent.natsuki_house[2]:
                             $ persistent.natsuki_house[2] = True
                             $ talkabout_natsuki_house[2] = True
-                            jump custom_ch11_roomcheck
+                            jump custom_ch11_roomcheck_2
                         "Living room." if not persistent.natsuki_house[3]:
                             $ persistent.natsuki_house[3] = True
                             $ talkabout_natsuki_house[3] = True
-                            jump custom_ch11_roomcheck
+                            jump custom_ch11_roomcheck_2
                         "Done.":
                             pass
                 "Stayed in her room.":
