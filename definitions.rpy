@@ -13,6 +13,7 @@ init python:
     config.keymap['clipboard_voicing'] = []
     config.keymap['toggle_skip'] = []
     renpy.music.register_channel("music_poem", mixer="music", tight=True)
+    renpy.music.register_channel("music_play", mixer="music", tight=True)
     def get_pos(channel='music'):
         pos = renpy.music.get_pos(channel=channel)
         if pos: return pos
@@ -1944,6 +1945,10 @@ default ch12_markov_agree = False
 default haruki_personality = [False,False,False]
 default normal_haruki = False
 default yasuhiro_haruki_together = False
+default n_appealS = 0
+default s_appealS = 0
+default y_appealS = 0
+default m_appealS = 0
 
 default y_gave = False
 default y_ranaway = False

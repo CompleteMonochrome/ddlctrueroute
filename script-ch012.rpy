@@ -1106,7 +1106,7 @@ label ch12_play:
         s 1d "Still, I guess it doesn't really matter since all you really have to do is read."
     s 2q "I'll go get everybody else, then we can start."
     scene bg gym with wipeleft_scene
-    play music t5 fadeout 1.0
+    play music t11 fadeout 1.0
     "It's time for the start of the second play."
     "We all decided that I play the main male character..."
     "...who happens to be the most useless one in the volume."
@@ -1203,10 +1203,6 @@ label ch12_play:
     show natsuki at thide
     hide natsuki
     show sayori zorder 2 at t11
-    $ currentpos = get_pos()
-    $ audio.t5c = "<from " + str(currentpos) + " loop 4.444>bgm/5_sayori.ogg"
-    stop music fadeout 1.0
-    $ renpy.music.play(audio.t5c, channel="music_poem", fadein=1.0, tight=True)
     "The three leave the scene. Most of their fighting happens in the background of Saika and Maemi's."
     s 2c "Ready, Maemi?"
     mc "I think so..."
@@ -1244,6 +1240,10 @@ label ch12_play:
                 mc "Sayori..."
                 mc "I'm not doing this."
                 show sayori 1h zorder 2 at t11
+                $ currentpos = get_pos()
+                $ audio.t11b = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11g.ogg"
+                stop music fadeout 1.0
+                $ renpy.music.play(audio.t11b, channel="music_play", fadein=1.0, tight=True
                 s "W-What...?"
                 s "W-Why not?"
                 mc "I'm going to look ridiculous..."
@@ -1270,7 +1270,10 @@ label ch12_play:
                 play sound "sfx/s_kill_glitch1.ogg"
                 hide sayori
                 hide natsuki
+                stop music_play
                 $ pause(0.25)
+                $ audio.t11c = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11.ogg"
+                play music t11c
                 stop sound
                 hide screen tear
                 window show(None)
@@ -1310,10 +1313,6 @@ label ch12_play:
     s "Ehehe, that was fun."
     mc "Oddly enough...I have to agree with you."
     scene bg gym with wipeleft_scene
-    $ currentpos = get_pos()
-    $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>bgm/5_natsuki.ogg"
-    stop music fadeout 1.0
-    $ renpy.music.play(audio.t5b, channel="music_poem", fadein=1.0, tight=True)
     "The scene ends with everyone meeting up with the person they were escorting."
     "It isn't a very interesting scene since it's mainly just narrative."
     "Once they finish the escort mission, they head back to their headquarters."
@@ -1419,6 +1418,10 @@ label ch12_play:
                 mc "I think it's the best solution we have."
                 mc "Especially given how uncontrollable my ability currently is."
                 show sayori 1h zorder 3 at f44
+                $ currentpos = get_pos()
+                $ audio.t11b = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11g.ogg"
+                stop music fadeout 1.0
+                $ renpy.music.play(audio.t11b, channel="music_play", fadein=1.0, tight=True
                 s "W-What's going on?"
                 s "This isn't part of the script at all!"
                 s "I was gonna say something earler but I thought you were just messing around!"
@@ -1453,7 +1456,10 @@ label ch12_play:
                 show natsuki 1q zorder 2 at t42
                 show monika 3b zorder 2 at f43
                 show sayori 2n zorder 3 at t44
+                stop music_play
                 $ pause(0.25)
+                $ audio.t11c = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11.ogg"
+                play music t11c
                 stop sound
                 hide screen tear
                 window show(None)
@@ -1505,13 +1511,13 @@ label ch12_play:
         s "She remembers a little bit."
         s "..."
         python:
-            currentpos = get_pos(channel="music_poem")
+            currentpos = get_pos()
             startpos = currentpos - 0.3
             if startpos < 0: startpos = 0
-            track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/5_natsuki.ogg"
-            renpy.music.play(track,channel="music_poem",loop=True)
+            track = "<from " + str(startpos) + " to " + str(currentpos) + ">mod_assets/bgm/11.ogg"
+            play track
         $ pause(1.0)
-        stop music_poem
+        stop music
         $ config.skipping = False
         $ config.allow_skipping = False
         s 1i "Time's frozen."
@@ -1567,9 +1573,9 @@ label ch12_play:
         show natsuki 1g zorder 2 at f42
         show monika 2e zorder 2 at t43
         show sayori 2n zorder 3 at t44
-        $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>bgm/5_natsuki.ogg"
-        $ renpy.music.play(audio.t5b, channel="music_poem", fadein=1.0, tight=True)
         $ pause(0.5)
+        $ audio.t11d = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11.ogg"
+        play music t11d
         stop sound
         hide screen tear
         window show(None)
@@ -1765,8 +1771,7 @@ label ch12_play:
     n "T-There's no way she'd go here, and today of all times."
     show natsuki zorder 2 at t42
     "Yasuhiro's expression suddenly shifts."
-    stop music_poem fadeout 3.0
-    play music t9 fadein 3.0
+    play music t9 fadeout 3.0 fadein 3.0
     if check_whole_house:
         "He doesn't look angry anymore, just..."
         "...concerned."
@@ -2241,10 +2246,6 @@ label ch12_harukiplace:
     "Natsuki doesn't look convinced but nods her head."
     s 3a "Great, so where were we?"
     s "Oh, right!"
-    $ currentpos = get_pos()
-    $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>bgm/5_natsuki.ogg"
-    stop music fadeout 1.0
-    $ renpy.music.play(audio.t5b, channel="music_poem", fadein=1.0, tight=True)
     "Sayori quickly changes her whole composure and expression."
     s 4d "You're an important part of the team, Nozomi."
     s 4r "You all are."
@@ -2375,8 +2376,7 @@ label ch12_harukiplace:
     show momsuki zorder 3 at f31
     show natsuki zorder 2 at t32
     if normal_haruki:
-        stop music_poem fadeout 2.0
-        play music t9 fadein 2.0
+        play music t9 fadeout 2.0 fadein 2.0
         mo 1f "Natsuki? It's been so long..."
         mo "I'm surprised you still remember the appearance of your mother..."
         mo "My...how you've grown."
@@ -2958,7 +2958,8 @@ label ch12_harukiplace:
         mo 1i "Let go of me."
         show momsuki zorder 2 at t31
         show natsuki 1m zorder 3 at f32
-        stop music_poem fadeout 2.0
+        $ currentpos = get_pos() / 2.07
+        play music "<from " + str(currentpos) + " loop 1.532>bgm/9g.ogg"
         n "W-What?"
         n "D-Don't you know who I am?"
         show momsuki zorder 3 at f31
@@ -3057,7 +3058,8 @@ label ch12_harukiplace:
         else:
             show dadsuki 1e zorder 2 at t54
         show yuri 3ph zorder 2 at t55
-        play music t9 fadein 0.5
+        $ currentpos = get_pos() * 2.07
+        play music "<from " + str(currentpos) + " loop 3.172>bgm/9.ogg"
         $ pause(0.5)
         stop sound
         hide screen tear
@@ -3313,10 +3315,6 @@ label ch12_harukinoplace:
     "Natsuki doesn't look convinced but nods her head."
     s 3a "Great, so where were we?"
     s "Oh, right!"
-    $ currentpos = get_pos()
-    $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>bgm/5_natsuki.ogg"
-    stop music fadeout 1.0
-    $ renpy.music.play(audio.t5b, channel="music_poem", fadein=1.0, tight=True)
     "Sayori quickly changes her whole composure and expression."
     s 4d "You're an important part of the team, Nozomi."
     s 4r "You all are."
@@ -3520,8 +3518,7 @@ label ch12_harukinoplace:
         show dadsuki 1b zorder 3 at f51
         show monika zorder 2 at t52
         d "Thank you..."
-        stop music_poem fadeout 2.0
-        play music t9 fadein 2.0
+        play music t9 fadeout 2.0 fadein 2.0
         d 1n "Listen, Natsuki."
         d "I know you have no reason to care about what I have to say."
         d "In fact, you probably don't want to listen to what I have to say."
@@ -3779,7 +3776,7 @@ label ch12_harukinoplace:
             $ natsuki_approval -= 1
         d 1h "This..."
         d "This is pathetic."
-        stop music_poem fadeout 2.0
+        stop music fadeout 2.0
         d 1g "Are you really wasting my time with this sorry excuse you call a play?"
         d "I've been patient until now but this is getting out of hand."
         d 1c "Are you trying to make me feel some remorse?"
@@ -4309,5 +4306,11 @@ label ch12_end:
     "It doesn't really make any sense."
     "I still have my whole life ahead of me..."
     "Maybe a good night's rest will clear my mind."
+    # Set variables for Sayori's arc!!!
+    $ n_appealS = 0
+    $ s_appealS = 0
+    $ y_appealS = 0
+    $ m_appealS = 0
     $ persistent.arc_clear[1] = True
+    $ renpy.save_persistent()
     return

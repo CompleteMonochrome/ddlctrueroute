@@ -109,7 +109,13 @@ label poemresponse_yuri_new:
 
 label poemresponse_monika_new:
     scene bg club_day
-    show monika 1a zorder 2 at t11
+    if chapter >= 12:
+        if monika_type == 1 and ch12_markov_agree:
+            show monika 1ha zorder 2 at t11
+        else:
+            show monika 1a zorder 2 at t11
+    else:
+        show monika 1a zorder 2 at t11
     with wipeleft_scene
     $ poemopinion = "med"
     if chapter > 11:
@@ -331,6 +337,9 @@ label ch12_y_end:
         mc "You're welcome...?"
     return
 
+label ch13_y_end:
+    return
+
 label ch6_n_end:
     call showpoem (poem_n4)
     n 1c "So..."
@@ -531,6 +540,9 @@ label ch12_n_end:
         "Natsuki shows me an unconvincing smile."
         n "See, I'm fine."
         n 2i "Now you can go already."
+    return
+
+label ch13_n_end:
     return
 
 label ch6_s_end:
@@ -774,6 +786,9 @@ label ch12_s_end:
         mc "Just make sure you look out for your own happiness too, okay?"
         mc "I can't always look out for you, even with how hard I try."
         s 1d "Thanks, [player]. That means a lot..."
+    return
+
+label ch13_s_end:
     return
 
 label ch6_m_end:
@@ -2146,6 +2161,18 @@ label ch12_m_start:
         m 2e "I'll let you read my poem now then."
     return
 
+label ch12_m_start:
+    if monika_type == 0:
+    elif monika_type == 1:
+    else:
+
+    $ nextscene = "msay_" + sayarcpoemwinner[0] + "_" + str(eval(sayarcpoemwinner[0][0] + "_appealS"))
+
+    if monika_type == 0:
+    elif monika_type == 1:
+    else:
+    return
+
 label mnew_yuri_1:
     m 2a "Hmm..."
     m "Aha, if I couldn't tell from the handwriting..."
@@ -2525,4 +2552,17 @@ label mnew_monika_4:
         m "Well, abstract poems are meant to be interpreted differently."
         m "So it's not always interpreted how the author intended."
         mc "I guess you're right."
+    return
+
+# Sayori Arc Monika Poem Critiques
+label msay_yuri_1:
+    return
+
+label msay_natsuki_1:
+    return
+
+label msay_sayori_1:
+    return
+
+label msay_monika_1:
     return

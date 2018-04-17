@@ -257,6 +257,33 @@ It can sense the betrayal.
 Red."""
 )
 
+    poem_y6 = Poem(
+author = "yuri",
+title = "Rectification",
+text = """\
+Am I free to do what I wish?
+That feeling of dread is gone, but for how long?
+A looming feeling fills the void left by the dread.
+I can't think about that now, for I have been rectified.
+I gather my bread and knife for my lonely midnight snack.
+
+The raccoon still visits me during the night,
+It searches for the scraps of bread that I left for it once before.
+I've learned my lesson, it's a pest.
+Feeding it will only lead to regret.
+The raccoon claws at my door, longing for the bread I once shared.
+But my actions have to be rectified.
+
+Brandishing the knife, I step outside.
+It looks upon me with menacing eyes.
+Can I truly do this?
+It's been my friend for so long...
+But I'm still under the process of rectification.
+There's no choice,
+It can sense the betrayal.
+Red."""
+)
+
     poem_n1 = Poem(
     author = "natsuki",
     title = "Eagles Can Fly",

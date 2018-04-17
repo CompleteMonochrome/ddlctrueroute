@@ -534,10 +534,30 @@ label ch13_main:
     s "I guess that's everyone's task for tonight!"
     s "Everybody choose one or two books you'd like to perform in front of actual people."
     s "I don't know how long Natsuki is going to be away for so I'll go visit her tonight to make sure everything is okay."
-    show monika zorder 3 at f31
     show sayori zorder 2 at t33
-
+    if monika_type == 0:
+        show monika zorder 3 at f31
+        m "I think that's a great idea."
+        m "She probably would appreciate you visiting."
+        m "I wonder how she's dealing with everything..."
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika 1hb zorder 3 at f31
+        m "Knowing Natsuki, she'd probably appreciate the company."
+        m "That's really kind of you, Sayori."
+    else:
+        show monika zorder 3 at f31
+        m "Visiting Natsuki at a time like this...?"
+        m "I guess something that resembles part of her normal life would be appreciated."
+    show monika zorder 2 at t31
+    "Sayori smiles sweetly at Monika."
+    show sayori zorder 3 at f33
+    s "Alright, everybody!"
+    s "Is everyone ready to share their poems?"
+    s "Ehehe, ready or not, it's time!"
+    # Natsuki is not in the meeting
+    $ n_ranaway = True
     return
 
 label ch13_end:
+    $ n_ranaway = False
     return
