@@ -262,6 +262,25 @@ author = "yuri",
 title = "Pointless",
 text = """\
 Why am I here?
+In a world encapsulated without light,
+A world shadowed completely with darkness,
+Guiding lights previously brought relief.
+Now all are left to wander the darkness.
+
+Must misery brandish a blade towards me?
+Closer and closer it streams like lava, until it erupts.
+But this eruption brought forth a new light, not bright nor guiding.
+Simply a flicker, a flicker that must be heeded.
+The flicker in the dark that revealed all I am.
+
+I'm an instrument, without point or purpose.
+Without my edge, my point is blunt.
+Without a point, there can be no light.
+Without the light, the colors fade into nothing.
+
+No light, no colors to relish.
+This encapsulated world is devoid of color.
+In the end, it's all pointless.
 """
 )
 
