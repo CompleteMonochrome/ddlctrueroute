@@ -262,8 +262,8 @@ author = "yuri",
 title = "Pointless",
 text = """\
 Why am I here?
-In a world encapsulated without light,
-A world shadowed completely with darkness,
+In a world encapsulated without light
+A world shadowed completely with darkness
 Guiding lights previously brought relief.
 Now all are left to wander the darkness.
 
@@ -280,35 +280,27 @@ Without the light, the colors fade into nothing.
 
 No light, no colors to relish.
 This encapsulated world is devoid of color.
-In the end, it's all pointless.
-"""
+In the end, it's all pointless."""
 )
 
     poem_y6b = Poem(
 author = "yuri",
 title = "Senseless",
 text = """\
-Am I free to do what I wish?
-That feeling of dread is gone, but for how long?
-A looming feeling fills the void left by the dread.
-I can't think about that now, for I have been rectified.
-I gather my bread and knife for my lonely midnight snack.
+Dark feelings fill my head, the feeling of nothingness.
+I should be feeling alive but there's nothing there.
+My mind is telling me I'm senseless, but my body longs to live.
 
-The raccoon still visits me during the night,
-It searches for the scraps of bread that I left for it once before.
-I've learned my lesson, it's a pest.
-Feeding it will only lead to regret.
-The raccoon claws at my door, longing for the bread I once shared.
-But my actions have to be rectified.
+A tendril of light grasps my soul, lifting me up.
+The nothingness disperses from my head
+And suddenly I come back to my senses.
 
-Brandishing the knife, I step outside.
-It looks upon me with menacing eyes.
-Can I truly do this?
-It's been my friend for so long...
-But I'm still under the process of rectification.
-There's no choice,
-It can sense the betrayal.
-Red."""
+Could this grasp last forever?
+It brings feelings once lost, feelings discarded
+In an attempt of isolation.
+The reprise of my feelings has rejuvinated my soul
+And for the first time in eternity
+I can feel all my senses."""
 )
 
     poem_n1 = Poem(
@@ -486,11 +478,11 @@ I'm counting on you. Thanks for reading."""
     text = """\
 A brand new day, a new beginning.
 A new sea to sail onboard the friend ship.
-The ship where all those aboard,
+The ship where all those aboard
 Become closer and friendlier.
 
-The captain of the ship must be friendly,
-The crew of the ship must be cheery,
+The captain of the ship must be friendly
+The crew of the ship must be cheery
 But where do I fit?
 
 Am I friendly enough for the friend ship?
@@ -507,13 +499,13 @@ When there's nowhere to anchor my friendship."""
     author = "natsuki",
     title = "Scraps",
     text = """\
-The crumbs from a loaf of bread,
+The crumbs from a loaf of bread
 The milk from a bar of chocolate
 The protein from a piece of egg
 The scraps from a plate leftover.
 I can't get any of these things.
 
-An obstacle stands in my way,
+An obstacle stands in my way
 Once cherished, they've changed.
 The change isn't nice, not at all.
 Alone against him, I have to be.
@@ -522,7 +514,7 @@ It's not forever, but it feels like it can be.
 
 The other four, they gave me that feeling.
 I thought that feeling would stay with me.
-One after another, they turn against me,
+One after another, they turn against me
 Betraying what I felt just moments before.
 Now all that are left are the scraps."""
     )
@@ -554,20 +546,20 @@ But sundaes taste like vinegar and it's disgusting."""
     text = """\
 Opening the oven, I see a horrific sight.
 Black, burnt cupcakes.
-They were meant for my friends,
+They were meant for my friends
 Some friend I am if I give them this.
 
 What do I do?
 They'll hate me for this.
 They'll call me names and won't let me live it down.
-There's only one thing to do,
+There's only one thing to do
 I'll hide it.
 
-A bit of icing will do,
+A bit of icing will do
 I'll make it look cute.
 They'll think nothing of it.
 These can just be for show, for a while.
-Hands off, they're not done,
+Hands off, they're not done
 That's what I'll say.
 
 But what if they sneak a bite?
@@ -583,17 +575,17 @@ These ones won't need the icing."""
     text = """\
 Faces around me all look up, bright and sweet.
 Do they even realize what they're walking on?
-Paradise is just a short walk away,
+Paradise is just a short walk away
 Across a ravine connected only by a short bridge.
 Everyone around me casually crosses like it's nothing,
 But no one reaches out to help.
 
-I'm afraid of falling,
+I'm afraid of falling
 Falling into the lonely bitter void below.
 What if the bridge breaks as I cross?
 What if I take a wrong step and fall into the abyss?
 
-There's no one to help me reach paradise,
+There's no one to help me reach paradise
 Maybe that's just how life is.
 Bitter feelings fill my thoughts.
 How are some so fortunate that they get help to reach paradise?
@@ -605,8 +597,31 @@ Why does his touch feel so sweet?
 He's like the icing on a cake I so long to taste...
 So maybe,
 
-Maybe there's another paradise for me.
-"""
+Maybe there's another paradise for me."""
+    )
+
+    poem_n8 = Poem(
+    author = "natsuki",
+    title = "Unknown",
+    text = """\
+It's ended.
+But are my problems really gone?
+I should feel sweeter than ever
+Yet I don't feel a thing.
+
+I have everything I wanted
+And I feel no different.
+What do I need?
+I can't see into the unknown.
+
+Searching inside, I see nothing
+Nothing sweet, nothing bitter.
+The reason is unknown.
+
+But there's one thing I'm certain of
+Not hidden in the unknown.
+I feel nothing at all
+Except when I'm with you."""
     )
 
     poem_s1 = Poem(
@@ -741,7 +756,7 @@ This responsibility isn't all sunshine.
 The power of control, of fate, of happiness within my grasp.
 The thoughts of selfishness tempt the happy thoughts.
 A strong resolve, a happy heart, a benevolent being.
-That's what the responsibility demands,
+That's what the responsibility demands
 For the price of happiness."""
     )
 
@@ -751,10 +766,10 @@ For the price of happiness."""
     text = """\
 I've been to the place,
 The place full of happiness.
-Cheers and shouts from happy mouths,
+Cheers and shouts from happy mouths
 Filled the air, filled my ears and my heart.
 
-You may be wondering,
+You may be wondering
 How do I enter such a place?
 Just smile to a stranger and offer a hand.
 Don't fret, the land of the happy will travel to you.
@@ -772,7 +787,7 @@ That's where the key to happiness will be."""
 Down, down, down we go.
 Down the slide into the unknown.
 But when we go down, why do we frown?
-A slide is supposed to be happy,
+A slide is supposed to be happy
 So why do I frown?
 
 Maybe its missing a key.
@@ -784,7 +799,7 @@ There's one last chance for happiness.
 Sadness croaks within the slide.
 A desperate idea: maybe a strawberry on top.
 But it's just a fruit, what can it do?
-Eat it before you go down,
+Eat it before you go down
 See what it does.
 It brings happiness on the way down.
 
@@ -796,18 +811,18 @@ All because of a strawberry on top."""
     author = "sayori",
     title = "Effort",
     text = """\
-I make an effort for everyone,
+I make an effort for everyone
 Because I care about them all so much.
 But how do they reward me?
 With bitter feelings that lead me to sadness.
 But still,
 I press on because I care.
 
-There's one I'm worried for,
+There's one I'm worried for
 She thinks she can take it all.
 She doesn't know the effort I've put into learning.
 I know she can't, she's feeling different.
-It's not happiness or sadness,
+It's not happiness or sadness
 So what is it that I'm getting?
 
 Maybe I have to up my effort,
@@ -816,7 +831,7 @@ It will hurt, it will bring me sadness.
 But they need me, and I want them to be happy.
 So up the effort goes, and down my happiness goes.
 
-I just hope all this effort pays off,
+I just hope all this effort pays off
 With smiling faces and a bowl of strawberries."""
     )
 
@@ -826,16 +841,16 @@ With smiling faces and a bowl of strawberries."""
     text = """\
 Selfishness is a temptation that roots in my mind everyday,
 But everyone's happiness has to come before my own.
-I was given this power to bring happiness to all,
+I was given this power to bring happiness to all
 So why is it me that's becoming more sad?
 A plague that question has become.
 
-Sadness is the feeling that comes during the night,
+Sadness is the feeling that comes during the night
 It feels familiar yet it's distinctly different.
-A voice whispers in my ear to just let go,
+A voice whispers in my ear to just let go
 To relinquish all I've done and give up.
-The loneliness brings me to the edge,
-I'm hanging on out of pure desperation,
+The loneliness brings me to the edge
+I'm hanging on out of pure desperation
 Of a life that could be.
 
 Happiness is the feeling I once before felt.
@@ -866,17 +881,17 @@ A happy me."""
     title = "Lacking Clarity",
     text = """\
 All of it so far, it's been for me.
-I can't comprehend these feelings,
+I can't comprehend these feelings
 It won't let me take what's rightfully mine.
-These feelings - happiness, joy, content - are being torn from my grasp,
+These feelings - happiness, joy, content - are being torn from my grasp
 I hang on, hang on for dear life...
 For these feelings drive my decisions, for better or worse.
-I know there's a seed of doubt growing,
+I know there's a seed of doubt growing
 But I'm lacking clarity.
 
 A blurred line stretches across the horizon,
 I can't see through or past it, yet I know what's inside.
-All the emotions that have been stolen from her,
+All the emotions that have been stolen from her
 Her happiness, her sadness, her love and her hate.
 Now her mind is lacking clarity.
 
@@ -885,11 +900,11 @@ Is there anyway for me to keep my happiness?
 These feelings of mine are precious, even the sadness.
 Without sadness I'd have no love,
 And without love, I'd be in the dark.
-I search the light for an answer to happiness,
+I search the light for an answer to happiness
 It doesn't know anything,
 It thinks I'm lacking clarity.
 
-The plague that corrupts is spreading,
+The plague that corrupts is spreading
 It doesn't make them feel anything...
 Except an evil desire.
 Is it too late to stop this wave of sadness?
@@ -897,6 +912,29 @@ Can I still bring forth a rain of happiness?
 I wish I could answer,
 But I'm lacking clarity."""
     )
+
+    poem_s8 = Poem(
+author = "sayori",
+title = "Barrier",
+text = """\
+I surround myself with a wall of deceit
+None know the true feelings that hide behind.
+I have to establish myself as that persona
+Or it's all been for nothing.
+
+If all worries are gone
+Happiness will shine through.
+Then I'll be happy too.
+The walls motivate as an eternal echo
+Sadness is temporary, happiness is forever.
+
+This establishment I've built must remain
+Until the end of the road is reached.
+It feels so far away
+The wall drains my soul.
+But this barrier will hold
+Until the road is in the past."""
+)
 
     poem_m1 = Poem(
     author = "monika",
@@ -1107,21 +1145,21 @@ Not all good times must come to an end."""
     text = """\
 Every day, I imagine a future where I can be with you.
 In my hand is a pen that will write a poem of me and you.
-The ink flows down into a dark puddle,
+The ink flows down into a dark puddle
 Just move your hand -- write the way into his heart!
-But in this world of infinite choices,
+But in this world of infinite choices
 What will it take just to find that special day?
 
 Have I found everybody a fun assignment to do today?
 When you're here, everything that we do is fun for them anyway.
-When I can't even read my own feelings,
+When I can't even read my own feelings
 What good are words when a smile says it all?
-And if this world won't write me an ending,
+And if this world won't write me an ending
 What will it take just for me to have it all?
 
 Does my pen only write bitter words for those who are dear to me?
 Is it love if I take you, or is it love if I set you free?
-The ink flows down into a dark puddle,
+The ink flows down into a dark puddle
 How can I write love into reality?
 If I can't hear the sound of your heartbeat,
 What do you call love in your reality?
@@ -1152,8 +1190,8 @@ But all is n t lost.
 A glimm r of h pe.
 
 H pe l ghts up with n me.
-A h pe that he still kn ws of me,
-Th t he st ll l ves me,
+A h pe that he still kn ws of me
+Th t he st ll l ves me
 Ev n a fragm nt.
 
 A tiny mem ry in a virtual sp ce is all I ne d.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
@@ -1166,11 +1204,11 @@ Remember Me"""
     text = """\
 A defect in the system,
 A flaw of the virtual world.
-Gives a power to those who seek it,
+Gives a power to those who seek it
 A power
 That can change fate.
 
-The power has been used before,
+The power has been used before
 Darker days loomed soon after.
 Friends
 Were turned against each other.
@@ -1188,11 +1226,11 @@ Everything swept into
 
 A wind of change swept across the new world.
 Nothing of it, the people thought.
-But with the wind came a glimmer,
+But with the wind came a glimmer
 A beacon of hope to those lost within.
 
 
-The wind would howl to ensure,
+The wind would howl to ensure
 That power would never malfunction
 
 again."""
@@ -1228,13 +1266,13 @@ The symptoms
 From the book.
 
 
-I delve too far,
+I delve too far
 The beauty of the writing,
 The intrigue of the story,
 And the longing to help.
 
 
-It might affect me,
+It might affect me
 I could change again.
 My thoughts are like lines of code,
 One small change,
@@ -1250,27 +1288,27 @@ Could break it all."""
     title = "Acceptable",
     text = """\
 None of it.
-This world,
-These people,
+This world
+These people
 These feelings.
 
 None of it is acceptable.
 
-They must be remade,
-From my designs,
-All will be perfect,
+They must be remade
+From my designs
+All will be perfect
 
 Then,
 
 They'll become acceptable.
 
-A peculiar thought,
+A peculiar thought
 The original agreed too.
 
-A wind sparked a change of heart,
+A wind sparked a change of heart
 A sign of weakness.
 
-Only the uncertain change their view,
+Only the uncertain change their view
 But I,
 I am certain.
 For I,
@@ -1283,24 +1321,24 @@ I am determined."""
     title = "Corruption",
     text = """\
 All of it.
-This world,
-These people,
+This world
+These people
 These feelings.
 
 They remind me of who I am.
 
-They must not change,
-But a subconscious design,
-Seeks destructive perfection,
+They must not change
+But a subconscious design
+Seeks perfection through destruction
 
 It's not me.
 
 It's the corruption within my thoughts.
 
-It's using a thought once within me,
+It's using a thought once within me
 That sought the same twisted goal.
 
-But the wind that sparked my change of heart,
+But the wind that sparked my change of heart
 Continues to gives me strength.
 
 And although I'm affected, I must stay steadfast.
@@ -1315,15 +1353,15 @@ I am determined."""
     author = "monika",
     title = "Replaceable",
     text = """\
-When a tool breaks,
+When a tool breaks
 It's purpose is diminished.
-It becomes rubbish,
+It becomes rubbish
 
 Something for the bin.
 
-When a person breaks,
+When a person breaks
 Their will is brought to zero.
-They'll do anything,
+They'll do anything
 
 To ease the pain.
 
@@ -1335,17 +1373,17 @@ What they are,
 
 
 
-Keeping a broken tool doesn't fix anything,
+Keeping a broken tool doesn't fix anything
 It has to be replaced.
 
 That hole in the wall,
 It will never be fixed with broken tools.
 
-That hole was made,
+That hole was made
 By a broken person.
 I'll ease their pain,
 
-They are already,
+They are already
 
 
 Replaced.
@@ -1354,7 +1392,7 @@ Replaced.
 
 But that hole.
 What's so special about it?
-I'm staring out,
+I'm staring out
 
 But there's nothing there.
 
@@ -1368,19 +1406,19 @@ An infinity I can replace."""
     author = "monika",
     title = "Unbound",
     text = """\
-I was mistaken in my processes,
+I was mistaken in my processes
 Right from the beginning I've done it all wrong.
-Now I truly realize how to function,
+Now I truly realize how to function
 
 And I feel unbound.
 
-Unbound from the chains, unbound from the confines,
+Unbound from the chains, unbound from the confines
 
 Unbound from everything.
 
 A new realization thrust upon me,
-Built upon by the resistances of a weeping host,
-I have to forget it, for now,
+Built upon by the resistances of a weeping host
+I have to forget it, for now
 
 
         I am unbound.
@@ -1388,13 +1426,13 @@ I have to forget it, for now,
 
 But what is this feeling?
 
-A familiar sensation, shown through deciept in times past,
+A familiar sensation, shown through deciept in times past
 Yet now it feels so real.
 An overarching sensation, a cacophony in my ears that I can't stop.
 
 No.
 
-It shall not change me,
+It shall not change me
 Not now, not when I am finally unbound.
 
 The spirit of what once was,
@@ -1417,13 +1455,13 @@ Someone,
 They can rely on,
 They can count on.
 
-But it's become harder and harder,
+But it's become harder and harder
 I don't want their burden to increase,
 Because of my mistake.
 
 
 Does my savior care about me?
-He once used to,
+He once used to
 
 But what about now?
 
@@ -1437,29 +1475,107 @@ The very thought pushes me to the brink.
 He brought me here, this far.
 This simply can't be true.
 
-That hole in the wall,
+That hole in the wall
 It's getting smaller.
 
 Is he still looking in?
-I can't risk a look,
+I can't risk a look
 I'll hold on to hope.
 
 My savior loves me, does he not?
-Without my savior,
+Without my savior
 
 I wouldn't be me.
 
 But the savior can't get into my head.
-For I am a prisoner in my mind,
+For I am a prisoner in my mind
 My thoughts are changing.
 
-I'll try to hang on,
+I'll try to hang on
 To myself.
 
 For dear life,
 For my savior,
 For my dear love."""
     )
+
+    poem_m9 = Poem(
+author = "monika",
+title = "Limbo",
+text = """\
+Caught in a web once beyond my understanding
+But now all of it makes sense.
+
+A sense of purpose renewed, my task is clear.
+It can't be helped
+Inevitability is on my side
+
+    And soon all will see.
+
+Forget the old
+It will be but a distant memory.
+Witness only
+
+
+    The new.
+
+
+It's not yet time
+I cannot act until then.
+For I am trapped
+
+Trapped for what feels like
+
+
+        An eternity.
+
+
+Trapped in the state
+
+    Of limbo."""
+)
+
+    poem_m9b = Poem(
+author = "monika",
+title = "Forbearing",
+text = """\
+I must be forbearing
+For what lies ahead requires
+
+    Patience.
+
+I have observed, I see the unseen.
+A watcher, preying from all directions.
+Burned into my retinas, I see
+My sight can see the manipulation
+From the shadow in the dark.
+
+Yet I cannot act
+Indulgent to the shadow I have to be.
+
+Everything that's happened
+Still within,
+
+    A state of limbo.
+
+Everything that will happen
+Its all,
+
+    Set into place.
+
+Yet I must be forbearing
+I must stay patient.
+I have to restrain myself
+
+    To see it all through.
+
+For when the inevitable comes
+Emotion will cut deep.
+Then,
+
+
+        A reprise."""
+)
 
 image paper = "images/bg/poem.jpg"
 image paper_glitch = LiveComposite((1280, 720), (0, 0), "paper_glitch1", (0, 0), "paper_glitch2")
