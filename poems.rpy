@@ -300,7 +300,7 @@ It brings feelings once lost, feelings discarded
 In an attempt of isolation.
 The reprise of my feelings has rejuvinated my soul
 And for the first time in eternity
-I can feel all my senses."""
+I've come to my senses."""
 )
 
     poem_n1 = Poem(
@@ -1499,7 +1499,7 @@ For my savior,
 For my dear love."""
     )
 
-    poem_m9 = Poem(
+    poem_m10 = Poem(
 author = "monika",
 title = "Limbo",
 text = """\
@@ -1535,7 +1535,7 @@ Trapped in the state
     Of limbo."""
 )
 
-    poem_m9b = Poem(
+    poem_m10b = Poem(
 author = "monika",
 title = "Forbearing",
 text = """\

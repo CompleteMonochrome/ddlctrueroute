@@ -1949,6 +1949,7 @@ default n_appealS = 0
 default s_appealS = 0
 default y_appealS = 0
 default m_appealS = 0
+default ch13poemwinner = "Sayori"
 
 default y_gave = False
 default y_ranaway = False
