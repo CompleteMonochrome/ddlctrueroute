@@ -3,7 +3,15 @@ label ch13_main:
     show sayori 1a zorder 2 at t11
     with dissolve_scene_full
     play music mend fadeout 2.0
-    s "I should probably tell you that I changed the poem game a little."
+    s "I want to say that I don't really know what's going to happen today."
+    s "I know I made the day and everything but something is changing it..."
+    s "I don't know if that makes any sense to you but it's making my ability to see into the future kinda useless."
+    s "Maybe it's just the game glitching out from too many days or something."
+    s "Or maybe I just can't see what's going to happen..."
+    s "Who knows?"
+    s "I could ask Monika about it but..."
+    s "Never mind."
+    s "Anyway, I should probably tell you that I changed the poem game a little."
     s "Your poem doensn't really matter anymore."
     s "After yesterday, I didn't really see the point."
     s "Seeing as everyone already knows the type of style you're writing."
@@ -107,21 +115,182 @@ label ch13_main:
         s "No, I can't think like that."
         s "It's far too selfish..."
         s "Goodbye."
+    stop music fadeout 0.5
     scene bg residential_day
     with dissolve_scene_full
+    play music t2 fadein 1.0
+    "After what happened yesterday, I felt bad for not checking up on Natsuki."
+    "Sayori told me that she has it handled but I'm still a little worried."
+    "I was expecting Sayori to come over to my house and tell me to wake up."
+    "Instead, she told me she had to take care of some \"final preparations\" this morning."
+    "I don't know what she meant by that but it means I have to walk to school by myself."
+    "I had to walk by myself yesterday..."
+    "I just hope this walking by myself thing doesn't go on for much longer."
+    "It's not really really a big issue, it's just that..."
+    "It's always better walking to school with someone close to me."
+    "There was more we could talk about and it made the journey less boring."
+    "I wonder what final preparations Sayori is doing."
+    "It must be something for the club."
+    "Still, having this time for myself let's me think about what I've done."
+    "All the decisions I made in the past and how I could have changed them."
+    scene bg class_day
+    with wipeleft_scene
+    "The school day is over before I know it."
+    "Yet I'm still left wondering what I could have done better in the past."
+    "Why am I thinking like this?"
+    "Is it because of what happened to Natsuki?"
+    "Maybe she could have gotten a better ending..."
+    "I know it's almost time for the club meeting..."
+    "But I really need some more time for myself."
+    scene bg school_front
+    with wipeleft_scene
+    "I start wandering the school."
+    "I don't really have anywhere in particular I want to go but I make sure I'm relatively close to the Literature Club."
+    "Thinking about it deeper..."
+    "There's been some things that have happened that I've forgotten."
+    "That I really shouldn't have forgotten."
+    "The events of the first week in the Literature Club."
+    "How did it go...?"
+    stop music fadeout 2.0
+    scene bg residential_day_gray
+    show sayori 4p_gray zorder 2 at i11
+    show vignette zorder 100
+    with dissolve_scene_full
+    play music "<loop 4.444>bgm/5.ogg" fadein 1.0
+    $ style.say_window = style.window_flashback
+    "It all started that Monday morning when Sayori started waving her arms at me."
+    "She caught up to me that morning insisting I join a club."
+    "I think she said it was to give me some social skills...or something."
+    "I told her that I'd look at a couple of clubs, just to make her happy."
+    "Then we went on with our day."
+    "Eventually...I did join the Literature Club."
+    "And it was all because of some cupcakes Sayori promised me."
+    "Was that really the only reason I ended up going to the Literature Club?"
+    "And who knew that I would have ended up staying for real?"
+    scene white with dissolve_cg
+    scene bg club_day_gray
+    show monika 5a_gray zorder 2 at i11
+    show vignette zorder 100
+    with Dissolve(1.5)
+    "Monika was the one who welcomed me on my second day as a member of the Literature Club."
+    "I wrote all of my poems for her back then but now I'm not really sure why."
+    "Was I just trying to impress her?"
+    "Maybe it was because of her smile."
+    "There was another reason, wasn't there?"
+    "It was really important and I knew I had the option to write the others, but I always chose Monika."
+    "I must have forgotten it."
+    "But why does it feel like Monika was more important..."
+    "At least...during this time."
+    "Well...there has must to be more to it."
+    scene white with dissolve_cg
+    scene bg residential_day_gray
+    show monika 2p_gray zorder 2 at i11
+    show vignette zorder 100
+    with Dissolve(1.5)
+    "Then Monika told me that Sayori was feeling depressed."
+    "That really took me by surprise..."
+    "My best friend was depressed and I didn't even know about it."
+    "How could I have been so blind back then?"
+    "But..."
+    "There's something else that I can't help but wonder about."
+    "I seem to have forgotten how Monika knew about Sayori's depression in the first place."
+    "It's not like she knew Sayori better than I do, did she?"
+    "In any case..."
+    "She told me to visit Sayori on Saturday, and I did."
+    "Monika was there too and she assured me that Sayori was going to be feeling better."
+    "I made sure that Sayori was okay, and I assured her that everything was going to be okay."
+    "I would do anything to make sure my best friend was okay."
+    "Then came along Sunday..."
+    scene white with dissolve_cg
+    scene bg house_gray
+    show sayori 4bl_gray zorder 2 at i11
+    show vignette zorder 100
+    with Dissolve(1.5)
+    "I wasn't really prepared for what happened next."
+    "Sayori was suddenly feeling a lot better."
+    "It's almost like being with Monika got rid of her depression overnight."
+    "I could tell she was genuinely happy again."
+    "I guess that's what got her to confess her love to me..."
+    "Being the person I was..."
+    if sayori_confess:
+        "I accepted her confession."
+        "I told her I loved her."
+    else:
+        "I told her she would always be my dearest friend."
+    "I didn't know how she would react to that..."
+    "In the end, she said she wanted things to stay the same between us despite what was just said."
+    "I didn't want to argue against her...especially after that."
+    scene white with dissolve_cg
+    scene bg house_gray
+    if ch4_name == "Yuri":
+        show yuri 2bq_gray zorder 2 at i11
+    else:
+        show natsuki 2bj_gray zorder 2 at i11
+    show vignette zorder 100
+    with Dissolve(1.5)
+    "After Sayori's confession, I remember [ch4_name] came over to do some preparation."
+    "I don't really remember what the preparation was for..."
+    "Which, for some reason, is really bothering me."
+    if ch4_name == "Yuri":
+        "But I do remember making a banner with her."
+        "We spent most of the day on it and I think it turned out pretty well."
+        "The atmosphere we created was going to be great..."
+    else:
+        "But I do remember baking with Natsuki."
+        "It was an experience that I would never forget."
+        "Who knew baking was so much more fun with another person?"
+    "Spending the day with [ch4_name] was probably one of my highlights of the first week."
+    "It let me get closer to her and learn a bit more about her."
+    "But then..."
+    scene white with dissolve_cg
+    scene bg house_gray
+    show monika 1bm_gray zorder 2 at i11
+    show vignette zorder 100
+    with Dissolve(1.5)
+    "Monika showed up."
+    "Why did she suddenly appear at my door?"
+    "I don't remember what she said."
+    "It must have been something important."
+    "I have to think hard to remember."
+    "..."
+    "What did she..."
+    $ currentpos = get_pos()
+    $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>bgm/5_monika.ogg"
+    stop music fadeout 1.0
+    $ renpy.music.play(audio.t5b, channel="music_poem", fadein=1.0, tight=True)
+    m "Before I disappear forever. Just try not to remember me as..."
+    m "The selfish president."
+    m 1bj_gray "But just the good things about me, okay?"
+    m "Just..."
+    m 1be_gray "...Just Monika."
+    $ currentpos = get_pos("music_poem")
+    stop music_poem fadeout 1.0
+    play music "<from " + str(currentpos) + " loop 4.444>bgm/5.ogg" fadein 1.0
+    "What does that mean?"
+    "Why was she even saying that?"
+    "She helped me with Sayori so why did it sound like she was saying goodbye...?"
+    "Why can't I properly remember what happened?"
+    "And why would I remember her as \"the selfish president\" when Sayori is the president of the Literature Club...?"
+    "Though I have to wonder..."
+    "Was Monika actually the president--{nw}"
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    window hide(None)
+    play sound "sfx/s_kill_glitch1.ogg"
+    scene bg corridor
+    $ pause(0.25)
+    stop sound
+    hide screen tear
+    window show(None)
+    $ style.say_window = style.window
+    play music t2
     if ch12_markov_agree:
         $ persistent.markov_agreed = True
         $ renpy.save_persistent()
         python:
             try: renpy.file(config.basedir + "/the die is cast")
             except: open(config.basedir + "/the die is cast", "wb").write(renpy.file("the die is cast").read())
-    "I'm feeling a lot better about myself after last night."
-    scene bg school_yard
-    with wipeleft_scene
-    "I don't know what I'm doing."
-    scene bg corridor
-    with wipeleft_scene
     "I think I'm the last one to get to the Literature Club today."
+    window auto
     "I guess I shouldn't have spent so much time wandering the school yard."
     if visited_yuri_hospital:
         show yuri 1a zorder 2 at t11
@@ -210,6 +379,9 @@ label ch13_main:
         mc "Alright..."
         mc "Well, what are you doing out here?"
         m "I had a few matters I needed to attend to."
+        m "I had a piano lesson for one."
+        mc "Is that all...?"
+        m "Well, I'd rather not tell you the rest."
         m "It's quite personal, if I'm honest."
         mc "I won't pry then."
         m "Good. Let's head inside before we waste anymore time."
@@ -560,4 +732,314 @@ label ch13_main:
 
 label ch13_end:
     $ n_ranaway = False
+    show sayori 1a zorder 2 at t32
+    s "Alright, you three!"
+    s "We've all finished sharing poems, right?"
+    s "So why don't we--"
+    show yuri 2pa zorder 3 at f31
+    y "Something is wrong with what you just said."
+    y "And I can't help but feel we've done this before..."
+    y "But this time, it feels different."
+    show yuri zorder 2 at t31
+    if monika_type == 0:
+        show monika 1a zorder 3 at f33
+        m "Ahaha, there's really nothing wrong."
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika 1ha zorder 3 at f33
+        m "I think you're overthinking it a little, Yuri."
+    else:
+        show monika 1c zorder 3 at f33
+        m "Yuri, there's nothing wrong."
+    m "You're probably just imagining it."
+    show sayori zorder 3 at f32
+    show monika zorder 2 at t33
+    s "Um..."
+    s "What did I say?"
+    show yuri zorder 3 at f31
+    show sayori zorder 2 at t32
+    y "You deviated from your usual catchphrase when addressing the club."
+    y "It's not important but I thought I'd point it out."
+    show yuri zorder 2 at t31
+    show sayori zorder 3 at f32
+    s "Oh...I guess I did say it differently."
+    s "Ehehe, I guess it's because Natsuki isn't here."
+    s "Sorry!"
+    show yuri zorder 3 at f31
+    show sayori zorder 2 at t32
+    y "You said it normally before we shared poems..."
+    show yuri zorder 2 at t31
+    show sayori zorder 3 at f32
+    s "Is it really that important Yuri?"
+    s "It was just a simple mistake."
+    show yuri zorder 3 at f31
+    show sayori zorder 2 at t32
+    y "Uu..."
+    y "It's just that stagnating air is common foreshadowing that something terrible is about to happen..."
+    show yuri zorder 2 at t31
+    mc "Okay...this is weird."
+    mc "I feel like we've said all of this before."
+    show yuri zorder 3 at f31
+    y "So I'm not the only one..."
+    show yuri zorder 2 at t31
+    show sayori zorder 3 at f32
+    s "Guys, come on."
+    s "We have a meeting to finish."
+    show yuri zorder 3 at f31
+    show sayori zorder 2 at t32
+    y "R-Right..."
+    y "I apologize for interrupting you, Sayori.."
+    y "Please go on."
+    show yuri zorder 2 at t31
+    show sayori zorder 3 at f32
+    s "As I was saying..."
+    s "Why don't we all head home and decide what books we want to perform?"
+    s "I know it's pretty early end to the meeting but [player] was late and I still have a lot of preparations I need to make."
+    s "We should come up with a variety of stuff because it might be hard to find a book that everyone likes..."
+    s "...or that's actually reasonable to perform."
+    show sayori zorder 2 at t32
+    if monika_type == 0:
+        show monika zorder 3 at f33
+        m "We should probably assign some tasks to help you with your preparation, Sayori."
+        m "After all, it wouldn't be fair if you did everything by yourself."
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika zorder 3 at f33
+        m "Maybe we should assign tasks to help with the preparation."
+        m "It would make it easier for you, Sayori."
+    else:
+        show monika zorder 3 at f33
+        m "It could be a good idea to split the workload."
+        m "That way, everything will be done quicker."
+    show sayori zorder 3 at f32
+    show monika zorder 2 at t33
+    s "T-That's not necessary, Monika."
+    s "I can handle everything myself."
+    show sayori zorder 2 at t32
+    mc "I think Monika is right."
+    mc "It wouldn't be fair if you had to organize everything for something the whole club is going to do."
+    mc "I think splitting up the work is a great idea."
+    show yuri zorder 3 at f31
+    y "Me too."
+    y "I want to help in any way that I can."
+    y "After all, it was my idea so it would be wrong not to."
+    show yuri zorder 2 at t31
+    "Sayori thinks for a moment."
+    show sayori zorder 3 at f32
+    s "Alright, I guess you all have a good point."
+    s "I wouldn't really mind doing all the work myself."
+    s "I know I could do it but I appreciate you guys wanting to help me."
+    show sayori zorder 2 at t32
+    mc "Do you really think you can handle all of that?"
+    mc "It would only be right to help you because of all the stuff we'd need to do."
+    show sayori zorder 3 at f32
+    s "Speaking of which..."
+    s "What do we need to do?"
+    s "Monika said it would be a good idea to split off the work so what does everyone want to do?"
+    show yuri zorder 3 at f31
+    show sayori zorder 2 at t32
+    y "I thought you would be the one telling us what to do..."
+    show yuri zorder 2 at t31
+    show sayori zorder 3 at f32
+    s "Huh?"
+    s "You guys are my friends but I don't know you all {i}that{/i} well."
+    s "Ehehe, I'd like to though!"
+    show sayori zorder 2 at t32
+    if monika_type == 0:
+        show monika zorder 3 at f33
+        m "I think I could help here."
+        m "It's obvious that we should have some food for the occassion."
+        m "Aside from small snacks, we could get Natsuki to bake something for us."
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika zorder 3 at f33
+        m "I know what everyone could do."
+        m "We all have different types of talents, don't we?"
+        m "Natsuki, for example, could bake us some cupcakes for the day."
+    else:
+        show monika zorder 3 at f33
+        m "Well, I know a couple of things that we could do."
+        m "I'm not really sure on the details but we all have different things we're most suited for."
+        m "Natsuki could prepare some food for us as an example."
+    show yuri zorder 3 at f31
+    show monika zorder 2 at t33
+    y "Well...what could I do then?"
+    y "I..."
+    y "I'm useless..."
+    show yuri zorder 2 at t31
+    if monika_type == 0:
+        show monika zorder 3 at f33
+        m "N-No!"
+        m "That's not it at all!"
+        m "You're the most talented person here--"
+        "Monika prevents herself from finishing."
+        "I feel like I've heard all of this before..."
+        m "Ah..."
+        m "Yuri, I was going to say you have beautiful handwriting."
+        m "Maybe you could make some banners about the Literature Club to set the atmosphere."
+        m "I know you'll do a great job!"
+    elif monika_type == 1:
+        show monika zorder 3 at f33
+        m "Ahaha, it's not like that Yuri."
+        m "You definitely have some talents that we could use to help the preparations."
+        m "For example, your handwriting is really beautiful."
+        m "Every time I read one of your poems I'm in awe at how good it is!"
+        m "You could make some banners for the club to set the atmosphere."
+        m "I'm sure they'll end up great!"
+    else:
+        show monika zorder 3 at f33
+        m "Maybe not."
+        m "I'm sure we can find {i}something{/i} for you to do."
+        m "Hmm..."
+        m "Your poems have really beatiful handwriting."
+        m "Maybe you could use that to make something for the club."
+        m "Maybe some banners or something to help set the atmosphere."
+    show yuri zorder 3 at f31
+    show monika zorder 2 at t33
+    y "Atmosphere...?"
+    y "Um, about that..."
+    y "I..."
+    y 2pr "I love atmosphere!"
+    show yuri 2pl
+    "Yuri's expression suddenly changes as she stares at her desk in focus and starts nodding to herself."
+    show yuri zorder 2 at t33
+    mc "Your mind is already racing, I see..."
+    "Has this all happened before?"
+    "I definitely remember Yuri saying that..."
+    "And me saying that too."
+    show sayori zorder 3 at f32
+    s "Yeah, that's great!"
+    s "I'm sure you'll do awesome, Yuri!"
+    s "I'll handle all the background stuff."
+    s "Like getting a decent space and signing up our club for the event."
+    s "After all, I am the president."
+    show sayori zorder 2 at t32
+    if monika_type == 0:
+        show monika zorder 3 at f33
+        m "Hmm..."
+        m "What should I do then?"
+    elif monika_type == 1:
+        show monika zorder 3 at f33
+        m "Okay...then what should I do?"
+    else:
+        show monika zorder 3 at f33
+        m "What does that leave me to do?"
+    show monika zorder 2 at t33
+    mc "I've got an idea for what you could do."
+    mc "You don't have to do it but..."
+    show monika zorder 3 at f33
+    m "What is it?"
+    show monika zorder 2 at t33
+    mc "Well, since you've been practicing piano..."
+    mc "Maybe you could play something for the festival."
+    show sayori zorder 3 at f32
+    s "F-Festival...?"
+    s "What are you talking about, [player]?"
+    show sayori zorder 2 at t32
+    mc "Ah..."
+    mc "I meant Inauguration Day."
+    mc "I don't know where festival came from."
+    mc "Still, maybe it would be good to get Monika to play some piano."
+    mc "During the intermissions or something."
+    mc "Maybe she could even record some pieces to play {i}during{/i} the play."
+    show sayori zorder 3 at f32
+    s "[player]..."
+    s "I think that's a great idea!"
+    s "I could even organize to get a grand piano for you or something!"
+    s "What do you think, Monika?"
+    show sayori zorder 2 at t32
+    if monika_type == 0:
+        show monika zorder 3 at f33
+        m "I..."
+        m "I don't really know if I'm good enough for that kinda thing."
+        m "It's true I've been practicing for a while but..."
+        m "I don't know if the play is the right time."
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika zorder 3 at f33
+        m "Ah..."
+        m "Is it really a good idea for me to play?"
+        m "If you all think I'm good enough to do that, then I'll consider it."
+        m "I'm just not sure that it's the right time."
+    else:
+        show monika zorder 3 at f33
+        m "Playing the piano for the day?"
+        m "Hmm..."
+        m "Not that I mind doing it because I could definitely do it."
+        m "I'm just not sure it's the right time for me."
+    m "I guess I have to do something though..."
+    "Monika looks at all of us one by one."
+    m "Okay, I'll do it."
+    show sayori zorder 3 at f32
+    show monika zorder 2 at t33
+    s "Yaaaaaaaay!"
+    s "Now we all have something to do."
+    s "I'll be sure to let Natsuki know what she has to do."
+    show yuri zorder 3 at f31
+    show sayori zorder 2 at t32
+    y "I think you're forgetting someone, Sayori."
+    show yuri zorder 2 at t31
+    mc "Yeah...I don't have any preparation I can do."
+    mc "Maybe I could--"
+    show sayori zorder 3 at f32
+    s "Well, you could help one of us!"
+    s "I'm sure any of us would appreciate your help!"
+    show sayori zorder 2 at t32
+    mc "Are you sure it wouldn't be better if I did something else?"
+    mc "There might be some other preparations that we haven't covered yet."
+    show sayori zorder 3 at f32
+    s "If there is, I'll be handling it."
+    s "So really, if you want to do that then you'll have have to help me."
+    s "Ehehe, not like you have to though."
+    s "You should choose whoever you think needs the most help."
+    show sayori zorder 2 at t32
+    if visited_yuri_hospital:
+        "I would like to spend more time with Yuri..."
+        "So it's only the right choice I'd choose her."
+        mc "I already know who I'm going to help."
+        mc "It's Yuri."
+        mc "We're kind of dating so..."
+        "There's a silence in the room as I say that."
+        "No one says anything for a while, as if they're trying to comprehend what I just said."
+        mc "After I visited her at the hospital, it became pretty obvious that she was important to me."
+        show yuri zorder 3 at f31
+        y "Ah...I wasn't expecting you to say it so suddenly."
+        y "But he's right..."
+        show yuri zorder 2 at t31
+        show sayori zorder 3 at f32
+        s "Well, you should think about what's right for the club."
+        s "Dating or not, you should think about who you should help."
+        s "If you think that Yuri needs your help the most, then feel free to help her."
+        s "But if you think that someone else needs your help more..."
+        s "Well, it's up to you."
+        show yuri zorder 3 at f31
+        show sayori zorder 2 at t32
+        y "Sayori has a point, [player]."
+        y "It would be unfair if you're helping me just because of that."
+        y "The others might need your help too."
+        y "So you should decide what's best for the club."
+        show yuri zorder 2 at t31
+        mc "Alright, I get it."
+    "Everyone looks straight at me."
+    menu:
+        s "So who do you think needs your help?"
+        "Natsuki.":
+            call ch13_end_natsuki
+        "Yuri.":
+            call ch13_end_yuri
+        "Monika.":
+            call ch13_end_monika
+        "Sayori.":
+            call ch13_end_sayori
+
+    return
+
+label ch13_end_natsuki:
+    mc "I should probably help Natsuki."
+    mc "With what she's been dealing with, I know she could use some help."
+    return
+
+label ch13_end_yuri:
+    return
+
+label ch13_end_monika:
+    return
+
+label ch13_end_sayori:
     return

@@ -200,6 +200,9 @@ init -1 style window:
 init -1 style window_monika is window:
     background Image("gui/textbox_monika.png", xalign=0.5, yalign=1.0)
 
+init -1 style window_flashback is window:
+    background Image("mod_assets/gui/textbox_flashback.png", xalign=0.5, yalign=1.0)
+
 init -1 style namebox:
     xpos gui.name_xpos
     xanchor gui.name_xalign

@@ -1243,7 +1243,7 @@ label ch12_play:
                 $ currentpos = get_pos()
                 $ audio.t11b = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11g.ogg"
                 stop music fadeout 1.0
-                $ renpy.music.play(audio.t11b, channel="music_play", fadein=1.0, tight=True
+                $ renpy.music.play(audio.t11b, channel="music_play", fadein=1.0, tight=True)
                 s "W-What...?"
                 s "W-Why not?"
                 mc "I'm going to look ridiculous..."
@@ -1421,7 +1421,7 @@ label ch12_play:
                 $ currentpos = get_pos()
                 $ audio.t11b = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11g.ogg"
                 stop music fadeout 1.0
-                $ renpy.music.play(audio.t11b, channel="music_play", fadein=1.0, tight=True
+                $ renpy.music.play(audio.t11b, channel="music_play", fadein=1.0, tight=True)
                 s "W-What's going on?"
                 s "This isn't part of the script at all!"
                 s "I was gonna say something earler but I thought you were just messing around!"
@@ -1515,7 +1515,7 @@ label ch12_play:
             startpos = currentpos - 0.3
             if startpos < 0: startpos = 0
             track = "<from " + str(startpos) + " to " + str(currentpos) + ">mod_assets/bgm/11.ogg"
-            play track
+            renpy.music.play(track, loop=True)
         $ pause(1.0)
         stop music
         $ config.skipping = False
@@ -2164,7 +2164,7 @@ label ch12_harukiplace:
     show sayori 1d zorder 3 at f53
     show dadsuki zorder 2 at d54
     s "I hope that explains everything."
-    s "You don't have to say anthing."
+    s "You don't have to say anything."
     s "All you have to do is watch."
     show natsuki 1c zorder 3 at f52
     show sayori zorder 2 at t53
@@ -2195,7 +2195,7 @@ label ch12_harukiplace:
     else:
         "He crosses his arms and starts tapping his foot impatiently."
     show sayori 4q zorder 3 at f43
-    play music t5 fadeout 2.0
+    play music t11 fadeout 2.0
     s "Alright, everbody!"
     s "It's time to continue with the play!"
     show natsuki 1m zorder 3 at f42
@@ -3233,7 +3233,7 @@ label ch12_harukinoplace:
     show sayori 1d zorder 3 at f53
     show dadsuki zorder 2 at d54
     s "I hope that explains everything."
-    s "You don't have to say anthing."
+    s "You don't have to say anything."
     s "All you have to do is watch."
     show natsuki 1c zorder 3 at f52
     show sayori zorder 2 at t53
@@ -3264,7 +3264,7 @@ label ch12_harukinoplace:
     else:
         "He crosses his arms and starts tapping his foot impatiently."
     show sayori 4q zorder 3 at f43
-    play music t5 fadeout 2.0
+    play music t11 fadeout 2.0
     s "Alright, everbody!"
     s "It's time to continue with the play!"
     show natsuki 1m zorder 3 at f42
@@ -3583,13 +3583,13 @@ label ch12_harukinoplace:
         d "I haven't been a father..."
         d "I've been a monster."
         d "I used to be the person that would get you through the dark times."
-        d "But lately I've been the person who would put you through the dark times."
+        d "But lately I've been the person who put you through those dark times."
         d "It's not something you can just forgive so easily."
         "Natsuki looks as if she is easing off her resistance."
         d "I don't deserve your forgiveness."
         d "I don't deserve your love."
         d "But you deserve mine."
-        d "Why it's taken me thing long to realize it..."
+        d "Why it's taken me this long to realize it..."
         d "...I'll never know."
         d "So..."
         d "Please, go on."
@@ -4246,7 +4246,7 @@ label ch12_end:
                         m "You agreed to mess with Sayori today and yet you say no to my proposition."
                         m 2d "I thought your curiosity would get the better of you."
                         m "I guess not."
-                        m 2h "I suppose it is possible that you're just exploring your choics."
+                        m 2h "I suppose it is possible that you're just exploring your choices."
                         m "Waiting to see what happens..."
                         m "But in any case..."
                         m "There's no point in me staying here any longer."

@@ -851,7 +851,10 @@ label ch12_s_end:
     return
 
 label ch13_s_end:
-    call showpoem (poem_s8)
+    if sayori_confess or s_appeal >= 4:
+        call showpoem (poem_s8b)
+    else:
+        call showpoem (poem_s8)
     s "So what did you think?"
     mc "I don't know what to say."
     s "Huh?"
@@ -897,6 +900,8 @@ label ch13_s_end:
     s "You've made new friends, become a better writer..."
     if visited_yuri_hospital:
         s "...and even become closer to Yuri..."
+    elif sayori_confess and not sayori_dumped:
+        s "...and you have me as your girlfriend..."
     s "So I'll ask again..."
     s "Do you have what you want?"
     "I can't really answer that question."

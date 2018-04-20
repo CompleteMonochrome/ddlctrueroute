@@ -198,7 +198,6 @@ image bg y_bedroom_kill = ConditionSwitch(
     "persistent.yuri_killing >= 200","mod_assets/images/bg/y_bedroom_c.png",
     "persistent.yuri_killing >= 100","mod_assets/images/bg/y_bedroom_b.png",
     "True", "mod_assets/images/bg/y_bedroom.png",
-
     )
 image bg hospital = "mod_assets/images/bg/hospital.png"
 image bg hospital_room = "mod_assets/images/bg/hospital_room.png"
@@ -214,6 +213,7 @@ image bg shop_afternoon = "mod_assets/images/bg/shop_afternoon.png"
 image bg mall_day = "mod_assets/images/bg/mall_day.png"
 image bg mall_afternoon = "mod_assets/images/bg/mall_afternoon.png"
 image bg marina = "mod_assets/images/bg/marina.png"
+image bg school_front = "mod_assets/images/bg/school_front.png"
 
 
 image glitch_color:
@@ -1775,6 +1775,20 @@ image momsuki 1f = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1
 image momsuki 1g = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1g.png")
 image momsuki 1h = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1h.png")
 image momsuki 1i = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1i.png")
+
+# Gray Images
+image bg residential_day_gray = im.Grayscale("bg/residential.png")
+image bg club_day_gray = im.Grayscale("bg/club.png")
+image bg house_gray = im.Grayscale("bg/house.png")
+image sayori 4p_gray = im.Grayscale("mod_assets/images/sayori/preset/4p.png")
+image sayori 4bl_gray = im.Grayscale("mod_assets/images/sayori/preset/4bl.png")
+image natsuki 2bj_gray = im.Grayscale("mod_assets/images/natsuki/preset/2bj.png")
+image yuri 2bq_gray = im.Grayscale("mod_assets/images/yuri/preset/2bq.png")
+image monika 2p_gray = im.Grayscale("mod_assets/images/monika/preset/2p.png")
+image monika 5a_gray = im.Grayscale("monika/3a.png")
+image monika 1be_gray = im.Grayscale("mod_assets/images/monika/preset/1be.png")
+image monika 1bj_gray = im.Grayscale("mod_assets/images/monika/preset/1bj.png")
+image monika 1bm_gray = im.Grayscale("mod_assets/images/monika/preset/1bm.png")
 
 define narrator = Character(ctc="ctc", ctc_position="fixed")
 define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")

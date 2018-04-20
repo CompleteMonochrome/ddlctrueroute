@@ -825,7 +825,7 @@ I know she can't, she's feeling different.
 It's not happiness or sadness
 So what is it that I'm getting?
 
-Maybe I have to up my effort,
+Maybe I have to up my effort
 It isn't enough right now.
 It will hurt, it will bring me sadness.
 But they need me, and I want them to be happy.
@@ -839,7 +839,7 @@ With smiling faces and a bowl of strawberries."""
     author = "sayori",
     title = "A Past Life",
     text = """\
-Selfishness is a temptation that roots in my mind everyday,
+Selfishness is a temptation that roots in my mind everyday
 But everyone's happiness has to come before my own.
 I was given this power to bring happiness to all
 So why is it me that's becoming more sad?
@@ -860,17 +860,17 @@ A day doing this, a day doing that.
 I was too naive and content...
 Nothing like the me today.
 
-In a past life,
+In a past life
 Would I be as happy as I think?
 Nothing is impossible in a world like this.
 But was something blocking my way?
-Something in my path that stopped me from reaching,
+Something in my path that stopped me from reaching
 The ultimate happiness.
 
-In my current life,
-I have bittersweet emotions,
+In my current life
+I have bittersweet emotions
 My friends will be happy, but what about me?
-If only he confirmed what I confessed,
+If only he confirmed what I confessed
 Then just maybe...
 
 A happy me."""
@@ -934,6 +934,41 @@ It feels so far away
 The wall drains my soul.
 But this barrier will hold
 Until the road is in the past."""
+)
+
+    poem_s8b = Poem(
+author = "sayori",
+title = "Walls",
+text = """\
+I built my walls up high
+No one dares to climb it.
+No one, save one.
+A soul that seeks to help
+A soul that doesn't yet know.
+A vessel of emotion.
+
+My walls are strong
+I built them without emotion.
+Deprived of happiness, sadness and love.
+This wall stretches to the sky
+Yet that soul presses on.
+
+Falling and falling
+He gets back up, over and over.
+Tears and blood flow from his body
+Yet he doesn't give up.
+I want to say something
+But I must keep this persona up.
+This wall of deceit
+It's my key.
+
+I can sense his happiness
+His emotion is seeping through the solid walls.
+His emotions are what I long for
+But I can't give in.
+These walls must stay up
+Just a little longer
+Then my emotions can be free."""
 )
 
     poem_m1 = Poem(

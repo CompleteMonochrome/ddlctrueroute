@@ -367,7 +367,7 @@ label poem(transition=True,totalWords=20):
         if chapter < 5:
             exec(poemwinner[chapter][0] + "_appeal += 1")
         elif chapter >= 12:
-            exec(sayarcpoemwinner[chapter-12] + "_appealS += 1")
+            exec(sayarcpoemwinner[chapter-12][0] + "_appealS += 1")
         elif chapter == 11:
             exec(natarcpoemwinner[chapter-11][0] + "_appeal += 1")
         elif chapter > 7:
@@ -398,7 +398,7 @@ label poem(transition=True,totalWords=20):
         if chapter < 5:
             exec(poemwinner[chapter][0] + "_poemappeal[chapter] = 1")
         elif chapter >= 12:
-            exec(sayarcpoemwinner[chapter-12][0]) + "_poemappeal2[chapter-12] = 1")
+            exec(sayarcpoemwinner[chapter-12][0] + "_poemappeal2[chapter-12] = 1")
         elif chapter == 11:
             exec(natarcpoemwinner[chapter-11][0] + "_poemappeal2[chapter-11] = 1")
         elif chapter > 7:
