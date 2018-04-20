@@ -500,12 +500,14 @@ label ch13_main:
     show sayori zorder 3 at f32
     show yuri zorder 2 at t33
     s "Event? I haven't really been keeping up with school stuff."
-    s "What event is it, Yuri?"
+    s "What event is it, Yuri? More importantly, when is it?"
     show sayori zorder 2 at t32
     show yuri zorder 3 at f33
     y "It's a thing the school is doing to promote the smaller clubs."
     y "I overheard someone talk about it."
     y "I think it was called \"Inauguration Day\" or something..."
+    y "If I remember correctly it's on Friday this week."
+    y "So we if we want to do something for it, we should start thinking about it today."
     y "It's strange though, I hadn't really heard of it before today."
     y "From the sounds of things, it was a pretty recent initiative by the school."
     y "I wonder who's idea that was..."
@@ -731,6 +733,9 @@ label ch13_main:
     return
 
 label ch13_end:
+    stop music fadeout 1.0
+    scene bg club_day with wipeleft_scene
+    play music t3
     $ n_ranaway = False
     show sayori 1a zorder 2 at t32
     s "Alright, you three!"
@@ -1016,9 +1021,102 @@ label ch13_end:
         y "So you should decide what's best for the club."
         show yuri zorder 2 at t31
         mc "Alright, I get it."
+    else:
+        show yuri zorder 3 at f31
+        y "I could use some help..."
+        y "I'm good at creating an atmosphere but another perspective might help too."
+        y "There's definitely a lot of things you could help me with."
+        "Sayori looks at Yuri quizzically."
+        y "But...you should decide for yourself."
+        y "A-After all, you probably think someone else needs more help."
+        show yuri zorder 2 at t31
+        show sayori zorder 3 at f32
+        s "That's not true..."
+        s "All of us need some help but we can also all do it by ourselves."
+        s "It's just up to [player] to decide who he really thinks could use his help for Inauguration Day."
+        show sayori zorder 2 at t32
+        mc "Alright..."
+    if monika_type == 0:
+        show monika zorder 3 at f33
+        m "I could use your help, too."
+        m "I don't really know what kind of songs I could play on the day."
+        m "Plus I could use a sort of audience to practice to."
+        m "Maybe you could help me, if you want."
+        m "But..."
+        m "Like they said, the choice is yours."
+        m "I'm not going to be upset or anything if you decide to help someone else."
+        m "Even if I enjoy your company you have to think of the bigger picture..."
+        m "...After all, this whole thing is for the club."
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika zorder 3 at f33
+        m "Hmm..."
+        m "Maybe [player] could help me."
+        m "If I'm going to play the piano on the day, I could use an audience to practice to."
+        m "He could also help with choosing the songs I could play."
+        m "Ahaha, it could be fun."
+        m "However, I'm not going to force you."
+        m "You should go because you think I need the help not because you want to hang out with me..."
+        m "But I certainly wouldn't mind if that was the reason~"
+    else:
+        show monika zorder 3 at f33
+        m "[player] could be useful helping me."
+        m "There might be some songs he wants to hear on the day that I could play for him."
+        m "It also helps if I practice in front of an audience so I can get some instant feedback after I play."
+        m "But it's up to him, of course."
+    show sayori zorder 3 at f32
+    show monika zorder 2 at t33
+    s "You know it kinda sounds like everyone is trying to convince you to help them."
+    s "Ehehe, maybe I should tell you what I'm doing too."
+    show sayori zorder 2 at t32
+    mc "I'd like to know that before I make a decision."
+    show sayori zorder 3 at f32
+    s "Well, I was gonna handle all the background preparations."
+    s "You know, getting our club registered for Inauguration Day and organising a space we could use."
+    s "I was also gonna make us the script of the book we chose, like I've done before."
+    s "And then I was gonna help out everyone else a little bit, to make their parts really good!"
+    s "Not that I don't trust them to make it great already..."
+    s "I just thought I could add some...flare."
+    s "Like getting a grand piano arranged for Monika or getting an experienced baker to help Natsuki design awesome cupcakes!"
+    show sayori zorder 2 at t32
+    mc "That sounds like a lot of work..."
+    mc "It would almost be wrong {i}not{/i} to hel you."
+    show sayori zorder 3 at f32
+    s "[player], you really don't have to."
+    s "I can handle myself fine."
+    if sayori_confess and not sayori_dumped:
+        s "I was just offering in case you reaaaaaally wanted to spend time with your girlfriend..."
+    else:
+        s "I was just offering in case you reaaaaaally wanted to spend time with me or something..."
+    show sayori zorder 2 at t32
+    mc "S-Sayori...!"
+    show sayori zorder 3 at f32
+    s "Ehehe~"
+    s "Like everyone else said though..."
+    s "It's up to you."
+    s "I'll still be able to do everything I said I would with or without your help."
+    show sayori zorder 2 at t32
+    if monika_type == 0:
+        show monika zorder 3 at f33
+        m "That really does sound like a lot of work, Sayori."
+        m "Are you sure you can handle all of that if [player] doesn't choose to help you?"
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika zorder 3 at f33
+        m "Ahaha, wow..."
+        m "That sure is a lot of work you've set for yourself."
+    else:
+        show monika zorder 3 at f33
+        m "Are you sure you aren't overloading yourself, Sayori?"
+        m "That seems like a lot to do."
+    show sayori zorder 3 at f32
+    show monika zorder 2 at t33
+    s "I'll be fine, really."
+    s "I could do it all on one night if I really wanted to~"
+    "Sayori said that jokingly but it almost feels like she isn't lying."
+    s "Anyway, I'd like to hear what [player] has to say."
+    show sayori zorder 2 at t32
     "Everyone looks straight at me."
     menu:
-        s "So who do you think needs your help?"
+        s "Who do you think needs your help?"
         "Natsuki.":
             call ch13_end_natsuki
         "Yuri.":
@@ -1027,19 +1125,206 @@ label ch13_end:
             call ch13_end_monika
         "Sayori.":
             call ch13_end_sayori
-
+    $ ch13_name = ch13_scene.capitalize()
     return
 
 label ch13_end_natsuki:
+    $ ch13_scene = "natsuki"
     mc "I should probably help Natsuki."
-    mc "With what she's been dealing with, I know she could use some help."
+    mc "With what she's been dealing with, I know she could probably use some help."
+    mc "Or at least a visit from me."
+    show sayori zorder 3 at f32
+    s "I'm sure she wouldn't mind your company, [player]!"
+    s "With what she has to deal with, I also think she'd appreciate your help."
+    show yuri zorder 3 at f31
+    show sayori zorder 2 at t32
+    y "Ah, I see."
+    y "I'll get the atmosphere done by myself then."
+    show yuri zorder 2 at t31
+    show sayori zorder 3 at f32
+    s "Yuri, you sound kinda upset."
+    s "Is something wrong?"
+    show yuri zorder 3 at f31
+    show sayori zorder 2 at t32
+    y "Oh, it's nothing..."
+    show yuri zorder 2 at t31
+    show sayori zorder 3 at f32
+    s "It doesn't look like nothing."
+    show yuri zorder 3 at f31
+    show sayori zorder 2 at t32
+    if visited_yuri_hospital:
+        y "Well, it's not a big deal."
+        y "I just wanted to spend the preparation time with [player]."
+        y "I understand he can make his own decisions..."
+        y "So I'm not really that upset."
+        y "I know he only wants what's best for the club after all."
+        y "And..."
+        "Yuri looks at me."
+        y "I trust he knows what he's doing."
+    else:
+        y "I-It's really nothing..."
+        y "Just forget I even said anything."
+        y "Besides, he made his decision."
+        y "It's not like I can change his mind anyway..."
+        y "Um..."
+        y "Did I say that out loud...?"
+        y "D-Don't mind me."
+    show yuri zorder 2 at t31
+    show sayori zorder 3 at f32
+    s "Alright, Yuri..."
+    s "Whatever you say."
+    show sayori zorder 2 at t32
     return
 
 label ch13_end_yuri:
+    $ ch13_scene = "yuri"
+    mc "I think I should help Yuri with her preparations."
+    mc "She won't be able to create the perfect atmosphere without some help."
+    mc "So I think it's just the logical thing to do."
+    show yuri zorder 3 at f31
+    if visited_yuri_hospital:
+        y "A-Are you sure about this, [player]?"
+        y "Just because we're dating doesn't mean you have to--"
+    else:
+        y "M-Me?"
+        y "N-Not that I don't want you to help me but are you sure?"
+        y "You probably feel sorry for me and if that's the case then--"
+    show yuri zorder 2 at t31
+    show sayori zorder 3 at f32
+    s "Ehehe, Yuri you need to calm down a little!"
+    s "I really think he just knows you need the most help."
+    s "Besides, it's everyone's responsibility to make sure that this event ends up amazing!"
+    show sayori zorder 2 at t32
+    mc "Sayori is right."
+    mc "I think that if I help you make the atmosphere then we can really do something for the club."
+    mc "Something that stands out and will make people want to join."
+    show yuri zorder 3 at f31
+    y "D-Do you really think we can do that?"
+    show yuri zorder 2 at t31
+    if ch4_name == "Yuri":
+        mc "We've done it before, haven't we?"
+        mc "I'm sure we can do it again."
+    else:
+        mc "I'm definitely sure we can do it."
+        mc "I just hope that I can really help."
+    show yuri zorder 3 at f31
+    y "Thank you, [player]."
+    y "I appreciate your kind words."
+    show yuri zorder 2 at t31
     return
 
 label ch13_end_monika:
+    $ ch13_scene = "monika"
+    mc "Well..."
+    mc "I guess I should be helping Monika with her preparations."
+    mc "Everyone else seems to have their own parts covered."
+    mc "So I think helping Monika with whatever is the most appropriate thing for me to do."
+    if monika_type == 0:
+        show monika zorder 3 at f33
+        m "Thanks [player]~"
+        m "I'm sure I could really use your help."
+        m "And maybe I can tell you more about that conversation we had earlier..."
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika 1ha zorder 3 at f33
+        m "Ah, thank you."
+        m "I really appreciate you choosing to help me [player]~"
+        m "Maybe I'll even tell you more about the poem I wrote..."
+    else:
+        show monika 1a zorder 3 at f33
+        m "You're really going to help me?"
+        m "Ahaha, I'm flattered."
+        m "Thanks [player]."
+    show sayori zorder 3 at f32
+    show monika zorder 2 at t33
+    s "I really hope you two are gonna do your best!"
+    s "I can't wait to see hear Monika play."
+    s "And with [player] helping her, then it's definitely gonna be great!"
+    show yuri zorder 3 at f31
+    show sayori zorder 2 at t32
+    if visited_yuri_hospital:
+        y "Ah, I thought Monika would need the most help out of all of us."
+        y "But it is your decision after all, [player]."
+        y "I trust you know what you're doing."
+        y "We can always talk more later."
+        y "Besides, I can handle the atmosphere myself."
+    else:
+        y "A-Are you kidding?"
+        y "Monika needs the least--"
+        "Yuri stops herself."
+        y "I mean..."
+        y "It is your decision..."
+        y "I suppose I'll have to do the atmosphere myself."
+    show yuri zorder 2 at t31
+    mc "Yeah..."
     return
 
 label ch13_end_sayori:
+    $ ch13_scene = "sayori"
+    mc "I guess I'd be most helpful helping Sayori."
+    mc "It sounds like she's got a lot to do."
+    mc "And I really want to make this event we're doing the best."
+    show sayori zorder 3 at f32
+    s "Really?"
+    s "Thanks [player]~"
+    s "I guess I can split off some of the workload to you."
+    s "That way I can make my parts really good!"
+    s "And you..."
+    s "Ehehe, well..."
+    show sayori zorder 2 at t32
+    mc "Are you saying I can't do as well as you?"
+    mc "That almost sounds like a challenge."
+    show sayori zorder 3 at f32
+    s "Take it however you want~"
+    "Sayori smiles mischievously."
+    s "I'm only kidding."
+    s "I really do appreciate you helping me, [player]."
+    if sayori_confess and not sayori_dumped:
+        s "I just hope you're doing it not because we're a couple but because you actually think I could use the help."
+    else:
+        s "I just hope you thought about this carefully."
+    show sayori zorder 2 at t32
+    mc "I did and I want to help you."
+    show yuri zorder 3 at f31
+    if visited_yuri_hospital:
+        y "I suppose it's only fair."
+        y "I did assess that Sayori had the most work to do."
+        y "Besides...[player] and I can always talk in our own time."
+        y "It's not like this preparation is going to take all our spare time."
+        y "I'm sure with your help, Sayori will actually be able to do what she's set out to."
+    else:
+        y "Y-You chose to help Sayori?!"
+        "Yuri gives Sayori a look."
+        y "I...suppose it makes the most sense."
+        y "She does have the most do..."
+        y "Maybe you {i}are{/i} just doing what's best for the club..."
+        y "Despite what you said, it's not like you can actually handle all that work by yourself, Sayori."
+    show yuri zorder 2 at t31
+    show sayori zorder 3 at f32
+    s "You'd be surprised, Yuri."
+    s "I can do a lot of things you don't think I could."
+    show yuri zorder 3 at f31
+    show sayori zorder 2 at t32
+    y "Ah...of course."
+    y "I didn't mean that as an insult or anything."
+    y "It's just your workload is...a lot."
+    y "Even for two people."
+    show yuri zorder 2 at t31
+    show sayori zorder 3 at f32
+    s "We'll be fine, I promise!"
+    show sayori zorder 2 at t32
+    if monika_type == 0:
+        show monika zorder 3 at f33
+        m "Just make sure you don't hurt yourself doing too much."
+        m "Knowing you, you probably have a lot more stuff planned..."
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika zorder 3 at f33
+        m "Be careful not to waste all your energy, Sayori."
+        m "That could be really bad for when the day comes."
+    else:
+        show monika zorder 3 at f33
+        m "Whatever you say..."
+        m "Just don't waste all your energy, Sayori."
+    show sayori zorder 3 at f32
+    show monika zorder 2 at t33
+    s "Yeah, yeah..."
     return
