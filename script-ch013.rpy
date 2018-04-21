@@ -4,7 +4,7 @@ label ch13_main:
     with dissolve_scene_full
     play music mend fadeout 2.0
     s "I want to say that I don't really know what's going to happen today."
-    s "I know I made the day and everything but something is changing it..."
+    s "I know I made the day and everything but {i}something{/i} is changing it..."
     s "I don't know if that makes any sense to you but it's making my ability to see into the future kinda useless."
     s "Maybe it's just the game glitching out from too many days or something."
     s "Or maybe I just can't see what's going to happen..."
@@ -415,6 +415,18 @@ label ch13_main:
         m "Sorry for that. I had a piano lesson I went to."
         m "It went for slightly longer than usual, so that's why I'm late."
         m "As for [player]..."
+        show monika zorder 2 at t31
+        show sayori zorder 3 at f32
+        s "W-Wait a second..."
+        s "Before any of that...what did you do to your hair?"
+        s "It's...different!"
+        show monika zorder 3 at f31
+        show sayori zorder 2 at t32
+        m "You're quite sharp, Sayori."
+        m "I actually decided to wear my hair down today..."
+        m "Because..."
+        "Monika looks at me and winks."
+        m "Well, just because~"
     else:
         show monika 1a zorder 2 at f31
         m "I had a few things I needed to deal with."
@@ -1141,16 +1153,322 @@ label ch13_end:
     if monika_type == 0:
         show monika zorder 3 at f33
         m "Actually, I would like to say something."
-        m "It's kind of important."
+        m "It's kind of important..."
+        m "And I know Natsuki isn't here but I still want to say it anyway."
+        m "When I sta--"
+        m "When I joined this club, I really didn't expect all of you to become so important to me."
+        m "Especially...one of you in particular."
+        "Monika looks at me and smiles."
+        m "I first saw of it as a place where we could share our passion of literature..."
+        m "And then I had a new vision for the club but..."
+        m "Well, it's better not to talk about that."
+        m "Anyway..."
+        m "Over time, I've come to accept you all as not just acquaintances..."
+        m "But as close friends."
+        m "I've learned so much about everyone and I wouldn't trade those times for everything."
+        m "I've even sacrificed my own time and sanity to help everyone."
+        "Yuri looks at Monika with a confused expression."
+        show yuri zorder 3 at f31
+        show monika zorder 2 at t33
+        y "I don't mean to be rude and interrupt you..."
+        y "But what do you mean you've sacrificed your sanity?"
+        show yuri zorder 2 at t31
+        show monika zorder 3 at f33
+        m "I just meant..."
+        m "Well, it's been difficult to keep up."
+        m "With all the schoolwork and the stuff with the Literature Club."
+        m "But I really wanted to make an effort..."
+        m "Because someone made one for me."
+        show yuri zorder 3 at f31
+        show monika zorder 2 at t33
+        y "I don't think I understand..."
+        show yuri zorder 2 at t31
+        show monika zorder 3 at f33
+        m "Look, that doesn't really matter..."
+        m "I really just wanted to thank everyone."
+        m "I wouldn't be the person I am today without all of you."
+        m "I know sometimes the club isn't exactly the best place to be..."
+        m "But I wouldn't trade the time I've spent here and with all of you for anything else..."
+        m "...And I'll be sure to tell Natsuki the same thing."
+        show sayori zorder 3 at f32
+        show monika zorder 2 at t33
+        s "T-That's really sweet of you..."
+        s "I think I'm gonna..."
+        "Sayori wipes her face."
+        s "Ah...it really isn't the time for this."
+        s "I-I still have to..."
+        show sayori zorder 2 at t32
+        show monika zorder 3 at f33
+        m "Ahaha, sorry for making you cry Sayori."
+        m "I hope you aren't upset at me for taking up everyone's time..."
+        show sayori zorder 3 at f32
+        show monika zorder 2 at t33
+        s "N-No..."
+        s "I'm just really happy you said that..."
+        s "Ehehe, sorry it's not really appropriate for me to cry."
+        s "Seeing as I'm the president and everything..."
+        play sound "mod_assets/sfx/swoosh.ogg"
+        scene white with dissolve_cg
+        scene bg house_gray
+        show monika 2bm_gray zorder 2 at i11
+        show vignette zorder 100
+        with Dissolve(1.5)
+        stop sound
+        $ style.say_window = style.window_flashback
+        m "But I shouldn't cry."
+        m "That would be inappropriate as president..."
+        m 2bl_gray "I..."
+        mc "It's okay."
+        mc "I'm here for you."
+        "I put a hand on her shoulder reassuringly."
+        m 1bm_gray "I'm..."
+        m "I'm not going to cry."
+        m "I have to be strong for what's coming up."
+        scene white with dissolve_cg
+        scene bg club_day
+        show yuri 1a zorder 2 at i31
+        show sayori 1a zorder 3 at i32
+        show monika 1a zorder 3 at i33
+        with Dissolve(1.5)
+        $ style.say_window = style.window
+        "What was that...?"
+        "That was during the first week, right?"
+        "Why would Monika say she was the president...?"
+        "I really have no idea what's going on..."
+        show monika zorder 3 at f33
+        m "It's okay to cry, Sayori."
+        m "After all..."
+        m "Those are happy tears after all, right?"
+        show sayori zorder 3 at f32
+        show monika zorder 2 at t33
+        s "Y-Yeah..."
+        s "T-Thanks again, Monika."
+        s "I don't know why but what you said just meant a lot coming from you."
+        show yuri zorder 3 at f31
+        show sayori zorder 2 at t32
+        y "I don't know what to say, Monika..."
+        y "I guess..."
+        y "I'm glad I became part of the Literature Club and met you."
+        y "S-Sorry...I don't really know how to react in this type of situation."
+        show monika zorder 3 at f33
+        m "That's okay, Yuri."
+        m "I know what you're trying to say."
+        m "But thanks for listening to me."
+        show monika zorder 2 at t33
+        mc "What Monika said really means a lot."
+        mc "And it's all thanks to Sayori that I'm here in the first place."
+        mc "If she didn't bring me here that one morning then..."
+        mc "I never would have met the rest of you."
+        mc "So I wouldn't trade any of the time I've spent here either."
+        show monika zorder 3 at f33
+        m "Well...that's good to know."
+        m "Sorry! I didn't mean to ruin the mood."
+        m "But that's all I have to say."
+        show monika zorder 2 at t33
+        "Sayori wipes her face one more time before returning to form."
     elif monika_type == 1 and ch12_markov_agree:
         show monika zorder 3 at f33
+        m "I actually have a few words I want to say."
+        m "It has to do with all of you..."
+        m "...And I know Natsuki isn't here but I'll be sure to relay the message to her."
+        show yuri zorder 3 at f31
+        show monika zorder 2 at t33
+        y "This sounds important..."
+        y "Is it something bad?"
+        show yuri zorder 2 at t31
+        show monika zorder 3 at f33
+        m "It's just the opposite."
+        m "I wanted to say something {i}good{/i} about the Literature Club."
+        m "To make everyone feel better after what's been happening recently."
+        m "So...you all might want to listen."
+        m "Because it's kinda hard for me to say."
+        show sayori zorder 3 at f32
+        show monika zorder 2 at t33
+        s "Well, I definitely wanna hear this!"
+        show sayori zorder 2 at t32
+        show monika zorder 3 at f33
+        m "Okay..."
+        m "When I first...joined the Literature Club..."
+        m "I wasn't expecting it to become such an important part of my life."
+        m "My passion for literature is what drove me to sta--"
+        m "...to {i}join{/i} this club."
+        m "And through this club, I found something special."
+        m "Something I never would have found anywhere else."
+        m "And that's..."
+        "Monika seems unable to finish her sentence."
+        show sayori zorder 3 at f32
+        show monika zorder 2 at t33
+        s "I think I understand what you're trying to say..."
+        s "It's like a weird friendship, right?"
+        s "You didn't expect all of us to become to important to you."
+        show sayori zorder 2 at t32
+        show monika zorder 3 at f33
+        m "Y-Yeah...!"
+        m "That's right Sayori."
+        m "Going to this club after every school day just made me feel so..."
+        m "...happy."
+        m "I know it hasn't always been the best place."
+        m "The club has been through lots of ups and downs..."
+        m "But honestly..."
+        m "I woudn't trade the time I've spent here for anything."
+        m "The Literature Club will always have a place in my...heart."
+        show yuri zorder 3 at f31
+        show monika zorder 2 at t33
+        y "I...don't know how to respond to that..."
+        y "S-Sorry, I'm not really the best when it comes to situations like this."
+        show yuri zorder 2 at t31
+        show monika zorder 3 at f33
+        m "It's okay, Yuri."
+        m "But anyway..."
+        m "I guess what I'm trying to say is..."
+        m "...thank you."
+        m "For everything that you've done for me."
+        m "For helping me get this far."
+        m "I wouldn't be the person I am today without you."
+        show sayori zorder 3 at f32
+        show monika zorder 2 at t33
+        s "Y-You..."
+        s "You didn't have to say those things, Monika."
+        show sayori zorder 2 at t32
+        show monika zorder 3 at f33
+        m "I know..."
+        m "But I feel like I had to after everything that's happened."
+        show sayori zorder 3 at f32
+        show monika zorder 2 at t33
+        s "Y-You're gonna make me cry..."
+        s "You don't know how much your words really mean, Monika."
+        "Sayori wipes her face."
+        s "B-But I really shouldn't cry..."
+        s "It wouldn't be appropriate as the president of the Literature Club..."
+        s "What would the people watching us on the day think...?"
+        play sound "mod_assets/sfx/swoosh.ogg"
+        scene white with dissolve_cg
+        scene bg house_gray
+        show monika 2bm_gray zorder 2 at i11
+        show vignette zorder 100
+        with Dissolve(1.5)
+        stop sound
+        $ style.say_window = style.window_flashback
+        m "But I shouldn't cry."
+        m "That would be inappropriate as president..."
+        m 2bl_gray "I..."
+        mc "It's okay."
+        mc "I'm here for you."
+        "I put a hand on her shoulder reassuringly."
+        m 1bm_gray "I'm..."
+        m "I'm not going to cry."
+        m "I have to be strong for what's coming up."
+        scene white with dissolve_cg
+        scene bg club_day
+        show yuri 1a zorder 2 at i31
+        show sayori 1a zorder 3 at i32
+        show monika 1ha zorder 3 at i33
+        with Dissolve(1.5)
+        $ style.say_window = style.window
+        "What was that...?"
+        "That was during the first week, right?"
+        "Why would Monika say she was the president...?"
+        "I really have no idea what's going on..."
+        show monika zorder 3 at f33
+        m "There's nothing wrong with crying, Sayori."
+        m "It's good to let your emotions out once in a while."
+        m "It's definitely better than keeping it bottled up, you know?"
+        show sayori zorder 3 at f32
+        show monika zorder 3 at f33
+        s "Y-Yeah..."
+        s "You're right."
+        s "T-Thanks again, Monika..."
+        show sayori zorder 2 at t32
+        show monika zorder 3 at f33
+        m "Take care of yourself, Sayori."
+        m "I wouldn't want anything bad happening to you~"
+        "Monika turns towards Yuri."
+        m "Yuri, you too."
+        m "I know you had a tough time before."
+        m "But I want to personally thank you as well."
+        show yuri zorder 3 at f31
+        show monika zorder 2 at t33
+        y "M-Me?"
+        y "W-What for...?"
+        show yuri zorder 2 at t31
+        show monika zorder 3 at f33
+        m "Ahaha, oh you know..."
+        m "Being you."
+        show yuri zorder 3 at f31
+        show monika zorder 2 at t33
+        y "T-Thanks...I suppose."
+        show yuri zorder 2 at t31
+        mc "What Monika said really means a lot."
+        mc "And it's all thanks to Sayori that I'm here in the first place."
+        mc "If she didn't bring me here that one morning then..."
+        mc "I never would have met the rest of you."
+        mc "So I wouldn't trade any of the time I've spent here either."
+        show monika zorder 3 at f33
+        m "Ahaha, I'm glad."
+        m "Sorry! I didn't mean to ruin the mood."
+        m "But that's all I have to say."
+        show monika zorder 2 at t33
+        "Sayori wipes her face one more time before returning to form."
     else:
         show monika zorder 3 at f33
         m "There's nothing else to say."
         m "I think the meeting is as good as over."
     show sayori zorder 3 at f32
+    s "Alright..."
     s "If that's all..."
     s "...Then I'll see you all tomorrow!"
+    show sayori zorder 2 at t32
+    if ch13_scene = "sayori":
+        mc "Aren't you going to wait for me?"
+        mc "We're doing the preparations together, aren't we?"
+        show sayori zorder 3 at f32
+        s "Oh...right."
+        s "I guess we can walk home together then!"
+        show yuri zorder 3 at f31
+        show sayori zorder 2 at t32
+        y "Okay..."
+        y "I guess I'll be going now."
+        y "I'll have my book list prepared by then."
+        if visited_yuri_hospital:
+            y "I'll send you a message or something, [player]..."
+            show yuri zorder 2 at t31
+            mc "Sure."
+        else:
+            show yuri zorder 2 at t31
+        show yuri at lhide
+        hide yuri
+        "Yuri waves goodbye before exiting the club room."
+        show sayori zorder 3 at f32
+        s "Bye, Yuri!"
+        show sayori zorder 2 at t21
+        if monika_type == 0:
+            show monika zorder 3 at f22
+            m "I should be going too..."
+            m "I want to get as much practice done as possible."
+            m "You'll get my book list tomorrow too."
+        elif monika_type == 1 and ch12_markov_agree:
+            show monika zorder 3 at f22
+            m "I'll get some practice in for the day."
+            m "You can expect my book choices in by tomorrow as well."
+        else:
+            show monika zorder 3 at f22
+            m "Okay, I guess I should go too."
+            m "You'll see my book list tomorrow, Sayori."
+        show monika at lhide
+        hide monika
+        "Monika leaves the room quickly."
+        show sayori zorder 2 at t11
+        s "Ready to walk home, [player]?"
+        mc "Yeah, let's go."
+    else:
+        show sayori at lhide
+        hide sayori
+        "Sayori skips out of the room."
+        mc "See you later, Sayori."
+        show yuri zorder 2 at t21
+        show monika zorder 2 at f22
+        m "Well..."
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch13_end_natsuki:
@@ -1246,19 +1564,26 @@ label ch13_end_monika:
     mc "So I think helping Monika with whatever is the most appropriate thing for me to do."
     if monika_type == 0:
         show monika zorder 3 at f33
+        m "Even after Sayori said the amount of stuff she was going to do...?"
+        m "Well..."
+        m "Not that I mind."
         m "Thanks [player]~"
         m "I'm sure I could really use your help."
         m "And maybe I can tell you more about that conversation we had earlier..."
     elif monika_type == 1 and ch12_markov_agree:
         show monika 1ha zorder 3 at f33
+        m "Even after all the work Sayori said she has to do...?"
+        m "I'm not going to decline so I guess I should say..."
         m "Ah, thank you."
         m "I really appreciate you choosing to help me [player]~"
         m "Maybe I'll even tell you more about the poem I wrote..."
     else:
         show monika 1a zorder 3 at f33
-        m "You're really going to help me?"
+        m "Interesting choice, [player]."
+        m "Even with what Sayori has to do..."
+        m "...You're really going to help me?"
         m "Ahaha, I'm flattered."
-        m "Thanks [player]."
+        m "Thanks, I suppose."
     show sayori zorder 3 at f32
     show monika zorder 2 at t33
     s "I really hope you two are gonna do your best!"

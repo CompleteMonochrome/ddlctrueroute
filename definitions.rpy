@@ -1789,6 +1789,8 @@ image monika 5a_gray = im.Grayscale("monika/3a.png")
 image monika 1be_gray = im.Grayscale("mod_assets/images/monika/preset/1be.png")
 image monika 1bj_gray = im.Grayscale("mod_assets/images/monika/preset/1bj.png")
 image monika 1bm_gray = im.Grayscale("mod_assets/images/monika/preset/1bm.png")
+image monika 2bl_gray = im.Grayscale("mod_assets/images/monika/preset/2bl.png")
+image monika 2bm_gray = im.Grayscale("mod_assets/images/monika/preset/2bm.png")
 
 define narrator = Character(ctc="ctc", ctc_position="fixed")
 define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
