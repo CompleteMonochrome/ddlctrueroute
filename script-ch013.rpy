@@ -1126,6 +1126,31 @@ label ch13_end:
         "Sayori.":
             call ch13_end_sayori
     $ ch13_name = ch13_scene.capitalize()
+    "So we've all decided what we're going to be doing."
+    "I'm going to be helping out [ch13_name] with her preparations."
+    "I know with the two of us working together, we can do something really great for the festival."
+    "I just hope everyone else is okay without my help."
+    if ch13_name != "Sayori":
+        "Especially Sayori."
+    "But I'm probably overthinking this."
+    "I know everyone will do a great job regardless of whether I help them or not."
+    show sayori zorder 3 at f32
+    s "Alright, everybody!"
+    s "That's definitely the end of our meeting today..."
+    s "Unless any of you guys want to say something...?"
+    if monika_type == 0:
+        show monika zorder 3 at f33
+        m "Actually, I would like to say something."
+        m "It's kind of important."
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika zorder 3 at f33
+    else:
+        show monika zorder 3 at f33
+        m "There's nothing else to say."
+        m "I think the meeting is as good as over."
+    show sayori zorder 3 at f32
+    s "If that's all..."
+    s "...Then I'll see you all tomorrow!"
     return
 
 label ch13_end_natsuki:
