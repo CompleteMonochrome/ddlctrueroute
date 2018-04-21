@@ -690,7 +690,8 @@ label choose_start:
     label custom_saystart:
     s "Wait...seriously?"
     s "You've gotten this far..."
-    s "I guess I'll find out after you answer some more questions."
+    s "I have to know what happens!"
+    s "Wait...I guess I'm going to find out, aren't I?"
 
     menu:
         s "Who did you spend the festival day with?"
@@ -954,10 +955,10 @@ label choose_start:
 
     s "Since you're starting from this day..."
     s "It means you've finished helping Natsuki, right?"
-    s "At least...the important parts."
+    s "Well, at least...the really important parts of helping Natsuki."
     s "So...what happened on the day of the play?"
 
-    if f m_appeal >= 4 and ch11_monika_talked and ch11_monika_dinner and ch11_did_all_tasks:
+    if m_appeal >= 4 and ch11_monika_talked and ch11_monika_dinner and ch11_did_all_tasks:
         $ monika_type = 0
     elif ch11_monika_talked:
         $ monika_type = 1
@@ -965,6 +966,7 @@ label choose_start:
         $ monika_type = 2
 
     if monika_type != 0:
+        s "..."
         s "Why do I feel like something bad is going to happen?"
         s "Did you listen to...it?"
         s "I don't know what that means but you had to choose some things..."
@@ -973,8 +975,12 @@ label choose_start:
             "Yes.":
                 $ ch12_natsuki_reluctance += 2
                 $ sayori_personality += 3
+                s "Okay..."
+                s "I don't know what that did but I feel really..."
+                s "Never mind."
             "No.":
-                pass
+                s "Suddenly I feel a lot better."
+                s "I don't really know why."
 
     if check_some_house:
         s "You were told about somebody coming, weren't you?"
@@ -994,7 +1000,7 @@ label choose_start:
                         s "Then there was no point in even talking about this, was there?"
             "No.":
                 s "I see."
-                s "Well...I hope you know what you're doing."
+                s "Well...I hope you knew what you're doing."
 
     s "So that means..."
     if normal_haruki:
@@ -1012,7 +1018,7 @@ label choose_start:
         if check_whole_house:
             $ natsuki_approval += 1
             $ ch12_outcome = 1
-            s "Natsuki and her dad came back together..."
+            s "Natsuki and her dad are back together as a family..."
             s "That's so...unexpected."
             s "But I bet they're both feeling better."
         else:
@@ -1026,6 +1032,7 @@ label choose_start:
     s "Whatever..."
     if ch12_natsuki_reluctance >= 3:
         s "I think we're almost done--."
+        $ currentpos = get_pos()
         stop music
         $ pause(0.5)
         s "..."
@@ -1040,11 +1047,13 @@ label choose_start:
                 $ ch12_markov_agree = True
                 s "Disappointing but not unexpected."
         s "Hold on a moment..."
+        play music "<from " + str(currentpos) + " loop 6.424>bgm/monika-end.ogg"
         s "..."
         s "...done here...?"
         s "Did something just happen?"
         s "...Never mind."
         s "Where was I?"
+        s "Let me just start again..."
 
     s "I think we're almost done here."
     menu:

@@ -164,7 +164,7 @@ label ch13_main:
     "I told her that I'd look at a couple of clubs, just to make her happy."
     "Then we went on with our day."
     "Eventually...I did join the Literature Club."
-    "And it was all because of some cupcakes Sayori promised me."
+    "And it all started because of some cupcakes Sayori promised me."
     "Was that really the only reason I ended up going to the Literature Club?"
     "And who knew that I would have ended up staying for real?"
     scene white with dissolve_cg
@@ -177,8 +177,8 @@ label ch13_main:
     "Was I just trying to impress her?"
     "Maybe it was because of her smile."
     "There was another reason, wasn't there?"
-    "It was really important and I knew I had the option to write the others, but I always chose Monika."
-    "I must have forgotten it."
+    "It was really important...I knew I had the option to write for the others, but I always chose Monika."
+    "I must have forgotten the real reason."
     "But why does it feel like Monika was more important..."
     "At least...during this time."
     "Well...there has must to be more to it."
@@ -194,11 +194,11 @@ label ch13_main:
     "But..."
     "There's something else that I can't help but wonder about."
     "I seem to have forgotten how Monika knew about Sayori's depression in the first place."
-    "It's not like she knew Sayori better than I do, did she?"
+    "It's not like she knew Sayori better than I did...did she?"
     "In any case..."
     "She told me to visit Sayori on Saturday, and I did."
-    "Monika was there too and she assured me that Sayori was going to be feeling better."
-    "I made sure that Sayori was okay, and I assured her that everything was going to be okay."
+    "Both of them were at Sayori's house on Saturday."
+    "I made sure that Sayori was feeling better, and I assured her that everything was going to be okay."
     "I would do anything to make sure my best friend was okay."
     "Then came along Sunday..."
     scene white with dissolve_cg
@@ -228,18 +228,18 @@ label ch13_main:
         show natsuki 2bj_gray zorder 2 at i11
     show vignette zorder 100
     with Dissolve(1.5)
-    "After Sayori's confession, I remember [ch4_name] came over to do some preparation."
+    "After Sayori's confession, I remember [ch4_name] came over to do some preparations."
     "I don't really remember what the preparation was for..."
     "Which, for some reason, is really bothering me."
     if ch4_name == "Yuri":
         "But I do remember making a banner with her."
         "We spent most of the day on it and I think it turned out pretty well."
-        "The atmosphere we created was going to be great..."
+        "The atmosphere we created for...something was going to be great..."
     else:
         "But I do remember baking with Natsuki."
         "It was an experience that I would never forget."
         "Who knew baking was so much more fun with another person?"
-    "Spending the day with [ch4_name] was probably one of my highlights of the first week."
+    "Spending the day with [ch4_name] was probably one of best things of the first week."
     "It let me get closer to her and learn a bit more about her."
     "But then..."
     scene white with dissolve_cg
@@ -282,6 +282,7 @@ label ch13_main:
     hide screen tear
     window show(None)
     $ style.say_window = style.window
+    $ _history_list = []
     play music t2
     if ch12_markov_agree:
         $ persistent.markov_agreed = True
@@ -333,7 +334,7 @@ label ch13_main:
         mc "Is it for anything in particular?"
         m "Hmm...maybe."
         m "I'm not too sure on the details yet, but I've got something in mind."
-        mc "I'd love to hear you play."
+        mc "I'd love to hear you play that song you talked about in the first week."
         mc "I mean you must have a decent amount of practice now, right?"
         "Monika smiles."
         m "I'm certainly getting better, I think."
@@ -365,7 +366,7 @@ label ch13_main:
         m "I just want to get better faster, you know?"
         mc "Any reason in particular?"
         m "Maybe~"
-        mc "I'd love to hear you play."
+        mc "I'd love to hear you play that song you talked about in the first week."
         m "Maybe when the time is right, [player]."
         m "For now, we should get to the meeting. We've probably kept them waiting long enough."
     else:
@@ -386,12 +387,12 @@ label ch13_main:
         mc "I won't pry then."
         m "Good. Let's head inside before we waste anymore time."
     scene bg club_day
-    show sayori zorder 2 at t32
-    if visited_yuri_hospital:
-        show monika 1a zorder 2 at t31
-    else:
-        show yuri 1a zorder 2 at t33
     with wipeleft_scene
+    show sayori 1a zorder 2 at i32
+    if visited_yuri_hospital:
+        show monika 1a zorder 2 at i31
+    else:
+        show yuri 1a zorder 2 at i33
     show sayori 1a zorder 2 at f32
     if visited_yuri_hospital:
         s "[player], where have you been?"
@@ -422,6 +423,7 @@ label ch13_main:
         s "It's...different!"
         show monika zorder 3 at f31
         show sayori zorder 2 at t32
+        m "Ahaha, you noticed?"
         m "You're quite sharp, Sayori."
         m "I actually decided to wear my hair down today..."
         m "Because..."
@@ -485,8 +487,8 @@ label ch13_main:
         m "Sometimes you just have to say what's on your mind."
     elif ch12_markov_agree and monika_type == 1:
         show monika 2hb zorder 3 at f31
-        m "Well, you are a pretty complicated person."
-        m "There's so many special things about you, Sayori."
+        m "If you say so, Sayori."
+        m "Just try to relax a little, okay?"
     else:
         m "I wonder if you're doing okay yourself, Sayori."
         m "You probably have a lot to think about, right?"
@@ -497,7 +499,8 @@ label ch13_main:
     s "{i}(And so will everyone else...){/i}"
     show sayori zorder 2 at t32
     show yuri zorder 3 at f33
-    y "Um...I have a suggestion for what we could do for a little bit."
+    y "Um...since you're taking suggestions..."
+    y "I have an idea for something we could do."
     y "That is...if you all want to hear it."
     show sayori zorder 3 at f32
     show yuri zorder 2 at t33
@@ -512,7 +515,8 @@ label ch13_main:
     show sayori zorder 3 at f32
     show yuri zorder 2 at t33
     s "Event? I haven't really been keeping up with school stuff."
-    s "What event is it, Yuri? More importantly, when is it?"
+    s "What event is it, Yuri?"
+    s "But more importantly, when is it?"
     show sayori zorder 2 at t32
     show yuri zorder 3 at f33
     y "It's a thing the school is doing to promote the smaller clubs."
@@ -549,7 +553,7 @@ label ch13_main:
         m "Well, all I can really say is what I heard about it during lunch."
         m "A couple of the smaller club's presidents wanted to try to get more members."
         m "I guess they actually managed to get the school to do it?"
-        m "I think it's because one of the presidents was also a president of a larger club."
+        m "Now that I think about, it's probably because one of the presidents was also a president of a larger club."
         m "So he probably had a pretty big influence on the whole thing..."
         m "I think it would be a great opportunity for the Literature Club to do something though!"
     else:
@@ -564,27 +568,27 @@ label ch13_main:
         m "It would be a good opportunity for the Literature Club, I think."
         m "You know, to get us to grow a little since there's only five of us."
     show monika zorder 2 at t31
-    show sayori zorder 3 at f33
+    show sayori zorder 3 at f32
     s "Hmm..."
     s "I'm not sure if this is a good idea or not."
-    show sayori zorder 2 at t33
+    show sayori zorder 2 at t32
     mc "Didn't you say there was no bad suggestions?"
     mc "Besides, it doesn't sound like a bad suggestion anyway."
-    show sayori zorder 3 at f33
+    show sayori zorder 3 at f32
     s "Oh...it was definitely a good suggestion."
     s "I just meant that I have no idea what we could do to promote the club."
     s "{i}(Or if doing something like this again is a good idea...){/i}"
-    show yuri zorder 3 at f31
-    show sayori zorder 2 at t33
+    show sayori zorder 2 at t32
+    show yuri zorder 3 at f33
     y "Well..."
     y "I know you said that you don't want to do the 'play-read' thing anymore..."
     y "But I think we could do one of those, just in front of actual people this time."
     y "We've already done two practice ones so..."
-    show yuri zorder 2 at t31
-    show sayori zorder 3 at f33
+    show sayori zorder 3 at f32
+    show yuri zorder 2 at t33
     s "Do you expect me to write a script, like the last two?"
     s "It's hard work, you know."
-    show sayori zorder 2 at t33
+    show sayori zorder 2 at t32
     if monika_type == 0:
         show monika zorder 3 at f31
         m "Maybe I could help you write it this time."
@@ -598,36 +602,36 @@ label ch13_main:
         m "Don't worry about doing it by yourself, Sayori."
         m "I can help you with that."
     show monika zorder 2 at t31
-    show sayori zorder 3 at f33
+    show sayori zorder 3 at f32
     s "Well..."
     s "We still can't do this without Natsuki."
     s "Either all of us have to agree to it, or we aren't doing it at all."
-    show yuri zorder 3 at f32
-    show sayori zorder 2 at t33
+    show sayori zorder 2 at t32
+    show yuri zorder 3 at f33
     y "It kinda sounds like you don't like my idea, Sayori."
     y "We don't have to do this, if you're {i}that{/i} opposed to it."
     y "You are the president after all..."
-    show yuri zorder 2 at t32
-    show sayori zorder 3 at f33
+    show sayori zorder 3 at f32
+    show yuri zorder 2 at t33
     s "No, Yuri!"
     s "It's not like that, really!"
     s "I really like the idea! It's just...."
     s "Well, there might be some complications..."
-    show yuri zorder 3 at f32
-    show sayori zorder 2 at t33
+    show sayori zorder 2 at t32
+    show yuri zorder 3 at f33
     y "Then we can work through them together, all five of us."
     y "I'm willing to do my part for the Literature Club."
     y "I'm sure the others are too."
-    show yuri zorder 2 at t32
+    show yuri zorder 2 at t33
     "Seeing Yuri so confident..."
     "It almost feels a little unnatural compared to how she acted on my first day."
     "It's definitely not a bad thing and it probably isn't the first time she's done it."
     "I guess I've just started taking notice, for real, today."
     "I wonder when she changed though..."
-    show sayori zorder 3 at f33
+    show sayori zorder 3 at f32
     s "I don't think you understand the scale of these complications, Yuri."
     s "But I appreciate the sediment."
-    show sayori zorder 2 at t33
+    show sayori zorder 2 at t32
     if monika_type == 0:
         show monika zorder 3 at f31
         m "Ah...don't you mean 'sentiment'?"
@@ -639,11 +643,11 @@ label ch13_main:
         show monika zorder 3 at f31
         m "You meant 'sentiment'...right?"
     show monika zorder 2 at t31
-    show sayori zorder 3 at f33
+    show sayori zorder 3 at f32
     s "Ehehe, yeah! Sentiment is what I meant~"
     s "Thanks, Monika!"
     s "Do you three have any more suggestions?"
-    show sayori zorder 2 at t33
+    show sayori zorder 2 at t32
     "Sayori looks at the three of us."
     "It's as if she is scanning us for any other idea."
     if not monika_type == 0 and not ch12_markov_agree:
@@ -654,11 +658,11 @@ label ch13_main:
             "Speak up.":
                 $ sayori_personality += 1
                 mc "Sayori, have you considered killing yourself?"
-                show sayori zorder 3 at f33
+                show sayori zorder 3 at f32
                 s "W-What?"
                 s "[player], why would you even say that?!"
                 s "That's..."
-                show sayori zorder 2 at t33
+                show sayori zorder 2 at t32
                 mc "H-Huh?"
                 mc "I don't..."
                 mc "Why did I...?"
@@ -669,16 +673,16 @@ label ch13_main:
                 m "[player], are you feeling okay?"
                 m "That was a pretty mean thing to say."
                 show monika zorder 2 at t31
-                show yuri zorder 3 at f32
+                show yuri zorder 3 at f33
                 y "Sayori, he didn't mean it."
                 y "I don't know what's come over him but..."
                 "Yuri looks at me with a bewildered expression."
                 y "You didn't mean it, right?"
-                show yuri zorder 2 at t32
+                show yuri zorder 2 at t33
                 mc "No! Of course I didn't mean it!"
                 mc "I don't know what came over me!"
                 mc "I'd never say anything like that...not to anyone."
-                show sayori zorder 3 at f33
+                show sayori zorder 3 at f32
                 s "..."
                 s "So why did you say it to me..."
                 $ _history_list = []
@@ -686,8 +690,8 @@ label ch13_main:
                 window hide(None)
                 play sound "sfx/s_kill_glitch1.ogg"
                 show monika 1n zorder 2 at t31
-                show yuri 1a zorder 2 at t32
-                show sayori 1a zorder 3 at t33
+                show sayori 1a zorder 3 at t32
+                show yuri 1a zorder 2 at t33
                 $ pause(0.25)
                 stop sound
                 hide screen tear
@@ -700,7 +704,7 @@ label ch13_main:
         "I don't really have a better idea or rather, another idea at all."
         window auto
         "By the looks of things, neither do Monika or Yuri."
-    show sayori zorder 3 at f33
+    show sayori zorder 3 at f32
     s "I guess this is the best idea we're going to get, isn't it?"
     s "I wonder if Natsuki would have said anything different."
     s "Oh well..."
@@ -708,19 +712,19 @@ label ch13_main:
     s "There's not really a point sitting here talking about what we could do for the fest--"
     s "I mean, for \"Inauguration Day\" without Natsuki here."
     s "The best we could do is come up with books to perform but that's not really fair without her."
-    show yuri zorder 3 at f32
-    show sayori zorder 2 at t33
+    show sayori zorder 2 at t32
+    show yuri zorder 3 at f33
     y "That's a fair reason, Sayori."
     y "We should be considerate of Natsuki's feelings as well."
     y "Maybe tonight we can all come up with a list of books that we like that would be a good idea to perform."
     y "And tomorrow we can choose which one we're performing from everyone's options."
-    show yuri zorder 2 at t32
-    show sayori zorder 3 at f33
+    show sayori zorder 3 at f32
+    show yuri zorder 2 at t33
     s "Yeah, that would probably be the best way to handle it."
     s "I guess that's everyone's task for tonight!"
     s "Everybody choose one or two books you'd like to perform in front of actual people."
     s "I don't know how long Natsuki is going to be away for so I'll go visit her tonight to make sure everything is okay."
-    show sayori zorder 2 at t33
+    show sayori zorder 2 at t32
     if monika_type == 0:
         show monika zorder 3 at f31
         m "I think that's a great idea."
@@ -736,7 +740,7 @@ label ch13_main:
         m "I guess something that resembles part of her normal life would be appreciated."
     show monika zorder 2 at t31
     "Sayori smiles sweetly at Monika."
-    show sayori zorder 3 at f33
+    show sayori zorder 3 at f32
     s "Alright, everybody!"
     s "Is everyone ready to share their poems?"
     s "Ehehe, ready or not, it's time!"
@@ -810,7 +814,7 @@ label ch13_end:
     show sayori zorder 3 at f32
     s "As I was saying..."
     s "Why don't we all head home and decide what books we want to perform?"
-    s "I know it's pretty early end to the meeting but [player] was late and I still have a lot of preparations I need to make."
+    s "I know it's a pretty early end to the meeting but [player] was late and I have a lot of preparations to do for Friday."
     s "We should come up with a variety of stuff because it might be hard to find a book that everyone likes..."
     s "...or that's actually reasonable to perform."
     show sayori zorder 2 at t32
@@ -865,19 +869,23 @@ label ch13_end:
         m "I think I could help here."
         m "It's obvious that we should have some food for the occassion."
         m "Aside from small snacks, we could get Natsuki to bake something for us."
+        m "The stuff she bakes is delicious after all!"
     elif monika_type == 1 and ch12_markov_agree:
         show monika zorder 3 at f33
         m "I know what everyone could do."
         m "We all have different types of talents, don't we?"
         m "Natsuki, for example, could bake us some cupcakes for the day."
+        m "The stuff she bakes is delicious after all!"
     else:
         show monika zorder 3 at f33
         m "Well, I know a couple of things that we could do."
         m "I'm not really sure on the details but we all have different things we're most suited for."
         m "Natsuki could prepare some food for us as an example."
+        m "The stuff she bakes would probably taste really good!"
     show yuri zorder 3 at f31
     show monika zorder 2 at t33
     y "Well...what could I do then?"
+    "There's no response."
     y "I..."
     y "I'm useless..."
     show yuri zorder 2 at t31
@@ -898,7 +906,8 @@ label ch13_end:
         m "You definitely have some talents that we could use to help the preparations."
         m "For example, your handwriting is really beautiful."
         m "Every time I read one of your poems I'm in awe at how good it is!"
-        m "You could make some banners for the club to set the atmosphere."
+        m "I think it's helped a lot by your handwriting."
+        m "So I was thinking you could make some banners for the club to set the atmosphere."
         m "I'm sure they'll end up great!"
     else:
         show monika zorder 3 at f33
@@ -916,7 +925,7 @@ label ch13_end:
     y 2pr "I love atmosphere!"
     show yuri 2pl
     "Yuri's expression suddenly changes as she stares at her desk in focus and starts nodding to herself."
-    show yuri zorder 2 at t33
+    show yuri zorder 2 at t31
     mc "Your mind is already racing, I see..."
     "Has this all happened before?"
     "I definitely remember Yuri saying that..."
@@ -959,7 +968,7 @@ label ch13_end:
     show sayori zorder 3 at f32
     s "[player]..."
     s "I think that's a great idea!"
-    s "I could even organize to get a grand piano for you or something!"
+    s "I could even organize to get a grand piano for Monika or something!"
     s "What do you think, Monika?"
     show sayori zorder 2 at t32
     if monika_type == 0:
@@ -972,7 +981,7 @@ label ch13_end:
         show monika zorder 3 at f33
         m "Ah..."
         m "Is it really a good idea for me to play?"
-        m "If you all think I'm good enough to do that, then I'll consider it."
+        m "If you all think I'm good enough to do that, then I might consider it."
         m "I'm just not sure that it's the right time."
     else:
         show monika zorder 3 at f33
@@ -980,10 +989,19 @@ label ch13_end:
         m "Hmm..."
         m "Not that I mind doing it because I could definitely do it."
         m "I'm just not sure it's the right time for me."
-    m "I guess I have to do something though..."
+    m "But I guess I have to do something..."
+    show yuri zorder 3 at f31
+    show monika zorder 2 at t33
+    y "I think you'll be splendid, Monika."
+    show yuri zorder 2 at t31
+    mc "I know you're going to be great."
+    show sayori zorder 3 at f32
+    s "I'm sure it'll be awesome!"
+    s "I think Natsuki would agree too!"
+    show sayori zorder 2 at t32
     "Monika looks at all of us one by one."
     m "Okay, I'll do it."
-    show sayori zorder 3 at f32
+    show sayori zorder 3 at hf32
     show monika zorder 2 at t33
     s "Yaaaaaaaay!"
     s "Now we all have something to do."
@@ -992,7 +1010,7 @@ label ch13_end:
     show sayori zorder 2 at t32
     y "I think you're forgetting someone, Sayori."
     show yuri zorder 2 at t31
-    mc "Yeah...I don't have any preparation I can do."
+    mc "Yeah...I don't think we assigned me anything."
     mc "Maybe I could--"
     show sayori zorder 3 at f32
     s "Well, you could help one of us!"
@@ -1091,7 +1109,7 @@ label ch13_end:
     s "Like getting a grand piano arranged for Monika or getting an experienced baker to help Natsuki design awesome cupcakes!"
     show sayori zorder 2 at t32
     mc "That sounds like a lot of work..."
-    mc "It would almost be wrong {i}not{/i} to hel you."
+    mc "It would almost be wrong {i}not{/i} to help you."
     show sayori zorder 3 at f32
     s "[player], you really don't have to."
     s "I can handle myself fine."
@@ -1150,6 +1168,7 @@ label ch13_end:
     s "Alright, everybody!"
     s "That's definitely the end of our meeting today..."
     s "Unless any of you guys want to say something...?"
+    show sayori zorder 2 at t32
     if monika_type == 0:
         show monika zorder 3 at f33
         m "Actually, I would like to say something."
@@ -1207,8 +1226,12 @@ label ch13_end:
         s "I'm just really happy you said that..."
         s "Ehehe, sorry it's not really appropriate for me to cry."
         s "Seeing as I'm the president and everything..."
-        play sound "mod_assets/sfx/swoosh.ogg"
+        $ currentpos = get_pos()
+        $ audio.t5b = "<from 14.6 loop 4.444>bgm/5_monika.ogg"
+        stop music fadeout 1.0
+        $ renpy.music.play(audio.t5b, channel="music_poem", fadein=1.0, tight=True)
         scene white with dissolve_cg
+        play sound "mod_assets/sfx/swoosh.ogg"
         scene bg house_gray
         show monika 2bm_gray zorder 2 at i11
         show vignette zorder 100
@@ -1224,6 +1247,8 @@ label ch13_end:
         m 1bm_gray "I'm..."
         m "I'm not going to cry."
         m "I have to be strong for what's coming up."
+        stop music_poem fadeout 1.0
+        play music "<from " + str(currentpos) + " loop 4.618>bgm/3.ogg" fadein 1.0
         scene white with dissolve_cg
         scene bg club_day
         show yuri 1a zorder 2 at i31
@@ -1231,6 +1256,7 @@ label ch13_end:
         show monika 1a zorder 3 at i33
         with Dissolve(1.5)
         $ style.say_window = style.window
+        $ del _history_list[-10:]
         "What was that...?"
         "That was during the first week, right?"
         "Why would Monika say she was the president...?"
@@ -1262,6 +1288,7 @@ label ch13_end:
         mc "So I wouldn't trade any of the time I've spent here either."
         show monika zorder 3 at f33
         m "Well...that's good to know."
+        "Monika notices Sayori tearing up."
         m "Sorry! I didn't mean to ruin the mood."
         m "But that's all I have to say."
         show monika zorder 2 at t33
@@ -1341,8 +1368,12 @@ label ch13_end:
         s "B-But I really shouldn't cry..."
         s "It wouldn't be appropriate as the president of the Literature Club..."
         s "What would the people watching us on the day think...?"
-        play sound "mod_assets/sfx/swoosh.ogg"
+        $ currentpos = get_pos()
+        $ audio.t5b = "<from 14.6 loop 4.444>bgm/5_monika.ogg"
+        stop music fadeout 1.0
+        $ renpy.music.play(audio.t5b, channel="music_poem", fadein=1.0, tight=True)
         scene white with dissolve_cg
+        play sound "mod_assets/sfx/swoosh.ogg"
         scene bg house_gray
         show monika 2bm_gray zorder 2 at i11
         show vignette zorder 100
@@ -1358,6 +1389,8 @@ label ch13_end:
         m 1bm_gray "I'm..."
         m "I'm not going to cry."
         m "I have to be strong for what's coming up."
+        stop music_poem fadeout 1.0
+        play music "<from " + str(currentpos) + " loop 4.618>bgm/3.ogg" fadein 1.0
         scene white with dissolve_cg
         scene bg club_day
         show yuri 1a zorder 2 at i31
@@ -1365,6 +1398,7 @@ label ch13_end:
         show monika 1ha zorder 3 at i33
         with Dissolve(1.5)
         $ style.say_window = style.window
+        $ del _history_list[-10:]
         "What was that...?"
         "That was during the first week, right?"
         "Why would Monika say she was the president...?"
@@ -1374,7 +1408,7 @@ label ch13_end:
         m "It's good to let your emotions out once in a while."
         m "It's definitely better than keeping it bottled up, you know?"
         show sayori zorder 3 at f32
-        show monika zorder 3 at f33
+        show monika zorder 2 at t33
         s "Y-Yeah..."
         s "You're right."
         s "T-Thanks again, Monika..."
@@ -1405,6 +1439,7 @@ label ch13_end:
         mc "So I wouldn't trade any of the time I've spent here either."
         show monika zorder 3 at f33
         m "Ahaha, I'm glad."
+        "Monika notices Sayori tearing up."
         m "Sorry! I didn't mean to ruin the mood."
         m "But that's all I have to say."
         show monika zorder 2 at t33
@@ -1418,7 +1453,7 @@ label ch13_end:
     s "If that's all..."
     s "...Then I'll see you all tomorrow!"
     show sayori zorder 2 at t32
-    if ch13_scene = "sayori":
+    if ch13_scene == "sayori":
         mc "Aren't you going to wait for me?"
         mc "We're doing the preparations together, aren't we?"
         show sayori zorder 3 at f32
@@ -1476,6 +1511,8 @@ label ch13_end_natsuki:
     mc "I should probably help Natsuki."
     mc "With what she's been dealing with, I know she could probably use some help."
     mc "Or at least a visit from me."
+    mc "Besides, Sayori sounded confident that she could handle her preparations herself."
+    mc "So I think it's the right thing to do."
     show sayori zorder 3 at f32
     s "I'm sure she wouldn't mind your company, [player]!"
     s "With what she has to deal with, I also think she'd appreciate your help."
@@ -1522,7 +1559,8 @@ label ch13_end_natsuki:
 label ch13_end_yuri:
     $ ch13_scene = "yuri"
     mc "I think I should help Yuri with her preparations."
-    mc "She won't be able to create the perfect atmosphere without some help."
+    mc "Sayori said that she could do everything by herself..."
+    mc "And Yuri won't be able to create the perfect atmosphere without some help."
     mc "So I think it's just the logical thing to do."
     show yuri zorder 3 at f31
     if visited_yuri_hospital:
@@ -1560,7 +1598,8 @@ label ch13_end_monika:
     $ ch13_scene = "monika"
     mc "Well..."
     mc "I guess I should be helping Monika with her preparations."
-    mc "Everyone else seems to have their own parts covered."
+    mc "Sayori sounded confident that she could handle the work all by herself..."
+    mc "And everyone else seems to have their own parts covered."
     mc "So I think helping Monika with whatever is the most appropriate thing for me to do."
     if monika_type == 0:
         show monika zorder 3 at f33
@@ -1573,8 +1612,8 @@ label ch13_end_monika:
     elif monika_type == 1 and ch12_markov_agree:
         show monika 1ha zorder 3 at f33
         m "Even after all the work Sayori said she has to do...?"
-        m "I'm not going to decline so I guess I should say..."
-        m "Ah, thank you."
+        m "I'm not going to decline so I guess I should be saying is..."
+        m "Thank you."
         m "I really appreciate you choosing to help me [player]~"
         m "Maybe I'll even tell you more about the poem I wrote..."
     else:
