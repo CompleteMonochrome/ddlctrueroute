@@ -908,7 +908,7 @@ label ch13_end:
         m "Yuri, I was going to say you have beautiful handwriting."
         m 1n "Maybe you could make some banners about the Literature Club to set the atmosphere."
         m "I know you'll do a great job!"
-    elif monika_type == 1:
+    elif monika_type == 1 and ch12_markov_agree:
         show monika 3hl zorder 3 at f33
         m "Ahaha, it's not like that Yuri."
         m "You definitely have some talents that we could use to help the preparations."
