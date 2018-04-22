@@ -4307,10 +4307,6 @@ label ch12_end:
     "I still have my whole life ahead of me..."
     "Maybe a good night's rest will clear my mind."
     # Set variables for Sayori's arc!!!
-    $ n_appealS = 0
-    $ s_appealS = 0
-    $ y_appealS = 0
-    $ m_appealS = 0
     $ persistent.arc_clear[1] = True
     $ renpy.save_persistent()
     return

@@ -19,7 +19,7 @@ label ch13_main:
     s "I'm not really sure how to describe it but it had something to do with Monika..."
     s "Oh well, it's gone now so don't worry about it."
     s "I might just ask Monika if she knows what that is about."
-    s 1q "But yeah...you're poems don't really matter anymore!"
+    s 1q "But yeah...your poems don't really matter anymore!"
     if n_appeal >= 4 and (ch12_outcome == 3 or ch12_outcome == 1):
         s 1l "Um...actually, that's not completely true."
         s "If you're still trying to make [player] go for Natsuki..."
@@ -525,7 +525,7 @@ label ch13_main:
     y "I overheard someone talk about it."
     y 3pf "I think it was called \"Inauguration Day\" or something..."
     y "If I remember correctly it's on Friday this week."
-    y "So we if we want to do something for it, we should start thinking about it today."
+    y "So if we want to do something for it, we should start thinking about it today."
     y 3ph "It's strange though, I hadn't really heard of it before today."
     y "From the sounds of things, it was a pretty recent initiative by the school."
     y "I wonder who's idea that was..."
@@ -1100,10 +1100,10 @@ label ch13_end:
         m "You should go because you think I need the help not because you want to hang out with me..."
         m 1hj "But I certainly wouldn't mind if that was the reason~"
     else:
-        show monika 3ha zorder 3 at f33
+        show monika 3a zorder 3 at f33
         m "[player] could be useful helping me."
         m "There might be some songs he wants to hear on the day that I could play for him."
-        m 3hb "It also helps if I practice in front of an audience so I can get some instant feedback after I play."
+        m 3b "It also helps if I practice in front of an audience so I can get some instant feedback after I play."
         m 1c "But it's up to him, of course."
     show sayori 1l zorder 3 at f32
     show monika zorder 2 at t33
@@ -1539,7 +1539,7 @@ label ch13_end:
             hide yuri
             show monika zorder 2 at t11
             "Yuri hurries out the door."
-        elif if ch13_scene == "yuri":
+        elif ch13_scene == "yuri":
             m "I suppose you two will be walking together."
             m "So I should be going."
             m "Bye~"
@@ -1722,7 +1722,7 @@ label ch13_end_sayori:
     show sayori 2q zorder 3 at f32
     s "Take it however you want~"
     "Sayori smiles mischievously."
-    s 2d "I'm only kidding."
+    s 2d "I'm just kidding."
     s "I really do appreciate you helping me, [player]."
     if sayori_confess and not sayori_dumped:
         s "I just hope you're doing it not because we're a couple but because you actually think I could use the help."
@@ -1743,7 +1743,7 @@ label ch13_end_sayori:
         y 2pv "I...suppose it makes the most sense."
         y "She does have the most do..."
         y 2po "Maybe you {i}are{/i} just doing what's best for the club..."
-        y "Despite what Sayori said, it's not like she can actually handle all that work by yourself, Sayori."
+        y "Despite what Sayori said, it's not like she can actually handle all that work by herself."
     show yuri zorder 2 at t31
     show sayori 2a zorder 3 at f32
     s "You'd be surprised, Yuri."

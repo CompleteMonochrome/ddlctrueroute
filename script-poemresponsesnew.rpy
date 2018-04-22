@@ -3093,7 +3093,7 @@ label msay_universal_1:
     else:
         m 1c "A poem for [ch13poemwinner]."
         mc "Yeah...was it that obvious?"
-        m 1d "Not really, I just though..."
+        m 1d "Not really, I just thought..."
         m 2a "Well, it's fine, I guess."
         m "I don't really have anything to say that I haven't said already."
         "Monika doesn't sound like she wants to talk."
@@ -3150,7 +3150,7 @@ label msay_monika_1:
             m "Maybe if you agreed to help me..."
         else:
             m "I've already set a plan in motion."
-        1i m "Anyway, there's no point talking about it any futher."
+        m 1i "Anyway, there's no point talking about it any futher."
         "Monika lets out a cold stare at me."
         m "That's done."
         mc "Eh?"
