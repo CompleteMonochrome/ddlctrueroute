@@ -1053,7 +1053,7 @@ label choose_start:
         s "Did something just happen?"
         s "...Never mind."
         s "Where was I?"
-        s "Let me just start again..."
+        s "Let me just say what I wanted to say again..."
 
     s "I think we're almost done here."
     menu:
