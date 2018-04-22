@@ -528,7 +528,7 @@ label ch13_main:
     y "So if we want to do something for it, we should start thinking about it today."
     y 3ph "It's strange though, I hadn't really heard of it before today."
     y "From the sounds of things, it was a pretty recent initiative by the school."
-    y "I wonder who's idea that was..."
+    y "I wonder whose idea that was..."
     show yuri zorder 2 at t33
     if monika_type == 0:
         show monika 3a zorder 3 at f31
@@ -574,7 +574,7 @@ label ch13_main:
     s "Hmm..."
     s "I'm not sure if this is a good idea or not."
     show sayori zorder 2 at t32
-    mc "Didn't you say there were no bad suggestions?"
+    mc "Didn't you say there are no bad suggestions?"
     mc "Besides, it doesn't sound like a bad suggestion anyway."
     show sayori 1d zorder 3 at f32
     s "Oh...it was definitely a good suggestion."
