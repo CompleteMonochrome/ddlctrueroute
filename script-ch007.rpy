@@ -282,7 +282,7 @@ label ch7_main:
     mc "Yeah...some."
     s 1d "Well, that's all I can ask for!"
     s "Thanks [player]!"
-    s 1b "What did you think about the club book?"
+    s 1b "What do you think about the club book?"
     mc "Sayori..."
     mc "Can you at least get out of the way before I answer that question?"
     s 1l "W-What?"

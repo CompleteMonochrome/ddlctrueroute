@@ -857,7 +857,7 @@ label ch13_s_end:
         call showpoem (poem_s8b)
     else:
         call showpoem (poem_s8)
-    s "So what did you think?"
+    s "So what do you think?"
     mc "I don't know what to say."
     s 2c "Huh?"
     mc "Are you trying to send me a message with this poem, Sayori?"
@@ -1275,7 +1275,7 @@ label ch13_m_end:
         m "If you really want, we can talk about it more later."
         m 1g "But right now isn't really the time or place, okay?."
         mc "Alright..."
-        m 1e "Did you at least like the poem?"
+        m 1e "Do you at least like the poem?"
         m "I thought it wouldn't have as much...flare as my other ones."
         mc "It seemed fine to me."
         mc "Why wouldn't it be as good as your other ones?"
@@ -1302,7 +1302,7 @@ label ch13_m_end:
         m "Thanks for listening~"
     elif monika_type == 1 and ch12_markov_agree:
         call showpoem (poem_m10b, img="monika 1hb")
-        m "What'd you think?"
+        m "What do you think?"
         m "I tried to make it like my other abstract poems but..."
         m 1hc "It was a little difficult last night."
         mc "Difficult in what way?"
@@ -2610,7 +2610,7 @@ label ch13_m_start:
         "Did she just openly admit that...?"
         mc "N-No...I like it."
         mc "I-It's just..."
-        "I really didn't meant to offend her."
+        "I really didn't mean to offend her."
         mc "Just forget I said anything."
         m 1hb "Ahaha, okay~"
         m "Anyway, I'll take a look at your poem now."
