@@ -1909,7 +1909,7 @@ label ch12_play:
             currentpos = get_pos()
             startpos = currentpos - 0.3
             if startpos < 0: startpos = 0
-            track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/t9.ogg"
+            track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/9.ogg"
             renpy.music.play(track, loop=True)
         $ pause(1.0)
         stop music
