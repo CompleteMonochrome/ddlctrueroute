@@ -112,7 +112,19 @@ label ch3_mainb:
     return
 
 # Good/Bittersweet Ending Saturday Scene
-label ch3_mainc:
+label ch3_mainc_name:
+    stop music
+    scene black
+    $ m_name = "???"
+    m "Eh...?"
+    m "You named the file wrong."
+    m "You called it 'script-saturday.txt.txt', didn't you?"
+    m "Don't worry!"
+    m "I can still fix this..."
+    m "There..."
+    m "Saturday should work now."
+    $ m_name = "Monika"
+    label ch3_mainc:
     stop music
     scene bg residential_day
     with dissolve_scene_full
@@ -629,14 +641,25 @@ label ch3_maind:
     m "I mean I'd give it to you now but...\"{space=5000}{w=0.75}{nw}"
     m 1e "I wasted a little too much time.\"{space=5000}{w=0.75}{nw}"
     m "Hopefully I'll see you tomorrow~\"{space=5000}{w=0.5}{nw}"
-    m "It's going to be great eternity together.\"{space=5000}{w=0.5}{nw}"
+    m "It's going to be a great eternity together.\"{space=5000}{w=0.5}{nw}"
     window hide(None)
     window auto
     hide black onlayer front
     return
 
 # Bad Ending Saturday Scene
-label ch3_maine:
+label ch3_maine_name:
+    stop music
+    scene black
+    $ m_name = "???"
+    m "Eh...?"
+    m "You named the file wrong."
+    m "You called it 'script-saturday.txt.txt', didn't you?"
+    m "Don't worry!"
+    m "I know you wanted to spend Saturday with me so I'll fix it for you."
+    m "There, all done."
+    $ m_name = "Monika"
+    label ch3_maine:
 
     if act_one_dialogue[0]:
         $ persistent.dialogue_change[0] = True

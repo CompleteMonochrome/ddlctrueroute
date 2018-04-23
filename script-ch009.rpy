@@ -1750,6 +1750,7 @@ label ch9_end:
             "Monika is probably already waiting for me."
         else:
             s "[player] and Monika, you can leave if you want."
+            show natsuki zorder 2 at t31
             show sayori zorder 2 at t32
             show monika 2a zorder 3 at f33
             m "Well, alright."

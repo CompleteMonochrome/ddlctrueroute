@@ -475,6 +475,27 @@ label splashscreen:
     return
 
 label after_load:
+    # Set Variables for v0.7.12>v0.8.1
+    if not hasattr(store,'ch12_markov_agree'):
+        $ ch12_markov_agree = False
+    if not hasattr(store,'n_appealS'):
+        $ n_appealS = 0
+    if not hasattr(store,'s_appealS'):
+        $ s_appealS = 0
+    if not hasattr(store,'y_appealS'):
+        $ y_appealS = 0
+    if not hasattr(store,'m_appealS'):
+        $ m_appealS = 0
+    if not hasattr(store,'m_appealS'):
+        $ m_appealS = 0
+    if not hasattr(store,'ch13poemwinner'):
+        $ ch13poemwinner = "Sayori"
+    if not hasattr(store,'ch13_scene'):
+        $ ch13_scene = "sayori"
+    if not hasattr(store,'ch13_name'):
+        $ ch13_name = "Sayori"
+
+    # Normal Stuff
     if persistent.playthrough == 0:
         $ restore_all_characters()
     $ config.allow_skipping = allow_skipping

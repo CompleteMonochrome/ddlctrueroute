@@ -58,25 +58,41 @@ label start:
         # Check if player cares a lot about Sayori
         if sayori_save == 3:
             call ch3_mainb
-            python:
-                try: renpy.file("../game/script-saturday.txt")
-                except: renpy.jump("ch3_skip_saturday")
-                try: os.remove(config.basedir + "/game/script-saturday.txt")
-                except: pass
-                try: renpy.file(config.basedir + "/game/script-saturday.txt")
-                except: open(config.basedir + "/game/script-saturday.txt", "w").write("VGhhbmsgeW91IGZvciBnaXZpbmcgbWUgdGhpcyBjaGFuY2UuDQpJIGhhdmUgdG8gc2FjcmlmaWNlIG15c2VsZiwgZm9yIHlvdSBhbmQgU2F5b3JpLg0KVGhpcyBpcyBqdXN0IG15IHJldHJpYnV0aW9uLCBJJ2xsIGFsd2F5cyBsb3ZlIHlvdS4uLg==")
-            call ch3_mainc
+            if renpy.exists("script-saturday.txt.txt"):
+                python:
+                    try: os.remove(config.basedir + "/game/script-saturday.txt.txt")
+                    except: pass
+                    try: renpy.file(config.basedir + "/game/script-saturday.txt")
+                    except: open(config.basedir + "/game/script-saturday.txt", "w").write("VGhhbmsgeW91IGZvciBnaXZpbmcgbWUgdGhpcyBjaGFuY2UuDQpJIGhhdmUgdG8gc2FjcmlmaWNlIG15c2VsZiwgZm9yIHlvdSBhbmQgU2F5b3JpLg0KVGhpcyBpcyBqdXN0IG15IHJldHJpYnV0aW9uLCBJJ2xsIGFsd2F5cyBsb3ZlIHlvdS4uLg==")
+                call ch3_mainc_name
+            elif renpy.exists("script-saturday.txt"):
+                python:
+                    try: os.remove(config.basedir + "/game/script-saturday.txt")
+                    except: pass
+                    try: renpy.file(config.basedir + "/game/script-saturday.txt")
+                    except: open(config.basedir + "/game/script-saturday.txt", "w").write("VGhhbmsgeW91IGZvciBnaXZpbmcgbWUgdGhpcyBjaGFuY2UuDQpJIGhhdmUgdG8gc2FjcmlmaWNlIG15c2VsZiwgZm9yIHlvdSBhbmQgU2F5b3JpLg0KVGhpcyBpcyBqdXN0IG15IHJldHJpYnV0aW9uLCBJJ2xsIGFsd2F5cyBsb3ZlIHlvdS4uLg==")
+                call ch3_mainc
+            else:
+                jump ch3_skip_saturday
         # If player didn't care about Sayori enough but appealed to Monika
         elif monika_appeal[2]:
             call ch3_maind
-            python:
-                try: renpy.file("../game/script-saturday.txt")
-                except: renpy.jump("ch3_skip_saturday")
-                try: os.remove(config.basedir + "/game/script-saturday.txt")
-                except: pass
-                try: renpy.file(config.basedir + "/game/script-saturday.txt")
-                except: open(config.basedir + "/game/script-saturday.txt", "w").write("SXQncyBqdXN0IHVzIHR3bywgZm9yZXZlciBhbmQgZXZlci4NCkZvcmV2ZXIuDQpJIGxvdmUgeW91Lg==")
-            call ch3_maine
+            if renpy.exists("script-saturday.txt.txt"):
+                python:
+                    try: os.remove(config.basedir + "/game/script-saturday.txt.txt")
+                    except: pass
+                    try: renpy.file(config.basedir + "/game/script-saturday.txt")
+                    except: open(config.basedir + "/game/script-saturday.txt", "w").write("VGhhbmsgeW91IGZvciBnaXZpbmcgbWUgdGhpcyBjaGFuY2UuDQpJIGhhdmUgdG8gc2FjcmlmaWNlIG15c2VsZiwgZm9yIHlvdSBhbmQgU2F5b3JpLg0KVGhpcyBpcyBqdXN0IG15IHJldHJpYnV0aW9uLCBJJ2xsIGFsd2F5cyBsb3ZlIHlvdS4uLg==")
+                call ch3_maine_name
+            elif renpy.exists("script-saturday.txt"):
+                python:
+                    try: os.remove(config.basedir + "/game/script-saturday.txt")
+                    except: pass
+                    try: renpy.file(config.basedir + "/game/script-saturday.txt")
+                    except: open(config.basedir + "/game/script-saturday.txt", "w").write("VGhhbmsgeW91IGZvciBnaXZpbmcgbWUgdGhpcyBjaGFuY2UuDQpJIGhhdmUgdG8gc2FjcmlmaWNlIG15c2VsZiwgZm9yIHlvdSBhbmQgU2F5b3JpLg0KVGhpcyBpcyBqdXN0IG15IHJldHJpYnV0aW9uLCBJJ2xsIGFsd2F5cyBsb3ZlIHlvdS4uLg==")
+                call ch3_maine
+            else:
+                jump ch3_skip_saturday
 
         label ch3_skip_saturday:
         $ chapter = 4

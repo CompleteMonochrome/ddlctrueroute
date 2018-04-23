@@ -631,7 +631,7 @@ label ch3_start_monikab:
     mc "Yeah, I guess you're right."
     mc "Where did this come from anyway?"
     mc "It doesn't seem like something I thought you'd be interested in."
-    m 2b "Oh? And what did you think I'd be interested in?"
+    m 2b "Oh? And what do you think I'd be interested in?"
     mc "Ah--"
     mc "I didn't mean to assume anything."
     mc "It just seems like an odd topic to be discussing."

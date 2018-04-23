@@ -200,6 +200,9 @@ init -1 style window:
 init -1 style window_monika is window:
     background Image("gui/textbox_monika.png", xalign=0.5, yalign=1.0)
 
+init -1 style window_flashback is window:
+    background Image("mod_assets/gui/textbox_flashback.png", xalign=0.5, yalign=1.0)
+
 init -1 style namebox:
     xpos gui.name_xpos
     xanchor gui.name_xalign
@@ -453,7 +456,9 @@ init -501 screen navigation():
                 else:
                     textbutton _("New Game") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
                     if persistent.playthrough == 0 and persistent.monika_change and not persistent.monika_gone:
-                        textbutton _("Custom Start") action If(persistent.playername, true=Start("choose_start"), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                        textbutton _("Custom Start") action If(persistent.playername,
+                        true=Show(screen="confirm", message="Are you sure you want to use Custom Start?\nYou may find different outcomes if you\nchoose differently from your previous choices.", yes_action=Start("choose_start"), no_action=Hide("confirm")),
+                        false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
 
             else:
 

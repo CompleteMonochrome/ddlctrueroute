@@ -351,7 +351,9 @@ label poem(transition=True,totalWords=20):
                 poemwinner[chapter] = pointlist[3]
                 if poemwinner[0] and poemwinner[1] and poemwinner[2] == "monika":
                     monika_appeal[2] = True
-            elif chapter >= 11:
+            elif chapter >= 12:
+                sayarcpoemwinner[chapter-12] = pointlist[3]
+            elif chapter == 11:
                 natarcpoemwinner[chapter-11] = pointlist[3]
             elif chapter > 7 and chapter < 10:
                 newpoemwinner[chapter-6] = pointlist[3]
@@ -364,7 +366,9 @@ label poem(transition=True,totalWords=20):
 
         if chapter < 5:
             exec(poemwinner[chapter][0] + "_appeal += 1")
-        elif chapter >= 11:
+        elif chapter >= 12:
+            exec(sayarcpoemwinner[chapter-12][0] + "_appealS += 1")
+        elif chapter == 11:
             exec(natarcpoemwinner[chapter-11][0] + "_appeal += 1")
         elif chapter > 7:
             exec(newpoemwinner[chapter-6][0] + "_appeal += 1")
@@ -393,7 +397,9 @@ label poem(transition=True,totalWords=20):
 
         if chapter < 5:
             exec(poemwinner[chapter][0] + "_poemappeal[chapter] = 1")
-        elif chapter >= 11:
+        elif chapter >= 12:
+            exec(sayarcpoemwinner[chapter-12][0] + "_poemappeal2[chapter-12] = 1")
+        elif chapter == 11:
             exec(natarcpoemwinner[chapter-11][0] + "_poemappeal2[chapter-11] = 1")
         elif chapter > 7:
             exec(newpoemwinner[chapter-6][0] + "_poemappeal[chapter] = 1")

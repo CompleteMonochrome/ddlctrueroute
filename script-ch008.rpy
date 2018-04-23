@@ -639,7 +639,7 @@ label ch8_main:
             s 1j "Let's get started!"
             s "Get ready, everyone!"
             scene bg club_day with wipeleft_scene
-            play music t5 fadeout 1.0
+            play music t11 fadeout 1.0
             "So we're actually doing this."
             "The script Sayori prepared looks really good, almost like it was made a week beforehand."
             "I'm the first person in the scene, since the lumberjack is looking for his family."
@@ -703,10 +703,6 @@ label ch8_main:
             show monika 1h zorder 3 at f43
             m "Do what you want."
             scene bg club_day with wipeleft_scene
-            $ currentpos = get_pos()
-            $ audio.t5c = "<from " + str(currentpos) + " loop 4.444>bgm/5_sayori.ogg"
-            stop music fadeout 1.0
-            $ renpy.music.play(audio.t5c, channel="music_poem", fadein=1.0, tight=True)
             "The scene changes as the three wander off and look for the missing people."
             "At this point, the wanderer still looks innocent but the lumberjack is having his doubts about her intentions."
             "They eventually find traces of Sachi and follow it."
@@ -754,10 +750,6 @@ label ch8_main:
             "And the younger daughter crying next to her body."
             "We quickly go over the scene as everyone participating is clearly uncomfortable."
             scene bg club_day with wipeleft_scene
-            $ currentpos = get_pos()
-            $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>bgm/5_yuri.ogg"
-            stop music fadeout 1.0
-            $ renpy.music.play(audio.t5b, channel="music_poem", fadein=1.0, tight=True)
             "After a few more scenes, we're almost done with the chapter."
             "There's about two scenes left and the one we're doing involves Yuri's character."
             "I feel like Yuri is acting really strange today."
@@ -809,9 +801,9 @@ label ch8_main:
             m 1h "I think I may know where Yvonne could be."
             m 1o "But..."
             $ currentpos = get_pos()
-            $ audio.t5c = "<from " + str(currentpos) + " loop 4.444>bgm/5_yuri2.ogg"
+            $ audio.t11b = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11g.ogg"
             stop music fadeout 1.0
-            $ renpy.music.play(audio.t5c, channel="music_poem", fadein=1.0, tight=True)
+            $ renpy.music.play(audio.t11b, channel="music_play", fadein=1.0, tight=True)
             show yuri 1a zorder 3 at f31
             y 1y1 "Hi, Emcee."
             y "You're just in time."
@@ -851,10 +843,9 @@ label ch8_main:
                     mc "Why is it time for everyone to die?"
                     show yuri zorder 3 at f31
                     if yuri_approval > 3:
-                        $ currentpos = get_pos()
-                        $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>bgm/5_yuri.ogg"
-                        stop music fadeout 0.3
-                        $ renpy.music.play(audio.t5b, channel="music_poem", fadein=0.3, tight=True)
+                        $ currentpos = get_pos(channel="music_play")
+                        $ audio.t11c = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11.ogg"
+                        $ renpy.music.play(audio.t11c, channel="music_play", fadeout=0.3, fadein=0.3, tight=True)
                         y stab_1n "[player]...?"
                         y stab_1o "What..."
                         y stab_1p "Am I dreaming...?"
@@ -867,10 +858,9 @@ label ch8_main:
                         y stab_1y7 "WHAT'S GOING ON?!"
                         $ style.say_dialogue = style.normal
                     y stab_1o "Why do I have this odd feeling...?"
-                    $ currentpos = get_pos()
-                    $ audio.t5c = "<from " + str(currentpos) + " loop 4.444>mod_assets/bgm/5_yuri3.ogg"
-                    stop music fadeout 0.2
-                    $ renpy.music.play(audio.t5c, channel="music_poem", fadein=0.2, tight=True)
+                    $ currentpos = get_pos(channel="music_play")
+                    $ audio.t11d = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11b.ogg"
+                    $ renpy.music.play(audio.t11d, channel="music_play", fadeout=0.2, fadein=0.2, tight=True)
                     show yuri zorder 2 at t31
                     show sayori 1d zorder 3 at f32
                     if not persistent.y_playday[1]:
@@ -916,10 +906,9 @@ label ch8_main:
                     "Yuri turns towards me and stares right into my eyes."
                     show yuri zorder 3 at f31
                     if yuri_approval > 3:
-                        $ currentpos = get_pos()
-                        $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>bgm/5_yuri.ogg"
-                        stop music fadeout 0.3
-                        $ renpy.music.play(audio.t5b, channel="music_poem", fadein=0.3, tight=True)
+                        $ currentpos = get_pos(channel="music_play")
+                        $ audio.t11c = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11.ogg"
+                        $ renpy.music.play(audio.t11c, channel="music_play", fadeout=0.3, fadein=0.3, tight=True)
                         y stab_1p "[player]...!"
                         y stab_1o "I..."
                         y stab_1n "The knife..."
@@ -935,10 +924,9 @@ label ch8_main:
                     "Yuri drops the knife and Sayori quickly grabs it."
                     y 3p "Wha...?"
                     "Yuri looks towards me with worried eyes."
-                    $ currentpos = get_pos()
-                    $ audio.t5c = "<from " + str(currentpos) + " loop 4.444>mod_assets/bgm/5_yuri3.ogg"
-                    stop music fadeout 0.2
-                    $ renpy.music.play(audio.t5c, channel="music_poem", fadein=0.2, tight=True)
+                    $ currentpos = get_pos(channel="music_play")
+                    $ audio.t11d = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11b.ogg"
+                    $ renpy.music.play(audio.t11d, channel="music_play", fadeout=0.2, fadein=0.2, tight=True)
                     show yuri zorder 2 at t31
                     show sayori 1d zorder 3 at f32
                     if not persistent.y_playday[0]:
@@ -973,7 +961,7 @@ label ch8_main:
             if persistent.y_playday[0] and persistent.y_playday[1]:
                 $ play_firstpart = True
                 "Yuri takes a moment to realize what's just happened."
-                stop music_poem fadeout 0.5
+                stop music_play fadeout 0.5
                 $ pause(0.5)
                 play music t9 fadeout 3.0
                 if playalong:
@@ -1139,7 +1127,7 @@ label ch8_main:
                             "I walk up to Yuri and give her a warm embrace."
                             "She doesn't embrace back but I can tell she's shocked."
                             show yuri stab_1y2
-                            stop music_poem fadeout 3.0
+                            stop music_play fadeout 3.0
                             "I can feel her grip on the knife loosen."
                             mc "Yuri..."
                             mc "I don't know what's wrong with you."
@@ -1309,7 +1297,7 @@ label ch8_main:
                                 "Me.":
                                     y "..."
                                     y stab_1y2 "I..."
-                                    stop music_poem fadeout 3.0
+                                    stop music_play fadeout 3.0
                             menu:
                                 y "[player]...I..."
                                 "Me.":
@@ -1361,7 +1349,7 @@ label ch8_end:
     show sayori 1a zorder 2 at i32
     show monika 1a zorder 2 at i33
     with wipeleft_scene
-    play music t8 fadeout 0.5
+    play music t8 fadein 0.5
     "We all left the clubroom to give Yuri some space."
     "There's clearly something wrong with her and judging by how just acted..."
     "Well, I can't tell if she's feeling better or worse."
