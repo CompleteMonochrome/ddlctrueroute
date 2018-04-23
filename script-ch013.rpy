@@ -181,7 +181,7 @@ label ch13_main:
     "I must have forgotten the real reason."
     "But why does it feel like Monika was more important..."
     "At least...during this time."
-    "Well...there has must to be more to it."
+    "Well...there has to be more to it."
     scene white with dissolve_cg
     scene bg residential_day_gray
     show monika 2p_gray zorder 2 at i11
