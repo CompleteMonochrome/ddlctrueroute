@@ -48,7 +48,7 @@ label ch13_main:
     elif ch12_outcome == 2:
         s "She's got her mom back and her dad is..."
         s 1g "Well, not with Natsuki."
-        s "When I asked Haruki what he was going to do with her yesterday, I think she said something about calling the police."
+        s "When I asked Haruki what she was going to do with him yesterday, I think she said something about calling the police."
         s "I guess that's probably the best way to handle it, isn't it?"
         s 1k "I don't really feel sorry for Yasuhiro or anything but I feel like we did something wrong."
         s "Like what Natsuki is feeling isn't real...does that make sense?"
@@ -132,7 +132,7 @@ label ch13_main:
     "I wonder what final preparations Sayori is doing."
     "It must be something for the club."
     "Still, having this time for myself let's me think about what I've done."
-    "All the decisions I made in the past and how I could have changed them."
+    "All the decisions I've made in the past and how I could have changed them."
     scene bg class_day
     with wipeleft_scene
     "The school day is over before I know it."

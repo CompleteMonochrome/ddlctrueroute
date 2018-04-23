@@ -476,6 +476,8 @@ label splashscreen:
 
 label after_load:
     # Set Variables for v0.7.12>v0.8.1
+    if not hasattr(store, 'ch11_badpoem'):
+        $ ch11_badpoem = False
     if not hasattr(store,'ch12_markov_agree'):
         $ ch12_markov_agree = False
     if not hasattr(store,'n_appealS'):
