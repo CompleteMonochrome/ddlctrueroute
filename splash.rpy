@@ -475,11 +475,17 @@ label splashscreen:
     return
 
 label after_load:
-    # Set Variables for v0.7.12>v0.8.1
+    # Set Variables for v0.7>v0.8
     if not hasattr(store, 'ch11_badpoem'):
         $ ch11_badpoem = False
+    if not hasattr(store,'ch12_natsuki_reluctance'):
+        $ ch12_natsuki_reluctance = 1
+    if not hasattr(store,'ch12_haruki_tried'):
+        $ ch12_haruki_tried = False
     if not hasattr(store,'ch12_markov_agree'):
         $ ch12_markov_agree = False
+    if not hasattr(store,'normal_haruki'):
+        $ normal_haruki = False
     if not hasattr(store,'n_appealS'):
         $ n_appealS = 0
     if not hasattr(store,'s_appealS'):

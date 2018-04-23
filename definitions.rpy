@@ -1960,7 +1960,6 @@ default ch12_haruki_tried = False
 default ch12_markov_agree = False
 default haruki_personality = [False,False,False]
 default normal_haruki = False
-default yasuhiro_haruki_together = False
 default n_appealS = 0
 default s_appealS = 0
 default y_appealS = 0
