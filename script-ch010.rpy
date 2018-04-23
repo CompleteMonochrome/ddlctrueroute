@@ -1467,7 +1467,7 @@ label ch10_nat_house:
         m "I think I've overstayed my welcome though."
         mc "What?"
         mc "You just got here..."
-        mc "If it's something I said, then—"
+        mc "If it's something I said, then--"
         m 1be "It's alright, [player]."
         m "None of this is your fault."
         m 1bf "We're all just dealing with things that are out of our control."
