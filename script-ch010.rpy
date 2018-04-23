@@ -1477,7 +1477,7 @@ label ch10_nat_house:
         "Sometimes it's like Monika's problems are bigger than anything I can comprehend."
         "At least, that's what it feels like sometimes."
         "It's like, I can't personally do anything for her."
-        "I don't know what that feeling is but it's like all my actions are inconsequential."
+        "I don't know what that feeling is, but it's like all my actions are inconsequential."
         m 1be "Well, sorry for taking up your time, [player]."
         m "I understand you must have better things to do than listen to me talk."
         m "Maybe next time something like this happens, I'll actually accept your invitation."
@@ -1522,7 +1522,7 @@ label ch10_nat_house:
         m "You're a really kind person, you know that?"
         mc "Ah, thanks..."
         m "I mean it."
-        m 1bm "You don't know me, Yuri or Natsuki very well but you're doing your best to help us..."
+        m 1bm "You don't know me, Yuri or Natsuki very well, but you're doing your best to help us..."
         m "...even if you don't realize it."
         mc "I've just been going to club meetings and doing what Sayori asks of me."
         mc "Is that really helping anybody?"
@@ -1944,7 +1944,7 @@ label ch10_end:
     "Something tells me I should keep an eye out on 'Yasuhiro'."
     "I don't think it's the last time I'm seeing him either..."
     "After paying the small price at the counter, I head home."
-    "The grocery bags don't weigh that much but it will probably slow me down a little."
+    "The grocery bags don't weigh that much, but it will probably slow me down a little."
     scene bg residential_day
     with wipeleft_scene
     "What an odd way to spend Saturday..."
