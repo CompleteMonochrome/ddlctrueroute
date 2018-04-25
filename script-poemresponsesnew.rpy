@@ -894,7 +894,7 @@ label ch13_s_end:
     mc "I didn't join the club just for the literature, Sayori."
     mc "You should know that."
     s 2d "Ehehe, I did know that..."
-    s "You joined because of who was in it..."
+    s "You joined because of who were  in it..."
     s "And you're still here."
     show sayori 1g
     "Sayori shows a solemn look."
