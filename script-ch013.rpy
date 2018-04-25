@@ -1082,7 +1082,7 @@ label ch13_end:
         show monika 3a zorder 3 at f33
         m "I could use your help, too."
         m "I don't really know what kind of songs I could play on the day."
-        m 3b "Plus I could use a sort of audience to practice to."
+        m 3b "Plus, I could use a sort of audience to practice to."
         m "Maybe you could watch me practice and critique me, if you want."
         m 3e "But..."
         m "Like they said, the choice is yours."
