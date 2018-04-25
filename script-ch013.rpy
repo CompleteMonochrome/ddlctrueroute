@@ -5,7 +5,7 @@ label ch13_main:
     play music mend fadeout 2.0
     s "I want to say that I don't really know what's going to happen today."
     s 1c "I know I made the day and everything but {i}something{/i} is changing it..."
-    s "I don't know if that makes any sense to you but it's making my ability to see into the future kinda useless."
+    s "I don't know if that makes any sense to you, but it's making my ability to see into the future kinda useless."
     s 1d "Maybe it's just the game glitching out from too many days or something."
     s "Or maybe I just can't see what's going to happen..."
     s 1c "Who knows?"
@@ -145,7 +145,7 @@ label ch13_main:
     scene bg school_front
     with wipeleft_scene
     "I start wandering the school."
-    "I don't really have anywhere in particular I want to go but I make sure I'm relatively close to the Literature Club."
+    "I don't really have anywhere in particular I want to go, but I make sure I'm relatively close to the Literature Club."
     "Thinking about it deeper..."
     "There's been some things that have happened that I've forgotten."
     "That I really shouldn't have forgotten."
@@ -479,7 +479,7 @@ label ch13_main:
         s "There's still a couple of things I have to do."
         s 1d "I hope I will be soon though."
     else:
-        s 1d "Never mind what I said Yuri."
+        s 1d "Never mind what I said, Yuri."
         s "I'm really just thinking out loud."
     show sayori zorder 2 at t32
     if monika_type == 0:
