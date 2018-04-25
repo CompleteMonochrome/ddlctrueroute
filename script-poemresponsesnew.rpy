@@ -1295,7 +1295,7 @@ label ch13_m_end:
         m 3b "Here's Monika's Writing Tip of the Day!"
         m "Sometimes when you're writing, you'll feel like you're writing to get recognized."
         m "This will affect the way you write which makes what you write seem empty."
-        m "In the end, it will make your writing unworthy to read by you or the people you're writing for."
+        m "In the end, it will make your writing unworthy to be read by you or the people you're writing for."
         m "Forget about the recognition and instead go for what's worth writing about."
         m "Delve into your mind and find topics that you want to write about and the words will just come through."
         m 3k "...That's my advice for today!"
@@ -1921,7 +1921,7 @@ label ch13_y_good:
     "Yuri hesitates."
     mc "What is it Yuri? You can tell me anything, you know that."
     show yuri 2pu
-    "Yuri smiles shly."
+    "Yuri smiles shyly."
     y "I...thought of you."
     y "The words felt less empty somehow..."
     y 3ps "It was like the thought of you brought back meaning into my poem."
