@@ -1087,7 +1087,7 @@ label ch13_end:
         m 3e "But..."
         m "Like they said, the choice is yours."
         m 1e "I'm not going to be upset or anything if you decide to help someone else."
-        m "Even if I enjoy your company you have to think of the bigger picture..."
+        m "Even if I enjoy your company, you have to think of the bigger picture..."
         m 1j "...After all, this whole thing is for the club."
     elif monika_type == 1 and ch12_markov_agree:
         show monika 3ha zorder 3 at f33
