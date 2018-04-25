@@ -181,7 +181,7 @@ label ch13_main:
     "I must have forgotten the real reason."
     "But why does it feel like Monika was more important..."
     "At least...during this time."
-    "Well...there has must to be more to it."
+    "Well...there has to be more to it."
     scene white with dissolve_cg
     scene bg residential_day_gray
     show monika 2p_gray zorder 2 at i11
@@ -1038,7 +1038,7 @@ label ch13_end:
     show sayori zorder 2 at t32
     if visited_yuri_hospital:
         "I would like to spend more time with Yuri..."
-        "So it's only the right choice I'd choose her."
+        "So it would be the right choice to help her with the preparations."
         mc "I already know who I'm going to help."
         mc "It's Yuri."
         mc "We're kind of dating so..."
@@ -1558,6 +1558,11 @@ label ch13_end:
             "Monika walks out the door."
             y 3ps "I'll see you tomorrow, [player]..."
             y "Good luck with Natsuki..."
+            show yuri at lhide
+            hide yuri
+            "Everyone seemed to want to get out rather quickly."
+            "I guess they must be taking their preparations seriously."
+    call expression "ch13_exclusive_" + ch13_scene
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
@@ -1682,7 +1687,7 @@ label ch13_end_monika:
     show sayori 1d zorder 3 at f32
     show monika zorder 2 at t33
     s "I really hope you two are gonna do your best!"
-    s "I can't wait to see hear Monika play."
+    s "I can't wait to hear Monika play."
     s "And with [player] helping her, then it's definitely gonna be great!"
     show yuri zorder 3 at f31
     show sayori zorder 2 at t32
@@ -1773,4 +1778,16 @@ label ch13_end_sayori:
     show sayori 2l zorder 3 at f32
     show monika zorder 2 at t33
     s "Yeah, yeah..."
+    return
+
+label ch13_exclusive_natsuki:
+    return
+
+label ch13_exclusive_yuri:
+    return
+
+label ch13_exclusive_monika:
+    return
+
+label ch13_exclusive_sayori:
     return

@@ -1921,7 +1921,7 @@ label ch13_y_good:
     "Yuri hesitates."
     mc "What is it Yuri? You can tell me anything, you know that."
     show yuri 2pu
-    "Yuri smiles shly."
+    "Yuri smiles shyly."
     y "I...thought of you."
     y "The words felt less empty somehow..."
     y 3ps "It was like the thought of you brought back meaning into my poem."
