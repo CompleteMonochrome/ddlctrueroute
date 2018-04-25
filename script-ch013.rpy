@@ -1687,7 +1687,7 @@ label ch13_end_monika:
     show sayori 1d zorder 3 at f32
     show monika zorder 2 at t33
     s "I really hope you two are gonna do your best!"
-    s "I can't wait to see hear Monika play."
+    s "I can't wait to hear Monika play."
     s "And with [player] helping her, then it's definitely gonna be great!"
     show yuri zorder 3 at f31
     show sayori zorder 2 at t32

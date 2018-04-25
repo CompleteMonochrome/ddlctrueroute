@@ -479,7 +479,7 @@ label after_load:
     if not hasattr(store, 'ch11_badpoem'):
         $ ch11_badpoem = False
     if not hasattr(store,'monika_type'):
-        $ monika_type = 0
+        $ monika_type = 2
     if not hasattr(store,'ch12_natsuki_help'):
         $ ch12_natsuki_help = True
     if not hasattr(store,'ch12_natsuki_reluctance'):
