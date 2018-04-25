@@ -478,6 +478,10 @@ label after_load:
     # Set Variables for v0.7>v0.8
     if not hasattr(store, 'ch11_badpoem'):
         $ ch11_badpoem = False
+    if not hasattr(store,'monika_type'):
+        $ monika_type = 0
+    if not hasattr(store,'ch12_natsuki_help'):
+        $ ch12_natsuki_help = True
     if not hasattr(store,'ch12_natsuki_reluctance'):
         $ ch12_natsuki_reluctance = 1
     if not hasattr(store,'ch12_haruki_tried'):
