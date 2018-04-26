@@ -5,7 +5,7 @@ label ch13_main:
     play music mend fadeout 2.0
     s "I want to say that I don't really know what's going to happen today."
     s 1c "I know I made the day and everything but {i}something{/i} is changing it..."
-    s "I don't know if that makes any sense to you but it's making my ability to see into the future kinda useless."
+    s "I don't know if that makes any sense to you, but it's making my ability to see into the future kinda useless."
     s 1d "Maybe it's just the game glitching out from too many days or something."
     s "Or maybe I just can't see what's going to happen..."
     s 1c "Who knows?"
@@ -145,7 +145,7 @@ label ch13_main:
     scene bg school_front
     with wipeleft_scene
     "I start wandering the school."
-    "I don't really have anywhere in particular I want to go but I make sure I'm relatively close to the Literature Club."
+    "I don't really have anywhere in particular I want to go, but I make sure I'm relatively close to the Literature Club."
     "Thinking about it deeper..."
     "There's been some things that have happened that I've forgotten."
     "That I really shouldn't have forgotten."
@@ -479,7 +479,7 @@ label ch13_main:
         s "There's still a couple of things I have to do."
         s 1d "I hope I will be soon though."
     else:
-        s 1d "Never mind what I said Yuri."
+        s 1d "Never mind what I said, Yuri."
         s "I'm really just thinking out loud."
     show sayori zorder 2 at t32
     if monika_type == 0:
@@ -585,7 +585,7 @@ label ch13_main:
     y "Well..."
     y "I know you said that you don't want to do the 'play-read' thing anymore..."
     y 2pf "But I think we could do one of those, just in front of actual people this time."
-    y "We've already done two practice ones so..."
+    y "We've already done two practices so..."
     show sayori 2b zorder 3 at f32
     show yuri zorder 2 at t33
     s "Do you expect me to write a script, like the last two?"
@@ -1082,12 +1082,12 @@ label ch13_end:
         show monika 3a zorder 3 at f33
         m "I could use your help, too."
         m "I don't really know what kind of songs I could play on the day."
-        m 3b "Plus I could use a sort of audience to practice to."
+        m 3b "Plus, I could use a sort of audience to practice to."
         m "Maybe you could watch me practice and critique me, if you want."
         m 3e "But..."
         m "Like they said, the choice is yours."
         m 1e "I'm not going to be upset or anything if you decide to help someone else."
-        m "Even if I enjoy your company you have to think of the bigger picture..."
+        m "Even if I enjoy your company, you have to think of the bigger picture..."
         m 1j "...After all, this whole thing is for the club."
     elif monika_type == 1 and ch12_markov_agree:
         show monika 3ha zorder 3 at f33

@@ -677,7 +677,7 @@ label ch12_main:
     s "Well, it's for reasons you wouldn't understand..."
     s "I don't think anyone of you could really comprehend what I have to do to keep everything afloat."
     show sayori at s41
-    s 2k "If you were in my situation you wouldn't know what to do, [player]."
+    s 2k "If you were in my situation, you wouldn't know what to do, [player]."
     s "There's just so much going on and I'm trying my best to keep up and..."
     "Sayori's voice trails off and silence fills the room."
     "She looks at everyone then back towards me and sighs."
@@ -1095,7 +1095,7 @@ label ch12_play:
     s "I hope you got to read a little bit."
     mc "Yeah, I did. The script isn't too bad."
     s 1a "Of course it isn't! I made it!"
-    mc "I thought it would be a bit bigger, like your last one but you somehow managed to condense it all into a small leaflet."
+    mc "I thought it would be a bit bigger, like your last one, but you somehow managed to condense it all into a small leaflet."
     s "How much of it did you read?"
     mc "Enough..."
     if not ch11_read_manga and not ch11_did_all_tasks:
@@ -1125,7 +1125,7 @@ label ch12_play:
     mc "{i}Yeah{/i}, you have someone that our boss wants."
     "There's multiple different thugs talking so I change my voice a little to indicate that it's a different person."
     "Once again, I hear a small giggle come from Sayori."
-    "I should feel offended since I'm trying my hardest but for some reason I don't really care."
+    "I should feel offended since I'm trying my hardest, but for some reason, I don't really care."
     mc "So hand him over, and nobody else has to get hurt."
     show sayori 2j zorder 2 at t11
     s "I don't think so."
@@ -1166,7 +1166,7 @@ label ch12_play:
     show yuri zorder 2 at t31
     n "It's our mission to see him safe to his destination."
     n 4f "Like we'd let some thugs stop us."
-    n "If we can't even stop these guys then we don't deserve to be called {i}Ronin{/i}."
+    n "If we can't even stop these guys, then we don't deserve to be called {i}Ronin{/i}."
     "Ronin was the name of the group the protagonists belonged to in the story."
     "It's an odd choice for a name, especially since the setting is more modern than anything."
     "The Ronin are like a group of mercenaries, though they seem to have some kind of moral guide as to who can hire them."
@@ -1179,7 +1179,7 @@ label ch12_play:
     s "Nozomi..."
     "And Natsuki's."
     s 2i "Follow Martha's lead and take out the thugs that are coming up behind us."
-    "Martha is the name of Monika's character. Her character is the cool, collected who seems to do work in the background."
+    "Martha is the name of Monika's character. Her character is the cool, collected girl who seems to do work in the background."
     s "Maemi and I will take care of the ones in front of us."
     show yuri zorder 2 at t41
     show monika 1h zorder 3 at f42
@@ -1666,7 +1666,7 @@ label ch12_play:
     show dadsuki zorder 2 at t43
     n "Searching for...?"
     n "Dad, you aren't making any sense..."
-    n 1q "If you're talking about who you think you are then why would she be here..."
+    n 1q "If you're talking about who you think you are, then why would she be here..."
     n 1r "She's long gone and the both of us know it."
     show natsuki zorder 2 at t42
     show dadsuki 1a zorder 3 at f43
