@@ -1268,7 +1268,7 @@ label ch10_nat_house:
                         m 1bc "That looks like some sort of living room."
                         m "That's really weird."
                         m "It doesn't fit the design of the rest of the house."
-                        m be "I don't have any ideas about that..."
+                        m 1be "I don't have any ideas about that..."
                         m "Maybe we can learn something about that from Natsuki?"
                         m "I don't know..."
                         if talkabout_natsuki_house[3]:

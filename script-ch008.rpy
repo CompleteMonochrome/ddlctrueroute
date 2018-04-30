@@ -500,18 +500,18 @@ label ch8_main:
                         $ yuri_approval -= 1
                     $ sayori_personality += 1
                     show sayori zorder 3 at f44
-                    if sayori_personality == 0:
+                    if sayori_personality == 1:
                         s 4i "[player]?"
                         s "Are you being serious right now?"
                         s "After all you've done to help us..."
                         s "Are you intentionally sabo--"
-                    elif sayori_personality == 1:
+                    elif sayori_personality == 2:
                         s 4i "Is this what's happening now?"
                         s "I thought maybe it was just one mistake..."
                         s "But no..."
                         s "You're actually doing this."
                         s "I can't believe you--"
-                    elif sayori_personality >= 2:
+                    elif sayori_personality >= 3:
                         s 4i "I should have known..."
                         s "You did this intentionally, didn't you?"
                         s "All you've been doing is trying to get a bad ending..."
