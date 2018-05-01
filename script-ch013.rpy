@@ -949,7 +949,7 @@ label ch13_end:
         show monika 1c zorder 3 at f33
         m "Hmm..."
         m "What should I do then?"
-    elif monika_type == 1:
+    elif monika_type == 1 and ch12_markov_agree:
         show monika 1hc zorder 3 at f33
         m "Okay...then what should I do?"
     else:
@@ -1836,6 +1836,7 @@ label ch13_exclusive_monika:
     scene bg residential_day
     with wipeleft_scene
     play music t2 fadeout 1.0
+    ""
     return
 
 label ch13_exclusive_sayori:
