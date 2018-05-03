@@ -135,7 +135,8 @@ define audio.mend = "<loop 6.424>bgm/monika-end.ogg"
 define audio.mendglitch = "<loop 6.424>mod_assets/bgm/monika-end-pitch.ogg"
 # Mod Tracks - 14: Markovika
 define audio.mkov = "<loop 1.500>mod_assets/bgm/monika-markov.ogg"
-
+# Mod Tracks  15: Hear Me, My Love
+define audio.t15 = "mod_assets/bgm/15.ogg"
 define audio.ghostmenu = "<loop 0>bgm/ghostmenu.ogg"
 define audio.g1 = "<loop 0>bgm/g1.ogg"
 define audio.g2 = "<loop 0>bgm/g2.ogg"
@@ -214,7 +215,7 @@ image bg mall_day = "mod_assets/images/bg/mall_day.png"
 image bg mall_afternoon = "mod_assets/images/bg/mall_afternoon.png"
 image bg marina = "mod_assets/images/bg/marina.png"
 image bg school_front = "mod_assets/images/bg/school_front.png"
-
+image bg m_livingroom = "mod_assets/images/bg/m_livingroom.png"
 
 image glitch_color:
     ytile 3
@@ -1976,6 +1977,7 @@ default m_appealS = 0
 default ch13poemwinner = "Sayori"
 default ch13_scene = "sayori"
 default ch13_name = "Sayori"
+default ch13_music_type = "harmonic"
 
 default y_gave = False
 default y_ranaway = False

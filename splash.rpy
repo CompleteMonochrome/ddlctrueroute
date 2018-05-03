@@ -506,6 +506,8 @@ label after_load:
         $ ch13_scene = "sayori"
     if not hasattr(store,'ch13_name'):
         $ ch13_name = "Sayori"
+    if not hasattr(store,'ch13_music_type'):
+        $ ch13_music_type = "harmonic"
 
     # Normal Stuff
     if persistent.playthrough == 0:
