@@ -2076,7 +2076,6 @@ label ch13_exclusive_monika:
         m "Well, that's good."
         m "Anyway, I still have to choose some books for the play."
         m "It shouldn't take me too long. I already have a few in mind after all."
-        m "Ah...you think more people will join if they know what we're doing?"
     elif monika_type == 1 and ch12_markov_agree:
         m "Welcome to my house~"
         m "I know it isn't much..."
