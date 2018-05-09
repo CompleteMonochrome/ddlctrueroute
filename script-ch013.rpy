@@ -2057,7 +2057,6 @@ label ch13_exclusive_monika:
         m "It doesn't really tell people about you, does it?"
         mc "I wasn't really thinking for myself."
         mc "I was thinking for the people who were going to see the Literature Club."
-<<<<<<< HEAD
         m "Ah...you think more people will join if they can relate to what we're performing?"
         mc "Yeah, that was my thought process behind it."
         m "Getting people to join shouldn't be the priority for the day."
@@ -2077,9 +2076,7 @@ label ch13_exclusive_monika:
         m "Well, that's good."
         m "Anyway, I still have to choose some books for the play."
         m "It shouldn't take me too long. I already have a few in mind after all."
-=======
         m "Ah...you think more people will join if they know what we're doing?"
->>>>>>> refs/remotes/origin/master
     elif monika_type == 1 and ch12_markov_agree:
         m "Welcome to my house~"
         m "I know it isn't much..."
