@@ -1829,7 +1829,100 @@ label ch13_exclusive_natsuki:
 label ch13_exclusive_yuri:
     scene bg residential_day
     with wipeleft_scene
-    play music t2 fadeout 1.0
+    play music t6 fadeout 1.0
+    "Yuri and I make our way to my house."
+    if ch4_name == "Yuri":
+        "She's been here before, during the first week of the Literature Club."
+        "Back then, the circumstances were different but..."
+        "We're still doing the exact same thing."
+        "Though it's almost like she knows the way to my house better than I do."
+        "She's wasting no time and is taking all the right turns and shortcuts..."
+    else:
+        "She hasn't been here before...at least, I don't think she has."
+        "Yet she knows the way to my house almost better than I do."
+        "She was stepping ahead of me and making all the right turns."
+        "Or that could have just been my imagination."
+    show yuri 3pa zorder 2 at t11
+    y "Is something wrong, [player]?"
+    y "You look deep in thought."
+    mc "O-Oh, it's nothing."
+    mc "Just some random thoughts I'm having."
+    mc "You probably don't need to worry about it."
+    y "You know you can tell me whatever is on your mind."
+    mc "It's better if you don't worry about it."
+    mc "We're almost at my house anyway."
+    y "Y-Yeah..."
+    y "Just take this turn and--"
+    y "I mean, it's around here, isn't it?"
+    mc "Yeah...it is."
+    mc "You sure know your way around here, don't you Yuri?"
+    y "Ah..."
+    mc "I think that's a pretty good skill to have."
+    y "Huh?"
+    mc "A sense of direction."
+    y "R-Right...!"
+    y "A-Anyway, we should get going."
+    mc "My thoughts exactly."
+    scene bg house
+    with wipeleft_scene
+    "We arrive at my house."
+    "Yuri seems kinda worried for some reason."
+    mc "Is everything okay?"
+    show yuri 2pa zorder 2 at t11
+    if visited_yuri_hospital:
+        y "I just feel a little strange being here."
+        y "Like it's wrong, somehow."
+        mc "What do you mean?"
+        mc "What's wrong with me helping you?"
+    else:
+        y "I...don't know what it is."
+        y "It just feel strange being here."
+        y "Like there's something wrong, somehow."
+        mc "Eh? What do you mean?"
+        mc "Is there something wrong with me helping you?"
+    y "There's nothing 'wrong' about that."
+    y "It's just this feeling that I can't shake."
+    if ch4_name == "Yuri":
+        y "That this has all happened before and that it led to something terrible."
+    else:
+        y "Like this could have happened before and lead to something terrible."
+    mc "Yuri, I honestly have no idea what you're talking about."
+    mc "Though I do feel kinda strange."
+    if visited_yuri_hospital:
+        mc "But it's no big deal."
+        y "You can say it, [player]."
+    else:
+        y "W-What is it?"
+    mc "Well..."
+    y "[player], just tell me."
+    mc "Alright...it might have just been my imagination but the club meeting we had to today..."
+    y "What about it?"
+    mc "Didn't it feel familiar to you?"
+    mc "There was a stage in the meeting that seemed like an exact copy of what happened before."
+    mc "In the first week of me as a member."
+    mc "Do you remember?"
+    y "Umm..."
+    y "I don't..."
+    y "Why...?"
+    "Yuri puts a hand on her head."
+    y "[player], what's going on...?"
+    mc "Y-Yuri, are you okay?"
+    y "I don't know."
+    y "I'm trying to remember the time you're speaking of."
+    y "It's not working."
+    mc "Maybe we should head inside."
+    y "That sounds like a good idea."
+    scene bg bedroom
+    show yuri 3pa zorder 2 at t11
+    with wipeleft_scene
+    mc "How's your head, Yuri?"
+    y "I can't think properly..."
+    y "I'm trying my hardest to remember but I...can't."
+    mc "It doesn't matter anymore, Yuri."
+    mc "Just forget about it, maybe your head will get better."
+    y "That's the thing [player]!"
+    y "It's like I've just forgotten what happened."
+    mc "E-Eh...?"
     return
 
 label ch13_exclusive_monika:
@@ -2996,7 +3089,7 @@ label ch13_exclusive_monika:
         "Maybe it's just some more preparation of Inauguration Day without me?"
         "I mean I didn't really help so maybe she just didn't want me there."
     scene bg bedroom with wipeleft_scene
-    "Doing preparations with Monika was easy."
+    "I arrive home, feeling like I barely did anything."
     "I wonder if I should have chosen someone else instead."
     "What if their preparations end up being worse because I chose to help Monika...?"
     "I shouldn't think so negatively about everything."
@@ -3013,6 +3106,10 @@ label ch13_exclusive_monika:
     "Maybe that has something to do with why she was upset when we got to her house?"
     "I don't really know..."
     "Hopefully, everything is okay."
+    if ch12_markov_agree:
+        "Right now, I have to read this book Monika gave me."
+        "It's definitely something I have to do tonight."
+        "Everything else is no longer a priority."
     return
 
 label ch13_exclusive_sayori:
