@@ -500,6 +500,8 @@ label after_load:
         $ m_appealS = 0
     if not hasattr(store,'m_appealS'):
         $ m_appealS = 0
+    if not hasattr(store,'sayarcpoemwinner'):
+        $ sayarcpoemwinner = ['sayori', 'sayori', 'sayori']
     if not hasattr(store,'ch13poemwinner'):
         $ ch13poemwinner = "Sayori"
     if not hasattr(store,'ch13_scene'):
