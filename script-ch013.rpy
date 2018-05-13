@@ -2252,7 +2252,8 @@ label ch13_exclusive_yuri:
     mc "Well, we could always make a list of the stuff we could potentially use."
     mc "That way, when we vote tomorrow we don't need to think of one when we go shopping for them."
     y "You're right, that's a great idea."
-    
+    y "Where to start...?"
+    mc "How about some scented candles?"
     return
 
 label ch13_exclusive_monika:
