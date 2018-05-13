@@ -2542,7 +2542,7 @@ label ch13_exclusive_monika:
                 m 2l "Ah...you're too kind."
                 mc "I'm serious. It really did sound great!"
                 m 2e "Thanks, [player]~"
-            "No."
+            "No.":
                 m 2f "Ah..."
                 m 2e "I get it, don't worry."
                 m "We still have work we need to do for today..."
