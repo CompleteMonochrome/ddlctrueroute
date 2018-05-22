@@ -129,16 +129,16 @@ define audio.t12s = "<loop 1.300>mod_assets/bgm/12_sayori.ogg"
 define audio.t12m = "<loop 1.300>mod_assets/bgm/12_monika.ogg"
 # Mod Tracks - 13: Choices of Hope and Suffering
 define audio.t13 = "<loop 1.700>mod_assets/bgm/13.ogg"
+# Mod Tracks - 15: Hear Me, My Love
+define audio.t15 = "mod_assets/bgm/15.ogg"
+# Mod Tracks - 16: I'm Coming For You
+define audio.t16 = "mod_assets/bgm/16.ogg"
 
 define audio.m1 = "<loop 0>bgm/m1.ogg"
 define audio.mend = "<loop 6.424>bgm/monika-end.ogg"
 define audio.mendglitch = "<loop 6.424>mod_assets/bgm/monika-end-pitch.ogg"
 # Mod Tracks - 14: Markovika
 define audio.mkov = "<loop 1.500>mod_assets/bgm/monika-markov.ogg"
-# Mod Tracks - 15: Hear Me, My Love
-define audio.t15 = "mod_assets/bgm/15.ogg"
-# Mod Tracks - 16: I'm Coming For You
-define audio.t16 = "mod_assets/bgm/16.ogg"
 define audio.ghostmenu = "<loop 0>bgm/ghostmenu.ogg"
 define audio.g1 = "<loop 0>bgm/g1.ogg"
 define audio.g2 = "<loop 0>bgm/g2.ogg"
