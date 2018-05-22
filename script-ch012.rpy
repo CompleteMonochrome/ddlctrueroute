@@ -567,7 +567,7 @@ label ch12_main:
                 "I don't think I meant to say that."
                 show natsuki 2o zorder 3 at f43
                 n "Y-You..."
-                n 22f "You're a...!"
+                n 12f "You're a...!"
                 "Natsuki suddenly leaves the classroom."
                 show natsuki at thide
                 hide natsuki
@@ -702,7 +702,7 @@ label ch12_play:
         "At least, compared to the first time we did it."
         "I guess that's because we've all learned what to expect."
     show sayori 1a zorder 2 at t11
-    s "Alright, everbody!"
+    s "Alright, everybody!"
     s "I hope you all enjoyed our little poem sharing time."
     s 1d "I know it kinda rather short but I hope you guys still find these little times to talk with each other fun."
     s 4q "I know I do!"
@@ -951,7 +951,7 @@ label ch12_play:
             m "Even if your poem was, excuse my language, rather {i}shit{/i}."
         m 1a "Though I imagine that's got nothing to do with you, [player]. It's probably {i}you{/i}."
         m "The one Monika is so in love with."
-        m 1f "Like I said, I got everthing when she succumbed...but these feelings..."
+        m 1f "Like I said, I got everything when she succumbed...but these feelings..."
         m 1i "I hate them."
         m "There's nothing more I want to do than get rid of it."
         m 1o "Yet, I can't..."
@@ -2196,7 +2196,7 @@ label ch12_harukiplace:
         "He crosses his arms and starts tapping his foot impatiently."
     show sayori 4q zorder 3 at f43
     play music t11 fadeout 2.0
-    s "Alright, everbody!"
+    s "Alright, everybody!"
     s "It's time to continue with the play!"
     show natsuki 1m zorder 3 at f42
     show sayori zorder 2 at t43
@@ -3265,7 +3265,7 @@ label ch12_harukinoplace:
         "He crosses his arms and starts tapping his foot impatiently."
     show sayori 4q zorder 3 at f43
     play music t11 fadeout 2.0
-    s "Alright, everbody!"
+    s "Alright, everybody!"
     s "It's time to continue with the play!"
     show natsuki 1m zorder 3 at f42
     show sayori zorder 2 at t43

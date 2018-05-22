@@ -490,6 +490,8 @@ label after_load:
         $ ch12_markov_agree = False
     if not hasattr(store,'normal_haruki'):
         $ normal_haruki = False
+    if not hasattr(store,'ch12_outcome'):
+        $ ch12_outcome = 0
     if not hasattr(store,'n_appealS'):
         $ n_appealS = 0
     if not hasattr(store,'s_appealS'):

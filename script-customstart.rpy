@@ -971,7 +971,7 @@ label choose_start:
         s "Did you listen to...it?"
         s "I don't know what that means but you had to choose some things..."
         menu:
-            s "Did you listen to it at each occassion?"
+            s "Did you listen to it at each occasion?"
             "Yes.":
                 $ ch12_natsuki_reluctance += 2
                 $ sayori_personality += 3
@@ -1044,7 +1044,7 @@ label choose_start:
                 $ ch12_markov_agree = True
                 s "Great."
             "No.":
-                $ ch12_markov_agree = True
+                $ ch12_markov_agree = False
                 s "Disappointing but not unexpected."
         s "Hold on a moment..."
         play music "<from " + str(currentpos) + " loop 6.424>bgm/monika-end.ogg"

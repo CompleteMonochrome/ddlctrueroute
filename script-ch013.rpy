@@ -2188,7 +2188,7 @@ label ch13_exclusive_yuri:
     mc "I rarely take stuff out of it anyway."
     "I finish placing the last of the books from my shelf on the bed."
     "Yuri puts her five books on my bed in a seperate area."
-    "Presumeably to help distinguish which ones are hers and mine."
+    "Presumably to help distinguish which ones are hers and mine."
     y "Even with all your books..."
     y "It looks like there's only about thirty or so books."
     mc "Yeah...the collection is rather small."
@@ -2421,13 +2421,13 @@ label ch13_exclusive_monika:
                 "Monika moves towards her keyboard, takes a seat and repositions the sheet music."
                 m "I call this song \"Your Reality\" and I hope you like it~"
                 m "It's pretty much finished already but I'd like to keep most of it a surprise."
-                play music "<to 10.0>bgm/credits.ogg" noloop
-                $ pause(10.0)
+                play music "<to 9.0>bgm/credits.ogg" noloop
+                $ pause(9.0)
                 play music t6 fadeout 2.0
                 "Monika smiles and stands from where she was sitting."
                 m "So...what did you think?"
                 m "It was just a preview but..."
-                mc "Monika, I thik that song is going to be perefect."
+                mc "Monika, I think that song is going to be perfect."
                 mc "It was only the first ten seconds and I could already tell it was going to be amazing."
                 m "Ah...you're too kind."
                 mc "I'm serious. It really did sound great!"
@@ -2580,8 +2580,8 @@ label ch13_exclusive_monika:
                 "She turns it on before looking at me and smiling."
                 m "The title is \"Hear Me, My Love\"..."
                 m "It could still change but I think it fits, for now~"
-                play music "<to 10.0>mod_assets/bgm/15.ogg" noloop
-                $ pause(10.0)
+                play music "<to 9.0>mod_assets/bgm/15.ogg" noloop
+                $ pause(9.0)
                 play music t6 fadeout 2.0
                 m "So...what did {i}you{/i} think?"
                 mc "It was amazing, Monika."
@@ -2838,8 +2838,9 @@ label ch13_exclusive_monika:
             m "At least, getting it to an acceptable level of practice."
         else:
             m "...Since mid last week!"
-        mc "Alright."
+        mc "I wonder how it sounds."
         m "It's getting there, you know."
+        m "But since you mentioned it..."
         menu:
             m "Do you want to hear a little bit of it?"
             "Yes.":
@@ -2847,8 +2848,8 @@ label ch13_exclusive_monika:
                 "Monika approaches her keyboard and takes a deep breath."
                 "She turns it on before looking at me and smiling."
                 m "I call this song \"I'm Coming For You\" so I hope you like it~"
-                play music "<to 10.0>mod_assets/bgm/16.ogg" noloop
-                $ pause(10.0)
+                play music "<to 9.0>mod_assets/bgm/16.ogg" noloop
+                $ pause(9.0)
                 play music t2 fadeout 2.0
                 m "What did you think?"
                 m "It's only a short bit but I hope you liked it."
@@ -3052,7 +3053,7 @@ label ch13_exclusive_monika:
     "I search for some basic piano songings with the tag '[ch13_music_type]'."
     "There's a lot of different results but I just choose the first one that comes up."
     "I don't know much about music, but the ones I've found look basic enough."
-    "There's a lot of chords so I'm sure it'll be easy for someone lika Monika to play."
+    "There's a lot of chords so I'm sure it'll be easy for someone like Monika to play."
     "I send them to the printer and head back to Monika who looks just about done selecting books."
     if monika_type == 0:
         show monika 2bb zorder 2 at t11
@@ -3435,7 +3436,8 @@ label ch13_exclusive_monika:
     "But it's really hard not to."
     "I guess I'll find out how she's doing in the club tomorrow."
     "Maybe that has something to do with why she was upset when we got to her house?"
-    "I don't really know..."
+    "It could have something to do with her house but..."
+    "I don't really know."
     "Hopefully, everything is okay."
     if ch12_markov_agree:
         "Right now, I have to read this book Monika gave me."
@@ -3481,7 +3483,7 @@ label ch13_exclusive_sayori:
         show sayori zorder 2 at t33
         d "Yes...she is."
         d "Look...I want to apologize for how I acted yesterday."
-        d "My find was so clouded..."
+        d "My mind was so clouded..."
         show dadsuki zorder 2 at t32
         show sayori zorder 3 at f33
         s "Ehehe, that's okay."
@@ -3793,7 +3795,7 @@ label ch13_exclusive_sayori:
     n "I-I didn't agree to this..."
     show natsuki zorder 2 at t21
     show sayori zorder 3 at f22
-    s "I thought you'd be confident enouh to do this, Natsuki..."
+    s "I thought you'd be confident enough to do this, Natsuki..."
     s "I guess I'll have to tell everyone that this whole thing is off."
     show sayori zorder 2 at t22
     "Natsuki looks at Sayori and sighs."
