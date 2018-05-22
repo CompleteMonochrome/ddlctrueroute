@@ -2172,6 +2172,16 @@ label ch12_s_med:
     s "Really, it's for the best."
     s "Just hand me your poem."
     mc "Alright..."
+    mc "Here you go."
+    "I give me poem to Sayori."
+    s "It's a nice poem, [player]."
+    s "Really gives me a sort of..."
+    s 2q "I don't know, actually!"
+    mc "Huh? I don't understand..."
+    s "Well, how about read my poem now?"
+    s "Maybe that will help you understand."
+    mc "Okay..."
+    "Sayori gives me her poem."
     return
 
 label ch12_s_good:

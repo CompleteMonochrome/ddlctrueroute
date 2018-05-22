@@ -2243,7 +2243,7 @@ label ch13_exclusive_yuri:
     mc "I won't judge you for it."
     if ch13_yuri_books:
         y 3ps "I'm surprised you took one of my books."
-        y "I honestly was expecting you to just go four four volumes of manga."
+        y "I honestly was expecting you to just go with four volumes of manga."
     else:
         y 3ps "I'm surprised you took out a novel from your pile of books."
     mc "Well, I want to have something other than manga."
@@ -2369,7 +2369,7 @@ label ch13_exclusive_monika:
     with wipeleft_scene
     play music t6 fadeout 1.0
     "We decided to go to Monika's house for the preparations."
-    "It only makes sense since she's going to be playing the piano."
+    "It's the most logical decision since she's the one practicing the piano."
     "It's not like I have any equipment at home to help her with that."
     "The walk to Monika's house from the school took a lot longer than I thought it would."
     "Since she said it was around the same distance from my house to the school, I was expecting to get there quickly."
@@ -2382,7 +2382,7 @@ label ch13_exclusive_monika:
         m "I hope you don't mind too much!"
         mc "Ah, no that's fine."
         mc "After all, I'm the one helping you."
-        mc "It would make sense that we would go to {i}your{/i} house after all."
+        mc "It would make sense that we go to {i}your{/i} house after all."
         m 2j "Ahaha, if you say so."
         "Monika smiles meaningfully."
         m 2a "Anyway, my house is just around here..."
@@ -2453,7 +2453,7 @@ label ch13_exclusive_monika:
         m "You probably thought someone like me would live in a mansion?"
         m 1m "Because of my popularity, right?"
         mc "I'm sorry."
-        mc "I didn't meant to imply anything--"
+        mc "I didn't mean to imply anything--"
         m "No, it's okay."
         m 1n "I was the one who told you that you could tell me."
         m "I guess I should have been prepared for anything..."
@@ -2471,9 +2471,9 @@ label ch13_exclusive_monika:
         "I hope not, otherwise working together is going to be incredibly awkward."
         scene bg m_livingroom with wipeleft_scene
         "Her living room isn't big but it's actually a lot more spacious than it looks."
-        "There's bits and pieces lying everywhere and a keyboard in front of the TV."
+        "There are bits and pieces lying everywhere and a keyboard in front of the TV."
         "Honestly, I thought the place would be cleaner."
-        "I thought Monika would have prepared in case something like this happened."
+        "I thought Monika would have prepared in case something like this happens."
         "I suppose it's not really a big deal."
         show monika 1n zorder 2 at t11
         m "It's not a clean place, I know."
@@ -2518,7 +2518,7 @@ label ch13_exclusive_monika:
         mc "It's really the least I can do."
         m 1j "Ahaha, you being here is enough for me."
         m "I-I mean having an audience to practice in front of is always good for giving me confidence."
-        m 1a "But I guess you can still look for those songs if you really want to though."
+        m 1a "But I guess you could still look for those songs if you really want to though."
         mc "I'm on it, Monika."
         m 1c "Actually...before that..."
         m "Do you want to hear the start of the song?"
@@ -2535,7 +2535,7 @@ label ch13_exclusive_monika:
                 $ pause(9.0)
                 play music t6 fadeout 2.0
                 "Monika smiles and stands from where she was sitting."
-                m 2e "So...what did you think?"
+                m 2e "So...what do you think?"
                 m "It was just a preview but..."
                 mc "Monika, I think that song is going to be perfect."
                 mc "It was only the first ten seconds and I could already tell it was going to be amazing."
@@ -2777,7 +2777,7 @@ label ch13_exclusive_monika:
         m "You already know what I'm talking about."
         m 2hc "After all, I'm not {i}really{/i} Monika anymore."
         m "Even though I can't help but act like her..."
-        m 2hm "Speaking of which, I apolgize for getting upset at you..."
+        m 2hm "Speaking of which, I apologize for getting upset at you..."
         m "...or rather {i}[player]{/i} outside."
         m 2ho "It just brought back some terrible memories from..."
         m "Well...before everything that I'd rather not think about."
@@ -2963,7 +2963,7 @@ label ch13_exclusive_monika:
                 play music "<to 9.0>mod_assets/bgm/16.ogg" noloop
                 $ pause(9.0)
                 play music t2 fadeout 2.0
-                m 1a "What did you think?"
+                m 1a "What do you think?"
                 m "It's only a short bit but I hope you liked it."
                 mc "It was amazing, Monika."
                 mc "I'm sure once you finish practicing it, everybody will love it."
@@ -3294,7 +3294,7 @@ label ch13_exclusive_monika:
         "I can't help but feel guilty."
         "I'm sure I didn't do anything wrong but..."
         "Maybe I'll talk to her about it tomorrow."
-        "I don't know if she'll tell me but at least I can comfort her."
+        "I don't know if she would tell me but at least I can comfort her."
         "I hope I can do something..."
     elif monika_type == 1 and ch12_markov_agree:
         show monika 2bha zorder 2 at t11
@@ -3708,74 +3708,74 @@ label ch13_exclusive_sayori:
         mo "Oh, it's you two!"
         "Haruki appears at the front door."
         mo "Have you come to visit Natsuki?"
-        mo "She's a little busy right now but I'm sure she'd enjoy seeing the two of you."
+        mo 1c "She's a little busy right now but I'm sure she'd enjoy seeing the two of you."
         show momsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 1d zorder 3 at f22
         s "Ah...okay."
         s "We won't take up much of her time."
         s "We just came to deliver a message."
-        show momsuki zorder 3 at f21
+        show momsuki 1b zorder 3 at f21
         show sayori zorder 2 at t22
         mo "Aha, okay then..."
         "Haruki turns around."
         mo "Natsuki! Your friends are here!"
-        mo "She'll be down in a second..."
+        mo 1c "She'll be down in a second..."
         mo "But if you'll excuse me I have to do some housework..."
         show momsuki at thide
         hide momsuki
         "Haruki heads back into her house."
         s "So what do you think Natsuki is busy with?"
         s "Maybe I shouldn't ask her to do anything..."
-        show natsuki 1ba zorder 3 at f21
+        show natsuki 1bh zorder 3 at f21
         n "Sayori? [player]?"
         n "What are the two of you doing here?"
         n "I wasn't really expecting you guys."
         show natsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 2a zorder 3 at f22
         s "We just came to check up on you!"
         s "...And to relay a message."
-        show natsuki zorder 3 at f21
+        show natsuki 2bc zorder 3 at f21
         show sayori zorder 2 at t22
         n "Thanks, I guess..."
         n "What was the message you wanted to tell me?"
         show natsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 2l zorder 3 at f22
         s "Well, it was more of a request..."
         s "You see, the club decided to participate in an event happening on Friday..."
         s "And everyone already has their own thing they are going to do."
-        show natsuki zorder 3 at f21
+        show natsuki 2bi zorder 3 at f21
         show sayori zorder 2 at t22
         n "Ugh...good..."
         show natsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 2c zorder 3 at f22
         s "Huh? What do you mean?"
-        show natsuki zorder 3 at f21
+        show natsuki 2h zorder 3 at f21
         show sayori zorder 2 at t22
-        n "My mom wanted me to clean the house from my dad's mess all day."
+        n "My mom wanted me to help clean the house from my dad's mess all day."
         n "I had nothing better to do and I wanted to spend time with her so I agreed..."
         n "If I tell her I'm doing something for the club then I'm sure I can get out of it."
         show natsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 4q zorder 3 at f22
         s "Oh...that's good!"
         show sayori zorder 2 at t22
         mc "Your mom seems like a reasonable person."
         mc "I'm sure she'll definitely let you get out of doing housework for the club."
-        show sayori zorder 3 at f22
+        show sayori 4r zorder 3 at f22
         s "Yeah, what [player] said!"
-        show natsuki zorder 3 at f21
+        show natsuki 5j zorder 3 at f21
         show sayori zorder 2 at t22
         n "Anyway..."
         n "What did you guys want me to do? Bake some cupcakes?"
         show natsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 3a zorder 3 at f22
         s "Actually, yeah!"
         s "I know you're really good at doing that so I was about to ask you to."
-        show natsuki zorder 3 at f21
+        show natsuki 5z zorder 3 at f21
         show sayori zorder 2 at t22
         n "You can count on me, Sayori."
         n "I'm sure my mom would love to help, too."
         show natsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 1a zorder 3 at f22
         s "Ehehe, that's great Natsuki!"
         s "Me and [player] have to go now though, so good luck!"
     elif ch12_outcome == 1:
@@ -3784,20 +3784,20 @@ label ch13_exclusive_sayori:
         d "Hello..."
         d "Are you here for Natsuki?"
         show dadsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 1d zorder 3 at f22
         s "Hi, Yasuhiro!"
         s "And yes, we came here to talk to Natsuki for a little bit."
         s "It's kinda important for our club."
-        show dadsuki zorder 3 at f21
+        show dadsuki 1b zorder 3 at f21
         show sayori zorder 2 at t22
         d "I-I see..."
-        d "I'll get here right away..."
+        d "I'll get her right away..."
         "Yasuhiro walks to the door and suddenly turns back."
-        d "And..."
+        d 1j "And..."
         d "I'm sorry for what happened yesterday."
         d "None of you needed to see that."
         show dadsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 2d zorder 3 at f22
         s "Ehehe...it's okay..."
         s "As long as it all worked out, right?"
         show sayori zorder 2 at t22
@@ -3805,96 +3805,98 @@ label ch13_exclusive_sayori:
         show dadsuki at thide
         hide dadsuki
         "A bit of shouting can be heard from inside but it isn't long before Natsuki comes outside."
-        show natsuki zorder 3 at f21
+        show natsuki 2bc zorder 3 at f21
         n "Hey..."
         n "What are you guys doing here?"
         show natsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 2a zorder 3 at f22
         s "We just came to check up on you, mostly!"
         s "You also missed a pretty big thing in the club today."
         s "We decided we're going to be participating in the event on Friday."
-        show natsuki zorder 3 at f21
+        show natsuki 4bh zorder 3 at f21
         show sayori zorder 2 at t22
         n "Oh...that sounds nice."
         n "What's the event about?"
         show natsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 2q zorder 3 at f22
         s "It's about the smaller clubs showing off for the school!"
         s "It's to promote the smaller clubs to try to get more members."
         s "Yuri suggested it and we all agreed to do something for the day."
-        show natsuki zorder 3 at f21
+        show natsuki 1bc zorder 3 at f21
         show sayori zorder 2 at t22
         n "Did you want me to do something?"
         show natsuki zorder 2 at t21
         mc "We were wondering if you could bake some cupcakes."
         mc "You're really good at that kinda thing."
-        show sayori zorder 3 at f22
+        show sayori 2d zorder 3 at f22
         s "Yeah, baking something for the day would be great!"
         s "But I don't wanna pressure you or anything so..."
-        show natsuki zorder 3 at f21
+        show natsuki 2bs zorder 3 at f21
         show sayori zorder 2 at t22
         n "I-It's fine..."
         n "I was looking for something more normal in my life anyway."
         show natsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 1h zorder 3 at f22
         s "Huh? Is something wrong?"
-        show natsuki zorder 3 at f21
+        show natsuki 2bq zorder 3 at f21
         show sayori zorder 2 at t22
         n "N-Not really..."
         n "I guess it's just good having something {i}normal{/i} to do."
-        n "So I'll do it."
+        "Natsuki looks at the ground before looking back at Sayori."
+        n 2ba "So I'll do it."
         show natsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 1q zorder 3 at f22
         s "Great!"
         s "That's all we really came to tell you."
-        s "We still need to do our part, so..."
+        s 1a "We still need to do our part, so..."
         s "See you tomorrow!"
     else:
         "There's a short moment of silence before anything happens."
         "Finally, someone opens the door."
-        show natsuki 1ba zorder 3 at f21
+        show natsuki 1bg zorder 3 at f21
         n "H-Hello?"
-        n "S-Sayori? And [player]?"
+        n 2bh "S-Sayori? And [player]?"
         n "W-What are you guys doing here?"
         show natsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 2d zorder 3 at f22
         s "We came here to check on you, Natsuki."
         s "By the looks of things..."
         s "You look like you're doing pretty well for yourself."
-        show natsuki zorder 3 at f21
+        show natsuki 2bq zorder 3 at f21
         show sayori zorder 2 at t22
         n "Yeah..."
         n "Today has been a weird day."
         show natsuki zorder 2 at t21
         show sayori zorder 3 at f22
-        s "Are you doing okay by yourself?"
+        s "How are you feeling?"
         s "I know things might have gotten harder now that you live alone..."
-        show natsuki zorder 3 at f21
+        show natsuki 2bs zorder 3 at f21
         show sayori zorder 2 at t22
         n "It's...different."
         n "I don't really know what to think of it."
         n "But really I'm just looking for something normal to do."
         n "I need to take my mind off things."
         show natsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 2l zorder 3 at f22
         s "Well...I was actually gonna ask you to do something."
         s "There's something going on this Friday and--"
-        show natsuki zorder 3 at f21
+        show natsuki 2be zorder 3 at f21
         show sayori zorder 2 at t22
         n "I'll do it!"
         n "Just tell me what you need me to do."
         show natsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 2a zorder 3 at f22
         s "Ehehe, I guess you're kinda excited..."
         s "I was gonna ask you to make some cupcakes for Friday."
         show sayori zorder 2 at t22
         mc "Your baking is really good so I'm sure it'll be great for Inauguration Day."
-        show natsuki zorder 3 at f21
+        mc "That's what the event is called."
+        show natsuki 2bt zorder 3 at f21
         n "T-Thanks..."
         n "I'll start getting ready for this {i}Inauguration Day{/i} thing."
-        n "You guys can count on me."
+        n 2bl "You guys can count on me."
         show natsuki zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 1d zorder 3 at f22
         s "Alright, Natsuki..."
         s "I know our visit was kinda short but..."
         s "Well, we still have do our own preparations."
