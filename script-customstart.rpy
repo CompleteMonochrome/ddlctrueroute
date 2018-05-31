@@ -748,13 +748,13 @@ label choose_start:
             $ read_book = True
             $ did_all_tasks = False
         "Wrote a poem.":
-            $ yuri_approval += 1
+            $ yuri_approval -= 1
             $ read_book = False
             $ did_all_tasks = False
             if newpoemwinner[1] == "natsuki":
                 $ natsuki_approval += 1
         "Did the impossible.":
-            $ yuri_approval -= 1
+            $ yuri_approval += 1
             $ read_book = True
             $ did_all_tasks = True
             if newpoemwinner[1] == "natsuki":

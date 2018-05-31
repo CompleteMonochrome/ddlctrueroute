@@ -845,7 +845,8 @@ label ch8_main:
                     if yuri_approval > 3:
                         $ currentpos = get_pos(channel="music_play")
                         $ audio.t11c = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11.ogg"
-                        $ renpy.music.play(audio.t11c, channel="music_play", fadeout=0.3, fadein=0.3, tight=True)
+                        stop music_play fadeout 0.5
+                        $ renpy.music.play(audio.t11c, channel="music_poem", fadein=0.5, tight=True)
                         y stab_1n "[player]...?"
                         y stab_1o "What..."
                         y stab_1p "Am I dreaming...?"
@@ -858,9 +859,14 @@ label ch8_main:
                         y stab_1y7 "WHAT'S GOING ON?!"
                         $ style.say_dialogue = style.normal
                     y stab_1o "Why do I have this odd feeling...?"
-                    $ currentpos = get_pos(channel="music_play")
+                    if yuri_approval > 3:
+                        $ currentpos = get_pos(channel="music_poem")
+                    else:
+                        $ currentpos = get_pos(channel="music_play")
                     $ audio.t11d = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11b.ogg"
-                    $ renpy.music.play(audio.t11d, channel="music_play", fadeout=0.2, fadein=0.2, tight=True)
+                    stop music_poem fadeout 2.0
+                    stop music_play fadeout 2.0
+                    $ renpy.music.play(audio.t11d, fadein=2.0, tight=True)
                     show yuri zorder 2 at t31
                     show sayori 1d zorder 3 at f32
                     if not persistent.y_playday[1]:
@@ -908,7 +914,8 @@ label ch8_main:
                     if yuri_approval > 3:
                         $ currentpos = get_pos(channel="music_play")
                         $ audio.t11c = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11.ogg"
-                        $ renpy.music.play(audio.t11c, channel="music_play", fadeout=0.3, fadein=0.3, tight=True)
+                        stop music_play fadeout 0.5
+                        $ renpy.music.play(audio.t11c, channel="music_poem", fadein=0.5, tight=True)
                         y stab_1p "[player]...!"
                         y stab_1o "I..."
                         y stab_1n "The knife..."
@@ -924,9 +931,14 @@ label ch8_main:
                     "Yuri drops the knife and Sayori quickly grabs it."
                     y 3p "Wha...?"
                     "Yuri looks towards me with worried eyes."
-                    $ currentpos = get_pos(channel="music_play")
+                    if yuri_approval > 3:
+                        $ currentpos = get_pos(channel="music_poem")
+                    else:
+                        $ currentpos = get_pos(channel="music_play")
                     $ audio.t11d = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11b.ogg"
-                    $ renpy.music.play(audio.t11d, channel="music_play", fadeout=0.2, fadein=0.2, tight=True)
+                    stop music_play fadeout 2.0
+                    stop music_poem fadeout 2.0
+                    $ renpy.music.play(audio.t11d, fadein=2.0, tight=True)
                     show yuri zorder 2 at t31
                     show sayori 1d zorder 3 at f32
                     if not persistent.y_playday[0]:
@@ -937,7 +949,7 @@ label ch8_main:
                         show screen tear(20, 0.1, 0.1, 0, 40)
                         window hide(None)
                         play sound "sfx/s_kill_glitch1.ogg"
-                        pause 0.5
+                        $ pause(0.5)
                         stop sound
                         hide screen tear
                         window show(None)
@@ -961,9 +973,10 @@ label ch8_main:
             if persistent.y_playday[0] and persistent.y_playday[1]:
                 $ play_firstpart = True
                 "Yuri takes a moment to realize what's just happened."
-                stop music_play fadeout 0.5
-                $ pause(0.5)
-                play music t9 fadeout 3.0
+                stop music_play fadeout 1.5
+                stop music fadeout 1.5
+                $ pause(1.5)
+                play music t9 fadein 2.0
                 if playalong:
                     show yuri stab_1p
                 else:
@@ -980,7 +993,7 @@ label ch8_main:
                 if playalong:
                     "She looks at her hands and drops the knife."
                 else:
-                    "She looks towards the floor and sees the knife."
+                    "She looks towards Sayori and recognizes her knife."
                 y 3o "Oh no..."
                 y 3v "No..."
                 y 3w "No...no...!"
@@ -1127,6 +1140,7 @@ label ch8_main:
                             "I walk up to Yuri and give her a warm embrace."
                             "She doesn't embrace back but I can tell she's shocked."
                             show yuri stab_1y2
+                            stop music fadeout 3.0
                             stop music_play fadeout 3.0
                             "I can feel her grip on the knife loosen."
                             mc "Yuri..."
@@ -1297,6 +1311,7 @@ label ch8_main:
                                 "Me.":
                                     y "..."
                                     y stab_1y2 "I..."
+                                    stop music fadeout 3.0
                                     stop music_play fadeout 3.0
                             menu:
                                 y "[player]...I..."

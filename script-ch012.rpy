@@ -3693,7 +3693,7 @@ label ch12_harukinoplace:
         show natsuki zorder 2 at t53
         d "Of course..."
         show dadsuki zorder 2 at t52
-        show natsuki 2ps zorder 3 at f53
+        show natsuki 2s zorder 3 at f53
         n "S-See you guys tomorrow..."
         show dadsuki at lhide
         hide dadsuki
