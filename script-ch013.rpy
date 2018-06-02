@@ -1821,10 +1821,18 @@ label ch13_exclusive_natsuki:
     "I'm on my way to Natsuki's house."
     "I'm curious how she's doing after yesterday."
     "After all, she did skip school so she must have a lot on her mind."
-    "The walk to her house is quite long but after going there twice I think I know exactly how to get there."
+    "Since I've been to her house twice, I know exactly how to get there."
     scene bg n_house
     with wipeleft_scene
-    "This is incomplete. Sorry."
+    "Arriving at Natsuki's house after what happened yesterday feels weird."
+    "I'm having second thoughts on whether choosing to help her at such a sensitive time in her life is such a goo idea..."
+    "But I'm here now."
+    "I might as well stick with what I chose."
+    show sayori 1a zorder 2 at t11
+    s "Oh, you're already here [player]!"
+    "Sayori suddenly appears in front of me."
+    mc "Sayori? What are you doing at Natsuki's house?"
+    
     return
 
 label ch13_exclusive_yuri:
