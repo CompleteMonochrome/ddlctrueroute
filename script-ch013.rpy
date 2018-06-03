@@ -2039,11 +2039,32 @@ label ch13_exclusive_natsuki:
         "Sayori said it's a sensitive time in her life, so I'm not going to pry too much."
         n "Well?"
         mc "Alright, alright..."
+        "I follow Natsuki inside."
     scene n_bedroom with wipeleft_scene
     "I wonder what kind of things we'll be doing."
     "If I know anything about baking, she'll probably want to cook it the day before."
     "That way, the food is as fresh as possible."
     "Then again, I don't really know a lot about baking..."
+    "I guess I'll ask Natsuki how I can help her."
+    if ch12_outcome == 3:
+        mc "Natsuki...are you in here?"
+    elif ch12_outcome == 2:
+        mc "Are you here, Natsuki?"
+    elif ch12_outcome == 1:
+        mc "Natsuki? Your dad said you'd be in here."
+    else:
+        show natsuki 1ba zorder 2 at t11
+        n "How exactly are you going to help me with the preparations, [player]?"
+        mc "Huh?"
+        mc "I was about to ask you the same thing."
+        n "Why would I know what you could do?"
+        n "You were the one who chose me, remember?"
+        mc "Ah...you're right."
+        if ch4_name == "Natsuki":
+            mc "We did something like this before, didn't we?"
+            mc "We could just do the same thing."
+        else:
+
     return
 
 label ch13_exclusive_yuri:
