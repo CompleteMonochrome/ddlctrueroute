@@ -65,7 +65,7 @@ label choose_start:
     s "Yuri's problem, eh?"
     menu:
         s "So, where are you starting from?"
-
+        # Chapter 6
         "Starting the Book Day.":
             s "I see..."
             menu:
@@ -87,15 +87,19 @@ label choose_start:
                 s "And who did you write your poem for?"
                 "Sayori.":
                     $ newpoemwinner[0] = "sayori"
+                    $ s_poemappeal[5] = 1
                     $ s_appeal += 1
                 "Monika.":
                     $ newpoemwinner[0] = "monika"
+                    $ m_poemappeal[5] = 1
                     $ m_appeal += 1
                 "Natsuki.":
                     $ newpoemwinner[0] = "natsuki"
+                    $ n_poemappeal[5] = 1
                     $ n_appeal += 1
                 "Yuri.":
                     $ newpoemwinner[0] = "yuri"
+                    $ y_poemappeal[5] = 1
                     $ y_appeal += 1
             s "Well...alright."
             s "I guess I'll be seeing you."
@@ -104,7 +108,7 @@ label choose_start:
             stop music fadeout 1.0
             $ renpy.save_persistent()
             jump ch6_skip
-
+        # Chapter 7
         "Continuing the Book Day.":
             $ bad_choice_first = False
             s "Okay..."
@@ -127,30 +131,38 @@ label choose_start:
                 s "So who did you write your first poem for?"
                 "Sayori.":
                     $ newpoemwinner[0] = "sayori"
+                    $ s_poemappeal[5] = 1
                     $ s_appeal += 1
                 "Monika.":
                     $ newpoemwinner[0] = "monika"
+                    $ m_poemappeal[5] = 1
                     $ m_appeal += 1
                 "Natsuki.":
                     $ newpoemwinner[0] = "natsuki"
+                    $ n_poemappeal[5] = 1
                     $ n_appeal += 1
                 "Yuri.":
                     $ newpoemwinner[0] = "yuri"
+                    $ y_poemappeal[5] = 1
                     $ y_appeal += 1
             s "Alright..."
             menu:
                 s "And your second one?"
                 "Sayori.":
                     $ newpoemwinner[1] = "sayori"
+                    $ s_poemappeal[6] = 1
                     $ s_appeal += 1
                 "Monika.":
                     $ newpoemwinner[1] = "monika"
+                    $ m_poemappeal[6] = 1
                     $ m_appeal += 1
                 "Natsuki.":
                     $ newpoemwinner[1] = "natsuki"
+                    $ n_poemappeal[6] = 1
                     $ n_appeal += 1
                 "Yuri.":
                     $ newpoemwinner[1] = "yuri"
+                    $ y_poemappeal[6] = 1
                     $ y_appeal += 1
             s "Now..."
             menu:
@@ -170,7 +182,7 @@ label choose_start:
             stop music fadeout 1.0
             $ renpy.save_persistent()
             jump ch7_skip
-
+        # Chapter 8
         "Play Day.":
             $ bad_choice_first = False
             s "Getting right to it, I guess..."
@@ -196,30 +208,38 @@ label choose_start:
                 s "Who did you write your first poem for?"
                 "Sayori.":
                     $ newpoemwinner[0] = "sayori"
+                    $ s_poemappeal[5] = 1
                     $ s_appeal += 1
                 "Monika.":
                     $ newpoemwinner[0] = "monika"
+                    $ m_poemappeal[5] = 1
                     $ m_appeal += 1
                 "Natsuki.":
                     $ newpoemwinner[0] = "natsuki"
+                    $ n_poemappeal[5] = 1
                     $ n_appeal += 1
                 "Yuri.":
                     $ newpoemwinner[0] = "yuri"
+                    $ y_poemappeal[5] = 1
                     $ y_appeal += 1
             s "Alright..."
             menu:
                 s "And your second one?"
                 "Sayori.":
                     $ newpoemwinner[1] = "sayori"
+                    $ s_poemappeal[6] = 1
                     $ s_appeal += 1
                 "Monika.":
                     $ newpoemwinner[1] = "monika"
+                    $ m_poemappeal[6] = 1
                     $ m_appeal += 1
                 "Natsuki.":
                     $ newpoemwinner[1] = "natsuki"
+                    $ n_poemappeal[6] = 1
                     $ n_appeal += 1
                 "Yuri.":
                     $ newpoemwinner[1] = "yuri"
+                    $ y_poemappeal[6] = 1
                     $ y_appeal += 1
             s "Now..."
             menu:
@@ -235,7 +255,7 @@ label choose_start:
                     if newpoemwinner[1] == "natsuki":
                         $ natsuki_approval += 1
                 "Did the impossible.":
-                    $ yuri_approval -= 1
+                    $ yuri_approval += 1
                     $ read_book = True
                     $ did_all_tasks = True
                     if newpoemwinner[1] == "natsuki":
@@ -301,15 +321,19 @@ label choose_start:
         s "Who did you write your first poem for?"
         "Sayori.":
             $ newpoemwinner[0] = "sayori"
+            $ s_poemappeal[5] = 1
             $ s_appeal += 1
         "Monika.":
             $ newpoemwinner[0] = "monika"
+            $ m_poemappeal[5] = 1
             $ m_appeal += 1
         "Natsuki.":
             $ newpoemwinner[0] = "natsuki"
+            $ n_poemappeal[5] = 1
             $ n_appeal += 1
         "Yuri.":
             $ newpoemwinner[0] = "yuri"
+            $ y_poemappeal[5] = 1
             $ y_appeal += 1
     s "Alright..."
 
@@ -317,15 +341,19 @@ label choose_start:
         s "And your second one?"
         "Sayori.":
             $ newpoemwinner[1] = "sayori"
+            $ s_poemappeal[6] = 1
             $ s_appeal += 1
         "Monika.":
             $ newpoemwinner[1] = "monika"
+            $ m_poemappeal[6] = 1
             $ m_appeal += 1
         "Natsuki.":
             $ newpoemwinner[1] = "natsuki"
+            $ n_poemappeal[6] = 1
             $ n_appeal += 1
         "Yuri.":
             $ newpoemwinner[1] = "yuri"
+            $ y_poemappeal[6] = 1
             $ y_appeal += 1
     s "Now..."
 
@@ -342,7 +370,7 @@ label choose_start:
             if newpoemwinner[1] == "natsuki":
                 $ natsuki_approval += 1
         "Did the impossible.":
-            $ yuri_approval -= 1
+            $ yuri_approval += 1
             $ read_book = True
             $ did_all_tasks = True
             if newpoemwinner[1] == "natsuki":
@@ -394,15 +422,19 @@ label choose_start:
         s "Who did you write your third poem for?"
         "Sayori.":
             $ newpoemwinner[2] = "sayori"
+            $ s_poemappeal[8] = 1
             $ s_appeal += 1
         "Monika.":
             $ newpoemwinner[2] = "monika"
+            $ m_poemappeal[8] = 1
             $ m_appeal += 1
         "Natsuki.":
             $ newpoemwinner[2] = "natsuki"
+            $ n_poemappeal[8] = 1
             $ n_appeal += 1
         "Yuri.":
             $ newpoemwinner[2] = "yuri"
+            $ y_poemappeal[8] = 1
             $ y_appeal += 1
     s "Moving on..."
 
@@ -418,6 +450,7 @@ label choose_start:
 
     menu:
         s "Which day are you starting from?"
+        # Chapter 9
         "Recovery Day.":
             s "So this is where you're starting from?"
             s "..."
@@ -428,6 +461,7 @@ label choose_start:
             stop music fadeout 1.0
             $ renpy.save_persistent()
             jump ch9_skip
+        # Chapter 10
         "Visit Day.":
             if y_appeal == 3 and play_firstpart and did_all_tasks:
                 s "You were given a chance to go see Yuri at the hospital, right?"
@@ -471,6 +505,7 @@ label choose_start:
             stop music fadeout 1.0
             $ renpy.save_persistent()
             jump ch10_skip
+        # Chapter 11
         "Second Visit.":
             $ insert_dadsuki_character()
             if y_appeal == 3 and play_firstpart and did_all_tasks:
@@ -553,6 +588,7 @@ label choose_start:
             stop music fadeout 1.0
             $ renpy.save_persistent()
             jump ch11_skip
+        # Chapter 12
         "Play Day.":
             $ insert_dadsuki_character()
             if y_appeal == 3 and play_firstpart and did_all_tasks:
@@ -668,15 +704,19 @@ label choose_start:
                 s "Who did you write your fourth poem for?"
                 "Sayori.":
                     $ natarcpoemwinner[0] = "sayori"
+                    $ s_poemappeal2[0] = 1
                     $ s_appeal += 1
                 "Monika.":
                     $ natarcpoemwinner[0] = "monika"
+                    $ m_poemappeal2[0] = 1
                     $ m_appeal += 1
                 "Natsuki.":
                     $ natarcpoemwinner[0] = "natsuki"
+                    $ n_poemappeal2[0] = 1
                     $ n_appeal += 1
                 "Yuri.":
                     $ natarcpoemwinner[0] = "yuri"
+                    $ y_poemappeal2[0] = 1
                     $ y_appeal += 1
 
             s "I guess this is it."
@@ -713,15 +753,19 @@ label choose_start:
         s "Who did you write your first poem for?"
         "Sayori.":
             $ newpoemwinner[0] = "sayori"
+            $ s_poemappeal[5] = 1
             $ s_appeal += 1
         "Monika.":
             $ newpoemwinner[0] = "monika"
+            $ m_poemappeal[5] = 1
             $ m_appeal += 1
         "Natsuki.":
             $ newpoemwinner[0] = "natsuki"
+            $ n_poemappeal[5] = 1
             $ n_appeal += 1
         "Yuri.":
             $ newpoemwinner[0] = "yuri"
+            $ y_poemappeal[5] = 1
             $ y_appeal += 1
     s "Alright..."
 
@@ -729,15 +773,19 @@ label choose_start:
         s "And your second one?"
         "Sayori.":
             $ newpoemwinner[1] = "sayori"
+            $ s_poemappeal[6] = 1
             $ s_appeal += 1
         "Monika.":
             $ newpoemwinner[1] = "monika"
+            $ m_poemappeal[6] = 1
             $ m_appeal += 1
         "Natsuki.":
             $ newpoemwinner[1] = "natsuki"
+            $ n_poemappeal[6] = 1
             $ n_appeal += 1
         "Yuri.":
             $ newpoemwinner[1] = "yuri"
+            $ y_poemappeal[6] = 1
             $ y_appeal += 1
     s "Now..."
 
@@ -806,15 +854,19 @@ label choose_start:
         s "Who did you write your third poem for?"
         "Sayori.":
             $ newpoemwinner[2] = "sayori"
+            $ s_poemappeal[8] = 1
             $ s_appeal += 1
         "Monika.":
             $ newpoemwinner[2] = "monika"
+            $ m_poemappeal[8] = 1
             $ m_appeal += 1
         "Natsuki.":
             $ newpoemwinner[2] = "natsuki"
+            $ n_poemappeal[8] = 1
             $ n_appeal += 1
         "Yuri.":
             $ newpoemwinner[2] = "yuri"
+            $ y_poemappeal[8] = 1
             $ y_appeal += 1
     s "Moving on..."
 
@@ -941,15 +993,19 @@ label choose_start:
         s "Who did you write your fourth poem for?"
         "Sayori.":
             $ natarcpoemwinner[0] = "sayori"
+            $ s_poemappeal2 = 1
             $ s_appeal += 1
         "Monika.":
             $ natarcpoemwinner[0] = "monika"
+            $ m_poemappeal2 = 1
             $ m_appeal += 1
         "Natsuki.":
             $ natarcpoemwinner[0] = "natsuki"
+            $ n_poemappeal2 = 1
             $ n_appeal += 1
         "Yuri.":
             $ natarcpoemwinner[0] = "yuri"
+            $ y_poemappeal2 = 1
             $ y_appeal += 1
 
 
