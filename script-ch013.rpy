@@ -2064,7 +2064,26 @@ label ch13_exclusive_natsuki:
             mc "We did something like this before, didn't we?"
             mc "We could just do the same thing."
         else:
-
+            mc "You seem to be the expert here at baking."
+            mc "Why don't I just follow your lead?"
+        n "I guess that's the only thing that makes sense, isn't it?"
+        n "The problem is, I've ran out of supplies."
+        mc "You have?"
+        n "Yeah...there's really nothing left in this house."
+        n "No ingredients...no parents...no--"
+        mc "Maybe I can help you make a list of ingredients you need."
+        "It's clear to me now that Natsuki is feeling lonely."
+        "Since she lives by herself, it must be difficult to do everything around the house."
+        "From what I saw downstairs, it was still just as messy as when Yasuhiro was still around."
+        mc "I could also help you clean your house a little bit."
+        mc "Since there's a mess downstairs."
+        n "Y-You will?"
+        mc "Yeah, why wouldn't I?"
+        mc "It's not like we can do preparations under these conditions, right?"
+        n "..."
+        "If I can brighten her mood just a little bit..."
+        "...then I guess that's enough."
+        
     return
 
 label ch13_exclusive_yuri:
