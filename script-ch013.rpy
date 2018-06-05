@@ -1597,7 +1597,6 @@ label ch13_end:
             "I shouldn't waste time either."
             "I have to get to Natsuki's house after all."
     call expression "ch13_exclusive_" + ch13_scene
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch13_end_natsuki:
@@ -2041,6 +2040,7 @@ label ch13_exclusive_natsuki:
         mc "Alright, alright..."
         "I follow Natsuki inside."
     scene n_bedroom with wipeleft_scene
+    play music t6 fadeout 2.0
     "I wonder what kind of things we'll be doing."
     "If I know anything about baking, she'll probably want to cook it the day before."
     "That way, the food is as fresh as possible."
@@ -2060,7 +2060,37 @@ label ch13_exclusive_natsuki:
         mc "And I didn't come here just to visit."
         n "H-Huh?"
         n "Then why...?"
-        mc "Let me explain."
+        "Natsuki looks at me inquisitively."
+        mc "Sayori told you about the event that's happening on Friday, right?"
+        n "Yeah..."
+        n "Something about getting more members for the smaller clubs."
+        n "Sounds ridicolous if you ask me."
+        n "I like our club just the way it is."
+        mc "You do?"
+        n "I think introducing more people could only be a bad thing."
+        mc "You have to think of the bigger picture, Natsuki."
+        n "Bigger picture?"
+        mc "If we only stay as a club of five people, then how are we going to spread our passion of literature?"
+        n "W-Wait...did you say...'our' passion?"
+        mc "I...guess I did."
+        mc "Literature has become something I care about...or at least the {i}Literature Club{/i} has."
+        mc "So I want to see it be successful."
+        n "That's...surprising coming from you."
+        mc "I never said you had to like the idea."
+        mc "But Sayori and the others are all trying their best for the day."
+        n "Then what are you doing here?"
+        mc "I've been trying to explain that since the beginning."
+        mc "I'm here to help you...with your preparations."
+        n "Help me?"
+        n "Do I look like I need help?"
+        mc "That's not what I meant."
+        if n_appeal >= 4:
+            mc "Sayori asked me to choose who I wanted to help today..."
+            mc "I'll admit I wasn't completely honest when I chose to help you."
+            n "Huh?"
+            mc "I kinda used this as an excuse to spend time with you."
+        else:
+            mc "I just thought that since you're going to be"
     elif ch12_outcome == 2:
         mc "Are you here, Natsuki?"
     elif ch12_outcome == 1:
@@ -2073,11 +2103,14 @@ label ch13_exclusive_natsuki:
         n "Why would I know what you could do?"
         n "You were the one who chose me, remember?"
         mc "Ah...you're right."
+        mc "Now that I think about it, I think we discussed something you could do in the meeting."
+        n "And what's that?"
+        mc "Well...baking."
         if ch4_name == "Natsuki":
             mc "We did something like this before, didn't we?"
-            mc "We could just do the same thing."
+            mc "I'll follow your lead as the assistant once again."
         else:
-            mc "You seem to be the expert here at baking."
+            mc "And you seem to be the expert here at baking."
             mc "Why don't I just follow your lead?"
         n "I guess that's the only thing that makes sense, isn't it?"
         n "The problem is, I've ran out of supplies."
@@ -2097,9 +2130,6 @@ label ch13_exclusive_natsuki:
         "This isn't really what I saw myself doing when I chose to help Natsuki..."
         "But if I can brighten her mood just a little bit..."
         "...then I guess that's enough."
-<<<<<<< HEAD
-
-=======
         n "T-Thank you."
         mc "Don't worry about it."
         mc "I'm sure we'll have time afterwards to actually do some preparations."
@@ -2166,7 +2196,7 @@ label ch13_exclusive_natsuki:
         n "It's time for my parent's room upstairs."
         mc "If you say so..."
         n "Come on!"
->>>>>>> refs/remotes/origin/master
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch13_exclusive_yuri:
