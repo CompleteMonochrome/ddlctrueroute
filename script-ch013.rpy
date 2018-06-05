@@ -2048,6 +2048,19 @@ label ch13_exclusive_natsuki:
     "I guess I'll ask Natsuki how I can help her."
     if ch12_outcome == 3:
         mc "Natsuki...are you in here?"
+        mc "Your parents told me I could come in..."
+        show natsuki 1ba zorder 2 at t11
+        n "[player]?!"
+        n "What in the world are you doing here?"
+        mc "Well, I--"
+        n "Are you visiting, like Sayori?"
+        n "Is that all you came to do?"
+        n "Because if that's all, then you can leave!"
+        mc "Wait, I just got here..."
+        mc "And I didn't come here just to visit."
+        n "H-Huh?"
+        n "Then why...?"
+        mc "Let me explain."
     elif ch12_outcome == 2:
         mc "Are you here, Natsuki?"
     elif ch12_outcome == 1:
@@ -2083,7 +2096,7 @@ label ch13_exclusive_natsuki:
         n "..."
         "If I can brighten her mood just a little bit..."
         "...then I guess that's enough."
-        
+
     return
 
 label ch13_exclusive_yuri:
