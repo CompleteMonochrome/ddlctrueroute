@@ -1196,7 +1196,7 @@ label choose_start:
                     "Yes.":
                         $ ch13_yuri_books = True
                         $ yuri_approval += 1
-                    "No."
+                    "No.":
                         $ ch13_yuri_books = False
                 s "I see..."
 

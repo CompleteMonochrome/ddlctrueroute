@@ -1,5 +1,4 @@
 label ch14_main:
-    show sayori 1d zorder 2 at t11
     $ s_name = "???"
     $ currentpos = 0
     if ch12_markov_agree:
@@ -50,10 +49,13 @@ label ch14_main:
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
         $ pause(0.25)
+        show sayori 1d zorder 2 at t11
         stop sound
         hide screen tear
         window show(None)
         window auto
+    else:
+        show sayori 1d zorder 2 at t11
     $ s_name = "Sayori"
     $ audio.mendcont = "<from " + str(currentpos) + " loop 6.424>bgm/monika-end.ogg"
     play music mendcont
