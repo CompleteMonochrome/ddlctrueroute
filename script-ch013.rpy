@@ -12,7 +12,7 @@ label ch13_main:
     s "I could ask Monika about it but..."
     s 1d "Never mind."
     s "Anyway, I should probably tell you that I changed the poem game a little."
-    s "Your poem doensn't really matter anymore."
+    s "Your poem doesn't really matter anymore."
     s "After yesterday, I didn't really see the point."
     s "Seeing as everyone already knows the type of style you're writing."
     s 1b "There was also this weird thing that was in the poem game script."
@@ -66,7 +66,7 @@ label ch13_main:
         s "It's more natural than bringing back a dead person, right?"
         s 1h "I mean, who are we to decide if someone should live or die?"
         s "Oh...sorry."
-        s 1l "I got a bit too philosphical there, didn't I?"
+        s 1l "I got a bit too philosophical there, didn't I?"
         s 1d "I just hope Natsuki does end up happy, in the end."
     else:
         s 1c "So...this is an interesting end for Natsuki."
@@ -1824,7 +1824,7 @@ label ch13_exclusive_natsuki:
     scene bg n_house
     with wipeleft_scene
     "Arriving at Natsuki's house after what happened yesterday feels weird."
-    "I'm having second thoughts on whether choosing to help her at such a sensitive time in her life is such a goo idea..."
+    "I'm having second thoughts on whether choosing to help her at such a sensitive time in her life is such a good idea..."
     "But I'm here now."
     "I might as well stick with what I chose."
     show sayori 1a zorder 2 at t11
@@ -2045,7 +2045,7 @@ label ch13_exclusive_natsuki:
         n 1br "Well?"
         mc "Alright, alright..."
         "I follow Natsuki inside."
-    scene n_bedroom with wipeleft_scene
+    scene bg n_bedroom with wipeleft_scene
     play music t6 fadeout 2.0
     "I wonder what kind of things we'll be doing."
     "If I know anything about baking, she'll probably want to cook it the day before."
@@ -2070,7 +2070,7 @@ label ch13_exclusive_natsuki:
         mc "Sayori told you about the event that's happening on Friday, right?"
         n 2bs "Yeah..."
         n "Something about getting more members for the smaller clubs."
-        n 4bg "Sounds ridicolous if you ask me."
+        n 4bg "Sounds ridiculous if you ask me."
         n "I like our club just the way it is."
         mc "You do?"
         n "I think introducing more people could only be a bad thing."
