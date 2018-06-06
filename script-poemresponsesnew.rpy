@@ -2458,7 +2458,7 @@ label ch12_m_start:
         mc "What were you going to say?"
         m 2m "I don't want to ruin the mood with you here."
         m "The club is meant to be a place of happiness."
-        m 2e "I shoudn't bring talk like that in here."
+        m 2e "I shouldn't bring talk like that in here."
         mc "I really don't mind listening to what you have to say."
         m "It's okay..."
         m "Can I read your poem now?"
@@ -3160,7 +3160,7 @@ label msay_monika_1:
             m "Maybe if you agreed to help me..."
         else:
             m "I've already set a plan in motion."
-        m 1i "Anyway, there's no point talking about it any futher."
+        m 1i "Anyway, there's no point talking about it any further."
         "Monika lets out a cold stare at me."
         m "That's done."
         mc "Eh?"
