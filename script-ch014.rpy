@@ -299,7 +299,7 @@ label ch14_main:
     s "But I've had to make some modifications."
     "I have no idea what she's talking about."
     "It almost sounds like she has the power to control how everything goes."
-    "But that's ridicolous, right?"
+    "But that's ridiculous, right?"
     mc "Now I'm really confused."
     mc "What modifications are you talking about?"
     s 1h "I haven't really told you...or anybody about it, have I?"
@@ -337,7 +337,7 @@ label ch14_main:
     s "It's not what it looks like!"
     show yuri 3pg zorder 3 at f21
     show sayori zorder 2 at t22
-    $ audio.t2b = "<from " + str(currentpos) + " loop 4.499>bgm/2.ogg>"
+    $ audio.t2b = "<from " + str(currentpos) + " loop 4.499>bgm/2.ogg"
     play music t2b
     y "I-I'm sure you weren't doing anything like that."
     y "A-Anyway, hello, you two."
@@ -397,7 +397,7 @@ label ch14_main:
     show yuri 3ph zorder 3 at f32
     show sayori zorder 2 at t33
     y "I'm not sure it's the same as me going to the hospital but..."
-    y "...you're right right. She probably misses us."
+    y "...you're right. She probably misses us."
     y 3pq "Thinking about it, I'm sure we even talked about this yesterday."
     y "I don't know why I brought it up."
     y 3ps "S-Sorry."
