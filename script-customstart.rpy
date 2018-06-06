@@ -993,19 +993,19 @@ label choose_start:
         s "Who did you write your fourth poem for?"
         "Sayori.":
             $ natarcpoemwinner[0] = "sayori"
-            $ s_poemappeal2 = 1
+            $ s_poemappeal2[0] = 1
             $ s_appeal += 1
         "Monika.":
             $ natarcpoemwinner[0] = "monika"
-            $ m_poemappeal2 = 1
+            $ m_poemappeal2[0] = 1
             $ m_appeal += 1
         "Natsuki.":
             $ natarcpoemwinner[0] = "natsuki"
-            $ n_poemappeal2 = 1
+            $ n_poemappeal2[0] = 1
             $ n_appeal += 1
         "Yuri.":
             $ natarcpoemwinner[0] = "yuri"
-            $ y_poemappeal2 = 1
+            $ y_poemappeal2[0] = 1
             $ y_appeal += 1
 
 
@@ -1113,25 +1113,118 @@ label choose_start:
 
     s "I think we're almost done here."
     menu:
-        s "But you have to tell me who you wrote your fifth poem for."
-        "Sayori.":
-            $ sayarcpoemwinner[0] = "sayori"
-            $ s_appealS += 1
-        "Monika.":
-            $ sayarcpoemwinner[0] = "monika"
-            $ m_appealS += 1
-        "Natsuki.":
-            $ sayarcpoemwinner[0] = "natsuki"
-            $ n_appealS += 1
-        "Yuri.":
-            $ sayarcpoemwinner[0] = "yuri"
-            $ y_appealS += 1
+        s "You just need to say which day you're starting from."
+        "First day of preparations.":
+            s "Alright, last question then..."
+            menu:
+                s "Who did you write your fifth poem for?"
+                "Sayori.":
+                    $ sayarcpoemwinner[0] = "sayori"
+                    $ s_poemappeal2[1] = 1
+                    $ s_appealS += 1
+                "Monika.":
+                    $ sayarcpoemwinner[0] = "monika"
+                    $ m_poemappeal2[1] = 1
+                    $ m_appealS += 1
+                "Natsuki.":
+                    $ sayarcpoemwinner[0] = "natsuki"
+                    $ n_poemappeal2[1] = 1
+                    $ n_appealS += 1
+                "Yuri.":
+                    $ sayarcpoemwinner[0] = "yuri"
+                    $ y_poemappeal2[1] = 1
+                    $ y_appealS += 1
 
-    s "And...that's it!"
-    s "I'll be seeing you..."
+            s "And...that's it!"
+            s "I'll be seeing you..."
 
-    $ s_name = "Sayori"
-    $ quick_menu = True
-    stop music fadeout 1.0
-    $ renpy.save_persistent()
-    jump ch13_skip
+            $ s_name = "Sayori"
+            $ quick_menu = True
+            stop music fadeout 1.0
+            $ renpy.save_persistent()
+            jump ch13_skip
+        "Second day of preparations.":
+            s "I see..."
+            menu:
+                s "You have to tell me who you wrote your fifth poem for."
+                "Sayori.":
+                    $ sayarcpoemwinner[0] = "sayori"
+                    $ s_poemappeal2[1] = 1
+                    $ s_appealS += 1
+                "Monika.":
+                    $ sayarcpoemwinner[0] = "monika"
+                    $ m_poemappeal2[1] = 1
+                    $ m_appealS += 1
+                "Natsuki.":
+                    $ sayarcpoemwinner[0] = "natsuki"
+                    $ n_poemappeal2[1] = 1
+                    $ n_appealS += 1
+                "Yuri.":
+                    $ sayarcpoemwinner[0] = "yuri"
+                    $ y_poemappeal2[1] = 1
+                    $ y_appealS += 1
+
+            s "This almost feels like an interrogation, doesn't it?"
+            s "But it isn't..."
+            menu:
+                s "...so who did you choose to help for Inauguration Day?"
+                "Sayori.":
+                    $ ch13_scene = "sayori"
+                "Monika.":
+                    $ ch13_scene = "monika"
+                "Natsuki.":
+                    $ ch13_scene = "natsuki"
+                "Yuri.":
+                    $ ch13_scene = "yuri"
+            $ ch13_name = ch13_scene.capitalize()
+            s "Alright..."
+            if ch13_name == "Monika":
+                s "Since you went with Monika, you chose some music, right?"
+                menu:
+                    s "What was it?"
+                    "Harmonic.":
+                        $ ch13_music_type = "harmonic"
+                    "Upbeat.":
+                        $ ch13_music_type = "upbeat"
+                    "Melancholy.":
+                        $ ch13_music_type = "melancholy"
+                s "Oh, alright."
+            elif ch13_name == "Yuri":
+                s "When you were with Yuri..."
+                menu:
+                    s "Did you take one of her books?"
+                    "Yes.":
+                        $ ch13_yuri_books = True
+                        $ yuri_approval += 1
+                    "No."
+                        $ ch13_yuri_books = False
+                s "I see..."
+
+            s "Okay...so then..."
+            menu:
+                s "Who was your sixth poem written for?"
+                "Sayori.":
+                    $ sayarcpoemwinner[1] = "sayori"
+                    $ s_poemappeal2[2] = 1
+                    $ s_appealS += 1
+                "Monika.":
+                    $ sayarcpoemwinner[1] = "monika"
+                    $ m_poemappeal2[2] = 1
+                    $ m_appealS += 1
+                "Natsuki.":
+                    $ sayarcpoemwinner[1] = "natsuki"
+                    $ n_poemappeal2[2] = 1
+                    $ n_appealS += 1
+                "Yuri.":
+                    $ sayarcpoemwinner[1] = "yuri"
+                    $ y_poemappeal2[2] = 1
+                    $ y_appealS += 1
+
+            s "And...that's it!"
+            s "I'll be seeing you..."
+
+            $ s_name = "Sayori"
+            $ quick_menu = True
+            stop music fadeout 1.0
+            $ renpy.save_persistent()
+            jump ch14_skip

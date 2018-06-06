@@ -3118,7 +3118,7 @@ label ch12_harukinoplace:
     d 1j "Where is she? I have to see her!"
     show sayori 2n
     show dadsuki zorder 2 at t54
-    "Sayori looks at Yasuhiro quizically."
+    "Sayori looks at Yasuhiro quizzically."
     show sayori 2l zorder 3 at f51
     s "Um...where is who?"
     show sayori zorder 2 at t51

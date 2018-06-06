@@ -193,7 +193,12 @@ label poem(transition=True,totalWords=20):
             if m_show:
                 show s_sticker at sticker_4left
                 show n_sticker at sticker_4midleft
+                # Check if hair down Monika playthrough
                 show m_sticker at sticker_4right
+                # if monika_type == 1 and ch12_markov_agree:
+                #     show mh_sticker at sticker_4right
+                # else:
+                #     show m_sticker at sticker_4right
             else:
                 show s_sticker at sticker_left
                 show n_sticker at sticker_mid
@@ -518,6 +523,17 @@ image m_sticker_bw:
             function randomMoveMonika
         repeat
 
+image mh_sticker:
+    "mod_assets/gui/poemgame/mh_sticker_1.png"
+    xoffset monikaOffset xzoom monikaZoom
+    block:
+        function randomPauseMonika
+        parallel:
+            sticker_move_n
+        parallel:
+            function randomMoveMonika
+        repeat
+
 image s_sticker hop:
     "gui/poemgame/s_sticker_2.png"
     xoffset sayoriOffset xzoom sayoriZoom
@@ -566,6 +582,13 @@ image m_sticker_bw hop:
     sticker_hop
     xoffset 0 xzoom 1
     "m_sticker"
+
+image mh_sticker hop:
+    "mod_assets/gui/poemgame/mh_sticker_2.png"
+    xoffset monikaOffset xzoom monikaZoom
+    sticker_hop
+    xoffset 0 xzoom 1
+    "mh_sticker"
 
 image y_sticker glitch:
     "gui/poemgame/y_sticker_1_broken.png"

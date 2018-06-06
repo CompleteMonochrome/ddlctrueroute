@@ -185,7 +185,6 @@ label start:
         call ch12_play
         call ch12_end
 
-
         call poem
 
 
@@ -194,6 +193,15 @@ label start:
         call ch13_main
         call poemresponse_start_new
         call ch13_end
+
+        call poem
+
+
+        label ch14_skip:
+        $ chapter = 14
+        call ch14_main
+        call poemresponse_start_new
+        call ch14_end
 
         label endgame_skip:
         $ renpy.full_restart(transition=None, label="splashscreen")

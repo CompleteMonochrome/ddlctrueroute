@@ -475,7 +475,7 @@ label splashscreen:
     return
 
 label after_load:
-    # Set Variables for v0.7>v0.8
+    # For some reason we need to set these
     if not hasattr(store, 'ch11_badpoem'):
         $ ch11_badpoem = False
     if not hasattr(store,'monika_type'):
