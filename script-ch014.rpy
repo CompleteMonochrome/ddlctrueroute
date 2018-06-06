@@ -49,7 +49,7 @@ label ch14_main:
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
         $ pause(0.25)
-        show sayori 1d zorder 2 at t11
+        show sayori 1d zorder 2 at i11
         stop sound
         hide screen tear
         window show(None)
