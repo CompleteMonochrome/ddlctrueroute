@@ -664,6 +664,48 @@ label ch14_main:
     show sayori zorder 2 at t44
     mc "I think we should put our trust in Sayori."
     mc "She hasn't let us down before, has she?"
+    mc "It's not like she's going to start now."
+    show natsuki zorder 3 at f41
+    show sayori zorder 2 at t44
+    n "When did you start wanting to do work?"
+    n "It doesn't sound like you at all, Sayori!"
+    show natsuki zorder 2 at t41
+    show sayori zorder 3 at f44
+    s "W-What do you mean?"
+    show natsuki zorder 3 at f41
+    show sayori zorder 2 at t44
+    n "I've always known you to be the person who just goes with the flow..."
+    n "What's with you doing all this work?"
+    show natsuki zorder 2 at t41
+    show sayori zorder 3 at f44
+    s "I'm the president of the club, Natsuki."
+    s "I have a responsibility to do these kinda things."
+    s "Or would you rather I did nothing...?"
+    show natsuki zorder 3 at f41
+    show sayori zorder 2 at t44
+    n "I don't want to sound like I don't appreciate what you're doing."
+    n "It just sounds like what you're doing is impossible."
+    n "And it just doesn't feel right you doing all of those things."
+    show natsuki zorder 2 at t41
+    show sayori zorder 3 at f44
+    s "I can handle it, Natsuki."
+    s "Don't worry about me. Just focus on your preparations."
+    show natsuki zorder 3 at f41
+    show sayori zorder 2 at t44
+    n "Well...okay."
+    n "Just don't take it too far, Sayori."
+    n "I'm worried about you, you know!"
+    show natsuki zorder 2 at t41
+    show yuri zorder 3 at f43
+    y "I do as well."
+    y "Please take care of yourself, Sayori."
+    show yuri zorder 2 at t43
+    if monika_type == 0:
+        show monika zorder 3 at f42
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika zorder 3 at f42
+    else:
+        show monika zorder 3 at f42
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
