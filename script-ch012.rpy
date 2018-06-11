@@ -913,7 +913,7 @@ label ch12_play:
         "Monika stares at me intently."
         m 2e "...to make sure she can't listen in."
         mc "To make sure who can't listen in...?"
-        m "Alright, now that we're here alone I guess I could finally do that without Sayori getting suspcious."
+        m "Alright, now that we're here alone I guess I could finally do that without Sayori getting suspicious."
         play music mkov fadeout 2.0 fadein 0.5
         mc "Monika...?"
         m 2a "I'm not entirely sure what you did to make her stop resisting so much..."
@@ -1424,7 +1424,7 @@ label ch12_play:
                 $ renpy.music.play(audio.t11b, channel="music_play", fadein=1.0, tight=True)
                 s "W-What's going on?"
                 s "This isn't part of the script at all!"
-                s "I was gonna say something earler but I thought you were just messing around!"
+                s "I was gonna say something earlier but I thought you were just messing around!"
                 s "Please, don't do this."
                 show monika 1a zorder 3 at f43
                 show sayori zorder 2 at t44
@@ -2312,7 +2312,7 @@ label ch12_harukiplace:
     s "That's great! We can help Nozomi now!"
     s "We should do it now because--"
     show sayori zorder 2 at t43
-    mc "Saikia, I--"
+    mc "Saika, I--"
     show sayori 4r zorder 3 at f43
     s "The sooner we help her, the sooner our team is back in top shape!"
     s "Ehehe, I'm so excited!"
@@ -3381,7 +3381,7 @@ label ch12_harukinoplace:
     s "That's great! We can help Nozomi now!"
     s "We should do it now because--"
     show sayori zorder 2 at t43
-    mc "Saikia, I--"
+    mc "Saika, I--"
     show sayori 4r zorder 3 at f43
     s "The sooner we help her, the sooner our team is back in top shape!"
     s "Ehehe, I'm so excited!"
