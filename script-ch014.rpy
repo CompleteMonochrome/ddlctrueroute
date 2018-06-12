@@ -665,49 +665,215 @@ label ch14_main:
     mc "I think we should put our trust in Sayori."
     mc "She hasn't let us down before, has she?"
     mc "It's not like she's going to start now."
-    show natsuki zorder 3 at f41
+    show natsuki 1b zorder 3 at f41
     show sayori zorder 2 at t44
     n "When did you start wanting to do work?"
     n "It doesn't sound like you at all, Sayori!"
     show natsuki zorder 2 at t41
-    show sayori zorder 3 at f44
+    show sayori 1l zorder 3 at f44
     s "W-What do you mean?"
-    show natsuki zorder 3 at f41
+    show natsuki 1k zorder 3 at f41
     show sayori zorder 2 at t44
-    n "I've always known you to be the person who just goes with the flow..."
-    n "What's with you doing all this work?"
+    n "I've always known you to be the person who just goes with whatever happens..."
+    n "So what's with you doing all this work?"
     show natsuki zorder 2 at t41
-    show sayori zorder 3 at f44
+    show sayori 1h zorder 3 at f44
     s "I'm the president of the club, Natsuki."
     s "I have a responsibility to do these kinda things."
     s "Or would you rather I did nothing...?"
-    show natsuki zorder 3 at f41
+    show natsuki 1m zorder 3 at f41
     show sayori zorder 2 at t44
     n "I don't want to sound like I don't appreciate what you're doing."
     n "It just sounds like what you're doing is impossible."
-    n "And it just doesn't feel right you doing all of those things."
+    n 2q "And it just doesn't feel right you doing all of those things."
     show natsuki zorder 2 at t41
-    show sayori zorder 3 at f44
+    show sayori 2d zorder 3 at f44
     s "I can handle it, Natsuki."
     s "Don't worry about me. Just focus on your preparations."
-    show natsuki zorder 3 at f41
+    show natsuki 2g zorder 3 at f41
     show sayori zorder 2 at t44
     n "Well...okay."
     n "Just don't take it too far, Sayori."
     n "I'm worried about you, you know!"
     show natsuki zorder 2 at t41
-    show yuri zorder 3 at f43
+    show yuri 2pf zorder 3 at f43
     y "I do as well."
     y "Please take care of yourself, Sayori."
     show yuri zorder 2 at t43
     if monika_type == 0:
-        show monika zorder 3 at f42
+        show monika 1c zorder 3 at f42
+        m "..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika zorder 3 at f42
+        show monika 1hc zorder 3 at f42
+        m "Hmm..."
     else:
-        show monika zorder 3 at f42
+        show monika 1a zorder 3 at f42
+        m "{i}(So they've finally noticed...){/i}"
+    show monika zorder 2 at t42
+    show sayori 2d zorder 3 at f44
+    s "I will, don't you worry!"
+    s "I'm sure this Friday is going to be just great."
+    s "It will be a great way to wrap things up!"
+    show yuri 3pi zorder 3 at f43
+    show sayori zorder 2 at t44
+    y "I agree."
+    y "It will give people the chance to think about if they actually want to join over the weekend."
+    y 3pk "That way anyone that does join is going to be serious about it."
+    show yuri zorder 2 at t43
+    show sayori 1a zorder 3 at f44
+    s "Y-Yeah...exactly!"
+    s 1c "Anyway, we have a lot to discuss today."
+    s 4q "With the preparations everyone has done and the books they've chosen."
+    "Sayori smiles."
+    s "Alright, everybody!"
+    s "It's time to share--"
+    show yuri 3pe zorder 3 at f43
+    show sayori zorder 2 at t44
+    y "Sorry to interrupt you, Sayori."
+    y "Just before you say that, I want to ask everyone something."
+    show natsuki 1c zorder 3 at f41
+    show yuri zorder 2 at t43
+    n "What's going on, Yuri?"
+    show natsuki zorder 2 at t41
+    show sayori 4c zorder 3 at f44
+    s "What is this about?"
+    show yuri 2ph zorder 3 at f43
+    show sayori zorder 2 at t44
+    y "I feel like I should speak my mind on this..."
+    "Yuri takes a deep breath."
+    y "I just want to say that I've felt a change when I was writing my poem last night."
+    y 2pq "It felt a bit like a reversal of some sort."
+    show yuri zorder 2 at t43
+    mc "A reversal? What does that mean?"
+    show yuri 2pt zorder 3 at f43
+    y "It's...hard to explain."
+    y "But if I had to try it's like something was reverted in the world."
+    y "When I wrote my poem before..."
+    y 2pv "It was like it had lost meaning..."
+    if visited_yuri_hospital:
+        y 2ps "...until someone brought it back."
+        "Yuri smiles at me."
+    y 2ph "But last night, it just felt normal."
+    y 4pb "I-I..."
+    "Everyone looks at Yuri."
+    y 4pc "I-I'm not making any sense, am I?"
+    y "S-Sorry for saying anything..."
+    show natsuki 2l zorder 3 at f41
+    show yuri zorder 2 at t43
+    n "I think it's good you're speaking your mind!"
+    n "It's a lot better than you being quiet, that's for sure."
+    show natsuki zorder 2 at t41
+    show yuri 4pa zorder 3 at f43
+    y "..."
+    y "Thank you, Natsuki."
+    y "But I'm still not making any sense to you, am I?"
+    show natsuki 2k zorder 3 at f41
+    show yuri zorder 2 at t43
+    n "Actually, I think I understand, at least a little bit."
+    n "I've had a similar feeling as well."
+    n 2q "I didn't really tell anyone..."
+    # Natsuki player dialogue here if necessary
+    n "But it's like all the words I wrote suddenly lost meaning."
+    n 2s "It's weird though..."
+    n "I didn't really have that feeling last night."
+    n 2k "It's like you said, some kinda reversal..."
+    show natsuki zorder 2 at t41
+    show yuri 3pq zorder 3 at f43
+    y "So I'm not going crazy..."
+    y "That's a relief."
+    show natsuki 4j zorder 3 at f41
+    show yuri zorder 2 at t43
+    n "If you are, then I am too."
+    n "What about you three?"
+    show natsuki zorder 2 at t41
+    mc "I haven't noticed anything."
+    "But I don't really 'feel' the words I'm writing."
+    "It's almost like they're chosen for me..."
+    mc "What you two are saying sounds really weird though..."
+    mc "I can't say I've really had that experience."
+    if monika_type == 0:
+        show monika 1l zorder 3 at f42
+        m "Ahaha, I have no idea what you two are talking about."
+        m "Maybe you're overthinking it a little?"
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika 1hm zorder 3 at f42
+        m "I can't say I really understand what you're talking about, Yuri."
+    else:
+        show monika 1j zorder 3 at f42
+        m "That all sounds like a personal problem."
+    m "Maybe you're overthinking it a little?"
+    show monika zorder 2 at t42
+    show yuri 3po zorder 3 at f43
+    y "So it's just the two of us..."
+    y "Maybe we're just different from everyone else..."
+    show natsuki 2e zorder 3 at f41
+    show yuri zorder 2 at t43
+    n "Now wait a second, Yuri!"
+    n "It can't be a coincidence that both of us are feeling this way."
+    n 2c "Besides, we haven't even got an answer from Sayori yet!"
+    show natsuki zorder 2 at t41
+    show sayori 2l zorder 3 at f44
+    s "M-Me? Ehehe, why do you want my answer?"
+    s "W-We should just get back to the meeting, guys."
+    s "There's no point talking about this."
+    show natsuki 2f zorder 3 at hf41
+    show sayori zorder 2 at t44
+    n "Sayori, just answer the question!"
+    n "Unless you know something we don't..."
+    show natsuki zorder 2 at t41
+    show yuri 2ph zorder 3 at f43
+    y "We have to know, Sayori."
+    y "It can't just be the two of us."
+    show yuri zorder 2 at t43
+    show sayori 2k zorder 3 at f44
+    s "..."
+    "Sayori looks at Natsuki then at Yuri."
+    s 2j "I have no idea what you're talking about."
+    s "This whole reversal thing sounds like some kinda made up thing."
+    show natsuki 2g zorder 3 at f41
+    show sayori zorder 2 at t44
+    n "You know, you don't really sound convincing."
+    n "You're obviously hiding something, Sayori."
+    show natsuki zorder 2 at t41
+    show sayori 2h zorder 3 at f44
+    s "What would I have to hide?"
+    s "T-There's nothing, really!"
+    s "Don't you guys trust me...?"
+    show sayori zorder 2 at t44
+    "Natsuki and Yuri look like they're relenting."
+    show yuri 2po zorder 3 at f43
+    y "...You're right."
+    y "You're our friend, we shouldn't have pressured you like that..."
+    y "It's just this whole thing feels supernatural."
+    y "Like we're at the mercy of some entity."
+    y 3pt "I can only hope they're benevolent..."
+    show natsuki 2c zorder 3 at f41
+    show yuri zorder 2 at t43
+    n "Okay, now you've lost me Yuri."
+    show natsuki zorder 2 at t41
+    show sayori 2e zorder 3 at f44
+    s "Can I get back to what I was saying now?"
+    s "We really have a lot to discuss..."
+    s 2d "And talking about 'reversals' and 'entities' isn't really why we're here."
+    s "If you really want to talk about it, do it somewhere else."
+    show natsuki 1b zorder 3 at f41
+    show yuri 1f zorder 3 at f43
+    show sayori zorder 2 at t44
+    ny "But--"
+    show natsuki zorder 3 at t41
+    show yuri zorder 3 at t43
+    mc "I agree with Sayori."
+    mc "It could be possible it's just the two of you."
+    mc "Either way, we're here to talk about literature."
+    "Though in the back of my mind, I'm really interested in what Natsuki and Yuri have to say..."
+    "Maybe I can talk to them about it when we share our poems."
+    show sayori 1k zorder 3 at f44
+    s "Thank you, [player]."
+    s "Now...as I was saying..."
+    s "It's time to share our poems."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch14_end:
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
