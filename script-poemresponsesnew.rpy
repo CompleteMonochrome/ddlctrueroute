@@ -924,6 +924,9 @@ label ch13_s_end:
     mc "Any time, Sayori."
     return
 
+label ch14_s_end:
+    return
+
 label ch6_m_end:
     call showpoem (poem_m6)
     m "What do you think, [player]?"
@@ -1365,6 +1368,9 @@ label ch13_m_end:
         m "Thanks for listening."
     return
 
+label ch14_m_end:
+    return
+
 # Girls Rate Poems
 label ch6_n_bad:
     jump ch6_n_med
@@ -1621,6 +1627,19 @@ label ch12_n_good:
     n 2s "O-Okay..."
     n "H-Here, you can read it if you want..."
     "Natsuki hands me her poem."
+    return
+
+label ch14_n_bad:
+    jump ch14_n_med
+
+label ch14_n_med:
+    if natsuki_outing:
+        jump ch14_n_good
+    return
+
+label ch14_n_good:
+    if not natsuki_outing:
+        jump ch14_n_med
     return
 
 label ch6_y_bad:
@@ -1938,6 +1957,21 @@ label ch13_y_good:
     y "A-Anyway, you can read it now."
     y 3pq "I hope you like it."
     mc "I know I will."
+    return
+
+label ch14_y_bad:
+    jump ch14_y_med
+
+label ch14_y_med:
+    if visited_yuri_hospital:
+        jump ch14_y_good
+
+    return
+
+label ch14_y_good:
+    if not visited_yuri_hospital:
+        jump ch14_y_med
+
     return
 
 label ch6_s_bad:
@@ -2296,6 +2330,15 @@ label ch13_s_good:
     s "Ehehe, you're welcome!"
     s 1a "Anyway, you can read what I wrote now."
     s "I hope you like it~"
+    return
+
+label ch14_s_bad:
+    jump ch14_s_med
+
+label ch14_s_med:
+    return
+
+label ch14_s_good:
     return
 
 label ch6_m_start:
@@ -2684,6 +2727,9 @@ label ch13_m_start:
         m "Would you like to read my poem now?"
         mc "Sure."
     "Monika hands me her poem."
+    return
+
+label ch14_m_start:
     return
 
 label mnew_yuri_1:

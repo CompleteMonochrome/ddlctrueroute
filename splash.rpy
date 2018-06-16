@@ -514,6 +514,8 @@ label after_load:
         $ ch13_music_type = "harmonic"
     if not hasattr(store,'ch13_yuri_books'):
         $ ch13_yuri_books = False
+    if not hasattr(store,'natsuki_outing'):
+        $ natsuki_outing = False
 
     # Normal Stuff
     if persistent.playthrough == 0:

@@ -2018,6 +2018,7 @@ default needs_to_read = False
 default gave_book_to_monika = False
 default sayori_dumped = False
 default visited_yuri_hospital = False
+default natsuki_outing = False
 default yuri_date = False
 default natsuki_date = False
 default sayori_date = False
