@@ -62,6 +62,9 @@ label ch3_mainb:
     mc "Monika, what are you talking about?"
     m "Listen, {i}you{/i} need to create a file to save her."
     m "Call it 'script-saturday.txt', it's the only way I can fix it."
+    if renpy.macintosh:
+        m "But wait...you're on a Mac."
+        m "It might just be easier to call it 'script-saturday.rtf' but either one will do."
     m 1h "Can you hear me?"
     m 4h "You need to put it in the 'game' folder."
     m "I can't do it myself, I don't know how..."
@@ -627,6 +630,9 @@ label ch3_maind:
     m "Why don't you create the file, and I'll be the one to edit it."
     m "We can spend all of tomorrow together."
     m "Create a new file called 'script-saturday.txt' and put it into the 'game' folder."
+    if renpy.macintosh:
+        m "Or 'script-saturday.rtf' might be easier since you're on a Mac."
+        m "Either way..."
     m "That should be enough."
     m 1d "I mean, I guess you don't have to do it."
     m 1b "But it means you'll get to spend more time with me."

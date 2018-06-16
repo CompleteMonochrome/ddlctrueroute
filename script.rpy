@@ -65,9 +65,11 @@ label start:
                     try: renpy.file(config.basedir + "/game/script-saturday.txt")
                     except: open(config.basedir + "/game/script-saturday.txt", "w").write("VGhhbmsgeW91IGZvciBnaXZpbmcgbWUgdGhpcyBjaGFuY2UuDQpJIGhhdmUgdG8gc2FjcmlmaWNlIG15c2VsZiwgZm9yIHlvdSBhbmQgU2F5b3JpLg0KVGhpcyBpcyBqdXN0IG15IHJldHJpYnV0aW9uLCBJJ2xsIGFsd2F5cyBsb3ZlIHlvdS4uLg==")
                 call ch3_mainc_name
-            elif renpy.exists("script-saturday.txt"):
+            elif renpy.exists("script-saturday.txt") or renpy.exists("script-saturday.rtf"):
                 python:
                     try: os.remove(config.basedir + "/game/script-saturday.txt")
+                    except: pass
+                    try: os.remove(config.basedir + "/game/script-saturday.rtf")
                     except: pass
                     try: renpy.file(config.basedir + "/game/script-saturday.txt")
                     except: open(config.basedir + "/game/script-saturday.txt", "w").write("VGhhbmsgeW91IGZvciBnaXZpbmcgbWUgdGhpcyBjaGFuY2UuDQpJIGhhdmUgdG8gc2FjcmlmaWNlIG15c2VsZiwgZm9yIHlvdSBhbmQgU2F5b3JpLg0KVGhpcyBpcyBqdXN0IG15IHJldHJpYnV0aW9uLCBJJ2xsIGFsd2F5cyBsb3ZlIHlvdS4uLg==")
@@ -84,9 +86,11 @@ label start:
                     try: renpy.file(config.basedir + "/game/script-saturday.txt")
                     except: open(config.basedir + "/game/script-saturday.txt", "w").write("VGhhbmsgeW91IGZvciBnaXZpbmcgbWUgdGhpcyBjaGFuY2UuDQpJIGhhdmUgdG8gc2FjcmlmaWNlIG15c2VsZiwgZm9yIHlvdSBhbmQgU2F5b3JpLg0KVGhpcyBpcyBqdXN0IG15IHJldHJpYnV0aW9uLCBJJ2xsIGFsd2F5cyBsb3ZlIHlvdS4uLg==")
                 call ch3_maine_name
-            elif renpy.exists("script-saturday.txt"):
+            elif renpy.exists("script-saturday.txt") or renpy.exists("script-saturday.rtf"):
                 python:
                     try: os.remove(config.basedir + "/game/script-saturday.txt")
+                    except: pass
+                    try: os.remove(config.basedir + "/game/script-saturday.rtf")
                     except: pass
                     try: renpy.file(config.basedir + "/game/script-saturday.txt")
                     except: open(config.basedir + "/game/script-saturday.txt", "w").write("VGhhbmsgeW91IGZvciBnaXZpbmcgbWUgdGhpcyBjaGFuY2UuDQpJIGhhdmUgdG8gc2FjcmlmaWNlIG15c2VsZiwgZm9yIHlvdSBhbmQgU2F5b3JpLg0KVGhpcyBpcyBqdXN0IG15IHJldHJpYnV0aW9uLCBJJ2xsIGFsd2F5cyBsb3ZlIHlvdS4uLg==")
