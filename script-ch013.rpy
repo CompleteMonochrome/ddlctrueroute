@@ -2203,7 +2203,9 @@ label ch13_exclusive_natsuki:
         n 2bg "But why would you help me?"
         n "It's not like I'm your first preference."
         n "You were probably told to help me, weren't you?"
-        mc "Actually...I chose to help you of my own decision."
+        mc "Actually...I made the choice to help you by myself."
+        n "H-Huh? B-But why?"
+        
     else:
         show natsuki 1bc zorder 2 at t11
         n "How exactly are you going to help me with the preparations, [player]?"

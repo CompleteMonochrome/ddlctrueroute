@@ -794,7 +794,6 @@ label ch14_main:
     if monika_type == 0:
         show monika 1l zorder 3 at f42
         m "Ahaha, I have no idea what you two are talking about."
-        m "Maybe you're overthinking it a little?"
     elif monika_type == 1 and ch12_markov_agree:
         show monika 1hm zorder 3 at f42
         m "I can't say I really understand what you're talking about, Yuri."

@@ -1640,6 +1640,26 @@ label ch14_n_med:
 label ch14_n_good:
     if not natsuki_outing:
         jump ch14_n_med
+    n "..."
+    n "I want to say thank you again."
+    mc "For sharing my poem?"
+    n "No, you idiot!"
+    n "...For coming over yesterday..."
+    n "And spending time with me."
+    mc "Shouldn't you be thanking Sayori as well?"
+    n "Are you really that dense, [player]?"
+    n "It should be obvious, right?"
+    mc "Are you talking about the date we went on?"
+    n "Yes! It took you long enough."
+    mc "Sorry, it's still kind of hard to believe."
+    n "Hard to believe? In what way?"
+    n "Am I really that hard to imagine a date with?"
+    mc "I didn't mean it like that."
+    mc "It's more like..."
+    mc "I didn't expect to be on a date with you already..."
+    mc "After what happened the day before."
+    n "It's not {i}that{/i} hard to believe."
+    n "You've been nice to me before all of that happened."
     return
 
 label ch6_y_bad:
