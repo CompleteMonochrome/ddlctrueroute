@@ -218,6 +218,7 @@ image bg mall_afternoon = "mod_assets/images/bg/mall_afternoon.png"
 image bg marina = "mod_assets/images/bg/marina.png"
 image bg school_front = "mod_assets/images/bg/school_front.png"
 image bg m_livingroom = "mod_assets/images/bg/m_livingroom.png"
+image bg m_livingroom = "mod_assets/images/bg/m_bedroom.png"
 
 image glitch_color:
     ytile 3
@@ -2054,6 +2055,7 @@ default n_appealS = 0
 default s_appealS = 0
 default y_appealS = 0
 default m_appealS = 0
+default m_hairdown_poemglitch = False
 default ch13poemwinner = "Sayori"
 default ch13_scene = "sayori"
 default ch13_name = "Sayori"

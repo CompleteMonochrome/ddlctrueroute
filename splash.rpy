@@ -502,6 +502,8 @@ label after_load:
         $ m_appealS = 0
     if not hasattr(store,'m_appealS'):
         $ m_appealS = 0
+    if not hasattr(store,'m_hairdown_poemglitch'):
+        $ m_hairdown_poemglitch = False
     if not hasattr(store,'sayarcpoemwinner'):
         $ sayarcpoemwinner = ['sayori', 'sayori', 'sayori']
     if not hasattr(store,'ch13poemwinner'):

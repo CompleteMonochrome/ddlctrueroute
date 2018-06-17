@@ -194,11 +194,15 @@ label poem(transition=True,totalWords=20):
                 show s_sticker at sticker_4left
                 show n_sticker at sticker_4midleft
                 # Check if hair down Monika playthrough
-                show m_sticker at sticker_4right
-                # if monika_type == 1 and ch12_markov_agree:
-                #     show mh_sticker at sticker_4right
-                # else:
-                #     show m_sticker at sticker_4right
+                if monika_type == 1 and ch12_markov_agree:
+                    if random.randint(0,1000) == 0 and not m_hairdown_poemglitch:
+                        $ m_hairdown_poemglitch = True
+                        play sound "sfx/glitch3.ogg"
+                        show mh_sticker_g at sticker_4right
+                    else:
+                        show mh_sticker at sticker_4right
+                else:
+                    show m_sticker at sticker_4right
             else:
                 show s_sticker at sticker_left
                 show n_sticker at sticker_mid
@@ -320,7 +324,15 @@ label poem(transition=True,totalWords=20):
                         if t.yPoint >= 3:
                             renpy.show("y_sticker hop")
                         if t.mPoint >= 3:
-                            renpy.show("m_sticker hop")
+                            if ch12_markov_agree and monika_type == 1:
+                                if random.randint(0,1000) == 0 and not m_hairdown_poemglitch:
+                                    $ m_hairdown_poemglitch = True
+                                    play sound [ "<silence .72>", "sfx/glitch3.ogg" ]
+                                    renpy.show("mh_sticker_g hop")
+                                else:
+                                    renpy.show("mh_sticker hop")
+                            else:
+                                renpy.show("m_sticker hop")
                     else:
                         if persistent.playthrough == 2 and chapter == 2 and random.randint(0,10) == 0: renpy.show("m_sticker hop")
                         elif t.nPoint > t.yPoint: renpy.show("n_sticker hop")
@@ -431,6 +443,7 @@ label poem(transition=True,totalWords=20):
         $ quick_menu = True
     $ config.allow_skipping = True
     $ allow_skipping = True
+    $ m_hairdown_poemglitch = False
     stop music fadeout 2.0
     hide screen quick_menu
     show black as fadeout:
@@ -534,6 +547,17 @@ image mh_sticker:
             function randomMoveMonika
         repeat
 
+image mh_sticker_g:
+    "mod_assets/gui/poemgame/mh_sticker_1g.png"
+    xoffset monikaOffset xzoom monikaZoom
+    block:
+        function randomPauseMonika
+        parallel:
+            sticker_move_n
+        parallel:
+            function randomMoveMonika
+        repeat
+
 image s_sticker hop:
     "gui/poemgame/s_sticker_2.png"
     xoffset sayoriOffset xzoom sayoriZoom
@@ -589,6 +613,13 @@ image mh_sticker hop:
     sticker_hop
     xoffset 0 xzoom 1
     "mh_sticker"
+
+image mh_sticker_g hop:
+    "mod_assets/gui/poemgame/mh_sticker_2.png"
+    xoffset monikaOffset xzoom monikaZoom
+    sticker_hop
+    xoffset 0 xzoom 1
+    "mh_sticker_g"
 
 image y_sticker glitch:
     "gui/poemgame/y_sticker_1_broken.png"

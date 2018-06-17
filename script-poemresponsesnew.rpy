@@ -1635,6 +1635,12 @@ label ch14_n_bad:
 label ch14_n_med:
     if natsuki_outing:
         jump ch14_n_good
+    mc "Welcome back, Natsuki."
+    mc "I thought I should say that to you individually."
+    n "Well...thanks, [player]."
+    n "It's good to be back."
+    mc "Is everything sorted back home?"
+    
     return
 
 label ch14_n_good:

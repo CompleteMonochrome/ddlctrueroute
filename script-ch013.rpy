@@ -2205,7 +2205,8 @@ label ch13_exclusive_natsuki:
         n "You were probably told to help me, weren't you?"
         mc "Actually...I made the choice to help you by myself."
         n "H-Huh? B-But why?"
-        
+        n "You have better things to do...don't you?"
+
     else:
         show natsuki 1bc zorder 2 at t11
         n "How exactly are you going to help me with the preparations, [player]?"
