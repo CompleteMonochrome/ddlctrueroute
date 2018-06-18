@@ -2061,6 +2061,7 @@ default ch13_scene = "sayori"
 default ch13_name = "Sayori"
 default ch13_music_type = "harmonic"
 default ch13_yuri_books = False
+default ch14poemwinner = "Sayori"
 
 default y_gave = False
 default y_ranaway = False

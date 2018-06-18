@@ -518,6 +518,8 @@ label after_load:
         $ ch13_yuri_books = False
     if not hasattr(store,'natsuki_outing'):
         $ natsuki_outing = False
+    if not hasattr(store,'ch14poemwinner'):
+        $ ch14poemwinner = "Sayori"
 
     # Normal Stuff
     if persistent.playthrough == 0:

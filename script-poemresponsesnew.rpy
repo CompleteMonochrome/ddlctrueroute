@@ -609,6 +609,13 @@ label ch12_n_end:
         n 2i "Now you can go already."
     return
 
+label ch14_n_end:
+    if natsuki_outing:
+
+    else:
+
+    return
+
 label ch6_s_end:
     call showpoem (poem_s4)
     s 1d "It's a little different from the poems you know me for..."
@@ -1640,7 +1647,56 @@ label ch14_n_med:
     n "Well...thanks, [player]."
     n "It's good to be back."
     mc "Is everything sorted back home?"
-    
+    if ch13_name == "Natsuki":
+        mc "I know I didn't really get to stay that long..."
+    elif ch13_name == "Sayori":
+        mc "I know I only came to visit..."
+    else:
+        mc "I know I didn't really get in contact with you..."
+    n "Everything is..."
+    n "Well...it's not normal."
+    n "I guess you could say things are sorted but I'm not really sure if things can ever be normal again."
+    mc "How come?"
+    n "Do you really think after what happened that things can just go back to normal?"
+    n "I don't..."
+    mc "You can try your best, can't you?"
+    n "I already am, it's just hard not to keep thinking about everything."
+    mc "Maybe that's what's stopping you from having a 'normal' life again."
+    n "Huh?"
+    mc "You keep thinking about all the things that make your life not normal..."
+    mc "And you've lost track of the things that make your life normal."
+    mc "At least, that's what it feels like."
+    n "This club is part of the reason life isn't normal, you know."
+    mc "What do you mean?"
+    n "Weird stuff always happens because of the club but..."
+    n "I can't see myself having life any other way."
+    n "Even if I wanted to."
+    mc "You can't imagine a life without us?"
+    mc "Is that what you're saying?"
+    n "It's like...even if I did want a life without you guys..."
+    n "...it's just impossible to imagine."
+    mc "I see. Well, maybe it's because we've all grown so much closer together since joining the club."
+    n "I don't know...it feels like something else..."
+    "Natsuki's voice trails off."
+    mc "Sorry, I didn't come here to make you uncomfortable."
+    n "N-No, it's okay."
+    n "It's good to talk with you."
+    mc "The feeling is mutual, Natsuki."
+    "There's a brief moment of silence between us."
+    n "A-Anyway, your poem is okay."
+    n "Not any worse than your last ones."
+    mc "Glad to see your personality is still intact."
+    n "What is {i}that{/i} supposed to mean?"
+    mc "Never mind."
+    n "Come on, tell me."
+    mc "It's just..."
+    mc "...well, I'm glad you're still you."
+    mc "After everything you've been through."
+    n "Well, of course I'm still me!"
+    n "Who else would I be?"
+    n "Anyway, I can tell you've run out of things to talk about."
+    n "So here, read my poem."
+    mc "Alright..."
     return
 
 label ch14_n_good:
@@ -2362,9 +2418,162 @@ label ch14_s_bad:
     jump ch14_s_med
 
 label ch14_s_med:
+    s "There are times I wonder if you know more than I do, [player]."
+    mc "What do you mean?"
+    s "With all the information I've gathered, I'm still just a person who can only know so much."
+    s "Even with everything I know, I still make silly mistakes."
+    s "It kinda makes me doubt what I'm capable of."
+    mc "You're capable of a lot, Sayori."
+    mc "I and everyone else in the club would agree with you."
+    s "I can do a lot, that's for sure..."
+    s "But am I doing the right things?"
+    s "Sometimes thoughts like that just pop into my head, you know?"
+    mc "Are you stressing yourself out, Sayori?"
+    if ch13_name == "Sayori":
+        mc "I'm trying to help you as much as I can..."
+    else:
+        mc "Maybe I should have chosen to help you instead..."
+    s "It's not that, [player]."
+    s "In fact, that's probably the least of my problems right now."
+    mc "What's your number one problem then?"
+    mc "Maybe I could help with that?"
+    if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+        s "It's something you can't help with, [player]."
+        s "I have to deal with it myself..."
+    else:
+        s "The thing is..."
+        s "I don't know what it is I'm dealing with..."
+        s "But even if I did, I feel like I have to deal with it myself."
+    mc "That's stupid, Sayori."
+    mc "If it's really such a big problem, then you should tell us about it."
+    mc "You may be the president but even you have your limits."
+    mc "Why don't you be selfish and let us be part of your problems too?"
+    s "..."
+    mc "Sayori?"
+    "I approach Sayori and put a hand on her shoulder."
+    "She swipes it away."
+    mc "Sayori, is something wrong?"
+    s "I-It's nothing, [player]."
+    s "I don't want to be selfish right now."
+    s "It's for the best, trust me."
+    if sayori_confess and not sayori_dumped:
+        mc "You can tell me, Sayori."
+        mc "I'm your boyfriend, aren't I?"
+        mc "We shouldn't keep secrets from each other."
+    else:
+        mc "I'm your best friend, aren't I Sayori?"
+        mc "You can tell me anything."
+    mc "In fact, I want you to be selfish..."
+    mc "...at least with me."
+    mc "So please tell me what it is that's troubling you, Sayori."
+    mc "Tell me what's making you doubt..."
+    s "I..."
+    s "..."
+    mc "You can trust me."
+    s "I know..."
+    s "...but..."
+    s "I can't tell you."
+    mc "Why not? You were telling me stuff earlier."
+    s "I want to...I really do."
+    s "It's for the best that I don't."
+    mc "For the best?"
+    mc "Sayori, you know I can see through your lies."
+    s "It's not a lie, [player]."
+    s "If I tell you then it's all over."
+    s "You simply can't know."
+    mc "What's all over?"
+    mc "Sayori..."
+    s "Just..."
+    s "...forget it, okay?"
+    mc "I can't--"
+    s "Here, why don't you read my poem to take your mind off it..."
+    "Sayori hands her poem to me and I find myself unable to speak."
     return
 
 label ch14_s_good:
+    if sayori_dumped:
+        jump ch14_s_med
+    s "Ehehe, there are times when I think you know more than I do, [player]."
+    s "Funny how that works, isn't it?"
+    mc "How what works?"
+    s "I've learned so much but even I can only get through so much."
+    s "Do you know how that feels, [player]?"
+    mc "No."
+    s "I thought so..."
+    s "I mean, how could you?"
+    s "All you're doing is..."
+    "Sayori doesn't finish her sentence."
+    mc "I know there's something bothering you, Sayori."
+    mc "Whatever it is, you can tell me."
+    s "It's kinda selfish of me to do that, [player]."
+    s "Everyone is dealing with their own problems too, you know."
+    s "For me to be selfish now, after everything is just not the right thing to do."
+    mc "Who cares if it's not the right thing to do?"
+    mc "You have to take care of yourself too."
+    s "I'm not that important right now, [player]."
+    s "There's definitely more--"
+    mc "How can you say that, Sayori?"
+    mc "I don't know what it is you're dealing with lately..."
+    mc "I don't know why you're keeping it such a big secret either."
+    s "I have to, [player]."
+    mc "But why?"
+    mc "Why do you have to when it's clearly causing you so much pain?"
+    s "..."
+    s "I..."
+    "I put a hand on Sayori's shoulder to reassure her."
+    s "I do want to tell you, [player]."
+    s "You have to believe me when I tell you that."
+    mc "I do believe you, Sayori."
+    mc "Obviously something is stopping you from telling me then?"
+    mc "Do you know what it is?"
+    "Sayori nods her head."
+    mc "You can't tell me that either, can you?"
+    s "...No."
+    mc "Is it for the same reason?"
+    s "Yes..."
+    mc "There's really nothing I can do, is there?"
+    s "No, there isn't."
+    s "Even if you wanted to help, I don't think you could change what's going to happen."
+    "Sayori takes my hand from her shoulder."
+    mc "Sayori..."
+    s "I've been having some doubts lately, [player]."
+    s "I haven't been able to stop thinking about them."
+    s "Has everything I've done really been for the best?"
+    mc "It doesn't matter if it has or hasn't been, Sayori."
+    mc "We're human. We make mistakes."
+    "Sayori lets out a small chuckle."
+    s "You don't know what you're saying, do you?"
+    mc "I know exactly what I'm saying."
+    mc "And even if you can't tell me what's going on..."
+    mc "I'll be right by your side, Sayori."
+    s "How much do you think you know, [player]?"
+    mc "I don't know much at all."
+    if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+        s "..."
+        s "I suppose you wouldn't."
+        s "I only found out earlier and it doesn't sound good at all..."
+    else:
+        s "Then you're in the same place as me..."
+        s "I really don't know what's coming up, [player]."
+        s "Which is why the sooner everything is done, the better."
+    mc "I know that even if you did know something, you couldn't tell me anyway, right?"
+    s "Yeah..."
+    mc "From my limited skills of deduction, I can at least tell it has nothing to do with festival preparations."
+    s "Ehehe, that's right--"
+    s "Wait, did you say festival preparations?"
+    mc "I did? Oh, I meant Inauguration Day preparations."
+    mc "Speaking of which..."
+    if ch13_name == "Sayori":
+        mc "You know I'm trying my best to help you with those."
+        mc "I just can't help but feel you don't want me to help..."
+    else:
+        mc "How are yours coming along?"
+        mc "I know you said you didn't need anybody's help but..."
+    s "[player], I think we should stop talking about this."
+    mc "Huh?"
+    s "Here, just take my poem and forget about what we just talked about."
+    mc "But--"
+    "Sayori hands her poem to me and I find myself unable to speak."
     return
 
 label ch6_m_start:
@@ -2756,6 +2965,20 @@ label ch13_m_start:
     return
 
 label ch14_m_start:
+    if monika_type == 0:
+    elif monika_type == 1 and ch12_markov_agree:
+    else:
+
+    if sayarcpoemwinner[1] == "monika":
+        $ nextscene = "msay_" + sayarcpoemwinner[1] + "_" + str(eval(sayarcpoemwinner[1][0] + "_appealS"))
+    else:
+        $ ch14poemwinner = sayarcpoemwinner[0].capitalize()
+        $ nextscene = "msay_universal_" + str(eval(sayarcpoemwinner[1][0] + "_appealS"))
+    call expression nextscene
+
+    if monika_type == 0:
+    elif monika_type == 1 and ch12_markov_agree:
+    else:
     return
 
 label mnew_yuri_1:
