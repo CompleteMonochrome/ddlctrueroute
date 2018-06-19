@@ -1883,6 +1883,7 @@ Is this what I think?
 
 Windows are not mirrors
 But with enough focus
+One can see
 
     A reflection."""
 )

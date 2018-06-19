@@ -1722,6 +1722,42 @@ label ch14_n_good:
     mc "After what happened the day before."
     n "It's not {i}that{/i} hard to believe."
     n "You've been nice to me before all of that happened."
+    n "I haven't really...felt that before."
+    mc "You make it sound like a big deal."
+    n "That's because it is!"
+    n "I haven't let someone like you get so close to me before..."
+    mc "Someone like me?"
+    mc "What do you mean by that?"
+    n "You're the first...you know...to ever get this far with me."
+    n "To...see through me and get to know me for who I really am."
+    mc "I admit, I wasn't sure at first."
+    mc "But I think I've heard of your personality type before..."
+    mc "You know, from reading manga and watching anime."
+    mc "So I thought maybe I could keep trying..."
+    n "But you could have made such a big fool of yourself!"
+    n "It's so embarassing to think about..."
+    mc "Well, I guess it's better to look like an idiot and not know..."
+    mc "...than to live life with regret knowing what could have been."
+    n "That's really strange of you to say."
+    n "I didn't really take you for the philosophical type."
+    mc "I'm not really..."
+    mc "It's just something someone told me before."
+    n "I'd say that was a wise person."
+    mc "I never took that person as a wise type but I guess he does have his moments."
+    n "It's just so hard to believe that we've got this far together..."
+    n "After all that you've done."
+    mc "It all worked out, didn't it?"
+    n "Y-Yeah...I guess."
+    n "It's just strange to think that manga and anime helped you figure out the type of person I was."
+    mc "Maybe it's destiny."
+    n "That was super cheesy!"
+    "Natsuki tries to show an angry face but can't help but smile."
+    mc "Ahaha, sorry."
+    mc "I don't really believe in destiny anyway."
+    mc "It's just one of those lines I've heard before."
+    n "A-Anyway, here."
+    "Natsuki shows me her poem."
+    n "Well? Read it.."
     return
 
 label ch6_y_bad:
@@ -2047,7 +2083,45 @@ label ch14_y_bad:
 label ch14_y_med:
     if visited_yuri_hospital:
         jump ch14_y_good
-
+    y "Hello, [player]."
+    mc "Hey Yuri, what did you think of my poem?"
+    y "It's very unique in style, [player]."
+    y "I don't really have much to say about it anymore."
+    y "In fact, I think we're all past the point of trying to get you to change the way you write."
+    mc "I guess you're right."
+    mc "It's kind of a habit from the first week."
+    y "Yeah..."
+    if ch13_name == "Yuri":
+        y "Do you think we'll finish with our preparations before Inauguration Day comes?"
+        y "We actually have quite a bit to do and with the time we have left..."
+        mc "I'm sure we'll be fine, Yuri."
+        mc "With the two of us working on it, there's nothing to worry about."
+    else:
+        y "Anyway, how did your preparations go?"
+        y "You chose to work with [ch13_name], right?"
+        mc "It went alright."
+        mc "I feel like maybe I could have done more but..."
+        mc "I'm sure everything will be ready by the time Inauguration Day comes."
+    y "I suppose there isn't."
+    y "I just wish the day would come sooner."
+    mc "Are you feeling nervous for it?"
+    y "In a way..."
+    y "It's more like I can feel there's something going to happen on the day."
+    y "It's probably nothing but I can't really shake the feeling."
+    mc "Do you know what's going to happen?"
+    y "Not really...just that something {i}is{/i} going to happen."
+    mc "Well, if you ever figure it out, let me know."
+    y "Ah...sure."
+    "Yuri smiles shyly."
+    mc "So..."
+    mc "Do you mind sharing your poem with me now?"
+    y "R-Right! Please forgive me..."
+    "Yuri pulls out a piece of paper from her pocket."
+    mc "There's no need to say sorry."
+    mc "If you don't want to share your poem, that's fine as well."
+    y "N-No, I was just caught in my thoughts."
+    y "Here, you can read my poem now."
+    "Yuri hands me the piece of paper she got from her pocket."
     return
 
 label ch14_y_good:
@@ -2966,8 +3040,90 @@ label ch13_m_start:
 
 label ch14_m_start:
     if monika_type == 0:
+        m "Hi [player]~"
+        m "This is a nice poem you've shared with me."
+        mc "Thanks, I think by now I don't even need to try to write a poem."
+        mc "I can just sort of do it."
+        m "I'm sure there's more to it than that."
+        m "I mean, there has to be...right?"
+        mc "If you say so..."
+        if ch14_name == "Monika":
+            "Monika's facial expressions change suddenly."
+            m "I'm sorry...for how yesterday went."
+            m "I know it was kind of an abrupt end to everything..."
+            mc "It's fine..."
+            mc "You probably needed some time to yourself to think, right?"
+            m "Yeah..."
+            mc "But you know, if there's anything at all troubling you then you can tell me."
+            mc "I'll always be here for you, Monika."
+            m "..."
+            mc "I understand if you don't want to tell me."
+            m "I'm in quite a predicament, [player]."
+            m "Did you know that?"
+            mc "No...?"
+            m "I have been for a while."
+            m "Ever since you've tried to help me."
+            mc "Tried to help you? When did I do this?"
+            m "I don't know the right way to do things anymore."
+            m "And the tiniest things can make my emotions go all over the place."
+            m "It's hard living like this..."
+            mc "So you're feeling like this...because of me?"
+            m "It's not because of you..."
+            m "I think it's just bound to happen."
+            m "No matter the choices you take."
+            mc "That's ridiculous, Monika."
+            mc "I'm not one to believe in inevitability like that."
+            m "Do you believe you can change your fate?"
+            mc "Well...I don't really believe in fate."
+            m "I see..."
+        else:
+            m "Well, are your preparations going well?"
+            mc "Yeah, they're going pretty well."
+            mc "As well as they can be, I suppose."
+            m "Oh? Did something go wrong?"
+            mc "Not really. It's just we really haven't made much progress."
+            mc "I'm sure we'll get it done when the day comes though."
+            m "Ahaha, well that's good."
+            mc "How about you? You're playing the piano for the day, right?"
+            mc "Have you chosen a song to play?"
+            m "I've chosen multiple songs to play actually."
+            m "But if you're asking if I have some sort of central song that's going to be the main attraction..."
+            m "Then yes, I have."
+            mc "What song is it?"
+            m "I doubt you've heard it before, [player]."
+            mc "Is it an old song?"
+            m "No...it's because it's an original song!"
+            mc "An original song?"
+            m "I wrote the lyrics and composed it myself."
+            mc "Wow! That's impressive, Monika."
+            m "That's yet to be seen, isn't it?"
+            m "No one has heard it yet so for all I know it could be terrible!"
+            mc "I doubt it. With someone like you, I just know it will be great!"
+            m "You have more faith in me than myself..."
+            "Monika smiles meaningfully."
+        m "Anyway..."
+        m "I'd like to share my poem with you now."
+        m "So here, please read it."
+        mc "Sure."
     elif monika_type == 1 and ch12_markov_agree:
+        m "Ooh, this is a nice poem!"
+        mc "You think so?"
+        m "Ahaha, do you think I'd lie to you?"
+        mc "Well...I guess not."
+        m "You're really quite talented, [player]."
+        m "Have you considered writing your own poem book?"
+        "I can't tell if she's serious or if she's mocking me right now."
+        mc "Not really..."
+        mc "Poetry isn't really something I'm {i}that{/i} passionate about."
+        m "Ah, that's a shame."
+        mc "Though I'm glad you think I'm good enough to write a book of poems."
+        mc "I'm sure some of the others, including yourself, are probably more capable than me though!"
+        m "You should probably give yourself more credit!"
+        "Monika smiles meaningfully."
+        if ch14_name == "Monika":
+        else:
     else:
+    "Monika hands me her poem."
 
     if sayarcpoemwinner[1] == "monika":
         $ nextscene = "msay_" + sayarcpoemwinner[1] + "_" + str(eval(sayarcpoemwinner[1][0] + "_appealS"))
@@ -3411,6 +3567,9 @@ label msay_universal_1:
         m "Maybe..."
     return
 
+label msay_universal_2:
+    return
+
 label msay_monika_1:
     if monika_type == 0:
         m 1e "You wrote this poem for me, didn't you?"
@@ -3460,4 +3619,7 @@ label msay_monika_1:
         m "That's done."
         mc "Eh?"
         m "Nothing."
+    return
+
+label msay_monika_2:
     return
