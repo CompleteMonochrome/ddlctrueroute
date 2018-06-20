@@ -218,7 +218,7 @@ image bg mall_afternoon = "mod_assets/images/bg/mall_afternoon.png"
 image bg marina = "mod_assets/images/bg/marina.png"
 image bg school_front = "mod_assets/images/bg/school_front.png"
 image bg m_livingroom = "mod_assets/images/bg/m_livingroom.png"
-image bg m_livingroom = "mod_assets/images/bg/m_bedroom.png"
+image bg m_bedroom = "mod_assets/images/bg/m_bedroom.png"
 
 image glitch_color:
     ytile 3
