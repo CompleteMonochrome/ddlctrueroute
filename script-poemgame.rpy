@@ -326,8 +326,8 @@ label poem(transition=True,totalWords=20):
                         if t.mPoint >= 3:
                             if ch12_markov_agree and monika_type == 1:
                                 if random.randint(0,1000) == 0 and not m_hairdown_poemglitch:
-                                    $ m_hairdown_poemglitch = True
-                                    play sound [ "<silence .72>", "sfx/glitch3.ogg" ]
+                                    m_hairdown_poemglitch = True
+                                    renpy.sound.play([ "<silence .72>", "sfx/glitch3.ogg" ])
                                     renpy.show("mh_sticker_g hop")
                                 else:
                                     renpy.show("mh_sticker hop")

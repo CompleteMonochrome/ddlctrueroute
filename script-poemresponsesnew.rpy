@@ -689,7 +689,7 @@ label ch12_n_end:
 
 label ch14_n_end:
     if natsuki_outing:
-        call showpoem (poem_n9b, img="natsuki 1s"))
+        call showpoem (poem_n9b, img="natsuki 1s")
         "Just from reading the poem, I can clearly tell this is about me."
         "Did I really make such an impact on Natsuki's life?"
         n "If you couldn't tell...it's..."
