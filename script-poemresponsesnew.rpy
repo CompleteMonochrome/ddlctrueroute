@@ -484,6 +484,7 @@ label ch14_y_end:
         mc "I'm sorry."
         y 2ps "Don't be. After all, you make your own decisions."
         y "I have to make my own too."
+    return
 
 label ch6_n_end:
     call showpoem (poem_n4)
