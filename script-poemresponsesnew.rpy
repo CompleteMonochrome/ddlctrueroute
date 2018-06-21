@@ -4179,7 +4179,7 @@ label msay_monika_1:
 
 label msay_universal_2:
     if monika_type == 0:
-        m "It's in the style of [ch14poemwinner], right?"
+        m 1a "It's in the style of [ch14poemwinner], right?"
         m "I can tell almost immediately."
         mc "It's that obvious?"
         m "Well, after reading so many poems from everyone..."
