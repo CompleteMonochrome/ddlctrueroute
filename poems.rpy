@@ -309,13 +309,13 @@ title = "Final Grasp",
 text = """\
 It's all coming to a close
 The curtain falls and the crowd claps.
-I grasp my ear to listen
+I focus on my ears to listen
 Yet all I hear is the sound of silence.
 
 My emotions return
 Within my grasp once more.
 Colors flutter in my retinas
-Dazing my vision yet I see nothing.
+Filling my vision yet I see nothing.
 Nothing to see, nothing to hear
 My grasp tightens.
 
@@ -359,7 +359,7 @@ The feeling has returned
 But what use is it now?
 For without his presence
 There are no feelings worth having.
-Forever on the apporach,
+Forever on the apporach
 Forever out of reach."""
 )
 

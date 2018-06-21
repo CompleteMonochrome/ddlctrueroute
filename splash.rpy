@@ -520,6 +520,8 @@ label after_load:
         $ natsuki_outing = False
     if not hasattr(store,'ch14poemwinner'):
         $ ch14poemwinner = "Sayori"
+    if not hasattr(store,'ch14markovikatell'):
+        $ ch14markovikatell = False
 
     # Normal Stuff
     if persistent.playthrough == 0:

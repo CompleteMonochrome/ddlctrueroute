@@ -870,9 +870,10 @@ label ch14_main:
     s "Thank you, [player]."
     s "Now...as I was saying..."
     s "It's time to share our poems."
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch14_end:
+    show sayori 1d zorder 2 at t42
+    s "Alright, everybody!"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return

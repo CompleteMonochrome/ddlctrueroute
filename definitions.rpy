@@ -2062,6 +2062,7 @@ default ch13_name = "Sayori"
 default ch13_music_type = "harmonic"
 default ch13_yuri_books = False
 default ch14poemwinner = "Sayori"
+default ch14markovikatell = False
 
 default y_gave = False
 default y_ranaway = False
