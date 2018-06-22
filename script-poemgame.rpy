@@ -195,10 +195,10 @@ label poem(transition=True,totalWords=20):
                 show n_sticker at sticker_4midleft
                 # Check if hair down Monika playthrough
                 if monika_type == 1 and ch12_markov_agree:
-                    if random.randint(0,1000) == 0 and not m_hairdown_poemglitch:
+                    if random.randint(0,50) == 0 and not m_hairdown_poemglitch:
                         $ m_hairdown_poemglitch = True
                         play sound "sfx/glitch3.ogg"
-                        show mh_sticker_g at sticker_4right
+                        show mh_sticker g at sticker_4right
                     else:
                         show mh_sticker at sticker_4right
                 else:
@@ -325,10 +325,10 @@ label poem(transition=True,totalWords=20):
                             renpy.show("y_sticker hop")
                         if t.mPoint >= 3:
                             if ch12_markov_agree and monika_type == 1:
-                                if random.randint(0,1000) == 0 and not m_hairdown_poemglitch:
+                                if random.randint(0,500) == 0 and not m_hairdown_poemglitch:
                                     m_hairdown_poemglitch = True
                                     renpy.sound.play([ "<silence .72>", "sfx/glitch3.ogg" ])
-                                    renpy.show("mh_sticker_g hop")
+                                    renpy.show("mh_sticker hopg")
                                 else:
                                     renpy.show("mh_sticker hop")
                             else:
@@ -547,7 +547,7 @@ image mh_sticker:
             function randomMoveMonika
         repeat
 
-image mh_sticker_g:
+image mh_sticker g:
     "mod_assets/gui/poemgame/mh_sticker_1g.png"
     xoffset monikaOffset xzoom monikaZoom
     block:
@@ -614,12 +614,12 @@ image mh_sticker hop:
     xoffset 0 xzoom 1
     "mh_sticker"
 
-image mh_sticker_g hop:
+image mh_sticker hopg:
     "mod_assets/gui/poemgame/mh_sticker_2.png"
     xoffset monikaOffset xzoom monikaZoom
     sticker_hop
     xoffset 0 xzoom 1
-    "mh_sticker_g"
+    "mh_sticker g"
 
 image y_sticker glitch:
     "gui/poemgame/y_sticker_1_broken.png"
