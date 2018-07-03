@@ -4725,3 +4725,12 @@ label ch13_exclusive_sayori:
     else:
         "After all, she's my best friend."
     return
+
+label ch13_natsukidate:
+    scene bg city_day
+    "So we're on our way to some sort of image restoration place."
+    "I haven't heard of this place before but the text Sayori sent was sure it was just the place."
+    "I guess that's what happens when you don't really have a plan."
+    "But what's important is that I'm here with Natsuki."
+    "I just hope things don't go wrong."
+    return
