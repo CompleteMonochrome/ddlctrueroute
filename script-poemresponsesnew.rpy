@@ -746,7 +746,7 @@ label ch14_n_end:
         n "I don't want life to be like a dream."
         n "I just want..."
         n 2q "...things to be normal."
-        n "{I}(Especially with how things turned out with you...){/i}"
+        n "{i}(Especially with how things turned out with you...){/i}"
         mc "..."
         "I can't really understand Natsuki's feelings."
         "Maybe it has something to do with happened with her dad...?"

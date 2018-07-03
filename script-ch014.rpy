@@ -457,7 +457,7 @@ label ch14_main:
         show monika 1j zorder 3 at f31
         m "Even if it does, it was a private conversation."
         m "I don't think it's our business what they talk about."
-    elif monika_type == 1:
+    elif monika_type == 1 and ch12_markov_agree:
         show monika 1hj zorder 3 at f31
         m "I think we should let them have their privacy."
         m "We can always find out later if it's that important."
