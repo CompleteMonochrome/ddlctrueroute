@@ -647,7 +647,7 @@ label ch14_main:
     if monika_type == 0:
         show monika 1f zorder 3 at f42
         m "Sayori, you're going to need a lot of help with that."
-    elif monika_type == 1:
+    elif monika_type == 1 and ch12_markov_agree:
         show monika 1he zorder 3 at f42
         m "Sayori, it sounds like you need help with that."
     else:
@@ -875,5 +875,19 @@ label ch14_main:
 label ch14_end:
     show sayori 1d zorder 2 at t42
     s "Alright, everybody!"
+    s "As you all know, we have to select a book to perform for the play."
+    s "So if you can all take the books you brought out, then..."
+    s "We can get started on voting!"
+    "Sayori beams."
+    show yuri 1a zorder 3 at f43
+    y "W-Well, I hope you all don't make fun of me for my choices..."
+    show sayori zorder 3 at f42
+    show yuri zorder 2 at t43
+    s "Of course not, Yuri!"
+    s "We've all got books that might be embarassing to share."
+    s "But that's nothing compared to what's going to happen on Friday!"
+    s "It's gonna be--"
+    show natsuki 1a zorder 3 at f41
+    show sayori zorder 2 at t42
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
