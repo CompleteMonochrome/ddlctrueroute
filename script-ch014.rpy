@@ -889,5 +889,69 @@ label ch14_end:
     s "It's gonna be--"
     show natsuki 1a zorder 3 at f41
     show sayori zorder 2 at t42
+    n "I dont't think you're helping, Sayori!"
+    n "Look at her!"
+    show natsuki zorder 2 at t41
+    "Yuri looks a bit shaken from what Sayori said."
+    "I guess I am a little bit too."
+    "Doing something like a play in front of so many people seems like it would be really embarassing."
+    "For some reason though, I don't feel so tense about it."
+    show sayori zorder 3 at f42
+    s "Sorry! I didn't mean it like that."
+    s "I just meant that if we can't even decide on a book to choose..."
+    s "Then how are we going to be able to do this play?"
+    s "Besides, I don't think anyone here is going to be judging you."
+    s "Isn't that right?"
+    show sayori zorder 2 at t42
+    if monika_type == 0:
+        show monika 1a zorder 3 at f44
+        m "Sayori is right."
+        m "We've all got our own tastes and laughing at your choices would only dissuade us from doing something like this again."
+        m "And that goes for everyone."
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika 1ha zorder 3 at f44
+        m "Sayori is right."
+        m "We've all got our own tastes and laughing at your choices would only dissuade us from doing something like this again."
+        m "And that goes for everyone."
+    else:
+        show monika 1a zorder 3 at f44
+        m "Sayori has a point here."
+        m "Laughing at such a minor thing would just dissuade us from doing something like this again."
+    show sayori zorder 3 at f42
+    show monika zorder 2 at t44
+    s "I think we're all just waiting to see what everyone else chose."
+    s "So please don't worry, Yuri!"
+    show sayori zorder 2 at t42
+    show yuri zorder 3 at f43
+    y "O-Okay..."
+    y "Then I suppose I can start by showing you the books that I have chosen."
+    "Yuri reaches for her bag and pulls out four different books."
+    if ch13_name == "Yuri":
+        "I recognize those books from the ones Yuri brought yesterday."
+    else:
+        "Just from the look of the cover, I can tell they're all some sort of horror."
+    y "These books are..."
+    y "More of a dark theme, but less so than the ones I previously thought of bringing."
+    y "I believe any of these choices would be suitable to do a play on."
+    show sayori zorder 3 at f42
+    show yuri zorder 2 at t43
+    s "As long as there isn't too many characters in those books then they're perfectly fine!"
+    s "Do you know how many characters are in them, Yuri?"
+    show sayori zorder 2 at t42
+    show yuri zorder 3 at f44
+    y "There's only..."
+    "Yuri thinks for a moment."
+    y "If I remember, there's five characters in every single book."
+    y "Or at least, five that are important enough to consider a character."
+    y "But I don't think there's more than five characters in a scene at once, at least from what I can remember."
+    show sayori zorder 3 at f42
+    show yuri zorder 2 at t44
+    s "You must have a great memory, Yuri!"
+    s "If you can remember that much from four different books."
+    s "And they're perfect too since there's only a few characters!"
+    show natsuki zorder 3 at f41
+    show sayori zorder 2 at t42
+    n "Now that I think about it, the books I chose also only have five characters."
+    n "I didn't even intend to do that."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
