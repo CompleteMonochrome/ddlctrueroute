@@ -953,5 +953,132 @@ label ch14_end:
     show sayori zorder 2 at t42
     n "Now that I think about it, the books I chose also only have five characters."
     n "I didn't even intend to do that."
+    n "But I guess it all works out, doesn't it?"
+    n "I mean there are only five of us..."
+    show natsuki zorder 2 at t41
+    show sayori zorder 3 at f42
+    s "I actually chose my books based on the number of characters as well as the stuff I like to read."
+    s "So I made sure that there was only five characters in each book."
+    show natsuki zorder 3 at f41
+    show sayori zorder 2 at t42
+    n "Only five characters?"
+    n "So you made sure that what you chose would be suitable for the play..."
+    show natsuki zorder 2 at t41
+    show sayori zorder 3 at f42
+    s "Exactly!"
+    s "I could always get some people to volunteer for us during the play if there's more than five characters in your book."
+    s "I'm sure they'd be happy to help."
+    show sayori zorder 2 at t42
+    show yuri zorder 3 at f43
+    y "Not that I don't believe you, Sayori..."
+    y "But where are you going to find people that aren't busy and actually want to help out on Friday?"
+    y "And isn't the point of this to showcase what the literature club is about?"
+    y "If we enlist the help of others, it shows that the literature club--"
+    y "Ah, I'm sorry if you all disagree with me."
+    y "I'm just saying what's on my mind and I know it isn't really a big thing."
+    y "But I'd personally like to make our part of this event independent of people outside the club."
+    y "It's like...a stepping stone."
+    show yuri zorder 2 at t43
+    if monika_type == 0:
+        show monika 1e zorder 3 at f44
+        m "I don't really understand what you're getting at, Yuri..."
+        m "...But I know it's important to you."
+        m "Still, there shoudn't be a problem getting help from people outside the club."
+        m "Even if they're part of the play, it's still {i}our{/i} show, Yuri."
+        m "And besides, we might not even need their help if we decide to vote on a book with five or less characters."
+        m "The people who do end up helping might be ones interested in the club and end up joining..."
+        m "So maybe it counts as being independent of people outside the club...?"
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika 1he zorder 3 at f44
+        m "I have to say, I don't really understand the significance and why it's a stepping stone to you."
+        m "But still, I don't think there's anything wrong with getting the help of other people."
+        m "And it's not like we're definitely going to choose a book with more than five characters."
+        m "If we vote on the books that focus on five or less characters then it won't be a problem."
+        m "Besides, the people who volunteer might be people who are interested in joining the club."
+        m "So I don't really see any downside to it."
+    else:
+        show monika 1c zorder 3 at f44
+        m "Is there really a point to this argument?"
+        m "It kinda sounds like you're just trying to stir trouble for Sayori, Yuri."
+        m "There's nothing wrong with getting the help of other people."
+        m "In fact, those very people might even join the literature club with how much..."
+        m "...{i}fun{/i} they'll have."
+        m "So technically, it could end up being independent of others if they join."
+        m "If it's a stepping stone to you, then there should be more in the future...right?"
+    show yuri zorder 3 at f43
+    show monika zorder 2 at t44
+    y "I-I suppose..."
+    "Yuri doesn't seem satisfied with the answer."
+    y "It's not a big deal, as I said previously."
+    y "I just wanted to say what my mind was telling me to."
+    y "I-It almost felt like a compulsion, actually."
+    show sayori zorder 3 at f42
+    show yuri zorder 2 at t43
+    s "Eh? A compulsion?"
+    s "I don't think it's anything like that, Yuri."
+    s "It's probably just you finally being more open, at least around us."
+    show sayori zorder 2 at t42
+    show yuri zorder 3 at f43
+    y "D-Do you think so?"
+    show natsuki zorder 3 at f41
+    show yuri zorder 2 at t43
+    n "I'd certainly say so!"
+    n "The Yuri from a few weeks ago wouldn't have spoken her mind about the situation."
+    n "At least, not before being asked for her opinion!"
+    n "I think it's great!"
+    n "But..."
+    show natsuki zorder 2 at t41
+    show yuri zorder 3 at f43
+    y "B-But...?"
+    show natsuki zorder 3 at f41
+    show yuri zorder 2 at t43
+    n "Well..."
+    n "I think there are times when it's better not to say anything."
+    n "If I said everything that was on my mind, then I don't think any of you would still be friends with me..."
+    show natsuki zorder 2 at t41
+    show sayori zorder 3 at f42
+    s "Don't say that, Natsuki!"
+    s "Of course we'd still be friends with you!"
+    show natsuki zorder 3 at f41
+    show sayori zorder 2 at t42
+    n "That's not really the point I'm trying to get across."
+    n "I guess what I'm trying to say is..."
+    n "Don't always speak your mind, especially if it's going to hurt people."
+    n "Some things are better left unsaid."
+    n "And I know that's kinda hypocritical coming from me but--"
+    show natsuki zorder 2 at t41
+    show yuri zorder 3 at f43
+    y "I think I get the point, Natsuki."
+    y "I apologize to anyone if I caused a disturbance or offended you."
+    y "Especially you, Sayori."
+    show sayori zorder 3 at f42
+    show yuri zorder 2 at t43
+    s "Um...no harm done, I guess?"
+    "Sayori looks a little bit confused at Yuri's apology."
+    s "It's not like I can blame you for having an opinion."
+    s "Though Natsuki does have a point."
+    s "Some things are better left unsaid..."
+    show sayori 1f
+    "Sayori's face changes expression briefly before changing back into her happy self."
+    "I don't think anyone else noticed."
+    s "But anyway...!"
+    s "You guys still haven't shown your books!"
+    s "Only Yuri has shown her books...so why don't you go next, Natsuki?"
+    show natsuki zorder 3 at f41
+    show sayori zorder 2 at t42
+    n "M-Me? W-Well, okay..."
+    "Natsuki puts a hand into her bag to search for the books."
+    n "Three of my four choices were manga."
+    n "That shouldn't come as a surprise."
+    n "But I did choose a novel as well."
+    n "It's one I really liked as a kid and..."
+    n "Well, it's kinda special to me but it's not like you guys should vote on it because of that."
+    # After Choosing Book
+    s "There's actually one thing I forgot to mention."
+    s "It's pretty important so I'm not sure how I forgot it..."
+    show natsuki zorder 3 at f41
+    show sayori zorder 2 at t42
+    n "What's so important?"
+    s "Even though the play we're doing might only have a few cha"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
