@@ -938,19 +938,105 @@ label ch14_end:
     s "As long as there isn't too many characters in those books then they're perfectly fine!"
     s "Do you know how many characters are in them, Yuri?"
     show sayori zorder 2 at t42
-    show yuri zorder 3 at f44
+    show yuri zorder 3 at f43
     y "There's only..."
     "Yuri thinks for a moment."
     y "If I remember, there's five characters in every single book."
     y "Or at least, five that are important enough to consider a character."
     y "But I don't think there's more than five characters in a scene at once, at least from what I can remember."
+    y "I'll give you all a summary based on what I remember."
+    y "I think that's the best way to find out about the book and also convince you all to choose one of them."
+    "Everyone nods in agreeance."
+    "Yuri picks up the first book she placed."
+    y "This book here probably has the most mild themes out of the four I chose."
+    # Oxenfree Reference
+    y "It's about a group of friends who go to an island with some kinda mystery behind it."
+    y "Basically some weird activity happens with a radio and then paranormal activity happens around the island."
+    y "There's this...entity, I guess you could say."
+    y "It starts controlling people but one person is immune for some unknown reason."
+    y "I won't spoil it beyond that but it's definitely a good read and doable as a play."
+    show yuri zorder 2 at t43
+    mc "You know...I think I've heard of a plot like that before."
+    mc "It involved a radio...or something."
+    mc "It might have been a game or anime."
+    show yuri zorder 3 at f43
+    y "A game? No, I've never heard of anything like that."
+    y "But it did involve a radio so..."
+    y "Um...anyway."
+    "Yuri puts the book down and takes the second book."
+    y "This book is a little more..."
+    y "...involved than the others."
+    # Five Nights at Freddys Reference
+    y "It's about someone who got hired as a security guard at a local restuarant."
+    y "But it's during the night when things get weird."
+    y "The mascots of the restuarant come to life and start roaming around the restuarant."
+    y "The security guard kinda has to deal with it and as he gets throught the nights, some ulterior story is told."
+    y "When I say involved, I mean there's some parts that might need to be changed."
+    show natsuki zorder 3 at f41
+    show yuri zorder 2 at t43
+    n "Why? Does someone die or something?"
+    "Natsuki says that jokingly."
+    show natsuki zorder 2 at t41
+    show yuri zorder 3 at f43
+    y "..."
+    show natsuki zorder 3 at f41
+    show yuri zorder 2 at t43
+    n "Forget I asked..."
+    show natsuki zorder 2 at t41
+    show yuri zorder 3 at f43
+    y "I think it could still be something we could do!"
+    y "Just made more suitable for everyone, I suppose."
+    y "We can probably just exclude some parts if we have to, it's the story that's important."
+    y "But anyway...this third book."
+    # Slender Reference
+    y "It's about this one stalker-type character."
+    y "No one believes it exists so this group of friends decides to investigate."
+    y "But then horrible things start to happen and they become the victims of the stalker."
+    y "They soon find out the stalker isn't ordinary and have to figure out a way to defeat it."
+    y "I don't want to mention too much about the story beyond that because it takes away the mystery."
+    show yuri zorder 2 at t43
+    if monika_type == 0:
+        show monika 1a zorder 3 at f44
+        m "A stalker-type character?"
+        m "Sort of like a person that follows you endlessly?"
+        m "And it's got supernatural abilities too..."
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika 1ha zorder 3 at f44
+        m "A stalker-type character?"
+        m "I'm kinda interested to see where this goes..."
+        m "A supernatural stalker..."
+    else:
+        show monika 1a zorder 3 at f44
+        m "Hmm..."
+        m "I admit I am kinda interested by this."
+        m "How exactly are they going to beat this supernatural stalker?"
+    show yuri zorder 3 at f43
+    show monika zorder 2 at t44
+    y "I almost didn't choose this book..."
+    y "Because of how dark it can get...but I think it would be really good if we did a play on it."
+    y "I still have to show you my fourth book."
+    # Doki Doki Literature Club Act 2-3 Reference
+    y "It's about this person who joins some kind of club at school."
+    y "Everything seems normal at first but as time goes on, weird thing start to happen."
+    y "People start dying and memories are changed."
+    y "The person becomes traumatised because they can't escape or do anything to stop the madness that's happening."
+    y "Eventually, there's only--"
+    "Yuri pauses and smiles."
+    y "Actually, I think saying that would be too much of a spoiler."
+    y "But those are my four choices."
     show sayori zorder 3 at f42
     show yuri zorder 2 at t44
-    s "You must have a great memory, Yuri!"
-    s "If you can remember that much from four different books."
+    s "Those books definitely sound...um, interesting..."
+    s "They all seem like something I think you'd read, Yuri."
+    s "I'm sure there isn't anything too crazy."
+    s "From the summaries you gave, the costumes don't have to be too detailed."
     s "And they're perfect too since there's only a few characters!"
-    show natsuki zorder 3 at f41
+    s "I mean, some of those books have an evil thing you mentioned but we could always do a stage effect depending on what it is, right?"
     show sayori zorder 2 at t42
+    show yuri zorder 3 at f43
+    y "R-Right..."
+    show natsuki zorder 3 at f41
+    show yuri zorder 2 at t43
     n "Now that I think about it, the books I chose also only have five characters."
     n "I didn't even intend to do that."
     n "But I guess it all works out, doesn't it?"
@@ -1073,6 +1159,12 @@ label ch14_end:
     n "But I did choose a novel as well."
     n "It's one I really liked as a kid and..."
     n "Well, it's kinda special to me but it's not like you guys should vote on it because of that."
+    n "A-Anyway, here they are."
+    "Natsuki places four books in front of us."
+    "She picked the first volume of three different manga and a novel that I haven't really heard of before."
+    n "These three manga are from three of my favorite series."
+    n "I think they could be interesting choices for the play."
+    n "The novel I chose"
     # After Choosing Book
     s "There's actually one thing I forgot to mention."
     s "It's pretty important so I'm not sure how I forgot it..."

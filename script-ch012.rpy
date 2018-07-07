@@ -2033,7 +2033,7 @@ label ch12_harukiplace:
             $ haruki_personality[0] = False
     s 2h "I hope you're right..."
     menu:
-        s "What was her...favourite hobby?"
+        s "What was her...favorite hobby?"
         "Acting.":
             $ haruki_personality[1] = True
         "Betting.":
