@@ -2274,6 +2274,18 @@ label ch13_exclusive_natsuki:
         mc "I guess I'll tell you then."
         mc "That way, I can stay and help."
         n 4bc "Help...?"
+        n "Why do you even want to help me, [player]?"
+        n "It's not like any of this is your problem to deal with."
+        mc "Why I'm here doesn't have anything to do with Haruki."
+        n "...?"
+        mc "Sayori told you about Inauguration Day, didn't she?"
+        n "That thing the club is doing on Friday?"
+        n "She told me a little bit about it and that everyone has a part to play in terms of preparations."
+        n "Then she said something about a play but I'm not really too sure what that was about."
+        n "She left in a hurry..."
+        n "Then you arrived."
+        mc "I actually saw her before I got here."
+        mc "But the reason I'm here is because I'm here to help you with your preparations."
     elif ch12_outcome == 1:
         mc "Natsuki? Your dad said you'd be in here."
         "There's no response."
@@ -5253,4 +5265,11 @@ label ch13_natsukidate:
     mc "After you."
     "Natsuki tries to hide a smile."
     n "I don't need your help!"
+    mc "You don't need it, but I know you want it."
+    n "You...!"
+    "Natsuki's face turns a bright red."
+    n "Shut up!"
+    "Natsuki walks into the shop."
+    show natsuki at lhide
+    hide natsuki
     return
