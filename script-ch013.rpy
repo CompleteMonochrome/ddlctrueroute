@@ -2286,6 +2286,151 @@ label ch13_exclusive_natsuki:
         n "Then you arrived."
         mc "I actually saw her before I got here."
         mc "But the reason I'm here is because I'm here to help you with your preparations."
+        n "Help me with my preparations?"
+        n "Why? Do you think that I can't do them myself?"
+        mc "I'm sure you're more than capable of doing it yourself."
+        mc "But I'm not really great at anything so Sayori thought it would be a good idea if I helped someone else."
+        n "She's right about that..."
+        n "But why did you choose to help me?"
+        n "It's not like I have the hardest task out of everyone..."
+        mc "Actually, that's just it."
+        mc "I chose to help you because I thought that you'd have the hardest time with your preparations."
+        mc "I'm not saying that you couldn't do it yourself..."
+        mc "I just want to make your job a bit easier."
+        "Especially with the stuff that's happened to you in the past couple of days."
+        n "What happens if I say no to your help?"
+        mc "Then Sayori will probably be mad at me for not trying hard enough to help you."
+        mc "It's your decision though..."
+        mc "I can understand if you don't want my help."
+        mc "After all, I did just come here without telling you anything."
+        "Natsuki looks at me then turns around as if hiding something."
+        n "Well, fine!"
+        n "But it's not like I need your help or anything, okay?"
+        mc "Yeah, I know you can."
+        n "Good! Now it's time to figure out what you can actually help with."
+        mc "I actually have something but first, do you have any ideas?"
+        "Natsuki thinks for a moment."
+        n "Nothing off the top my head."
+        n "But you said that you weren't doing your own preparatios because you weren't great at anything, right?"
+        mc "Yeah?"
+        n "So that must mean Sayori thinks I'm at least good at something."
+        mc "I think the club actually thought it was a good idea for you to bake something."
+        mc "Since your cupcakes are so good, maybe they thought you could make some for the day."
+        mc "That was just what we came up with for you in the club."
+        mc "It doesn't mean you have to follow it or anything..."
+        n "What else could I do?"
+        n "It's not like I can play an instrument or something."
+        n "I guess there's nothing wrong with baking."
+        n "It's kind of fun too...and pretty normal."
+        mc "Normal? That's a weird way to describe it."
+        n "It's the way I want to describe it."
+        n "I don't want another weird thing happening in my life."
+        mc "Weird thing? What do you mean?"
+        n "You don't think the stuff that's happened in the last few weeks is odd?"
+        n "I've had enough of it."
+        mc "It hasn't been that weird, has it?"
+        n "[player], we both saw Yuri go completely crazy."
+        n "And now, my dad is in jail and my mom is back."
+        n "You don't think that's weird?"
+        mc "Well...when you say it like that."
+        n "Why can't things go back to the way they were?"
+        n "If this is how life is going to be now, I don't know how I'm going to cope."
+        mc "I guess wishing for something normal isn't so unreasonable."
+        n "And there's nothing wrong with normal, either."
+        n "Anyway, we've wasted enough time up here."
+        n "I think we should ask my mom for help with the baking."
+        mc "Isn't that what I'm here for?"
+        n "Do you know how to bake a cake, [player]?"
+        n "My mom is an expert at that."
+        n "She was the one who got me into baking in the first place."
+        mc "I don't know how I know this but..."
+        mc "Wasn't your mom more of an actor?"
+        n "My mom does a lot of things."
+        n "She's super talented, you know!"
+        n "That's a really weird question to ask though."
+        n "It's not like you met her before yesterday, is it?"
+        mc "No..."
+        mc "It was just a thought."
+        n "Whatever, let's go talk to her."
+        n "I think she's cleaning up Yasuhiro's room right now."
+        n "I feel so sorry for her..."
+        mc "How come?"
+        n "They shared that room when they were together."
+        n "And now she has to be the one to get rid of his mess."
+        scene bg n_dadroom with wipeleft_scene
+        "As we enter the room, I notice the cleaning equipment leaning against the wall."
+        "But there's a weird sound...like the sound of metal scraping on wood coming from somewhere."
+        "You almost wouldn't be able to hear it if you weren't listening properly."
+        "That's not exactly the sound I thought someone cleaning a room would make."
+        show natsuki 1ba zorder 2 at t21
+        n "Mom? Are you in here?"
+        n "We need to ask you something."
+        mo "Natsuki?"
+        "Her voice is coming from somewhere in the room but it sounds a bit muffled."
+        n "Where are you?"
+        "Suddenly, Haruki appears from under the bed."
+        show momsuki 1a zorder 3 at f22
+        mo "I'm under here."
+        show natsuki zorder 3 at f21
+        show momsuki zorder 2 at t22
+        n "What are you doing under there?"
+        show natsuki zorder 2 at t21
+        show momsuki zorder 3 at f22
+        mo "I'm..."
+        mo "Um...just cleaning the floor underneath the bed."
+        show natsuki zorder 3 at f21
+        show momsuki zorder 2 at t22
+        n "Why don't you just move the bed to the side and do it?"
+        n "Wouldn't that make things a little easier?"
+        show natsuki zorder 2 at t21
+        show momsuki zorder 3 at f22
+        mo "That's not a bad idea, Natsuki!"
+        mo "Ahaha, I should really use my head."
+        $ renpy.sound.set_volume(0.25)
+        play sound "mod_assets/sfx/metaldrop.ogg"
+        "Haruki begins to gets up from the floor."
+        $ pause(1.5)
+        $ renpy.sound.set_volume(1.0)
+        "She brushes off some of the dust on her."
+        mo "Anyway, what did you want to ask me?"
+        show natsuki zorder 3 at f21
+        show momsuki zorder 2 at t22
+        n "I could your help baking a cake."
+        n "It's for Inauguration Day."
+        show natsuki zorder 2 at t21
+        show momsuki zorder 3 at f22
+        mo "For the special day, is it?"
+        mo "Well, I'd be more than happy to help you bake it, Natsuki!"
+        show natsuki zorder 3 at f21
+        show momsuki zorder 2 at t22
+        n "You would?"
+        show natsuki zorder 2 at t21
+        show momsuki zorder 3 at f22
+        mo "But...it is a club thing, isn't it?"
+        mo "Don't you want to prove yourself to the other members of the club?"
+        show natsuki zorder 3 at f21
+        show momsuki zorder 2 at t22
+        n "Prove myself...? What do you mean?"
+        show natsuki zorder 2 at t21
+        mc "I think she's saying that you should bake it yourself."
+        show momsuki zorder 3 at f22
+        mo "You're friend is right, Natsuki."
+        mo "If you don't bake it yourself, then it wouldn't really be your preparations."
+        mo "It's kind of cheating, isn't it?"
+        show natsuki zorder 3 at f21
+        show momsuki zorder 2 at t22
+        n "I guess so..."
+        "Natsuki looks down, avoiding Haruki's eyes."
+        show natsuki zorder 2 at t21
+        show momsuki zorder 3 at f22
+        mo "Oh, don't do that."
+        mo "Maybe we can compromise something."
+        "Natsuki looks up at Haruki."
+        mo "How about I give you the recipe to your favorite cake?"
+        mo "The one I used to bake for you when you were little."
+        show natsuki zorder 3 at f21
+        show momsuki zorder 2 at t22
+        n "Really? You'd do that?"
     elif ch12_outcome == 1:
         mc "Natsuki? Your dad said you'd be in here."
         "There's no response."
