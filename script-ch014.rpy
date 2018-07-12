@@ -1406,6 +1406,17 @@ label ch14_end:
         m "Eventually, there's this old, wise character introduced that he goes to."
         m "That character helps him make a decision but its a bit unorthodox the way it's done."
         m "It will make for a hilarious play and you'll know at the end he made the right choice."
+        show yuri zorder 3 at f43
+        show monika zorder 2 at t44
+        y "If he loved them equally, how would he have made the right choice?"
+        y "Wouldn't choosing one break the heart of the other?"
+        y "It seems like a book designed to make you hate the other character, the one he doesn't choose."
+        show yuri zorder 2 at t43
+        show monika zorder 3 at f44
+        m "It's a lot more complicated than that, Yuri."
+        m "I can't say too much more about the plot without completely ruining it."
+        m "I will say that my heart was left satisfied after it was finished and I had a lot of laughs reading it."
+        m "There are some inappropriate jokes we might need to get rid of but that's nothing."
     elif monika_type == 1 and ch12_markov_agree:
         show monika 1hb zorder 3 at f44
         m "I suppose I'll be the one to break the silence."
