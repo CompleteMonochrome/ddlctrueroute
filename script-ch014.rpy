@@ -873,6 +873,9 @@ label ch14_main:
     return
 
 label ch14_end:
+    stop music fadeout 1.0
+    scene bg club_day with wipeleft_scene
+    play music t3
     show sayori 1d zorder 2 at t42
     s "Alright, everybody!"
     s "As you all know, we have to select a book to perform for the play."
@@ -1405,7 +1408,7 @@ label ch14_end:
         m "The main character has to choose between two people who he loves equally but can't find himself able to choose."
         m "Eventually, there's this old, wise character introduced that he goes to."
         m "That character helps him make a decision but its a bit unorthodox the way it's done."
-        m "It will make for a hilarious play and you'll know at the end he made the right choice."
+        m "It will make for a hilarious play and you'll know in the end he made the right choice."
         show yuri zorder 3 at f43
         show monika zorder 2 at t44
         y "If he loved them equally, how would he have made the right choice?"
@@ -1417,11 +1420,38 @@ label ch14_end:
         m "I can't say too much more about the plot without completely ruining it."
         m "I will say that my heart was left satisfied after it was finished and I had a lot of laughs reading it."
         m "There are some inappropriate jokes we might need to get rid of but that's nothing."
+        m "Anyway, the fourth and final book is probably my favorite one out of all of them."
+        "Monika takes the fourth book from the desk and holds it high for everyone to see."
+        m "It's probably the book that's closest to my heart, which is fitting given it's name."
+        m "It's called 'Sound of your Heartbeat' and it centers around a girl who comes to a realisation about life."
+        m "Even though she's surrounded by a lot of friends, she starts to despise life because of the realisation."
+        m "It becomes really difficult for her to do anything until this one guy comes along and changes her life."
+        m "Over the course of a week, they become great friends but they figure out that it's almost as if the world is keeping them apart."
+        m "They have to figure out a way to be together to reach their happy ending against all the odds."
+        "Monika smiles sadly."
+        m "It's...a really beautiful story."
+        m "Ahaha, just thinking about it makes me kinda sad."
+        show sayori zorder 3 at f42
+        show monika zorder 2 at t44
+        s "Why does it make you sad, Monika?"
+        s "Does it have a really sad ending?"
+        show sayori zorder 2 at t42
+        show monika zorder 3 at f44
+        m "Well, I won't spoil anything."
+        m "But it is a pretty sad story about a forbidden love."
+        m "I'd..."
+        "Monika wipes her face then smiles."
+        m "...recommend it to anyone."
+        m "So...yeah!"
+        m "Those are my four choices."
+        m "I guess it's Sayori's turn to share, right?"
+        show monika zorder 2 at t44
     elif monika_type == 1 and ch12_markov_agree:
         show monika 1hb zorder 3 at f44
         m "I suppose I'll be the one to break the silence."
         m "After all, I still have to share my books."
         "Monika places four books on the table."
+        # Copy paste monike_type == 0 here but change expressions to use hair down sprite
     else:
         show monika 1b zorder 3 at f44
         m "Ahaha, why the silence?"
@@ -1467,13 +1497,463 @@ label ch14_end:
         m "Don't worry, Sayori."
         m "There's nothing to be afraid of."
         m "Monsters aren't real, after all."
-        "Monika smiles meaningfully."
+        "Monika smiles almost...menacingly."
+        m "Ahaha, anyway...!"
+        m "This first book is your typical horror mystery."
+        m "There's a serial killer on the loose and he starts going on a rampage."
+        m "No one can figure it out until some top investigator is hired."
+        m "It's a happy ending, pretty boring if you ask me."
+        m "Moving on..."
+        "Monika takes the second book."
+        m "This--"
+        show natsuki zorder 3 at f41
+        show monika zorder 2 at t44
+        n "Wait a second!"
+        show natsuki zorder 2 at t41
+        show monika zorder 3 at f44
+        m "What is it, Natsuki?"
+        show natsuki zorder 3 at f41
+        show monika zorder 2 at t44
+        n "If the book is so boring, then why would you bring it?"
+        n "I thought we were bringing stuff that we wanted to share with everyone else."
+        n "If you're just going to bring boring books, then what's the point?"
+        show natsuki zorder 2 at t41
+        show monika zorder 3 at f44
+        m "You brought in that novel, right?"
+        m "You said it yourself, it was like a backup."
+        show natsuki zorder 3 at f41
+        show monika zorder 2 at t44
+        n "Well...yeah but--"
+        show natsuki zorder 2 at t41
+        show monika zorder 3 at f44
+        m "So what's the difference between me bringing these books and you bringing that one?"
+        m "Not to be rude or anything, but it's almost hypocritical."
+        show yuri zorder 3 at f43
+        show monika zorder 2 at t44
+        y "Monika has a point here."
+        y "Still...it seems a bit redundant to bring three books that you didn't really want to share."
+        y "Why not just get straight to the book you actually wanted to suggest?"
+        y "That way, the list of books we vote for isn't so cluttered."
+        show sayori zorder 3 at f42
+        show yuri zorder 2 at t43
+        s "I didn't really expect you to do that, Monika."
+        s "I thought you'd bring four books that you wanted to share with all of us."
+        s "Not four books just for the sake of it."
+        s "I know I didn't really give a number of books to bring but everyone else brought four books they kinda like."
+        s "Oh well..."
+        show sayori zorder 2 at t42
+        "I'm kind of in the same boat as Monika."
+        "Maybe I should say something to avoid an argument between the two of them."
+        mc "Well, it shouldn't matter."
+        mc "After all, we're going to be voting on the book."
+        mc "Obviously there are some books that we brought that we knew wouldn't get a single vote."
+        "I know that's the case for me."
+        mc "Monika also brought in a book that she still wanted to share."
+        mc "So maybe we can look on the brightside?"
+        mc "After all, we still have to vote on a book."
+        mc "It'd be pretty bad if we didn't vote on someone else's choice out of spite."
+        "Sayori looks at me with a surprised expression."
+        mc "This is a pretty small thing to be making a big deal about."
+        show sayori zorder 3 at f42
+        s "You're right."
+        s "I'm sorry, Monika."
+        s "I don't know what came over me."
+        show sayori zorder 2 at t42
+        show monika zorder 3 at f44
+        m "That's okay, Sayori!"
+        m "I accept your apology, it's only a small thing after all."
+        m "If you need to take a break or anything, you know that I'm here for you."
+        show sayori zorder 3 at f42
+        show monika zorder 2 at t44
+        s "Thanks...I'll keep that in mind."
+        show sayori zorder 2 at t42
+        show monika zorder 3 at f44
+        m "Thanks for clearing that up, [player]."
+        m "Who know what could have happened without you?"
+        show monika zorder 2 at t44
+        mc "Of course, Monika."
+        "That almost felt...forced for some reason."
+        show monika zorder 3 at f44
+        m "Well, I suppose Yuri is right."
+        m "I should probably just get to the book that I really wanted to share with you all."
+        "Monika takes the fourth book and puts the other three into her bag."
+        m "It's really, really old."
+        m "I'd say it was written nearly a century ago but I haven't really checked."
+        m "Anyway, it's a really good book."
+        m "Now you can believe me if you want but it's about four girls in a literature club, a lot like our own."
+        m "One day, this guy walks into the club because one of his friends is a member."
+        m "He's originally reluctant to join but after a bit of persuasion from every member, he succumbs to it."
+        show yuri zorder 3 at f43
+        show monika zorder 2 at t44
+        y "You're saying he joined a literature club, at his school?"
+        y "Just like ours?"
+        show yuri zorder 2 at t43
+        show monika zorder 3 at f44
+        m "Yeah, that's exactly what I'm saying."
+        show natsuki zorder 3 at f41
+        show monika zorder 2 at t44
+        n "Okay, it's kinda similar to what happened with us."
+        n "How exactly is it a horror book?"
+        n "So far the creepiest thing you've told us about the book is that it was written ages ago but is similar to [player] joining the club."
+        n "Unless, that's the only reason it's creepy."
+        show natsuki zorder 2 at t41
+        show monika zorder 3 at f44
+        m "It's actually a lot more complicated than that."
+        m "It's not scary in the traditional sense but think of it like a psychological horror book."
+        m "You'll be so affected by the things that happen that you'll be horrified in the end."
+        m "But..."
+        "Monika puts down the book."
+        m "It's not like the plot of the book is exactly the same as what happened to us!"
+        m "It changes a lot, especially towards the second week in the book's time."
+        show sayori zorder 3 at f42
+        show monika zorder 2 at t44
+        s "It does?"
+        s "What kind of stuff happens?"
+        show sayori zorder 2 at t42
+        show monika zorder 3 at f44
+        m "Well, people start dying...and then not dying."
+        m "Everything gets reset except someone becomes--"
+        m "That's kind of spoiling a lot of the plot and what makes it scary."
+        m "But I'm sure if we decide to read it, then you guys can be the judge of that."
+        show monika zorder 2 at t44
+        mc "You said it's over a century old, right?"
+        mc "That book you have looks really faded too. I can't even read the title."
+        mc "How old is your copy of it?"
+        "Monika looks at me for a moment and thinks."
+        show monika zorder 3 at f44
+        m "It's a pretty recent edition of it."
+        "For some reason, I feel like she's not telling the truth."
+        m "And the title of the book is \"Heartbeat Book Club\"."
+        show natsuki zorder 3 at f41
+        show monika zorder 2 at t44
+        n "Heartbeat Book Club?"
+        n "I've never even heard of it before."
+        show natsuki zorder 2 at t41
+        show yuri zorder 3 at f43
+        y "Neither have I..."
+        y "I suppose that's probably because I don't look at very old books."
+        y "The earliest book I have in my collection is only a few decades old."
+        y "It isn't even a horror book."
+        show yuri zorder 2 at t43
+        show monika zorder 3 at f44
+        m "It is a very old book, but it's a classic I assure you."
+        m "Once you all read it, you won't be able to put it down."
+        show yuri zorder 3 at f43
+        show monika zorder 2 at t44
+        y "If you really think it's that good, then I believe you."
+        y "There is a pretty obvious problem..."
+        show yuri zorder 2 at t43
+        show monika zorder 3 at f44
+        m "I know what you're going to say!"
+        m "If it's so old, then how is everyone going to get a copy if we vote for it?"
+        m "Well, Yuri, I actually brought four copies of the book with me."
+        "Monika pulls out four books from her bag."
+        "They look different to her own copy, less worn and newer."
+        "Even the cover is completely different and we can actually see the name."
+        m "Now just because I have four copies doesn't mean we have to vote on this."
+        m "It's just in case we do vote for this, so don't take it the wrong way or anything!"
+        show sayori zorder 3 at f42
+        show monika zorder 2 at t44
+        s "You came more prepared than I thought, Monika."
+        s "Sorry for doubting you earlier."
+        show sayori zorder 2 at t42
+        show monika zorder 3 at f44
+        m "You've already apologized for that, Sayori."
+        m "No need to do so again!"
+        m "Besides, actions speak louder than words."
+        m "So--"
+        m "It's okay if you need to take a break, you know."
+        m "After all of this."
+        show sayori zorder 3 at f42
+        show monika zorder 2 at t44
+        s "I'm definitely gonna need one after all of this is over."
+        s "But until then, it's not really an option."
+        show sayori zorder 2 at t42
+        show monika zorder 3 at f44
+        m "Well, if you say so."
+        m "Anyway, that's all I'm really willing to say about my book."
+        m "So I suppose my turn of sharing books is over."
+        m "I hope you all at least considered it."
+        m "I'm sure it will reveal a lot about yourself."
+        "Monika looks around and stops at Sayori."
+        m "So Sayori, I guess it's your turn...?"
+    show sayori zorder 3 at f42
+    s "I guess it is!"
+    s "It looks like we're saving the best for last with [player]."
+    s "You must have some great choices, right?"
+    show sayori zorder 2 at t42
+    mc "Um...sure."
+    "I just kinda chose whatever was available."
+    "But I probably shouldn't mention that."
+    mc "I'm sure we'll probably choose someone else's books though."
+    mc "Mine aren't that great."
+    show sayori zorder 3 at f42
+    s "That's for the rest of us to decide!"
+    s "I should probably start showing you guys the books that I chose though."
+    "Sayori gets four books from her bag."
+    "All of them have rather exquisitive covers compared to all the books I've seen so far today."
+    "One of them even looks like it's gold plated."
+    "Everyone looks kinda surprised at how fancy the books Sayori brought look."
+    "So much for saving the best for last..."
+    s "Three of them are pretty sad books."
+    s "They made me cry when I read them the first time..."
+    s "And also the next five times."
+    show natsuki zorder 3 at f41
+    show sayori zorder 2 at t42
+    n "You read those books six times?"
+    n "Just how much spare time do you have, Sayori...?"
+    show natsuki zorder 2 at t41
+    show sayori zorder 3 at f42
+    s "That was a bit of an exaggeration!"
+    s "I have read these books more than once but not six times."
+    s "But everytime I did read them, it made me cry."
+    s "I'm sure you guys will probably feel something as well."
+    s "The books aren't just pure sadness!"
+    s "There's a lot of happy parts and sweet parts too."
+    s "It makes the feeling of the books I chose bittersweet overall."
+    s "I just wanted to say that before I say something and it makes you think it's all just a sad book."
+    s "So without further {i}aboo{/i}, I present--"
+    show sayori zorder 2 at t42
+    show yuri zorder 3 at f43
+    y "You meant to say {i}ado{/i}, right?"
+    y "I don't think 'aboo' is a word, Sayori."
+    "Everyone looks at Yuri."
+    y "S-Sorry for interrupting...it just bothered me a little bit."
+    y "N-Never mind..."
+    show sayori zorder 3 at f42
+    show yuri zorder 2 at t43
+    s "Ehehe, that's okay!"
+    s "Imagine if I said without further aboo on Inauguration Day!"
+    s "Thanks, Yuri."
+    "Sayori clears her throat."
+    s "So, without further ado..."
+    s "Here is my first book!"
+    # Boy in the Striped Pyjamas
+    "Sayori shows everyone her first extravagant book."
+    "It's got a picture of two boys on opposite sides of the fence."
+    "The extravagant part of the cover is the shining sun in the background."
+    "It actually sparkles...like glitter."
+    "For some reason, it even feels like it's dazzling me a little bit."
+    "But that's probably just my imagination."
+    s "It's set in a society where people are separated by what they believe in."
+    s "People who believe in the 'right' thing have a higher place in society."
+    s "The other people are left in the dirt and even killed because of it."
+    s "It's about two young boys who believe in different things but are too young to really understand what's going on around them."
+    s "They become friends but are separated by a literal fence."
+    s "They talk about the difference in their two societies and the way it tells the story..."
+    s "It's just...so innocent."
+    s "I know I was innocent once."
+    show sayori zorder 2 at t42
+    mc "Eh? What do you mean?"
+    mc "It's not like you've committed some terrible crime or anything, Sayori."
+    "Sayori simply smiles at me."
+    show sayori zorder 3 at f42
+    s "Anyway, talking any more about the book will probably spoil it."
+    s "It still makes me kinda sad thinking about it."
+    "Sayori slowly puts down the book and picks up the second one."
+    # Hunger Games
+    "The cover of this one is nothing like I've ever seen."
+    "It has bright silver on the outside and gold which creates a circle."
+    "In the circle is some kind of bird."
+    "The silver and gold look almost...real."
+    "Like they're not some cheap book cover but instead actual silver and gold."
+    "Maybe Sayori bought the collector's edition or something...?"
+    s "This one actually has a lot of characters in it."
+    s "But you can say that is focuses on two main ones with a couple of supporting characters."
+    s "Basically, it's in a really bad world controlled by the government."
+    show sayori zorder 2 at t42
+    show yuri zorder 3 at f43
+    y "Really bad world...?"
+    y "You mean like a dystopia?"
+    show sayori zorder 3 at f42
+    show yuri zorder 2 at t43
+    s "That's actually the word I was looking for!"
+    s "Thanks again, Yuri!"
+    s "Anyway, in this world they're separated by different districts."
+    s "Every year, the government gets two people from each district, a boy and a girl, to go into a competition."
+    show natsuki zorder 3 at f41
+    show sayori zorder 2 at t42
+    n "Well, that doesn't sound too bad..."
+    n "What kind of competition was it?"
+    show natsuki zorder 2 at t41
+    show sayori zorder 3 at f42
+    s "The competition was about killing each other."
+    s "The people are chosen randomly but you can take the place of someone else if they're chosen."
+    s "So the main character's sister is chosen as the girl from their district."
+    s "She takes her place because...well, she doesn't want her sister to die!"
+    s "It's sort of a love story too but that isn't really the main focus."
+    s "It's based on the main character's struggle to compete with everyone else and the people she meets who are also forced into it."
+    s "The book is actually kinda popular in some places!"
+    s "I'm not sure if any of you have heard of it or not."
+    "No one says anything."
+    s "Ehehe, guess not."
+    s "It's probably only popular out of this world."
+    show sayori zorder 2 at t42
+    if monika_type == 0:
+        show monika 1c zorder 3 at f44
+        m "Slightly off topic but..."
+        m "Those covers are incredible! Where did you get those books?"
+        m "They feel so...real."
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika 1hc zorder 3 at f44
+        m "I'm curious, Sayori."
+        m "Where did you get these books? The covers..."
+        m "They look so...real."
+    else:
+        show monika 1c zorder 3 at f44
+        m "I have to ask..."
+        m "Where did you get those books? The covers..."
+        m "They seem so...real."
+    show sayori zorder 3 at f42
+    show monika zorder 2 at t44
+    s "I actually ordered all of them from the internet."
+    s "I don't think you'd find them in bookstores in the area."
+    s "It was difficult to find at first, but once I did I could get a lot."
+    s "If you want, I can get you some of these books after the play."
+    "Monika nods."
+    s "Great, then I can go to my next book."
+    "Once again, Sayori slowly places down the book."
+    # The Book Thief
+    "She picks up the third one and trembles slightly."
+    s "Sorry, it's just..."
+    s "...never mind."
+    "She holds it up for everyone to see."
+    "While less fancy than the last two, it still feels surreal to look at."
+    "I've seen more simple covers before but something about the way those dominoes look makes it seem different."
+    "Monika said something about the covers too so it's not just me."
+    s "It's kinda similar to the first book I talked about."
+    s "With the two different societies."
+    s "It's about a young girl that has a brother that dies at the beginning of the book."
+    s "She has to move in with a foster family and when she does, she begins to realize how bad life is for some people because of their beliefs."
+    s "It's during a war which makes it even worse since it's her country that's at war because of the society thing."
+    s "In this time, it's illegal for people from the different societies to be talking but her foster parents take one in anyway."
+    s "The young girl becomes friends with him and learns to read and write from him."
+    s "She starts to try to read all the literature she can."
+    s "She even saves some from being burned."
+    show natsuki zorder 3 at f41
+    show sayori zorder 2 at t42
+    n "Wait why?"
+    n "What's the reason for her saving literature?"
+    show natsuki zorder 2 at t41
+    show sayori zorder 3 at f42
+    s "I forgot to mention that the society she comes from is burning books."
+    s "Anything that doesn't agree with their point of view is burned."
+    s "It's like if our government wanted everyone to agree with their point of view."
+    s "It's really sad because it talks about how people can die, just like that."
+    s "The young girl also has to grow up because of the war going on around her and I think the book does a really good job of showing that."
+    s "The ending is..."
+    s "...something you should read for yourself."
+    "Sayori carefully places the book back on the desk."
+    "As she does so, some sort of...thing appears on the desk under the book."
+    "It's like a tear, but I have no idea where it came from."
+    "It just sort of appeared."
+    "No one else is reacting to it."
+    show sayori zorder 2 at t42
+    mc "What is that?"
+    mc "You guys can see that, right?"
+    "I point towards the tear on the table."
+    show yuri zorder 3 at f43
+    y "[player], what are you talking about?"
+    y "There's nothing there..."
+    show yuri zorder 2 at t43
+    mc "Yes, there is! It's like a giant rip on the table!"
+    "Everyone looks towards me confused."
+    "Everyone except...Sayori."
+    "Her expression doesn't seem like someone confused but...scared."
+    mc "Sayori, do you know what's going on?"
+    show sayori zorder 3 at f42
+    s "[player], I didn't know this would happen."
+    s "You have to believe me."
+    "What is she talking about?"
+    "It's almost--{nw}"
+    python:
+        currentpos = get_pos()
+        startpos = currentpos - 0.3
+        if startpos < 0: startpos = 0
+        track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/3.ogg"
+        renpy.music.play(track, loop=True)
+    $ pause(1.0)
+    stop music
+    $ config.skipping = False
+    $ config.allow_skipping = False
+    s "I wanted to get some books from your reality."
+    s "Just to see how different it would be to mine."
+    s "But I became addicted to them, you know?"
+    s "It felt like the emotions I felt from them were real."
+    s "I don't know if that makes sense."
+    s "You can probably tell I didn't get them from the internet."
+    s "That was a lie."
+    s "I used your computer to get access to a copy of these."
+    s "You could say I got it through your internet."
+    s "What's that program called...?"
+    if renpy.macintosh:
+        s "Safari or something..."
+    else:
+        s "Internet Explorer?"
+    s "I don't know if that was the exact name but I launched it in the background last night."
+    s "Well, for me it was last night. For you, it could have been a few minutes ago."
+    s "Look, I know I didn't ask!"
+    s "I just didn't know what you'd say."
+    s "I didn't want to hear a no so I just did it."
+    s "It's not like I looked at your files or anything!"
+    s "It was just the internet, I promise."
+    s "As for that rip that [player] saw..."
+    s "I think that's because I got something from your world."
+    s "Maybe my world can't take something so real, even though it's only digital."
+    s "I've fixed it now. It shouldn't happen again."
+    if monika_type == 0:
+        s "Could this be what Monika was talking about...?"
+        s "I don't..."
+    s "Anyway, I'm sorry I let my curiosity get the better of me."
+    s "But that's what makes us human, right?"
+    s "Sorry, I'll stop wasting your time now."
+    s "I'll talk about my last book then you can have your turn to explain."
+    $ pause(0.5)
+    $ _history_list = []
+    $ audio.t3b = "<from " + str(currentpos) + " loop 4.618>bgm/3.ogg"
+    play music t3b
+    $ config.allow_skipping = True
+    "...like she's blaming herself for...?"
+    "What was I thinking about?"
+    s "This fourth book I brought is probably the most sad."
+    "Sayori tears up for a little bit before wiping the tears from her face."
+    "She smiles sadly."
+    s "Sorry...it's just a really sad story, guys."
+    s "I can't even think about it without crying."
+    "Sayori takes a deep breath."
+    s "Okay..."
+    s "It's about two people with cancer."
+    s "They become friends after the girl's mom sends her to a support group because she thinks she has depression or something."
+    s "There she meets this guy who has cancer as well but is apparently free of it."
+    s "They become really good friends and even give each other books to read."
+    s "The book the boy read made him frustrated because it just kinda ended."
+    s "So they look for the author of the book so they can find the real ending to the book."
+    s "It has a lot of ups and downs and it's really, really hard to explain without ruining the whole story."
+    s "I know that didn't really sound like a good way to convince you guys to vote for it..."
+    s "But I guess it's because I'm so affected by it even now that I can't even think straight when I talk about it!"
+    "Sayori slowly and carefully places the book down on the desk before clearing her face of tears again."
+    s "So those are the books I chose."
+    s "I hope that even if you don't vote for them, you still read them at some point."
+    s "They're the books that really put me into a new reality...not literally obviously!"
+    s "But we still have to look at [player]'s choices, right?"
+    show sayori zorder 2 at t42
+    mc "Your books aren't only better than mine in terms of story but just the cover too."
+    mc "I don't think I can really compete with that."
+    show sayori zorder 3 at f42
+    s "It's not a competition."
+    s "Even if you think we won't vote for it, you should still share."
+    s "It will give the rest of us an idea of the type of stuff you like to read."
+    show sayori zorder 2 at t42
+    mc "I guess so..."
+    mc "I'm not really good at explaining though."
     # After Choosing Book
     s "There's actually one thing I forgot to mention."
     s "It's pretty important so I'm not sure how I forgot it..."
     show natsuki zorder 3 at f41
     show sayori zorder 2 at t42
     n "What's so important?"
+    show natsuki zorder 2 at t41
+    show sayori zorder 3 at f42
     s "Even though the play we're doing might only have a few cha"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
