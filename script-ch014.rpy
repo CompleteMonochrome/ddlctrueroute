@@ -1915,6 +1915,7 @@ label ch14_end:
     $ config.allow_skipping = True
     "...like she's blaming herself for...?"
     "What was I thinking about?"
+    # The Fault in Our Stars
     s "This fourth book I brought is probably the most sad."
     "Sayori tears up for a little bit before wiping the tears from her face."
     "She smiles sadly."
@@ -1942,10 +1943,525 @@ label ch14_end:
     show sayori zorder 3 at f42
     s "It's not a competition."
     s "Even if you think we won't vote for it, you should still share."
-    s "It will give the rest of us an idea of the type of stuff you like to read."
+    if ch13_name != "Sayori":
+        s "It will give the rest of us an idea of the type of stuff you like to read."
+    else:
+        s "Maybe other people will think it's a good idea for a play and vote for it."
     show sayori zorder 2 at t42
     mc "I guess so..."
-    mc "I'm not really good at explaining though."
+    mc "I'm not that great at explaining though."
+    mc "But I guess I'll try my best."
+    "I take the four books I brought to share and place them on the table, like everyone else did."
+    if ch13_name == "Yuri":
+        if ch13_yuri_books:
+            "I brought two manga and two novels with me to present."
+            "One of the novels was actually a suggestion by Yuri."
+            "I haven't read much of it beyond the first chapter and blurb but it seems pretty interesting as a horror book."
+            "Though thinking about it, I'm not really sure how to convince people to vote for it."
+            "I guess it's the thought that counts."
+        else:
+            "I brought three manga and a novel with me to present."
+            "Yuri gave me the choice of choosing one of her books yesterday."
+            "I could have taken it and it would have made my selection more equal..."
+            "But I don't think I'd be able to get people to vote on it if I did."
+            "Still, maybe I should get a bigger collection of books in case something like this happens again..."
+    elif ch13_name == "Natsuki":
+        if ch13_natsuki_books:
+            "I choose three different manga and a novel."
+            "Just like Natsuki did."
+            "The novel I chose isn't some kind of book that special to me or anything."
+            "It's just the most popular piece of literature I know of that was available."
+        else:
+            "I chose two manga and two novels from Natsuki's house."
+            "I thought that a balance would make the most sense."
+            "Natsuki did seem a little upset when I didn't choose three manga like she did."
+            "But I made my decision."
+            "Though maybe I should have studied the two books I chose more."
+    elif ch13_name == "Sayori":
+        "I got these four books from Sayori's house."
+        "In the end, I chose two manga and two novels that I think people will like."
+        "I still can't believe she has such a huge collection of random books."
+        "Sayori really is changing..."
+    else:
+        if monika_type == 0:
+            "I took these from Monika's house yesterday."
+            "Two volumes of manga and two of the most popular novels I know of."
+            "I figured a balance would appeal to everyone."
+            "The novels aren't really stuff that I'd read, they're just novels that I know are kinda popular."
+            "So much for giving an idea of the stuff I like to read."
+        else:
+            "I got these four novels from Monika's house yesterday."
+            "I remember wanting to choose a manga as well but figured that was probably a bad idea."
+            "Why was that...?"
+            "I guess I'm not really giving an indication of the stuff I like to read."
+            "These four novels aren't really something I'd think of reading in my spare time..."
+            "Well, it doesn't really matter."
+    "A few seconds have passed since I took the books out of my bag."
+    "No one has said a word since then."
+    "They're all just looking at me, waiting for me to show them the books I chose."
+    "It kinda makes me feel nervous for some reason."
+    "I grab the first book I brought."
+    mc "This book is..."
+    mc "Well, I'm sure most of you have heard of this book before."
+    mc "It's a really popular book, so much so that even I have heard of it."
+    "Just because I've heard of it doesn't mean I've read the whole thing."
+    mc "I'm sure you guys know what it's about so..."
+    show sayori zorder 3 at f42
+    s "Why don't you tell us anyway?"
+    s "Just to refresh our memory."
+    show sayori zorder 2 at t42
+    mc "Um..."
+    mc "Right..."
+    "I try to remember as much as I can about the book."
+    mc "It's about a guy who moves to a different school because of his parents."
+    mc "His parents actually work as top-notch agents of a secret government agency."
+    mc "And...uuuuh..."
+    "I struggle to remember what else happens in the book."
+    "Just as I'm about to give up, Natsuki takes over."
+    show natsuki zorder 3 at f41
+    n "He learns about their identity and instead of having his memory wiped, his parents let him join."
+    n "He has to go through all this stuff and..."
+    n "Yeah, we all know what this is about."
+    show natsuki zorder 2 at t41
+    mc "What Natsuki said!"
+    mc "I just didn't know how to explain it without spoiling the story."
+    show natsuki zorder 3 at f41
+    n "{i}Right{/i}..."
+    show natsuki zorder 2 at t41
+    "I take the second book I brought in to share."
+    # Four Novels
+    if ch13_name == "Monika" and (monika_type == 2 or (monika_type == 1 and ch12_markov_agree)):
+        $ ch14_player_choice = False
+        $ ch14_player_manga = 0
+        $ sayori_personality += 1
+        "It's another novel, like the rest of the books I brought in."
+        "The same thing was going to happen with this book and the next two after."
+        "I really should have memorized the blurb of each of them or something..."
+        "I just hope the others can chime in like Natsuki did."
+        "As I take the second book from the desk, I wonder why I even chose four novels."
+        mc "So this one is..."
+        "What is the book I'm holding even called?"
+        mc "It's called..."
+        "This is a disaster."
+        "What's wrong with me?"
+        mc "Um..."
+        if monika_type == 1 and ch12_markov_agree:
+            show monika 1ha zorder 3 at f44
+            m "Is something wrong, [player]?"
+            m "You seem kinda..."
+            m "...I don't know, worried?"
+            m "Maybe you've forgotten what the book is about?"
+        else:
+            show monika 1a zorder 3 at f44
+            m "Is everything okay?"
+            m "You seem troubled, [player]."
+            m "As if you have no idea what you're going to say."
+            m "Do you even know what your books are about?"
+        show monika zorder 2 at t44
+        mc "I..."
+        "I look around the room."
+        "No one meets my eyes."
+        "I suppose I should admit it."
+        "Going on like this will only make things worse, won't it?"
+        mc "I don't know what my books are about."
+        mc "I think it's best that we don't vote on them."
+        mc "I can't even tell you guys what they're about."
+        mc "I'm sorry I didn't come prepared."
+        show natsuki zorder 3 at f41
+        n "I can't believe you."
+        n "Why did you even choose those books if you don't know what they're about?"
+        show natsuki zorder 2 at t41
+        mc "I--"
+        show yuri zorder 3 at f43
+        y "I thought you would have been more prepared, [player]."
+        y "Even Natsuki was able to present her books and she..."
+        y "...you know."
+        show yuri zorder 2 at t43
+        mc "It's my fault, I know."
+        mc "I'm sorry, I'll try to do better next time."
+        show sayori zorder 3 at f42
+        if sayori_personality > 4:
+            s "There's not going to be a next time for you."
+            $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
+            if not list(set(process_list).intersection(stream_list)):
+                if currentuser != "" and currentuser.lower() != player.lower():
+                    s "I hope you realize that by now, [currentuser]."
+            s "I've had enough of this!"
+            "The room goes silent."
+            s "..."
+            s "Let's just move on, okay?"
+            s "I'm tired of playing games."
+        elif sayori_personality == 1:
+            s "Look, [player]..."
+            s "I'm not angry, I'm just disappointed..."
+            s "We'll just forget about it, okay?"
+            s "I guess we have enough books to vote on without your four."
+        else:
+            s "I didn't really expect this to happen."
+            s "I suppose I should have, shouldn't I?"
+            s "With all the things you've already done..."
+            s "Let's just get this over with."
+        show sayori zorder 2 at t42
+        mc "Sayori..."
+        mc "I'm sorry I messed up, I really am."
+        mc "I didn't meant to upset anyone."
+        show sayori zorder 3 at f42
+        s "Just forget about it, [player]."
+        s "Everyone else will."
+        show sayori zorder 2 at t42
+        mc "W-What...?"
+        "Sayori eyes each person in the club."
+        "She then turns towards me."
+        show sayori zorder 2 at f42
+        s "We're all finished here then."
+        "Sayori's facial expression changes almost unnaturally..."
+        "What just happened?"
+    # One Novel Three Manga
+    elif ch13_name == "Sayori" or (ch13_name == "Natsuki" and ch13_natsuki_books) or (ch13_name == "Yuri" and not ch13_yuri_books):
+        $ ch14_player_manga = 3
+        "It's a manga that I've actually read before."
+        "I should be able to explain the next three books pretty well."
+        if ch13_name == "Natsuki":
+            "I made sure to choose different manga to Natsuki."
+        else:
+            "Somehow the manga are chose are different to Natsuki."
+        "Though maybe it would have been better if we had chosen some of the same books."
+        "That way there would be less to vote on and it might make the actual voting easier too since she would be voting for the same thing I would be."
+        "That's assuming she's going to vote on her books anyway."
+        "For all I know, she could be voting for someone else entirely."
+        mc "This is kind of your typical superhero manga."
+        mc "The main guy in it has to balance their superhero life with their real life."
+        mc "It was pretty easy to start off with but one of his enemies was released from prison for good behavior."
+        mc "Somehow, she gets a job where the superhero works at in his 'normal' life."
+        mc "It makes his life a lot more difficult and it's pretty funny watching how he overcomes it."
+        mc "The actual manga isn't that many volumes too, only nine or ten."
+        mc "I don't think it'd be a good idea to do a play on all ten though."
+        show yuri zorder 3 at f43
+        y "Wouldn't it be easy for the villain to determine who the hero was?"
+        y "From the voice, how they move..."
+        show yuri zorder 2 at t43
+        mc "Well, it's kind of explained in the manga in a comedic way."
+        mc "You'll have to read it if you want to find out more."
+        label ch14_twomanga:
+        "I take the third book from the desk and inspect it."
+        "This is probably the one I know the least about since I've only read the first two volumes."
+        "It was interesting, I just couldn't find it in myself to invest more money into it when there was better stuff available."
+        mc "I'll be honest, I haven't read into this series very much but that doesn't mean I didn't like it."
+        mc "It's meant to be a popular series of manga so some of you may have heard of it...or not."
+        mc "From what I have read, it's about a team of five people who are competing in some made up sport."
+        mc "In their world, the sport is a real thing with it's own rules and stuff like that."
+        mc "It's about their struggle to reach the top and becoming better friends."
+        show sayori zorder 3 at f42
+        s "Becoming better friends?"
+        s "If they were on a team, wouldn't they already be friends?"
+        show sayori zorder 2 at t42
+        mc "The teams are chosen based on a skillset."
+        mc "So five people with compatible skills were put into a team."
+        mc "They don't like each other at the beginning but despite that they're still one of the best teams of the sport."
+        mc "It might be interesting to do a play on that and show the people how the sport works."
+        mc "Or we could just change it to something everyone knows about for the play."
+        "Or we might not even choose this book for the play."
+        "That's also a possibility."
+        mc "I'll just talk about my last book then."
+        mc "If you couldn't already tell from the cover, it's a manga."
+        mc "It's not really well known but it's actually one of the series I like the most."
+        mc "I guess you could say it's a book that describes me pretty well."
+        if monika_type == 0:
+            show monika 1b zorder 3 at f44
+            m "In what way does it do that?"
+            m "I'm curious to hear just how exactly it describes you, [player]."
+        elif monika_type == 1 and ch12_markov_agree:
+            show monika 1hb zorder 3 at f44
+            m "How exactly does it describe you well?"
+            m "Does it somehow describe your personality?"
+            m "Maybe you're exactly like one of the characters?"
+        else:
+            show monika 1b zorder 3 at f44
+            m "Does it now?"
+            m "How so, [player]?"
+        show monika zorder 2 at t44
+        mc "Well, one of the characters acts pretty similarly to me."
+        mc "Or at least how I want to be."
+        mc "The story of the book kind of relates to my life too."
+        mc "Between all the people I've met and how I've lived my life, it just gets me."
+        show yuri zorder 3 at f43
+        y "So what is it about, then?"
+        show yuri zorder 2 at t43
+        mc "It's about this ordinary guy who lives an ordinary life."
+        mc "He goes to an ordinary school and does orindary things."
+        mc "He's not really good at anything and he's passing school."
+        mc "One day he wonders what he can do to change his life but can't think of anything."
+        mc "The things he tries only end in complete failure."
+        mc "He thinks that he has to live the rest of his life as an average person, never to achieve great things."
+        mc "Then one day some random person gives him a phone that can make things happen."
+        mc "All he has to do is text a number and a few minutes later the thing he texted will happen."
+        mc "He's not sure how to use the phone, but tries to be good."
+        show sayori zorder 3 at f42
+        s "Are you saying you're also trying to be good?"
+        s "That if you had a power like that, then you'd also try to do good things?"
+        show sayori zorder 2 at t42
+        mc "When faced with a power like that, it's hard not be selfish."
+        mc "You could do almost anything..."
+        mc "It's like a battle of internal morals."
+        show sayori zorder 3 at f42
+        s "I see..."
+        s "I still don't really get how this character is like you though, [player]."
+        s "Apart from being average, there's nothing else I can really think of that makes you relate to the book so much."
+        show sayori zorder 2 at t42
+        mc "I don't know if this is spoiling too much..."
+        mc "But he's got a best friend that he relies on for a lot of his decisions."
+        mc "I like to compare her with you, Sayori."
+        show sayori zorder 3 at f42
+        s "With me...?"
+        s "H-How come?"
+        show sayori zorder 2 at t42
+        mc "Well, when we were younger..."
+        mc "I'd rely on you a lot to be there."
+        mc "But as we grew up, it switched around...didn't it?"
+        mc "You began to rely on me for the smallest things."
+        mc "I guess it became pretty obvious why."
+        "Sayori simply smiles at me."
+        "I think she knows what I'm talking about as well."
+        mc "Anyway, I think you need to read the manga to really find out why I relate with it so much."
+        mc "I can only explain something so well."
+        mc "But yeah..."
+        mc "Those are my choices."
+        mc "Not the best, I know."
+        mc "Let's just completely forget I even suggested the first one."
+        mc "It's probably better that way."
+        show sayori zorder 2 at f42
+        s "So I guess everyone's finished sharing their books."
+    # Two Novels Two Manga
+    else: #if (ch13_name == "Monika" and monika_type == 0) or (ch13_name == "Yuri" and ch13_yuri_books):
+        $ ch14_player_manga = 2
+        if ch13_yuri_books:
+            "The book I took from Yuri."
+            "It's something I can actually talk about."
+            "I didn't want to disappoint her so I actually read a little bit of it."
+            "It's not something that represents me or the stuff I actually like to read but at least it won't sound as terrible as my first explanation."
+            "I even read a plot summary of it online, just to spoil myself a little bit."
+            "I should be able to use that."
+            mc "This book was actually something Yuri showed me."
+            mc "It's a pretty light horror novel, no deaths or anything like that."
+            mc "I think it could be interesting to do a play on."
+            show sayori zorder 3 at f42
+            s "So this isn't actually something you'd read, [player]?"
+            show sayori zorder 2 at t42
+            mc "Well, I wouldn't say that."
+            mc "I'm willing to read a lot of things."
+            show sayori zorder 3 at f42
+            s "But you said Yuri gave it to you, right?"
+            s "So it doesn't really represent you."
+            show sayori zorder 2 at t42
+            show yuri zorder 3 at f43
+            y "I didn't force [player] to choose it or anything, Sayori."
+            y "He chose it of his own volition."
+            y "He didn't have to bring it to share either."
+            y "I think we should just let him talk."
+            show sayori zorder 3 at f42
+            show yuri zorder 2 at t43
+            s "Alright, Yuri."
+            s "If that's really what happened then I suppose there's no problem."
+            s "[player], go on."
+            show sayori zorder 2 at t42
+            "Sayori seems a little annoyed by the scenario."
+            "Maybe I should have just chosen books that I would have actually liked to bring in..."
+            mc "It's about a ghost haunting a school."
+            mc "He's actually a really mischievous ghost and he likes to play tricks on the students."
+            mc "The interesting thing about the book is that it's written from two different perspectives."
+            mc "When you're reading from the ghost's perspective, you can see he does this for entertainment."
+            mc "From the student's perspective, it's seems more like a horror."
+            mc "They see supposedly dead people and weird stuff happening around the school."
+            show yuri zorder 3 at f43
+            y "I've read the book [player] is talking about and..."
+            y "I'd like to say that at some point it begins to merge the two perspectives."
+            y "So it isn't too confusing."
+            y "It's a really appropriate choice for the play."
+            y "But I suppose I'm a little bit bias since I'm the one who gave the book to him."
+            show yuri zorder 2 at t43
+            mc "Ah...yeah."
+            mc "I was going to mention that but I thought it would have been too much of a spoiler."
+            mc "I am enjoying the novel so far though."
+            mc "I haven't finished but it did keep my interest in the parts that I did read."
+            show natsuki zorder 3 at f41
+            n "You haven't even finished the book? What's the point of even suggesting it then?"
+            n "It could be terrible!"
+            show natsuki zorder 2 at t41
+            show yuri zorder 3 at f43
+            y "Natsuki, I assure you it isn't terrible."
+            y "You have to believe me."
+            show natsuki zorder 3 at f41
+            show yuri zorder 2 at t43
+            n "...Fine."
+            show natsuki zorder 2 at t41
+            mc "I don't think it will be terrible."
+            mc "But you haven't heard my other two books yet."
+            jump ch14_twomanga
+        else:
+            "I really should have taken a novel that I've read."
+            "There's no way I'm going to be able to explain this one."
+            "Is it better if I just say that?"
+            "I had an opportunity last night to read this book or at least find a summary, so why didn't I?"
+            "It's too late now..."
+            "Maybe I'll just say it's no good."
+            "What will Monika think? I borrowed this from her, didn't I?"
+            "Will she think any less of me because of it?"
+            "Just how much of this do I remember...?"
+            "I think for a moment."
+            "Everyone's just staring at me."
+            "Waiting for me to say something."
+            menu:
+                "Do I tell them or try to make it up?"
+                "Tell them.":
+                    $ sayori_personality += 1
+                    "I guess I should just tell them."
+                    "I don't want to dig an even deeper hole for myself."
+                    mc "Instead of embarassing myself even further, I'll be honest with you all."
+                    mc "I have no idea what this book is about."
+                    mc "I know it's popular and I did read a little bit of it but I can't seem to remember."
+                    mc "So instead of lying, I'm just going to say that."
+                    "Everyone simply looks at me."
+                    "Sayori doesn't look impressed but lets out a small smile after a while."
+                    show sayori zorder 3 at f42
+                    s "At least you're honest about it, [player]."
+                    s "It's better than pretending and not knowing what you're talking about completely."
+                    show sayori zorder 2 at t42
+                    mc "I'll make it up with my next two explanations, I promise."
+                    jump ch14_twomanga
+                "Make it up.":
+                    $ ch14_twonovels_tell = True
+                    "I already disappointed them with my first book."
+                    "I have to make it up to them."
+                    mc "So...this book..."
+                    "I desperately try to remember all the things I can about this book."
+                    "I see Sayori looking at me curiously."
+                    if sayori_personality < 3:
+                        "She sighs then smiles at me."
+                        "Suddenly, I can remember everything about this book and more."
+                        mc "If you didn't already know, it's about five friends who camp out in the wilderness."
+                        mc "A really bad storm happens and they have to take shelter in a cave."
+                        mc "They find something really strange in the cave and suddenly pass out."
+                        mc "When they wake up, they're back at their campsite and find they have new powers."
+                        mc "Each of them can do different things, one can move stuff with their mind and the other can set things on fire just by looking at it."
+                        mc "They have no idea what to do with their power, since they're only teenagers."
+                        mc "So they use it to make their lives a lot easier."
+                        mc "Eventually the government notices this and..."
+                        mc "Well, you probably know what happens next."
+                        show natsuki zorder 3 at f41
+                        n "I didn't know you read this kinda stuff, [player]."
+                        n "I thought it would be like your first explanation."
+                        n "Where you didn't really know what you were talking about."
+                        n "I'm impressed!"
+                        show natsuki zorder 2 at t41
+                        mc "Uh...thanks?"
+                        "Was that a compliment or an insult...?"
+                        mc "I didn't know I knew this much about it too."
+                        mc "I must have really liked the book or something."
+                        show sayori zorder 3 at f42
+                        s "Ehehe, it's probably the 'or something', [player]!"
+                        show sayori zorder 2 at t42
+                        mc "Whatever it is, I'm glad I didn't mess it up."
+                        mc "I still have my other two books to talk about though..."
+                        jump ch14_twomanga
+                    else:
+                        $ ch14_player_choice = False
+                        $ sayori_personality += 2
+                        "She just sighs and waits for my answer."
+                        "This isn't good, is it?"
+                        mc "We've probably all heard of it before."
+                        mc "We know the story already."
+                        mc "It's um..."
+                        "I look at the cover and see a cave."
+                        mc "About some time travellers who go back in time to the bronze age."
+                        mc "They go--"
+                        show natsuki zorder 3 at f42
+                        n "[player]...I don't think that's right at all."
+                        n "It's about going on camp..."
+                        show natsuki zorder 2 at t42
+                        show yuri zorder 3 at f43
+                        y "I think it would have been better if you didn't say anything at all, [player]."
+                        y "If you don't know what the book is about, then you shouldn't waste time."
+                        y "It's what I would have done."
+                        show yuri zorder 2 at t43
+                        mc "You're right, Yuri."
+                        mc "I guess I thought I could have made something up."
+                        show sayori zorder 3 at f42
+                        s "You really should have chosen something you liked, [player]."
+                        s "I can understand choosing popular novels because it would appeal to more people..."
+                        s "But you should at least be able to talk about them."
+                        "Sayori takes a deep breath."
+                        s "In the end, I'm more upset that you lied to us."
+                        s "You should have just admitted it."
+                        show sayori zorder 2 at t42
+                        mc "You're right, Sayori."
+                        mc "Sorry about that..."
+                        show sayori zorder 3 at f42
+                        if sayori_confess and not sayori_dumped:
+                            s "[player], I love you and everything..."
+                            s "But save yourself the embarassment and just skip your next two books."
+                            s "Alright?"
+                        else:
+                            s "I don't even want to hear your next two choices."
+                            s "It's just a waste of our time and we don't have a lot left."
+                        show sayori zorder 2 at t42
+                        mc "Okay..."
+                        "I take the four books from the desk and place them in my bag."
+                        mc "Sorry again."
+                        show sayori zorder 3 at f42
+                        s "Don't say sorry to me, [player]."
+                        s "Say sorry to everyone else who's time you wasted..."
+                        s "Um...not to sound mean or anything."
+                        show sayori zorder 2 at t42
+                        mc "No, I understand."
+                        mc "Sorry, everyone."
+                        show yuri zorder 3 at f43
+                        y "It's fine, I suppose."
+                        y "There's still plenty of books to choose from."
+                        show natsuki zorder 3 at f41
+                        show yuri zorder 2 at t43
+                        n "Yeah, I'm fine."
+                        n "A little annoyed at {i}you{/i} if anything."
+                        show natsuki zorder 2 at t41
+                        if monika_type == 0:
+                            show monika 2a zorder 3 at f44
+                            m "Ahaha, it's fine, [player]."
+                            m "Mistakes like this happen..."
+                            m "Okay, well maybe not like this but I forgive you!"
+                        elif monika_type == 1 and ch12_markov_agree:
+                            show monika 2ha zorder 3 at f44
+                            m "Not a problem, [player]."
+                            m "It's only a small thing, so of course I figure you!"
+                        else:
+                            show monika 2c zorder 3 at f44
+                            m "No harm done."
+                        show sayori zorder 3 at f42
+                        show monika zorder 2 at t44
+                        s "All is forgiven I guess!"
+                        s "So now that that's over with..."
+    s "Alright, everybody!"
+    s "It felt like a long time, but we're finally done!"
+    s "So let's start voting!"
+    "Sayori begins to get up but stops."
+    s "Actually, before we vote..."
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
+    s "You all have to be one hundred percent committed with the books you brought."
+    s "Any one of them could turn out to be the play."
+    s "Take some away now if you didn't really intend for them to be part of the play."
+    s "Maybe you just wanted to share it..."
+    s "Just think carefully, okay?"
+    menu:
+        "Who am I voting for?"
+        "Yuri.":
+            $ ch14_book_choice = "Yuri"
+            "I'm obviously going to vote for Yuri's book."
+        "Natsuki":
+            $ ch14_book_choice = "Natsuki"
+        "Monika.":
+            $ ch14_book_choice = "Monika"
+        "Sayori.":
+            $ ch14_book_choice = "Sayori"
+        "Myself." if ch14_player_choice:
+            $ ch14_book_choice = "Player"
     # After Choosing Book
     s "There's actually one thing I forgot to mention."
     s "It's pretty important so I'm not sure how I forgot it..."
@@ -1954,6 +2470,20 @@ label ch14_end:
     n "What's so important?"
     show natsuki zorder 2 at t41
     show sayori zorder 3 at f42
-    s "Even though the play we're doing might only have a few cha"
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
+    s "The book we chose..."
+    s "The person who suggested it should be the director of the play."
+    s "Since they know it the best!"
+    s "Does anyone disagree?"
+    return
+
+label ch14_exclusive_yuri:
+    return
+
+label ch14_exclusive_natsuki:
+    return
+
+label ch14_exclusive_monika:
+    return
+
+label ch14_exclusive_sayori:
     return

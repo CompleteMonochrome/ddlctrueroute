@@ -2069,9 +2069,15 @@ default ch13_scene = "sayori"
 default ch13_name = "Sayori"
 default ch13_music_type = "harmonic"
 default ch13_yuri_books = False
+default ch13_natsuki_books = False
 default ch13_cleaneye = False
 default ch14poemwinner = "Sayori"
 default ch14markovikatell = False
+default ch14_player_choice = True
+default ch14_player_manga = 3
+default ch14_twonovels_tell = False
+default ch14_book_choice = "Sayori"
+default ch14_overall_choice = "Sayori"
 
 default y_gave = False
 default y_ranaway = False

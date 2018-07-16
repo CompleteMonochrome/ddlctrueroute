@@ -3114,7 +3114,7 @@ label ch13_exclusive_yuri:
     y "Like I said...it sounds like something from a film."
     y "But that's why I didn't mind going to your house for this."
     y 3ps "If you want, you can select from my books as well."
-    y "I'm sure Sayori wouldn't really mind if we only bring two or three books each."
+    y "I'm sure Sayori wouldn't really mind if we only bring three or four books each."
     mc "You're probably right."
     mc "I might as well take a look at your books then."
     y 2pa "Go ahead..."
@@ -3396,6 +3396,9 @@ label ch13_exclusive_yuri:
     "Sayori sounded confident she could do it alone so I shouldn't worry about it."
     "I guess I should get back to my room."
     "I still have to write a poem after all."
+    if ch13_yuri_books:
+        "I should also read some of that book that Yuri gave me."
+        "Just to see if I should actually bring it in tomorrow..."
     return
 
 label ch13_exclusive_monika:
@@ -5179,7 +5182,7 @@ label ch13_exclusive_sayori:
     "There's just so much variety there..."
     "There's cooking, writing and even programming...?"
     "I didn't think Sayori would be interested in cooking, let alone programming."
-    s 2ba "Just choose two or three, that should be enough."
+    s 2ba "Just choose three or four, that should be enough."
     s "When you're done, I'll choose some as well."
     mc "I'm still just at awe at how many books you have."
     mc "It must have cost a lot."
@@ -5188,8 +5191,8 @@ label ch13_exclusive_sayori:
     mc "R-Right."
     "Sayori has a lot of popular book series in here."
     "I don't really read much but I recognize a lot of the books she has."
-    "I decide to take some manga that I know a little bit."
-    "I also take some novels from book series that I think everyone would know about."
+    "I decide to take three manga that I know enough about."
+    "I also take a novel from book series that I think everyone would know about."
     s 2bn "That didn't take long."
     s "What did you choose?"
     "I show Sayori the books I chose from her shelf."
@@ -5417,4 +5420,5 @@ label ch13_natsukidate:
     "Natsuki walks into the shop."
     show natsuki at lhide
     hide natsuki
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
