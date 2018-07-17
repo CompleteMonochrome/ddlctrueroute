@@ -2222,6 +2222,34 @@ label ch13_exclusive_natsuki:
         "I can definitely understand where Natsuki is coming from."
         "The events in the last few weeks have been pretty...exciting."
         "Wishing for something normal isn't so bad."
+        # Check if player can go on date with Natsuki
+        if n_appeal >= 4 and n_appealS >= 1:
+            "But that does present a problem."
+            "It's pretty obvious that I like her at this point."
+            "I've written every single poem ever since the start of the second week for her."
+            "I was going to ask her on a date..."
+            "Is this a good time though?"
+            "I don't even know if she'll say yes."
+            "Not to mention that both of her parents are home."
+            "How exactly am I going to explain that to them?"
+            "I should tell Natsuki about the date."
+            "But then again, she might be upset at me because she wanted a normal day."
+            "Maybe we should just focus on the preparations for the day."
+            "But I might not get another chance like this..."
+            menu:
+                "What am I gonna do...?"
+                "Ask her on a date.":
+                    call ch14_natsuki_outcome3_date
+                "Focus on preparations."
+                    "I like Natsuki but I should respect what she wants."
+                    "And that's a normal day."
+                    jump ch14_natsuki_outcome3_nodate
+        else:
+            label ch14_natsuki_outcome3_nodate:
+            mc "We should think of the stuff we're going to bake."
+            mc "Maybe a big cake and some cupcakes?"
+            n 1bc "That could work."
+            call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     elif ch12_outcome == 2:
         mc "Are you here, Natsuki?"
         mc "Haruki said I could come in..."
@@ -2489,7 +2517,7 @@ label ch13_exclusive_natsuki:
         n 2be "Why would I know what you could do?"
         n "You were the one who chose me, remember?"
         mc "Ah...you're right."
-        m "Well..."
+        n "Well..."
         if ch4_name == "Natsuki":
             mc "We did something like this before, didn't we?"
             mc "I'll follow your lead as the assistant once again."
@@ -2544,7 +2572,7 @@ label ch13_exclusive_natsuki:
         mc "And that's that done."
         mc "Though..."
         "I take a deep breath through my nose."
-        "The overwhelming smell of alochol is still there."
+        "The overwhelming smell of alcohol is still there."
         mc "The smell is still there."
         n 2bd "I know just the thing to get rid of it."
         n "Wait here!"
@@ -5283,7 +5311,266 @@ label ch13_exclusive_sayori:
         "After all, she's my best friend."
     return
 
+label ch14_natsuki_outcome1_date:
+    return
+
+label ch14_natsuki_outcome3_date:
+    mc "Hey, Natsuki..."
+    mc "I've been meaning to ask you something."
+    mc "This is probably the best opportunity I'm going to get."
+    n 2bg "What is it?"
+    n "I was in the middle of thinking of some things we could do."
+    n 2bc "My mom is a really good baker so I thought--"
+    mc "Actually, I was thinking of stuff we could do as well."
+    n "Okay? What are you thinking?"
+    mc "This is kind of awkward for me but..."
+    mc "I was thinking we could go out somewhere."
+    n "What do you mean?"
+    n "To get supplies for baking or something?"
+    n "My parents went out shopping earlier today so we have plenty..."
+    mc "No, I mean..."
+    mc "I'll just say it."
+    n "[player], are you okay?"
+    mc "I'm a little bit nervous actually but here goes nothing."
+    mc "I was thinking we could go on a date."
+    show natsuki at h11
+    n 1bo "What?!"
+    "Natsuki clearly didn't expect that."
+    n "D-Didn't you hear what I said?"
+    n 1bp "I..."
+    mc "I heard what you said."
+    mc "And I thought about it--"
+    n 1bo "So what's the big idea then?!"
+    mc "Well, I figured there really wasn't going to be a better time."
+    mc "You know I like you."
+    mc "I just hope the feeling is mutual."
+    n 1bs "{i}(Of course it is...){/i}"
+    "Natsuki mumbles something that I can't really hear."
+    mc "What did you say?"
+    n 1bm "[player], I don't know what to say."
+    n "I really wasn't expecting you to ask like this."
+    n "Especially with all that's going on."
+    n "We're not going to be able to do much at all if we do what you're talking about."
+    mc "I can always stay a little longer if I have to."
+    mc "If not, then we'll just have to work extra hard tomorrow."
+    mc "But I noticed something."
+    n 1bq "And what would that be...?"
+    mc "You didn't say no to my suggestion of a date."
+    mc "Does that mean you'll go with me?"
+    n 1bo "...!"
+    n "F-Fine but only because I'd have to work alone otherwise."
+    n "S-So don't get any ideas, okay?"
+    mc "I won't."
+    "So she actually accepted the invitation to go on a date."
+    "I didn't really expect to get this far."
+    "I have no idea where we're going to go."
+    n 1bc "Before we go anywhere..."
+    n "There's something you need to do first."
+    mc "And that is?"
+    n 1by "You're going to have to talk to my parents."
+    mc "What?!"
+    "Why does she look so smug to say that?"
+    n "It only makes sense, doesn't it?"
+    n "You're asking to take their daughter on a date."
+    n "They should know about it."
+    mc "I guess but--"
+    n 1bd "No buts."
+    n "That's my condition."
+    mc "You seem like you're having way too much fun with this."
+    "Natsuki smiles."
+    n "Well, let's go find them."
+    n "You have some explaining to do, [player]."
+    "What have I gotten myself into...?"
+    scene bg n_livingroom with wipeleft_scene
+    "We find both of her parents cleaning the living room."
+    "There's stains on the walls and a faint smell coming from somewhere."
+    "But apart from that, they seem to be doing a good job cleaning up the place."
+    show natsuki 1ba zorder 2 at t31
+    n "Mom, dad!"
+    n "[player] has something to tell you."
+    show momsuki 1a zorder 2 at t32
+    show dadsuki 1c zorder 2 at t33
+    "Haruki and Yasuhiro immediately stop what they're doing and head over to where we're standing."
+    "They seem a lot more intimidating now for some reason..."
+    show momsuki zorder 3 at f32
+    mo "He does?"
+    "Haruki looks at me curiously."
+    mo "And what would that be?"
+    show momsuki zorder 2 at t32
+    mc "Well..."
+    mc "Y-You see mister and missus Natsuki..."
+    "Did I seriously just say that?"
+    show momsuki 1d zorder 3 at f32
+    mo "Are you okay?"
+    mo 1b "And please, just call me Haruki."
+    show momsuki zorder 2 at t32
+    show dadsuki 1b zorder 3 at f33
+    d "You already call me Yasuhiro, why change now?"
+    d "Hmm...you seem a little nervous, [player]."
+    d "What's the matter?"
+    show dadsuki zorder 2 at t33
+    "Asking Natsuki was hard enough already."
+    "Did she do this just to see me make a fool out of myself?"
+    "And I don't think parents are meant to see the boy their daugher is going out with until they're official, right?"
+    mc "N-Nothing is the matter!"
+    mc "I just want to make an announcement, that's all."
+    show momsuki 1d zorder 3 at f32
+    mo "An announcement?"
+    mo "And it affects all of us?"
+    show momsuki zorder 2 at t32
+    show dadsuki 1i zorder 3 at f33
+    d "Weren't the two of you meant to be doing preparations?"
+    d "Does this have something to do with that?"
+    show natsuki 2bj zorder 3 at f31
+    show dadsuki zorder 2 at t33
+    n "Not exactly..."
+    n "It's still pretty important though."
+    n "And I don't want to miss it."
+    n "Go on, [player]."
+    n "Tell them!"
+    show natsuki zorder 2 at t31
+    mc "W-Well, in the club we write poems..."
+    mc "Everyone has a particular style."
+    show dadsuki 1c zorder 3 at f33
+    d "Ah, yes."
+    d "I know about this."
+    show natsuki 1bc zorder 3 at f31
+    show dadsuki zorder 2 at t33
+    n "Wait, you do?"
+    n "I never told you, did I?"
+    show natsuki zorder 2 at t31
+    "Haruki eyes Yasuhiro and he avoids her gaze."
+    show dadsuki zorder 3 at f33
+    d "Anyway, what's your point?"
+    d "Just get to it."
+    show dadsuki zorder 2 at t33
+    mc "Alright...how do I say this...?"
+    "I take a deep breath."
+    "This is it."
+    "Now or never."
+    mc "I'm planning to take your daughter out on a date today."
+    show natsuki 1by
+    show dadsuki 1l
+    "Natsuki bursts out laughing."
+    "Yasuhiro just looks at me wide-eyed."
+    show momsuki 1e zorder 3 at hf32
+    mo "What?!"
+    mo "A-Are you serious?"
+    show natsuki 2bd zorder 3 at f31
+    show momsuki zorder 2 at t32
+    n "Mom, he's completely serious."
+    n "And I accepted."
+    show natsuki zorder 2 at t31
+    show momsuki 1g zorder 3 at f32
+    mo "Now, just wait a second."
+    mo "[player] seems like a nice guy and everything but..."
+    "She looks at me from top to bottom."
+    mo 1h "Natsuki, are you completely sure about this?"
+    mo "You're not just messing with me, right?"
+    mo 1g "I only just got back...I don't think my heart is ready for one of your pranks yet."
+    show natsuki 2bc zorder 3 at f31
+    show momsuki zorder 2 at t32
+    n "It's not a prank or anything like that!"
+    n "He asked me if I wanted to go out with me and I said yes."
+    n "That's all there is to it."
+    n 1bd "And I know he isn't much but it's fine!"
+    show natsuki zorder 2 at t31
+    show dadsuki 1i zorder 3 at f33
+    d "I'm not against [player] going with our daughter."
+    d "He and the others in that club of theirs took better care of Natsuki than I did."
+    d "I think he's got what it takes to make our daughter happy, Haruki."
+    show momsuki 1h zorder 3 at f32
+    show dadsuki zorder 2 at t33
+    mo "It's just so sudden!"
+    mo "How can {i}I{/i} be sure that our daughter will be okay?"
+    show momsuki zorder 2 at t32
+    mc "Haruki, I know you don't really have a reason to believe me."
+    mc "We only met yesterday so I can understand that."
+    mc "But I promise I'll take care of Natsuki."
+    mc "She's really special to me."
+    mc "I wouldn't let anything bad happen to her."
+    show natsuki 2bg zorder 3 at f31
+    n "[player], do you really mean that?"
+    n "I never knew you felt that strongly about me..."
+    n "I just thought you were..."
+    show natsuki zorder 2 at t31
+    show momsuki 1g zorder 3 at f32
+    mo "..."
+    mo "Okay."
+    show momsuki zorder 2 at t32
+    mc "Okay...?"
+    show momsuki zorder 3 at f32
+    mo "Okay, give my daughter a great date."
+    show momsuki zorder 2 at t32
+    mc "Just like that?"
+    mc "What made you change your mind?"
+    show momsuki zorder 3 at f32
+    mo "You had this look in your eyes."
+    mo "I know that's not really a reason but..."
+    mo "I don't know, something about it just reminded me of happier times."
+    show momsuki zorder 2 at t32
+    show dadsuki 1b zorder 3 at f33
+    d "So you have our approval."
+    d "If you don't mind me asking..."
+    d "Where exactly are you taking Natsuki?"
+    d "Do you have your date planned out already?"
+    show dadsuki zorder 2 at t33
+    mc "Actually--"
+    show natsuki 1bb zorder 3 at f31
+    n "Of course he does!"
+    n "He has this whole trip planned out for the city!"
+    n 1bj "We're just going to get some things and then head off."
+    n "Thank you mom and dad!"
+    show natsuki zorder 2 at t31
+    "Natsuki approaches her parents and the three of them embrace."
+    "I can't help but smile at their happy family."
+    "I'm glad things turned out this way for Natsuki."
+    show momsuki 1c zorder 3 at f32
+    mo "You too have fun!"
+    mo "First dates are always the best ones."
+    mo "Natsuki, your dad and I will finish the cleaning the house."
+    mo "So just enjoy your day, okay?"
+    show momsuki zorder 2 at t32
+    show dadsuki 1f zorder 3 at f33
+    d "I hope you make a good impression, [player]."
+    d "Best of luck to both of you."
+    show momsuki at thide
+    hide momsuki
+    show dadsuki at thide
+    hide dadsuki
+    "Haruki and Yasuhiro go back to cleaning the living room."
+    n 1bd "That went well."
+    mc "You just wanted to see how I'd react, didn't you?"
+    n 1ba "No...why would I do that?"
+    mc "Whatever..."
+    n 1bc "[player]..."
+    n "Do you actually have a plan?"
+    n "You sounded like you didn't."
+    n "Which is why I interrupted you."
+    mc "I'll be honest, Natsuki."
+    mc "I didn't expect to get past your parents."
+    mc "Or for you to go on a date with me."
+    mc "I was thinking we could catch the train into the city and go from there."
+    mc "Unless you have any better ideas?"
+    n "I don't really..."
+    n "I guess we can figure it out on the way there...?"
+    "I have this really random idea in my head."
+    "Natsuki told me about the portrait that Yasuhiro destroyed."
+    "So maybe..."
+    mc "Actually, I just thought of something."
+    jump ch13_natsuki_outcomeshared_date
+
+label ch13_natsuki_outcomeshared_date:
+    n "You have an idea for our date?"
+    mc "It's not really traditional."
+    mc "But you know that portrait that you told me about?"
+    n 1bg "The one my dad destroyed?"
+    n "What about it?"
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
+    jump ch13_natsukidate
+
 label ch13_natsukidate:
+    $ natsuki_date = True
     scene bg city_day
     play music t12n fadeout 2.0
     "So we're on our way to some sort of image restoration place."

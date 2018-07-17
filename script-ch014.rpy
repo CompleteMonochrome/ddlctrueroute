@@ -1018,7 +1018,7 @@ label ch14_end:
         m "I'm kinda interested to see where this goes..."
         m "A supernatural stalker..."
     else:
-        show monika 2hb zorder 3 at f44
+        show monika 2b zorder 3 at f44
         m "Hmm..."
         m "I admit I am kinda interested by this."
         m "How exactly are they going to beat this supernatural stalker?"
@@ -1029,7 +1029,7 @@ label ch14_end:
     y "Anyway..."
     y 2pg "I almost didn't choose this book..."
     y "Because of how dark it can get...but I think it would be really good if we did a play on it."
-    y "And I since I brought it here, I should show all of you."
+    y "And since I brought it here, I should show all of you."
     # Doki Doki Literature Club Act 2-3 Reference
     y 2pj "It's about this person who joins some kind of club at school."
     y "Everything seems normal at first but as time goes on, weird thing start to happen."
@@ -1040,8 +1040,8 @@ label ch14_end:
     y 2pq "Actually, I think saying that would be too much of a spoiler."
     y "But those are my four choices."
     show sayori 1d zorder 3 at f42
-    show yuri zorder 2 at t44
-    s "Those books definitely sound...um, interesting..."
+    show yuri zorder 2 at t43
+    s "Those books definitely sound...um...interesting..."
     s "They all seem like something I think you'd read, Yuri."
     s "I'm sure there isn't anything too crazy."
     s 1c "From the summaries you gave, the costumes don't have to be too detailed so they should be easy to make."
@@ -1085,7 +1085,7 @@ label ch14_end:
         show monika 4n zorder 3 at f44
         m "I don't really understand what you're getting at, Yuri..."
         m "...But I know it's important to you."
-        m "Still, there shoudn't be a problem getting help from people outside the club."
+        m "Still, there shouldn't be a problem getting help from people outside the club."
         m 4j "Even if they're part of the play, it's still {i}our{/i} show, Yuri."
         m "And besides, we might not even need their help if we decide to vote on a book with five or less characters."
         m "The people who do end up helping might be ones interested in the club and end up joining..."
@@ -1332,7 +1332,7 @@ label ch14_end:
             m "[player] found that out yesterday."
         else:
             m "I guess it's only now [player] is finding out about this."
-        m 1j "The books are chose have that type of story about a person going through some sort of journey to get the love of their life."
+        m 1j "The books I chose have that type of story about a person going through some sort of journey to get the love of their life."
         m "Or maybe finding love in a whole new place."
         m "Basically, the focus is around...love."
         show sayori 1q zorder 3 at f42
@@ -1416,7 +1416,7 @@ label ch14_end:
         m 1a "I will say that it's pretty sad and I know the little summary I gave you is kinda vague but I promise it's a good read!"
         "She replaces the book in here hands with the second one she brought."
         m 2e "This is the book with the two female leads."
-        m "Basically, a rich, privilleged girl falls in love with a more common girl."
+        m "Basically, a rich, privileged girl falls in love with a more common girl."
         m "She becomes disillusioned with her life after seeing how the common girl's life works."
         m 2f "Their love isn't really allowed because of the customs set into society."
         m 2e "I think it's a really sweet story of how people can overcome society's expectations and reach for what they want."
@@ -1483,7 +1483,7 @@ label ch14_end:
             m "[player] found that out yesterday."
         else:
             m "I guess it's only now [player] is finding out about this."
-        m 1hj "The books are chose have that type of story about a person going through some sort of journey to get the love of their life."
+        m 1hj "The books I chose have that type of story about a person going through some sort of journey to get the love of their life."
         m "Or maybe finding love in a whole new place."
         m "Basically, the focus is around...love."
         show sayori 1q zorder 3 at f42
@@ -1567,7 +1567,7 @@ label ch14_end:
         m 1ha "I will say that it's pretty sad and I know the little summary I gave you is kinda vague but I promise it's a good read!"
         "She replaces the book in here hands with the second one she brought."
         m 2he "This is the book with the two female leads."
-        m "Basically, a rich, privilleged girl falls in love with a more common girl."
+        m "Basically, a rich, privileged girl falls in love with a more common girl."
         m "She becomes disillusioned with her life after seeing how the common girl's life works."
         m 2hf "Their love isn't really allowed because of the customs set into society."
         m 2he "I think it's a really sweet story of how people can overcome society's expectations and reach for what they want."
@@ -1644,12 +1644,12 @@ label ch14_end:
         m "These books are timeless, Yuri."
         m "You might have heard of them before."
         m "They're really old pieces of literature but I still find myself fascinated by them."
-        show natsuki 2c zorder 3 at f43
+        show natsuki 2c zorder 3 at f41
         show monika zorder 2 at t44
         n "Since when were you into horror?"
         n "The last book I saw you reading before [player] joined the club was some cheesy romance book!"
         n "Don't tell me he got you into horror books?"
-        show natsuki zorder 2 at t43
+        show natsuki zorder 2 at t41
         show monika 2f zorder 3 at f44
         m "There's nothing wrong with that, is there?"
         m 2a "But no, he didn't get me into horror books."
