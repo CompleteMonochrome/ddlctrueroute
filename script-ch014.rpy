@@ -2315,7 +2315,7 @@ label ch14_end:
         if ch13_name == "Natsuki":
             "I made sure to choose different manga to Natsuki."
         else:
-            "Somehow the manga are chose are different to Natsuki."
+            "Somehow the manga I chose are different to Natsuki."
         "Though maybe it would have been better if we had chosen some of the same books."
         "That way there would be less to vote on and it might make the actual voting easier too since she would be voting for the same thing I would be."
         "That's assuming she's going to vote on her books anyway."
