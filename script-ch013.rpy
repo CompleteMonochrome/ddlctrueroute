@@ -2240,7 +2240,7 @@ label ch13_exclusive_natsuki:
                 "What am I gonna do...?"
                 "Ask her on a date.":
                     call ch14_natsuki_outcome3_date
-                "Focus on preparations."
+                "Focus on preparations.":
                     "I like Natsuki but I should respect what she wants."
                     "And that's a normal day."
                     jump ch14_natsuki_outcome3_nodate
