@@ -750,7 +750,7 @@ label ch14_n_end:
         n "{i}(Especially with how things turned out with you...){/i}"
         mc "..."
         "I can't really understand Natsuki's feelings."
-        "Maybe it has something to do with happened with her dad...?"
+        "Maybe it has something to do with what happened with her dad...?"
         n 2s "I know it's wrong of me to want a different life."
         n "But if things could go back to normal..."
         n 2m "Back to..."

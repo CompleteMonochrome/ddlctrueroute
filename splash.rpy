@@ -534,6 +534,8 @@ label after_load:
         $ ch14_twonovels_tell = False
     if not hasattr(store,'ch14_book_choice'):
         $ ch14_book_choice = "Sayori"
+    if not hasattr(store,'ch14_natyuri_choice'):
+        $ ch14_natyuri_choice = ["Natsuki", "Yuri"]
     if not hasattr(store,'ch14_overall_choice'):
         $ ch14_overall_choice = "Sayori"
 

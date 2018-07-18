@@ -1287,7 +1287,7 @@ label ch14_end:
     "Natsuki's grip on the book tightens."
     n 1r "I know this probably won't be chosen."
     n "The story isn't that good either, I just found it really interesting when I was young."
-    n 1q "It's set in medieval times and it's about a young girl who's parents are defenders of the realm."
+    n 1q "It's set in medieval times and it's about a young girl whose parents are defenders of the realm."
     n "At least, that's what they were called in the book."
     n "They served a queen and one day decided to send them on a mission to slay the dragon in the realm."
     n "But they never came back and the dragon was still alive."
@@ -2325,7 +2325,7 @@ label ch14_end:
         mc "It was pretty easy to start off with but one of his enemies was released from prison for good behavior."
         mc "Somehow, she gets a job where the superhero works at in his 'normal' life."
         mc "It makes his life a lot more difficult and it's pretty funny watching how he overcomes it."
-        mc "The actual manga isn't that many volumes too, only nine or ten."
+        mc "The actual manga doesn't have  that many volumes too, only nine or ten."
         mc "I don't think it'd be a good idea to do a play on all ten though."
         show yuri 2pf zorder 3 at f43
         y "Wouldn't it be easy for the villain to determine who the hero was?"
@@ -2379,7 +2379,7 @@ label ch14_end:
         y "So what is it about, then?"
         show yuri zorder 2 at t43
         mc "It's about this ordinary guy who lives an ordinary life."
-        mc "He goes to an ordinary school and does orindary things."
+        mc "He goes to an ordinary school and does ordinary things."
         mc "He's not really good at anything and he's passing school."
         mc "One day he wonders what he can do to change his life but can't think of anything."
         mc "The things he tries only end in complete failure."
@@ -2636,29 +2636,387 @@ label ch14_end:
     s 1q "So let's start voting!"
     "Sayori begins to get up but stops."
     s 1b "Actually, before we vote..."
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     s "You all have to be one hundred percent committed with the books you brought."
     s "Any one of them could turn out to be the play."
     s "Take some away now if you didn't really intend for them to be part of the play."
     s "Maybe you just wanted to share it..."
-    s "Just think carefully, okay?"
-    menu:
-        "Who am I voting for?"
-        "Yuri.":
-            $ ch14_book_choice = "Yuri"
-            $ yuri_approval += 1
-            "I'm obviously going to vote for Yuri's book."
-        "Natsuki":
-            $ ch14_book_choice = "Natsuki"
-            $ natsuki_approval += 1
-        "Monika.":
+    s "Or maybe you're having second thoughts about the books you actually brought after seeing everyone else's."
+    show natsuki 1c zorder 3 at f41
+    show sayori zorder 2 at t42
+    n "I'm not entirely opposed to the idea..."
+    n "But why would we change our minds now?"
+    n 1b "You were the one who told us to bring a couple of books, you never gave us a specific amount."
+    n "In fact, I probably could have brought more if there wasn't a limit."
+    show natsuki zorder 2 at t41
+    show sayori 1a zorder 3 at f42
+    s "I'm not saying you have to!"
+    s "But think of the worse case scenario."
+    s "I clearly didn't yesterday when I told you all to pick some books."
+    show sayori zorder 2 at t42
+    show yuri 2pe zorder 3 at f43
+    y "What's the worst case scenario?"
+    show yuri zorder 2 at t43
+    if monika_type == 0:
+        show monika 3a zorder 3 at f44
+        m "I think Sayori is talking about voting on the books."
+        m "In the worse case, we'd all have votes in five differnt books."
+        m 3b "That would cause a stalemate and we wouldn't have a clear choice."
+        m "I think there a couple of ways we could deal with that."
+        m "One of them being to narrow down the book list."
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika 3ha zorder 3 at f44
+        m "Sayori is probably talking about voting on the books."
+        m "If we voted as we are now, we'd probably get five votes on five different books."
+        m 3hb "In that case, there would be no winner at all."
+        m "There are a few days we could deal with it."
+        m "I think the one Sayori is thinking of is narrowing down the book list."
+    else:
+        show monika 3c zorder 3 at f44
+        m "I think I can see what you're trying to get at, Sayori."
+        m "As it is, there's plenty of books to choose from."
+        m "In the worst case, we'd all choose a different book to vote on."
+        m 3a "Does that mean you're suggesting we narrow down the book list?"
+    show sayori 2d zorder 3 at f42
+    show monika zorder 2 at t44
+    s "That's exactly it!"
+    s "We'd be here forever if we kept voting based on all the books we have since we might not even change votes."
+    s "So we should definitely try to narrow it down."
+    s "I know you all probably have a favorite book out of the ones you brought in."
+    s "So maybe just keep that and put the rest away?"
+    s "It's up to you..."
+    s 2l "I really should have made everyone just choose one book from the beginning."
+    s "It's too late for that now, though."
+    s 2j "If you really, really want to do a play based on any of your books then keep them on the desk."
+    s 2d "If not, then put them away."
+    s "Just think about it carefully, okay?"
+    show natsuki 2q zorder 3 at f41
+    show sayori zorder 2 at t42
+    n "Well...I did say that my novel was a backup."
+    n "I guess I can put that away."
+    n 2s "And I suppose the other two manga I brought aren't really what I want to do a play on."
+    n "So I guess that leaves me with third book I brought which is about that alien."
+    n "It's the story I like the most because it's just so sweet..."
+    n 2j "I'm sure the audience will think the same thing if we vote for it."
+    show natsuki zorder 2 at t41
+    show sayori 1h zorder 3 at f42
+    s "Are you completely sure, Natsuki?"
+    s "I don't want it to feel like I'm forcing you to do this or anything!"
+    s "I just want to make it easier for when we vote."
+    show natsuki 2c zorder 3 at f41
+    show sayori zorder 2 at t42
+    n "It's fine, Sayori."
+    n "I didn't really bring those in and expect them to get chosen."
+    n 2d "I'm kinda glad I just got to share them."
+    n "It feels...good to share some of the stuff I read."
+    n 1c "I know you guys might never actually read those books..."
+    n 1a "But maybe you will, and that's enough for me."
+    "Natsuki puts the three books into her bag."
+    show natsuki zorder 2 at t41
+    show sayori 1q zorder 3 at f42
+    s "That was well said, Natsuki!"
+    s 1a "It makes things a bit easier now."
+    s "Is anyone else going to do it too?"
+    "Sayori looks around the table."
+    show sayori zorder 2 at t41
+    if monika_type == 0:
+        show monika 1m zorder 3 at f44
+        m "I suppose I can get rid of three of mine as well."
+        m "I should be making things easier for you all as vice president after all."
+        m "Hmm..."
+        "Monika looks at the four books she brought with her."
+        "She takes three of them, leaving behind 'Sound of your Heartbeat' on the table."
+        m 1e "I think this one would be the most appropriate."
+        m "I also think it's the easiest to do a play on."
+        m "Things will come naturally, I can almost guarantee it."
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika 1ha zorder 3 at f44
+        m "If that's what we're doing..."
+        m "Then I suppose it's my duty as the vice president to make things easier."
+        m "So..."
+        "Monika looks at the four books she brought with her."
+        "She takes three of them, leaving behind 'Sound of your Heartbeat' on the table."
+        m 1e "I think this is the obvious choice."
+        m "It will be easier to do a play on."
+        m "I also have a feeling it will come naturally to all of us."
+    else:
+        show monika 1c zorder 3 at f44
+        m "Well, I already have the one book."
+        m 1a "There's nothing I can really do here except get rid of my books entirely."
+        m "I do want it to be a choice though so I won't be doing that."
+        show sayori 1d zorder 3 at f42
+        show monika zorder 2 at t44
+        s "I won't ask you to do that."
+        s "It would be unfair for you."
+        show sayori zorder 2 at t42
+        show monika 1b zorder 3 at f44
+        m "If you say so, Sayori."
+    show sayori 2a zorder 3 at f42
+    show monika zorder 2 at t44
+    s "What about you, Yuri?"
+    s "Are you gonna keep all your books?"
+    s "You can if you want to, the number is already pretty small..."
+    show sayori zorder 2 at t42
+    show yuri 2ph zorder 3 at f43
+    y "I was actually about to ask you the same question, Sayori."
+    y "Getting rid of books was your idea after all."
+    y "Yet you haven't got rid of any of your books yet."
+    y 2pf "You're the president of the club, shouldn't you be taking some responsibility?"
+    show sayori 1l zorder 3 at f42
+    show yuri zorder 2 at t43
+    s "I guess you have a point there, Yuri."
+    show sayori 1k
+    "Sayori looks at all four of her books intently."
+    s "I do like all of them."
+    s 1d "But it's not fair that I'm the one asking you all to narrow down your books but not do the same thing."
+    s "So...I'll choose the fourth book I talked about."
+    "Sayori carefully picks up the other books and puts them into her bag."
+    s "The one about the people with cancer."
+    s "It's not the easiest book to do it on but I'd like to see us try at least."
+    s 4q "I'm sure if we put our all into it then we can do an amazing job!"
+    show sayori zorder 2 at t42
+    show yuri 3ph zorder 3 at f43
+    y "Well...since everyone else is doing it..."
+    y 3pi "I suppose I should as well."
+    "Yuri examines her four books."
+    y 3pg "I actually chose these books because I knew they wouldn't be too horrific."
+    y "It took me quite a while to come up with a list of books that wouldn't deter anyone completely..."
+    show natsuki 1b zorder 3 at f41
+    show yuri zorder 2 at t43
+    n "Yuri, if it really took you that long..."
+    n "Then you don't need to get rid of one of any books."
+    n "The number of books we have is already short enough."
+    show natsuki zorder 2 at t41
+    show sayori 1c zorder 3 at f42
+    s "Natsuki is right."
+    s "If you don't want to get rid of any of your books then you don't have to."
+    show sayori zorder 2 at t42
+    show yuri 3pf zorder 3 at f43
+    y "No...that would be hypocritical of me."
+    y "I asked you to remove some of your books, I should do the same."
+    y 3pa "Besides...I've already chosen the book I want to do it on."
+    if monika_type == 0:
+        show monika 2a zorder 3 at f44
+        m "Is it the one about the stalker?"
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika 2ha zorder 3 at f44
+        m "The one about the stalker, right?"
+    else:
+        show monika 2a zorder 3 at f44
+        m "Which one? The one with the stalker?"
+    show yuri 3pb zorder 3 at f42
+    show monika zorder 2 at t44
+    y "Actually, it's the first book I talked about."
+    y "The one about the radio and the entity controlling people."
+    y "It's got plenty of supernatural themes that I think could translate really well in a play."
+    y 3ph "Though I suppose horror isn't for everyone..."
+    y 3pa "Still, maybe we can change some minds about it if we vote for it."
+    "Yuri takes the other three books and places them in her bag."
+    if ch14_player_choice:
+        y "Though that still leaves...[player]."
+        show yuri zorder 2 at t42
+        mc "Ah...right."
+        mc "Everyone else only has one book."
+        mc "I guess my choice here is obvious."
+        mc "It's the manga about the guy who is ordinary."
+        mc "The other manga I don't really relate to as much..."
+        if ch13_yuri_books:
+            mc "And the book Yuri gave me, while interesting, I don't know enough about."
+            "I look towards Yuri and she gives me a nod of understanding."
+        mc "So if we're narrowing it down to just one choice, I guess that's it."
+        show sayori 1d zorder 3 at f42
+        s "So now there's only five books to choose from."
+    else:
+        y 2ps "[player] doesn't have any books that we can vote on..."
+        y "So I guess that's it."
+        show sayori 1n zorder 3 at f42
+        show yuri zorder 2 at t43
+        s "Wow, we actually managed to narrow it down to four books!"
+    s 1a "I'm sure we can easily get a winner out of all this in one go."
+    s "So here's how the voting process is gonna work."
+    "Sayori pulls out a box from her bag and five small pieces of paper."
+    s "We should do it animosity."
+    show sayori zorder 2 at t42
+    show yuri 3po zorder 3 at f43
+    y "Animosity means strong hostility, Sayori."
+    y 3pp "D-Do you want us yelling at each other?"
+    y 3pq "Or maybe you meant anonymously."
+    y "Which means in secret."
+    show sayori 1l zorder 3 at f42
+    show yuri zorder 2 at t43
+    s "Ehehe, really?"
+    s "I didn't know they were different words!"
+    s 1q "But yeah, we're going to do it {i}anonymously{/i}."
+    s "So that we don't get influenced by what others are voting on."
+    "Sayori gives us all a small piece of paper."
+    s 2a "You can write the book you want on that."
+    s "Once you finish, fold it and put it in this box."
+    s "Then when everyone's done, we'll see what we all voted for!"
+    s "If you need time to think or anything, then take a minute now."
+    show sayori zorder 2 at t42
+    if natsuki_date and natsuki_approval > 2:
+        "Natsuki leans towards me and whispers."
+        show natsuki 4q zorder 3 at f41
+        n "[player]...what book are you voting for?"
+        n "I was originally going to vote for my book."
+        n "But after all you've done for me, I'd like to make sure the one you choose..."
+        n "Is the one that becomes the play."
+        n "It doesn't have to be mine or anything..."
+        n 4s "It's not like I'd get mad at you if you don't vote for me."
+        show natsuki zorder 2 at t41
+        mc "Natsuki...you don't have to do that."
+        mc "Just because we're dating doesn't mean--"
+        show natsuki 4o zorder 3 at f41
+        n "Look, just tell me."
+        n 4i "Before I change my mind."
+        show natsuki zorder 2 at t41
+        mc "Well..."
+        if not persistent.markov_agreed and not monika_type == 0:
+            menu:
+                mc "I was going to vote for..."
+                "Natsuki.":
+                    $ ch14_book_choice = "Natsuki"
+                    $ ch14_natyuri_choice[0] = "Natsuki"
+                    mc "You, actually."
+                    mc "I think your manga could be really fun to do a play on."
+                    mc "And it sounds really wholesome too."
+                    mc "People will love it."
+                "Yuri.":
+                    $ ch14_book_choice = "Yuri"
+                    $ ch14_natyuri_choice[0] = "Yuri"
+                    mc "I was thinking Yuri's book could be an interesting play."
+                    mc "It's horror but it might be fun."
+                "Monika.":
+                    $ ch14_book_choice = "Monika"
+                    $ ch14_natyuri_choice[0] = "Monika"
+                    mc "Monika's book seems really interesting to me."
+                    mc "I think it'd make a great play."
+                "Sayori.":
+                    $ ch14_book_choice = "Sayori"
+                    $ ch14_natyuri_choice[0] = "Sayori"
+                    mc "Sayori's book is really sad"
+                "Myself." if ch14_player_choice:
+                    $ ch14_book_choice = "Player"
+                    $ ch14_natyuri_choice[0] = "Player"
+                    mc "Well...my own book."
+                    mc "I know it sounds kinda selfish but I think it's a great book."
+            if ch14_book_choice != "Natsuki":
+                show natsuki 2c zorder 3 at f41
+                n "Really? Well, alright then..."
+                n "I hope you know what you're doing..."
+            else:
+                show natsuki 2d zorder 3 at f41
+                n "I'm not gonna argue with that choice."
+                n "Thank you, [player]."
+        else:
             $ ch14_book_choice = "Monika"
-        "Sayori.":
-            if sayori_personality > 0:
-                $ sayori_personality -= 1
-            $ ch14_book_choice = "Sayori"
-        "Myself." if ch14_player_choice:
-            $ ch14_book_choice = "Player"
+            $ ch14_natyuri_choice[0] = "Monika"
+            mc "It's Monika."
+            mc "I was going to vote for Monika."
+            show natsuki 2c zorder 3 at f41
+            n "You sound really sure of yourself."
+            n "I hope you know what you're doing..."
+        show natsuki zorder 2 at t41
+        "Natsuki leans back and writes something down on her paper."
+        "She then looks at me, folds the piece of paper and puts it into the box."
+    elif yuri_date and yuri_approval > 2:
+        "Yuri leans towards me and whispers."
+        show yuri 3pe zorder 3 at f43
+        y "I was going to vote for the book I brought in..."
+        y 3pa "But I want to give you something, [player]."
+        y "I'd like to know what you're voting for..."
+        y "So that we can make it the one to do a play on."
+        show yuri zorder 2 at t43
+        mc "Eh? Yuri are you sure about that?"
+        mc "I don't want to pressure you just because we're dating."
+        show yuri 3pb zorder 3 at f43
+        y "I'm sure."
+        y "Just tell me, quickly."
+        y "I won't be offended if you don't choose me."
+        show yuri zorder 2 at t43
+        mc "Well..."
+        if not persistent.markov_agreed and not monika_type == 0:
+            menu:
+                mc "I was going to vote for..."
+                "Natsuki.":
+                    $ ch14_book_choice = "Natsuki"
+                    $ ch14_natyuri_choice[1] = "Natsuki"
+                    mc "I was thinking of Natsuki's manga."
+                    mc "It sounds really wholesome and appropriate for a play."
+                "Yuri.":
+                    $ ch14_book_choice = "Yuri"
+                    $ ch14_natyuri_choice[1] = "Yuri"
+                    mc "You, actually."
+                    mc "I know it's a horror book but it could be really interesting to see people's reactions to it."
+                    mc "And it could be fun."
+                "Monika.":
+                    $ ch14_book_choice = "Monika"
+                    $ ch14_natyuri_choice[1] = "Monika"
+                    mc "Monika's book seems really interesting to me."
+                    mc "I think it'd make a great play."
+                "Sayori.":
+                    $ ch14_book_choice = "Sayori"
+                    $ ch14_natyuri_choice[1] = "Sayori"
+                    mc "Sayori's book is really sad"
+                "Myself." if ch14_player_choice:
+                    $ ch14_book_choice = "Player"
+                    $ ch14_natyuri_choice[1] = "Player"
+                    mc "Well...my own book."
+                    mc "I know it sounds kinda selfish but I think it's a great book."
+            if ch14_book_choice != "Yuri":
+                show yuri 2pa zorder 3 at f43
+                y "If that's your choice, then I'll respect it."
+                y "Let's hope it's a great play."
+            else:
+                show yuri 2pc zorder 3 at f43
+                y "You're too kind, [player]."
+                y 2pb "You won't regret this choice, I promise."
+        else:
+            $ ch14_book_choice = "Monika"
+            $ ch14_natyuri_choice[1] = "Monika"
+            mc "It's Monika."
+            mc "I was going to vote for Monika."
+            show yuri 2pf zorder 3 at f43
+            y "You sound really sure of yourself..."
+            y 2pb "Let's hope it means this is going to be a great play."
+        show yuri zorder 2 at t43
+        "Yuri leans back and writes something on the paper in front of her."
+        "She looks around before neatly folding the paper and putting it into the box."
+    else:
+        if not persistent.markov_agreed and not monika_type == 0:
+            menu:
+                "Who am I voting for?"
+                "Natsuki":
+                    $ ch14_book_choice = "Natsuki"
+                    $ natsuki_approval += 1
+                    "Natsuki's manga is really wholesome."
+                    "It could be fun to do a play on."
+                "Yuri.":
+                    $ ch14_book_choice = "Yuri"
+                    $ yuri_approval += 1
+                    "I should vote for Yuri's book."
+                    "It seems like it could be interesting."
+                "Monika.":
+                    $ ch14_book_choice = "Monika"
+                    "I think Monika's book is the best one here to do a play on."
+                    "So that's the one I'll vote for."
+                "Sayori.":
+                    if sayori_personality > 0:
+                        $ sayori_personality -= 1
+                    $ ch14_book_choice = "Sayori"
+                    "Sayori's book sounds really sad but...real for some reason."
+                    "I'm interested to see what kind of play that could be."
+                "Myself." if ch14_player_choice:
+                    $ ch14_book_choice = "Player"
+                    "I do like the manga that I chose to bring."
+                    "And seeing it as a play might be really interesting."
+        else:
+            $ ch14_book_choice = "Monika"
+            "I already know what I'm voting for."
+            "There's no competition."
+            "It has to be Monika's book, obviously."
+        "Everyone else puts their piece of paper into the box."
+    "I write down my choice then fold my piece of paper and put it into the box."
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     # After Choosing Book
     s "There's actually one thing I forgot to mention."
     s "It's pretty important so I'm not sure how I forgot it..."

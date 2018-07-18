@@ -2077,6 +2077,7 @@ default ch14_player_choice = True
 default ch14_player_manga = 3
 default ch14_twonovels_tell = False
 default ch14_book_choice = "Sayori"
+default ch14_natyuri_choice = ["Natsuki", "Yuri"]
 default ch14_overall_choice = "Sayori"
 
 default y_gave = False
