@@ -2659,7 +2659,7 @@ label ch14_end:
     if monika_type == 0:
         show monika 3a zorder 3 at f44
         m "I think Sayori is talking about voting on the books."
-        m "In the worse case, we'd all have votes in five differnt books."
+        m "In the worst case, we'd all have votes in five different books."
         m 3b "That would cause a stalemate and we wouldn't have a clear choice."
         m "I think there a couple of ways we could deal with that."
         m "One of them being to narrow down the book list."
@@ -2717,7 +2717,7 @@ label ch14_end:
     s 1a "It makes things a bit easier now."
     s "Is anyone else going to do it too?"
     "Sayori looks around the table."
-    show sayori zorder 2 at t41
+    show sayori zorder 2 at t42
     if monika_type == 0:
         show monika 1m zorder 3 at f44
         m "I suppose I can get rid of three of mine as well."
@@ -2803,7 +2803,7 @@ label ch14_end:
     else:
         show monika 2a zorder 3 at f44
         m "Which one? The one with the stalker?"
-    show yuri 3pb zorder 3 at f42
+    show yuri 3pb zorder 3 at f43
     show monika zorder 2 at t44
     y "Actually, it's the first book I talked about."
     y "The one about the radio and the entity controlling people."
@@ -2813,7 +2813,7 @@ label ch14_end:
     "Yuri takes the other three books and places them in her bag."
     if ch14_player_choice:
         y "Though that still leaves...[player]."
-        show yuri zorder 2 at t42
+        show yuri zorder 2 at t43
         mc "Ah...right."
         mc "Everyone else only has one book."
         mc "I guess my choice here is obvious."
@@ -2870,7 +2870,7 @@ label ch14_end:
         n 4i "Before I change my mind."
         show natsuki zorder 2 at t41
         mc "Well..."
-        if not persistent.markov_agreed and not monika_type == 0:
+        if not persistent.markov_agreed or monika_type == 0:
             menu:
                 mc "I was going to vote for..."
                 "Natsuki.":
@@ -2934,7 +2934,7 @@ label ch14_end:
         y "I won't be offended if you don't choose me."
         show yuri zorder 2 at t43
         mc "Well..."
-        if not persistent.markov_agreed and not monika_type == 0:
+        if not persistent.markov_agreed or monika_type == 0:
             menu:
                 mc "I was going to vote for..."
                 "Natsuki.":
@@ -2982,7 +2982,7 @@ label ch14_end:
         "Yuri leans back and writes something on the paper in front of her."
         "She looks around before neatly folding the paper and putting it into the box."
     else:
-        if not persistent.markov_agreed and not monika_type == 0:
+        if not persistent.markov_agreed or monika_type == 0:
             menu:
                 "Who am I voting for?"
                 "Natsuki":
