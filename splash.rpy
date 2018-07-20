@@ -502,6 +502,8 @@ label after_load:
         $ m_appealS = 0
     if not hasattr(store,'m_appealS'):
         $ m_appealS = 0
+    if not hasattr(store,'m_hairdown_poemglitch'):
+        $ m_hairdown_poemglitch = False
     if not hasattr(store,'sayarcpoemwinner'):
         $ sayarcpoemwinner = ['sayori', 'sayori', 'sayori']
     if not hasattr(store,'ch13poemwinner'):
@@ -514,6 +516,28 @@ label after_load:
         $ ch13_music_type = "harmonic"
     if not hasattr(store,'ch13_yuri_books'):
         $ ch13_yuri_books = False
+    if not hasattr(store,'ch13_natsuki_books'):
+        $ ch13_natsuki_books = False
+    if not hasattr(store,'ch13_cleaneye'):
+        $ ch13_cleaneye = False
+    if not hasattr(store,'natsuki_outing'):
+        $ natsuki_outing = False
+    if not hasattr(store,'ch14poemwinner'):
+        $ ch14poemwinner = "Sayori"
+    if not hasattr(store,'ch14markovikatell'):
+        $ ch14markovikatell = False
+    if not hasattr(store,'ch14_player_choice'):
+        $ ch14_player_choice = True
+    if not hasattr(store,'ch14_player_manga'):
+        $ ch14_player_manga = 0
+    if not hasattr(store,'ch14_twonovels_tell'):
+        $ ch14_twonovels_tell = False
+    if not hasattr(store,'ch14_book_choice'):
+        $ ch14_book_choice = "Sayori"
+    if not hasattr(store,'ch14_natyuri_choice'):
+        $ ch14_natyuri_choice = ["Natsuki", "Yuri"]
+    if not hasattr(store,'ch14_overall_choice'):
+        $ ch14_overall_choice = "Sayori"
 
     # Normal Stuff
     if persistent.playthrough == 0:

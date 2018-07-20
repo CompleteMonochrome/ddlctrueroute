@@ -4,6 +4,8 @@ label ch0_main:
         except: pass
         try: os.remove(config.basedir + "/game/script-saturday.txt.txt")
         except: pass
+        try: os.remove(config.basedir + "/game/script-saturday.rtf")
+        except: pass
     $ m_name = '???'
     stop music fadeout 2.0
     scene black

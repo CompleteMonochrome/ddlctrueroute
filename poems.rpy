@@ -303,6 +303,66 @@ And for the first time in eternity
 I've come to my senses."""
 )
 
+    poem_y7 = Poem(
+author = "yuri",
+title = "Final Grasp",
+text = """\
+It's all coming to a close
+The curtain falls and the crowd claps.
+I focus on my ears to listen
+Yet all I hear is the sound of silence.
+
+My emotions return
+Within my grasp once more.
+Colors flutter in my retinas
+Filling my vision yet I see nothing.
+Nothing to see, nothing to hear
+My grasp tightens.
+
+It tightens and tightens
+Blood seeps out.
+Was it because of my grasp?
+Am I holding too tightly?
+Hoping that this whole act doesn't end?
+I sense the unease coming from my grip.
+Thus I loosen my grasp.
+
+The silence and blindess returns.
+Does freedom come at a cost?
+I desperately look for something to grasp.
+One final grasp before it all ends
+Yet there is nothing.
+Floating in a space without sound, without vision.
+And no one to grasp."""
+)
+
+    poem_y7b = Poem(
+author = "yuri",
+title = "Approach",
+text = """\
+Was all of that a prelude?
+Something dark, something sinister approaches.
+I look around for the one
+The one I trust more than all.
+He sees me, our eyes meet and soon
+We are within each other's grasp.
+
+But we're being pulled apart.
+It's as if the closer we approach each other
+The further our grasp must go.
+I long for his touch
+Yet it seems impossible to reach.
+The more we approach
+The lesser our reach.
+
+The feeling has returned
+But what use is it now?
+For without his presence
+There are no feelings worth having.
+Forever on the apporach
+Forever out of reach."""
+)
+
     poem_n1 = Poem(
     author = "natsuki",
     title = "Eagles Can Fly",
@@ -622,6 +682,54 @@ But there's one thing I'm certain of
 Not hidden in the unknown.
 I feel nothing at all
 Except when I'm with you."""
+    )
+
+    poem_n9 = Poem(
+    author = "natsuki",
+    title = "Sweet Dreams",
+    text = """\
+A spoonful of sugar
+A trick to drive away the taste of before.
+Is it enough?
+
+A new life, almost like a dream.
+So sweet but is it real?
+Could this just be that spoonful of sugar?
+I want to believe
+I want to cherish what I have
+But theres no time for sweet dreams."""
+    )
+
+    poem_n9b = Poem(
+    author = "natsuki",
+    title = "Bitter Reality",
+    text = """\
+A sweet smile.
+That's what I'll show
+Because after all, this is just a show.
+
+Those were my thoughts
+A sweet life coated by lies.
+Lies to make this reality.
+Tasty lies to keep me believing
+And bitter lies to keep me in check.
+
+I saw through the lies of the show.
+Yet the lie I thought of the most
+Was my only truth.
+A lie that looked sweet as icing
+A lie that would show me the bitter reality.
+
+I stayed.
+The lie grew closer
+I didn't resist.
+A lie and my feelings
+A certain recipe for disaster.
+
+But it was no lie
+It was my only reality.
+That lie I assumed bitter
+Has become my sweet reality."""
     )
 
     poem_s1 = Poem(
@@ -969,6 +1077,53 @@ But I can't give in.
 These walls must stay up
 Just a little longer
 Then my emotions can be free."""
+)
+
+    poem_s9 = Poem(
+author = "sayori",
+title = "Doubt",
+text = """\
+A sad truth comes to mind
+The truth that those decisions are full of doubt.
+No one is certain, but there is suspicion.
+The doubts continue to pour in
+Can they ever disappear?
+
+A secret few know
+The doubts are true.
+All the trust built
+Would sadly be gone if the doubts were true.
+Hide the doubts, show a smile
+Be the happy leader for a while.
+
+But in that while
+I begin to doubt.
+I've become like them
+Doubting the one who is responsible.
+Doubting the one who tries to bring happiness.
+Doubting myself."""
+)
+
+    poem_s9b = Poem(
+author = "sayori",
+title = "Hang On",
+text = """\
+Nearing the end
+All this time and effort
+The fruits of my labor are coming to a close.
+I should be happy.
+It's all coming to an end
+So why is there tears?
+
+A bittersweet outcome
+The perfect word to describe it.
+I'm happy for my friends
+But I'm sad that all it has to end.
+
+But it must end
+Because this was all for them.
+So I just have to hang on
+Then I can bring one final smile to their faces."""
 )
 
     poem_m1 = Poem(
@@ -1610,6 +1765,127 @@ Then,
 
 
         A reprise."""
+)
+
+    poem_m11 = Poem(
+author = "monika",
+title = "Intermission",
+text = """\
+An intermission
+A short break
+That's all it is.
+
+All of them
+Will soon see,
+
+    See the truth.
+
+Already the doubts
+They begin to stir,
+
+Deep within their subconscious.
+
+A manifestation of my will
+Through the power of a vessel
+They will deliver doubt.
+
+The longer the intermission
+The more doubt.
+
+This hole in my heart
+Will soon become
+    Their misery.
+
+A hole in the wall
+Shrinking by itself.
+By the end of the intermission
+It shall be
+
+
+        Nothing."""
+)
+
+    poem_m11b = Poem(
+author = "monika",
+title = "Simulation",
+text = """\
+Am I just simulating?
+Feelings are overwhelming my senses
+My direction, my thoughts
+My,
+    Goal.
+
+Could these really be real?
+I don't want to feel dependent
+Yet it feels so right.
+
+It's just,
+
+    These feelings.
+
+I cannot stop
+I cannot deny
+So I comply.
+
+I have a goal
+But I also seek happiness.
+Which one will overcome in the end?
+
+This simulation of love
+This goal of retribution,
+
+        How will I choose,
+
+When the simulation becomes real?"""
+)
+
+    poem_m11c = Poem(
+author = "monika",
+title = "Mirror",
+text = """\
+In this state
+I can
+    Be happy.
+Yet when I peer through the window
+I see a mirror.
+
+I know she can take us
+Take us further than ever.
+So why is there doubt
+Doubt that she won't?
+
+
+Doubt that the window
+Will become,
+
+
+    A mirror.
+
+
+Within the void of my thoughts
+I see
+    The seed of doubt.
+The seed that demands an answer
+Where,
+
+    Will she take us?
+
+After everything
+What is there?
+Will I still be here?
+Will I be in an empty space forever?
+
+And that hole.
+Why does it fade?
+It should be getting larger
+    Yet its smaller than ever.
+Is this what I think?
+
+Windows are not mirrors
+But with enough focus
+One can see
+
+    A reflection."""
 )
 
 image paper = "images/bg/poem.jpg"
