@@ -1068,7 +1068,7 @@ label choose_start:
         else:
             $ natsuki_approval += 1
             $ ch12_outcome = 2
-            s "So her dad is gone..."
+            s "Her dad is gone..."
             s "I don't really know how she's feeling about that."
     else:
         if check_whole_house:
@@ -1081,7 +1081,7 @@ label choose_start:
             if natsuki_approval > 0:
                 $ natsuki_approval -= 1
             $ ch12_outcome = 0
-            s "So Natsuki lives by herself now?"
+            s "Natsuki lives by herself now?"
             s "I...don't really know how to feel about that."
             s "Her problem is solved but..."
 
