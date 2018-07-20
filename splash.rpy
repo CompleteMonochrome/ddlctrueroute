@@ -536,8 +536,18 @@ label after_load:
         $ ch14_book_choice = "Sayori"
     if not hasattr(store,'ch14_natyuri_choice'):
         $ ch14_natyuri_choice = ["Natsuki", "Yuri"]
+    if not hasattr(store,'ch14_votes'):
+        $ ch14_votes = [0, 0, 0, 0, 0]
     if not hasattr(store,'ch14_overall_choice'):
         $ ch14_overall_choice = "Sayori"
+
+    # Because of a change in an update - remove with 0.9.4f
+    if ch14_book_choice == "Player":
+        $ ch14_book_choice = player
+    if ch14_natyuri_choice[0] == "Player":
+        $ ch14_natyuri_choice[0] = player
+    if ch14_natyuri_choice[1] == "Player":
+        $ ch14_natyuri_choice[1] = player
 
     # Normal Stuff
     if persistent.playthrough == 0:

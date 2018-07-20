@@ -2895,8 +2895,8 @@ label ch14_end:
                     $ ch14_natyuri_choice[0] = "Sayori"
                     mc "Sayori's book is really sad"
                 "Myself." if ch14_player_choice:
-                    $ ch14_book_choice = "Player"
-                    $ ch14_natyuri_choice[0] = "Player"
+                    $ ch14_book_choice = player
+                    $ ch14_natyuri_choice[0] = player
                     mc "Well...my own book."
                     mc "I know it sounds kinda selfish but I think it's a great book."
             if ch14_book_choice != "Natsuki":
@@ -2958,8 +2958,8 @@ label ch14_end:
                     $ ch14_natyuri_choice[1] = "Sayori"
                     mc "Sayori's book is really sad"
                 "Myself." if ch14_player_choice:
-                    $ ch14_book_choice = "Player"
-                    $ ch14_natyuri_choice[1] = "Player"
+                    $ ch14_book_choice = player
+                    $ ch14_natyuri_choice[1] = player
                     mc "Well...my own book."
                     mc "I know it sounds kinda selfish but I think it's a great book."
             if ch14_book_choice != "Yuri":
@@ -3006,9 +3006,17 @@ label ch14_end:
                     "Sayori's book sounds really sad but...real for some reason."
                     "I'm interested to see what kind of play that could be."
                 "Myself." if ch14_player_choice:
-                    $ ch14_book_choice = "Player"
+                    $ ch14_book_choice = player
                     "I do like the manga that I chose to bring."
                     "And seeing it as a play might be really interesting."
+                    if monika_type == 0:
+                        "I notice Monika look at me from the corner of my eye."
+                        "She looks like she crossed out something on her piece of paper."
+                        "I wonder what she was doing..."
+                    elif sayori_personality == 0 or (sayori_confess and not sayori_dumped):
+                        "Out of the corner of my eye, I see Sayori look towards me."
+                        "She rolls her eyes and smiles slightly."
+                        "I wonder what that was about...?"
         else:
             $ ch14_book_choice = "Monika"
             "I already know what I'm voting for."
@@ -3016,19 +3024,267 @@ label ch14_end:
             "It has to be Monika's book, obviously."
         "Everyone else puts their piece of paper into the box."
     "I write down my choice then fold my piece of paper and put it into the box."
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
+    "I wonder who everyone else voted for?"
+    "It was probably themselves, right?"
+    "It would only make sense."
+    if ((natsuki_date and natsuki_approval > 2) or (yuri_date and yuri_approval > 2)) and ch14_player_choice:
+        if natsuki_date:
+            "So what would have happend if Natsuki didn't ask who I was voting for?"
+        else:
+            "So what would have happened if Yuri didn't vote with me?"
+        "Would we all have ended up with one vote?"
+        "There wouldn't be a winner in that case, right?"
+        "So how would we go about it then?"
+        "Maybe Sayori has some sort of backup plan."
+    elif ch14_book_choice == player:
+        "Maybe everyone voted for themselves."
+        "I voted for myself..."
+        "Does that mean we all have one vote?"
+        "How is it going to work if that's the case?"
+        "If we do a revote, then we're still going to vote on our own books."
+        "Unless Sayori has some sort of plan..."
+    show sayori 2a zorder 3 at f42
+    s "Alright, everybody!"
+    s "We've all made our votes."
+    s "So why don't we see who we all voted for?"
+    s 2d "Don't worry, I'm not going to say who voted for who..."
+    s "Even though I can kinda tell from your handwriting."
+    s "I'll just count up the votes."
+    "Everyone turns towards Sayori as she opens the lid of the box."
+    "She turns it upside down and five folded pieces of paper fall out of it."
+    s 2c "Let's see here..."
+    "She picks up the first piece of paper and unfolds it."
+    # Monika votes for player
+    if monika_type == 0 and ch14_book_choice == player and not ((natsuki_date and natsuki_approval > 2) or (yuri_date and yuri_approval > 2)):
+        $ ch14_votes[4] += 1
+        s 2l "It's a vote for...[player]."
+        s "Ehehe, alright then..."
+    # Monika votes for herself
+    else:
+        $ ch14_votes[2] += 1
+        s 2a "It's a vote for Monika!"
+        s "I wonder if the book we end up choosing will be hers."
+    s 2b "Anyway, we still have four more to go."
+    s "It's still anyone's book at this point."
+    "Sayori picks up another piece of paper."
+    s "And this vote goes to..."
+    "She unfolds it."
+    # Natsuki votes for player choice
+    if ch14_natyuri_choice[0] != "Natsuki":
+        if ch14_natyuri_choice[0] == "Yuri":
+            $ ch14_votes[1] += 1
+        elif ch14_natyuri_choice[0] == "Monika":
+            $ ch14_votes[2] += 1
+        elif ch14_natyuri_choice[0] == "Sayori":
+            $ ch14_votes[3] += 1
+        else:
+            $ ch14_votes[4] += 1
+        if ch14_natyuri_choice[0] == "Sayori":
+            s 2q "Oh look, it's a vote for me!"
+        else:
+            s 2n "It's a vote for [ch14_natyuri_choice[0]]. "
+        s "Alright, then..."
+    # Natsuki votes for herself
+    else:
+        $ ch14_votes[0] += 1
+        s 2d "It looks like Natsuki got a vote."
+        s "Moving on..."
+    "Sayori discards the second piece of paper and picks up the third one."
+    s 2c "Three more to go!"
+    "She quickly unfolds it."
+    # Yuri votes for player choice
+    if ch14_natyuri_choice[1] != "Yuri":
+        if ch14_natyuri_choice[1] == "Natsuki":
+            $ ch14_votes[0] += 1
+        elif ch14_natyuri_choice[1] == "Monika":
+            $ ch14_votes[2] += 1
+        elif ch14_natyuri_choice[1] == "Sayori":
+            $ ch14_votes[3] += 1
+        else:
+            $ ch14_votes[4] += 1
+        if ch14_natyuri_choice[1] == "Sayori":
+            s 2q "A vote for me!"
+        else:
+            s 2a "A vote for [ch14_natyuri_choice[1]]."
+    # Yuri votes for herself
+    else:
+        $ ch14_votes[1] += 1
+        s 2d "So this is a vote for Yuri."
+    s "I don't think we have a clear choice yet."
+    s 2o "So let's keep going."
+    show sayori zorder 2 at t42
+    show yuri 3pa zorder 3 at f43
+    y "This is thrilling, in a way."
+    y "I wonder whose book is going to win..."
+    show sayori 2d zorder 3 at f42
+    show yuri zorder 2 at t43
+    s "It's not really a competition or anything."
+    s "But I'm also excited to see whose book is going to be chosen."
+    s 2a "Anyway, let's see what the next vote is."
+    "Sayori unfolds the fourth piece of paper."
+    # Sayori votes for player
+    if ((sayori_confess and not sayori_dumped) or sayori_personality == 0) and ch14_book_choice == player:
+        $ ch14_votes[4] += 1
+        s 2d "Ah..."
+        "She looks at it and smiles weakly."
+        s "It's a vote for [player]."
+    # Sayori votes for herself
+    else:
+        $ ch14_votes[3] += 1
+        s 2q "Look like it's a vote for me!"
+    "Sayori puts the paper aside with the other ones that have been counted."
+    s 1b "That still isn't enough votes to have a majority yet."
+    # Everyone has one vote so far
+    if ch14_votes[0] < 2 and ch14_votes[1] < 2 and ch14_votes[2] < 2 and ch14_votes[3] < 2 and ch14_votes[4] < 2:
+        s 1c "If there isn't a majority by the end of everything then we'll just go with who has the most votes."
+        s "Which will be two..."
+        show natsuki 2c zorder 3 at f41
+        show sayori zorder 2 at t42
+        n "Only two votes?"
+        n "It's not a majority but I guess it makes sense."
+        show natsuki zorder 2 at t41
+        show sayori 1a zorder 3 at f42
+        s "It just makes things easier."
+        s "There are only five of us after all."
+    # Someone has two votes
+    else:
+        s 1c "We might actually get a majority vote."
+        s "It only takes three after all."
+        show natsuki 2c zorder 3 at f41
+        show sayori zorder 2 at t42
+        n "It only takes three votes?"
+        n "I guess that makes sense."
+        show natsuki zorder 2 at t41
+        show sayori 1a zorder 3 at f42
+        s "Well, there are only five of us."
+        s "It might be a tie between two books."
+        s 1d "In that case, we'll just do a revote on those two books only."
+    s 1b "But there's still one vote that hasn't been counted yet."
+    s "So let's see what book it's for..."
+    "Sayori takes the last piece of paper and unfolds it."
+    if ch14_book_choice == "Sayori":
+        $ ch14_votes[3] += 1
+        s 1n "It's a vote for me...?"
+        s 1l "Ehehe, okay..."
+    else:
+        if ch14_book_choice == "Natsuki":
+            $ ch14_votes[0] += 1
+        elif ch14_book_choice == "Yuri":
+            $ ch14_votes[1] += 1
+        elif ch14_book_choice == "Monika":
+            $ ch14_votes[2] += 1
+        elif ch14_book_choice == "Sayori":
+            $ ch14_votes[3] += 1
+        else:
+            $ ch14_votes[4] += 1
+        s 1c "It's a vote for [ch14_book_choice]."
+    s 3a "That's all of them."
+    "Sayori holds the box upside down and shakes it."
+    show sayori zorder 2 at t42
+    mc "Why did you do that?"
+    mc "That was five votes."
+    show sayori zorder 3 at f42
+    s 3l "Just making sure..."
+    s "Anyway..."
+    if ch14_votes[0] >= 3:
+        $ ch14_overall_choice = "Natsuki"
+        s 3a "I think I counted three votes for Natsuki's manga."
+        s "That means Natsuki has the majority vote!"
+        jump ch14_natsukiwin_cont
+    elif ch14_votes[1] >= 3:
+        $ ch14_overall_choice = "Yuri"
+        s 3a "I'm pretty sure I counted three votes for Yuri's choice."
+        s "That means Yuri's book is chosen!"
+        jump ch14_yuriwin_cont
+    elif ch14_votes[2] >= 3:
+        $ ch14_overall_choice = "Monika"
+        s 3a "That was three votes for Monika's choice..."
+        s "That means we're going to do Monika's book!"
+        jump ch14_monikawin_cont
+    elif ch14_votes[3] >= 3:
+        $ ch14_overall_choice = "Sayori"
+        s 3c "That was three votes for my choice, right?"
+        s 3q "So that means we're doing my book!"
+        jump ch14_sayoriwin_cont
+    elif ch14_votes[4] >= 3:
+        $ ch14_overall_choice = player
+        s 3d "Ehehe, I counted three votes for [player]'s choice.'"
+        s "We're doing [player]'s book then!"
+        jump ch14_playerwin_cont
+    else:
+        s 3b "That means there isn't really a majority vote."
+        s "So that means that whoever got two votes has their book chosen..."
+        if ch14_votes[0] >= 2:
+            $ ch14_overall_choice = "Natsuki"
+            s 3q "...Which means Natsuki has the majority vote!"
+            label ch14_natsukiwin_cont:
+        elif ch14_votes[1] >= 2:
+            $ ch14_overall_choice = "Yuri"
+            s 3q "...Which means Yuri's book is chosen!"
+        elif ch14_votes[2] >= 2:
+            $ ch14_overall_choice = "Monika"
+            s 3q "...Which means we're going to do Monika's book!"
+        elif ch14_votes[3] >= 2:
+            $ ch14_overall_choice = "Sayori"
+            s 3r "So that means we're doing my book!"
+        elif ch14_votes[4] >= 2:
+            $ ch14_overall_choice = player
+            s 3d "...Looks like we're doing [player]'s book then!"
+        else:
+            s 3m "Which is no one."
+            "Sayori thinks for a second."
+            s 3l "Wait...we all voted for ourselves, didn't we?"
+            s "How did I not see this coming?"
+            show natsuki 2m zorder 3 at f41
+            show sayori zorder 2 at t42
+            n "So what's going to happen?"
+            n "There's no winner, and if we vote again on the same books then it's going to happen again."
+            show natsuki zorder 2 at t41
+            show sayori 3f zorder 3 at f42
+            s "I know, I know!"
+            s "What's the easiest way to do this...?"
+            show sayori zorder 2 at t42
+            if monika_type == 0:
+                show monika 1c zorder 3 at f44
+                m "One of us could get rid of our book."
+                m "That way, there's only four choices but five people."
+                m "So we're guaranteed to find a book."
+                m 1e "Though it does come at the cost of being a bit unfair..."
+            elif monika_type == 1 and ch12_markov_agree:
+                show monika 1hc zorder 3 at f44
+                m "I suggest one of us get rid of our book."
+                m "It's the easiest way, though a bit unfair for that person."
+                m 1ha "At least that way, we're guaranteed to find a result."
+            else:
+                show monika 1c zorder 3 at f44
+                m "It might be easier to just get rid of one of our books."
+                m 1d "Since there's five of us and only four books, we're guaranteed to have at least one book with two votes."
+                m "There's no other way."
+                call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     # After Choosing Book
-    s "There's actually one thing I forgot to mention."
+    s 1a "So we're finally done voting!"
+    s "I'm going to quickly do something, but the meeting isn't over yet."
+    show sayori zorder 2 at t42
+    show yuri 3pe zorder 3 at f43
+    y "Where are you going, Sayori?"
+    y "The president can't just leave in the middle of the meeting without telling us..."
+    show sayori 1d zorder 3 at f42
+    show yuri zorder 2 at t43
+    s "I can't tell you."
+    s "Just stay here for a little bit, I won't be long."
+    "Sayori gets up and heads for the door."
+    s 1l "There's actually one thing I forgot to mention."
     s "It's pretty important so I'm not sure how I forgot it..."
-    show natsuki zorder 3 at f41
+    show natsuki 1c zorder 3 at f41
     show sayori zorder 2 at t42
     n "What's so important?"
     show natsuki zorder 2 at t41
-    show sayori zorder 3 at f42
+    show sayori 1c zorder 3 at f42
     s "The book we chose..."
     s "The person who suggested it should be the director of the play."
-    s "Since they know it the best!"
+    s "Since they know it the best."
     s "Does anyone disagree?"
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch14_exclusive_yuri:
