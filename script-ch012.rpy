@@ -1071,7 +1071,7 @@ label ch12_play:
     if not ch11_read_manga and not ch11_did_all_tasks:
         s "Especially since I know you didn't really have time to finish the manga..."
         mc "Eh? How can you tell?"
-        s 1c "Well, Monika told me that she went went over to your house last night."
+        s 1c "Well, Monika told me that she went over to your house last night."
         mc "And you can tell I didn't finish off the manga because of that?"
         s "Something like that."
         mc "You can read me pretty easily, can't you?"
@@ -1750,7 +1750,7 @@ label ch12_play:
     show monika zorder 2 at t41
     show yuri 3pf zorder 3 at f44
     y "Um..."
-    y "[player] and Monika you seem to know Natsuki's dad..."
+    y "[player] and Monika, you seem to know Natsuki's dad..."
     y "Have you met before?"
     show yuri zorder 2 at t44
     mc "It's a long story, Yuri."
@@ -1782,7 +1782,7 @@ label ch12_play:
         d 1j "I'll take any chance..."
         d "...I just want to see her face again..."
     else:
-        "Yasuhiro's face looks visibly more impatient."
+        "His face looks visibly more impatient."
         show dadsuki 1g zorder 3 at f43
         d "I'm just waiting for someone that knows where she is to arrive."
         d "I heard the sound of Haruki's voice on the phone."
@@ -1814,7 +1814,7 @@ label ch12_play:
         d "...that she left, because of me."
         d 1k "And still I..."
         show dadsuki zorder 2 at t43
-        "Despte his actions not being excusable..."
+        "Despite his actions not being excusable..."
         "I can hear the remorse in his voice."
         "It's almost like he's a changed person..."
         "But what caused this change of heart?"
@@ -1864,7 +1864,7 @@ label ch12_play:
     n 4n "She's been gone for..."
     show natsuki zorder 2 at t42
     show dadsuki zorder 3 at f43
-    if check_some_house:
+    if check_whole_house:
         d 1l "Natsuki, I..."
         d "Sigh..."
         d "I know it's like I'm just clinging on to hope."
@@ -2293,7 +2293,7 @@ label ch12_harukiplace:
     mc "Oh no..."
     mc "Did I do this?"
     mc "How do I stop it?"
-    "I pace around the gym, suprisingly the others are playing along as if they were frozen too."
+    "I pace around the gym, surprisingly the others are playing along as if they were frozen too."
     "I think I even caught Yasuhiro freeze for a little bit."
     mc "This is bad...this is bad...this is--"
     show sayori 2m zorder 3 at f43
@@ -2303,7 +2303,7 @@ label ch12_harukiplace:
     show sayori zorder 2 at t43
     m "Hmm..."
     m "He performed a time stop, didn't he?"
-    m 2d "Quite suprising."
+    m 2d "Quite surprising."
     m "Am I right?"
     show monika zorder 2 at t41
     mc "I-I think you're right."
@@ -2401,7 +2401,7 @@ label ch12_harukiplace:
         show dadsuki zorder 2 at t33
         mo "Wait your turn, Yasuhiro."
         show dadsuki 1l
-        "Yasuhiro looks suprised but reluctantly agrees."
+        "Yasuhiro looks surprised but reluctantly agrees."
         mo 1g "I'm sorry Natsuki..."
         mo "For everything."
         mo 1h "I know you might not be able to forgive me..."
@@ -2556,7 +2556,7 @@ label ch12_harukiplace:
             d "...well, it would hurt me too..."
             show momsuki 1h zorder 3 at f51
             show dadsuki zorder 2 at t53
-            mo "So...that's it, is it?"
+            mo "So...that's it, isn't it?"
             mo "..."
             mo 1g "Yasuhiro..."
             mo "I think that warrants a private discussion."
@@ -2774,7 +2774,7 @@ label ch12_harukiplace:
             mo "None of you should have to watch this if you don't want to..."
             mo "So leave now if you're feeling uncomfortable."
             show momsuki zorder 2 at t41
-            "Suprisingly, no one else leaves."
+            "Surprisingly, no one else leaves."
             "I guess they're all as interested as I am to see how this ends."
             show dadsuki 1i zorder 3 at f43
             d "Sigh..."
@@ -3152,7 +3152,7 @@ label ch12_harukinoplace:
         d "It was definitely your voice I heard on the phone after Haruki's."
     show sayori 1c zorder 3 at f51
     show dadsuki zorder 2 at t54
-    s "Well, what did the phone on the voice say?"
+    s "Well, what did the voice on the phone say?"
     s "Was she going to meet you in here?"
     show sayori zorder 2 at t51
     show dadsuki zorder 3 at f54
@@ -3362,7 +3362,7 @@ label ch12_harukinoplace:
     mc "Oh no..."
     mc "Did I do this?"
     mc "How do I stop it?"
-    "I pace around the gym, suprisingly the others are playing along as if they were frozen too."
+    "I pace around the gym, surprisingly the others are playing along as if they were frozen too."
     "I think I even caught Yasuhiro freeze for a little bit."
     mc "This is bad...this is bad...this is--"
     show sayori 2m zorder 3 at f43
@@ -3372,7 +3372,7 @@ label ch12_harukinoplace:
     show sayori zorder 2 at t43
     m "Hmm..."
     m "He performed a time stop, didn't he?"
-    m 2d "Quite suprising."
+    m 2d "Quite surprising."
     m "Am I right?"
     show monika zorder 2 at t41
     mc "I-I think you're right."
@@ -3541,6 +3541,7 @@ label ch12_harukinoplace:
         d 1l "Smile."
         show dadsuki zorder 2 at t51
         "Natsuki's expression eases a little bit."
+        show natsuki 12d
         "She turns away from everyone and covers her face."
         "I hear a soft sound coming from her, almost like a whimper."
         show dadsuki 1n zorder 3 at f51
@@ -3572,6 +3573,7 @@ label ch12_harukinoplace:
         show monika zorder 2 at t51
         show dadsuki zorder 2 at t52
         "Yasuhiro moves towards Natsuki."
+        show natsuki 1o
         "She briefly turns and looks at him before turning away again."
         d 1k "Natsuki."
         d "You know I was never really good at this."
@@ -3801,7 +3803,7 @@ label ch12_harukinoplace:
             m "...that almost sounded like a threat."
         else:
             m "You're getting serious now, Sayori."
-            m "This sure makes things lot more interesting."
+            m "This sure makes things a lot more interesting."
         show monika zorder 2 at t52
         show natsuki 2r zorder 3 at hf53
         n "G-Guys!"
@@ -3822,6 +3824,8 @@ label ch12_harukinoplace:
         d "So just keep your mouth shut and this will all be over soon."
         show dadsuki zorder 2 at t51
         show sayori 2j zorder 3 at f54
+        if monika_type == 0:
+            show monika 1d
         play music t9g fadein 3.0
         s "..."
         s "You're really pushing your boundaries, Yasuhiro."
@@ -3829,7 +3833,7 @@ label ch12_harukinoplace:
         show dadsuki 1m zorder 3 at f51
         show sayori zorder 2 at t54
         d "Ahahahahahaha!"
-        d "Are you seriously tell me what to do?"
+        d "Are you seriously telling me what to do?"
         d 1f "You have no idea what you're getting into, girl."
         show dadsuki zorder 2 at t51
         show sayori 2k zorder 3 at f54
@@ -3899,7 +3903,7 @@ label ch12_harukinoplace:
         show sayori zorder 2 at t54
         if monika_type == 0:
             m "Sayori..."
-            m "Where are you planing on going?"
+            m "Where are you planning on going?"
         else:
             m "Hm."
             m "Sayori, where are you going?"
@@ -4056,7 +4060,7 @@ label ch12_harukinoplace:
         show monika zorder 3 at f32
         if monika_type == 0:
             m "I'm just glad today ended without anything terrible happening..."
-            m "I hope it's the same for tomrrow..."
+            m "I hope it's the same for tomorrow..."
         else:
             m "So the day is finally over."
             m "I'll see you three soon."
