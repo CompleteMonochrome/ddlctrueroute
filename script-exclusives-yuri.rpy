@@ -912,7 +912,7 @@ label yuri_exclusive_4:
                 stop music
                 show yuri glitch_sayori zorder 2 at t32
                 $ y_name = "Yuri?"
-                pause 1.2
+                $ pause(1.2)
                 $ config.skipping = False
                 $ config.allow_skipping = False
                 y "Um..."
@@ -951,7 +951,7 @@ label yuri_exclusive_4:
                     show screen tear(20, 0.1, 0.1, 0, 40)
                     window hide(None)
                     play sound "sfx/s_kill_glitch1.ogg"
-                    pause 0.25
+                    $ pause(0.25)
                     stop sound
                     hide screen tear
                     window show(None)
@@ -969,7 +969,7 @@ label yuri_exclusive_4:
                 show yuri glitch_sayori zorder 2 at t32
                 $ y_name = "Yuri"
                 $ persistent.sayori_reload_yuri_message = False
-                pause 1.2
+                $ pause(1.2)
                 $ _history_list = []
                 $ config.allow_skipping = True
                 play music t6b
