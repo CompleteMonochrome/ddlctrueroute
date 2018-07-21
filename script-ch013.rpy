@@ -3603,7 +3603,7 @@ label ch13_exclusive_monika:
     "Monika's house does not seem particularly impressive."
     "It looks nearly identical to the houses around it."
     "That said, it's definitely not a bad house."
-    "It's just not somewhere I thought Monika would be living in given her...popularity."
+    "It's just not somewhere I thought Monika would be living in, given her...popularity."
     if monika_type == 0:
         m 4b "Ahaha, welcome to my humble abode~"
         "Monika looks at me quizzically."
@@ -3843,7 +3843,7 @@ label ch13_exclusive_monika:
         m "...less than ideal state."
         m 1hn "I want to apologize again for that."
         mc "I don't blame you."
-        mc "It must have been hard work to develop your own song."
+        mc "It must have been hard work to compose your own song."
         m 1he "Ahaha, yeah it was a little bit."
         "Monika's face suddenly lights up."
         m 1ha "Actually, do you want to hear a little bit?"
