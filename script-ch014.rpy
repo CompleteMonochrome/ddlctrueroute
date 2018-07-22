@@ -3260,7 +3260,69 @@ label ch14_end:
                 m "It might be easier to just get rid of one of our books."
                 m 1d "Since there's five of us and only four books, we're guaranteed to have at least one book with two votes."
                 m "There's no other way."
-                call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
+            show sayori zorder 3 at f42
+            show monika zorder 2 at t44
+            s "I know but..."
+            s "I don't want to be mean to anybody."
+            s "So I'll ask first."
+            s "Is anyone going to volunteer?"
+            "I voted for my own book."
+            "I don't exactly want to volunteer for this."
+            "Maybe somebody else will...?"
+            s "Anyone at all?"
+            s "I don't exactly want to force anybody..."
+            s "We might have to do it randomly and that will just be worse for whoever is chosen."
+            s "So are you all sure you want to do it this way?"
+            "Sayori looks at each of us."
+            s "Well...alright."
+            # High Enough Approval with Natsuki or Yuri makes them get rid of their book and vote for you
+            if yuri_approval > 4:
+                show sayori zorder 2 at t42
+                "Yuri looks at me."
+                show yuri zorder 3 at f44
+            elif natsuki_approval > 4:
+                show sayori zorder 2 at t42
+                "Natsuki turns towards me."
+                show natsuki zorder 3 at f41
+                n "Ugh...I can't believe I'm doing this."
+                n "I...volunteer to get rid of my book."
+                show natsuki zorder 2 at t44
+                show sayori zorder 3 at f42
+                s "Eh? Are you sure, Natsuki?"
+                s "Like I said, I don't want to force anybody if I don't need to."
+                show natsuki zorder 3 at f41
+                show sayori zorder 2 at t42
+                n "I'm sure."
+                show natsuki zorder 2 at t41
+                show yuri zorder 3 at f43
+                y "That's surprisingly mature of you, Natsuki."
+                show natsuki zorder 3 at f41
+                show yuri zorder 2 at t43
+                n "Ugh! What's {i}that{/i} supposed to mean?"
+                n "And I want to make something clear."
+                n "I voted for myself."
+                n "Judging by the way the votes are, I'm guessing we all did."
+                show natsuki zorder 2 at t41
+                show sayori zorder 3 at f42
+                s "Ehehe, guess you're right there."
+                show natsuki zorder 3 at f41
+                show sayori zorder 2 at t42
+                n "So since I'm getting rid of my book..."
+                n "I want to change my vote."
+                n "We're all going to be voting for our book again anyway."
+                n "It's quicker this way."
+                show natsuki zorder 2 at t41
+                show sayori zorder 3 at f42
+                s "Well, okay."
+                s "So whose book are you choosing then?"
+                s "Whoever it is has their book as our play."
+                s "So choose carefully."
+                show natsuki zorder 3 at f41
+                show sayori zorder 2 at t42
+                n "I'm choosing [player]."
+            else:
+                s "It looks like we're going to have to do this randomly, aren't we?"
+            call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     # After Choosing Book
     s 1a "So we're finally done voting!"
     s "I'm going to quickly do something, but the meeting isn't over yet."
