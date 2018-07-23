@@ -3276,11 +3276,76 @@ label ch14_end:
             "Sayori looks at each of us."
             s "Well...alright."
             # High Enough Approval with Natsuki or Yuri makes them get rid of their book and vote for you
-            if yuri_approval > 4:
+            if yuri_approval > 5:
                 show sayori zorder 2 at t42
                 "Yuri looks at me."
-                show yuri zorder 3 at f44
-            elif natsuki_approval > 4:
+                show yuri zorder 3 at f43
+                y "I'm...going to retract my book."
+                y "If that's okay with everyone."
+                show sayori zorder 3 at f42
+                show yuri zorder 2 at t43
+                s "E-Eh? What do you mean?"
+                show sayori zorder 2 at t42
+                show yuri zorder 3 at f43
+                y "It means I'm going to remove my book from the list."
+                y "And change my vote."
+                show sayori zorder 3 at f42
+                show yuri zorder 2 at t43
+                s "Yuri, wait!"
+                s "Are you completely sure about this?"
+                s "I don't want it to feel like I've forced you to do this."
+                show sayori zorder 2 at t42
+                show yuri zorder 3 at f43
+                y "It's okay, Sayori."
+                y "You said you were looking for volunteers."
+                y "So I've volunteered myself."
+                show sayori zorder 3 at f42
+                show yuri zorder 2 at t43
+                s "Yeah but..."
+                show sayori zorder 2 at t42
+                show yuri zorder 3 at f43
+                y "Don't worry. It's my choice."
+                y "Now..."
+                y "I only got one vote on my book."
+                y "I also voted for my book, which means we all voted for ourselves."
+                show natsuki zorder 3 at f41
+                show yuri zorder 2 at t43
+                n "That makes sense..."
+                show natsuki zorder 2 at t41
+                show yuri zorder 3 at f43
+                y "I'd like to change my vote."
+                y "That makes things easier, doesn't it?"
+                y "We won't have to do that whole process again."
+                show sayori zorder 3 at f42
+                show yuri zorder 2 at t43
+                s "I guess it does."
+                s "Just choose carefully because whoever you vote for is going to have their book chosen."
+                show sayori zorder 2 at t42
+                show yuri zorder 3 at f43
+                y "I'm changing my vote to..."
+                "Yuri looks around the room."
+                y "...[player]."
+                show sayori zorder 3 at f42
+                show yuri zorder 2 at t43
+                s "Huh? Are you sure about that Yuri?"
+                s "I didn't really think you'd be the type to vote for a manga."
+                show sayori zorder 2 at t42
+                show yuri zorder 3 at f43
+                y "I'm sure."
+                y "[player] may not have chosen the book I really want to do."
+                y "But it's clearly special to him if he's so intent on it."
+                y "I want to give him something back after all he's done for me."
+                show yuri zorder 2 at t43
+                mc "Yuri, you don't need to do this."
+                mc "It's entirely your choice."
+                show yuri zorder 3 at f43
+                y "It's okay."
+                y "I've made up my mind."
+                show sayori zorder 3 at f42
+                show yuri zorder 2 at t43
+                s "Alright, Yuri..."
+                s "I guess that means we're doing [player]'s book for the play."
+            elif natsuki_approval > 5:
                 show sayori zorder 2 at t42
                 "Natsuki turns towards me."
                 show natsuki zorder 3 at f41
@@ -3320,8 +3385,102 @@ label ch14_end:
                 show natsuki zorder 3 at f41
                 show sayori zorder 2 at t42
                 n "I'm choosing [player]."
+                n "So that's--"
+                show natsuki zorder 2 at t41
+                show sayori zorder 3 at f42
+                s "W-Wait a second, Natsuki!"
+                s "Are you sure about this?"
+                s "You haven't really given it much thought..."
+                show natsuki zorder 3 at f41
+                show sayori zorder 2 at t42
+                n "I've already made up my mind, Sayori."
+                n "It's not just because of his choice, there's other reasons."
+                n "Other reasons that have made me smile."
+                n "So it's like I owe him."
+                show natsuki zorder 2 at t41
+                mc "You don't owe me anything."
+                mc "If you don't want to go with my choice..."
+                show natsuki zorder 3 at f41
+                n "I'm sure."
+                n "So that means we're doing [player]'s book, right?"
+                show natsuki zorder 2 at t41
+                show sayori zorder 3 at f42
+                s "I guess it does..."
+                s "Well, I suppose it's your choice, Natsuki."
             else:
                 s "It looks like we're going to have to do this randomly, aren't we?"
+                s "That really sucks."
+                s "I really didn't want to have to make anyone get rid of their book."
+                show natsuki zorder 3 at f41
+                show sayori zorder 2 at t42
+                n "How about we all agree now that whoever is chosen can't complain?"
+                n "It's just the best way to do this."
+                n "Besides, they get to choose which book out of the four they want to do anyway."
+                n "It might not be their first choice but at least they get one."
+                show natsuki zorder 2 at t41
+                show yuri zorder 3 at f43
+                y "I'm not sure how I feel about this..."
+                y "But it does seem to be the only way."
+                y "If my book does end up being the one taken away, then I won't complain."
+                show yuri zorder 2 at t43
+                if monika_type == 0:
+                    show monika zorder 3 at f44
+                    m "If we're all agreed on it, then I suppose it's okay."
+                    m "There doesn't really seem to be another option."
+                    m "Unless we do some kind of revote but we're not allowed to choose our own book."
+                    m "But that would be redundant."
+                elif monika_type == 1 and ch12_markov_agree:
+                    show monika zorder 3 at f44
+                    m "If everyone's in on it, then I guess we'll have to."
+                    m "There isn't really another option."
+                    m "Voting again would give the same results and would ultimately be redundant."
+                else:
+                    show monika zorder 3 at f44
+                    m "I guess that's what we'll have to do."
+                    m "Unless someone has a better idea."
+                show monika zorder 2 at t44
+                "Should I volunteer here?"
+                "I want my book to be chosen but someone is going to end up upset..."
+                "I think it's the right thing to do."
+                "I get to choose the book that's chosen anyway."
+                if persisntent.markov_agreed:
+                    "It's a bit disappointing but..."
+                    "Actually, Sayori could use the stress."
+                    "What if she's the one who has her book removed?"
+                    "She really wants her chosen, doesn't she?"
+                    "...What am I thinking?"
+                    "I wouldn't hurt her like that."
+                    "I'm going to volunteer."
+                else:
+                    "It's a bit disappointing but Sayori doesn't need any more stress in her life."
+                    "She's already doing so much, and writing a script on a book she probably doesn't like wouldn't help."
+                    "So I'll volunteer."
+                mc "It doesn't need to be random."
+                mc "I'll do it."
+                show sayori zorder 3 at f42
+                s "Huh? What do you mean you'll do it?"
+                show sayori zorder 2 at t42
+                mc "You need someone to volunteer, don't you?"
+                mc "I'll remove my book from the list of choices."
+                show sayori zorder 3 at f42
+                s "E-Eh? [player], are you sure?"
+                s "We can still do it randomly if you want to."
+                show sayori zorder 2 at t42
+                mc "I'm sure."
+                show sayori zorder 3 at f42
+                s "Well...alright."
+                show sayori zorder 2 at t42
+                show yuri zorder 3 at f43
+                y "Then whose book are you going to change your vote to?"
+                y "Whoever you choose is going to be the one we do a play on..."
+                show natsuki zorder 3 at f41
+                show yuri zorder 2 at t43
+                n "I hope you know what you're doing."
+                n "Just think about it carefully."
+                show natsuki zorder 2 at t41
+                show sayori zorder 3 at f42
+                s "Ehehe, I think you're putting a bit too much pressure on him."
+                s "Just let him decide for himself."
             call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     # After Choosing Book
     s 1a "So we're finally done voting!"
