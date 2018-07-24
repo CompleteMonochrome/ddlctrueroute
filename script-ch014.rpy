@@ -3443,7 +3443,7 @@ label ch14_end:
                 "I want my book to be chosen but someone is going to end up upset..."
                 "I think it's the right thing to do."
                 "I get to choose the book that's chosen anyway."
-                if persisntent.markov_agreed:
+                if persistent.markov_agreed:
                     "It's a bit disappointing but..."
                     "Actually, Sayori could use the stress."
                     "What if she's the one who has her book removed?"
