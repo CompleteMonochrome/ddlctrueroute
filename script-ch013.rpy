@@ -2695,6 +2695,12 @@ label ch13_exclusive_natsuki:
         n "You've probably heard about them actually."
         "Natsuki rummages through the pile of books on her table."
         "She picks out three manga, all of which are the first volume."
+        "I didn't really get to see them that well but it wasn't difficult to notice the big '1' on the front covers."
+        mc "Are you hiding them from me intentionally?"
+        mc "It kinda seems like you're keeping them hidden."
+        n "Well, there's not really a reason to."
+        n "But it would kinda ruin what I want to say tomorrow."
+        mc "How so?"
     elif ch12_outcome == 1:
         mc "Natsuki? Your dad said you'd be in here."
         "There's no response."
