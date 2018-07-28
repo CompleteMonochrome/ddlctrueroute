@@ -1736,16 +1736,16 @@ label ch14_m_end:
         mc "I don't know if it's what you're feeling or what but--"
         m 2h "I think I've heard enough."
         mc "Huh? Was it something I said?"
-        m "Do me a favour keep that interpretation to yourself, [player]."
+        m "Do me a favor and keep that interpretation to yourself, [player]."
         menu:
             m "Alright?"
-            "Yes.":
+            "Why...?":
                 $ ch14markovikatell = True
                 mc "Is it really that big of a deal?"
                 mc "What's wrong with me sharing my interpretation of the poem...?"
                 m g4 "Ugh, forget it!"
                 m "I'll just make it so you can't."
-            "No.":
+            "Okay...":
                 $ ch14markovikatell = False
                 mc "If it really means that much to you..."
                 mc "Then I guess I won't tell anyone."

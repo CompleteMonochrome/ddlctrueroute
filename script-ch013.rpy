@@ -2562,26 +2562,26 @@ label ch13_exclusive_natsuki:
         n "Really? You'd do that?"
         n "Wasn't that meant to be a secret?"
         show natsuki zorder 2 at t21
-        show momsuki zorder 3 at f22
+        show momsuki 1b zorder 3 at f22
         mo "Well, it is..."
         mo "It was told to me by my own mother, and I think her mother before that."
         mo "I guess it's time I told you."
         show momsuki zorder 2 at t22
         mc "So it's like a family secret recipe?"
-        show momsuki zorder 3 at f22
+        show momsuki 1c zorder 3 at f22
         mo "Ahaha, I guess you could say that."
         mo "I'm not really sure why it's so secret or anything!"
         mo "It's pretty similar to other cake recipes I've tried."
         mo "I guess it's got to do with how it's made and a little secret ingredient."
-        show natsuki zorder 3 at f21
+        show natsuki 1bc zorder 3 at f21
         show momsuki zorder 2 at t22
         n "There's a secret ingredient?"
         show natsuki zorder 2 at t21
-        show momsuki zorder 3 at f22
+        show momsuki 1b zorder 3 at f22
         mo "Uh huh!"
         mo "It's a pretty odd thing to put into a cake."
         mo "But it really works out, for some reason."
-        show natsuki zorder 3 at f21
+        show natsuki 2bd zorder 3 at f21
         show momsuki zorder 2 at t22
         n "Well, this is great!"
         n "Thanks, mom!"
@@ -2590,12 +2590,12 @@ label ch13_exclusive_natsuki:
         show momsuki zorder 3 at f22
         mo "It's not a problem, Natsuki."
         mo "I meant to pass it on to you a bit later but..."
-        mo "Well, you know what happened."
+        mo 1f "Well, you know what happened."
         mo "Besides, I think you're old enough now to know."
-        mo "I know you'll be responsible with it, Natsuki."
+        mo 1g "I know you'll use it well, Natsuki."
         mo "Do you have something to be doing? I need to write it down for you."
-        mo "It might take a while."
-        show natsuki zorder 3 at f21
+        mo 1a "It might take a while."
+        show natsuki 2bc zorder 3 at f21
         show momsuki zorder 2 at t22
         n "Um..."
         "Natsuki turns towards me."
@@ -2603,17 +2603,18 @@ label ch13_exclusive_natsuki:
         show natsuki zorder 2 at t21
         mc "Well, we do have to choose some books for tomorrow."
         mc "We could do that in the meantime."
-        show momsuki zorder 3 at f22
+        show momsuki 1c zorder 3 at f22
         mo "Great! You two do that and I'll write down the recipe to you."
         mo "After that, I'll show you exactly how my mom showed me how to bake it."
-        show natsuki zorder 3 at f21
+        mo "Assuming you two aren't too quick, I'll be downstairs waiting for the two of you."
+        show natsuki 2ba zorder 3 at f21
         show momsuki zorder 2 at t22
         n "Alright, let's go [player]."
         n "We've moved a lot of the books to my room already."
         n "So we can choose there."
         show natsuki zorder 2 at t21
         mc "Alright, lead the way."
-        scene n_bedroom
+        scene bg n_bedroom
         show natsuki 1ba zorder 2 at t11
         with wipeleft_scene
         "We go back to Natsuki's room and go to her desk."
@@ -2623,95 +2624,326 @@ label ch13_exclusive_natsuki:
         n "I'm sure you'll find a couple that you like."
         mc "Do you have somewhere you're going to put all of these?"
         mc "It seems like a lot of books to just keep on your desk."
-        n "Obviously!"
+        n 1be "Obviously!"
         n "My mom is planning to get a bookshelf in here."
         n "For now, she wanted to move all the books I wanted into here."
         mc "Why is that?"
-        n "Being in my dad's--"
+        n 1bg "Being in my dad's--"
         n "In {i}Yasuhiro's{/i} room just gives me a weird feeling."
         n "Like I'll be punished at any moment for being in there."
         mc "Ah...I see."
         mc "You went in there a lot then?"
         mc "Because it almost sounds like you're accustomed to it."
-        n "That's...!"
+        n 1bo "That's...!"
         n "Why do you want to know?"
         mc "I'm just curious, that's all!"
         mc "You don't have to tell me."
         mc "It's just weird to think a father would treat their child like that."
-        n "Sigh..."
-        n "Isn't it obvious why I would go in there?"
+        n 1bq "Sigh..."
+        n 1bs "Isn't it obvious why I would go in there?"
         mc "Not...really...?"
         n "With all the manga he kept in there..."
         n "I wanted to get them back and read them."
         mc "Get them back?"
-        n "I was the one who ordered most of the manga."
+        n 1br "I was the one who ordered most of the manga."
         n "He'd take them when they were delivered and keep them in there."
         n "Sometimes he wouldn't be home and I'd actually get one of my manga."
         mc "Why would you do that?"
         mc "Wouldn't you have learned after the first time?"
-        n "Ugh, you wouldn't understand."
+        n 5bg "Ugh, you wouldn't understand."
         mc "I can try..."
         n "No and I'd rather not talk about this anymore, okay?"
         n "We still have some books to choose after all..."
         mc "Alright, sorry for prying."
         "Natsuki looks through the books on the desk."
-        n "I already know the books I'm going to choose."
+        n 2bc "I already know the books I'm going to choose."
         n "Do you?"
         mc "Well, not really."
         mc "I don't have a lot of books at home."
         mc "Mainly manga, like you."
         n "Hmm..."
         mc "What are you thinking?"
-        n "Well, I was originally going to bring four manga to share tomorrow."
+        n 1bb "Well, I was originally going to bring four manga to share tomorrow."
         n "But I feel like that's too..."
         n "I don't know the word for it."
         mc "I think I know what you mean."
-        n "So instead, I was going to bring three manga."
+        n 1ba "So instead, I was going to bring three manga."
         n "And this other book."
         "Natsuki walks to her bed and kneels."
         "She reaches underneath and after a few seconds, pulls out a book."
         mc "You had that under your bed?"
-        n "Yeah..."
+        n 1bh "Yeah..."
         mc "Why?"
-        n "It's..."
+        n 1bm "It's..."
         n "...don't laugh, okay?"
         mc "I wouldn't."
-        n "It's a book my parents used to read to me when I was younger."
+        n 1bs "It's a book my parents used to read to me when I was younger."
         n "I don't know if it's something we should do."
         n "I could just choose a novel that everyone else knows about..."
         n "But then I wouldn't really feel passionate about it..."
         mc "I see."
         mc "I say go for it then."
-        n "Huh?"
+        n 1bm "Huh?"
         mc "Choose the book, who cares what everyone else thinks?"
         mc "If they like it, they'll vote for it."
         "Natsuki simply stares at me."
-        n "W-Well, yeah!"
+        n 2bt "W-Well, yeah!"
         n "Who said I wasn't?"
         "It feels like she's more confident about that book now."
-        n "It's not really what I want to have done as the play anyway."
+        n 2bk "It's not really what I want to have done as the play anyway."
         n "It would be nice, but I prefer the manga I've chosen."
         mc "What are they?"
-        n "You've probably heard about them actually."
+        n 2bl "You've probably heard about them actually."
         "Natsuki rummages through the pile of books on her table."
         "She picks out three manga, all of which are the first volume."
         "I didn't really get to see them that well but it wasn't difficult to notice the big '1' on the front covers."
         mc "Are you hiding them from me intentionally?"
         mc "It kinda seems like you're keeping them hidden."
-        n "It's a surprise for tomorrow."
+        n 2bj "It's a surprise for tomorrow."
         n "You can wait that long, right?"
         mc "I suppose."
-        n "I guess I can give you a hint."
+        n 1ba "I guess I can give you a hint."
         n "They're manga that focus on a life around school."
         n "But they're all different in their own way."
         mc "Life around school?"
         "Aren't a lot of manga like that though?"
         "That doesn't really tell me anything at all."
         mc "Well...never mind then."
-        n "Do you have books at home you're going to choose?"
+        n 1bb "Do you have books at home you're going to choose?"
         n "You can choose from some of the books here...if you want."
-        n "You don't have to if you don't want to...okay?"
+        n 1bq "You don't have to if you don't want to...okay?"
         mc "Alright, Natsuki I got it."
+        mc "I'm sure I'll find something."
+        "I search through the pile of books on her table."
+        "Almost every single one of them is manga."
+        "A lot of them are first volumes and still wrapped in plastic."
+        "I guess she couldn't really order the second one if she didn't even read the first one."
+        "But there are other ways to read manga..."
+        "I wonder if she's done that before."
+        mc "You have a lot of manga here."
+        mc "Did you ever actually get around to reading some of them?"
+        n 1bk "I did."
+        n "Some of them were from before everything changed like the ones I chose."
+        mc "Couldn't you just...you know..."
+        n 1bm "What?"
+        mc "You don't have to own the manga to read it."
+        mc "There are places on the internet..."
+        n 1bq "You don't think I've tried that?"
+        n "Yasuhiro controlled the internet in the house."
+        n "It didn't exactly take long for him to figure out how to block websites."
+        mc "I see..."
+        n 1br "Just hurry up and choose your books already."
+        mc "Okay..."
+        "I manage to find two manga that I know well enough from the pile."
+        "One of them is actually one of my favorite manga of all time."
+        "Just because of how much it relates to me."
+        "It's probably good that I have some sort of balance between manga and novels."
+        "I see a novel that I think was pretty popular."
+        "I haven't really read it, but it's probably good if I choose something that appeals to more people."
+        "It might make the club more relatable to people if they see a play they're familiar with, even if I don't know what it is."
+        n 1bk "Are you going to take two novels?"
+        mc "I was gonna go for a balance, so yeah I was."
+        n 1bs "Oh..."
+        mc "What's wrong?"
+        n 1bq "I thought you were going to take a novel and three manga like me."
+        mc "How come?"
+        n 2bk "I just didn't really see you as the type of person to be really into novels."
+        n "Especially after you said that you read manga on the first day."
+        mc "Just because I read manga doesn't mean I don't like novels."
+        mc "But you're right."
+        mc "I don't really read a lot of novels."
+        mc "I just thought that choosing popular novels would make the play we do relatable to more people."
+        mc "That is, if we do decide to vote for them."
+        n 2be "That's true...but don't you want to express yourself a bit more?"
+        mc "What do you mean?"
+        n 2bb "You probably don't like those books as much another manga you know, right?"
+        mc "That's true but..."
+        n 2bo "I don't want to force you anything...!"
+        n "But you should probably think about it."
+        n 2bq "It might make things easier tomorrow."
+        mc "I guess so..."
+        "Should I listen to Natsuki's advice?"
+        "Maybe it makes more sense to choose three manga and a novel like her."
+        "That way, there's still that popular novel choice but I can better express myself."
+        "Or I could just keep the balance I chose, it's not like it really matters if I express myself."
+        menu:
+            "So should I take three manga instead?"
+            "Take three manga and one novel.":
+                $ ch13_natsuki_books = True
+                $ natsuki_approval += 1
+                mc "You're probably right."
+                mc "I'll follow your lead and take three manga as well."
+                mc "It'd probably make more sense if I did anyway."
+                n 1bl "Really?"
+                "Natsuki's face lights up."
+                n 1bt "W-Well, good for you...!"
+                "I search through the pile a bit more and find a suitable manga that I'm kinda familiar with."
+            "Take two manga and two novels.":
+                $ ch13_natsuki_books = False
+                mc "I think I'll stick with the two novels."
+                mc "I know the manga I want to do anyway."
+                mc "So really I just chose three backups and a manga."
+                n 1bk "Well, it's up to you."
+                "Natsuki avoids my eyes."
+                n "Not like I can make you change your mind or anything."
+                "I look through the pile to find another novel I think is popular."
+        "I put the books I chose on her desk, away from the pile."
+        "Natsuki puts the manga she took in her bag."
+        n 1bc "Anyway..."
+        n "We should check if that recipe is done."
+        n "There's still a lot to do for Friday, after all."
+        mc "You're right about that."
+        n 1ba "Just leave your books here, [player]."
+        n "You'll get them after we're done."
+        mc "Good idea, Natsuki."
+        scene bg n_livingroom
+        show natsuki 1ba zorder 2 at t11
+        with wipeleft_scene
+        "We go downstairs to try to find Haruki."
+        "I wonder what's so good about this cake."
+        "And what made it worth being passed down through Natsuki's family."
+        n 1bc "Mom? We're done."
+        n "Are you here?"
+        show natsuki zorder 2 at t21
+        show momsuki 1a zorder 3 at f22
+        mo "Natsuki, you're just in time."
+        mo 1b "Here, I've written down the recipe for you."
+        "Haruki gives a folded piece of paper to Natsuki."
+        mo "Try to remember it and get rid of that as soon as you can."
+        show natsuki 1bd zorder 3 at f21
+        show momsuki zorder 2 at t22
+        n "I will."
+        show natsuki zorder 2 at t21
+        "Natsuki begins to unfold the piece of paper."
+        "As she does, Haruki stops her and looks at me."
+        show momsuki 1f zorder 3 at f22
+        mo "Not here, at least not right now."
+        "Haruki points towards me."
+        mo "I'd rather you did it in private."
+        mo 1g "Not that I don't trust you or anything, [player]."
+        mo "But it's almost like a family heirloom."
+        show momsuki zorder 2 at t22
+        mc "I understand."
+        mc "I should probably go home then..."
+        mc "You are baking a cake after all."
+        mc "You two are going to be pretty busy with baking that thing and I don't really want to interfere."
+        show natuski 1bc zorder 3 at f21
+        n "H-Huh? W-Wait, [player]."
+        n "You don't have to go just yet..."
+        n 1bs "We still have other things we need to do."
+        show natsuki zorder 2 at t21
+        mc "Well, what else is there for me to do?"
+        mc "I know you'd much rather spend time with your mom than me, Natsuki."
+        show natsuki zorder 3 at f21
+        n "..."
+        show natsuki zorder 2 at t21
+        mc "It's not like I can stay and watch you two bake that cake."
+        mc "It's a secret, isn't it?"
+        show momsuki 1c zorder 3 at f22
+        mo "I think [player] is right, Natsuki."
+        mo "He might be better off going home and doing his assignments."
+        mo "You still have those, right?"
+        show momsuki zorder 2 at t22
+        mc "Um...yeah."
+        "Is there a reason I wouldn't have other work?"
+        show momsuki 1b zorder 3 at f22
+        mo "That's great."
+        mo 1f "Ahaha, well, not for you obviously but at least you have something to do."
+        mo "Natsuki, tomorrow you will have learned how to bake this cake."
+        mo 1c "I can guarantee it."
+        show natsuki 1bc zorder 3 at f21
+        show momsuki zorder 2 at t22
+        n "H-How can you be so sure?"
+        show natsuki zorder 2 at t21
+        show momsuki 1b zorder 3 at f22
+        mo "Call it a mother's intuition."
+        "Harsuki smiles gently."
+        mo "You should get going."
+        show momsuki zorder 2 at t22
+        mc "Right...well, I'll see you tomorrow Natuski."
+        show natsuki 1bk zorder 3 at f21
+        n "See you..."
+        "I start walking towards the door."
+        n 1bh "Wait!"
+        show natsuki zorder 2 at t21
+        mc "What's wrong?"
+        show natsuki 2bg zorder 3 at f21
+        n "You...left your books upstairs."
+        n "Make sure you get them."
+        show natsuki zorder 2 at t21
+        mc "I almost forgot, thanks for reminding me."
+        "Natsuki simply rolls her eyes at me."
+        mc "I won't be a minute."
+        scene bg n_bedroom with wipeleft_scene
+        "I got my books from Natsuki's room."
+        "They were exactly where I left them."
+        "It's still kinda hard to believe she has such a large collection of books."
+        "Even I don't have that much."
+        "I'm guessing that she'll only continue to get more now that Yasuhiro won't take them away from her."
+        "As I'm about to head downstairs..."
+        "I start getting this strange feeling coming from Yasuhiro's room."
+        "I really shouldn't check it out but I almost feel compelled to."
+        "Natsuki and Haruki are busy downstairs anyway so maybe I can check it out."
+        "It's not like they'll know I've been in there."
+        "Just what am I getting myself into though...?"
+        scene bg n_dadroom with wipeleft_scene
+        "As soon as I enter the room, the strange feeling gets even worse."
+        "It's as if something...or someone is crawling on my back."
+        "I really should be leaving."
+        "But if I don't find out why I'm getting this feeling, I might never know."
+        "I search around the room looking for where it could be coming from."
+        "I even opened the closet, but there was nothing in there...just some clothes."
+        "I sit on the bed, about to give up on my pointless search."
+        "Suddenly, the feeling gets even worse."
+        "It feels like something is piercing my back."
+        "My stomach feels like there's a knife being shoved through it."
+        "Could it be that what I'm looking for is under the bed?"
+        "Haruki was under the bed before, wasn't she?"
+        "Does that have anything to do with this feeling?"
+        "I check under the bed."
+        "It's a bit too dark to see anything."
+        "The feeling in my stomach is starting to get even worse."
+        "I must be getting close to something."
+        "I grab my phone and turn on the flashlight to try to see what's here."
+        "I shine around the ground and see some faded marks."
+        "These don't really make any sense."
+        "I decide that the feeling is becoming too unbearable before I spot what I think is writing."
+        "What the...?"
+        "It's incredibly hard to read but it says..."
+        if persistent.markov_agreed:
+            "Ahaha, you are{nw}."
+        else:
+            "There's still hope to{nw}"
+        $ _history_list = []
+        show screen tear(20, 0.1, 0.1, 0, 40)
+        window hide(None)
+        play sound "sfx/s_kill_glitch1.ogg"
+        scene bg n_house
+        $ pause(0.25)
+        stop sound
+        hide screen tear
+        window show(None)
+        "Hopefully we can do more tomorrow."
+        window auto
+        "I don't know what kind of recipe Natsuki's mom gave her but I hope it's great."
+        "I think I heard Natsuki say we're baking cupcakes tomorrow."
+        "That's what she said after I got my book from upstairs."
+        "She probably already has the ingredients at her house."
+        "Haruki will be helping us too, by inspecting them after they're baked."
+        "I know she didn't say it but I think she's glad I was there."
+        "She's in good hands for now with Haruki."
+        "But with the discovery I made..."
+        "Well, I just hope it all turns out okay."
+        scene bg bedroom with wipeleft_scene
+        play music t2 fadeout 0.5
+        "I arrive home, just about ready to do those assignments Haruki mentioned I had."
+        "It's strange, it feels like my whole life is centred around the literature club that I don't really remember doing any assignments."
+        "I must be doing them though because I'm still in school and haven't really been in trouble for them lately."
+        "I get my bag and take out the four books I took from Natsuki's house and place them on my desk."
+        "I think these books are probably enough."
+        "I should probably get started on my assignment though."
+        "It isn't too hard but it might take a while..."
+        "I still have to write my poem too..."
     elif ch12_outcome == 1:
         mc "Natsuki? Your dad said you'd be in here."
         "There's no response."
@@ -2760,6 +2992,7 @@ label ch13_exclusive_natsuki:
         n 2br "H-Huh? B-But why?"
         n "You have better things to do...don't you?"
         mc "This is the best thing I could be doing, Natsuki."
+        call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     else:
         show natsuki 1bc zorder 2 at t11
         n "How exactly are you going to help me with the preparations, [player]?"
@@ -3139,7 +3372,7 @@ label ch13_exclusive_natsuki:
             mc "Maybe it wasn't him?"
             n 1bs "Who else could it have been...?"
             "There's no way for me to answer that question."
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
+        call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch13_exclusive_yuri:
