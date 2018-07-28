@@ -1181,8 +1181,8 @@ label ch14_end:
     "Natsuki places four books in front of us."
     "She picked the first volume of three different manga and a novel that I haven't really heard of before."
     if ch13_name == "Natsuki":
-        "She was a little bit secretive about it."
-        "She gave me hints but it wasn't really enough to piece together any manga that I know."
+        "She was kinda secretive about it."
+        "She did give me a hint but it wasn't really enough to piece together any manga that I know."
     n 2k "These three manga are from three of my favorite series."
     n "I think they could be interesting choices for the play."
     n "The novel I chose is what my parents used to read to me when I was younger."
