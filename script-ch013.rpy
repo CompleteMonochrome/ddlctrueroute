@@ -1943,12 +1943,12 @@ label ch13_exclusive_natsuki:
     show sayori at lhide
     hide sayori
     # This same condition from the Yuri confrontation works for Natsuki because she only gets dumped if your whole appeal is for Natsuki
-    if sayori_confess and not sayori_dumped:
+    if sayori_confess and not sayori_dumped and (ch12_outcome == 3 or ch12_outcome == 1) and n_appeal >= 4 and n_appealS >= 1:
         "I'm glad that...confrontation went well."
         "I didn't know writing like Natsuki would make her think like that."
         "Still, I'm glad she knows that she's the one for me."
         "I hope her own preparations go well."
-    elif sayori_confess and sayori_dumped:
+    elif sayori_confess and sayori_dumped and (ch12_outcome == 3 or ch12_outcome == 1) and n_appeal >= 4 and n_appealS >= 1:
         "That was probably the best way things could have gone given the circumstances."
         "The way Sayori reacted was really mature too..."
         "I didn't expect her to take it so well."
