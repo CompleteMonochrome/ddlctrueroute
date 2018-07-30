@@ -3191,34 +3191,29 @@ label ch14_end:
         $ ch14_overall_choice = "Natsuki"
         s 3a "I think I counted three votes for Natsuki's manga."
         s "That means Natsuki has the majority vote!"
-        jump ch14_natsukiwin_cont
     elif ch14_votes[1] >= 3:
         $ ch14_overall_choice = "Yuri"
         s 3a "I'm pretty sure I counted three votes for Yuri's choice."
         s "That means Yuri's book is chosen!"
-        jump ch14_yuriwin_cont
     elif ch14_votes[2] >= 3:
         $ ch14_overall_choice = "Monika"
         s 3a "That was three votes for Monika's choice..."
         s "That means we're going to do Monika's book!"
-        jump ch14_monikawin_cont
     elif ch14_votes[3] >= 3:
         $ ch14_overall_choice = "Sayori"
         s 3c "That was three votes for my choice, right?"
         s 3q "So that means we're doing my book!"
-        jump ch14_sayoriwin_cont
     elif ch14_votes[4] >= 3:
         $ ch14_overall_choice = player
         s 3d "Ehehe, I counted three votes for [player]'s choice.'"
         s "We're doing [player]'s book then!"
-        jump ch14_playerwin_cont
     else:
         s 3b "That means there isn't really a majority vote."
         s "So that means that whoever got two votes has their book chosen..."
+        label ch14_twovotes:
         if ch14_votes[0] >= 2:
             $ ch14_overall_choice = "Natsuki"
-            s 3q "...Which means Natsuki has the majority vote!"
-            label ch14_natsukiwin_cont:
+            s 3q "...Which means Natsuki's manga won vote!"
         elif ch14_votes[1] >= 2:
             $ ch14_overall_choice = "Yuri"
             s 3q "...Which means Yuri's book is chosen!"
@@ -3490,6 +3485,31 @@ label ch14_end:
                 show sayori 2l zorder 3 at f42
                 s "Ehehe, I think you're putting a bit too much pressure on him."
                 s "Just let him decide for himself."
+                s "He did volunteer after all."
+                show sayori zorder 2 at t42
+                mc "Let me think..."
+                menu:
+                    "Who am I voting for?"
+                    "Natsuki":
+                        $ ch14_book_choice = "Natsuki"
+                        $ natsuki_approval += 1
+                        "Natsuki's manga is really wholesome."
+                        "It could be fun to do a play on."
+                    "Yuri.":
+                        $ ch14_book_choice = "Yuri"
+                        $ yuri_approval += 1
+                        "I should vote for Yuri's book."
+                        "It seems like it could be interesting."
+                    "Monika.":
+                        $ ch14_book_choice = "Monika"
+                        "I think Monika's book is the best one here to do a play on."
+                        "So that's the one I'll vote for."
+                    "Sayori.":
+                        if sayori_personality > 0:
+                            $ sayori_personality -= 1
+                        $ ch14_book_choice = "Sayori"
+                        "Sayori's book sounds really sad but...real for some reason."
+                        "I'm interested to see what kind of play that could be."
                 call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     # After Choosing Book
     s 1a "So we're finally done voting!"

@@ -2059,8 +2059,8 @@ label ch13_exclusive_natsuki:
         mc "Right..."
         mo 1d "As for me, I need to finish cleaning the house."
         mo 1c "Make yourself at home~"
-        show haruki at thide
-        hide haruki
+        show momsuki at thide
+        hide momsuki
         "Haruki heads back inside and leaves the door open."
         "I guess it's time to talk to Natsuki."
     elif ch12_outcome == 1:
@@ -2911,7 +2911,7 @@ label ch13_exclusive_natsuki:
         "What the...?"
         "It's incredibly hard to read but it says..."
         if persistent.markov_agreed:
-            "Ahaha, you are{nw}."
+            "Ahaha, you are{nw}"
         else:
             "There's still hope to{nw}"
         $ _history_list = []
