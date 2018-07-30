@@ -3492,24 +3492,41 @@ label ch14_end:
                     "Who am I voting for?"
                     "Natsuki":
                         $ ch14_book_choice = "Natsuki"
+                        $ ch14_overall_choice = "Natsuki"
                         $ natsuki_approval += 1
                         "Natsuki's manga is really wholesome."
                         "It could be fun to do a play on."
                     "Yuri.":
                         $ ch14_book_choice = "Yuri"
+                        $ ch14_overall_choice = "Yuri"
                         $ yuri_approval += 1
                         "I should vote for Yuri's book."
                         "It seems like it could be interesting."
                     "Monika.":
                         $ ch14_book_choice = "Monika"
+                        $ ch14_overall_choice = "Monika"
                         "I think Monika's book is the best one here to do a play on."
                         "So that's the one I'll vote for."
                     "Sayori.":
                         if sayori_personality > 0:
                             $ sayori_personality -= 1
                         $ ch14_book_choice = "Sayori"
+                        $ ch14_overall_choice = "Sayori"
                         "Sayori's book sounds really sad but...real for some reason."
                         "I'm interested to see what kind of play that could be."
+                mc "Well, I would have preferred my book."
+                mc "But since that's not an option anymore, I've chosen [ch14_book_choice]."
+                mc "And that's my final decision."
+                if ch14_book_choice == "Natsuki":
+                    show natsuki zorder 3 at f41
+                    n "You really chose me...?"
+                    n "Well...I'm not complaining!"
+                    n "It's going to be a great play, I promise."
+                elif ch14_book_choice == "Yuri":
+                    show yuri zorder 3 at f43
+                    y ""
+                elif ch14_book_choice == "Monika":
+                else:
                 call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     # After Choosing Book
     s 1a "So we're finally done voting!"
