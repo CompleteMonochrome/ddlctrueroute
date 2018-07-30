@@ -2990,22 +2990,27 @@ label ch14_end:
                     $ ch14_book_choice = "Natsuki"
                     $ natsuki_approval += 1
                     "Natsuki's manga is really wholesome."
-                    "It could be fun to do a play on."
+                    "It could be fun to do a play on something that will make everyone smile."
                 "Yuri.":
                     $ ch14_book_choice = "Yuri"
                     $ yuri_approval += 1
                     "I should vote for Yuri's book."
-                    "It seems like it could be interesting."
+                    "It seems like it could be interesting since it's apparently a pretty light horror book."
+                    "I wonder how it will turn out as a play."
                 "Monika.":
                     $ ch14_book_choice = "Monika"
-                    "I think Monika's book is the best one here to do a play on."
+                    "I think Monika's book is the best one here to do a play on..."
+                    if monika_type == 0:
+                        "Even with all the romanantic themes."
+                    else:
+                        "Even with how strange it is for her to choose a book like that."
                     "So that's the one I'll vote for."
                 "Sayori.":
                     if sayori_personality > 0:
                         $ sayori_personality -= 1
                     $ ch14_book_choice = "Sayori"
                     "Sayori's book sounds really sad but...real for some reason."
-                    "I'm interested to see what kind of play that could be."
+                    "I'm interested to see what kind of play that could turn out to be."
                 "Myself." if ch14_player_choice:
                     $ ch14_book_choice = player
                     "I do like the manga that I chose to bring."
@@ -3488,6 +3493,10 @@ label ch14_end:
                 s "He did volunteer after all."
                 show sayori zorder 2 at t42
                 mc "Let me think..."
+                "I should be considerate of all the choices here."
+                "My vote decides whose book is the play so it should be something I want to do."
+                "Then again, whoever I vote for would probably appreciate it a lot if I chose theirs."
+                "So I find myself asking once again..."
                 menu:
                     "Who am I voting for?"
                     "Natsuki":
@@ -3495,17 +3504,22 @@ label ch14_end:
                         $ ch14_overall_choice = "Natsuki"
                         $ natsuki_approval += 1
                         "Natsuki's manga is really wholesome."
-                        "It could be fun to do a play on."
+                        "It could be fun to do a play on something that will make everyone smile."
                     "Yuri.":
                         $ ch14_book_choice = "Yuri"
                         $ ch14_overall_choice = "Yuri"
                         $ yuri_approval += 1
                         "I should vote for Yuri's book."
-                        "It seems like it could be interesting."
+                        "It seems like it could be interesting since it's apparently a pretty light horror book."
+                        "I wonder how it will turn out as a play."
                     "Monika.":
                         $ ch14_book_choice = "Monika"
                         $ ch14_overall_choice = "Monika"
-                        "I think Monika's book is the best one here to do a play on."
+                        "I think Monika's book is the best one here to do a play on..."
+                        if monika_type == 0:
+                            "Even with all the romanantic themes."
+                        else:
+                            "Even with how strange it is for her to choose a book like that."
                         "So that's the one I'll vote for."
                     "Sayori.":
                         if sayori_personality > 0:
@@ -3513,21 +3527,116 @@ label ch14_end:
                         $ ch14_book_choice = "Sayori"
                         $ ch14_overall_choice = "Sayori"
                         "Sayori's book sounds really sad but...real for some reason."
-                        "I'm interested to see what kind of play that could be."
-                mc "Well, I would have preferred my book."
-                mc "But since that's not an option anymore, I've chosen [ch14_book_choice]."
-                mc "And that's my final decision."
+                        "I'm interested to see what kind of play that could turn out to be."
+                mc "It's a tough decision."
+                mc "All the books you brought in are good, so don't be offended that I didn't choose you."
+                mc "I know it isn't my first choice, I did vote for my own manga after all."
+                mc "Despite that, I think the play would be best with [ch14_book_choice]'s choice."
                 if ch14_book_choice == "Natsuki":
                     show natsuki zorder 3 at f41
-                    n "You really chose me...?"
-                    n "Well...I'm not complaining!"
-                    n "It's going to be a great play, I promise."
+                    n "You really chose my manga?"
+                    n "That's...great!"
+                    "Natsuki beams."
+                    n "I knew you would make the right decision, [player]."
+                    n "And um...sorry that you had to get rid of your own choice."
+                    show natsuki zorder 2 at t41
+                    show sayori zorder 3 at f42
+                    s "I guess your decision makes some sense."
+                    s "You are into manga after all."
+                    s "We shouldn't complain, you did sacrifice your own book after all."
+                    show sayori zorder 2 at t42
+                    mc "I just think something like this might be good to do a play on."
+                    mc "But thanks for understanding my choice."
+                    "Sayori simply smiles at me."
                 elif ch14_book_choice == "Yuri":
                     show yuri zorder 3 at f43
-                    y ""
+                    y "Ah...did you say what I think you said?"
+                    y "You chose my book, didn't you?"
+                    y "I..."
+                    y "I'm glad you made that choice, [player]."
+                    y "Even if it wasn't your first..."
+                    show sayori zorder 3 at f42
+                    show yuri zorder 2 at t43
+                    s "Hmm..."
+                    s "I never really took you for a horror novel type of person, [player]."
+                    s "But it doesn't matter, you did sacrifice your own book after all."
+                    show sayori zorder 2 at t42
+                    mc "I think it could be interesting since it's a light horror novel."
+                    mc "The choice is mine after all."
+                    "Sayori smiles gently."
                 elif ch14_book_choice == "Monika":
+                    # Monika type 1 with markov agree requires you to have made the deal so no need for inclusion here
+                    if monika_type == 0:
+                        show monika zorder 3 at f44
+                        m "Oh...really?"
+                        "Monika smiles sweetly."
+                        m "I'm glad you chose my book, [player]."
+                        m "I don't know if you did that with an ulterior reason in mind but..."
+                        m "I hope we can all make this a great play."
+                        m "Even if it wasn't everyone's choice."
+                        show sayori zorder 3 at f42
+                        show monika zorder 2 at t44
+                        s "Ehehe, I never took [player] for the romantic type."
+                        s "Oh well, you've made your decision."
+                        s "We can't exactly complain since you gave up your choice in the first place."
+                        show sayori zorder 2 at f42
+                        mc "I think Monika's book might be really appealing to the crowd."
+                        mc "We don't know for sure but I made my choice."
+                        "Sayori looks at me and smiles."
+                    else:
+                        show monika zorder 3 at f44
+                        m "I see."
+                        m "You've made the right choice, [player]."
+                        m "You will not regret this."
+                        m "I promise all of you that."
+                        m "This will be the most...interesting play we've done so far."
+                        show sayori zorder 3 at f42
+                        show monika zorder 2 at t44
+                        s "You know, something about the way you said that kinda creeps me out."
+                        s "Ehehe, I guess it has something to do with the book you chose."
+                        s "But [player] must like your book, he did choose it after all."
+                        show sayori zorder 2 at t42
+                        mc "I think Monika's book could be really good."
+                        mc "I guess you could say it's a feeling."
+                        "Sayori smiles faintly."
                 else:
-                call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
+                    show sayori zorder 3 at f42
+                    s "You actually chose my book?"
+                    s "Thank you so much, [player]!"
+                    "Sayori gives me a hug."
+                    show sayori zorder 2 at t42
+                    mc "I-It isn't a big deal, Sayori."
+                    mc "Your novel just seemed the most...real to me."
+                    mc "So maybe others will feel the same way."
+                    show sayori zorder 3 at f42
+                    s "More...real, eh?"
+                    s "I guess that makes sense."
+                    s "Though I didn't really expect it to have that effect on you."
+                    s "I was thinking the emotional parts of it would be more of the focus."
+                    show sayori zorder 2 at t42
+                    mc "It could be both."
+                    mc "But there's something strange about your book..."
+                    show natsuki zorder 3 at f41
+                    n "[player] is right..."
+                    n "I've never heard of it but something about it doesn't feel right."
+                    show natsuki zorder 2 at t41
+                    show yuri zorder 3 at f43
+                    y "I'm sure it's nothing..."
+                    y "That's not to say I'm not immune to it either."
+                    show yuri zorder 2 at t43
+                    show monika zorder 3 at f44
+                    m "I'm sure it's nothing."
+                    m "We shouldn't dwell on it too much."
+                    show natsuki zorder 3 at f41
+                    show monika zorder 2 at t44
+                    n "Yeah, it's probably nothing..."
+                    show natsuki zorder 2 at t41
+                    show sayori zorder 3 at f42
+                    s "You guys are really special, you know that?"
+                    show sayori zorder 2 at t42
+                    mc "What do you mean...?"
+                    "Sayori just smiles at me."
+                show sayori zorder 3 at f42
     # After Choosing Book
     s 1a "So we're finally done voting!"
     s "I'm going to quickly do something, but the meeting isn't over yet."
@@ -3551,6 +3660,11 @@ label ch14_end:
     s "The person who suggested it should be the director of the play."
     s "Since they know it the best."
     s "Does anyone disagree?"
+    show sayori zorder 2 at t42
+    show yuri zorder 3 at f43
+    y "What kind of stuff would the director have to do?"
+    y "It seems like a pretty overwhelming task."
+    y "Not to mention we have our own preparations to do as well."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
