@@ -3001,7 +3001,7 @@ label ch14_end:
                     $ ch14_book_choice = "Monika"
                     "I think Monika's book is the best one here to do a play on..."
                     if monika_type == 0:
-                        "Even with all the romanantic themes."
+                        "Even with all the romantic themes."
                     else:
                         "Even with how strange it is for her to choose a book like that."
                     "So that's the one I'll vote for."
@@ -3517,7 +3517,7 @@ label ch14_end:
                         $ ch14_overall_choice = "Monika"
                         "I think Monika's book is the best one here to do a play on..."
                         if monika_type == 0:
-                            "Even with all the romanantic themes."
+                            "Even with all the romantic themes."
                         else:
                             "Even with how strange it is for her to choose a book like that."
                         "So that's the one I'll vote for."
@@ -3627,9 +3627,9 @@ label ch14_end:
                     y "That's not to say I'm not immune to it either."
                     show yuri zorder 2 at t43
                     if monika_type == 1 and ch12_markov_agree:
-                        show monika 1a zorder 3 at f44
-                    else:
                         show monika 1ha zorder 3 at f44
+                    else:
+                        show monika 1a zorder 3 at f44
                     m "I'm sure it's nothing."
                     m "We shouldn't dwell on it too much."
                     show natsuki 1q zorder 3 at f41
@@ -3694,7 +3694,7 @@ label ch14_end:
         m "This all seems like a rather big responsibility, don't you think?"
         m "Not that I'm complaing but..."
         m "None of us have any experience in directing anything, like Natsuki said."
-        m 1m "It's going to be difficult getting it the way you want it."
+        m 1hm "It's going to be difficult getting it the way you want it."
         m "And what's this about rehearsals?"
         m "Between all our preparations, how are we going to do that?"
     else:
@@ -3769,7 +3769,7 @@ label ch14_end:
     n "...charimastic?"
     n 2k "Since you've been president, it's been pretty obvious that you're getting better at leading people."
     n "And that includes managing us, despite everything that's happened."
-    n "You always what to say or do, in any situation even if it isn't always the right thing."
+    n "You always know what to say or do, in any situation even if it isn't always the right thing."
     n 2a "Which make us want to believe you."
     n "At least...that's how it is for me."
     show natsuki zorder 2 at t41
@@ -3845,7 +3845,7 @@ label ch14_end:
     show monika zorder 2 at t44
     mc "What did we say?"
     mc "I'm still a bit confused."
-    if ch13_name == "Natuski" and ch12_outcome == 3:
+    if ch13_name == "Natsuki" and ch12_outcome == 3:
         "I actually think I'm beginning to understand a little."
         "Natsuki and I sort of talked about this yesterday..."
         "About how we're forgetting things."
