@@ -5968,7 +5968,7 @@ label ch14_natsuki_outcome3_date:
     show natsuki 2bc zorder 3 at f31
     show momsuki zorder 2 at t32
     n "It's not a prank or anything like that!"
-    n "He asked me if I wanted to go out with me and I said yes."
+    n "He asked me if I wanted to go on a date with him and I said yes."
     n "That's all there is to it."
     n 1bd "And I know he isn't much but it's fine!"
     show natsuki zorder 2 at t31
