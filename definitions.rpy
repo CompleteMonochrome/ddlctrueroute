@@ -88,7 +88,10 @@ init python:
 
 
 define audio.t1 = "<loop 22.073>bgm/1.ogg"
+# Piano Only Version of DDLC Intro for True Route
 define audio.t1m = "<loop 22.073>mod_assets/bgm/1monika.ogg"
+# Mod Tracks - 17: Too Late
+define audio.t1c = "<loop 0.307>mod_assets/bgm/1cast.ogg"
 define audio.t2 = "<loop 4.499>bgm/2.ogg"
 define audio.t2g = "bgm/2g.ogg"
 define audio.t2g2 = "<from 4.499 loop 4.499>bgm/2.ogg"

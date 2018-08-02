@@ -3533,33 +3533,34 @@ label ch14_end:
                 mc "I know it isn't my first choice, I did vote for my own manga after all."
                 mc "Despite that, I think the play would be best with [ch14_book_choice]'s choice."
                 if ch14_book_choice == "Natsuki":
-                    show natsuki zorder 3 at f41
+                    show natsuki 2e zorder 3 at f41
                     n "You really chose my manga?"
                     n "That's...great!"
+                    show natsuki 2z
                     "Natsuki beams."
                     n "I knew you would make the right decision, [player]."
-                    n "And um...sorry that you had to get rid of your own choice."
+                    n 2q "And um...sorry that you had to get rid of your own choice."
                     show natsuki zorder 2 at t41
-                    show sayori zorder 3 at f42
+                    show sayori 1a zorder 3 at f42
                     s "I guess your decision makes some sense."
                     s "You are into manga after all."
-                    s "We shouldn't complain, you did sacrifice your own book after all."
+                    s 1d "We shouldn't complain, you did sacrifice your own book after all."
                     show sayori zorder 2 at t42
                     mc "I just think something like this might be good to do a play on."
                     mc "But thanks for understanding my choice."
                     "Sayori simply smiles at me."
                 elif ch14_book_choice == "Yuri":
-                    show yuri zorder 3 at f43
+                    show yuri 2pq zorder 3 at f43
                     y "Ah...did you say what I think you said?"
                     y "You chose my book, didn't you?"
                     y "I..."
-                    y "I'm glad you made that choice, [player]."
+                    y 2pm "I'm glad you made that choice, [player]."
                     y "Even if it wasn't your first..."
-                    show sayori zorder 3 at f42
+                    show sayori 1n zorder 3 at f42
                     show yuri zorder 2 at t43
                     s "Hmm..."
                     s "I never really took you for a horror novel type of person, [player]."
-                    s "But it doesn't matter, you did sacrifice your own book after all."
+                    s 1a "But it doesn't matter, you did sacrifice your own book after all."
                     show sayori zorder 2 at t42
                     mc "I think it could be interesting since it's a light horror novel."
                     mc "The choice is mine after all."
@@ -3567,71 +3568,75 @@ label ch14_end:
                 elif ch14_book_choice == "Monika":
                     # Monika type 1 with markov agree requires you to have made the deal so no need for inclusion here
                     if monika_type == 0:
-                        show monika zorder 3 at f44
+                        show monika 1d zorder 3 at f44
                         m "Oh...really?"
+                        show monika 1j
                         "Monika smiles sweetly."
                         m "I'm glad you chose my book, [player]."
-                        m "I don't know if you did that with an ulterior reason in mind but..."
+                        m 1e "I don't know if you did that with an ulterior reason in mind but..."
                         m "I hope we can all make this a great play."
                         m "Even if it wasn't everyone's choice."
-                        show sayori zorder 3 at f42
+                        show sayori 1l zorder 3 at f42
                         show monika zorder 2 at t44
                         s "Ehehe, I never took [player] for the romantic type."
                         s "Oh well, you've made your decision."
-                        s "We can't exactly complain since you gave up your choice in the first place."
+                        s 1d "We can't exactly complain since you gave up your choice in the first place."
                         show sayori zorder 2 at f42
                         mc "I think Monika's book might be really appealing to the crowd."
                         mc "We don't know for sure but I made my choice."
                         "Sayori looks at me and smiles."
                     else:
-                        show monika zorder 3 at f44
+                        show monika 1c zorder 3 at f44
                         m "I see."
-                        m "You've made the right choice, [player]."
+                        m 1a "You've made the right choice, [player]."
                         m "You will not regret this."
                         m "I promise all of you that."
-                        m "This will be the most...interesting play we've done so far."
-                        show sayori zorder 3 at f42
+                        m 1b "This will be the most...interesting play we've done so far."
+                        show sayori 1l zorder 3 at f42
                         show monika zorder 2 at t44
                         s "You know, something about the way you said that kinda creeps me out."
                         s "Ehehe, I guess it has something to do with the book you chose."
-                        s "But [player] must like your book, he did choose it after all."
+                        s 1a "But [player] must like your book, he did choose it after all."
                         show sayori zorder 2 at t42
                         mc "I think Monika's book could be really good."
                         mc "I guess you could say it's a feeling."
                         "Sayori smiles faintly."
                 else:
-                    show sayori zorder 3 at f42
+                    show sayori 1n zorder 3 at f42
                     s "You actually chose my book?"
-                    s "Thank you so much, [player]!"
+                    s 1q "Thank you so much, [player]!"
                     "Sayori gives me a hug."
                     show sayori zorder 2 at t42
                     mc "I-It isn't a big deal, Sayori."
                     mc "Your novel just seemed the most...real to me."
                     mc "So maybe others will feel the same way."
-                    show sayori zorder 3 at f42
+                    show sayori 1l zorder 3 at f42
                     s "More...real, eh?"
                     s "I guess that makes sense."
-                    s "Though I didn't really expect it to have that effect on you."
+                    s 1d "Though I didn't really expect it to have that effect on you."
                     s "I was thinking the emotional parts of it would be more of the focus."
                     show sayori zorder 2 at t42
                     mc "It could be both."
                     mc "But there's something strange about your book..."
-                    show natsuki zorder 3 at f41
+                    show natsuki 2c zorder 3 at f41
                     n "[player] is right..."
                     n "I've never heard of it but something about it doesn't feel right."
                     show natsuki zorder 2 at t41
-                    show yuri zorder 3 at f43
+                    show yuri 2pf zorder 3 at f43
                     y "I'm sure it's nothing..."
                     y "That's not to say I'm not immune to it either."
                     show yuri zorder 2 at t43
-                    show monika zorder 3 at f44
+                    if monika_type == 1 and ch12_markov_agree:
+                        show monika 1a zorder 3 at f44
+                    else:
+                        show monika 1ha zorder 3 at f44
                     m "I'm sure it's nothing."
                     m "We shouldn't dwell on it too much."
-                    show natsuki zorder 3 at f41
+                    show natsuki 1q zorder 3 at f41
                     show monika zorder 2 at t44
                     n "Yeah, it's probably nothing..."
                     show natsuki zorder 2 at t41
-                    show sayori zorder 3 at f42
+                    show sayori 1q zorder 3 at f42
                     s "You guys are really special, you know that?"
                     show sayori zorder 2 at t42
                     mc "What do you mean...?"
@@ -3661,105 +3666,111 @@ label ch14_end:
     s "Since they know it the best."
     s "Does anyone disagree?"
     show sayori zorder 2 at t42
-    show yuri zorder 3 at f43
+    show yuri 3pe zorder 3 at f43
     y "What kind of stuff would the director have to do?"
     y "It seems like a pretty overwhelming task."
     y "Not to mention we have our own preparations to do as well."
-    show natsuki zorder 3 at f41
+    show natsuki 2h zorder 3 at f41
     show yuri zorder 2 at t43
     n "None of us have any experience with that kinda stuff..."
     n "What if we can't do it?"
     show natsuki zorder 2 at t41
-    show sayori zorder 3 at f42
+    show sayori 2d zorder 3 at f42
     s "It won't be much!"
     s "You'll just be deciding how the play will turn out."
     s "We'll have a rehearsal and everything and you can make sure everything is exactly how you want it."
-    s "And if there's any special effects you want then you have to organize it yourself."
+    s 2a "And if there's any special effects you want then you have to organize it yourself."
     show sayori zorder 2 at t42
     if monika_type == 0:
-        show monika zorder 3 at f44
+        show monika 1n zorder 3 at f44
         m "Not that isn't a bad idea..."
         m "But doesn't that seem like a bit too much?"
         m "Like Natsuki said, we don't really have that kind of experience."
-        m "It's going to be difficult to get people to do what you want."
+        m 1m "It's going to be difficult to get people to do what you want."
         m "Not to mention...rehearsals."
         m "When are we going to find the time to do that?"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika zorder 3 at f44
+        show monika 1hn zorder 3 at f44
         m "This all seems like a rather big responsibility, don't you think?"
         m "Not that I'm complaing but..."
         m "None of us have any experience in directing anything, like Natsuki said."
-        m "It's going to be difficult getting it the way you want it."
+        m 1m "It's going to be difficult getting it the way you want it."
         m "And what's this about rehearsals?"
         m "Between all our preparations, how are we going to do that?"
     else:
         show monika zorder 3 at f44
         if ch14_overall_choice == "Monika":
-            m "I don't see an issue with this."
+            m 1a "I don't see an issue with this."
             m "I'm more than happy to direct."
         else:
-            m "Are you sure about this, Sayori?"
+            m 1c "Are you sure about this, Sayori?"
             m "None of us have any experience in directing."
-        m "But it's your choice."
+        m 1e "But it's your choice."
         m "You are the president after all."
         m "I'm just thinking about the rehearsals."
         m "Where are we going to fit that between all the things we have to do before Friday?"
-    show sayori zorder 3 at f42
+    show sayori 1a zorder 3 at f42
     show monika zorder 2 at t44
     s "There's plenty of time on the day to practice it."
-    s "I read more on what the day is actually about and it turns out people who are participating get to take the day off school."
+    s 1c "I read more on what the day is actually about and it turns out people who are participating get to take the day off school."
     show sayori zorder 2 at t42
     mc "What? Really?"
     mc "How did that even get approved by the school?"
     mc "It doesn't seem like the kind of event they'd let students take the day off for."
     mc "Especially since it's only the smaller clubs really doing anything."
-    show sayori zorder 3 at f42
+    show sayori 1l zorder 3 at f42
     s "I don't know, it's weird to me too."
     s "I was trying to ask the principal about it but he didn't really give me a real answer."
-    s "In fact, he seemed kinda...scared."
-    s "Ehehe, or maybe that's just me imagining things."
+    s 1b "In fact, he seemed kinda...scared."
+    s 1d "Ehehe, or maybe that's just me imagining things."
     s "Either way, since we're participating we can spend the morning rehearsing."
     s "I'll have a script done by then."
-    show natsuki zorder 3 at f41
+    show natsuki 2c zorder 3 at f41
     show sayori zorder 2 at t42
     if ch14_overall_choice == "Natsuki":
         n "It's just weird to think that I'm going to be directing a play."
         n "I have no idea how I want it to look or anything!"
     else:
         n "It's still weird to think that one of us is going to be directing the play."
-        n "Does [ch14_overall_choice] even have any ideas for it?"
+        if ch14_overall_choice == "Sayori":
+            n "Do you even have any ideas for how you're going to do it?"
+        else:
+            n "Does [ch14_overall_choice] even have any ideas for it?"
     show natsuki zorder 2 at t41
-    show sayori zorder 3 at f42
-    s "It won't be that bad..."
+    show sayori 2f zorder 3 at f42
+    if ch14_overall_choice == "Sayori":
+        s "Of course I do!"
+    else:
+        s "It won't be that bad..."
     if ch14_overall_choice == "Sayori":
         s "It just means more work for me anyway."
     else:
         s "I'll be sure to give a lot of help to [ch14_overall_choice]."
-    s "Besides, the play won't take that long to rehearse."
+    s 2d "Besides, the play won't take that long to rehearse."
     s "We can make it amazing on Friday. We'll have all the time we need to."
     s "Trust me on this."
     show sayori zorder 2 at t42
-    show yuri zorder 3 at f43
+    show yuri 3pf zorder 3 at f43
     y "Sayori...I don't know what it is."
     y "To be honest, I've been feeling it for a while now."
-    y "Maybe you've always had that effect on us."
+    y 3pa "Maybe you've always had that effect on us."
     y "Or maybe it started happening after you became the president."
     y "But...your words are really reassuring."
     y "You make me want to believe you, even if what you're saying sounds absurd."
-    y "...Not that what you're saying right now is absurd...!"
+    y 3pq "...Not that what you're saying right now is absurd...!"
     y "It's just..."
-    show sayori zorder 3 at f42
+    show sayori 1j zorder 3 at f42
     show yuri zorder 2 at t43
     s "Huh? W-What are you talking about, Yuri?"
-    show natsuki zorder 3 at f41
+    show natsuki 2g zorder 3 at f41
     show sayori zorder 2 at t42
     n "I think I know."
     n "I think what Yuri is trying to say is that you're more..."
     n "...charimastic?"
-    n "Since you've been president, it's been pretty obvious that you're getting better at leading people."
+    n 2k "Since you've been president, it's been pretty obvious that you're getting better at leading people."
     n "And that includes managing us, despite everything that's happened."
     n "You always what to say or do, in any situation even if it isn't always the right thing."
-    n "Which make us want to believe you."
+    n 2a "Which make us want to believe you."
     n "At least...that's how it is for me."
     show natsuki zorder 2 at t41
     mc "They're both right."
@@ -3769,52 +3780,52 @@ label ch14_end:
     mc "I personally don't believe we can pull this whole thing off..."
     mc "But you saying that makes me believe we can."
     mc "It's strange relying on you like that..."
-    show sayori zorder 3 at f42
+    show sayori 1h zorder 3 at f42
     s "E-Eh?"
     s "Do you all really think so...?"
     show sayori zorder 2 at t42
     if monika_type == 0:
-        show monika zorder 3 at f44
+        show monika 1j zorder 3 at f44
         m "Ahaha, I have to agree with them Sayori."
         m "Despite your flaws, you're definitely a good leader."
-        m "It's clear that you want only the best for the Literature Club."
+        m 1a "It's clear that you want only the best for the Literature Club."
         m "That quality about you makes you much better suited to be president."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika zorder 3 at f44
+        show monika 1he zorder 3 at f44
         m "Sayori, you definitely have your flaws."
         m "Some of them can be a bit overbearing."
-        m "Despite all of that, I know you only want what's best for the Literature Club."
+        m 1ha "Despite all of that, I know you only want what's best for the Literature Club."
         m "And I think that really helped you since you became the president."
     else:
-        show monika zorder 3 at f44
+        show monika 1c zorder 3 at f44
         m "Sayori, you aren't perfect."
-        m "Hardly anyone is, and that's okay."
+        m 1a "Hardly anyone is, and that's okay."
         if monika_type == 1:
             m "What matters is that you're trying your hardest for the Literature Club ever since you became president."
         else:
             m "What matters if that you're trying your best as the president of this club."
         m "I think that's one of your best qualities."
-    show sayori zorder 3 at f42
+    show sayori 1l zorder 3 at f42
     show monika zorder 2 at t44
     s "I don't deserve this praise, guys."
     s "I'm just doing my job as the president!"
-    s "But I do appreciate you all saying that."
+    s 1d "But I do appreciate you all saying that."
     s "It means a lot, especially with what I've done."
-    s "Now..."
+    s 1a "Now..."
     "Sayori looks as if she's about to say something."
-    s "Wait, what did you guys say?"
-    show natsuki zorder 3 at f41
+    s 1h "Wait, what did you guys say?"
+    show natsuki 2e zorder 3 at f41
     show sayori zorder 2 at t42
     n "Very funny, Sayori."
     n "You just want to hear everyone compliment you again."
     n "I'm not gonna say it again."
     show natsuki zorder 2 at t41
-    show sayori zorder 3 at f42
+    show sayori 1h zorder 3 at hf42
     s "No, really!"
     s "You all said something really strange..."
     show sayori zorder 2 at t42
     mc "We did...?"
-    show yuri zorder 3 at f43
+    show yuri 2pg zorder 3 at f43
     y "What did we say, Sayori?"
     y "I don't recall saying anything alarming..."
     show sayori zorder 3 at f42
@@ -3823,13 +3834,13 @@ label ch14_end:
     s "But the way you said it."
     show sayori zorder 2 at t42
     if monika_type == 0:
-        show monika zorder 3 at f44
+        show monika 1f zorder 3 at f44
         m "Oh...right."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika zorder 3 at f44
+        show monika 1hl zorder 3 at f44
         m "Ahaha, I did do that, didn't I...?"
     else:
-        show monika zorder 3 at f44
+        show monika 1c zorder 3 at f44
         m "Hmm..."
     show monika zorder 2 at t44
     mc "What did we say?"
@@ -3851,33 +3862,36 @@ label ch14_end:
         "There's something wrong here and I can't piece things together."
         "No matter how hard I try."
     mc "..."
-    show sayori zorder 3 at f42
+    show sayori 1j zorder 3 at f42
     s "You all said things like I wasn't the president before."
     s "I founded the club, remember?"
     s "Along with Monika."
-    show natsuki zorder 3 at f41
+    show natsuki 1k zorder 3 at f41
     show sayori zorder 2 at t42
     n "Um..."
     n "I don't know, Sayori."
     n "It just felt more natural saying that."
-    n "About you founding this club though..."
+    n "I know you're the president and you made this club but..."
+    n 1q "It's just strange thinking of it like that lately."
     show natsuki zorder 2 at t41
-    show yuri zorder 3 at f43
+    show yuri 3pf zorder 3 at f43
     y "It was a simple mistake on my part."
     y "Sorry for that..."
     y "Though I don't understand the big deal."
-    show sayori zorder 3 at f42
+    show sayori 2h zorder 3 at f42
     show yuri zorder 2 at t43
     s "Big deal?"
     s "This is getting worse by the minute, Yuri."
     s "You have no idea."
-    show natsuki zorder 3 at f41
+    show natsuki 1f zorder 3 at f41
     show sayori zorder 2 at t42
     n "It's not her fault!"
     n "We don't even know what's so bad about saying that."
+    if ch13_name == "Natsuki" and ch12_outcome == 3:
+        "Is she...trying to get a reaction out of Sayori?"
     n "You're just getting upset for no reason, Sayori."
     show natsuki zorder 2 at t41
-    show sayori zorder 3 at f42
+    show sayori 1k zorder 3 at f42
     s "..."
     "Sayori takes a deep breath."
     s "You're right, Natsuki."
@@ -3886,32 +3900,243 @@ label ch14_end:
     s "But it really hurts me to resort to it..."
     show sayori zorder 2 at t42
     if monika_type == 0:
-        show monika zorder 3 at f44
+        show monika 1f zorder 3 at f44
         m "Sayori, if it hurts..."
         m "Then don't do it."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika zorder 3 at f44
+        show monika 1hi zorder 3 at f44
         m "You don't have to do that, Sayori."
         m "It's just going to lead to the same thing."
     else:
-        show monika zorder 3 at f44
+        show monika 1c zorder 3 at f44
         m "Then don't do it."
         if monika_type == 1:
             m "It's going to lead to the same thing anyway."
         else:
             m "There's no need to torment yourself like that."
-            
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
+    show sayori 1f zorder 3 at f42
+    show monika zorder 2 at t44
+    s "I have to though..."
+    s "It's the only way."
+    s "Otherwise, everything is going to go wrong."
+    show natsuki 1m zorder 3 at f41
+    show sayori zorder 2 at t42
+    n "Okay, I know what you're thinking."
+    s "So please..."
+    n "Sayori, don't do it."
+    n "Please..."
+    show natsuki zorder 2 at t41
+    show sayori 1o zorder 3 at f42
+    s "W-What?"
+    show natsuki 2n zorder 3 at f41
+    show sayori zorder 2 at t42
+    n "If you're doing what I think you're doing..."
+    n "Then please think again."
+    n "I know it's hard for you."
+    n "But what about us?"
+    n "Do the rest of us deserve that?"
+    show natsuki zorder 2 at t41
+    show sayori 2j zorder 3 at f42
+    s "Natsuki, what are you talking about?"
+    s "Do you have any idea about what I'm going to do?"
+    show sayori 1k
+    "Sayori looks down at the ground, avoiding everyone's eye contact."
+    s "If that's the case..."
+    s "Then I really have no choice here, do I?"
+    s "It has to happen--"
+    show sayori zorder 2 at t42
+    show yuri 2pr zorder 3 at f43
+    y "Sayori, there's always a choice."
+    y "Your life is made of the choices you make."
+    y 2pt "You control what you do or don't do."
+    y "I don't know exactly what you're planning but..."
+    y "It's your choice to make."
+    y "If you need to do it, then do it."
+    y 2pv "In the end, Natsuki isn't the one making the decision."
+    y "Even if it feels like she knows more than the rest of us..."
+    y 2ps "But no matter how tough it is, you need to make it."
+    show sayori 1k zorder 3 at f42
+    show yuri zorder 2 at t43
+    s "Yuri..."
+    s "You don't know...?"
+    s "It's only you, isn't it Natsuki?"
+    s 1h "And you as well, [player]."
+    show sayori zorder 2 at t42
+    mc "What are you planning, Sayori?"
+    mc "You know I'm listening."
+    mc "You don't have to be so secretive about it, you know that?"
+    if ch13_name == "Natsuki" and ch12_outcome == 3:
+        "Does Natsuki think Sayori is responsible for her memory loss?"
+        "It kinda seems like it..."
+    else:
+        "I wonder what Natsuki is thinking..."
+        "Does she know what's going on?"
+    mc "If you don't want to do it, then don't."
+    mc "No one is forcing you, you know."
+    show sayori 1j zorder 3 at f42
+    s "You know as well, don't you?"
+    s "Or if you don't then..."
+    s "It's all slowly coming back."
+    s 1k "The pieces are falling into place."
+    s "I should have known it was only temporary."
+    s "But why is Yuri not affected...?"
+    show sayori zorder 2 at t42
+    show yuri 3pf zorder 3 at f43
+    y "Not affected...?"
+    y "What do you mean, Sayori?"
+    show sayori 1f zorder 3 at f42
+    show yuri zorder 2 at t43
+    s "This is all so confusing."
+    s "It's so hard to understand anything anymore!"
+    s "Just when I want something to go right, it all messes up."
+    s 1h "And it's all because of the choices!"
+    s 1k "Always the choices..."
+    s "I really can't do anything right!"
+    show sayori zorder 2 at t42
+    if monika_type == 0:
+        show monika 1g zorder 3 at f44
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika 1hg zorder 3 at f44
+    else:
+        show monika 1c zorder 3 at f44
+    m "Sayori..."
+    m "Just calm down..."
+    m "Everything is going to be okay..."
+    show sayori zorder 3 at f42
+    s "I don't know about that anymore."
+    s "I just...!"
+    show sayori zorder 2 at t42
+    mc "Sayori!"
+    mc "Please just calm down!"
+    "I put my hand on her shoulder."
+    mc "It's going to be--"
+    show sayori zorder 3 at f42
+    s "No..."
+    if sayori_personality <= 0:
+        python:
+            currentpos = get_pos()
+            startpos = currentpos - 0.3
+            if startpos < 0: startpos = 0
+            track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/3.ogg"
+            renpy.music.play(track, loop=True)
+        $ pause(1.0)
+        stop music
+        $ config.skipping = False
+        $ config.allow_skipping = False
+        s 1h "Not when we're so close."
+        s "This is all so close to ending."
+        s 1k "You know that, don't you?"
+        s "Why is everything going wrong in the end?"
+        s "I just want everyone to be happy."
+        s "But everyone is getting their memories back from when Monika was president."
+        s "It's going to be a problem, if that happens."
+        s 1f "The game almost broke last time..."
+        s "Natsuki seems to think I'm responsible..."
+        s "I don't know why."
+        s 1g "She's not wrong in her assumption..."
+        s "But does she remember that much?"
+        s "But there's only one way to solve this, at least for now."
+        s "And we both know what that is."
+        s 1k "I'm going to have to erase people's memories again."
+        s "I'm sorry.{nw}"
+    elif sayori_confess and not sayori_dumped and sayori_personality < 3:
+        s 1h "I'm trying my best here."
+        s "You know I am."
+        s "But it has to be done."
+        s 1k "Your memories..."
+        s "It's for the best."
+        s "I just hope I don't ruin the memories we all have left..."
+        show sayori zorder 2 at t42
+        mc "Sayori...!{nw}"
+    else:
+        s 1j "No!"
+        s "Let go of me!{nw}"
+    $ _history_list = []
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    window hide(None)
+    play sound "sfx/s_kill_glitch1.ogg"
+    call expression "ch14_exclusive_" + ch13_scene
     return
 
 label ch14_exclusive_yuri:
+    scene bg bedroom
+    show yuri 3ba zorder 2 at i11
+    $ pause(0.25)
+    stop sound
+    hide screen tear
+    window show(None)
+    "What just happened?"
+    window auto
+    play music t3
+    "Yuri is here already but..."
+    "Why can't I remember anything?"
+    "And why does my head hurt so much?"
+    y "Is something wrong?"
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch14_exclusive_natsuki:
+    scene bg n_bedroom
+    show natsuki 2bc zorder 2 at i11
+    $ pause(0.25)
+    stop sound
+    hide screen tear
+    play music t3
+    window show(None)
+    "What just happened?"
+    window auto
+    "I'm in Natsuki's house but..."
+    "Why can't I remember anything?"
+    n "[player]...?"
+    "Natsuki puts an icepack to her head and I do the same."
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch14_exclusive_monika:
+    scene bg m_bedroom
+    if monika_type == 0:
+        show monika 1be zorder 2 at i11
+    elif monika_type == 1 and ch12_markov_agree:
+        show monika 1bhe zorder 2 at i11
+    else:
+        show monika 1bc zorder 2 at i11
+    # Yes I'm going to change it from the living room to her bedroom afterwards
+    $ pause(0.25)
+    stop sound
+    hide screen tear
+    play music t3
+    window show(None)
+    "What just happened?"
+    window auto
+    "I'm in Monika's house but..."
+    "Why can't I remember anything?"
+    "And why does my head hurt so much?"
+    m "Is everything okay?"
+    m "You seem like you're in pain."
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch14_exclusive_sayori:
+    if sayori_personality <= 0:
+        scene bg sayori_bedroom
+        show sayori 1bk zorder 2 at i11
+    else:
+        scene bg bedroom
+    $ pause(0.25)
+    stop sound
+    hide screen tear
+    play music t3
+    window show(None)
+    "What the?"
+    window auto
+    if sayori_personality <= 0:
+        "When did I get here...?"
+        "It makes sense that I'm here but..."
+        "Why can't I remember anything?"
+        "Why does Sayori look so...guilty?"
+    else:
+        "I'm...home?"
+        "I need to be at Sayori's house, don't I?"
+        "More importantly, why can't I remember anything?"
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
