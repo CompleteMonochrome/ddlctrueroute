@@ -2827,7 +2827,7 @@ label ch13_exclusive_natsuki:
         mc "I should probably go home then..."
         mc "You are baking a cake after all."
         mc "You two are going to be pretty busy with baking that thing and I don't really want to interfere."
-        show natuski 1bc zorder 3 at f21
+        show natsuki 1bc zorder 3 at f21
         n "H-Huh? W-Wait, [player]."
         n "You don't have to go just yet..."
         n 1bs "We still have other things we need to do."
@@ -2860,7 +2860,7 @@ label ch13_exclusive_natsuki:
         "Harsuki smiles gently."
         mo "You should get going."
         show momsuki zorder 2 at t22
-        mc "Right...well, I'll see you tomorrow Natuski."
+        mc "Right...well, I'll see you tomorrow Natsuki."
         show natsuki 1bk zorder 3 at f21
         n "See you..."
         "I start walking towards the door."
@@ -6439,5 +6439,209 @@ label ch13_natsukidate:
     "Natsuki walks into the shop."
     show natsuki at lhide
     hide natsuki
+    mc "Well, here goes nothing..."
+    scene bg portraitshop_day with wipeleft_scene
+    $ cl_name = "???"
+    "The shop's interior is filled with canvases."
+    "It looks more like an art class than somewhere people would restore portraits."
+    "Is this the right place?"
+    show natsuki 1ba zorder 2 at t11
+    n "I don't see anyone in here, [player]."
+    n "Maybe they're closed?"
+    mc "The door wouldn't be open if that's the case..."
+    mc "This is the right address..."
+    mc "Maybe Sayori got the wrong pl--"
+    cl "Hello there!"
+    show natsuki zorder 2 at t21
+    show mysteriousclerk 1a zorder 3 at f22
+    cl "Sorry for the mess, but there was an art class just before!"
+    "Suddenly, a loosely kept man appears in front of us."
+    "He seems like the type of person who would keep a messy room..."
+    "Maybe that's how he and Sayori know each other."
+    cl "Now, how can I help you?"
+    show natsuki zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    n "Um...who are you?"
+    show natsuki zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    $ cl_name = "Mysterious Clerk"
+    cl "Me? I'm the keeper of this fine establishment!"
+    cl "Any more questions?"
+    show mysteriousclerk zorder 2 at t22
+    mc "My friend, Sayori told me--"
+    show mysteriousclerk zorder 2 at f22
+    cl "Oh, yes, yes, yes."
+    cl "She told me you were coming a while ago!"
+    cl "Come, come!"
+    cl "This way!"
+    "The clerk points us towards a corner of the room."
+    "There's assorted tools and lots of glasses of various sizes."
+    cl "You're here for a portrait restoration, right?"
+    cl "Oh, of course you are!"
+    show natsuki zorder 3 at f21
+    n "Can you slow down?!"
+    n "We can't keep up...!"
+    show natsuki zorder 2 at t21
+    mc "Yeah! We still have some questions...!"
+    mc "Like--"
+    show mysteriousclerk zorder 3 at f22
+    cl "Rightio! Where's the portrait?"
+    cl "In the bag, it must be!"
+    "The clerk tries to pulls the bag from me."
+    "I resist and take it back."
+    cl "What's the matter boy?"
+    cl "Don't you want it fixed?"
+    show mysteriousclerk zorder 2 at t22
+    mc "Well, yeah but--"
+    show mysteriousclerk zorder 3 at f22
+    cl "Then hand it over!"
+    cl "Don't you have somewhere to be?"
+    show mysteriousclerk zorder 2 at t22
+    "Natsuki tugs at me."
+    show natsuki zorder 3 at f21
+    n "[player], I don't like this."
+    n "Maybe we should go..."
+    n "He seems kinda..."
+    show natsuki zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "Erratic?"
+    cl "Hyper?"
+    cl "Crazy?"
+    cl "Insane?"
+    cl "Personally, I'd go with all of the above."
+    "The clerk begins to slow down his voice."
+    cl "Look, young lady."
+    cl "I'm all of those things but that doesn't stop me from doing my job."
+    show natsuki zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    n "And what exactly is your job?"
+    n "You haven't exactly given us any reason to let you just have this thing that's so valuable to me!"
+    n "I don't even know if I'm at the right place!"
+    show natsuki zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "Skepticism...good!"
+    cl "I like that!"
+    cl "This is definitely the right place!"
+    cl "Art classes and restoration by yours truly."
+    "Natsuki doesn't look impressed."
+    cl "I suppose I'll just have to show you."
+    "The man walks up to the front of the room."
+    "He pushes a button and suddenly the blackboard flips around."
+    "Natsuki and I are taken by surprise at what's happening."
+    "Didn't expect something like that from someone like him..."
+    "After it's finished turning over, there's portraits hanging from the wall where the blackboard was."
+    "All of them look photorealistic."
+    "I'm sure some of them actually are photos."
+    cl "I restored all of these."
+    cl "Most of them are quite old, I'd say a few centuries or so."
+    "He points to one of them."
+    cl "This one, I did rather recently."
+    show mysteriousclerk zorder 2 at t22
+    mc "Don't those belong to people?"
+    mc "Why do you still have them?"
+    show mysteriousclerk zorder 3 at f22
+    cl "Oh no, young man."
+    cl "These are ones I've done in my spare time."
+    cl "All the ones people send me are already back in their homes..."
+    cl "...or wherever it is they keep them."
+    cl "I'm not one to judge."
+    "He shows a faint smile."
+    cl "Now, do you need any more proof?"
+    show natsuki zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    n "I guess not..."
+    n "But there's still so much I want to know..."
+    n "Like how--"
+    show natsuki zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "Ah, ah!"
+    cl "You need to get going, after all!"
+    cl "Young love, so sweet."
+    show mysteriousclerk zorder 2 at t22
+    mc "Y-Young love?"
+    mc "W-We're not..."
+    mc "She's just...!"
+    "I put the bag on the floor."
+    "I look towards Natsuki who looks just as flustered."
+    show natsuki zorder 3 at f21
+    n "Yeah...!"
+    n "We're just...!"
+    n "You don't...!"
+    n "Ugh!"
+    show natsuki zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "Ehehe, I'm only messing with you."
+    cl "Now about the payment..."
+    "Natsuki and I turn towards each other."
+    cl "It's on the house!"
+    cl "Well, actually..."
+    cl "Someone else covered it and..."
+    cl "It's a long story, just get going already!"
+    "The clerk takes the bag and unzips it."
+    "He pulls out the portrait and stares it."
+    cl "I see..."
+    cl "I'll get this done before you come back, I promise you this."
+    "He takes one of the glasses on the table and puts it on."
+    cl "Let's see..."
+    show mysteriousclerk zorder 2 at thide
+    hide mysteriousclerk
+    show natsuki zorder 2 at t11
+    mc "Well..."
+    n "I'm sure he knows what he's doing, [player]."
+    mc "Yeah, but he's a strange isn't he?"
+    cl "I heard that!"
+    mc "..."
+    mc "See what I mean?"
+    n "Yeah..."
+    n "But we shouldn't think about that now."
+    n "We have to get going, don't we?"
+    mc "You're right..."
+    cl "Oh! Be sure to change the open to close on your way out."
+    cl "This requires my undivided attention."
+    cl "I don't need more pesky customers interrupting me while I'm at work."
+    mc "S-Sure..."
+    "Are we pesky to him...?"
+    "I open the door for Natsuki and flip the sign."
+    mc "Time to go to a bakery, I guess."
+    n "Yeah, let's go!"
+    show natsuki at thide
+    hide natsuki
+    "Natsuki exits the building and pulls out her phone."
+    "Just as I'm about to leave, I feel a hand on my shoulder."
+    show mysteriousclerk 1a zorder 2 at t11
+    cl "Young man."
+    cl "Before you go..."
+    mc "I didn't even see or hear you leave where you were sitting."
+    mc "How did--"
+    cl "She's already corrupted, isn't she?"
+    mc "What?"
+    cl "In this timeline, she's all messed up."
+    cl "I can tell..."
+    cl "Stupid, stupid girl."
+    mc "Huh? Who are you talking about?"
+    cl "I hope Naomik turns out okay..."
+    mc "Naomik? Wha--"
+    cl "Go on, your date is waiting."
+    show mysteriousclerk at thide
+    hide mysteriousclerk
+    "The clerk walks back to the corner and pulls out a magnifying glass."
+    "Who's Naomik...?"
+    "I gently close the door behind me and meet up with Natsuki outside."
+    scene bg city_day
+    show natsuki 1bc zorder 2 at t11
+    with wipeleft_scene
+    n "What took so long for you to get out?"
+    n "Did you see something?"
+    mc "Not exactly..."
+    mc "He said something really weird."
+    mc "Something about timelines and a..."
+    mc "...Naomik?"
+    mc "I don't know what that means."
+    n "Naomik, huh?"
+    n "That doesn't sound like anyone I know..."
+    n "And that timelines thing..."
+    n "He is kinda crazy, [player]."
+    mc "I guess so..."
+    mc "Still, I can't help but feel there's at least some truth in what he's saying."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return

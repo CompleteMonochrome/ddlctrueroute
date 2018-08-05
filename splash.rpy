@@ -543,6 +543,8 @@ label after_load:
         $ ch14_votes = [0, 0, 0, 0, 0]
     if not hasattr(store,'ch14_overall_choice'):
         $ ch14_overall_choice = "Sayori"
+    if not hasattr(store,'cl_name'):
+        $ cl_name = "Mysterious Clerk"
 
     # Because of a change in an update - remove with 0.9.4f
     if ch14_book_choice == "Player":

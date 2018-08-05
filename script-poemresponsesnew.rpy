@@ -4035,7 +4035,7 @@ label mnew_sayori_4:
     m "But..."
     mc "Yeah, it's not the greatest."
     m 2e "Hold on."
-    "Monika rereads the poem"
+    "Monika rereads the poem."
     m 3b "Wow!"
     m "It really made me feel..."
     m 3k "Um..."
