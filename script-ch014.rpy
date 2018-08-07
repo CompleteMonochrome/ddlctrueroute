@@ -980,7 +980,7 @@ label ch14_end:
     # Five Nights at Freddys Reference
     y 2pf "It's about someone who got hired as a security guard at a local restaurant."
     y "But it's during the night when things get weird."
-    y "The mascots of the restaurant come to life and start roaming around the restuarant."
+    y "The mascots of the restaurant come to life and start roaming around the restaurant."
     y "The security guard kinda has to deal with it and as he gets throught the nights, some ulterior story is told."
     y 2pq "When I say involved, I mean there's some parts that might need to be changed."
     show natsuki 2t zorder 3 at f41
