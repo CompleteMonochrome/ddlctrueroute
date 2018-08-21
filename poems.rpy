@@ -298,7 +298,7 @@ And suddenly I come back to my senses.
 Could this grasp last forever?
 It brings feelings once lost, feelings discarded
 In an attempt of isolation.
-The reprise of my feelings has rejuvinated my soul
+The reprise of my feelings has rejuvenated my soul
 And for the first time in eternity
 I've come to my senses."""
 )
@@ -359,7 +359,7 @@ The feeling has returned
 But what use is it now?
 For without his presence
 There are no feelings worth having.
-Forever on the apporach
+Forever on the approach
 Forever out of reach."""
 )
 
@@ -1616,7 +1616,7 @@ I have to forget it, for now
 
 But what is this feeling?
 
-A familiar sensation, shown through deciept in times past
+A familiar sensation, shown through deceit in times past
 Yet now it feels so real.
 An overarching sensation, a cacophony in my ears that I can't stop.
 
