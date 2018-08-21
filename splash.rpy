@@ -454,7 +454,10 @@ label splashscreen:
     $ persistent.ghost_menu = False
     $ splash_message = splash_message_default
     if persistent.playthrough == 0 and persistent.monika_change and not persistent.monika_gone:
-        $ config.main_menu_music = audio.t1m
+        if persistent.markov_agreed:
+            $ config.main_menu_music = audio.t1c
+        else:
+            $ config.main_menu_music = audio.t1m
     else:
         $ config.main_menu_music = audio.t1
     $ renpy.music.play(config.main_menu_music)
@@ -536,8 +539,20 @@ label after_load:
         $ ch14_book_choice = "Sayori"
     if not hasattr(store,'ch14_natyuri_choice'):
         $ ch14_natyuri_choice = ["Natsuki", "Yuri"]
+    if not hasattr(store,'ch14_votes'):
+        $ ch14_votes = [0, 0, 0, 0, 0]
     if not hasattr(store,'ch14_overall_choice'):
         $ ch14_overall_choice = "Sayori"
+    if not hasattr(store,'cl_name'):
+        $ cl_name = "Mysterious Clerk"
+
+    # Because of a change in an update - remove with 0.9.4f
+    if ch14_book_choice == "Player":
+        $ ch14_book_choice = player
+    if ch14_natyuri_choice[0] == "Player":
+        $ ch14_natyuri_choice[0] = player
+    if ch14_natyuri_choice[1] == "Player":
+        $ ch14_natyuri_choice[1] = player
 
     # Normal Stuff
     if persistent.playthrough == 0:

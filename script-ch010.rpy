@@ -1894,7 +1894,7 @@ label ch10_end:
     show screen tear(20, 0.1, 0.1, 0, 40)
     play sound "sfx/s_kill_glitch1.ogg"
     $ pause(0.25)
-    scene bg shop_afternoon
+    scene bg shop_sunset
     stop sound
     hide screen tear
     play music t2g
