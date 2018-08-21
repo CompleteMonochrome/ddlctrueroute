@@ -69,7 +69,7 @@ label ch13_main:
         s 1l "I got a bit too philosophical there, didn't I?"
         s 1d "I just hope Natsuki does end up happy, in the end."
     else:
-        s 1c "So...this is an interesting end for Natsuki."
+        s 1c "So...this is an interesting end for her."
         s "She lives by herself now."
         s 1h "Yasuhiro is in jail while he's being investigated."
         s "Who knows how long he'll be in there for but with the evidence we have..."
@@ -1032,7 +1032,7 @@ label ch13_end:
     mc "There might be some other preparations that we haven't covered yet."
     show sayori 2a zorder 3 at f32
     s "If there is, I'll be handling it."
-    s "So really, if you want to do that then you'll have have to help me."
+    s "So really, if you want to do that then you'll have to help me."
     s 2q "Ehehe, not like you have to though."
     s "You should choose whoever you think needs the most help."
     show sayori zorder 2 at t32
@@ -1170,7 +1170,7 @@ label ch13_end:
     $ ch13_name = ch13_scene.capitalize()
     "So we've all decided what we're going to be doing."
     "I'm going to be helping out [ch13_name] with her preparations."
-    "I know with the two of us working together, we can do something really great for the festival."
+    "I know with the two of us working together, we can do something really great for Inauguration Day."
     "I just hope everyone else is okay without my help."
     if ch13_name != "Sayori":
         "Especially Sayori."
@@ -1550,7 +1550,7 @@ label ch13_end:
                 m "But anyway, we're wasting time here."
                 mc "Yeah..."
             elif monika_type == 1 and ch12_markov_agree:
-                m 1ha "We should should probably get going."
+                m 1ha "We should probably get going."
                 m "We don't want to be the ones who are lacking, especially since there's two of us!"
                 mc "Yeah, you're right."
                 mc "But I'm sure we'll do fine."
@@ -2357,7 +2357,7 @@ label ch13_exclusive_natsuki:
         n "[player]..."
         "Natsuki suddenly appears from behind her door."
         n "What are you doing here?"
-        mc "Well, you're mom let me in and--"
+        mc "Well, your mom let me in and--"
         n 2be "I meant what are you doing at my house?"
         n "Sayori already came to visit me but it's not like she's staying."
         n "If you came to visit, then you can forget it."
@@ -2425,7 +2425,7 @@ label ch13_exclusive_natsuki:
         mc "I chose to help you because I thought that you'd have the hardest time with your preparations."
         mc "I'm not saying that you couldn't do it yourself..."
         mc "I just want to make your job a bit easier."
-        "Especially with the stuff that's happened to you in the past couple of days."
+        mc "Especially with the stuff that's happened to you in the past couple of days."
         n 2bf "What happens if I say no to your help?"
         mc "Then Sayori will probably be mad at me for not trying hard enough to help you."
         mc "It's your decision though..."
@@ -2439,7 +2439,7 @@ label ch13_exclusive_natsuki:
         mc "I actually have something but first, do you have any ideas?"
         "Natsuki thinks for a moment."
         n 1bh "Nothing off the top my head."
-        n "But you said that you weren't doing your own preparatios because you weren't great at anything, right?"
+        n "But you said that you weren't doing your own preparations because you weren't great at anything, right?"
         mc "Yeah?"
         n 1bk "So that must mean Sayori thinks I'm at least good at something."
         mc "I think the club actually thought it was a good idea for you to bake something."
@@ -2517,18 +2517,18 @@ label ch13_exclusive_natsuki:
         mo 1c "Ahaha, I should really use my head."
         $ renpy.sound.set_volume(0.25)
         play sound "mod_assets/sfx/metaldrop.ogg"
-        "Haruki begins to gets up from the floor."
+        "Haruki begins to get up from the floor."
         $ pause(1.5)
         $ renpy.sound.set_volume(1.0)
         "She brushes off some of the dust on her."
         mo "Anyway, what did you want to ask me?"
         show natsuki 2bc zorder 3 at f21
         show momsuki zorder 2 at t22
-        n "I could your help baking a cake."
+        n "I could use your help baking a cake."
         n "It's for Inauguration Day."
         show natsuki zorder 2 at t21
         show momsuki 1a zorder 3 at f22
-        mo "For the special day, is it?"
+        mo "For the special day, isn't it?"
         mo "Well, I'd be more than happy to help you bake it, Natsuki!"
         show natsuki 1bk zorder 3 at f21
         show momsuki zorder 2 at t22
@@ -2543,7 +2543,7 @@ label ch13_exclusive_natsuki:
         show natsuki zorder 2 at t21
         mc "I think she's saying that you should bake it yourself."
         show momsuki 1c zorder 3 at f22
-        mo "You're friend is right, Natsuki."
+        mo "Your friend is right, Natsuki."
         mo "If you don't bake it yourself, then it wouldn't really be your preparations."
         mo "It's kind of cheating, isn't it?"
         show natsuki 1bq zorder 3 at f21
@@ -2604,7 +2604,7 @@ label ch13_exclusive_natsuki:
         mc "Well, we do have to choose some books for tomorrow."
         mc "We could do that in the meantime."
         show momsuki 1c zorder 3 at f22
-        mo "Great! You two do that and I'll write down the recipe to you."
+        mo "Great! You two do that and I'll write down the recipe for you."
         mo "After that, I'll show you exactly how my mom showed me how to bake it."
         mo "Assuming you two aren't too quick, I'll be downstairs waiting for the two of you."
         show natsuki 2ba zorder 3 at f21
@@ -2712,7 +2712,7 @@ label ch13_exclusive_natsuki:
         n 1bb "Do you have books at home you're going to choose?"
         n "You can choose from some of the books here...if you want."
         n 1bq "You don't have to if you don't want to...okay?"
-        mc "Alright, Natsuki I got it."
+        mc "Alright, Natsuki, I got it."
         mc "I'm sure I'll find something."
         "I search through the pile of books on her table."
         "Almost every single one of them is manga."
@@ -2758,7 +2758,7 @@ label ch13_exclusive_natsuki:
         mc "What do you mean?"
         n 2bb "You probably don't like those books as much another manga you know, right?"
         mc "That's true but..."
-        n 2bo "I don't want to force you anything...!"
+        n 2bo "I don't want to force you or anything...!"
         n "But you should probably think about it."
         n 2bq "It might make things easier tomorrow."
         mc "I guess so..."
@@ -3425,7 +3425,7 @@ label ch13_exclusive_yuri:
         mc "What's wrong with me helping you?"
     else:
         y "I...don't know what it is."
-        y "It just feel strange being here."
+        y "I just feel strange being here."
         y "Like there's something wrong, somehow."
         mc "Eh? What do you mean?"
         mc "Is there something wrong with me helping you?"
@@ -3503,7 +3503,7 @@ label ch13_exclusive_yuri:
         "I really was some kind of jerk back then for not realizing."
         "Anyway, back to what Yuri asked me..."
         "Lately, Sayori has been more serious."
-        "I don't know if that's because she's talking her responsibility as the president of the club more seriously or..."
+        "I don't know if that's because she's taking her responsibility as the president of the club more seriously or..."
         "Hold on a second..."
         y 3pf "You look like you're concentrating."
         mc "I am..."
@@ -3610,7 +3610,7 @@ label ch13_exclusive_yuri:
     "A lot of those books are some novels that were gifted to me in the past for special occasions."
     "I never really got around to reading them."
     "The other type of books I have there is manga, which I don't think Yuri would be particularly interested in."
-    "Though anything seems to be possble these days."
+    "Though anything seems to be possible these days."
     "What's on the bookshelf is not a very big collection..."
     mc "On second thought, maybe we should have gone to your house."
     mc "Or maybe the library..."
@@ -3802,7 +3802,7 @@ label ch13_exclusive_yuri:
     mc "Yeah, I think you're right."
     y "So..."
     y 3pe "What kind of atmosphere do you think we should have?"
-    mc "I mean, that kinda depends on the book we choose doesn't it?"
+    mc "I mean, that kinda depends on the book we choose, doesn't it?"
     y 3pq "Ah...you're right."
     y "Those words just slipped from my mouth."
     mc "Well, we could always make a list of the stuff we could potentially use."
@@ -3822,7 +3822,7 @@ label ch13_exclusive_yuri:
         y 3ps "What more could I ask for?"
         mc "That means a lot, Yuri."
     else:
-        y 3pu "It's just adds a little extra excitement."
+        y 3pu "It just adds a little extra excitement."
         mc "I see..."
     "Yuri and I start writing down the list of items we could use."
     "I doubt we'll be able to afford all of these but the more ideas we get, the less chance we have of forgetting something."
@@ -3931,7 +3931,7 @@ label ch13_exclusive_monika:
         m 2e "To be honest, we could have gone to your house but..."
         m "I wanted to get some practice in for the piece I'm going to play."
         m "I hope you don't mind too much!"
-        mc "Ah, no that's fine."
+        mc "Ah, no, that's fine."
         mc "After all, I'm the one helping you."
         mc "It would make sense that we go to {i}your{/i} house after all."
         m 2j "Ahaha, if you say so."
@@ -4574,7 +4574,7 @@ label ch13_exclusive_monika:
             m 1h "Or at least, I can't feel it's existence anymore."
             m "That doesn't really matter."
             m "What does, is that we still have two copies that we can use."
-            m 1i "The one I'm holding...which belonged to [player].'"
+            m 1i "The one I'm holding...which belonged to [player]."
             m "And the one that Monika read, that she tried to get rid of."
             m 1j "I've kept it in a secure location, which you don't need to know about."
             m "After all I'll be giving you this one."
@@ -5041,7 +5041,7 @@ label ch13_exclusive_monika:
         mc "Probably."
         m 1ba "Anyway, with how easy that one piece was I wouldn't be surprised if it took me less than a few hours to master it."
         m 2bb "Let's take a look at this second one."
-        "Monika places the second piece I found for her on hey keyboard."
+        "Monika places the second piece I found for her on her keyboard."
         "A few minutes pass as she plays the piece."
         "The sound echoes throughout her house."
         "Once again, she plays the tune effortlessly."
@@ -5537,7 +5537,7 @@ label ch13_exclusive_sayori:
     show sayori 1a zorder 2 at t11
     with wipeleft_scene
     s "I have to contact the person holding the event."
-    s "In the meantime, why don't you create a list of stuff the others could use for their part in the festival."
+    s "In the meantime, why don't you create a list of stuff the others could use for their part in the Inauguration Day?"
     mc "How could I possibly do that?"
     mc "I barely know the type of stuff they're going to do."
     s 1d "Well...you've been in this club for a while now."
@@ -5769,12 +5769,12 @@ label ch13_exclusive_sayori:
     window show(None)
     "Helping Sayori today was pretty easy."
     window auto
-    "I was expecting to do somehing a lot more difficult, considering we had to help everyone else."
+    "I was expecting to do something a lot more difficult, considering we had to help everyone else."
     "She seemed to have most of it handled by herself."
     "I search my bag for the books I got from Sayori's house."
     "They all seem to be there."
-    "I ended up taking two novels and two manga."
-    "The novels were popular books that I'm sure everyone would know."
+    "I ended up taking a novel and three manga."
+    "The novel was just a popular book that I'm sure everyone would know."
     "The manga on the other hand, was a series that I liked."
     "I don't think many people have really heard of it, so I was surprised when Sayori had a copy in her room."
     "We still have a long way to go until Inauguration Day."
