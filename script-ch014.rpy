@@ -4310,7 +4310,7 @@ label ch14_exclusive_monika:
         mc "I know I'm {i}supposed{/i} to be here."
         m "Hmm..."
         "Monika looks at me curiously."
-        if cch12_markov_agree:
+        if ch12_markov_agree:
             m "You really want to know?"
             m "I don't know if you'll like what I'm gonna say."
             mc "Is it that bad?"
