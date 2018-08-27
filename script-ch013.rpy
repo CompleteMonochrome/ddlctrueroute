@@ -2348,6 +2348,123 @@ label ch13_exclusive_natsuki:
             mc "We should think of the stuff we're going to bake."
             mc "Maybe a big cake and some cupcakes?"
             n 1bc "That could work."
+            mc "There's a load of possibilities, isn't there?"
+            n "There is!"
+            n "Hmm..."
+            mc "What is it?"
+            n "Well, if we're going to be doing baking..."
+            n "Then we should go all out, right?"
+            mc "All out?"
+            mc "What do you mean?"
+            n "I think we should go downstairs and ask my mom for help."
+            mc "Your mom knows how to bake?"
+            n "She's the one who got me into baking in the first place!"
+            mc "I see."
+            mc "Do you think she could help us?"
+            mc "Or at least give us some ideas."
+            n "I'm sure of it."
+            mc "Then what are we waiting for?"
+            n "Nothing, let's go."
+            scene n_livingroom with wipeleft_scene
+            "We go downstairs to try to look for Haruki."
+            "I think both of her parents are down here."
+            "Somewhere..."
+            show natsuki 1ba zorder 2 at t21
+            n "Mom?"
+            n "Are you here?"
+            n "We need to ask you something."
+            show momsuki 1a zorder 3 at f22
+            mo "Natsuki? I'm here."
+            mo "Did you need something?"
+            mo "We're a bit busy right now but I can make time."
+            show natsuki zorder 3 at f21
+            show momsuki zorder 2 at t22
+            n "Oh...if you're busy then..."
+            n "It can wait."
+            n "What you're doing is probably more important anyway..."
+            show natsuki zorder 2 at t21
+            show momsuki zorder 3 at f22
+            mo "Nonsense!"
+            mo "There's nothing in this world more important than you, Natsuki."
+            mo "So come on, let's hear it."
+            show natsuki zorder 3 at f21
+            show momsuki zorder 2 at t22
+            n "Well..."
+            n "I was wondering if you could help us with baking."
+            n "We're doing this thing for the club and they want me to bake."
+            n "The thing is, it's almost like a festival."
+            n "So there's a lot to bake."
+            show natsuki zorder 2 at t21
+            show momsuki zorder 3 at f22
+            mo "Baking?"
+            mo "I'd be more than happy to help, Natsuki!"
+            mo "I've got this special recipe that's been passed down through the generations."
+            mo "My mother told me the recipe, and her mother before that."
+            mo "It's rather special."
+            show natsuki zorder 3 at f21
+            show momsuki zorder 2 at t22
+            n "Is this the recipe for {i}that{/i} cake?"
+            n "The really special one?"
+            show natsuki zorder 2 at t21
+            show momsuki zorder 3 at f22
+            mo "Yes, exactly that!"
+            mo "I'm glad you still remember."
+            "Haruki smiles sweetly."
+            mo "Now, I'm going to need you to write down the recipe."
+            mo "It's rather long."
+            mo "But I promise it will be worth it."
+            show momsuki zorder 2 at t22
+            mc "Ah...then what should I be doing?"
+            mc "I'm assuming this recipe isn't meant for my eyes."
+            show momsuki zorder 3 at f22
+            mo "That's a good point."
+            mo "Do you mind cleaning up?"
+            mo "I'm going to be telling Natsuki the recipe and while that's happening no cleaning on my part is going to be happening."
+            mo "If you could be a dear and clean up the room just for a couple of minutes."
+            show natsuki zorder 3 at f21
+            show momsuki zorder 2 at t22
+            n "Mom!"
+            n "You're not seriously asking [player] to do that, are you?"
+            n "It seems kinda--"
+            show natsuki zorder 2 at t21
+            mc "It's fine, Natsuki."
+            mc "I'm more than happy to help."
+            mc "I'm pretty good at cleaning."
+            mc "And I came here for you in the first place."
+            show natsuki zorder 3 at f21
+            n "Are you sure?"
+            n "Y-You don't have to..."
+            show natsuki zorder 2 at t21
+            mc "I'm sure."
+            mc "Don't worry about me."
+            show momsuki zorder 3 at f22
+            mo "What a fine young man."
+            mo "Seems like boyfriend material, Natsuki."
+            show natsuki zorder 3 at f21
+            show momsuki zorder 2 at t22
+            n "Mom...!"
+            "Natsuki turns a bright red."
+            "Though my face is probably just as red."
+            n "T-That's not...!"
+            n "W-We're not...!"
+            show natsuki zorder 2 at t21
+            mc "Y-Yeah!"
+            mc "I-It's not like that!"
+            show momsuki zorder 3 at f22
+            mo "Ahaha, I know."
+            "Haruki giggles softly."
+            mo "Don't worry, I'm just messing around."
+            mo "You should see your faces."
+            mo "Anyway, I'll get you something to clean with."
+            mo "Natsuki, why don't you get that paper now?"
+            show natsuki zorder 3 at f21
+            show momsuki zorder 2 at t22
+            n "Right."
+            n "I'll be right back."
+            show natsuki at thide
+            hide natsuki
+            show momsuki zorder 2 at t11
+            mo "And now it's just the two of us."
             call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     elif ch12_outcome == 2:
         mc "Are you here, Natsuki?"
