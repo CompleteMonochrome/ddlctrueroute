@@ -4216,7 +4216,7 @@ label ch14_exclusive_monika:
         $ pause(3.0)
         window show(None)
         show monika 1ha zorder 3 at t11
-        if ch5_name == "Monika"
+        if ch5_name == "Monika":
             m "This has happened before, hasn't it?"
             window auto
             m "I can remember."
