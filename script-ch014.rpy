@@ -2501,7 +2501,7 @@ label ch14_end:
             "I had an opportunity last night to read this book or at least find a summary, so why didn't I?"
             "It's too late now..."
             "Maybe I'll just say it's no good."
-            "What will Monika think? I borrowed this from her, didn't I?"
+            "What will [ch13_name] think? I borrowed this from her, didn't I?"
             "Will she think any less of me because of it?"
             "Just how much of this do I remember...?"
             "I think for a moment."
@@ -2546,8 +2546,12 @@ label ch14_end:
                         mc "Eventually the government notices this and..."
                         mc "Well, you probably know what happens next."
                         show natsuki 1d zorder 3 at f41
-                        n "I didn't know you read this kinda stuff, [player]."
-                        n "I thought it would be like your first explanation."
+                        if ch13_name == "Natsuki":
+                            n "I thought you just picked up a random book, [player]."
+                            n "I kinda thought you would mess it up again."
+                        else:
+                            n "I didn't know you read this kinda stuff, [player]."
+                            n "I thought it would be like your first explanation."
                         n "Where you didn't really know what you were talking about."
                         n "I'm impressed!"
                         show natsuki zorder 2 at t41
