@@ -2426,7 +2426,7 @@ label ch14_end:
     # Two Novels Two Manga
     else: #if (ch13_name == "Monika" and monika_type == 0) or (ch13_name == "Yuri" and ch13_yuri_books):
         $ ch14_player_manga = 2
-        if ch13_yuri_books:
+        if ch13_name == "Yuri" and ch13_yuri_books:
             "The book I took from Yuri."
             "It's something I can actually talk about."
             "I didn't want to disappoint her so I actually read a little bit of it."
@@ -2492,6 +2492,11 @@ label ch14_end:
         else:
             "I really should have taken a novel that I've read."
             "There's no way I'm going to be able to explain this one."
+            if ch13_name == "Natsuki" and not ch13_natsuki_books:
+                "I even took this book from Natsuki's house."
+                "I should have asked her what it was about."
+                "Even a brief description..."
+                "Because I have no idea what it's about."
             "Is it better if I just say that?"
             "I had an opportunity last night to read this book or at least find a summary, so why didn't I?"
             "It's too late now..."

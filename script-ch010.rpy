@@ -599,7 +599,7 @@ label ch10_main:
 
 label ch10_nat_house:
     $ ch10_del_jump = "_nat_house"
-    scene bg n_house
+    scene bg n_house_day
     with wipeleft_scene
     $ insert_dadsuki_character()
     $ d_name = "???"
