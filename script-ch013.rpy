@@ -3611,7 +3611,7 @@ label ch13_exclusive_natsuki:
                     "And that's a normal day."
                     jump ch14_natsuki_outcome1_nodate
         else:
-            label ch14_natsuki_outcome1_nodate
+            label ch14_natsuki_outcome1_nodate:
             mc "We should think of the stuff we're going to bake."
             mc "Maybe a big cake and some cupcakes?"
             n 1bc "That could work."
