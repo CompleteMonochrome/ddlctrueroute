@@ -86,7 +86,7 @@ label ch4_main:
         "To my amazement, Sayori is actually cleaning up her room."
         s 1by "It's good to see you."
         s "Thanks for coming over, I was expecting you to be a bit later..."
-        s 1bd "So I could have a chance to cleanup my room."
+        s 1bd "So I could have a chance to clean up my room."
         mc "Sayori? What's gotten into you?"
         mc "You look great!"
         s 1bl "Eh? You think so?"

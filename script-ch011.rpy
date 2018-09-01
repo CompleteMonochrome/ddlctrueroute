@@ -856,7 +856,7 @@ label ch11_end:
     "After that experience at the mall, I'm pretty much ready for whatever is coming."
     "There's no way going to Natsuki's house is going to ruin what I'm feeling."
     "At least, I hope so."
-    scene bg n_house with wipeleft_scene
+    scene bg n_house_day with wipeleft_scene
     "I get to Natsuki's house pretty quickly."
     "I remembered her address and typed it into a map online to give me better directions."
     "It was faster than Sayori's directions that she gave me on an actual map by a solid ten minutes."
@@ -2490,7 +2490,7 @@ label ch11_bad:
         hide screen tear
         window hide(None)
         scene black with trueblack
-        scene bg n_house
+        scene bg n_house_day
         with dissolve_scene_half
         play music t2g
         queue music t2g2
