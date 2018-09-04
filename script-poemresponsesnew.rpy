@@ -689,7 +689,7 @@ label ch12_n_end:
     return
 
 label ch14_n_end:
-    if natsuki_outing:
+    if natsuki_date:
         call showpoem (poem_n9b, img="natsuki 1s")
         "Just from reading the poem, I can clearly tell this is about me."
         "Did I really make such an impact on Natsuki's life?"
@@ -2027,7 +2027,7 @@ label ch14_n_bad:
     jump ch14_n_med
 
 label ch14_n_med:
-    if natsuki_outing:
+    if natsuki_date:
         jump ch14_n_good
     mc "Welcome back, Natsuki."
     mc "I thought I should say that to you individually."
@@ -2088,7 +2088,7 @@ label ch14_n_med:
     return
 
 label ch14_n_good:
-    if not natsuki_outing:
+    if not natsuki_date:
         jump ch14_n_med
     n "..."
     n 1g "I want to say thank you again."

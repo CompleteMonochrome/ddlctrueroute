@@ -519,7 +519,13 @@ init -1 style navigation_button_text:
 
 init -501 screen main_menu() tag menu:
 
-
+    if persistent.playthrough == 0 and persistent.monika_change and not persistent.monika_gone:
+        if persistent.markov_agreed:
+            config.main_menu_music = audio.t1c
+        else:
+            config.main_menu_music = audio.t1m
+    else:
+        config.main_menu_music = audio.t1
 
 
     style_prefix "main_menu"

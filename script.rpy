@@ -207,6 +207,15 @@ label start:
         call poemresponse_start_new
         call ch14_end
 
+        call poem
+
+
+        label ch15_skip:
+        $ chapter = 15
+        call ch15_main
+        call poemresponse_start_new
+        call ch15_end
+
         label endgame_skip:
         $ renpy.full_restart(transition=None, label="splashscreen")
         return
