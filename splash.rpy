@@ -667,7 +667,13 @@ label autoload_yurikill:
     jump expression persistent.autoload
 
 label before_main_menu:
-    $ config.main_menu_music = audio.t1
+    if persistent.playthrough == 0 and persistent.monika_change and not persistent.monika_gone:
+        if persistent.markov_agreed:
+            $ config.main_menu_music = audio.t1c
+        else:
+            $ config.main_menu_music = audio.t1m
+    else:
+        $ config.main_menu_music = audio.t1
     return
 
 label quit:
