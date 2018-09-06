@@ -545,6 +545,8 @@ label after_load:
         $ ch14_overall_choice = "Sayori"
     if not hasattr(store,'cl_name'):
         $ cl_name = "Mysterious Clerk"
+    if not hasattr(store, 'ch14_sayori_date_choice'):
+        $ ch14_sayori_date_choice = False
 
     # Because of a change in an update - remove with 0.9.4f
     if ch14_book_choice == "Player":

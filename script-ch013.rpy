@@ -2582,7 +2582,7 @@ label ch13_exclusive_natsuki:
             if persistent.markov_agreed:
                 mc "Of course."
                 mc "I'll go do that..."
-                scene bg n_livingroom with wipeleft_scene
+                scene bg n_bedroom with wipeleft_scene
                 play music t6
                 show natsuki 1ba zorder 2 at t11
                 n "Five eggs and..."
@@ -2600,7 +2600,7 @@ label ch13_exclusive_natsuki:
                 window hide(None)
                 play sound "sfx/s_kill_glitch1.ogg"
                 scene bg n_bedroom
-                show natsuki 1ba zorder 2 at i11
+                show natsuki 1bk zorder 2 at i11
                 $ pause(0.25)
                 stop sound
                 hide screen tear
@@ -2613,19 +2613,19 @@ label ch13_exclusive_natsuki:
             mc "It went okay."
             mc "Your mom came in and stopped me before I could do much."
             mc "So now I'm here."
-            n "I thought you were good at cleaning?"
+            n 2bc "I thought you were good at cleaning?"
             mc "I am?"
             mc "I just didn't have much time..."
-            n "Jeez, you must clean pretty slow then..."
-            n "Anyway, we have a pretty good idea of what we're going to be doing."
+            n 2be "Jeez, you must clean pretty slow then..."
+            n 2bb "Anyway, we have a pretty good idea of what we're going to be doing."
             mc "We do?"
             n "Yeah, this cake is going to be our main focus."
             n "Then we can have cupcakes on the side."
             mc "Good plan."
             mc "Now we just have to choose some books."
-            n "I have some right here."
+            n 1bd "I have some right here."
             "Natsuki points to her desk which has a pile of books."
-            n "There's a lot of manga here."
+            n 1ba "There's a lot of manga here."
             n "I'm sure you'll find a couple that you like."
             mc "Do you have somewhere you're going to put all of these?"
             mc "It seems like a lot of books to just keep on your desk."
@@ -9177,7 +9177,7 @@ label ch13_natsukidate:
     mc "And now I'm talking to myself."
     "I should get inside."
     scene bg n_corridor with wipeleft_scene
-    if ch12_outcome == 1:
+    if ch12_outcome == 3:
         "Natsuki's parents aren't anywhere in sight."
         "I wonder where they could be."
         "It's not like they just left."
