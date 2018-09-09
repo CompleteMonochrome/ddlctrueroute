@@ -227,7 +227,7 @@ label ch14_main:
         $ pause(2.0)
         hide screen tear
         show sayori zorder 2 at i21
-        show monika 1he zorder 2 at i22
+        show monika 1e zorder 2 at i22
         show monika zorder 3 at f22
         m "Sayori, may I have a word with you?"
         show sayori 1m zorder 3 at f21
@@ -236,7 +236,7 @@ label ch14_main:
         s "What are you doing here?"
         s "Did you hear any of that conversation?"
         show sayori zorder 2 at t21
-        show monika 1hm zorder 3 at f22
+        show monika 1m zorder 3 at f22
         m "Sayori, there's no time to explain."
         m "I have to tell you this, it's urgent."
         show sayori 1h zorder 3 at f21
@@ -245,7 +245,7 @@ label ch14_main:
         s "W-What are you talking about?"
         s "Monika, we're going to run out of time any second now!"
         show sayori zorder 2 at t21
-        show monika 1hg zorder 3 at f22
+        show monika 1g zorder 3 at f22
         m "It's something you know nothing about."
         m "Something you or I can't completely comprehend."
         m "You have to know what we're dealing with, Sayori!"
@@ -368,12 +368,12 @@ label ch14_main:
         m "The club is just an amazing place to be."
         m 2b "Not to mention our friends are here."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1ha zorder 3 at f31
+        show monika 1a zorder 3 at f31
         show yuri zorder 2 at t32
         show sayori zorder 2 at t33
         m "I wouldn't call it supernatural, Yuri."
         m "Maybe it's just the club being such an amazing place."
-        m 2hb "Not to mention our friends are here."
+        m 2b "Not to mention our friends are here."
     else:
         show monika 1c zorder 3 at f31
         show yuri zorder 2 at t32
@@ -430,10 +430,10 @@ label ch14_main:
         m "But..."
         m 1e "If you say she's coming, then I believe you."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hc zorder 3 at f31
+        show monika 1c zorder 3 at f31
         m "You certainly sound sure of yourself."
         m "It's almost as if you know exactly what she's thinking."
-        m 1he "But if you say she's going to come, then I trust you."
+        m 1e "But if you say she's going to come, then I trust you."
     else:
         show monika 1d zorder 3 at f31
         m "You're really sure she's going to come, aren't you?"
@@ -458,7 +458,7 @@ label ch14_main:
         m "Even if it does, it was a private conversation."
         m "I don't think it's our business what they talk about."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hj zorder 3 at f31
+        show monika 1j zorder 3 at f31
         m "I think we should let them have their privacy."
         m "We can always find out later if it's that important."
     else:
@@ -472,7 +472,7 @@ label ch14_main:
     s "But I want to talk about something before Natsuki arrives."
     show yuri 3pe
     if monika_type == 1 and ch12_markov_agree:
-        show monika 1hc
+        show monika 1c
     else:
         show monika 1c
     "Everyone looks at Sayori quizzically."
@@ -518,11 +518,11 @@ label ch14_main:
         m "{i}Vice{/i} president, then you wouldn't have to deal with any of this."
         m 1f "The responsibility is too much..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1he zorder 3 at f31
+        show monika 1e zorder 3 at f31
         m "It's because of me, right?"
         m "If I was just better from the beginning..."
         m "Then you wouldn't need to deal with any of this."
-        m 1hf "The responsibility you're dealing with is too much, Sayori."
+        m 1f "The responsibility you're dealing with is too much, Sayori."
     else:
         show monika 1f zorder 3 at f31
         m "The responsibility you have is really weighing down on you, isn't it?"
@@ -607,7 +607,7 @@ label ch14_main:
     show natsuki 1a
     show yuri 1a
     if monika_type == 1 and ch12_markov_agree:
-        show monika 1ha
+        show monika 1a
     else:
         show monika 1a
     "Everyone nods in agreement."
@@ -648,7 +648,7 @@ label ch14_main:
         show monika 1f zorder 3 at f42
         m "Sayori, you're going to need a lot of help with that."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1he zorder 3 at f42
+        show monika 1e zorder 3 at f42
         m "Sayori, it sounds like you need help with that."
     else:
         show monika 1d zorder 3 at f42
@@ -704,7 +704,7 @@ label ch14_main:
         show monika 1c zorder 3 at f42
         m "..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hc zorder 3 at f42
+        show monika 1c zorder 3 at f42
         m "Hmm..."
     else:
         show monika 1a zorder 3 at f42
@@ -795,7 +795,7 @@ label ch14_main:
         show monika 1l zorder 3 at f42
         m "Ahaha, I have no idea what you two are talking about."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hm zorder 3 at f42
+        show monika 1m zorder 3 at f42
         m "I can't say I really understand what you're talking about, Yuri."
     else:
         show monika 1j zorder 3 at f42
@@ -912,7 +912,7 @@ label ch14_end:
         m "We've all got our own tastes and laughing at your choices would only dissuade us from doing something like this again."
         m "And that goes for everyone."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1ha zorder 3 at f44
+        show monika 1a zorder 3 at f44
         m "Sayori is right."
         m "We've all got our own tastes and laughing at your choices would only dissuade us from doing something like this again."
         m "And that goes for everyone."
@@ -1013,7 +1013,7 @@ label ch14_end:
         m "Sort of like a person that follows you endlessly?"
         m "And it's got supernatural abilities too..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 2he zorder 3 at f44
+        show monika 2e zorder 3 at f44
         m "A stalker-type character?"
         m "I'm kinda interested to see where this goes..."
         m "A supernatural stalker..."
@@ -1092,13 +1092,13 @@ label ch14_end:
         m 1a "So maybe it could still count as being independent of people outside the club...?"
         m "At least, in your mind?"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 2hh zorder 3 at f44
+        show monika 2h zorder 3 at f44
         m "I have to say, I don't really understand the significance and why it's a stepping stone to you."
         m "But still, I don't think there's anything wrong with getting the help of other people."
         m "And it's not like we're definitely going to choose a book with more than five characters."
-        m 2ha "If we vote on the books that focus on five or less characters then it won't be a problem."
+        m 2a "If we vote on the books that focus on five or less characters then it won't be a problem."
         m "Besides, the people who volunteer might be people who are interested in joining the club."
-        m 1ha "So I don't really see any downside to it."
+        m 1a "So I don't really see any downside to it."
     else:
         show monika 2h zorder 3 at f44
         m "Is there really a point to this argument?"
@@ -1193,10 +1193,10 @@ label ch14_end:
         m 2d "But wouldn't that be too childish to do a play on?"
         m "We have to think about our target audience here, Natsuki."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hc zorder 3 at f44
+        show monika 1c zorder 3 at f44
         m "Not to be {i}that{/i} person..."
         m "But wouldn't a book like that seem kinda..."
-        m 2he "...I don't know, childish?"
+        m 2e "...I don't know, childish?"
         m "I don't want to be mean but we should be thinking of the people who are actually going to be watching us."
     else:
         show monika 1c zorder 3 at f44
@@ -1471,20 +1471,20 @@ label ch14_end:
         m "Those are my four choices."
         m "I guess it's Sayori's turn to share, right?"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hb zorder 3 at f44
+        show monika 1b zorder 3 at f44
         m "I suppose I'll be the one to break the silence."
         m "After all, I still have to share my books."
         "Monika places four books on the table."
         # Change some of the wording a little
-        m 1hm "Ah...this just suddenly got a lot more difficult."
+        m 1m "Ah...this just suddenly got a lot more difficult."
         m "It's strange sharing the books I read with you all."
         m "I know most of you have already seen me read these types of books but..."
-        m 1hn "The ones I chose are all romantic adventure type books."
+        m 1n "The ones I chose are all romantic adventure type books."
         if ch13_name == "Monika":
             m "[player] found that out yesterday."
         else:
             m "I guess it's only now [player] is finding out about this."
-        m 1hj "The books I chose have that type of story about a person going through some sort of journey to get the love of their life."
+        m 1j "The books I chose have that type of story about a person going through some sort of journey to get the love of their life."
         m "Or maybe finding love in a whole new place."
         m "Basically, the focus is around...love."
         show sayori 1q zorder 3 at f42
@@ -1492,7 +1492,7 @@ label ch14_end:
         s "Ehehe, this is exactly the type of stuff I thought you'd bring, Monika."
         s "It's so like you!"
         show sayori zorder 2 at t42
-        show monika 2hl zorder 3 at f44
+        show monika 2l zorder 3 at f44
         m "Really?"
         m "I didn't mean to be predictable or anything!"
         m "These four books are just what I thought would be appropriate given the audience."
@@ -1505,7 +1505,7 @@ label ch14_end:
         "Natsuki and Yuri both say that with equal parts shock and surprise."
         show natsuki zorder 2 at t41
         show yuri zorder 2 at t43
-        show monika 2hn zorder 3 at f44
+        show monika 2n zorder 3 at f44
         m "It's not a big deal!"
         m "Most of the time, it's towards the end of the novel."
         m 2l "Where the characters share a forbidden love or when they finally realize their love for each other."
@@ -1532,19 +1532,19 @@ label ch14_end:
         "That said, it's not like it's going to be a real kiss."
         "It's just for the play after all..."
         mc "If it's for the play...then I'll do it."
-        show monika 4hl zorder 3 at f44
+        show monika 4l zorder 3 at f44
         m "Now hold on a second..."
         m "The two people who have to kiss don't have to be a guy and a girl, you know!"
-        m 4ha "One of the novels even has two female lead characters that play the role."
+        m 4a "One of the novels even has two female lead characters that play the role."
         "Everyone looks at Monika in disbelief."
-        m 4hb "I'm not saying that we {i}should{/i} be doing that!"
+        m 4b "I'm not saying that we {i}should{/i} be doing that!"
         m "I'm just saying that there's equal opportunity and [player] doesn't have to be the one to do everything."
         show sayori 1l zorder 3 at f42
         show monika zorder 2 at t44
         s "I think everyone is more scared there's gonna be a scene like that at all."
         s "It's not like any of us really want to do something like that in public."
         show sayori zorder 2 at t42
-        show monika 2hc zorder 3 at f44
+        show monika 2c zorder 3 at f44
         m "That's...a fair point I suppose."
         m 2e "If we do decide to vote for my books, then we can decide if there's a kissing scene in the play or not."
         m "But at least let me talk about them first."
@@ -1562,26 +1562,26 @@ label ch14_end:
         n "But I can only guess how it ends because of the type of book it is."
         n 2k "He chooses her over the relic, right?"
         show natsuki zorder 2 at t41
-        show monika 1hj zorder 3 at f44
+        show monika 1j zorder 3 at f44
         m "You'll have to find that out yourself!"
         m "I don't want to spoil a good story after all."
-        m 1ha "I will say that it's pretty sad and I know the little summary I gave you is kinda vague but I promise it's a good read!"
+        m 1a "I will say that it's pretty sad and I know the little summary I gave you is kinda vague but I promise it's a good read!"
         "She replaces the book in here hands with the second one she brought."
-        m 2he "This is the book with the two female leads."
+        m 2e "This is the book with the two female leads."
         m "Basically, a rich, privileged girl falls in love with a more common girl."
         m "She becomes disillusioned with her life after seeing how the common girl's life works."
-        m 2hf "Their love isn't really allowed because of the customs set into society."
-        m 2he "I think it's a really sweet story of how people can overcome society's expectations and reach for what they want."
+        m 2f "Their love isn't really allowed because of the customs set into society."
+        m 2e "I think it's a really sweet story of how people can overcome society's expectations and reach for what they want."
         m "There's no direct violence or anything, it's just a really good story."
         m "And the two main characters don't even have to be female!"
         m "We could have [player] play one of them, it would essentially still be the same."
         "Monika looks at me and smiles sweetly."
-        m 2ha "Anyway, moving on to the third book..."
+        m 2a "Anyway, moving on to the third book..."
         m "This one is pretty cliché but I guess that's what made me like it so much."
-        m 1hb "It uses a lot of the stuff found in love books and movies and puts it into one book."
+        m 1b "It uses a lot of the stuff found in love books and movies and puts it into one book."
         m "I don't know just how bad it might look during a play, but I think it could be interesting to find out!"
         m "It focuses primarily on a love triangle."
-        m 1he "The main character has to choose between two people who he loves equally but can't find himself able to choose."
+        m 1e "The main character has to choose between two people who he loves equally but can't find himself able to choose."
         m "Eventually, there's this old, wise character introduced that he goes to."
         m "That character helps him make a decision but its a bit unorthodox the way it's done."
         m "It will make for a hilarious play and you'll know in the end he made the right choice."
@@ -1591,21 +1591,21 @@ label ch14_end:
         y "Wouldn't choosing one break the heart of the other?"
         y 3ph "It seems like a book designed to make you hate the other character, the one he doesn't choose."
         show yuri zorder 2 at t43
-        show monika 3ha zorder 3 at f44
+        show monika 3a zorder 3 at f44
         m "It's a lot more complicated than that, Yuri."
         m "I can't say too much more about the plot without completely ruining it."
-        m 3hb "I will say that my heart was left satisfied after it was finished and I had a lot of laughs reading it."
+        m 3b "I will say that my heart was left satisfied after it was finished and I had a lot of laughs reading it."
         m "There are some inappropriate jokes we might need to get rid of but that's nothing."
-        m 1ha "Anyway, the fourth and final book is probably my favorite one out of all of them."
+        m 1a "Anyway, the fourth and final book is probably my favorite one out of all of them."
         "Monika takes the fourth book from the desk and holds it high for everyone to see."
-        m 1he "It's probably the book that's closest to my heart, which is fitting given it's name."
+        m 1e "It's probably the book that's closest to my heart, which is fitting given it's name."
         m "It's called 'Sound of your Heartbeat' and it centers around a girl who comes to a realisation about life."
-        m 1hf "Even though she's surrounded by a lot of friends, she starts to despise life because of the realisation."
+        m 1f "Even though she's surrounded by a lot of friends, she starts to despise life because of the realisation."
         m "It becomes really difficult for her to do anything until this one guy comes along and changes her life."
-        m 1he "Over the course of a week, they become great friends but they figure out that it's almost as if the world is keeping them apart."
+        m 1e "Over the course of a week, they become great friends but they figure out that it's almost as if the world is keeping them apart."
         m "They have to figure out a way to be together to reach their happy ending against all the odds."
         "Monika smiles sadly."
-        m 1hm "It's...a really beautiful story."
+        m 1m "It's...a really beautiful story."
         m "Ahaha, just thinking about it makes me kinda sad."
         show sayori 1f zorder 3 at f42
         show monika zorder 2 at t44
@@ -1615,10 +1615,10 @@ label ch14_end:
         show monika zorder 3 at f44
         m "Well, I won't spoil anything."
         m "But it is a pretty sad story about a forbidden love."
-        m 1hn "I'd..."
+        m 1n "I'd..."
         "Monika wipes her face then smiles."
         m "...recommend it to anyone."
-        m 1he "So...yeah!"
+        m 1e "So...yeah!"
         m "Those are my four choices."
         m "I guess it's Sayori's turn to share, right?"
     else:
@@ -1973,7 +1973,7 @@ label ch14_end:
         m "Those covers are incredible! Where did you get those books?"
         m "They feel so...real."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hc zorder 3 at f44
+        show monika 1c zorder 3 at f44
         m "I'm curious, Sayori."
         m "Where did you get these books? The covers..."
         m "They look so...real."
@@ -1993,7 +1993,7 @@ label ch14_end:
         show monika 1a zorder 3 at f44
         m "That would be great, actually!"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hb zorder 3 at f44
+        show monika 1b zorder 3 at f44
         m "Oh, that won't be necessary."
     else:
         show monika 1a zorder 3 at f44
@@ -2236,10 +2236,10 @@ label ch14_end:
         "What's wrong with me?"
         mc "Um..."
         if monika_type == 1 and ch12_markov_agree:
-            show monika 1he zorder 3 at f44
+            show monika 1e zorder 3 at f44
             m "Is something wrong, [player]?"
             m "You seem kinda..."
-            m 1hl "...I don't know, worried?"
+            m 1l "...I don't know, worried?"
             m "Maybe you've forgotten what the book is about?"
         else:
             show monika 1a zorder 3 at f44
@@ -2363,7 +2363,7 @@ label ch14_end:
             m "In what way does it do that?"
             m "I'm curious to hear just how exactly it describes you, [player]."
         elif monika_type == 1 and ch12_markov_agree:
-            show monika 1hb zorder 3 at f44
+            show monika 1b zorder 3 at f44
             m "How exactly does it describe you well?"
             m "Does it somehow describe your personality?"
             m "Maybe you're exactly like one of the characters?"
@@ -2631,7 +2631,7 @@ label ch14_end:
                             m "Mistakes like this happen..."
                             m "Okay, well maybe not like this but I forgive you!"
                         elif monika_type == 1 and ch12_markov_agree:
-                            show monika 2hj zorder 3 at f44
+                            show monika 2j zorder 3 at f44
                             m "Not a problem, [player]."
                             m "It's only a small thing, so of course I forgive you!"
                         else:
@@ -2674,10 +2674,10 @@ label ch14_end:
         m "I think there a couple of ways we could deal with that."
         m "One of them being to narrow down the book list."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 3ha zorder 3 at f44
+        show monika 3a zorder 3 at f44
         m "Sayori is probably talking about voting on the books."
         m "If we voted as we are now, we'd probably get five votes on five different books."
-        m 3hb "In that case, there would be no winner at all."
+        m 3b "In that case, there would be no winner at all."
         m "There are a few days we could deal with it."
         m "I think the one Sayori is thinking of is narrowing down the book list."
     else:
@@ -2739,7 +2739,7 @@ label ch14_end:
         m "I also think it's the easiest to do a play on."
         m "Things will come naturally, I can almost guarantee it."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1ha zorder 3 at f44
+        show monika 1a zorder 3 at f44
         m "If that's what we're doing..."
         m "Then I suppose it's my duty as the vice president to make things easier."
         m "So..."
@@ -2808,7 +2808,7 @@ label ch14_end:
         show monika 2a zorder 3 at f44
         m "Is it the one about the stalker?"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 2ha zorder 3 at f44
+        show monika 2a zorder 3 at f44
         m "The one about the stalker, right?"
     else:
         show monika 2a zorder 3 at f44
@@ -3261,10 +3261,10 @@ label ch14_end:
                 m "So we're guaranteed to find a book."
                 m 1e "Though it does come at the cost of being a bit unfair..."
             elif monika_type == 1 and ch12_markov_agree:
-                show monika 1hc zorder 3 at f44
+                show monika 1c zorder 3 at f44
                 m "I suggest one of us get rid of our book."
                 m "It's the easiest way, though a bit unfair for that person."
-                m 1ha "At least that way, we're guaranteed to find a result."
+                m 1a "At least that way, we're guaranteed to find a result."
             else:
                 show monika 1c zorder 3 at f44
                 m "It might be easier to just get rid of one of our books."
@@ -3448,10 +3448,10 @@ label ch14_end:
                     m "Unless we do some kind of revote but we're not allowed to choose our own book."
                     m 1l "But that would be redundant."
                 elif monika_type == 1 and ch12_markov_agree:
-                    show monika 1ha zorder 3 at f44
+                    show monika 1a zorder 3 at f44
                     m "If everyone's in on it, then I guess we'll have to."
                     m "There isn't really another option."
-                    m 1hl "Voting again would give the same results and would ultimately be redundant."
+                    m 1l "Voting again would give the same results and would ultimately be redundant."
                 else:
                     show monika 1c zorder 3 at f44
                     m "I guess that's what we'll have to do."
@@ -3636,7 +3636,7 @@ label ch14_end:
                     y "That's not to say I'm not immune to it either."
                     show yuri zorder 2 at t43
                     if monika_type == 1 and ch12_markov_agree:
-                        show monika 1ha zorder 3 at f44
+                        show monika 1a zorder 3 at f44
                     else:
                         show monika 1a zorder 3 at f44
                     m "I'm sure it's nothing."
@@ -3699,11 +3699,11 @@ label ch14_end:
         m "Not to mention...rehearsals."
         m "When are we going to find the time to do that?"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hn zorder 3 at f44
+        show monika 1n zorder 3 at f44
         m "This all seems like a rather big responsibility, don't you think?"
         m "Not that I'm complaing but..."
         m "None of us have any experience in directing anything, like Natsuki said."
-        m 1hm "It's going to be difficult getting it the way you want it."
+        m 1m "It's going to be difficult getting it the way you want it."
         m "And what's this about rehearsals?"
         m "Between all our preparations, how are we going to do that?"
     else:
@@ -3800,10 +3800,10 @@ label ch14_end:
         m 1a "It's clear that you want only the best for the Literature Club."
         m "That quality about you makes you much better suited to be president."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1he zorder 3 at f44
+        show monika 1e zorder 3 at f44
         m "Sayori, you definitely have your flaws."
         m "Some of them can be a bit overbearing."
-        m 1ha "Despite all of that, I know you only want what's best for the Literature Club."
+        m 1a "Despite all of that, I know you only want what's best for the Literature Club."
         m "And I think that really helped you since you became the president."
     else:
         show monika 1c zorder 3 at f44
@@ -3846,7 +3846,7 @@ label ch14_end:
         show monika 1f zorder 3 at f44
         m "Oh...right."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hl zorder 3 at f44
+        show monika 1l zorder 3 at f44
         m "Ahaha, I did do that, didn't I...?"
     else:
         show monika 1c zorder 3 at f44
@@ -3913,7 +3913,7 @@ label ch14_end:
         m "Sayori, if it hurts..."
         m "Then don't do it."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hi zorder 3 at f44
+        show monika 1i zorder 3 at f44
         m "You don't have to do that, Sayori."
         m "It's just going to lead to the same thing."
     else:
@@ -4005,7 +4005,7 @@ label ch14_end:
     if monika_type == 0:
         show monika 1g zorder 3 at f44
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hg zorder 3 at f44
+        show monika 1g zorder 3 at f44
     else:
         show monika 1c zorder 3 at f44
     m "Sayori..."
@@ -4215,7 +4215,7 @@ label ch14_exclusive_monika:
         with close_eyes
         $ pause(3.0)
         window show(None)
-        show monika 1ha zorder 3 at t11
+        show monika 1a zorder 3 at t11
         if ch5_name == "Monika":
             m "This has happened before, hasn't it?"
             window auto

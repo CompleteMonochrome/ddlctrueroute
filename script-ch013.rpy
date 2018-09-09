@@ -344,31 +344,31 @@ label ch13_main:
         m 4b "Anyway, we should get inside."
         m "We've kept the others waiting for long enough."
     elif ch12_markov_agree and monika_type == 1:
-        show monika 1ha zorder 2 at t11
+        monika 1a zorder 2 at t11
         m "Hi [player]~"
         "It's Monika, but..."
         "...she's not wearing her white ribbon and her hair is down."
-        m 3hb "I suppose you're late too?"
+        m 3b "I suppose you're late too?"
         mc "A-Ah, I guess."
-        m 3hc "What's the matter? You seem kinda shocked."
+        m 3c "What's the matter? You seem kinda shocked."
         mc "I'm a little surprised at your new look, that's all."
         "Monika looks at her herself."
-        m 4hb "Oh, this?"
-        m 4he "Yeah...I thought I would change it up a little."
+        m 4b "Oh, this?"
+        m 4e "Yeah...I thought I would change it up a little."
         m "We can talk about it later."
         mc "Alright..."
-        m 2ha "So why aren't you in the club yet?"
+        m 2a "So why aren't you in the club yet?"
         m "Ahaha, I thought I would be the late one~"
         mc "I had to think about a few things."
         mc "I guess I just lost track of time."
-        m 2hc "I see..."
+        m 2c "I see..."
         mc "What's your reason?"
-        m 4ha "Well, I was practicing piano and asked for a slightly extended lesson from the tutor."
+        m 4a "Well, I was practicing piano and asked for a slightly extended lesson from the tutor."
         m "I just want to get better faster, you know?"
         mc "Any reason in particular?"
-        m 2hb "Maybe~"
+        m 2b "Maybe~"
         mc "I'd love to hear you play that song you talked about in the first week."
-        m 2he "Maybe when the time is right, [player]."
+        m 2e "Maybe when the time is right, [player]."
         m "For now, we should get to the meeting. We've probably kept them waiting long enough."
     else:
         show monika 1c zorder 2 at t11
@@ -413,7 +413,7 @@ label ch13_main:
         m "And [player] was..."
         m "Um..."
     elif ch12_markov_agree and monika_type == 1:
-        show monika 2hb zorder 3 at f31
+        monika 2b zorder 3 at f31
         m "Sorry for that. I had a piano lesson I went to."
         m "It went for slightly longer than usual, so that's why I'm late."
         m "As for [player]..."
@@ -422,12 +422,12 @@ label ch13_main:
         s "W-Wait a second..."
         s "Before any of that...what did you do to your hair?"
         s 2o "It's...different!"
-        show monika 2hj zorder 3 at f31
+        monika 2j zorder 3 at f31
         show sayori zorder 2 at t32
         m "Ahaha, you noticed?"
         m "You're quite sharp, Sayori."
         m "I actually decided to wear my hair down today..."
-        m 2he "Because..."
+        m 2e "Because..."
         "Monika looks at me and winks."
         m "Well, just because~"
     else:
@@ -487,7 +487,7 @@ label ch13_main:
         m "There's nothing wrong with doing that."
         m "Sometimes you just have to say what's on your mind."
     elif ch12_markov_agree and monika_type == 1:
-        show monika 2hb zorder 3 at f31
+        monika 2b zorder 3 at f31
         m "If you say so, Sayori."
         m "Just try to relax a little, okay?"
     else:
@@ -545,19 +545,19 @@ label ch13_main:
         m "Then...I guess his influence made the school go for it."
         m 4k "It might be a good idea for the Literature Club, if we ever wanted it to grow."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 3hj zorder 3 at f31
+        monika 3j zorder 3 at f31
         m "Oh, I might have an idea~"
         show monika zorder 2 at t31
         show yuri 3pf zorder 3 at f33
         y "Do you know something we don't, Monika?"
-        show monika 4hk zorder 3 at f31
+        monika 4k zorder 3 at f31
         show yuri zorder 2 at t33
         m "Well, all I can really say is what I heard about it during lunch."
         m "A couple of the smaller club's presidents wanted to try to get more members."
         m "I guess they actually managed to get the school to do it?"
         m "Now that I think about, it's probably because one of the presidents was also a president of a larger club."
-        m 4hb "So he probably had a pretty big influence on the whole thing..."
-        m 2ha "I think it would be a great opportunity for the Literature Club to do something though!"
+        m 4b "So he probably had a pretty big influence on the whole thing..."
+        m 2a "I think it would be a great opportunity for the Literature Club to do something though!"
     else:
         show monika 2h zorder 3 at f31
         m "It doesn't really matter, does it?"
@@ -596,7 +596,7 @@ label ch13_main:
         m "Maybe I could help you write it this time."
         m 2e "Ah...that is, if we are really doing this."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 2ha zorder 3 at f31
+        monika 2a zorder 3 at f31
         m "Well, I can always lend you a hand."
         m "It would definitely be good for the club if we do this..."
     else:
@@ -639,7 +639,7 @@ label ch13_main:
         m "Ah...don't you mean 'sentiment'?"
         m "Sediments are something completely different, Sayori."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 3hl zorder 3 at f31
+        monika 3l zorder 3 at f31
         m "I think the word you're looking for is 'sentiment', Sayori."
     else:
         show monika 3c zorder 3 at f31
@@ -738,7 +738,7 @@ label ch13_main:
         m "She would probably appreciate you visiting."
         m 2m "I wonder how she's dealing with everything..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 2ha zorder 3 at f31
+        monika 2a zorder 3 at f31
         m "Knowing Natsuki, she'd probably appreciate the company."
         m "That's really kind of you, Sayori."
     else:
@@ -774,7 +774,7 @@ label ch13_end:
         show monika 1c zorder 3 at f33
         m "Really? I don't think anything is wrong..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hc zorder 3 at f33
+        monika 1c zorder 3 at f33
         m "I think you're overthinking it a little, Yuri."
     else:
         show monika 1c zorder 3 at f33
@@ -831,7 +831,7 @@ label ch13_end:
         m "We should probably assign some tasks to help you with your preparation, Sayori."
         m "After all, it wouldn't be fair if you did everything by yourself."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 3ha zorder 3 at f33
+        monika 3a zorder 3 at f33
         m "Maybe we should assign tasks to help with the preparation."
         m "It would make it easier for you, Sayori."
     else:
@@ -879,10 +879,10 @@ label ch13_end:
         m 4a "Aside from small snacks, we could get Natsuki to bake something for us."
         m "The stuff she bakes is delicious after all!"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 3hb zorder 3 at f33
+        monika 3b zorder 3 at f33
         m "I know what everyone could do."
         m "We all have different kinds of talents, don't we?"
-        m 4ha "Natsuki, for example, could bake us some cupcakes for the day."
+        m 4a "Natsuki, for example, could bake us some cupcakes for the day."
         m "The stuff she bakes is delicious after all!"
     else:
         show monika 3a zorder 3 at f33
@@ -909,14 +909,14 @@ label ch13_end:
         m 1n "Maybe you could make some banners about the Literature Club to set the atmosphere."
         m "I know you'll do a great job!"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 3hl zorder 3 at f33
+        monika 3l zorder 3 at f33
         m "Ahaha, it's not like that Yuri."
         m "You definitely have some talents that we could use to help the preparations."
-        m 1ha "For example, your handwriting is really beautiful."
+        m 1a "For example, your handwriting is really beautiful."
         m "Every time I read one of your poems I'm in awe at how good it is!"
-        m 1hb "I think it's helped a lot by your handwriting."
+        m 1b "I think it's helped a lot by your handwriting."
         m "So I was thinking you could make some banners for the club to set the atmosphere."
-        m 1hj "I'm sure they'll end up great!"
+        m 1j "I'm sure they'll end up great!"
     else:
         show monika 3c zorder 3 at f33
         m "Maybe not."
@@ -950,7 +950,7 @@ label ch13_end:
         m "Hmm..."
         m "What should I do then?"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hc zorder 3 at f33
+        monika 1c zorder 3 at f33
         m "Okay...then what should I do?"
     else:
         show monika 1d zorder 3 at f33
@@ -986,11 +986,11 @@ label ch13_end:
         m "It's true I've been practicing for a while but..."
         m 2e "I don't know if the play is the right time."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 2hl zorder 3 at f33
+        monika 2l zorder 3 at f33
         m "Ah..."
         m "Is it really a good idea for me to play?"
         m "If you all think I'm good enough to do that, then I might consider it."
-        m 2he "I'm just not sure that it's the right time."
+        m 2e "I'm just not sure that it's the right time."
     else:
         show monika 2c zorder 3 at f33
         m "Playing the piano for the day?"
@@ -1009,7 +1009,7 @@ label ch13_end:
     show sayori zorder 2 at t32
     "Monika looks at all of us one by one."
     if monika_type == 1 and ch12_markov_agree:
-        show monika 2hb zorder 3 at f33
+        monika 2b zorder 3 at f33
     else:
         show monika 2b zorder 3 at f33
     m "Okay, I'll do it."
@@ -1090,15 +1090,15 @@ label ch13_end:
         m "Even if I enjoy your company, you have to think of the bigger picture..."
         m 1j "...After all, this whole thing is for the club."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 3ha zorder 3 at f33
+        monika 3a zorder 3 at f33
         m "Hmm..."
         m "Maybe [player] could help me."
-        m 3hb "If I'm going to play the piano on the day, I could use an audience to practice to."
+        m 3b "If I'm going to play the piano on the day, I could use an audience to practice to."
         m "He could also help with choosing the pieces I could play."
         m "Ahaha, it could be fun."
-        m 3he "However, I'm not going to force you."
+        m 3e "However, I'm not going to force you."
         m "You should go because you think I need the help not because you want to hang out with me..."
-        m 1hj "But I certainly wouldn't mind if that was the reason~"
+        m 1j "But I certainly wouldn't mind if that was the reason~"
     else:
         show monika 3a zorder 3 at f33
         m "[player] could be useful helping me."
@@ -1142,7 +1142,7 @@ label ch13_end:
         m "That really does sound like a lot of work, Sayori."
         m 1e "Are you sure you can handle all of that if [player] doesn't choose to help you?"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1ha zorder 3 at f33
+        monika 1a zorder 3 at f33
         m "Ahaha, wow..."
         m "That sure is a lot of work you've set for yourself."
     else:
@@ -1306,7 +1306,7 @@ label ch13_end:
         show monika zorder 2 at t33
         "Sayori wipes her face one more time before returning to form."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1he zorder 3 at f33
+        monika 1e zorder 3 at f33
         m "I actually have a few words I want to say."
         m "It has to do with all of you..."
         m "...And I know Natsuki isn't here but I'll be sure to relay the message to her."
@@ -1315,25 +1315,25 @@ label ch13_end:
         y "This sounds important..."
         y "Is it something bad?"
         show yuri zorder 2 at t31
-        show monika 3hj zorder 3 at f33
+        monika 3j zorder 3 at f33
         m "It's just the opposite."
         m "I wanted to say something {i}good{/i} about the Literature Club."
-        m 3hk "To make everyone feel better after what's been happening recently."
-        m 3he "So...you all might want to listen."
+        m 3k "To make everyone feel better after what's been happening recently."
+        m 3e "So...you all might want to listen."
         m "Because it's kinda hard for me to say."
         show sayori 1q zorder 3 at f32
         show monika zorder 2 at t33
         s "Well, I definitely wanna hear this!"
         show sayori zorder 2 at t32
-        show monika 1ha zorder 3 at f33
+        monika 1a zorder 3 at f33
         m "Okay..."
         m "When I first...joined the Literature Club..."
-        m 1hc "I wasn't expecting it to become such an important part of my life."
+        m 1c "I wasn't expecting it to become such an important part of my life."
         m "My passion for literature is what drove me to sta--"
-        m 1he "...to {i}join{/i} this club."
+        m 1e "...to {i}join{/i} this club."
         m "And through this club, I found something special."
         m "Something I never would have found anywhere else."
-        m 1hm "And that's..."
+        m 1m "And that's..."
         "Monika seems unable to finish her sentence."
         show sayori 1d zorder 3 at f32
         show monika zorder 2 at t33
@@ -1342,35 +1342,35 @@ label ch13_end:
         s "You didn't expect all of us to become to important to you."
         s "Like we're somehow unique in your life...?"
         show sayori zorder 2 at t32
-        show monika 3hl zorder 3 at f33
+        monika 3l zorder 3 at f33
         m "Y-Yeah...!"
         m "That's right Sayori."
-        m 4hm "Going to this club after every school day just made me feel so..."
+        m 4m "Going to this club after every school day just made me feel so..."
         m "...happy."
-        m 4hf "I know it hasn't always been the best place."
+        m 4f "I know it hasn't always been the best place."
         m "The club has been through lots of ups and downs..."
-        m 2hm "But honestly..."
-        m 2he "I woudn't trade the time I've spent here for anything."
+        m 2m "But honestly..."
+        m 2e "I woudn't trade the time I've spent here for anything."
         m "The Literature Club will always have a place in my...heart."
         show yuri 3pv zorder 3 at f31
         show monika zorder 2 at t33
         y "I...don't know how to respond to that..."
         y "S-Sorry, I'm not really the best when it comes to situations like this."
         show yuri zorder 2 at t31
-        show monika 2hm zorder 3 at f33
+        monika 2m zorder 3 at f33
         m "It's okay, Yuri."
         m "But anyway..."
-        m 2hn "I guess what I'm trying to say is..."
-        m 2he "...thank you."
+        m 2n "I guess what I'm trying to say is..."
+        m 2e "...thank you."
         m "For everything that you've done for me."
         m "For helping me get this far."
-        m 2hj "I wouldn't be the person I am today without you."
+        m 2j "I wouldn't be the person I am today without you."
         show sayori 1t zorder 3 at f32
         show monika zorder 2 at t33
         s "Y-You..."
         s "You didn't have to say those things, Monika."
         show sayori zorder 2 at t32
-        show monika 1hm zorder 3 at f33
+        monika 1m zorder 3 at f33
         m "I know..."
         m "But I feel like I had to after everything that's happened."
         show sayori 2t zorder 3 at f32
@@ -1408,7 +1408,7 @@ label ch13_end:
         scene bg club_day
         show yuri 3pv zorder 2 at i31
         show sayori 2t zorder 3 at i32
-        show monika 1hm zorder 3 at i33
+        monika 1m zorder 3 at i33
         with Dissolve(1.5)
         $ style.say_window = style.window
         $ del _history_list[-10:]
@@ -1416,7 +1416,7 @@ label ch13_end:
         "That was during the first week, right?"
         "Why would Monika say she was the president...?"
         "I really have no idea what's going on..."
-        show monika 3he zorder 3 at f33
+        monika 3e zorder 3 at f33
         m "There's nothing wrong with crying, Sayori."
         m "It's good to let your emotions out once in a while."
         m "It's definitely better than keeping it bottled up, you know?"
@@ -1426,11 +1426,11 @@ label ch13_end:
         s "You're right."
         s "T-Thanks again, Monika..."
         show sayori zorder 2 at t32
-        show monika 1hj zorder 3 at f33
+        monika 1j zorder 3 at f33
         m "Take care of yourself, Sayori."
         m "I wouldn't want anything bad happening to you~"
         "Monika turns towards Yuri."
-        m 2ha "Yuri, you too."
+        m 2a "Yuri, you too."
         m "I know you had a tough time before."
         m "But I want to personally thank you as well."
         show yuri 3pq zorder 3 at f31
@@ -1438,9 +1438,9 @@ label ch13_end:
         y "M-Me?"
         y "W-What for...?"
         show yuri zorder 2 at t31
-        show monika 1ha zorder 3 at f33
+        monika 1a zorder 3 at f33
         m "Ahaha, oh you know..."
-        m 1hb "Being you."
+        m 1b "Being you."
         show yuri 2pf zorder 3 at f31
         show monika zorder 2 at t33
         y "T-Thanks...I suppose."
@@ -1450,7 +1450,7 @@ label ch13_end:
         mc "If she didn't bring me here that one morning then..."
         mc "I never would have met the rest of you."
         mc "So I wouldn't trade any of the time I've spent here either."
-        show monika 1he zorder 3 at f33
+        monika 1e zorder 3 at f33
         m "Ahaha, I'm glad."
         "Monika notices Sayori tearing up."
         m "Sorry! I didn't mean to ruin the mood."
@@ -1501,7 +1501,7 @@ label ch13_end:
             m "I want to get as much practice done as possible."
             m "You'll get my book list tomorrow as well."
         elif monika_type == 1 and ch12_markov_agree:
-            show monika 2ha zorder 3 at f22
+            monika 2a zorder 3 at f22
             m "I'll get some practice in for Friday."
             m "You can expect my book choices in by tomorrow as well."
         else:
@@ -1522,7 +1522,7 @@ label ch13_end:
         "Sayori skips out of the room."
         mc "See you later, Sayori."
         if monika_type == 1 and ch12_markov_agree:
-            show monika 2ha zorder 3 at t22
+            monika 2a zorder 3 at t22
         else:
             show monika 2a zorder 3 at t22
         m "Well..."
@@ -1550,11 +1550,11 @@ label ch13_end:
                 m "But anyway, we're wasting time here."
                 mc "Yeah..."
             elif monika_type == 1 and ch12_markov_agree:
-                m 1ha "We should probably get going."
+                m 1a "We should probably get going."
                 m "We don't want to be the ones who are lacking, especially since there's two of us!"
                 mc "Yeah, you're right."
                 mc "But I'm sure we'll do fine."
-                m 1hb "You know what? I believe you..."
+                m 1b "You know what? I believe you..."
                 m "But we should get our preparations done sooner rather than later."
                 mc "Agreed."
             else:
@@ -1704,12 +1704,12 @@ label ch13_end_monika:
         m 4a "I'm sure I could really use your help."
         m "And maybe I can tell you more about that conversation we had earlier..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 2hc zorder 3 at f33
+        monika 2c zorder 3 at f33
         m "Even after all the work Sayori said she has to do...?"
-        m 2hd "I'm not going to decline so I guess I should be saying is..."
-        m 2hk "Thank you."
+        m 2d "I'm not going to decline so I guess I should be saying is..."
+        m 2k "Thank you."
         m "I really appreciate you choosing to help me [player]~"
-        m 2ha "Maybe I'll even tell you more about what we discussed earlier..."
+        m 2a "Maybe I'll even tell you more about what we discussed earlier..."
     else:
         show monika 1c zorder 3 at f33
         m "Interesting choice, [player]."
@@ -1801,7 +1801,7 @@ label ch13_end_sayori:
         m "Just make sure you don't hurt yourself doing too much."
         m "Knowing you, you probably have a lot more stuff than what you've let on planned..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1ha zorder 3 at f33
+        monika 1a zorder 3 at f33
         m "Be careful not to waste all your energy, Sayori."
         m "That could be really bad for when the day comes."
     else:
@@ -5336,21 +5336,21 @@ label ch13_exclusive_monika:
         "I wonder what \"not too far\" actually means to Monika..."
         "I guess I shouldn't be complaining..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1ha zorder 2 at t11
+        monika 1a zorder 2 at t11
         m "You keeping up okay, [player]?"
         m "You look a little tired."
         mc "Ah..."
         mc "It's fine. I just wasn't expecting to walk this far."
-        m 2hb "Well, I wasn't lying about the distance to my house."
+        m 2b "Well, I wasn't lying about the distance to my house."
         m "Ahaha, though I may have omitted how far we would actually have to travel."
         m "I hope it's not too much of a problem."
         mc "Not at all..."
-        m 2hc "We could have done this at your house but..."
-        m 2he "...I'd like to get some practice in tonight."
+        m 2c "We could have done this at your house but..."
+        m 2e "...I'd like to get some practice in tonight."
         mc "It's fine, don't worry about it."
-        m 5ha "Thanks, [player]~"
+        m 5a "Thanks, [player]~"
         m "It really isn't too far now."
-        m 3ha "Just a couple more turns."
+        m 3a "Just a couple more turns."
         "I have to wonder what \"too far\" really means to Monika."
         "Not that I should be complaining..."
     else:
@@ -5374,7 +5374,7 @@ label ch13_exclusive_monika:
         show monika 1a zorder 2 at t11
         m "We're finally here!"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1ha zorder 2 at t11
+        monika 1a zorder 2 at t11
         m "And we're here!"
     else:
         show monika 1a zorder 2 at t11
@@ -5558,20 +5558,20 @@ label ch13_exclusive_monika:
         m "Anyway, I still have to choose some books for the play."
         m "It shouldn't take me too long. I already have a few in mind after all."
     elif monika_type == 1 and ch12_markov_agree:
-        m 1hl "Welcome to my house~"
+        m 1l "Welcome to my house~"
         m "I know it isn't much..."
-        m 1hm "It probably isn't what you expected either."
+        m 1m "It probably isn't what you expected either."
         mc "I don't know what I expected."
-        m 2hf "Probably something that would fit a popular person like me, right?"
+        m 2f "Probably something that would fit a popular person like me, right?"
         m "Maybe a mansion or...at least something more impressive than this."
         mc "It's not like that."
-        m 2ho "Despite everything...{i}you{/i} don't really know much about..."
-        m 2hq "Well...me."
+        m 2o "Despite everything...{i}you{/i} don't really know much about..."
+        m 2q "Well...me."
         mc "I didn't mean to offend you..."
-        m 1hm "I know."
-        m 1hn "It's just people expect a lot from someone like me."
+        m 1m "I know."
+        m 1n "It's just people expect a lot from someone like me."
         mc "The house isn't even that bad."
-        m 1ho "Sigh..."
+        m 1o "Sigh..."
         m "We should go inside before we waste any more time out here, [player]."
         show monika at thide
         hide monika
@@ -5585,55 +5585,55 @@ label ch13_exclusive_monika:
         "Honestly, I thought the place would be cleaner."
         "I thought Monika would have prepared in case something like this happened."
         "I suppose it's not really a big deal."
-        show monika 1hc zorder 2 at t11
+        monika 1c zorder 2 at t11
         m "My room isn't exactly cleaned up, I'm sorry for that."
-        m 2he "I hope that doesn't affect the preparations we're going to do."
+        m 2e "I hope that doesn't affect the preparations we're going to do."
         mc "It's fine. I don't really think it's a big issue."
         mc "After all, I don't expect you to have your house clean when you weren't really expecting guests."
         m "Ahaha, well I suppose you're right."
         "I notice the keyboard Monika has setup in the room."
         "There appears to be some sheet music with several handwritten notes on them."
         "Just how much has she been practicing?"
-        m 1ha "I'm still quite a novice at the piano, if I'm honest."
+        m 1a "I'm still quite a novice at the piano, if I'm honest."
         m "Though I am getting better!"
-        m 3hb "I'm actually writing my own piece right now."
+        m 3b "I'm actually writing my own piece right now."
         mc "Are you planning to play it for the day?"
         mc "Or maybe you're looking for something easier...?"
-        m 3ha "I was kinda doing this for a special occasion, to mark something."
+        m 3a "I was kinda doing this for a special occasion, to mark something."
         m "But with the circumstances, that doesn't seem to be possible."
-        m 4he "I guess the day will have to do, if I want my part to be satisfactory."
+        m 4e "I guess the day will have to do, if I want my part to be satisfactory."
         mc "So is that all you're going to be playing on the day?"
         m "Of course not!"
-        m 2hc "I was thinking of playing some smaller, easier pieces to accompany the main piece."
+        m 2c "I was thinking of playing some smaller, easier pieces to accompany the main piece."
         m "I don't really know what I should do, nor do I particularly mind."
-        m 2hb "Which is where you come in!"
+        m 2b "Which is where you come in!"
         mc "Me?"
-        m 2ha "Yeah! You could be the one who finds me some pieces to play."
+        m 2a "Yeah! You could be the one who finds me some pieces to play."
         m "As long as they aren't that difficult, I should be able to learn the piece I want to play and the ones you find too!"
         mc "S-Sure, but I don't know if I'd trust my own taste in music."
         mc "You might not like what I find."
-        m 2he "Like I said, I don't really mind."
+        m 2e "Like I said, I don't really mind."
         m "As long as it's easy and doesn't take away from what I'm going to play."
         mc "Speaking of which..."
         mc "How long have you been practicing it for?"
         mc "I noticed there was a lot of handwritten notes on the sheet music so it looks like you worked on it a lot."
-        m 1ha "You're quite observant, [player]!"
+        m 1a "You're quite observant, [player]!"
         m "I was quite busy last night just trying to come up with this piece."
-        m 1hl "In fact, I didn't actually get much sleep because of it."
-        m 1hm "It's also why the room is in a..."
+        m 1l "In fact, I didn't actually get much sleep because of it."
+        m 1m "It's also why the room is in a..."
         m "...less than ideal state."
-        m 1hn "I want to apologize again for that."
+        m 1n "I want to apologize again for that."
         mc "I don't blame you."
         mc "It must have been hard work to compose your own song."
-        m 1he "Ahaha, yeah it was a little bit. And it's just a piece, not a song, silly~"
+        m 1e "Ahaha, yeah it was a little bit. And it's just a piece, not a song, silly~"
         "Monika's face suddenly lights up."
-        m 1ha "Actually, do you want to hear a little bit?"
+        m 1a "Actually, do you want to hear a little bit?"
         m "It's still a bit rough but I think I've got this first part pretty much perfected!"
         m "I mean...you don't have to."
         menu:
             m "But I'd like to give you the choice~"
             "Yes.":
-                m 1hb "Well...here goes nothing."
+                m 1b "Well...here goes nothing."
                 "Monika approaches her keyboard and takes a deep breath."
                 "She turns it on before looking at me and smiling."
                 m "The title is \"Hear Me, My Love\"..."
@@ -5644,34 +5644,34 @@ label ch13_exclusive_monika:
                 m "So...what did {i}you{/i} think?"
                 mc "That was amazing, Monika."
                 mc "I'm sure once you finish practicing it, everybody will love it."
-                m 2he "Ahaha, I hope so."
+                m 2e "Ahaha, I hope so."
             "No.":
-                m 1hf "Ah...that's fine."
-                m 2he "I'm sure you're probably waiting for when it's done, right?"
+                m 1f "Ah...that's fine."
+                m 2e "I'm sure you're probably waiting for when it's done, right?"
         m "Anyway...!"
         m "We still have to get some books for the play, right?"
         m "I've actually got a pretty big collection of books downstairs, in my living room."
-        m 2ha "You can look through the bookshelf there. It's got quite the collection and I think you'll find something you like."
+        m 2a "You can look through the bookshelf there. It's got quite the collection and I think you'll find something you like."
         m "In the meantime, I thought I'd show you this book."
-        m 4hb "You've probably seen it before, so maybe you can tell me your thoughts on it."
+        m 4b "You've probably seen it before, so maybe you can tell me your thoughts on it."
         "Monika searches her bag and pulls out a red book after a few seconds."
         "It doesn't look at all familiar."
         "It's hard to make out because it looks kinda faded but I think the cover has some ominous looking eye on it."
         m "You don't recognize it, do you?"
         mc "Should I?"
-        m 4hc "If I--"
-        m 4hd "If {i}she{/i} did everything properly, then you wouldn't."
-        m 4hh "It's a little annoying that she actually managed to get rid of one of the copies of this book."
+        m 4c "If I--"
+        m 4d "If {i}she{/i} did everything properly, then you wouldn't."
+        m 4h "It's a little annoying that she actually managed to get rid of one of the copies of this book."
         m "Not to mention that she wiped your memory of it, removing almost all my influence in this world."
-        m 3ha "{i}Almost{/i}..."
+        m 3a "{i}Almost{/i}..."
         mc "W-What are you talking about?"
-        m 3hb "[player] had a copy hidden somewhere, while I still had him under my influence."
+        m 3b "[player] had a copy hidden somewhere, while I still had him under my influence."
         m "It was quite difficult to find, but not impossible..."
-        m 3hn "After all, they give off a familiar type of...radiation I guess is the best way to describe it."
+        m 3n "After all, they give off a familiar type of...radiation I guess is the best way to describe it."
         mc "M-Monika, I have no clue what you're talking about."
         mc "It's kinda creepy, if I'm honest with you."
-        m 1ha "Like it matters."
-        m 5ha "I'm not even talking to you, after all."
+        m 1a "Like it matters."
+        m 5a "I'm not even talking to you, after all."
         show monikared zorder 5:
             alpha 0
             linear 2.0 alpha 0.3
@@ -5684,101 +5684,101 @@ label ch13_exclusive_monika:
         "I find myself staring at Monika's smile."
         "It's really easy to lose myself in it..."
         m "Now we have all the privacy we could want."
-        m 1hb "By now, you've locked yourself into an ending that might be undesireable."
+        m 1b "By now, you've locked yourself into an ending that might be undesireable."
         m "Ahaha, at least for everyone else."
-        m 2hb "For us, it'll be like a new beginning."
-        m 2hm "I don't quite understand these feelings."
-        m 4hn "But I'm learning to accept them."
-        m 4he "Being with you, they're only getting stronger."
+        m 2b "For us, it'll be like a new beginning."
+        m 2m "I don't quite understand these feelings."
+        m 4n "But I'm learning to accept them."
+        m 4e "Being with you, they're only getting stronger."
         m "Maybe it's a weakness, adopted from Monika."
         m "But..."
-        m 4hm "This feeling of love, I can't help it any longer."
+        m 4m "This feeling of love, I can't help it any longer."
         m "After you chose to help me yesterday and accept my offer, it's just become an overwhelming feeling."
-        m 2hn "I even did my hair this way to try to get you to like me more."
-        m 2ho "I'm being irrational and wasting my time."
-        m 2hp "This piece I'm composing is even for you..."
-        m 2hq "Yet..."
-        m 1he "I don't regret any of it."
+        m 2n "I even did my hair this way to try to get you to like me more."
+        m 2o "I'm being irrational and wasting my time."
+        m 2p "This piece I'm composing is even for you..."
+        m 2q "Yet..."
+        m 1e "I don't regret any of it."
         m "As long as I fulfill my goals and end up with you..."
         m "Nothing else matters."
-        m 1hl "Ahaha, sorry."
+        m 1l "Ahaha, sorry."
         m "I seem to have gone on a tangent, haven't I?"
-        m 1hm "It's just become a little hard to focus my thoughts."
+        m 1m "It's just become a little hard to focus my thoughts."
         m "Anyway, back to what we were discussing..."
-        m 1hn "My plan."
+        m 1n "My plan."
         m "Take a look at this book, I'm sure you know what it is."
         $ style.say_dialogue = style.edited
         "Monika gives me the red book she's holding in her hands."
         "Looking at it more closely, I can see that it's titled \"Portrait of Markov\"."
         $ style.say_dialogue = style.normal
-        m 1ha "[player] is going to need to read this."
+        m 1a "[player] is going to need to read this."
         m "But not like it matters at this point..."
         m "I've already set up everything so that you can't change what's going to happen."
-        m 1hc "I mean...you did see that file I made, right?"
-        m 1he "I suppose since you're working with me, I can tell you more about the book."
-        m 2he "It clearly isn't just an ordinary book, as you probably know."
+        m 1c "I mean...you did see that file I made, right?"
+        m 1e "I suppose since you're working with me, I can tell you more about the book."
+        m 2e "It clearly isn't just an ordinary book, as you probably know."
         m "Within it, I've stored a part of...the {i}real{/i} me."
         m "So that whoever reads it will come under my influence."
-        m 2ha "What I am isn't important, just know that I have that kind of ability."
+        m 2a "What I am isn't important, just know that I have that kind of ability."
         m "You already know what I'm talking about."
-        m 2hc "After all, I'm not {i}really{/i} Monika anymore."
+        m 2c "After all, I'm not {i}really{/i} Monika anymore."
         m "Even though I can't help but act like her..."
-        m 2hm "Speaking of which, I apologize for getting upset at you..."
+        m 2m "Speaking of which, I apologize for getting upset at you..."
         m "...or rather {i}[player]{/i} outside."
-        m 2ho "It just brought back some terrible memories from..."
+        m 2o "It just brought back some terrible memories from..."
         m "Well...before everything that I'd rather not think about."
         m "That's besides the point."
-        m 2hc "I'm almost certain Sayori has a copy of the book."
+        m 2c "I'm almost certain Sayori has a copy of the book."
         m "She probably got it from Yuri...and I think she read some of it."
         m "Despite that, I can't...really influence her."
-        m 1hd "I think it's got something to do with being the president, and all the power you get from it."
+        m 1d "I think it's got something to do with being the president, and all the power you get from it."
         m "What matters is that we still have this one copy of the book available to us."
-        m 1he "Two would be better, but one is enough."
+        m 1e "Two would be better, but one is enough."
         m "Once he reads the book, I'll have a way to get through Sayori."
-        m 2ha "I can't be certain but I think she's going to end it after Inauguration Day."
+        m 2a "I can't be certain but I think she's going to end it after Inauguration Day."
         m "Since everyone will have their 'happy' ending."
-        m 4hl "Pathetic."
+        m 4l "Pathetic."
         m "..."
-        m 3ho "You know, I'm not actually certain that this whole plan of mine will work."
+        m 3o "You know, I'm not actually certain that this whole plan of mine will work."
         m "Sayori has changed since the first week you joined."
-        m 1hq "She's become more independent, more cunning and more intelligent."
+        m 1q "She's become more independent, more cunning and more intelligent."
         m "To everyone else, she's still the same..."
-        m 1hr "That makes her really hard to deal with."
-        m 1hp "But I admit...I'm getting desperate."
+        m 1r "That makes her really hard to deal with."
+        m 1p "But I admit...I'm getting desperate."
         m "Even with all this knowledge and extended power, there's still so little I can do by myself."
-        m 1hm "But if everything goes well..."
+        m 1m "But if everything goes well..."
         m "Then I'll be inaugurated as the president of the Literature Club."
-        m 2he "Ahaha, the whole day was my idea of course."
+        m 2e "Ahaha, the whole day was my idea of course."
         m "I'll tell you more later."
-        m 2ha "Right now, [player] needs to find some books."
+        m 2a "Right now, [player] needs to find some books."
         m "After all, Sayori might get suspicious that she can't see what [player] is up to."
-        m 4hb "So..."
+        m 4b "So..."
         m "Thanks for listening~"
         "What just happened?"
         "It's like...I wasn't myself."
         hide monikared
         $ audio.t6c = "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"
         play music t6c fadeout 0.5
-        m 5ha "Any of the books on the shelf downstairs are ones you can choose."
+        m 5a "Any of the books on the shelf downstairs are ones you can choose."
         m "Despite the small house, we do have a lot of books!"
         mc "Ah..."
         "I grasp my head. I feel like I just had a huge headache."
         mc "...Not to be rude but what were we talking about again?"
         mc "I may have stopped listening."
-        m 5hb "You missed my whole explanation?"
+        m 5b "You missed my whole explanation?"
         m "I can't believe you."
         mc "I-I think I heard the end of it..."
         mc "I can probably figure it out."
-        m 1hc "[player], is something wrong?"
+        m 1c "[player], is something wrong?"
         m "It looks like you've hurt your head."
         mc "I don't know..."
         mc "It just started hurting all of a sudden."
-        show monika 1hf
+        monika 1f
         "Monika looks at me worriedly."
         m "I've actually got something for headaches."
         m "Do you want it?"
         mc "That's too kind of you but I can't just accept something like--"
-        m 1he "It's okay! I insist."
+        m 1e "It's okay! I insist."
         "Monika walks over to the bathroom next to her room and takes some tablets and a glass of water."
         "She must get headaches a lot...?"
         m "Here, take this."
@@ -5786,7 +5786,7 @@ label ch13_exclusive_monika:
         m "You should go downstairs and try to find some books."
         mc "What are you going to be doing?"
         m "I need to do something up here for a while."
-        m 1ha "I won't be long, okay?"
+        m 1a "I won't be long, okay?"
         mc "Alright..."
         m "Get better soon, [player]."
         scene bg m_livingroom with wipeleft_scene
@@ -5823,21 +5823,21 @@ label ch13_exclusive_monika:
         "Sayori said to pick a couple so I guess I'll just pick other ones that look interesting."
         "..."
         "Soon, I've selected four novels from the shelf."
-        show monika 1bha zorder 2 at t11
+        show monika 1ba zorder 2 at t11
         m "Hi [player]~"
         m "Have you finished choosing your books?"
         mc "Ah...yeah."
-        m 1bhd "Can I see what you chose?"
+        m 1bd "Can I see what you chose?"
         "I show Monika the four books I took from her shelf."
-        m 2bhb "Interesting choices!"
+        m 2bb "Interesting choices!"
         m "You probably chose them based on their popularity, right?"
         mc "Is it that easy to tell?"
-        m 2bha "Ahaha, it doesn't matter too much."
+        m 2ba "Ahaha, it doesn't matter too much."
         mc "I don't really read much...or at least I didn't, until this whole play thing."
         mc "So I thought that choosing books that everyone has heard of would make things easier."
         m "That makes sense! It would make it easier to relate to the club."
         mc "Yeah, that's sort of what I was going for."
-        m 2bhc "I still have to pick some books..."
+        m 2bc "I still have to pick some books..."
     else:
         m 1c "I know what you're thinking."
         m "This house isn't something that suits someone like me, right?"
@@ -6252,10 +6252,10 @@ label ch13_exclusive_monika:
         "I don't know if she would tell me but at least I can comfort her."
         "I hope I can do something..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 2bha zorder 2 at t11
+        show monika 2ba zorder 2 at t11
         m "I think...this is the last one."
         "Monika takes a book from the shelf."
-        m 2bhb "I've got all my books chosen."
+        m 2bb "I've got all my books chosen."
         mc "What did you choose?"
         m "Take a look~"
         "Monika hands me the stack of books she's holding."
@@ -6263,97 +6263,97 @@ label ch13_exclusive_monika:
         "I haven't really seen or heard of the books she has chosen, so I guess she chose based on what she actually liked..."
         "Unlike me who chose based on what others might like."
         "But the novels look short enough to do a play on, at least for a few chapters."
-        m 2bhe "What do you think?"
+        m 2be "What do you think?"
         m "You probably haven't heard of them before, have you?"
         mc "You're right, I haven't really heard of them before."
         mc "But from the first glance by reading the blurb, they all seem kinda..."
         mc "Um...romantic?"
-        m 2bhl "Ahaha, I guess you could say that."
+        m 2bl "Ahaha, I guess you could say that."
         m "The covers of the books kinda give it away."
-        m 2bhm "They're all actually a romantic adventure, which isn't what I'd normally prefer..."
-        m 2bhn "Things have just been kinda weird lately. You understand, right?"
+        m 2bm "They're all actually a romantic adventure, which isn't what I'd normally prefer..."
+        m 2bn "Things have just been kinda weird lately. You understand, right?"
         mc "I guess..."
         mc "I mean we all have our preferences, it would be wrong me to judge you based on yours."
         mc "I'm sure your choices are great, Monika."
-        m 2bha "That's up to everyone else to decide."
+        m 2ba "That's up to everyone else to decide."
         m "Anyway...!"
         m "What kind of music did you choose for me?"
-        m 2bhe "It's not too easy to play, is it?"
+        m 2be "It's not too easy to play, is it?"
         mc "I made sure you wouldn't have trouble learning it...I think."
         mc "I'm not really sure how hard it is to play the piano so I just searched for basic piano pieces."
         mc "In the end, I choose some [ch13_music_type]-sounding pieces."
-        m 4bhe "Is that sheet music I see in your hands?"
+        m 4be "Is that sheet music I see in your hands?"
         mc "Yeah, take a look."
         "I hand over the sheet music to Monika."
-        m 3bhc "Hmm..."
-        m 3bha "You're right, [player]."
-        m 3bhj "Ahaha, these look a little too easy for me."
+        m 3bc "Hmm..."
+        m 3ba "You're right, [player]."
+        m 3bj "Ahaha, these look a little too easy for me."
         m "That's actually perfectly fine."
-        m 3bha "It just means I can focus on my main piece more."
+        m 3ba "It just means I can focus on my main piece more."
         mc "Glad to know I wasn't completely useless."
-        m 1bhe "You should give yourself more credit than that."
+        m 1be "You should give yourself more credit than that."
         m "You've made my day just by being here."
         mc "I did?"
-        m 1bha "You did!"
+        m 1ba "You did!"
         m "So thank you."
         "Monika smiles meaningfully."
-        m 1bhb "I'm gonna try to play these pieces you've chosen."
+        m 1bb "I'm gonna try to play these pieces you've chosen."
         m "Care to listen?"
         mc "I'd love to."
-        m 1bhe "Great. This shouldn't be too long."
+        m 1be "Great. This shouldn't be too long."
         mc "I don't mind staying all night if I have to."
-        m 1bhm "That means a lot..."
+        m 1bm "That means a lot..."
         m "But I'm afraid I've still got other things to do tonight."
         mc "Then I'll stay as long as you'll have me."
-        m 2bhe "Ahaha, okay~"
+        m 2be "Ahaha, okay~"
         m "Can you hold on to those books while I practice?"
         mc "Sure..."
         "Monika smiles and walks towards her keyboard."
         "She takes the sheet music already there and puts it aside carefully."
         "She then places the sheet music I found for her on the keyboard."
-        m 2bhc "Choosing [ch13_music_type]..."
-        m 1bha "Let's see what we can do..."
+        m 2bc "Choosing [ch13_music_type]..."
+        m 1ba "Let's see what we can do..."
         "Monika starts playing the first piece I found for her."
         "Almost effortlessly, she gets it right on the first attempt..."
         "At least I think she did."
         "I'm not really sure how it's supposed to sound exactly."
         "I did click the preview button before I printed it but I wasn't really listening properly."
-        m 1bhb "How did that sound?"
+        m 1bb "How did that sound?"
         mc "It sounded great. You played it perfectly."
         m "Do you think so? I'm almost positive I missed a couple of notes there."
         mc "Ah...it's kinda hard for me to tell."
         mc "It still sounded incredible, especially on your first attempt at it."
-        m 2bha "Well, I'm glad you think so."
+        m 2ba "Well, I'm glad you think so."
         m "With how easy these pieces are, it shouldn't take more than a couple of hours to get them perfect."
-        m 1bhe "So...let's try this second one..."
+        m 1be "So...let's try this second one..."
         "The second one is slightly longer than the first one so she looks at it more carefully."
         "After looking over it for a couple of minutes and muttering something to herself, she smiles at me."
-        m 1bha "And now..."
+        m 1ba "And now..."
         "Once again Monika plays the keyboard."
         "It sounds perfect in my ears."
-        show monika 1bho
+        show monika 1bo
         "She kinda looks like she's holding back tears."
         mc "Is something wrong?"
         mc "That sounded great..."
-        m 1bhm "I-It's nothing..."
+        m 1bm "I-It's nothing..."
         m "Just something about playing piano for someone..."
-        m 1bhn "Ah...I'm just being emotional for no reason."
+        m 1bn "Ah...I'm just being emotional for no reason."
         m "Forget what you've just seen."
         mc "I don't think that's possible."
         "Monika looks away for a second."
         "She then turns back and smiles meaningfully."
-        m 1bhq "Thank you for choosing these pieces, [player]."
+        m 1bq "Thank you for choosing these pieces, [player]."
         m "I really appreciate you taking your time to help me."
         mc "It's not a problem, really."
-        m 1bhr "But it's time for you to leave now, I think."
+        m 1br "But it's time for you to leave now, I think."
         mc "Oh..."
-        m 2bhm "Please don't take it the wrong way."
+        m 2bm "Please don't take it the wrong way."
         m "I'm still adapting to everything and..."
         m "I'll just say it's my fault we're stopping now."
-        m 2bhn "I'll get the other pieces done, don't you worry."
+        m 2bn "I'll get the other pieces done, don't you worry."
         m "You were definitely a big help today."
         mc "Maybe I can still help..."
-        m 2bhe "No...there's nothing you can do right now..."
+        m 2be "No...there's nothing you can do right now..."
         m "I'm sorry, [player]."
         mc "It's okay. I know you're dealing with a lot."
         mc "I'll be there for you if you need me, Monika."
