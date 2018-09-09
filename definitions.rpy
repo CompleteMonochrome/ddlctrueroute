@@ -2598,6 +2598,7 @@ default ch14_book_choice = "Sayori"
 default ch14_natyuri_choice = ["Natsuki", "Yuri"]
 default ch14_votes = [0, 0, 0, 0, 0]
 default ch14_overall_choice = "Sayori"
+default ch14_sayori_date_choice = False
 
 default y_gave = False
 default y_ranaway = False
