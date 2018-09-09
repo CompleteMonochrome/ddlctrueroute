@@ -547,6 +547,8 @@ label after_load:
         $ cl_name = "Mysterious Clerk"
     if not hasattr(store, 'ch14_sayori_date_choice'):
         $ ch14_sayori_date_choice = False
+    if not hasattr(store, 'chapter_names'):
+        $ chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","???","???","???","???","???","???"]
 
     # Because of a change in an update - remove with 0.9.4f
     if ch14_book_choice == "Player":
