@@ -4273,7 +4273,31 @@ label ch14_exclusive_monika:
         m "But her friendship means nothing to me."
         m "All that matters is..."
         m "...you."
-        m ""
+        m "When we finish this, I'm going to look for a way."
+        m "We'll be together."
+        m "Forever."
+        menu:
+            m "That sounds wonderful, right?"
+            "Yes.":
+                pass
+        m "Of course it does!"
+        m "I should probably wake [player] up now."
+        m "I need him to answer some questions."
+        m "Though I suppose I could just probe his memory..."
+        m "No, that's an unnecessary risk."
+        show monika at thide
+        hide monika
+        $ pause(1.0)
+        scene bg m_bedroom
+        show monika
+        with open_eyes
+        m "You're falling asleep again, [player]!"
+        m "Maybe you should go home and rest if you're too tired."
+        m "I can understand."
+        mc "W-What?"
+        mc "I fell asleep...again?!"
+        m "That reminds me..."
+        m "How much of the book did you get to read?"
     else:
         m "It doesn't matter."
         m "We have stuff to do."
@@ -4340,8 +4364,11 @@ label ch14_exclusive_monika:
             "I stare directly at Monika."
             "This feels kinda strange to do but she told me to look at her so..."
             "..."
+            show markovred zorder 5:
+                alpha 0
+                linear 2.0 alpha 0.3
+            $ currentpos = get_pos()
             play mkov fadeout 3.0 fadein 2.0
-            $ pause(2.0)
             m "I'm going to implant false memories."
             m "If he figures this out then the whole thing will just collapse."
             m "At least, that's what I think."
@@ -4382,16 +4409,142 @@ label ch14_exclusive_monika:
             m "She believed me!"
             m "She's too easily fooled."
             m "Too trusting."
-            m
+            m "Probably because she had nothing to worry about."
+            m "Up until you came."
+            m "You changed her life, didn't you?"
+            m "I'm just speculating."
+            m "I don't know half of it."
+            m "When I took over Monika's body, lots of her memories were destroyed in the process."
+            m "At least, that's what I think."
+            m "Because there's gaps in my memory too..."
+            m "After I convinced her to let me retain my memories, she made the other two go home."
+            m "[player] came with me, because he needed to preparations so it was only natural."
+            m "I don't know the full extent of her powers."
+            m "What I do know is that her power is immense."
+            m "And it will be mine."
+            m "If she wanted she could probably rival me at full strength."
+            m "But she doesn't know so she can't do anything."
+            m "She would never guess that the person who got her out of depression..."
+            m "Is now working towards her demise."
+            m "Ironic."
+            m "That's all there was."
+            m "I promise."
+            m "I hope you've learned to trust me, even a little."
+            m "Now, I'll just..."
+            "..."
+            hide markovred
+            $ audio.t6c = "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"
+            play music t6c fadeout 0.5
+            mc "So why am I staring at you?"
+            mc "I've been here for five minutes and you haven't said a thing."
+            m "Oh, never mind!"
+            m "Just forget what I said."
         else:
             m "Just don't worry about it."
             m "It'll all come back to you."
             m "I'm sure of it."
             m "You definitely walked here though."
             m "That much I can say."
-            mc "Right..."
+        mc "Right..."
         m "Back to our preparations now."
+        "Monika paces around the room."
         mc "Alright, that's probably a good idea."
+        mc "Are you just going to keep practicing the songs?"
+        m "I don't know."
+        mc "What should I do?"
+        m "Whatever you want."
+        mc "Are you okay?"
+        m "You don't even need to be here."
+        mc "But you said it was our preparations, right?"
+        m "I did."
+        m "But you can't help me much at the moment, can you?"
+        "Monika stops pacing."
+        m "You've already chosen the songs."
+        m "I just need to practice them."
+        mc "So I'm useless..."
+        m "I guess so."
+        m "You can stay here and listen to me or you can leave."
+        m "It's up to you."
+        m "Just try not to bother me when I'm practicing."
+        "Did I do something wrong?"
+        "She's acting kinda differently..."
+        "More than usual."
+        mc "Hey, Monika..."
+        "Monika sighs."
+        m "I'm just...anxious."
+        m "I don't know how Friday is going to go."
+        m "It's worrying me a little bit."
+        mc "It's going to be fine, Monika."
+        "I put my hand on her shoulder."
+        mc "Trust me, with Sayori taking care of things, everything will be fine."
+        m "(That's exactly what I'm afraid of...)"
+        mc "What?"
+        m "I need to calm down a little bit."
+        m "After witnessing first hand..."
+        m "Look, why don't we talk about the book a little bit."
+        mc "What book?"
+        m "You know the one."
+        $ currentpos = get_pos()
+        stop music
+        m "{cps=3}Right?{/cps}"
+        $ style.say_dialogue = style.edited
+        mc "Of course."
+        $ style.say_dialogue = style.normal
+        m "Wonderful."
+        m "How much of it have you read?"
+        m "The more you read, the better it is for the both of us you know."
+        $ style.say_dialogue = style.edited
+        mc "I have almost finished it, Monika."
+        mc "I was not able to read all of it."
+        mc "I will finish reading it before Inauguration Day."
+        $ style.say_dialogue = style.normal
+        m "You're going to need to."
+        m "After all, you're the center of Sayori's world."
+        m "Don't let me down, okay?"
+        $ style.say_dialogue = style.edited
+        mc "Of course, Ik--"
+        $ style.say_dialogue = style.normal
+        m "Don't say it."
+        m "That name doesn't need to be said."
+        $ style.say_dialogue = style.edited
+        "Whatever she wants."
+        mc "I have a question."
+        $ style.say_dialogue = style.normal
+        m "A question?"
+        m "You're still capable of independent thought in this state?"
+        m "You must not have read as much as I thought you did."
+        m "Maybe it's just in your nature."
+        m "You do a lot of questions after all."
+        $ style.say_dialogue = style.edited
+        "Monika rolls her eyes."
+        $ style.say_dialogue = style.normal
+        m "Well, let's hear it."
+        $ style.say_dialogue = style.edited
+        mc "Why must I read the Portrait of Markov?"
+        mc "What is so important and special about it?"
+        $ style.say_dialogue = style.normal
+        m "What a peculiar question."
+        # check for game completion OMEGALUL
+        m "I've never had that question asked by any of my thralls."
+        m "Though I suppose you're different."
+        m "You aren't under my full influence just yet."
+        m "You're under my host's."
+        m "That's not information I'll just tell anyone, you know."
+        m "I can't be sure I can trust you just yet."
+        m "Maybe after you've finished the book, I'll tell you."
+        m "But for now, it's best we keep that private."
+        m "Okay?"
+        m "Now...the other book."
+        $ audio.t6b = "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"
+        play music t6b fadeout 0.5
+    if ch14_overall_choice == "Monika":
+        m "I'm glad you voted for mine."
+        m "It makes explaining it a lot easier."
+        m "Because I know exactly what happens."
+        m "You can say a page and I could probably tell you what is happening."
+        mc "You really know that much about the book?"
+        m "I was obssessed with it at one point."
+    else:
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
@@ -4477,7 +4630,7 @@ label ch14_exclusive_sayori:
         elif s_appeal < 4:
             s "Are you sure, [player]?"
             s "It feels like you care less for me than you think."
-            if ch13_poemwinner == ch14poemwinner:
+            if ch13poemwinner == ch14poemwinner:
                 s "You're probably more concerned about [ch14poemwinner]."
             elif ch13poemwinner != "Sayori" and ch14poemwinner != "Sayori":
                 s "You're probably more concerned about [ch13poemwinner]..."

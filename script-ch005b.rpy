@@ -1038,7 +1038,8 @@ label ch5_mainc:
         scene bg closet
         show natsuki 4r zorder 2 at t11
         with wipeleft_scene
-        mc "Hey Natsuki, do you need any help?"
+        mc "Hey, Natsuki."
+        mc "Do you need any help?"
         "She appears to be struggling to reach the top shelf of the cupboard."
         n "I'm fine!"
         mc "Are you sure? I could get whatever it is you're looking for."
@@ -1106,7 +1107,8 @@ label ch5_mainc:
     else:
         play music t6 fadeout 1
         show yuri 2a zorder 2 at t11
-        mc "Hey Yuri, do you need any help putting up the decorations?"
+        mc "Hey, Yuri."
+        mc "Do you need any help putting up the decorations?"
         y 2h "Ah, [player]..."
         y "Why do you want to help me?"
         y 2n "T-That's not me declining your help or anything!"
