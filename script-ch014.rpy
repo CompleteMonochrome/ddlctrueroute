@@ -4546,6 +4546,7 @@ label ch14_exclusive_monika:
         mc "You really know that much about the book?"
         m "I was obssessed with it at one point."
     else:
+        m "Your choice of book..."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
