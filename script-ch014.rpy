@@ -3202,7 +3202,7 @@ label ch14_end:
     s 3l "Just making sure..."
     s "Anyway..."
     if ch14_votes[0] >= 3:
-            $ ch14_overall_choice = "Natsuki"
+        $ ch14_overall_choice = "Natsuki"
         s 3a "I think I counted three votes for Natsuki's manga."
         s "That means Natsuki has the majority vote!"
     elif ch14_votes[1] >= 3:

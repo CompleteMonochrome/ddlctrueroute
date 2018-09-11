@@ -305,7 +305,7 @@ label poem(transition=True,totalWords=20):
                                 s[k] = ' '
                             elif random.randint(0, 4) == 0:
                                 s[k] = random.choice(nonunicode)
-                        word = PoemWord("".join(s), 0, 0, 0, 0 False)
+                        word = PoemWord("".join(s), 0, 0, 0, 0, False)
                     elif persistent.playthrough == 2 and not poemgame_glitch and chapter >= 1 and progress < numWords and random.randint(0, 400) == 0:
                         word = PoemWord(glitchtext(80), 0, 0, 0, 0, True)
                     else:
