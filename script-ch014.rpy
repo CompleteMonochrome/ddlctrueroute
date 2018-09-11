@@ -4364,16 +4364,12 @@ label ch14_exclusive_monika:
             "I stare directly at Monika."
             "This feels kinda strange to do but she told me to look at her so..."
             "..."
-<<<<<<< HEAD
-            play music mkov fadeout 3.0 fadein 2.0
-            $ pause(2.0)
-=======
             show markovred zorder 5:
                 alpha 0
                 linear 2.0 alpha 0.3
             $ currentpos = get_pos()
-            play mkov fadeout 3.0 fadein 2.0
->>>>>>> refs/remotes/origin/master
+            play music mkov fadeout 3.0 fadein 2.0
+            $ pause(2.0)
             m "I'm going to implant false memories."
             m "If he figures this out then the whole thing will just collapse."
             m "At least, that's what I think."
@@ -4423,7 +4419,7 @@ label ch14_exclusive_monika:
             m "At least, that's what I think."
             m "Because there's gaps in my memory too..."
             m "After I convinced her to let me retain my memories, she made the other two go home."
-            m "[player] came with me, because he needed to preparations so it was only natural."
+            m "[player] came with me, because he needed to continue preparations so it was only natural."
             m "I don't know the full extent of her powers."
             m "What I do know is that her power is immense."
             m "And it will be mine."
@@ -4497,7 +4493,7 @@ label ch14_exclusive_monika:
         $ style.say_dialogue = style.normal
         m "Wonderful."
         m "How much of it have you read?"
-        m "The more you read, the better it is for the both of us you know."
+        m "The more you read, the better it is for the both of us, you know."
         $ style.say_dialogue = style.edited
         mc "I have almost finished it, Monika."
         mc "I was not able to read all of it."
