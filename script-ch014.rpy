@@ -4340,7 +4340,7 @@ label ch14_exclusive_monika:
             "I stare directly at Monika."
             "This feels kinda strange to do but she told me to look at her so..."
             "..."
-            play mkov fadeout 3.0 fadein 2.0
+            play music mkov fadeout 3.0 fadein 2.0
             $ pause(2.0)
             m "I'm going to implant false memories."
             m "If he figures this out then the whole thing will just collapse."

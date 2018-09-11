@@ -250,6 +250,10 @@ label poem(transition=True,totalWords=20):
         nPointTotal = 0
         yPointTotal = 0
         mPointTotal = 0
+        sInList = False
+        nInList = False
+        yInList = False
+        mInList = False
         if persistent.playthrough == 0:
             wordlist = list(full_wordlist)
         else:
@@ -285,6 +289,10 @@ label poem(transition=True,totalWords=20):
             else:
                 pstring = str(progress)
             ui.text(pstring + "/" + str(numWords), style="poemgame_text", xpos=810, ypos=80, color='#000')
+            sInList = False
+            nInList = False
+            yInList = False
+            mInList = False
             for j in range(2):
                 if j == 0: x = 440
                 else: x = 680
@@ -297,12 +305,33 @@ label poem(transition=True,totalWords=20):
                                 s[k] = ' '
                             elif random.randint(0, 4) == 0:
                                 s[k] = random.choice(nonunicode)
-                        word = PoemWord("".join(s), 0, 0, 0, False)
+                        word = PoemWord("".join(s), 0, 0, 0, 0 False)
                     elif persistent.playthrough == 2 and not poemgame_glitch and chapter >= 1 and progress < numWords and random.randint(0, 400) == 0:
-                        word = PoemWord(glitchtext(80), 0, 0, 0, True)
+                        word = PoemWord(glitchtext(80), 0, 0, 0, 0, True)
                     else:
-                        word = random.choice(wordlist)
-                        wordlist.remove(word)
+                        if not sInList and i >= 2 and j == 1 and persistent.playthrough == 0:
+                            word = PoemWord("Sayori", 3, 0, 0, 0, False)
+                            sInList = True
+                        elif not nInList and i >= 2 and j == 1 and persistent.playthrough == 0:
+                            word = PoemWord("Natsuki", 0, 3, 0, 0, False)
+                            nInList = True
+                        elif not yInList and i >= 2 and j == 1 and persistent.playthrough == 0:
+                            word = PoemWord("Yuri", 0, 3, 0, 0, False)
+                            yInList = True
+                        elif not mInList and i >= 2 and j == 1 and persistent.playthrough == 0:
+                            word = PoemWord("Monika", 0, 3, 0, 0, False)
+                            mInList = True
+                        else:
+                            word = random.choice(wordlist)
+                            if word.sPoint == 3:
+                                sInList = True
+                            elif word.nPoint == 3:
+                                nInList = True
+                            elif word.yPoint == 3:
+                                yInList = True
+                            elif word.mPoint == 3:
+                                mInList = True
+                            wordlist.remove(word)
                     ui.textbutton(word.word, clicked=ui.returns(word), text_style="poemgame_text", xpos=x, ypos=i * 56 + ystart)
                 ui.close()
 
