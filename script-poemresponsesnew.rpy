@@ -2477,7 +2477,8 @@ label ch14_y_med:
     if visited_yuri_hospital:
         jump ch14_y_good
     y "Hello, [player]."
-    mc "Hey Yuri, what did you think of my poem?"
+    mc "Hey, Yuri."
+    mc "What did you think of my poem?"
     y 3pb "It's very unique in style, [player]."
     y "In the sense that it's written by you but clearly leaning to one of our styles of writing."
     y 2pe "I don't really have much to say about it anymore."
