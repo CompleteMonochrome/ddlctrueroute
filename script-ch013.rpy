@@ -344,7 +344,7 @@ label ch13_main:
         m 4b "Anyway, we should get inside."
         m "We've kept the others waiting for long enough."
     elif ch12_markov_agree and monika_type == 1:
-        monika 1a zorder 2 at t11
+        show monika 1a zorder 2 at t11
         m "Hi [player]~"
         "It's Monika, but..."
         "...she's not wearing her white ribbon and her hair is down."
@@ -413,7 +413,7 @@ label ch13_main:
         m "And [player] was..."
         m "Um..."
     elif ch12_markov_agree and monika_type == 1:
-        monika 2b zorder 3 at f31
+        show monika 2b zorder 3 at f31
         m "Sorry for that. I had a piano lesson I went to."
         m "It went for slightly longer than usual, so that's why I'm late."
         m "As for [player]..."
@@ -422,7 +422,7 @@ label ch13_main:
         s "W-Wait a second..."
         s "Before any of that...what did you do to your hair?"
         s 2o "It's...different!"
-        monika 2j zorder 3 at f31
+        show monika 2j zorder 3 at f31
         show sayori zorder 2 at t32
         m "Ahaha, you noticed?"
         m "You're quite sharp, Sayori."
@@ -487,7 +487,7 @@ label ch13_main:
         m "There's nothing wrong with doing that."
         m "Sometimes you just have to say what's on your mind."
     elif ch12_markov_agree and monika_type == 1:
-        monika 2b zorder 3 at f31
+        show monika 2b zorder 3 at f31
         m "If you say so, Sayori."
         m "Just try to relax a little, okay?"
     else:
@@ -545,12 +545,12 @@ label ch13_main:
         m "Then...I guess his influence made the school go for it."
         m 4k "It might be a good idea for the Literature Club, if we ever wanted it to grow."
     elif monika_type == 1 and ch12_markov_agree:
-        monika 3j zorder 3 at f31
+        show monika 3j zorder 3 at f31
         m "Oh, I might have an idea~"
         show monika zorder 2 at t31
         show yuri 3pf zorder 3 at f33
         y "Do you know something we don't, Monika?"
-        monika 4k zorder 3 at f31
+        show monika 4k zorder 3 at f31
         show yuri zorder 2 at t33
         m "Well, all I can really say is what I heard about it during lunch."
         m "A couple of the smaller club's presidents wanted to try to get more members."
@@ -596,7 +596,7 @@ label ch13_main:
         m "Maybe I could help you write it this time."
         m 2e "Ah...that is, if we are really doing this."
     elif monika_type == 1 and ch12_markov_agree:
-        monika 2a zorder 3 at f31
+        show monika 2a zorder 3 at f31
         m "Well, I can always lend you a hand."
         m "It would definitely be good for the club if we do this..."
     else:
@@ -639,7 +639,7 @@ label ch13_main:
         m "Ah...don't you mean 'sentiment'?"
         m "Sediments are something completely different, Sayori."
     elif monika_type == 1 and ch12_markov_agree:
-        monika 3l zorder 3 at f31
+        show monika 3l zorder 3 at f31
         m "I think the word you're looking for is 'sentiment', Sayori."
     else:
         show monika 3c zorder 3 at f31
@@ -738,7 +738,7 @@ label ch13_main:
         m "She would probably appreciate you visiting."
         m 2m "I wonder how she's dealing with everything..."
     elif monika_type == 1 and ch12_markov_agree:
-        monika 2a zorder 3 at f31
+        show monika 2a zorder 3 at f31
         m "Knowing Natsuki, she'd probably appreciate the company."
         m "That's really kind of you, Sayori."
     else:
@@ -774,7 +774,7 @@ label ch13_end:
         show monika 1c zorder 3 at f33
         m "Really? I don't think anything is wrong..."
     elif monika_type == 1 and ch12_markov_agree:
-        monika 1c zorder 3 at f33
+        show monika 1c zorder 3 at f33
         m "I think you're overthinking it a little, Yuri."
     else:
         show monika 1c zorder 3 at f33
@@ -831,7 +831,7 @@ label ch13_end:
         m "We should probably assign some tasks to help you with your preparation, Sayori."
         m "After all, it wouldn't be fair if you did everything by yourself."
     elif monika_type == 1 and ch12_markov_agree:
-        monika 3a zorder 3 at f33
+        show monika 3a zorder 3 at f33
         m "Maybe we should assign tasks to help with the preparation."
         m "It would make it easier for you, Sayori."
     else:
@@ -879,7 +879,7 @@ label ch13_end:
         m 4a "Aside from small snacks, we could get Natsuki to bake something for us."
         m "The stuff she bakes is delicious after all!"
     elif monika_type == 1 and ch12_markov_agree:
-        monika 3b zorder 3 at f33
+        show monika 3b zorder 3 at f33
         m "I know what everyone could do."
         m "We all have different kinds of talents, don't we?"
         m 4a "Natsuki, for example, could bake us some cupcakes for the day."
@@ -909,7 +909,7 @@ label ch13_end:
         m 1n "Maybe you could make some banners about the Literature Club to set the atmosphere."
         m "I know you'll do a great job!"
     elif monika_type == 1 and ch12_markov_agree:
-        monika 3l zorder 3 at f33
+        show monika 3l zorder 3 at f33
         m "Ahaha, it's not like that Yuri."
         m "You definitely have some talents that we could use to help the preparations."
         m 1a "For example, your handwriting is really beautiful."
@@ -950,7 +950,7 @@ label ch13_end:
         m "Hmm..."
         m "What should I do then?"
     elif monika_type == 1 and ch12_markov_agree:
-        monika 1c zorder 3 at f33
+        show monika 1c zorder 3 at f33
         m "Okay...then what should I do?"
     else:
         show monika 1d zorder 3 at f33
@@ -986,7 +986,7 @@ label ch13_end:
         m "It's true I've been practicing for a while but..."
         m 2e "I don't know if the play is the right time."
     elif monika_type == 1 and ch12_markov_agree:
-        monika 2l zorder 3 at f33
+        show monika 2l zorder 3 at f33
         m "Ah..."
         m "Is it really a good idea for me to play?"
         m "If you all think I'm good enough to do that, then I might consider it."
@@ -1009,7 +1009,7 @@ label ch13_end:
     show sayori zorder 2 at t32
     "Monika looks at all of us one by one."
     if monika_type == 1 and ch12_markov_agree:
-        monika 2b zorder 3 at f33
+        show monika 2b zorder 3 at f33
     else:
         show monika 2b zorder 3 at f33
     m "Okay, I'll do it."
@@ -1090,7 +1090,7 @@ label ch13_end:
         m "Even if I enjoy your company, you have to think of the bigger picture..."
         m 1j "...After all, this whole thing is for the club."
     elif monika_type == 1 and ch12_markov_agree:
-        monika 3a zorder 3 at f33
+        show monika 3a zorder 3 at f33
         m "Hmm..."
         m "Maybe [player] could help me."
         m 3b "If I'm going to play the piano on the day, I could use an audience to practice to."
@@ -1142,7 +1142,7 @@ label ch13_end:
         m "That really does sound like a lot of work, Sayori."
         m 1e "Are you sure you can handle all of that if [player] doesn't choose to help you?"
     elif monika_type == 1 and ch12_markov_agree:
-        monika 1a zorder 3 at f33
+        show monika 1a zorder 3 at f33
         m "Ahaha, wow..."
         m "That sure is a lot of work you've set for yourself."
     else:
@@ -1306,7 +1306,7 @@ label ch13_end:
         show monika zorder 2 at t33
         "Sayori wipes her face one more time before returning to form."
     elif monika_type == 1 and ch12_markov_agree:
-        monika 1e zorder 3 at f33
+        show monika 1e zorder 3 at f33
         m "I actually have a few words I want to say."
         m "It has to do with all of you..."
         m "...And I know Natsuki isn't here but I'll be sure to relay the message to her."
@@ -1315,7 +1315,7 @@ label ch13_end:
         y "This sounds important..."
         y "Is it something bad?"
         show yuri zorder 2 at t31
-        monika 3j zorder 3 at f33
+        show monika 3j zorder 3 at f33
         m "It's just the opposite."
         m "I wanted to say something {i}good{/i} about the Literature Club."
         m 3k "To make everyone feel better after what's been happening recently."
@@ -1325,7 +1325,7 @@ label ch13_end:
         show monika zorder 2 at t33
         s "Well, I definitely wanna hear this!"
         show sayori zorder 2 at t32
-        monika 1a zorder 3 at f33
+        show monika 1a zorder 3 at f33
         m "Okay..."
         m "When I first...joined the Literature Club..."
         m 1c "I wasn't expecting it to become such an important part of my life."
@@ -1342,7 +1342,7 @@ label ch13_end:
         s "You didn't expect all of us to become to important to you."
         s "Like we're somehow unique in your life...?"
         show sayori zorder 2 at t32
-        monika 3l zorder 3 at f33
+        show monika 3l zorder 3 at f33
         m "Y-Yeah...!"
         m "That's right Sayori."
         m 4m "Going to this club after every school day just made me feel so..."
@@ -1357,7 +1357,7 @@ label ch13_end:
         y "I...don't know how to respond to that..."
         y "S-Sorry, I'm not really the best when it comes to situations like this."
         show yuri zorder 2 at t31
-        monika 2m zorder 3 at f33
+        show monika 2m zorder 3 at f33
         m "It's okay, Yuri."
         m "But anyway..."
         m 2n "I guess what I'm trying to say is..."
@@ -1370,7 +1370,7 @@ label ch13_end:
         s "Y-You..."
         s "You didn't have to say those things, Monika."
         show sayori zorder 2 at t32
-        monika 1m zorder 3 at f33
+        show monika 1m zorder 3 at f33
         m "I know..."
         m "But I feel like I had to after everything that's happened."
         show sayori 2t zorder 3 at f32
@@ -1408,7 +1408,7 @@ label ch13_end:
         scene bg club_day
         show yuri 3pv zorder 2 at i31
         show sayori 2t zorder 3 at i32
-        monika 1m zorder 3 at i33
+        show monika 1m zorder 3 at i33
         with Dissolve(1.5)
         $ style.say_window = style.window
         $ del _history_list[-10:]
@@ -1416,7 +1416,7 @@ label ch13_end:
         "That was during the first week, right?"
         "Why would Monika say she was the president...?"
         "I really have no idea what's going on..."
-        monika 3e zorder 3 at f33
+        show monika 3e zorder 3 at f33
         m "There's nothing wrong with crying, Sayori."
         m "It's good to let your emotions out once in a while."
         m "It's definitely better than keeping it bottled up, you know?"
@@ -1426,7 +1426,7 @@ label ch13_end:
         s "You're right."
         s "T-Thanks again, Monika..."
         show sayori zorder 2 at t32
-        monika 1j zorder 3 at f33
+        show monika 1j zorder 3 at f33
         m "Take care of yourself, Sayori."
         m "I wouldn't want anything bad happening to you~"
         "Monika turns towards Yuri."
@@ -1438,7 +1438,7 @@ label ch13_end:
         y "M-Me?"
         y "W-What for...?"
         show yuri zorder 2 at t31
-        monika 1a zorder 3 at f33
+        show monika 1a zorder 3 at f33
         m "Ahaha, oh you know..."
         m 1b "Being you."
         show yuri 2pf zorder 3 at f31
@@ -1450,7 +1450,7 @@ label ch13_end:
         mc "If she didn't bring me here that one morning then..."
         mc "I never would have met the rest of you."
         mc "So I wouldn't trade any of the time I've spent here either."
-        monika 1e zorder 3 at f33
+        show monika 1e zorder 3 at f33
         m "Ahaha, I'm glad."
         "Monika notices Sayori tearing up."
         m "Sorry! I didn't mean to ruin the mood."
@@ -1501,7 +1501,7 @@ label ch13_end:
             m "I want to get as much practice done as possible."
             m "You'll get my book list tomorrow as well."
         elif monika_type == 1 and ch12_markov_agree:
-            monika 2a zorder 3 at f22
+            show monika 2a zorder 3 at f22
             m "I'll get some practice in for Friday."
             m "You can expect my book choices in by tomorrow as well."
         else:
@@ -1522,7 +1522,7 @@ label ch13_end:
         "Sayori skips out of the room."
         mc "See you later, Sayori."
         if monika_type == 1 and ch12_markov_agree:
-            monika 2a zorder 3 at t22
+            show monika 2a zorder 3 at t22
         else:
             show monika 2a zorder 3 at t22
         m "Well..."
@@ -1704,7 +1704,7 @@ label ch13_end_monika:
         m 4a "I'm sure I could really use your help."
         m "And maybe I can tell you more about that conversation we had earlier..."
     elif monika_type == 1 and ch12_markov_agree:
-        monika 2c zorder 3 at f33
+        show monika 2c zorder 3 at f33
         m "Even after all the work Sayori said she has to do...?"
         m 2d "I'm not going to decline so I guess I should be saying is..."
         m 2k "Thank you."
@@ -1801,7 +1801,7 @@ label ch13_end_sayori:
         m "Just make sure you don't hurt yourself doing too much."
         m "Knowing you, you probably have a lot more stuff than what you've let on planned..."
     elif monika_type == 1 and ch12_markov_agree:
-        monika 1a zorder 3 at f33
+        show monika 1a zorder 3 at f33
         m "Be careful not to waste all your energy, Sayori."
         m "That could be really bad for when the day comes."
     else:
@@ -5336,7 +5336,7 @@ label ch13_exclusive_monika:
         "I wonder what \"not too far\" actually means to Monika..."
         "I guess I shouldn't be complaining..."
     elif monika_type == 1 and ch12_markov_agree:
-        monika 1a zorder 2 at t11
+        show monika 1a zorder 2 at t11
         m "You keeping up okay, [player]?"
         m "You look a little tired."
         mc "Ah..."
@@ -5374,7 +5374,7 @@ label ch13_exclusive_monika:
         show monika 1a zorder 2 at t11
         m "We're finally here!"
     elif monika_type == 1 and ch12_markov_agree:
-        monika 1a zorder 2 at t11
+        show monika 1a zorder 2 at t11
         m "And we're here!"
     else:
         show monika 1a zorder 2 at t11
@@ -5585,7 +5585,7 @@ label ch13_exclusive_monika:
         "Honestly, I thought the place would be cleaner."
         "I thought Monika would have prepared in case something like this happened."
         "I suppose it's not really a big deal."
-        monika 1c zorder 2 at t11
+        show monika 1c zorder 2 at t11
         m "My room isn't exactly cleaned up, I'm sorry for that."
         m 2e "I hope that doesn't affect the preparations we're going to do."
         mc "It's fine. I don't really think it's a big issue."
@@ -5773,7 +5773,7 @@ label ch13_exclusive_monika:
         m "It looks like you've hurt your head."
         mc "I don't know..."
         mc "It just started hurting all of a sudden."
-        monika 1f
+        show monika 1f
         "Monika looks at me worriedly."
         m "I've actually got something for headaches."
         m "Do you want it?"
