@@ -2672,6 +2672,8 @@ default ch14_natyuri_choice = ["Natsuki", "Yuri"]
 default ch14_votes = [0, 0, 0, 0, 0]
 default ch14_overall_choice = "Sayori"
 default ch14_sayori_date_choice = False
+default ch14_m_ask = False
+default ch14_m_tellsayori = False
 default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","???","???","???","???","???","???"]
 # Poem Game Fix
 default sInList = False
