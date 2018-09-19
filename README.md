@@ -1,5 +1,7 @@
 # Doki Doki True Route
 
+Current Version: 0.9.5a
+
 To install, please find the download links in the reddit thread:
 https://www.reddit.com/r/DDLCMods/comments/84tlpi/wip_doki_doki_true_route/
 
@@ -17,6 +19,10 @@ Note: To get to the original content, you must write your poems for Monika in Ac
 - Some new original music tracks
 - Monika!
 
+**Download:**
+
+If you want to download the mod, please go to the reddit thread (link found above) and follow the instructions for downloading and installing.
+
 **Mod Description:**
 
 Part One (Base Game)
@@ -27,10 +33,26 @@ Part Two (New Content)
 
 Successfully making Monika want to help everyone will unlock the new content the mod has to offer. She and Sayori work together to try to fix everyone else's problems but they soon realize things aren't as easy as they thought it would be. They need the help of the player to make sure that everyone ends up with a happy ending...but there's a looming presence that is affecting Monika...
 
+**Frequently Asked Questions:**
+
+*Q: Why does my game keep skipping Saturday?*
+A: Check if the filename has .txt.txt. If you have file extensions turned off then it should just be a text document called 'script-saturday'. I have actually included a check for this starting from patch 0.8.1!
+
+*Q: Why do I always end up with Just Monika?*
+A: You didn't pick the right choices. You may need to restart the mod by deleting the 'firstrun' file in your game directory.
+
+*Q: What are Monika's poem words?*
+A: They aren't very hard to find. They'll be quite obvious once you realize that they weren't there in the base DDLC game. However, sometimes words from Dokis may not show up. This is a known issue and will be fixed in the future.
+
+*Q: Help! What does this undefined variable something mean and why is it giving me errors?*
+A: It's probably an undefined variable. It might be my fault but I have done updates where I literally define a variable before a check on the value of that variable and it is apparently not defined. The best way to resolve this is by using the Custom Start on the main menu to start from the day you left off.
+
 **Credits:**
 
 - Proofreaders: the people of my discord server
-- Background Art: petan, mugenjohncel, BIGLOBE
-- Character Art: Monika After Story Team (particularly: Ryuse [for the new Monika leaning sprite], TheAloofPotato, NotSoGiantDad, Daydreamer, Danymations, Yuro Foxclaw, Therationalpi), Reddit users /u/SovietSpartan, /u/singusasongpianoman, /u/Drealengo, Discord users Erni_Editions™, Malukah Maker, bman, Oxfire and ASkillZ and finally MUGかぶり and wingzofdarkness from lemmasoft forums
+- Background Art: petan, mugenjohncel, BIGLOBE, Nuxill
+- Character Art: Monika After Story Team (particularly: Ryuse [for the new Monika leaning sprite], TheAloofPotato, NotSoGiantDad, Daydreamer, Danymations, Yuro Foxclaw, Therationalpi), Reddit users /u/SovietSpartan, /u/singusasongpianoman, /u/Drealengo, Discord users Erni_Editions™, Malukah Maker, bman and finally MUGかぶり and wingzofdarkness from lemmasoft forums
 - Music: G-RiNe Project, ScubDomino and Reddit users: /u/Zerorurariro and /u/-ShInIgAmIsAmA-
-- Special Thanks: /r/DDLCMods Discord server, Creativetacos
+- Special Thanks: truesonic53, Chronos, /r/DDLCMods Discord server, Creativetacos
+- Some Sprite edits: AskillZ and Miko
+- As required for using a certain sprite set: Artwork by SovietSpartan (https://twitter.com/TsukiZuramaru), originally created for the Doki Doki Literature Club mod "Doki Doki Rewind/Replay", by Chronos (Discord: Chronos#1609)

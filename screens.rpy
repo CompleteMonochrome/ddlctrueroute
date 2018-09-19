@@ -831,7 +831,7 @@ init -1 python:
 
         else:
             if renpy.current_screen().screen_name[0] == "save" and persistent.name_saves:
-                renpy.store.save_name = chapter_names[chapter]
+                # renpy.store.save_name = chapter_names[chapter]
                 return Show(screen="save_input", message="Enter save name", ok_action=[Hide("save_input"), FileAction(name)])
             elif renpy.current_screen().screen_name[0] == "save":
                 renpy.store.save_name = chapter_names[chapter]
