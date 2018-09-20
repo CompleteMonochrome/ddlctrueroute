@@ -4881,7 +4881,7 @@ label ch13_exclusive_yuri:
     "Yuri's frown slowly disappears."
     y 3ph "But before we do that, I need to ask {i}you{/i} something, [player]."
     mc "Huh? What is it?"
-    if monika_type == 0 or monika_type == 1:
+    if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
         y 3pe "Do you think Sayori has been acting a little different lately?"
         mc "Sayori acting strange...?"
         mc "What do you mean?"

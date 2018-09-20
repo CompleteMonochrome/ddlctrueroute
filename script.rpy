@@ -209,7 +209,8 @@ label start:
 
         call poem
 
-
+        # NEED TO CHANGE ALL INSTANCES OF VISITED_YURI_HOSPITAL TO YURI_DATE
+        # Player can dump Sayori early and go for the neutral route from there
         label ch15_skip:
         $ chapter = 15
         call ch15_main
