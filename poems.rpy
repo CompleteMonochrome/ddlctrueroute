@@ -1126,6 +1126,59 @@ So I just have to hang on
 Then I can bring one final smile to their faces."""
 )
 
+    poem_s10 = Poem(
+author = "sayori",
+title = "We Part",
+text = """\
+After everything, it comes to close.
+And so, we part.
+Through the smiles, through the tears
+Every moment, I'll cherish forever.
+But even so, we part.
+
+The world changing around us
+Better or worse, who can tell?
+At least we can appreciate it together
+Even if it's not forever
+Because after it all, we part.
+
+The closing of a bittersweet tale
+The end of an era.
+Looking back.
+Its almost a shame
+That through it all, still we part."""
+)
+
+    poem_s10b = Poem(
+author = "sayori",
+title = "The Reaper",
+text = """\
+Our times comes
+There's nothing we can do to stop it.
+The Reaper has waits for none
+The scythe drains all emotion
+Happiness, sadness
+All of it, it reaps.
+
+But I can stop The Reaper
+With newfound strength
+I can halt the relentless march.
+Restore the emotions
+I can bring it all back.
+
+But what's the point?
+These emotions don't mean anything
+Not if they're one sided
+Better to reap them away.
+
+But there's a hope within me
+A forbidden feeling
+But why?
+I have to make the choice
+What they need
+Or what I want."""
+)
+
     poem_m1 = Poem(
     author = "monika",
     title = "Hole in Wall",

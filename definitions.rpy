@@ -2674,7 +2674,7 @@ default ch14_overall_choice = "Sayori"
 default ch14_sayori_date_choice = False
 default ch14_m_ask = False
 default ch14_m_tellsayori = False
-default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","???","???","???","???","???","???"]
+default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","???","???","???","???","???"]
 # Poem Game Fix
 default sInList = False
 default nInList = False

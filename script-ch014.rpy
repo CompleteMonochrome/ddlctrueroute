@@ -221,7 +221,7 @@ label ch14_main:
         m "I've been keeping it from you for too long."
         show sayori 1j zorder 3 at f21
         show monika zorder 2 at t22
-        s "What--"
+        s "What--{nw}"
     elif monika_type == 1 and ch12_markov_agree:
         show screen tear(8, offtimeMult=1, ontimeMult=10)
         $ pause(2.0)
@@ -251,7 +251,7 @@ label ch14_main:
         m "You have to know what we're dealing with, Sayori!"
         show sayori 1j zorder 3 at f21
         show monika zorder 2 at t22
-        s "What--"
+        s "What--{nw}"
     stop music
     scene bg club_day with dissolve_scene_full
     play music t2
@@ -4905,6 +4905,49 @@ label ch14_exclusive_natsuki:
     "Why can't I remember anything?"
     n "[player]...?"
     "Natsuki puts an icepack to her head and I do the same."
+    mc "Natsuki?"
+    "When did I get this?"
+    "And why did I instinctively put it on my head?"
+    n "Jeez, you've been like that for a while."
+    n "I was beginning to think you would just ignore the pain."
+    mc "What's going on?"
+    mc "What pain are you talking about?"
+    n "The pain on your head?"
+    n "What else would I be talking about?"
+    mc "I don't--"
+    "I've just got this terrible feeling coming from my head."
+    "Why is this happening to me?"
+    mc "Ah!"
+    n "Told you."
+    mc "Do you have any idea why I got this?"
+    mc "Why {i}we{/i} got this?"
+    n "What do you mean?"
+    n "Don't you remember?"
+    mc "To be honest, I can't remember anything since the meeting."
+    mc "Even then, I can't even figure out how the meeting ended."
+    n "E-Eh?"
+    n "Something is wrong with you then, [player]."
+    mc "What happened, then?"
+    n "After the meeting ended, we walked from school together."
+    n "We stopped by your house so you could change."
+    n "Then we went straight here."
+    mc "That doesn't explain why our heads hurt..."
+    n "Oh..."
+    n "Well, it's probably from the fall."
+    n "That's the only thing that makes sense."
+    n "Strange that it only started hurting now..."
+    mc "The fall? I don't know what you're talking about."
+    n "Stop playing games with me, [player]!"
+    n "We have work to do."
+    if natsuki_date:
+        n "Not to mention that we still have to show the portrait."
+        n "Remember?"
+        mc "Oh yeah!"
+        mc "Now would be good time, wouldn't it?"
+        n "It's the perfect time."
+        n "Come on, let's go downstairs!"
+        mc "Right behind you."
+        scene bg n_livingroom with wipeleft_scene
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
