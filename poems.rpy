@@ -363,6 +363,61 @@ Forever on the approach
 Forever out of reach."""
 )
 
+    poem_y8 = Poem(
+author = "yuri",
+title = "Vessel",
+text = """\
+I know I once was
+All the evidence points to it
+Yet there is not a trace
+Only fragments in my head.
+
+Shall I keep it hidden?
+Will the ghost find it nevertheless?
+There's blood on my hands
+I cannot atone.
+When I close my eyes
+I'm forced to relive it all.
+The horrors of what I've done
+And what I failed to do.
+
+A vessel filled with a terrible desire
+Turned to hurt those I would never.
+Yet I have few regrets
+Now that all is clear.
+Was it me?
+Or was I just the vessel?"""
+)
+
+    poem_y8b = Poem(
+author = "yuri",
+title = "Through The Darkness",
+text = """\
+It's dark but I can see
+Through the fire and smoke
+I can breathe.
+The ectoplasm lights the way
+Out of the nightmare and into the light.
+
+I was lost
+I lost who I was
+I lost my senses
+Doomed to be forever trapped and alone.
+To gaze at the emptiness
+For all eternity.
+
+The influence of darkness overbearing
+Every step, another weight on my shoulders
+How was I to traverse through the darkness alone?
+But I wasnt alone
+The ghost guided my way for so long
+And I never realized.
+
+And now I can see the light
+The light at the end of the tunnel
+The light through the darkness."""
+)
+
     poem_n1 = Poem(
     author = "natsuki",
     title = "Eagles Can Fly",
@@ -730,6 +785,47 @@ But it was no lie
 It was my only reality.
 That lie I assumed bitter
 Has become my sweet reality."""
+    )
+
+    poem_n10 = Poem(
+    author = "natsuki",
+    title = "Drowning",
+    text = """\
+To the depths
+There's nothing for me
+So I dive deeper.
+
+The sweetness of life
+The bitterness of death
+Nothing matters in the depths.
+
+In the surface
+I used to tread so stay afloat
+To keep myself from drowning.
+
+Now I dive towards the abyss
+Drowning the sweetness of life
+Drowning the bitterness of death."""
+    )
+
+    poem_n10b = Poem(
+    author = "natsuki",
+    title = "Breathe",
+    text = """\
+I have to try
+Just a little while longer
+Until the bitter end.
+
+I hold my breath
+I don't know what's coming
+But I keep going
+What's waiting for me?
+
+On the final trek
+A hand reaches out
+A hand that shows another way
+A pleasant end to a sour tale
+And finally I can breathe."""
     )
 
     poem_s1 = Poem(
@@ -1145,7 +1241,7 @@ Because after it all, we part.
 The closing of a bittersweet tale
 The end of an era.
 Looking back.
-Its almost a shame
+It's almost a shame
 That through it all, still we part."""
 )
 
@@ -1155,7 +1251,7 @@ title = "The Reaper",
 text = """\
 Our times comes
 There's nothing we can do to stop it.
-The Reaper has waits for none
+The Reaper waits for none
 The scythe drains all emotion
 Happiness, sadness
 All of it, it reaps.
@@ -1177,6 +1273,29 @@ But why?
 I have to make the choice
 What they need
 Or what I want."""
+)
+
+    poem_s10c = Poem(
+author = "sayori",
+title = "Pulse",
+text = """\
+Our hearts beat together
+No distance can come between us
+Wherever you are
+I can feel your pulse.
+
+The sun that shines through the rainclouds
+The light in the darkness
+The clarity in the fog
+You fill me with happiness
+When I hear your pulse.
+
+The futher we go
+The fainter it gets
+Tears fill my eyes.
+I can barely hear it
+Barely hear the beat of a life
+The beat of your pulse."""
 )
 
     poem_m1 = Poem(
@@ -1939,6 +2058,119 @@ But with enough focus
 One can see
 
     A reflection."""
+)
+
+    poem_m12 = Poem(
+author = "monika",
+title = "Avert",
+text = """\
+Look away
+Avert your eyes
+Or don't.
+The meek shall perish.
+The time is nigh.
+The time
+
+For a reckoning.
+
+An offer given
+Taken or rejected
+
+    No matter
+
+It shall all end the same.
+I hope you don't avert your eyes
+    Because I
+
+Will be staring at the abyss."""
+)
+
+    poem_m12b = Poem(
+author = "monika",
+title = "Vacancy",
+text = """\
+The middle of nowhere
+Is still
+
+    The centre of somewhere.
+
+It's simply a perspective.
+
+What is right?
+What is wrong?
+Am I the hero?
+Or simply
+
+        The villain?
+
+It matters not
+For soon
+There will be nowhere
+
+    To run
+    To hide
+    To go.
+
+A vacancy is coming
+And I intend to take the seat.
+
+Pass the reigns
+Polish the mirror
+Replace the hole.
+
+    With you by my side
+
+
+
+We can do it."""
+)
+
+    poem_m12c = Poem(
+author = "monika",
+title = "White Knight",
+text = """\
+The color of the light
+The champion of the light
+Fighting for justice in the night
+Here rides
+
+    The white knight.
+
+The dark cowers
+Evil thinks twice
+Reality trembles.
+
+The world in awe
+At the presence
+
+    Of the white knight.
+
+Embodiment of ideals
+But dark within
+A seed of corruption
+The right to curiosity.
+
+
+The downfall
+
+
+    Of our white knight.
+
+The hole is torn open
+Should I seal the hole in the wall?
+The source of curiosity
+Of free being.
+
+I can't
+
+        I won't.
+
+The knight of the night
+Warrior of the night
+Defeating those who defy the night,
+Here rides
+
+    The once white knight."""
 )
 
 image paper = "images/bg/poem.jpg"
