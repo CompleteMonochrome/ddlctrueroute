@@ -821,6 +821,8 @@ init -1 python:
         elif persistent.playthrough == 3 and renpy.current_screen().screen_name[0] == "save":
             return Show(screen="dialog", message="There's no point in saving anymore.\nDon't worry, I'm not going anywhere.", ok_action=Hide("dialog"))
 
+        elif persistent.playthrough == 0 and special_chapter:
+            return Show(screen="dialog", message="This is an alternate reality. You can't save them.", ok_action=Hide("dialog"))
 
         # Monika Bad Ending Saturday
         elif persistent.playthrough == 0 and persistent.monika_ch3_skip and renpy.current_screen().screen_name[0] == "save":

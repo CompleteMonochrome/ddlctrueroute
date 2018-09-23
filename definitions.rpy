@@ -2614,6 +2614,8 @@ image bg residential_day_gray = im.Grayscale("bg/residential.png")
 image bg club_day_gray = im.Grayscale("bg/club.png")
 image bg house_gray = im.Grayscale("bg/house.png")
 image bg sayori_bedroom_gray = im.Grayscale("bg/sayori_bedroom.png")
+image bg bedroom_gray = im.Grayscale("bg/bedroom.png")
+image bg m_livingroom_gray = im.Grayscale("mod_assets/images/bg/m_livingroom.png")
 image sayori 1ba_gray = im.Grayscale("mod_assets/images/sayori/preset/1ba.png")
 image sayori 1bu_gray = im.Grayscale("mod_assets/images/sayori/preset/1bu.png")
 image sayori 4p_gray = im.Grayscale("mod_assets/images/sayori/preset/4p.png")
@@ -2743,6 +2745,7 @@ default persistent.n_playday = [False,False,False,False,False,False]
 default persistent.natsuki_house = [False, False, False, False]
 default persistent.arc_clear = [False,False,False,False,False]
 default persistent.markov_agreed = False
+default persistent.did_special_event = False
 # Local Save
 default visited_sayori_sat = False
 default canload_ch5b = False
@@ -2828,6 +2831,7 @@ default ch14_sayori_date_choice = False
 default ch14_m_ask = False
 default ch14_m_tellsayori = False
 default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","???","???","???","???","???"]
+default special_chapter = False
 # Poem Game Fix
 default sInList = False
 default nInList = False

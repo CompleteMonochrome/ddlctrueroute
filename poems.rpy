@@ -1290,7 +1290,7 @@ The clarity in the fog
 You fill me with happiness
 When I hear your pulse.
 
-The futher we go
+The further we go
 The fainter it gets
 Tears fill my eyes.
 I can barely hear it

@@ -5231,7 +5231,7 @@ label ch14_exclusive_monika:
         show monika at thide
         hide monika
         $ pause(3.0)
-        scene m_livingroom
+        scene bg m_livingroom
         show monika 2bc zorder 2 at t11
         with open_eyes
         $ audio.t6c = "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"
@@ -5635,7 +5635,7 @@ label ch14_exclusive_monika:
         stop music fadeout 1.0
         scene black with close_eyes
         $ pause(3.0)
-        scene m_livingroom
+        scene bg m_livingroom
         show monika 1ba zorder 2 at t11
         with open_eyes
         $ audio.t6c = "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"

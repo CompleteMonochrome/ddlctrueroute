@@ -1,6 +1,6 @@
 # Doki Doki True Route
 
-Current Version: 0.9.5a
+Current Version: 0.9.5b
 
 To install, please find the download links in the reddit thread:
 https://www.reddit.com/r/DDLCMods/comments/84tlpi/wip_doki_doki_true_route/
@@ -17,6 +17,8 @@ Note: To get to the original content, you must write your poems for Monika in Ac
 - Your choices affect what happens to the Dokis and how they act (starting mainly from the new content)
 - Custom Start (once you reach part two of the mod you can start from any day in the new content though starting from a day you haven't played yet will spoil you!)
 - Some new original music tracks
+- Name your saves
+- More save slots
 - Monika!
 
 **Download:**
@@ -51,7 +53,7 @@ A: It's probably an undefined variable. It might be my fault but I have done upd
 
 - Proofreaders: the people of my discord server
 - Background Art: petan, mugenjohncel, BIGLOBE, Nuxill
-- Character Art: Monika After Story Team (particularly: Ryuse [for the new Monika leaning sprite], TheAloofPotato, NotSoGiantDad, Daydreamer, Danymations, Yuro Foxclaw, Therationalpi), Reddit users /u/SovietSpartan, /u/singusasongpianoman, /u/Drealengo, Discord users Erni_Editions™, Malukah Maker, bman and finally MUGかぶり and wingzofdarkness from lemmasoft forums
+- Character Art: Monika After Story Team (particularly: Ryuse [for the new Monika leaning sprite], TheAloofPotato, NotSoGiantDad, Daydreamer, Danymations, Yuro Foxclaw, Therationalpi), Reddit users /u/SovietSpartan, /u/singusasongpianoman, /u/Drealengo, /u/NormallyAverage, Discord users Erni_Editions™, Malukah Maker, bman and finally MUGかぶり and wingzofdarkness from lemmasoft forums
 - Music: G-RiNe Project, ScubDomino and Reddit users: /u/Zerorurariro and /u/-ShInIgAmIsAmA-
 - Special Thanks: truesonic53, Chronos, /r/DDLCMods Discord server, Creativetacos
 - Some Sprite edits: AskillZ and Miko
