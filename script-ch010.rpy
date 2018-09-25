@@ -767,6 +767,8 @@ label ch10_nat_house:
                     "There's..."
                     "It's..."
                     "How did nobody know about this...?"
+                    "Has Natsuki not told anyone?"
+                    "This is a big deal..."
                     "I quickly close the closet door."
                 "Second room upstairs.":
                     $ persistent.natsuki_house[1] = True

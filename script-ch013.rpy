@@ -2830,7 +2830,7 @@ label ch13_exclusive_natsuki:
             show dadsuki zorder 2 at t31
             show momsuki 1b zorder 3 at f33
             mo "Until next time~"
-            show natsuki 1h zorder 3 at f32
+            show natsuki 1bh zorder 3 at f32
             show momsuki zorder 2 at t33
             n "I-I'll see you tomorrow."
             n "Thanks again for coming."
@@ -3977,7 +3977,7 @@ label ch13_exclusive_natsuki:
             "I would have thought he'd have at least done up his bed though."
             "Seeing as he's trying to change for Natsuki."
             mc "Hmm..."
-            "I look under the bed, purely out of curiousity."
+            "I look under the bed, purely out of curiosity."
             "I see something that captures my interest."
             mc "What's this?"
             n "Probably nothing..."

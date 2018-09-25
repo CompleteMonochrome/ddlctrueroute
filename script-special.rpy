@@ -1,5 +1,5 @@
 label special_chapter:
-    # Alternate Reality - Monika has no Bow
+    # Alternate Reality - Monika has no Ribbon
     $ monika_type = 1
     $ ch12_markov_agree = True
     scene black
@@ -65,7 +65,7 @@ label special_chapter:
             pass
         "No?":
             s "Then what are you even doing here?"
-            $ renpy.full_restart(transition=None, label="splashscreen")
+            $ renpy.utter_restart()
     s "Great!"
     s "Then let's fix this thing together."
     stop music fadeout 1.5
@@ -538,11 +538,11 @@ label special_chapter:
     mc "Tacky paper and all."
     "Monika takes the present and begins to unwrap it."
     mc "I know last week..."
-    mc "You lost your bow."
+    mc "You lost your ribbon."
     mc "That's why you're wearing your hair down."
     mc "You said your parents gave it to you."
     mc "So..."
-    "Monika pulls out a white bow from the box."
+    "Monika pulls out a white ribbon from the box."
     show monika 1bd
     "Her mouth is wide open."
     mc "I ordered you a new one."
@@ -560,7 +560,7 @@ label special_chapter:
     m "Okay, I'll do that!"
     show monika at thide
     hide monika
-    "Monika puts the bow on her head and ties it."
+    "Monika puts the ribbon on her head and ties it."
     # Alternate Reality - Restore to Normal Hair
     $ monika_type = 2
     $ ch12_markov_agree = False
@@ -635,5 +635,6 @@ label special_chapter:
     $ persistent.did_special_event = True
     $ special_chapter = False
     $ pause(1.0)
-    $ renpy.full_restart(transition=None, label="splashscreen")
+    $ style.say_window = style.window
+    $ renpy.utter_restart()
     return
