@@ -1177,6 +1177,90 @@ label ch14_s_end:
         s 1q "Nothing at all~"
     return
 
+label ch15_s_end:
+    if ch14_sayori_date_choice and sayori_personality <= 0:
+        call showpoem (poem_s10c)
+        mc "This is a pretty abstract poem, Sayori."
+        mc "It still has that emotional feel to it but..."
+        mc "If I didn't know any better, I'd say Monika wrote this poem."
+        mc "But I do know better."
+        s "Monika didn't have anything to do with this, [player]."
+        s "It's just something I wrote..."
+        s "You don't have to like it."
+        mc "I never said that I didn't like it."
+        mc "It's just different from what I'm used to."
+        s "So you like it?"
+        mc "I guess I do."
+        mc "But there's one thing..."
+        s "What is it?"
+        mc "I don't know, it just seems like it's directed at someone."
+        s "It just might be~"
+        mc "Eh?"
+        s "Nothing!"
+        s "Remember you still owe me that date."
+        s "You did lose yesterday, remember?"
+        s "{i}(If this is what I really want...){/i}"
+        mc "I didn't forget."
+        mc "We'll make it something to remember."
+        s "Oh, I wasn't--"
+        s "Ehehe, never mind."
+        s "Thanks for sharing with me, [player]."
+    else if (sayori_confess and not sayori_dumped) or s_appeal >= 4 or ch14_sayori_date_choice:
+        call showpoem (poem_s10b)
+        mc "Feeling drained, Sayori?"
+        s "Drained?"
+        s "What do you mean?"
+        mc "Maybe someone has reaped all your emotions."
+        mc "And you just don't know it."
+        mc "Hence, why you wrote this poem."
+        s "[player], what you said just made no sense."
+        s "Did you get enough sleep?"
+        mc "I got plenty of sleep."
+        s "And anyway, my poem has nothing to do with what's going on."
+        s "It's just telling a story."
+        mc "A story of what exactly?"
+        s "Of someone in conflict."
+        s "Someone who has the power to stop what's coming but can't decide."
+        mc "If they had that kind of power, I'd hope they'd put it to good use."
+        s "Good use how?"
+        mc "Helping other people who need help."
+        mc "Restoring these emotions, whatever that means."
+        mc "But at the same time, I hope they can get what they want."
+        mc "Without hurting anyone..."
+        mc "It's about finding a balance."
+        s "Yeah, it is..."
+        s "That's what I..."
+        s "Never mind!"
+        mc "Huh?"
+        s "Thanks for sharing, [player]."
+    else:
+        call showpoem (poem_s10)
+        mc "Hmm..."
+        mc "Is it just me or--"
+        s "It seems like an ending poem, right?"
+        s "Something you'd see before someone left."
+        mc "I was gonna say..."
+        mc "Well, yeah actually."
+        mc "Since you said it, is that your intention?"
+        s "My intention?"
+        s "It's not to leave everyone, [player]."
+        s "I would never do that."
+        mc "But you already thought of that as a potential message in your poem?"
+        s "I guess it just turned out that way."
+        s "My intention isn't to leave you guys."
+        s "You're all too important to me."
+        mc "I'm glad you think so, Sayori."
+        mc "You had me worried there for a second."
+        s "Oh, don't be worried."
+        s "I'll be right here."
+        s "I just hope whoever's watching understands."
+        mc "Understands what?"
+        mc "And who exactly is watching what...?"
+        s "N-Nothing, just forget what I said."
+        mc "If you say so..."
+        s "Thanks for sharing."
+    return
+
 label ch6_m_end:
     call showpoem (poem_m6)
     m "What do you think, [player]?"
@@ -2153,6 +2237,76 @@ label ch14_n_good:
     n 1c "Well? Read it.."
     return
 
+label ch15_n_bad:
+    jump ch15_n_med
+
+label ch15_n_med:
+    if natsuki_date:
+        jump ch15_n_good
+    n "Here, take your poem back."
+    mc "I take it you didn't like it?"
+    n "Where are you getting that idea from?"
+    n "I just wanted to give it back to you."
+    n "I finished reading it, after all."
+    mc "I don't know."
+    mc "Just the way you said it."
+    n "It's a..."
+    n "Whatever."
+    mc "A whatever?"
+    n "The poem was good, okay?"
+    n "Just stop bugging me."
+    mc "Did I do something?"
+    n "No...it's just..."
+    n "The preparations are on my mind."
+    n "I'm just trying to think."
+    mc "Ah, right."
+    mc "Tomorrow is the big day after all."
+    n "Exactly."
+    if ch13_name == "Natsuki":
+        n "I hope we can get everything done tonight."
+        mc "I'm sure we can do it."
+    else:
+        n "I really hope I can get everything done tonight."
+        mc "Knowing you, you'll definitely get it down."
+    n "Y-Yeah, well..."
+    "Natsuki holds out a piece of paper."
+    n "Well?"
+    n "Take it."
+    return
+
+label ch15_n_good:
+    if not natsuki_date:
+        jump ch15_n_med
+    n "Um..."
+    mc "What is it?"
+    mc "Is my poem that bad?"
+    n "N-No! It's not that."
+    n "It's just..."
+    n "Well, tomorrow has me thinking."
+    mc "Yeah, you're not the only one."
+    mc "Everyone is probably worried about tomorrow."
+    mc "At least, a little bit."
+    if ch13_name == "Natsuki":
+        mc "I'm sure we'll be fine."
+    else:
+        mc "I'm sure you'll be fine."
+    mc "After all, you're the one working on it."
+    n "Y-You're just saying that."
+    mc "Maybe I am."
+    mc "There's no way."
+    mc "Tomorrow is going to be a disaster."
+    n "Hey!"
+    "Natsuki punches my arm."
+    mc "What was that for?"
+    n "Being a jerk."
+    n "Thanks for lowering my confidence."
+    mc "That's what I'm here for."
+    "Natsuki rolls her eyes."
+    n "Whatever, why don't you just take this."
+    n "And wipe that grin off your face!"
+    "Natsuki hands me her poem."
+    return
+
 label ch6_y_bad:
     jump ch6_y_med
 
@@ -2553,6 +2707,72 @@ label ch14_y_good:
     y 2pt "I...of course."
     y 3ps "Here, I hope you like it..."
     "Yuri gives me her poem."
+    return
+
+label ch15_y_bad:
+    jump ch15_y_med
+
+label ch15_y_med:
+    if yuri_date:
+        jump ch15_y_good
+    y "So...after all this time..."
+    y "It's still..."
+    mc "Is my poem bad or something, Yuri?"
+    y "N-No, it's not that."
+    y "I was just thinking to myself."
+    y "I must have accidentally said something."
+    mc "I see..."
+    mc "Well, what are you thinking then?"
+    y "Oh, it's written well."
+    y "Sorry, I don't really have much to say."
+    y "The preparations are still occupying most of what I'm thinking."
+    mc "That's understandable."
+    mc "There is quite a lot to do after all."
+    if ch13_name == "Yuri":
+        mc "Hopefully, we can finish it tonight."
+    else:
+        mc "Hopefully you can finish it tonight."
+    y "That's the plan."
+    y "It's going to take more than hope though..."
+    mc "Sometimes that's all you need."
+    mc "But you're right."
+    mc "Decorations aren't going to make themselves."
+    "Yuri giggles briefly."
+    y "If only they could."
+    y "Anyway, here's my poem..."
+    return
+
+label ch15_y_good:
+    if not yuri_date:
+        jump ch15_y_med
+    y "Ah...your poem."
+    mc "Something wrong with it?"
+    y "There's nothing wrong with it."
+    y "I may be a bit biased but it's hard for me to find faults in your poems lately."
+    y "Your writing style has gotten to a level where I'd say it's above the average of people your age."
+    y "Even if the content isn't always what I'd like, it's just hard for me to criticize you."
+    mc "I see..."
+    "Yuri smiles bashfully."
+    y "The day is fast approaching, [player]."
+    y "Are you ready for what's coming?"
+    mc "Ready for the play?"
+    mc "I guess I am."
+    y "There's more to the day than just the play."
+    y "We're going to be in contact with so many people."
+    y "We have to make sure they enjoy themselves."
+    mc "Any idea how we're going to do that?"
+    y "The decorations are going to help."
+    if ch13_name == "Yuri":
+        y "The atmosphere we set has to be welcoming."
+        mc "But also related to the play, right?"
+        y "Exactly."
+    else:
+        y "The atmosphere I set is sort of welcoming..."
+        y "But still relates to the play, in a way."
+    mc "I can't wait to see them tomorrow."
+    y "Me neither..."
+    "Yuri takes my hand and places a piece of paper on it."
+    y "I hope you like it."
     return
 
 label ch6_s_bad:
@@ -3075,6 +3295,92 @@ label ch14_s_good:
     s 1h "Here, just take my poem and forget about what we just talked about."
     mc "But--"
     "Sayori hands her poem to me and I find myself unable to speak."
+    return
+
+label ch15_s_bad:
+    jump ch15_s_med
+
+label ch15_s_med:
+    s "This is a nice poem, [player]."
+    s "Just keep doing what you're doing."
+    s "{i}(While you can...){/i}"
+    mc "What did you say?"
+    s "Just keep doing what you're doing...?"
+    mc "Never mind..."
+    "Sayori smiles."
+    s "So..."
+    mc "So..."
+    s "Tomorrow is the big day."
+    mc "It is."
+    if ch13_name == "Sayori":
+        s "I just want to thank you."
+        s "For helping me, I mean."
+        mc "I barely did anything."
+        mc "All I did was read the book to you."
+        s "That's not true!"
+        s "You kept me company."
+        s "A-And..."
+        s "Well..."
+        mc "Don't worry, I get it."
+        mc "I appreciate the sentiment, Sayori."
+    else:
+        s "I want you to know, I'm glad you helped her."
+        mc "Who? [ch13_name]?"
+        s "Yeah! I'm sure they really appreciated your help."
+        mc "Eh...I don't know."
+        s "What do you mean?"
+        mc "I haven't really done much compared to her."
+        s "I know that's not true, [player]."
+        s "And in any case, I'm sure she enjoys your company."
+        s "Just having you around probably brightened up her day."
+        mc "Y-Yeah, we'll go with that."
+    s "Anyway, let's get on with it."
+    s "Lots to do after all, right?"
+    mc "Yeah..."
+    s "Why don't you read my poem?"
+    return
+
+label ch15_s_good:
+    s "This is a really sweet poem, [player]."
+    s "The mix of emotions combined with your writing style is a really cool combination."
+    mc "Cool combination, eh?"
+    s "W-What? I'm running out of ways to compliment your poems..."
+    mc "Well, I'm glad you like it."
+    "Sayori beams."
+    s "I never really get the chance to say this, [player]."
+    mc "Say what?"
+    if sayori_confess and not sayori_dumped:
+        s "How good you are to me."
+    else:
+        s "How good of a friend you are to me."
+    mc "E-Eh? Where did this come from?"
+    s "Well, I just thought I'd say that."
+    s "It's going to be one of the last times we share poems after all."
+    mc "What?"
+    s "Nothing!"
+    if ch13_name == "Sayori":
+        s "Thanks for helping me yesteday."
+        mc "No problem, I guess."
+        mc "Though I didn't really do anything."
+        s "That's not true!"
+        s "Just having you around really helped me get through the day."
+        mc "It did?"
+        s "Yeah, so..."
+        mc "You're welcome then."
+    else:
+        s "Thanks for helping [ch13_name] these past few days."
+        s "I'm sure she really appreciated your help."
+        mc "I haven't really done as much as her."
+        mc "She probably deserves most of the credit."
+        s "No way!"
+        s "Even if you didn't do anything, I'm sure she enjoyed your company."
+        s "Just having you around makes them happy, you know?"
+        mc "You think so?"
+        s "I know so."
+    s "Anyway, let's get on with it."
+    s "We have a long night ahead of us."
+    mc "That's right."
+    s "You can read this now."
     return
 
 label ch6_m_start:

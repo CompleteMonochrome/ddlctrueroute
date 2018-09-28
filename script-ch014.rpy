@@ -6693,7 +6693,7 @@ label ch14_exclusive_sayori:
     "It's not like she's actually going to win."
     "I'm just playing along."
     s 1bn "Hmm..."
-    if ((sayori_personality <= 0 and not sayori_confess) or (sayori_personality <= 1 and sayori_confess)) and s_appeal == 4:
+    if ((sayori_personality <= 0 and not sayori_confess) or (sayori_personality <= 1 and sayori_confess)) and s_appeal >= 4:
         s 1bl "How about when this is all over..."
         s "We go out somewhere, together."
         mc "Sure..."
