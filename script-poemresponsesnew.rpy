@@ -4012,6 +4012,52 @@ label ch14_m_start:
     "Monika hands me her poem."
     return
 
+label ch15_m_start:
+    if monika_type == 0:
+        m "Can you really believe all of this, [player]?"
+        mc "Believe all of what?"
+        m "It's all coming to an end."
+        m "Everything we've worked so hard for."
+        mc "You mean the preparations?"
+        mc "I suppose it is."
+        m "I've been making some of my own preparations too."
+        mc "Your own preparations?"
+        m "Yeah, you know..."
+        if ch13_name == "Monika":
+            m "Not including the ones we've been doing already."
+        else:
+            m "Not including the ones for Inauguration Day."
+        mc "What could you be preparing for?"
+        mc "The...thing, right?"
+        m "The thing?"
+        m "I assume you're talking about the danger."
+        mc "Yeah..."
+        mc "I figured you didn't really want to say it out loud."
+        m "It's okay."
+        m "At this point, all the people that should know, know about it."
+        m "You could tell Yuri and Natsuki if you really wanted to..."
+        m "I just don't think that's best for them."
+        m "They have enough to worry about."
+        mc "Yeah, you're probably right."
+        m "Anyway, let's see this poem of yours."
+        m "I'm sure whatever you wrote is great~"
+    elif monika_type == 1 and ch12_markov_agree:
+        m "The curtain is opening."
+        m "You know that?"
+        m "The fun part is just about to begin."
+        mc "The fun part?"
+        mc "You're talking about the play, right?"
+    else:
+
+    $ ch15poemwinner = sayarcpoemwinner[2].capitalize()
+    if sayarcpoemwinner[2] == "monika":
+        $ nextscene = "msay_" + sayarcpoemwinner[2] + "_" + str(eval(sayarcpoemwinner[2][0] + "_appealS"))
+    else:
+        $ nextscene = "msay_universal_" + str(eval(sayarcpoemwinner[2][0] + "_appealS"))
+    call expression nextscene
+
+    return
+
 label mnew_yuri_1:
     m 2a "Hmm..."
     m "Aha, if I couldn't tell from the handwriting..."
@@ -4578,4 +4624,10 @@ label msay_monika_2:
         "Did I do something?"
         "Where did this sudden outburst come from...?"
         m 2q "Whatever, forget I said anything."
+    return
+
+label msay_universal_3:
+    return
+
+label msay_monika_3:
     return

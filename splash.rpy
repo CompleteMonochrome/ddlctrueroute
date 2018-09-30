@@ -543,6 +543,8 @@ label after_load:
         $ ch14_votes = [0, 0, 0, 0, 0]
     if not hasattr(store,'ch14_overall_choice'):
         $ ch14_overall_choice = "Sayori"
+    if not hasattr(store,'ch15poemwinner'):
+        $ ch15poemwinner = "Sayori"
     if not hasattr(store,'cl_name'):
         $ cl_name = "Mysterious Clerk"
     if not hasattr(store, 'ch14_sayori_date_choice'):
