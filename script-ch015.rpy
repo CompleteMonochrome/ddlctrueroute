@@ -425,8 +425,10 @@ label ch15_main:
     s "Okay, everyone."
     s "We've wasted enough time."
     s "It's time to share our poems so we can end the meeting."
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch15_end:
+    show sayori 1a zorder 3 at f43
+    s "Alright, everybody!"
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
