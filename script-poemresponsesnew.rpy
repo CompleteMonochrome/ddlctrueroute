@@ -1378,7 +1378,7 @@ label ch15_s_end:
         s 2l "Oh, I wasn't--"
         s 2q "Ehehe, never mind."
         s "Thanks for sharing with me, [player]."
-    else if (sayori_confess and not sayori_dumped) or s_appeal >= 4 or ch14_sayori_date_choice:
+    elif (sayori_confess and not sayori_dumped) or s_appeal >= 4 or ch14_sayori_date_choice:
         call showpoem (poem_s10b)
         mc "Feeling drained, Sayori?"
         s 1n "Drained?"
