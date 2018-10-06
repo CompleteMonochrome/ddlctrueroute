@@ -184,39 +184,40 @@ label ch15_main:
     "The day is fast approaching too."
     "Sayori looks like she has something to say though..."
     "I better take my seat quickly."
-    show sayori 1a zorder 2 at t42
+    show sayori 4q zorder 2 at t42
     s "Alright, everybody is here."
     s "We have plenty to do tonight, so I'm going to make this quick."
-    s "After all, we have a festival to be ready for tomorrow."
-    show yuri 1a zorder 3 at f43
+    s 4a "After all, we have a festival to be ready for tomorrow."
+    show yuri 1f zorder 3 at f43
     y "I wouldn't call Inauguration Day a festival."
     y "It's more of a promotional day, to bring attention to some clubs."
     y "If it was a festival, the whole school would be participating."
-    show sayori zorder 3 at f42
+    show sayori 2l zorder 3 at f42
     show yuri zorder 2 at t43
     s "Y-Yeah, festival was probably the wrong word."
     s "I don't know where that came from."
-    show monika zorder 3 at f41
+    show monika 3a zorder 3 at f41
     show sayori zorder 2 at t42
     m "Speaking of Inauguration Day..."
     m "How are everyone's preparations going?"
-    m "I heard Natsuki was baking cupcakes?"
+    m 3b "I know what everyone else is doing but I'm not entirely sure what Natsuki ended up doing."
+    m 1b "I heard you ended up choosing to bake cupcakes, Natsuki."
     show monika zorder 2 at t41
-    show natsuki zorder 3 at f44
+    show natsuki 1c zorder 3 at f44
     n "You heard about that?"
-    n "If you really want to know, my preparations are going great."
+    n 2a "If you really want to know, my preparations are going great."
     n "I've already got a recipe in mind for what I'm going to do."
-    n "I'm going to bake them tonight so that they're fresh for tomorrow."
+    n 2d "I'm going to bake them tonight so that they're fresh for tomorrow."
     n "Actually, I baked some for you all to try..."
-    n "Only if you want to."
-    n "I'm not gonna force you to eat them but you're gonna be missing out!"
+    n 2s "Only if you want to."
+    n "I'm not gonna force you to eat them but you're gonna be missing out if you don't!"
     "Natsuki walks to the cupboard."
     "She pulls out a tray of cupcakes."
     "There's enough for two for everyone."
     "They all have a cute looking cat on them."
     "The designs are all different but still look similar to each other."
     # Dialogue for player here if you did preparations with her
-    n "Help yourselves."
+    n 2b "Help yourselves."
     show natsuki zorder 2 at t44
     "I'm the first to take a cupcake from the tray."
     "It looks and smells delicious."
@@ -227,118 +228,122 @@ label ch15_main:
     mc "Try one."
     "Everyone else begins to take one."
     "First Yuri, then Monika..."
+    show monika 1j
+    show sayori 2k
+    show yuri 3pc
+    show natsuki 1z
     "Natsuki takes one too and then smiles proudly."
     "At this point, everyone has taken one...except Sayori."
     "That's pretty unusual, especially for her."
     "Maybe she's just not hungry?"
-    show natsuki zorder 3 at f44
+    show natsuki 1c zorder 3 at f44
     n "Are you okay, Sayori?"
     n "I would have thought you'd be all over this."
-    n "Why don't you try one?"
+    n 2h "Why don't you try one?"
     show natsuki zorder 3 at f43
     show yuri zorder 2 at t44
     "Natsuki takes a cupcake off the tray and offers it to Sayori."
-    n "Here."
-    show sayori zorder 3 at f42
+    n 1d "Here."
+    show sayori 2d zorder 3 at f42
     show natsuki zorder 2 at t43
     s "Oh...yeah, everything's fine."
     "Sayori takes the cupcake from Natsuki."
     s "I was just thinking..."
     "She takes a small bite out of the cupcake."
-    s "It's really good, Natsuki!"
-    s "You did a great job with this."
-    show monika zorder 3 at f41
+    s 4q "It's really good, Natsuki!"
+    s 4r "You did a great job with this."
+    show monika 2b zorder 3 at f41
     show sayori zorder 2 at t42
     m "It tastes amazing."
     m "A lot better than your one from the first week."
-    m "Not to say that your one from the first week wasn't great too."
-    m "It's just a large improvement."
+    m 2n "Not to say that your one from the first week wasn't great too."
+    m 2e "It's just a large improvement."
     show monika zorder 2 at t41
-    show yuri zorder 3 at f44
+    show yuri 3pi zorder 3 at f44
     y "They're right."
     y "The taste is somehow more exquisite."
-    y "More sweet yet more refined..."
+    y 3pb "More sweet yet more refined..."
     y "How did you improve so much, Natsuki?"
-    show natsuki zorder 3 at f43
+    show natsuki 2c zorder 3 at f43
     show yuri zorder 2 at t44
     n "I don't know..."
     n "I guess it just sort of happened."
     n "It's a similar recipe to what I brought into the first week."
     n "But there was one difference, I guess."
     show natsuki zorder 2 at t43
-    show yuri zorder 3 at f44
+    show yuri 3pe zorder 3 at f44
     y "And what would that be?"
-    show natsuki zorder 3 at f43
+    show natsuki 4k zorder 3 at f43
     show yuri zorder 2 at t44
     n "I'm not sure how it works exactly."
     n "After everything we've been through, I guess I really wanted to try hard to make this the best cupcakes ever."
-    n "I put so much emotion into making these."
+    n 4q "I put so much emotion into making these."
     n "It doesn't make sense and it's kinda hard to explain..."
     n "But I just felt like I was doing things better."
-    show monika zorder 3 at f41
+    show monika 2c zorder 3 at f41
     show natsuki zorder 2 at t43
     m "You're saying putting your heart and soul into making cupcakes made it taste better?"
     m "I don't think that makes any sense..."
-    m "Are you sure you just didn't buy better ingredients or completely changed the recipe?"
+    m 4a "Are you sure you just didn't buy better ingredients or completely changed the recipe?"
     show monika zorder 2 at t41
-    show natsuki zorder 3 at f43
-    n "I don't know..."
+    show natsuki 4e zorder 3 at f43
+    n "I don't know...!"
     n "It might have been the ingredients."
-    n "But there was just this feeling I had."
-    show monika zorder 3 at f41
+    n 4t "But there was just this feeling I had."
+    show monika 1l zorder 3 at f41
     show natsuki zorder 2 at t43
     m "I just find it hard to comprehend how emotions could make your cupcakes taste better."
-    m "But if that's what it is, then I won't complain."
-    m "These are delicious after all."
+    m 1a "But if that's what it is, then I won't complain."
+    m 1b "These are delicious after all."
     show monika zorder 2 at t41
-    show sayori zorder 3 at f42
+    show sayori 1a zorder 3 at f42
     s "If that's all..."
     s "Then let's get on with the meeting."
     "Sayori puts the cupcake she was eating on the desk."
     "It's barely touched beyond her first bite."
     s "I'd like to talk about how tomorrow is going to work."
-    s "Since we won't really have any time to talk tomorrow since we'll be practicing."
+    s 1c "Since we won't really have any time to talk tomorrow since we'll be practicing."
     show sayori zorder 2 at t42
     mc "How do you think it's going to go tomorrow, Sayori?"
     mc "We really don't have that much time to rehearse."
     mc "Especially since you're still writing the script."
     mc "And even if we had a week, none of us are really actors."
-    show sayori zorder 3 at f42
+    show sayori 1d zorder 3 at f42
     s "It's hard to say."
     s "I can't really tell how tomorrow is going to be at all."
-    s "Anything could happen."
+    s 1b "Anything could happen."
     s "I guess it's up to us to decide just how well it goes."
     s "If it's a terrible mess or an exceptional debut for the club."
-    s "Either way, I have a feeling it's going to be something people will be taking about for a while."
+    s 3a "Either way, I have a feeling it's going to be something people will be taking about for a while."
     show sayori zorder 2 at t42
-    show natsuki zorder 3 at f43
+    show natsuki 4c zorder 3 at f43
     n "I wonder what all the other clubs are gonna be doing."
     n "It's too bad we won't really have any time to look at it."
     n "Since we're going to be so busy with our own preparations."
     show natsuki zorder 2 at t43
-    show yuri zorder 3 at f44
+    show yuri 2pf zorder 3 at f44
     y "It feels like we're really underprepared for this."
     y "We only started preparing for this a couple of days ago..."
-    y "But at the same time, I don't have any worries for our preparations."
+    y 2ph "But at the same time, I don't have any worries for our preparations."
     y "It's strange."
-    show sayori zorder 3 at f42
+    show sayori 3d zorder 3 at f42
     show yuri zorder 2 at t44
     s "No matter what happens, at least we'll have fun."
     s "That's the main thing."
-    s "Even if we all mess up, if we can look back and laugh at it then it's all worth it."
+    s 3q "Even if we all mess up, if we can look back and laugh at it then it's all worth it."
     s "Whether or not people join our club isn't what's important."
     s "What's important is that we did it together."
-    show monika zorder 3 at f41
+    show monika 1e zorder 3 at f41
     show sayori zorder 2 at t42
     m "Well said, Sayori."
     m "Being together tomorrow is going to be really important."
-    m "Speaking of which, have you got any idea when you're going to have the script done?"
+    m 1c "Speaking of which, have you got any idea when you're going to have the script done?"
     show monika zorder 2 at t41
-    show sayori zorder 3 at f42
+    show sayori 1c zorder 3 at f42
     s "It's almost finished."
     s "I wrote most of it last night."
     s "I'm just finding it a bit difficult putting all the stage directions."
-    s "But don't worry! I'll have the script done when I get home."
+    s 1a "But don't worry! I'll have the script done when I get home."
     show sayori zorder 2 at t42
     if ch13_name == "Sayori":
         mc "I'm just amazed at how fast you write them, Sayori."
@@ -348,87 +353,90 @@ label ch15_main:
         mc "Have you really written that much already?"
         mc "I'm not doubting your abilities..."
         mc "I just find it really hard to believe you've gotten that much done."
-    show sayori zorder 3 at f42
+    show sayori 1l zorder 3 at f42
     s "Ehehe, I guess you could say the literature club has really awakened something in me."
     s "All of these things I couldn't do before I was a part of this seem so easy now."
     s "Like I could just snap my fingers and learn something new instantly."
-    s "Hey, Monika..."
+    s 1d "Hey, Monika..."
     "Sayori looks at Monika."
     s "The grand piano should be delivered to the school early tomorrow."
     s "The principal already knows about it and he already agreed to keep it somewhere safe."
     s "So if you want to practice, let him know that I let you use it."
-    show monika zorder 3 at f41
+    show monika 1d zorder 3 at f41
     show sayori zorder 2 at t42
-    m "Wow, that's very thoughtful of you."
+    m "Wow...that's very thoughtful of you."
     m "I don't know what to say..."
-    m "I might actually arrive early just to get a feel for it."
+    m 1a "I might actually arrive early just to get a feel for it."
+    m "Get used to how it handles and all that."
     m "I appreciate it, Sayori."
     show monika zorder 2 at t41
-    show sayori zorder 3 at f42
+    show sayori 1a zorder 3 at f42
     s "I'm sure whatever you have planned is going to sound great, Monika."
     "Sayori turns to Yuri and Natsuki."
     if ch13_name == "Yuri" or ch13_name == "Natsuki":
-        s "I hope the supplies I got you three were enough."
+        s 1b "I hope the supplies I got you three were enough."
     else:
-        s "I hope the supplies I got you two were enough."
+        s 1b "I hope the supplies I got you two were enough."
     s "If you're missing something, let me know."
     s "I'll try to get them to you early tonight."
-    s "I don't want you to mess up because of me."
+    s 1d "I don't want you to mess up because of me."
     show sayori zorder 2 at t42
-    show yuri zorder 3 at f43
+    show yuri 1q zorder 3 at f43
     y "You've done more than enough, Sayori."
     y "I wasn't even expecting you to do that in the first place."
-    y "What you've done for all of us shows you have a big heart."
+    y "I don't want to take advantage of your kindness more than I already have."
+    y 3ps "What you've done for all of us shows you have a big heart."
     y "And really care about the club."
     show yuri zorder 2 at t43
-    show natsuki zorder 3 at f44
+    show natsuki 2d zorder 3 at f44
     n "Yeah, when you came over yesterday..."
     n "It was like a miracle happened."
-    n "I don't know where I'd be with you."
+    n 2a "I don't know where I'd be with you."
     n "You're doing a really good job of being the president..."
     n "This club definitely wouldn't be where it is today without you."
     show natsuki zorder 2 at t44
     mc "As much as I hate to admit it..."
     mc "I'm glad you brought me here."
     mc "I didn't think you could run a club so well."
-    show monika zorder 3 at f41
+    show monika 2e zorder 3 at f41
     m "Yeah..."
     m "It's almost a shame it's all ending soon."
     m "It feels like a waste."
     show monika zorder 2 at t41
-    show yuri zorder 3 at f43
+    show yuri 3pf zorder 3 at f43
     y "All ending soon?"
     y "What do you mean?"
     y "The club feels like it's as strong as it's ever been."
-    y "There's no way it's all just going to end..."
+    y 3pg "There's no way it's all just going to end..."
     y "...Right?"
-    show sayori zorder 3 at f42
+    show sayori 1k zorder 3 at f42
     show yuri zorder 2 at t43
     s "...Right."
+    show sayori 1o
     "Sayori looks like she has a sudden realization."
-    s "Monika, what do you mean it's a waste?"
+    s 2l "Monika, what do you mean it's a waste?"
     s "T-There's nothing ending..."
-    show monika zorder 3 at f41
+    show monika 2l zorder 3 at f41
     show sayori zorder 2 at t42
     m "I just meant that this whole play feels like an ending."
-    m "Like a last hurrah for the club."
+    m 2e "Like a last hurrah for the club for the original five members."
     m "Though obviously that's not the case...!"
     m "There's going to be a lot to do for the new members in the club."
     show monika zorder 2 at t41
-    show natsuki zorder 3 at f43
+    show natsuki 2e zorder 3 at f43
     n "Sayori wouldn't just end the club."
     n "And she wouldn't leave it either."
-    n "She clearly cares about us a lot."
+    n 2g "She clearly cares about us a lot."
     n "Leaving us now would be incredibly--"
-    show sayori zorder 3 at f42
+    show sayori 2g zorder 3 at f42
     show natsuki zorder 2 at t43
     s "Okay, everyone."
     s "We've wasted enough time."
-    s "It's time to share our poems so we can end the meeting."
+    s 2h "It's time to share our poems so we can end the meeting."
     return
 
 label ch15_end:
-    show sayori 1a zorder 3 at f43
+    show sayori 4d zorder 3 at f43
     s "Alright, everybody!"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return

@@ -2167,7 +2167,7 @@ I can't
 
 The knight of the night
 Warrior of the night
-Defeating those who defy the night,
+Slaughtering those who defy the night,
 Here rides
 
     The once white knight."""
