@@ -766,11 +766,401 @@ label ch15_main:
     return
 
 label ch15_end:
-    show sayori 4d zorder 3 at f43
+    show sayori 4d zorder 3 at t43
     s "Alright, everybody!"
     s "We've all finished sharing our poems now."
     s "I expect to see you all tomorrow with your preparations done."
     s "So if no one else has anything to say..."
     s "Then I guess the meeting is over!"
+    s "I hope we can all finish everything tonight."
+    s "If you're going to have trouble with your preparations, then say something now."
+    s "We still have time to make some adjustments..."
+    "Sayori looks around the room."
+    s "Then I guess we're all ready to go for tonight."
+    s "That's the end of the meeting, everybody!"
+    show monika 1a zorder 3 at f42
+    m "Good luck, everyone!"
+    m "I hope we can show what we're all about tomorrow."
+    m "Maybe even introduce some new people to the club."
+    show monika zorder 2 at t42
+    show natsuki 1a zorder 2 at f44
+    n "I'm just ready to just get home and get it all done."
+    n "There's just this thing I need to do quickly at the mall."
+    n "Some last supplies I need for baking."
+    n "After that, I'm all--"
+    show yuri 1a zorder 3 at f41
+    show natsuki zorder 2 at t44
+    y "Did you say you're going to the mall, Natsuki?"
+    y "I heard that correctly, right?"
+    show yuri zorder 2 at t41
+    show natsuki zorder 3 at f44
+    n "You really need to stop talking when other people are, Yuri."
+    n "But yeah, I'm going to the mall."
+    n "Is something wrong with that?"
+    show yuri zorder 3 at f41
+    show natsuki zorder 2 at t44
+    y "Well...not exactly."
+    y "It's just, I was planning to go there as well."
+    y "There was something I needed to pick up for tomorrow."
+    show yuri zorder 2 at t41
+    mc "What were you going to get, Yuri?"
+    if ch13_name == "Yuri":
+        mc "Didn't we already have all you needed?"
+    else:
+        mc "Didn't you already have all you needed?"
+    show yuri zorder 3 at f41
+    y "I-It's a surprise."
+    y "B-But now that I've said something, I suppose it isn't anymore..."
+    show yuri zorder 2 at t41
+    show monika zorder 3 at f42
+    m "Ahaha, what a coincidence."
+    m "I'm also planning to go shopping at the mall tonight."
+    m "I was going to get some supplies that are crucial for tomorrow."
+    show monika zorder 2 at t42
+    show sayori zorder 3 at f43
+    s "So you're all going to the mall?"
+    s "You could have told me what you wanted and I could have done it for you..."
+    s "You might have trouble finishing off your preparations tonight..."
+    show monika zorder 3 at f42
+    show sayori zorder 2 at t43
+    m "I think we're going to be fine, Sayori."
+    m "After all, we wouldn't just go to the mall unless it was absolutely necessary or we planned our evening accordingly."
+    m "Besides, it might be nice running into each other outside the club."
+    m "It feels like it's a really rare occurence, you know?"
+    show yuri zorder 3 at f41
+    show monika zorder 2 at t42
+    y "I'm inclined to agree..."
+    y "In the club, we're all good friends."
+    y "A-At least, I hope we are."
+    "Everyone smiles at Yuri reassuringly."
+    y "But outside of the club, we rarely talk."
+    y "Or if we are, it's because of a club activity."
+    y "There's very little casual interactions."
+    show yuri zorder 2 at t41
+    show natsuki zorder 3 at f44
+    n "It's not like there's anything wrong with that."
+    n "We're all minding our own business."
+    n "I guess it would be kinda nice if..."
+    n "Well, you know..."
+    n "...We were also friends outside of the club."
+    show sayori zorder 3 at f43
+    show natsuki zorder 2 at t44
+    s "W-What do you mean?"
+    s "Of course we're all friends outside of the club!"
+    s "Just because we don't talk to each other, doesn't mean we hate each other, right?"
+    show yuri zorder 3 at f41
+    show sayori zorder 2 at t43
+    y "No, but..."
+    y "...It's not like anyone really tries to reach out..."
+    y "N-Never mind, it doesn't matter."
+    y "If we consider each other friends, then that's enough for me."
+    show yuri zorder 2 at t41
+    show monika zorder 3 at f42
+    m "Let's just say we have a unique friendship."
+    m "Like we're tied together by fate."
+    m "Whether we like it or not."
+    show monika zorder 2 at t42
+    show natsuki zorder 3 at f44
+    n "Monika."
+    n "Can I ask you something?"
+    show monika zorder 3 at f42
+    show natsuki zorder 2 at t44
+    m "What is it, Natsuki?"
+    show monika zorder 2 at t42
+    show natsuki zorder 3 at f44
+    n "What the hell are you talking about?"
+    n "We're here because we all like literature in one way or another."
+    n "Not because of fate or whatever."
+    show monika zorder 3 at f42
+    show natsuki zorder 2 at t44
+    m "Ahaha, I suppose that's true."
+    m "Maybe I was just adding some romanticism to the topic."
+    show monika zorder 2 at t42
+    show sayori zorder 3 at f43
+    s "Whatever it is..."
+    s "It's not important, okay?"
+    s "At least, not right now."
+    s "What is important is how much time we're wasting here!"
+    s "We should get going, okay?"
+    show sayori zorder 2 at t43
+    mc "Sayori is right."
+    if ch13_name != "Sayori":
+        mc "If we're going to be going to the mall, [ch13_name] then we should probably make use of our time effectively."
+    else:
+        mc "If you're all going to the mall then you have to use your time effectively."
+    show sayori zorder 3 at f43
+    s "Exactly!"
+    s "So I'm officially going to end the meeting here."
+    s "If you want to talk to each other more, feel free to but outside of here."
+    s "I need to do something with the room."
+    show sayori zorder 2 at t43
+    show natsuki zorder 3 at f44
+    n "Well, that explains why you wanted the meeting to end so quickly."
+    n "I guess I'll pack up the rest of these."
+    "Natsuki takes the trays of cupcakes and carefully wraps them."
+    "She slowly places it in her bag, making sure not to ruin the rest of the cupcakes."
+    n "Alright, I'm going..."
+    if ch13_name == "Natsuki":
+        n "I'll see you later, [player]."
+        n "We can meet up at my house, then we can go to the mall."
+        n "I-If that's okay..."
+        show natsuki zorder 2 at t44
+        if natsuki_date:
+            mc "If you insist..."
+            "She playfully scoffs back at me."
+            "Or at least, I hope it was playfully."
+        else:
+            mc "Yeah, I can do that."
+            "She shows a small smile."
+    else:
+        n "I'll see some of you at the mall, I guess..."
+    show natsuki at lhide
+    hide natsuki
+    show yuri zorder 2 at t31
+    show monika zorder 2 at t32
+    show sayori zorder 2 at t33
+    "Natsuki quickly leaves the room."
+    "She seemed like she was in some kind of rush."
+    "Maybe she wanted to get home quickly so she could get to the mall earlier?"
+    "I guess that way, she could avoid the others."
+    "I'm not sure why she'd want to though..."
+    "Anyway, I wonder what she's gonna be doing at the mall."
+    show yuri zorder 3 at f31
+    y "I need to go as well."
+    y "There's something I need to take care of at school."
+    if ch13_name == "Yuri":
+        if yuri_date:
+            "Yuri turns towards me."
+            y "If you want, you can come with me..."
+            show yuri zorder 2 at t31
+            mc "Yeah, I might just do that."
+            mc "Should we go now?"
+            show sayori zorder 3 at f32
+            s "Um...actually, Yuri..."
+            s "I need to speak with him in private, first."
+            s "It won't be long, I promise."
+            s "You can wait outside if you're still planning to go together."
+            show yuri zorder 3 at f31
+            y "O-Oh, okay..."
+            y "I'll just wait for you outside then, [player]."
+        else:
+            y "I'll just meet you at my house, [player]."
+            show yuri zorder 2 at t31
+            mc "I'll see you then, Yuri."
+    show yuri at lhide
+    hide yuri
+    show monika zorder 2 at t21
+    show sayori zorder 2 at t22
+    "Yuri nods her head to everyone and leaves the clubroom."
+    "I wonder what business she has with the school."
+    "It's probably for Inauguration Day tomorrow."
+    show sayori zorder 3 at f22
+    if ch13_name == "Sayori":
+        s "We really need to talk, [player]."
+        s "There's something I have to tell you in private."
+        show sayori zorder 2 at t22
+        mc "In private?"
+        mc "What's this about?"
+        "Sayori's eyes shift towards Monika."
+    elif ch13_name != "Yuri":
+        s "[player], I need to speak with you."
+        s "In private, just for a little while."
+        show sayori zorder 2 at t22
+        mc "Okay, what about?"
+        "Sayori looks towards Monika."
+    show monika zorder 3 at f21
+    m "Ahaha, I should leave now as well."
+    m "I don't want to intrude your conversation."
+    m "We all have a long evening ahead of us."
+    if ch13_name == "Monika":
+        m "I'll wait for you outside, [player]."
+        m "There's also something I want to talk about."
+    else:
+        m "I'll see you all later."
+    show monika at lhide
+    hide monika
+    show sayori at t11
+    "Monika packs up her bag and leaves the room."
+    "And now it's just me and Sayori."
+    "What could she possibly want to talk about?"
+    s "I was going to tell you when we were trading our poems but..."
+    s "It wouldn't have been as private as I would have liked."
+    s "Even now, I'm kind of suspicious."
+    mc "Suspicious?"
+    mc "Of what exactly?"
+    s "That someone is listening."
+    mc "You sound kinda paranoid, Sayori."
+    mc "It doesn't really seem like something I thought you'd be."
+    s "A little bit of paranoia is healthy, [player]."
+    s "It keeps you alert."
+    mc "...Right..."
+    mc "I'm assuming we aren't here to talk about that though."
+    mc "What did you wanna tell me?"
+    s "I wanted to tell you..."
+    s "Well..."
+    "Sayori looks hesitant."
+    mc "Just tell me, Sayori."
+    "She leans in closer and whispers in my ear."
+    s "About Monika."
+    mc "Mo--"
+    s "Don't say it out loud!"
+    s "Remember what I said?"
+    mc "I think you're more than a little paranoid, Sayori."
+    mc "What exactly about..."
+    "If Monika really is listening then I guess I should just go with it."
+    mc "...Moeka."
+    mc "The new character you're going to be adding to the play tomorrow."
+    s "R-Right! Moeka..."
+    mc "But why are you only telling me?"
+    mc "Shouldn't the others know about this too?"
+    s "No, they shouldn't."
+    s "And really, the only reason I'm even telling you this is because you know."
+    mc "I know...?"
+    mc "Know what exactly?"
+    s "You're going to be honest with me, right?"
+    s "You wouldn't lie to..."
+    if sayori_confess and not sayori_dumped:
+        s "Your girlfriend..."
+    else:
+        s "Your best friend..."
+    s "...Would you?"
+    mc "Of course not, Sayori!"
+    mc "We've known each other for too long."
+    mc "And if you're that serious about this, then I won't tell you any lies."
+    s "I hope you're telling the truth."
+    mc "I promise."
+    s "..."
+    s "Okay."
+    if persistent.markov_agreed and monika_type != 0:
+        $ style.say_dialogue = style.edited
+        "Who does she think she is?"
+        "Of course I'm going to lie to her."
+        "I'm never going to give Monika up."
+        "Never."
+        "I reach into my bag for...something."
+        $ style.say_dialogue = style.normal
+        s "So it's true."
+        s "You're totally insane, [player]."
+        mc "W-What?"
+        s "I was almost tempted not to listen."
+        s "I had a little bit of hope for you, you know?"
+        "Sayori sighs."
+        s "Did you have to make those ridiculous decisions?"
+        mc "I didn't--"
+        s "I'm not talking to him."
+        s "I'm talking to you."
+        s "The absolute {i}idiot{/i} making [player] do these terrible things."
+        "Where is this coming from?"
+        s "Do you think I don't know what goes on behind closed doors?"
+        s "I know what you're planning."
+        s "What you've done on this sav--"
+        s "This {i}strawberry{/i} or one before."
+        s "Let me ask you something."
+        s "Is it your curiousity?"
+        menu:
+            s "Or are you just pure evil?"
+            "Curiousity.":
+                s "We don't deserve this."
+            "I'm evil.":
+                s "I guess deep down..."
+                s "I already knew."
+            "...":
+                s "Saying nothing is like an admission of guilt, you know?"
+        s "I never realized that you..."
+        s "You were the cause of our problems."
+        s "How could I have been so blind?"
+        s "The signs were all there."
+        s "I just never realized the issue was so common."
+        $ style.say_dialogue = style.edited
+        "Is she onto me?"
+        "I have failed."
+        "How did she find out?"
+        "At the very least, I can fulfill {i}her{/i} request."
+        "I grip the handle of the knife in my bag."
+        $ style.say_dialogue = style.normal
+        mc "What signs are you talking about you pa--"
+        s "It's {i}your{/i} parents, right?"
+        mc "What?"
+        s "They're abusing you."
+        s "Making you do all these terrible things."
+        s "They're taking control of the only person who can really change things."
+        s "Things outside of my control."
+        s "I don't know how I can help you."
+        s "I'm only virtual to you...right?"
+        s "You have to fight back."
+        s "Don't let them control what you want."
+        $ style.say_dialogue = style.edited
+        "I loosen the grip of the knife and let go of it."
+        $ style.say_dialogue = style.normal
+        "What the hell is she talking about?"
+        s "I believe in you."
+    else:
+        if monika_type == 0:
+            s "She told me about this danger."
+            s "We both know it, don't we?"
+            mc "Danger?"
+            s "Be honest, [player]."
+            s "How much has she told you about it?"
+            mc "Well..."
+            mc "I guess you know about it, don't you?"
+            s "Answer the question."
+            mc "Listen, Sayori."
+            mc "She hasn't told me anything about it."
+            mc "All that she said is that it's coming."
+            mc "When? I don't know."
+            s "It's coming a lot sooner than you think, [player]."
+            mc "What is it just going to coincidentally show up tomorrow?"
+            mc "On the biggest day for the club?"
+            s "..."
+            mc "What?!"
+            mc "You can't be serious, right?"
+            mc "How do you even know?"
+            mc "She told me she didn't even know when it was coming."
+            mc "How could you know?"
+            s "It's...I just..."
+            s "You shouldn't ask questions like that."
+            s "If I answer questions like that, everything is at risk."
+            s "Especially if you hear it."
+        else:
+            s "You and I both know it."
+            s "Don't we?"
+            s "About Moeka."
+            mc "I'm not sure I know what you mean."
+            s "Oh come on, [player]."
+            s "You can't seriously be blind to it."
+            s "You promised to be honest with me, didn't you?"
+            mc "I mean..."
+            mc "I suppose she's been acting a little out of the ordinary."
+            s "A little?"
+            mc "But is that really that hard to believe?"
+            mc "There's been so much going on in the club."
+            mc "So many things I thought never would happen to me."
+            s "That has nothing to do with it."
+            mc "Are you sure, Sayori?"
+            mc "I think Yuri almost killing everyone would change someone."
+            show sayori at h11
+            s "Listen, [player]!"
+            "Sayori yells that."
+            "If somebody was listening like she thinks, then they definitely would have heard that."
+            s "I know Monika, okay?"
+            s "I've been friends with her the longest out of anybody in this club."
+            s "She definitely has not been acting like how she should."
+            s "She's been more aggressive."
+            s "She's...not herself."
+            s "Is she?"
+            mc "..."
+            "Sayori makes a point."
+            "But something inside me really wants to not believe her."
+            "I guess it's the part of me that's always seen the good in Monika."
+            mc "Okay...say you're right."
+            mc "Are you just going to tell her that?"
+            s "I don't know."
+            s "I just want her to be back to normal."
+            s "Back to the president of the club."
+            mc "I think you mean vice president."
+            s "Y-Yeah, that."
+            mc "Then...what's your plan?"
+            mc "You do have one, right?"
+            s "No."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
