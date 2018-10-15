@@ -784,7 +784,7 @@ label ch15_end:
     m "Maybe even introduce some new people to the club."
     show monika zorder 2 at t42
     show natsuki 1a zorder 2 at f44
-    n "I'm just ready to just get home and get it all done."
+    n "I don't know about you guys but I'm ready to get home and finish it all."
     n "There's just this thing I need to do quickly at the mall."
     n "Some last supplies I need for baking."
     n "After that, I'm all--"
@@ -834,7 +834,7 @@ label ch15_end:
     y "A-At least, I hope we are."
     "Everyone smiles at Yuri reassuringly."
     y "But outside of the club, we rarely talk."
-    y "Or if we are, it's because of a club activity."
+    y "Or if we do, it's because of a club activity."
     y "There's very little casual interactions."
     show yuri zorder 2 at t41
     show natsuki zorder 3 at f44
@@ -885,7 +885,7 @@ label ch15_end:
     show sayori zorder 2 at t43
     mc "Sayori is right."
     if ch13_name != "Sayori":
-        mc "If we're going to be going to the mall, [ch13_name] then we should probably make use of our time effectively."
+        mc "[ch13_name], if we're going to the mall, then we should probably make use of our time effectively."
     else:
         mc "If you're all going to the mall then you have to use your time effectively."
     show sayori zorder 3 at f43
@@ -1066,11 +1066,13 @@ label ch15_end:
                 s "I already knew."
             "...":
                 s "Saying nothing is like an admission of guilt, you know?"
+        s "I'm sorry."
+        s "I might be overreacting."
+        s "It's just that..."
         s "I never realized that you..."
         s "You were the cause of our problems."
         s "How could I have been so blind?"
         s "The signs were all there."
-        s "I just never realized the issue was so common."
         $ style.say_dialogue = style.edited
         "Is she onto me?"
         "I have failed."
@@ -1079,16 +1081,27 @@ label ch15_end:
         "I grip the handle of the knife in my bag."
         $ style.say_dialogue = style.normal
         mc "What signs are you talking about you pa--"
-        s "It's {i}your{/i} parents, right?"
-        mc "What?"
-        s "They're abusing you."
-        s "Making you do all these terrible things."
-        s "They're taking control of the only person who can really change things."
-        s "Things outside of my control."
-        s "I don't know how I can help you."
-        s "I'm only virtual to you...right?"
-        s "You have to fight back."
-        s "Don't let them control what you want."
+        if monika_type == 1:
+            s "It's {i}your{/i} parents, right?"
+            mc "What?"
+            s "They're abusing you."
+            s "Making you do all these terrible things."
+            s "They're taking control of the only person who can really change things."
+            s "Things outside of my control."
+            s "I don't know how I can help you."
+            s "I'm only virtual to you...right?"
+            s "You have to fight back."
+            s "Don't let them control what you want."
+        else:
+            s "She wasn't very specific about it."
+            s "But I know you're in pain."
+            s "I know there's something happening in the world out there."
+            s "Something that's making you do these terrible things."
+            s "I don't know if I can help you..."
+            s "After all, I'm only virtual to you, right?"
+            s "But you have to overcome it."
+            s "Please..."
+            s "For us..."
         $ style.say_dialogue = style.edited
         "I loosen the grip of the knife and let go of it."
         $ style.say_dialogue = style.normal
@@ -1121,6 +1134,13 @@ label ch15_end:
             s "You shouldn't ask questions like that."
             s "If I answer questions like that, everything is at risk."
             s "Especially if you hear it."
+            mc "Okay, Sayori."
+            mc "I still don't get it but I trust you."
+            mc "So what are you going to do?"
+            s "I don't know..."
+            s "I can't see what's going to happen."
+            s "At least, not yet."
+            mc "So you don't have a plan?"
         else:
             s "You and I both know it."
             s "Don't we?"
@@ -1142,7 +1162,7 @@ label ch15_end:
             s "Listen, [player]!"
             "Sayori yells that."
             "If somebody was listening like she thinks, then they definitely would have heard that."
-            s "I know Monika, okay?"
+            s "I know Moeka, okay?"
             s "I've been friends with her the longest out of anybody in this club."
             s "She definitely has not been acting like how she should."
             s "She's been more aggressive."
@@ -1162,5 +1182,149 @@ label ch15_end:
             mc "Then...what's your plan?"
             mc "You do have one, right?"
             s "No."
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
+            mc "Then what are we going to do?"
+            s "You're not going to do anything, [player]."
+            s "It's too risky, especially now."
+        s "I'm going to come up with a plan."
+        s "I just need to see how tomorrow plays out first."
+        s "But I can't do that until you've made up your mind for everything."
+        mc "My mind up for everything?"
+        mc "I don't know what you mean..."
+    s "[player], I know this is hard for you to understand."
+    s "You're probably thinking this all sounds crazy."
+    mc "What you're saying does sound a little far fetched..."
+    mc "And I can't say I understand most of it."
+    s "All I'm asking is that you hang in there a little longer, [player]."
+    s "Just another day, and this will all be over."
+    s "We can all be happy."
+    s "I just hope I can think of something..."
+    "I don't think I understand most of what Sayori just told me."
+    if persistent.markov_agreed:
+        $ style.say_dialogue = style.edited
+        "But I don't need to."
+        "I just have to avoid suspicion and make sure Monika succeeds."
+        $ style.say_dialogue = style.normal
+    elif monika_type == 0:
+        "I understand the danger but..."
+        "What does she mean that I need make up my mind?"
+    else:
+        "Monika has been acting differently but..."
+        "What does she mean that I need make up my mind?"
+    s "One thing to do now."
+    s "[player], I'm sorry."
+    mc "What do you mean?"
+    s "I'm just going to move them somewhere else."
+    s "You'll remember tomorrow, I promise."
+    mc "Wha-"
+    "Sayori puts her hand on my shoulder and closes her eyes."
+    mc "What are you doing?"
+    s "It's already done~"
+    "I don't {i}feel{/i} any different."
+    "What did she do...?"
+    if ch13_name == "Sayori":
+        s "Anyway, shall we go?"
+        s "We're not going to be going to the mall."
+        s "At least, I don't think we are."
+        mc "That's fine."
+        mc "I'm happy to just do the preparations with you."
+        mc "What am I going to do though?"
+        s "We'll figure that out on the way."
+    elif ch13_name == "Yuri" and yuri_date:
+        s "Anyway, I won't keep you here any longer."
+        s "Yuri is still waiting for you outside."
+        s "I really hope you two are happy together."
+        mc "Thanks, Sayori."
+        s "You make her really happy, you know."
+        s "I hope you two have a beautiful night."
+        "We're only going to be doing preparations."
+        "It felt like that just came out of nowhere."
+        mc "Thanks...?"
+        s "Ehehe~"
+        s "See you soon, [player]."
+    elif ch13_name == "Monika":
+        s "Monika's waiting for you outside, [player]."
+        s "Good luck tonight."
+        s "I hope you both get your preparations done."
+        mc "The same to you, Sayori."
+        s "Ehehe~"
+        s "Get going, [player]."
+        s "I'm sure the two of you have a lot to talk about."
+    else:
+        s "Anyway, you should probably get going."
+        s "You have a lot of stuff to do tonight with [ch13_name]."
+        mc "Yeah, you're right."
+        mc "I'll see you tomorrow, Sayori."
+        if natsuki_date:
+            s "I hope the two of you are happy."
+            s "When Natsuki is around you, she's so much more..."
+            s "...alive."
+            s "Have you noticed that?"
+            mc "Uhh..."
+            s "Ehehe, never mind."
+        else:
+            s "I hope you have fun."
+            s "Even if it's only preparations."
+            mc "I'm sure we'll find some way to make it fun."
+            mc "I still don't really know what we're doing at the mall though..."
+            s "Something exciting, I hope."
+            mc "I doubt it..."
+            s "Ehehe~"
+        s "I'll see you soon, [player]..."
+    call expression "ch15_exclusive_" + ch13_scene
+    return
+
+label ch15_exclusive_yuri:
+    if yuri_date:
+        scene bg hallway with wipeleft_scene
+        "Sayori is still in the clubroom."
+    else:
+        scene bg y_house with wipeleft_scene
+    return
+
+label ch15_exclusive_natsuki:
+    scene bg n_house_day with wipeleft_scene
+    return
+
+label ch15_exclusive_monika:
+    scene bg hallway with wipeleft_scene
+    "I leave Sayori in the clubroom by herself."
+    "I think she's just packing up her things then she'll leave."
+    "I wonder if Monika heard the conversation we had in there."
+    "I'd be surprised if she didn't."
+    "What {i}was{/i} the conversation we had in there?"
+    "Something about preparations?"
+    show monika 1a zorder 2 at t11
+    m "Hi, [player]~"
+    return
+
+label ch15_exclusive_sayori:
+    scene bg residential_day
+    show sayori 1a zorder 2 at t11
+    with wipeleft_scene
+    "Sayori and I make our way home."
+    "She's been really quiet this whole time."
+    "That's not like her at all."
+    "Maybe I should say something."
+    mc "So..."
+    mc "What am I going to be doing tonight?"
+    s "Huh?"
+    mc "I was just asking how I could help with the preparations tonight."
+    mc "I feel like there isn't really much for me to do."
+    s "Oh...right."
+    s "We'll come up with something when we get to my house."
+    mc "You said that we'd come up with something on the way back."
+    s "I did?"
+    mc "Sayori, is everything alright?"
+    mc "Like really alright?"
+    s "{i}(So it worked...you don't remember.){/i}"
+    mc "You know I'm here for you."
+    mc "I've probably said that before."
+    mc "And I'll keep saying it."
+    s "I'm fine, see?"
+    "Sayori beams."
+    s "I just have a lot on my mind."
+    s "With all these preparations."
+    mc "If you've got that much on your mind..."
+    mc "Then you can give me something to do, right?"
+    mc "I don't want you to do this alone."
     return
