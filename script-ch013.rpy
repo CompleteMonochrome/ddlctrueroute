@@ -1491,7 +1491,7 @@ label ch13_end:
         hide yuri
         show sayori zorder 2 at t21
         show monika zorder 2 at t22
-        "Yuri waves goodbye before exiting the club room."
+        "Yuri waves goodbye before exiting the clubroom."
         show sayori 1q zorder 3 at f21
         s "Bye, Yuri!"
         show sayori zorder 2 at t21

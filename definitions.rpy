@@ -2250,16 +2250,16 @@ image dadsuki 1o = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1
 image dadsuki 1p = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1p.png")
 
 # Momsuki
-image momsuki 1 = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1a.png")
-image momsuki 1a = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1a.png")
-image momsuki 1b = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1b.png")
-image momsuki 1c = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1c.png")
-image momsuki 1d = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1d.png")
-image momsuki 1e = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1e.png")
-image momsuki 1f = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1f.png")
-image momsuki 1g = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1g.png")
-image momsuki 1h = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1h.png")
-image momsuki 1i = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/1i.png")
+image momsuki 1 = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/a.png")
+image momsuki 1a = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/a.png")
+image momsuki 1b = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/b.png")
+image momsuki 1c = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/c.png")
+image momsuki 1d = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/d.png")
+image momsuki 1e = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/e.png")
+image momsuki 1f = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/f.png")
+image momsuki 1g = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/g.png")
+image momsuki 1h = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/h.png")
+image momsuki 1i = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/i.png")
 
 # Mysterious Clerk
 image mysteriousclerk 1a = im.Composite((960, 960), (0, 0), "mod_assets/images/mysteriousclerk/1l.png", (0, 0), "mod_assets/images/mysteriousclerk/1r.png", (0, 0), "mod_assets/images/mysteriousclerk/a.png")
@@ -2612,6 +2612,19 @@ image mysteriousclerk 7vd = im.Composite((960, 960), (0, 0), "mod_assets/images/
 image mysteriousclerk 7wd = im.Composite((960, 960), (0, 0), "mod_assets/images/mysteriousclerk/2r.png", (0, 0), "mod_assets/images/mysteriousclerk/4l.png", (0, 0), "mod_assets/images/mysteriousclerk/a2.png", (0, 0), "mod_assets/images/mysteriousclerk/db.png")
 image mysteriousclerk 7xd = im.Composite((960, 960), (0, 0), "mod_assets/images/mysteriousclerk/2r.png", (0, 0), "mod_assets/images/mysteriousclerk/4l.png", (0, 0), "mod_assets/images/mysteriousclerk/aB.png", (0, 0), "mod_assets/images/mysteriousclerk/db.png")
 
+# Ayami School
+image ayami 1 = im.Composite((960, 960), (0, 0), "mod_assets/images/ayami/1lr.png", (0, 0), "mod_assets/images/ayami/a.png")
+image ayami 1a = im.Composite((960, 960), (0, 0), "mod_assets/images/ayami/1lr.png", (0, 0), "mod_assets/images/ayami/a.png")
+image ayami 1b = im.Composite((960, 960), (0, 0), "mod_assets/images/ayami/1lr.png", (0, 0), "mod_assets/images/ayami/b.png")
+image ayami 1c = im.Composite((960, 960), (0, 0), "mod_assets/images/ayami/1lr.png", (0, 0), "mod_assets/images/ayami/c.png")
+image ayami 1d = im.Composite((960, 960), (0, 0), "mod_assets/images/ayami/1lr.png", (0, 0), "mod_assets/images/ayami/d.png")
+image ayami 1e = im.Composite((960, 960), (0, 0), "mod_assets/images/ayami/1lr.png", (0, 0), "mod_assets/images/ayami/e.png")
+image ayami 1f = im.Composite((960, 960), (0, 0), "mod_assets/images/ayami/1lr.png", (0, 0), "mod_assets/images/ayami/f.png")
+image ayami 1g = im.Composite((960, 960), (0, 0), "mod_assets/images/ayami/1lr.png", (0, 0), "mod_assets/images/ayami/g.png")
+image ayami 1h = im.Composite((960, 960), (0, 0), "mod_assets/images/ayami/1lr.png", (0, 0), "mod_assets/images/ayami/h.png")
+image ayami 1i = im.Composite((960, 960), (0, 0), "mod_assets/images/ayami/1lr.png", (0, 0), "mod_assets/images/ayami/i.png")
+image ayami 1j = im.Composite((960, 960), (0, 0), "mod_assets/images/ayami/1lr.png", (0, 0), "mod_assets/images/ayami/j.png")
+
 # Gray Images
 image bg residential_day_gray = im.Grayscale("bg/residential.png")
 image bg club_day_gray = im.Grayscale("bg/club.png")
@@ -2647,6 +2660,7 @@ define mo = DynamicCharacter('mo_name', image='momsuki', what_prefix='"', what_s
 define ny = Character('Nat & Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define e = Character('Everyone', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define cl = DynamicCharacter('cl_name', image='mysteriousclerk', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define a = DynamicCharacter('a_name', image='ayami', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
 define _dismiss_pause = config.developer
 
@@ -2685,6 +2699,7 @@ default y_name = "Yuri"
 default d_name = "Yasuhiro"
 default mo_name = "Haruki"
 default cl_name = "Mysterious Clerk"
+default a_name = "Ayami"
 
 
 

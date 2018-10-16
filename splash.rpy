@@ -553,6 +553,8 @@ label after_load:
         $ ch14_m_ask = False
     if not hasattr(store, 'ch14_m_tellsayori'):
         $ ch14_m_tellsayori = False
+    if not hasattr(store,'a_name'):
+        $ cl_name = "Ayami"
     if not hasattr(store, 'chapter_names'):
         $ chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","???","???","???","???","???"]
     if not hasattr(store, 'special_chapter'):
