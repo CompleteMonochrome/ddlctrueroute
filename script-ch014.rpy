@@ -4993,6 +4993,12 @@ label ch14_exclusive_natsuki:
             mc "Maybe it's from back when it wasn't destroyed."
             n 1bh "That could be it."
             n "But if that's the case...why is it down here?"
+            mc "Do they know about the portrait?"
+            mc "Maybe they found out."
+            n "I don't think they did..."
+            n "I hid it pretty well."
+            mc "If that's the case, then this is the perfect place to put it."
+            mc "We can cover it with a cloth or something."
         else:
             "There's no sign of Yasuhiro anywhere."
             "He might be in another room."
@@ -5026,6 +5032,10 @@ label ch14_exclusive_natsuki:
             mc "Maybe it's from back when it wasn't destroyed."
             n 1bh "That could be it."
             n "But if that's the case...why is it down here?"
+    else:
+        mc "You're right."
+        mc "Are we going to be moving on to the baking?"
+        mc "Or is there something else you haev to do first?"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 

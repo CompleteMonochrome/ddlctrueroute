@@ -1270,6 +1270,7 @@ label ch15_end:
             mc "I doubt it..."
             s "Ehehe~"
         s "I'll see you soon, [player]..."
+    $ a_name = "???"
     call expression "ch15_exclusive_" + ch13_scene
     return
 
@@ -1298,6 +1299,8 @@ label ch15_exclusive_yuri:
         "I had no idea where we were going."
         "We arrived in the library but I'm still not sure what we're doing here."
         "Or if we're just passing by."
+        "In fact, I didn't even know it was open at this time."
+        "Wouldn't the staff already be going home or away at this time?"
         mc "Yuri, where are we going?"
         mc "We've been through the half the school at this point."
         y "She keeps moving around."
@@ -1326,7 +1329,159 @@ label ch15_exclusive_yuri:
         y "She's in her junior year."
         y "But she wants to make her senior year memorable."
         y "So she's looking for a club to join."
-        # Make sure to rename Momsuki in mod_assets from 1a to just a
+        mc "I see...."
+        mc "So where is she?"
+        y "She should be right--"
+        show ayame 1h zorder 3 at f21
+        a "Hi!"
+        a "Yuri...right?"
+        show ayame zorder 2 at t21
+        "A tall girl taps Yuri on the back."
+        "I guess this is her?"
+        show yuri zorder 3 at f22
+        y "Ah!"
+        y "Y-Yes, that's right."
+        y "My name is Yuri."
+        y "We've been looking everywhere for you, Ayame."
+        "So this is her."
+        "Ayame, huh?"
+        $ a_name = "Ayame"
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        a "Sorry, did you say 'we'?"
+        a "Who's the other..."
+        "The tall girl turn towards me."
+        show ayame at hf21
+        a "Oh, I'm so sorry!"
+        a "I didn't notice you there."
+        s "Please accept my apologies!"
+        "Ayame bows her head."
+        show ayame zorder 2 at t21
+        mc "Uh...okay."
+        mc "Apology accepted."
+        "She seems really...eccentric."
+        "It's a wonder why she'd be so interested in something like literature."
+        "Not that that's a bad thing."
+        "The more, the merrier I suppose."
+        show ayame zorder 3 at f21
+        a "I'm Ayame, what's your name?"
+        show ayame zorder 2 at t21
+        mc "[player]."
+        show ayame zorder 3 at f21
+        a "Great to meet you!"
+        "She turns her attention back to Yuri."
+        a "Do you have it?"
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Of course."
+        "Yuri opens her bag and pulls out the notebook she had earlier."
+        "She neatly tears the page from the book and gives it to Ayame."
+        y "It's got everything you need to know."
+        y "If you have any questions, you should look for our president."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        a "Wonderful! Thank you so much."
+        "Ayame starts looking at what Yuri's written down."
+        "I can hear her mumbling under her breath."
+        a "One question..."
+        a "Who exactly is your president?"
+        a "Probably a dumb question, I know!"
+        a "I should know already."
+        show ayame zorder 2 at t21
+        mc "It's Sayori."
+        mc "You know, red hair, wears a bow..."
+        mc "Might ask you for spare change sometimes..."
+        show ayame zorder 3 at f21
+        a "Aha!"
+        a "I know exactly who that is."
+        a "Right."
+        "She folds the piece of paper and puts it into her pocket."
+        a "I really need to be going now."
+        a "I have some {i}extreme{/i} shopping to do tonight!"
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Shopping?"
+        y "If you don't mind me asking, what are you buying?"
+        y "Y-You don't have to tell me, if you don't want to."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        a "Actually, I'm glad you asked because I almost forgot to ask!"
+        a "I'll be buying some gifts for everyone in your club for tomorrow."
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "W-What? You don't need to do that."
+        y "We should be the ones gifting you..."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        a "Nonsense!"
+        a "I want to thank you all for accepting me as a member!"
+        a "So many members do you have?"
+        show ayame zorder 2 at t21
+        "I look towards Yuri."
+        "She gives me the kind of look that says \"I don't know what to do\" so I guess it's up to me."
+        mc "There's only five of us, including Yuri and I."
+        mc "Me, Sayori, Yuri, Natsuki and Monika."
+        show ayame zorder 3 at f21
+        a "Did you say Monika?"
+        a "I thought she was part of the debating club or something!"
+        a "I remember watching her debate last year..."
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "I don't think she's a part of it anymore."
+        y "Something about not liking the politics..."
+        y "That's why she left to form the literature club."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        a "Well, good for her!"
+        show ayame zorder 2 at t21
+        mc "You really don't need to get us anything."
+        mc "Joining the club is more than enough."
+        mc "Besides, you barely know us..."
+        show ayame zorder 3 at f21
+        a "The thing is, I want to!"
+        a "It means new friends, new experiences and something to look forward to everyday!"
+        "Ayame shows a wide smile."
+        a "Now that I think about it, that's a pretty small club..."
+        a "Though I suppose it's more cozy that way!"
+        a "Five members..."
+        a "I'll be more than happy to make it six!"
+        a "Hehe, it also means I can get you all more expensive gifts!"
+        show ayame zorder 2 at t21
+        "She seems pretty carefree."
+        "I think Sayori and her would get along really well."
+        mc "I think you and the president would become really good friends."
+        mc "Her personality seems a lot like yours."
+        show ayame zorder 3 at f21
+        a "That's great!"
+        a "I can't wait to meet her."
+        a "Anyway, I really have to get going."
+        a "I'll see you both tomorrow hopefully!"
+        show ayame at lhide
+        hide ayame
+        show yuri zorder 2 at t11
+        "She starts skipping out of the library."
+        mc "She seems...interesting."
+        y "She's quite lively, isn't she?"
+        mc "That's one way to describe it."
+        mc "It feels like she has her mind all over the place."
+        y "She's unique."
+        mc "Definitely."
+        mc "I wonder if she's actually serious about the literature club."
+        y "I would hope so."
+        y "I spent quite a bit of time on those notes."
+        mc "That's strange too."
+        mc "Who just asks for notes on the literature club?"
+        mc "It just seems so...weird."
+        y "There's nothing wrong with weird."
+        y "As long as she has a passion for literature, I'm all for accepting her into the club."
+        mc "Didn't you say she might bring her friends along too?"
+        mc "Where were they just now?"
+        y "I don't know."
+        y "Maybe they already left and she's trying to catch up with them."
+        y "What I do know is that we should probably get going."
+        mc "You're right, we still need to go to the mall."
+        y "And finish your share of the preparations too."
+        scene bg y_house with wipeleft_scene
     else:
         scene bg y_house with wipeleft_scene
     return
