@@ -205,6 +205,7 @@ image bg y_bedroom_kill = ConditionSwitch(
     "persistent.yuri_killing >= 100","mod_assets/images/bg/y_bedroom_b.png",
     "True", "mod_assets/images/bg/y_bedroom.png",
     )
+image bg y_corridor = "mod_assets/images/bg/y_corridor.png"
 image bg hospital = "mod_assets/images/bg/hospital.png"
 image bg hospital_room = "mod_assets/images/bg/hospital_room.png"
 image bg cafe = "mod_assets/images/bg/cafe.png"

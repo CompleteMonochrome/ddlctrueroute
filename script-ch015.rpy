@@ -1222,6 +1222,37 @@ label ch15_end:
     "I don't {i}feel{/i} any different."
     "What did she do...?"
     if ch13_name == "Sayori":
+        s "[player], can you help me clean up the room?"
+        s "Just start putting all the desks to where they should be."
+        mc "Oh...I guess I can do that."
+        s "I'll clean the floor."
+        s "The cupcakes Natsuki brought left a bunch of crumbs everywhere."
+        "Sayori somehow finds a vacuum in the closet."
+        "She plugs it into the wall socket."
+        s "I'm not blaming her or anything..."
+        s "I just don't want to leave this room worse than before we got here."
+        mc "That's pretty considerate of you."
+        s "You think so?"
+        mc "I never would have thought you were the type to do this kinda thing."
+        s "What's that supposed to mean?"
+        mc "I just meant that you used to be such a messy person!"
+        mc "Your room was a mess and I'd always be there to help you clean it up."
+        s "That was when we were younger, wasn't it?"
+        s "I'm not like that anymore..."
+        mc "Actually, it wasn't until recently."
+        mc "It was until you came out of depression, right?"
+        s "Huh?"
+        mc "That's right!"
+        mc "After you came out of depression, you started cleaning up your room."
+        mc "I remember that day."
+        s "You do?"
+        mc "Yeah, you--"
+        "Sayori turns on the vacuum."
+        "The sound is loud enough to drown out our conversation."
+        "I try yelling what I was trying to say to Sayori but she seems to ignore it."
+        "I guess she can't hear me."
+        "I continue to put all the desks back to where they were."
+        # More stuff here
         s "Anyway, shall we go?"
         s "We're not going to be going to the mall."
         s "At least, I don't think we are."
@@ -1278,7 +1309,8 @@ label ch15_exclusive_yuri:
     if yuri_date:
         scene bg hallway with wipeleft_scene
         "Sayori is still in the clubroom."
-        "Yuri is sitting on the floor, writing down notes."
+        "I think she's just cleaning up."
+        "Meanwhile Yuri is sitting on the floor, writing down notes."
         mc "Are you ready to go?"
         "Yuri puts her notebook in her bag and gets up."
         show yuri 1a zorder 2 at t11
@@ -1405,7 +1437,7 @@ label ch15_exclusive_yuri:
         y "Y-You don't have to tell me, if you don't want to."
         show ayame zorder 3 at f21
         show yuri zorder 2 at t22
-        a "Actually, I'm glad you asked because I almost forgot to ask!"
+        a "Actually, I'm glad you stopped me because I almost forgot to ask!"
         a "I'll be buying some gifts for everyone in your club for tomorrow."
         show ayame zorder 2 at t21
         show yuri zorder 3 at f22
@@ -1482,8 +1514,64 @@ label ch15_exclusive_yuri:
         mc "You're right, we still need to go to the mall."
         y "And finish your share of the preparations too."
         scene bg y_house with wipeleft_scene
+        "We both went home and decided to meet at Yuri's house."
+        "It's closer to the mall and we were going to go there together."
+        "I brought along the stuff I didn't get to finish last night."
+        "That way when we get back, we can finish them off."
     else:
         scene bg y_house with wipeleft_scene
+        "I get to Yuri's house, bringing the preparations I didn't finish off with me."
+        "We decided to meet up here because it's closer to the mall."
+        "After we finish whatever we're doing at the mall that she'll help me finish the preparations off tomorrow."
+    "She's already waiting at the door to her house."
+    show yuri 1ba zorder 2 at t11
+    y "Hello, [player]."
+    y "Just drop off what you brought here and we can go to the mall."
+    mc "Thanks again for helping me finish it off."
+    mc "I feel bad that I'm making you do more work when you've already done more than me."
+    y "It's not a problem at all."
+    y "Besides, it's better this way."
+    mc "It is?"
+    mc "In what way?"
+    y "W-Well..."
+    if yuri_date:
+        y "I get to spend more time with you."
+        y "That's always a good thing."
+        mc "The feeling is mutual."
+    else:
+        y "It means the decorations will look more universal."
+        y "So they aren't too different from each other."
+        mc "That makes sense."
+    y "Anyway, we should get going."
+    y "I'll wait for you out here to drop off your things inside."
+    y "Just leave them in the living room or near the door."
+    mc "Okay..."
+    mc "I'll go do that."
+    "Yuri steps away from the door and invites me into her house."
+    if ch7_name == "Yuri":
+        "I haven't really had a proper look at her home before."
+        "Sure, I've been here but..."
+        "Well, that wasn't exactly the best experience."
+    else:
+        "I wonder what the inside of her home is like."
+        "I don't really know what kind of stuff would be inside her house."
+        "I guess it's time to find out."
+    "I make my way inside."
+    scene bg y_corridor with wipeleft_scene
+    "I don't know what I expected from Yuri."
+    "It's just a normal house."
+    if ch7_name == "Yuri":
+        "Was it like this last time?"
+        "I don't really remember."
+    else:
+        "I guess because of how she was, I thought there would be something different about how she decorates her home."
+        "Especially since she's the type of person who likes doing decorations."
+    "I leave my bag near the entrance."
+    "I'm kinda tempted to explore her house a bit..."
+    "But that would be an invasion of privacy."
+    "And besides, she's waiting for me outside."
+    "I take one final look around before closing the door behind me."
+    scene bg mall_day with wipeleft_scene
     return
 
 label ch15_exclusive_natsuki:
@@ -1500,6 +1588,8 @@ label ch15_exclusive_monika:
     "Something about preparations?"
     show monika 1a zorder 2 at t11
     m "Hi, [player]~"
+    m "How was your conversation with Sayori?"
+
     return
 
 label ch15_exclusive_sayori:
@@ -1532,4 +1622,44 @@ label ch15_exclusive_sayori:
     mc "If you've got that much on your mind..."
     mc "Then you can give me something to do, right?"
     mc "I don't want you to do this alone."
+    mc "And I really do mean that."
+    mc "So you've got to help me so that I can help you."
+    s "Well, we're still doing the script, right?"
+    s "You can just say it aloud again and I can write it down."
+    mc "Does that actually work?"
+    s "It worked yesterday, didn't it?"
+    mc "I mean..."
+    mc "Do you actually need my help with that?"
+    s "Of course I do!"
+    s "Why do you ask?"
+    mc "I guess I just felt I wasn't really doing anything."
+    s "That's not true at all!"
+    s "You reading out aloud really sped things up."
+    s "If I had to do it myself, it would take {i}waaaaaaay{/i} longer."
+    mc "If you say so..."
+    mc "But what about after we finish?"
+    s "Do you really think we'll finish the book and still have time to do other stuff?"
+    mc "In the case that we do."
+    s "Hmm...I don't know."
+    s "Maybe you can help me with some planning for tomorrow."
+    mc "I can do that."
+    mc "I've helped you with your homework enough times after all."
+    s "Ehehe, you don't have to say it like that..."
+    return
+
+label ch15_mallshared:
+    "Who would have thought that I'd be at the mall with everyone from the club?"
+    if ch13_name != "Sayori":
+        "Well...almost everyone."
+    "I did not expect to be spending my evening like this."
+    "Not that I mind spending time with everyone."
+    "It just seems weird that we all arrived at the same time and that we're all here for preparations."
+    return
+
+label ch15_teaser:
+    scene bg library with dissolve_scene_full
+    show ayame 1h zorder 3 at t21
+    show yuri 3pa zorder 3 at f22
+    # show yuri 3pa zorder 2 at t22
+    y "If you have any questions, you should look for our president."
     return
