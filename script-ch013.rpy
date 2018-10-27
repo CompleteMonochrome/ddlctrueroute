@@ -1919,7 +1919,7 @@ label ch13_exclusive_natsuki:
                 if sayori_personality > 0:
                     $ sayori_personality -= 1
                 mc "Sayori, you can't be serious..."
-                mc "Of course I love you more than Yuri."
+                mc "Of course I love you more than Natsuki."
                 mc "And if me writing like Natsuki makes you uncomfortable..."
                 mc "Then--"
                 s 1c "Ah..."
@@ -7818,7 +7818,7 @@ label ch13_natsuki_outcomeshared_date:
         mc "It's like a pleasant surprise."
         n 2bb "I guess but..."
     else:
-        n 1bh "My dad isn't just going to listen you take it away from the house."
+        n 1bh "My dad isn't just going to let you take it away from the house."
         n "Just because it's broken doesn't mean he's gonna give it away."
         mc "Then we won't tell him."
         mc "He's busy cleaning after all."
@@ -7945,7 +7945,7 @@ label ch13_natsuki_outcomeshared_date:
     "There's garbled writing and drawings of {i}something{/i} all over it."
     "For some reason, just looking at it makes me feel sick."
     n 2bg "Well, we should move quickly."
-    n "I don't know how long it's going to clean downstairs."
+    n "I don't know how long it's going to take to clean downstairs."
     n "So the sooner we get out of here, the better."
     mc "Right."
     "Natsuki and I pick up the pieces and put them into the bag."
