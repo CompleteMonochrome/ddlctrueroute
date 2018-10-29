@@ -1331,7 +1331,7 @@ label ch5_mainc:
     m 1e "It's a promise."
     "I smile at Monika."
     "She really is passionate about her friends, isn't she?"
-    "Is what why she's so special to you?"
+    "Is that why she's so special to you?"
     "Ah, but I can only take wild guesses..."
     "If you can hear this..."
     "Goodbye."

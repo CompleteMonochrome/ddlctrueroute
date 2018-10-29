@@ -1770,13 +1770,17 @@ label ch15_exclusive_monika_together:
     scene bg residential_day
     show monika 1a zorder 2 at t11
     with wipeleft_scene
+    play music t2
     "We make our way to my house."
     "The walk is pretty quiet, neither of us try to really make small talk."
+    "I did try to talk to her before but she seemed to dodge my questions."
+    "I guess she's just not in the mood to talk right now."
     return
 
 label ch15_exclusive_monika_alone:
     $ ch15_m_together = False
     scene bg house with wipeleft_scene
+    play music t2
     "I make it home pretty quickly."
     "With the way Monika was moving, I kinda felt inspired to do the same."
     return
@@ -1785,9 +1789,12 @@ label ch15_exclusive_sayori:
     scene bg residential_day
     show sayori 1a zorder 2 at t11
     with wipeleft_scene
+    play music t2
     "Sayori and I make our way home."
     "She's been really quiet this whole time."
     "That's not like her at all."
+    "She's also been walking behind me, instead of beside me."
+    "And everytime I turn my head to look at her, she's just looking at the ground."
     "Maybe I should say something."
     mc "So..."
     mc "What am I going to be doing tonight?"
@@ -1834,6 +1841,51 @@ label ch15_exclusive_sayori:
     mc "I can do that."
     mc "I've helped you with your homework enough times after all."
     s "Ehehe, you don't have to say it like that..."
+    mc "It's true!"
+    s "Yeah..."
+    "After that conversation, Sayori is quiet again."
+    "The walk home is peaceful but it just doesn't feel right."
+    "Sayori is usually the one to make the conversations, even if they're meaningless."
+    "I guess I can deal with it for now though it is a bit unsettling."
+    scene bg house
+    show sayori 1a zorder 2 at t11
+    with wipeleft_scene
+    "Just before we arrive at my house, Sayori taps my shoulder."
+    s "[player], I'm actually gonna go ahead."
+    s "We'll just meet up at my house, okay?"
+    mc "Did something come up?"
+    s "You could say that."
+    s "It's just...I remembered something I need to do quickly."
+    mc "Well, if you say so."
+    s "I should be home by the time you get there."
+    mc "Alright, I'll see you then, Sayori."
+    s "Bye~"
+    show sayori at lhide
+    hide sayori
+    "Sayori smiles and waves at me before walking away."
+    "She doesn't seem to be going in the direction of her house."
+    "I guess she has to do something somewhere else?"
+    "Maybe one of the others asked her for a favor."
+    "It's none of my business though."
+    "Even so..."
+    "I should really find out what's going on with Sayori."
+    "She may not say it, but I just {i}know{/i} she's dealing with something more than she can handle."
+    "And I can't let her go through that again."
+    "The first time she almost took her own life."
+    "How could I have been so stupid back then?"
+    "It makes me angry just thinking about it."
+    "Thinking about how there's more I could have done."
+    "I have to remember how she was feeling back then."
+    "How I could have prevented it in the first place."
+    "I feel like I'm seeing the same signs now."
+    "But I just feel so...useless."
+    "There must be something I can do for her."
+    "Something I can do to ease the pain."
+    "Something I can do to convince her to let me help."
+    "But what?"
+    scene bg bedroom with wipeleft_scene
+    "I lay down on my bed."
+    "I just can't think of anything to get Sayori out of the state she's in."
     return
 
 label ch15_mallshared:
