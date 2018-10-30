@@ -5084,8 +5084,8 @@ label ch14_exclusive_natsuki:
             "I have to keep him out of this room, no matter what."
             "I stand at the entrance to the room from where Yasuhiro is."
             show dadsuki zorder 2 at t11
-            y "Oh, hello, [player]."
-            y "May I pass?"
+            d "Oh, hello, [player]."
+            d "May I pass?"
             mc "Sure, but can I ask you something first?"
     else:
         mc "You're right."

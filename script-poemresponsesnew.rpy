@@ -2107,7 +2107,7 @@ label ch15_m_end:
         m 2c "I didn't say anything."
         mc "I could have sworn I heard something but alright."
     else:
-        call showpoem (poem_m12, img="monika 1h")
+        call showpoem (poem_m12, img="monika 1schoolh")
         mc "Wow, this poem is pretty intense."
         mc "I wonder what you're trying to avert."
         mc "But wait, it has some abstract meaning, doesn't it?"

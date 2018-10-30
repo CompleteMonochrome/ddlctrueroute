@@ -1786,6 +1786,8 @@ label ch15_exclusive_monika_alone:
     return
 
 label ch15_exclusive_sayori:
+    $ persistent.ch15_sayori_chance = False
+    $ renpy.save_persistent()
     scene bg residential_day
     show sayori 1a zorder 2 at t11
     with wipeleft_scene
@@ -1803,6 +1805,20 @@ label ch15_exclusive_sayori:
     mc "I feel like there isn't really much for me to do."
     s "Oh...right."
     s "We'll come up with something when we get to my house."
+    s "Just save that talk for later.{nw}"
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    window hide(None)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.25)
+    stop sound
+    hide screen tear
+    window show(None)
+    s "Just save that talk for later.{fast}"
+    window auto
+    s "E-Eh? I didn't even mean it like that...!"
+    mc "What do you mean?"
+    s "N-Nothing."
+    mc "Anyway..."
     mc "You said that we'd come up with something on the way back."
     s "I did?"
     mc "Sayori, is everything alright?"
@@ -1851,13 +1867,66 @@ label ch15_exclusive_sayori:
     show sayori 1a zorder 2 at t11
     with wipeleft_scene
     "Just before we arrive at my house, Sayori taps my shoulder."
+    if persistent.ch15_sayori_chance:
+        "But for some reason, this sensation feels all too familiar."
+        "I get the feeling she's about to change her mind."
+        "That she wants to meet at her house instead."
     s "[player], I'm actually gonna go ahead."
     s "We'll just meet up at my house, okay?"
+    if persistent.ch15_sayori_chance:
+        "What the hell?"
+        "That feeling was right?"
+        "I should play this naturally, as if I don't know any better."
     mc "Did something come up?"
     s "You could say that."
     s "It's just...I remembered something I need to do quickly."
     mc "Well, if you say so."
     s "I should be home by the time you get there."
+    if persistent.ch15_sayori_chance:
+        "This is wrong."
+        "I have a bad feeling about this whole thing."
+        "I should go with her."
+        "I need to stay with her or things will go wrong."
+        "What am I thinking?"
+        "Sayori is more than capable of handling herself."
+        "But..."
+        menu:
+            "I'm still worried."
+            "Insist on going with her.":
+                if persistent.markov_agreed:
+                    $ style.say_dialogue = style.edited
+                    "I should leave her alone."
+                    "Things will be better that way."
+                    $ style.say_dialogue = style.normal
+                    "What am I saying?"
+                    "I want to help her so..."
+                    # Markov will give you another chance :)
+                    menu:
+                        "I need to go with her...don't I?"
+                        "Go with Sayori.":
+                            $ style.say_dialogue = style.edited
+                            "I..."
+                            "Have to..."
+                            $ style.say_dialogue = style.normal
+                            "Go with her."
+                            jump ch15_exclusive_sayori_together
+                        "Leave her be.":
+                            pass
+                else:
+                    "This bad feeling won't stop bugging me."
+                    "It's like I won't forgive myself if I don't go with her."
+                    "So I'm going to go with her."
+                    jump ch15_exclusive_sayori_together
+            "Leave her be.":
+                pass
+    if persistent.ch15_sayori_chance:
+        "I think I'm going crazy."
+        "She'll be fine, I know it."
+        "She can definitely take care of herself."
+        "But even so, I want to help her in another way."
+    # You had your chance you fool
+    $ persistent.ch15_sayori_chance = False
+    $ renpy.save_persistent()
     mc "Alright, I'll see you then, Sayori."
     s "Bye~"
     show sayori at lhide
@@ -1886,9 +1955,221 @@ label ch15_exclusive_sayori:
     scene bg bedroom with wipeleft_scene
     "I lay down on my bed."
     "I just can't think of anything to get Sayori out of the state she's in."
+    "She clearly needs help."
+    "Maybe a therapist or something."
+    "Who am I kidding?"
+    "I don't know any therapists."
+    "Or have that kind of money."
+    "But still, I have to do something."
+    if persistent.markov_agreed:
+        $ style.say_dialogue = style.edited
+        "I grab the necessary tools."
+        "This should do it."
+        "Either way, it's a problem solved."
+        $ style.say_dialogue = style.normal
+    else:
+        "I look around my room for something, anything that could possibly help Sayori."
+        "There's not much I can think of that could help her."
+        "But I spot something, something that could do it and take it."
+    "Will this be enough?"
+    "Sayori is in a really complicated state right now."
+    "Will taking this with me really help her?"
+    "Or will it just make things worse?"
+    "I have to take a chance, don't I?"
+    if sayori_confess and not sayori_dumped:
+        "She's my girlfriend."
+    else:
+        "She's my best friend."
+    "And I know what's best for her."
+    "This is the right thing to do."
+    "I know it."
+    "I make sure that I have everything I need and head towards Sayori's house."
+    "I just hope I can make a difference."
+    scene bg sayori_bedroom with wipeleft_scene
+    "The door to her house was already open."
+    "I decided to let myself in and go to her room to look for her."
+    "The door to her room was also open but..."
+    "She doesn't seem to be here."
+    mc "Sayori?"
+    mc "Where are you?"
+    "I wait for a response but there's nothing."
+    "Maybe she's not home."
+    "But then why were the doors open?"
+    "There's something going on here."
+    mc "Is anybody here?"
+    "Once again, there's no response."
+    "There's dozens of reasons going through my head for why this could be happening."
+    "She could be playing a prank on me."
+    "She could just be out of the house for a few minutes."
+    "She might not have come back yet."
+    "But in any case, why would she leave the front door open?"
+    "Sayori isn't the smartest person but even she knows better than that."
+    "If she isn't here right now, I should close her front door."
+    "She wouldn't want some person to just go into her home."
+    "..."
+    "Even though I literally just did that."
+    scene bg black with wipeleft_scene
+    $ persistent.ch15_sayori_chance = True
+    $ currentpos = get_pos()
+    $ renpy.save_persistent()
+    stop music fadeout 2.0
+    "I go downstairs and shut the door to her house."
+    "I look around her house again for any sign of her."
+    "Once again, there's no sign of her anywhere."
+    "Now that I think about it, all the doors downstairs are open too."
+    "And upstairs as well."
+    "Every single door in her house was open."
+    "There's no reason for that, is there?"
+    "I check the back of her house and as I expected, it's open."
+    "The other houses in the neighbourhood didn't have open doors."
+    "It was just Sayori."
+    "I'm getting worried."
+    "I take my phone out and dial her number."
+    "..."
+    "Voicemail."
+    "I don't usually hear her voicemail unless I call her early in the morning."
+    "It's a sing-song voicemail and it's kinda cute actually."
+    "She sings a song that we used to listen together as kids..."
+    "For some reason, it always left me feeling happy."
+    "Like it's an important part of my past."
+    "But that's not what's important here."
+    "I'm just wondering what in the world is going on here?"
+    "What happened to Sayori?"
+    "If only I could go back."
+    "If I forced myself to go with her."
+    "Before we arrived at my house."
+    "I dial Sayori's number again."
+    "Once again, there's nothing."
+    "I hear Sayori's sing song voicemail again but it's making me worried."
+    "Where could she be?"
+    call ch15_exclusive_sayori_alone
     return
 
-label ch15_mallshared:
+label ch15_exclusive_sayori_together:
+    $ ch15_s_together = True
+    # Wow.
+    if sayori_personality > 0:
+        $ sayori_personality -= 2
+        if sayori_personality < 0:
+            $ sayori_personality = 0
+    mc "Sayori, wait."
+    s "H-Huh?"
+    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
+    if not list(set(process_list).intersection(stream_list)):
+        if currentuser != "" and currentuser.lower() != player.lower():
+            s "[currentuser], what did you do?"
+            s "What have you done?!"
+    s "Why is this happening?"
+    s "Did you eat a strawberry?"
+    mc "What are you talking about?"
+    mc "No, I didn't eat a strawberry, Sayori."
+    mc "I'm just worried about you."
+    s "You really don't need to worry about me."
+    s "I can handle it myself."
+    mc "Handle what yourself?"
+    mc "You know what? I don't care."
+    mc "You have to let me come with you."
+    s "W-What?"
+    s "Why...?"
+    mc "Because I have this bad feeling that if I don't..."
+    mc "Something bad is going to happen to you."
+    s "..."
+    "She looks at me with a smile on her face."
+    s "You're not going to change your mind, are you?"
+    mc "Not today."
+    mc "Not when I know there's something I can do to help."
+    s "You're too much."
+    s "Really."
+    mc "Is that a bad thing?"
+    s "...No."
+    "Sayori sighs."
+    s "Okay, [player]."
+    s "You win."
+    s "You can come with me."
+    mc "Really? That's great."
+    mc "Thank you for this, Sayori."
+    s "I should be the one thanking you."
+    s "You cared enough to go back."
+    s "To try to change what was going to happen."
+    mc "I don't know what you mean."
+    s "It's nothing."
+    s "It's just..."
+    "Sayori looks at me and tears start filling her eyes."
+    mc "Sayo--"
+    "She wraps her arms around me and buries her face on my shirt."
+    "She tries saying something but I can't really make it out through the tears."
+    mc "It's okay."
+    mc "Everything is going to be okay."
+    "Once again, she tries to say something but her voice is muffled."
+    "We stay like this for a couple of minutes."
+    "She's just sniffing, not really saying anything."
+    "Suddenly, I have an idea."
+    "There's something in my room."
+    "Something that I just know will lift Sayori's mood."
+    return
+
+label ch15_exclusive_sayori_alone:
+    $ persistent.ch15_sayori_chance = False
+    $ ch15_s_together = False
+    $ renpy.save_persistent()
+    "She's not answering her phone."
+    "She's not in her home."
+    "This is terrible."
+    "I'm meant to be working on the preparations with her tonight."
+    "We were meant to do it together and I have no idea where she is."
+    "Should I call the police or something?"
+    "Or am I just overreacting here?"
+    "Maybe someone from the club knows where she is."
+    "If anyone would, it would be the president, Monika."
+    "I mean, vice president."
+    "I don't know why I keep getting the two of those confused."
+    "I guess President Monika just sounds more natural than President Sayori..."
+    "I get my phone out and dial Monika's number."
+    "I hope I'm not intruding her."
+    "It's just that I'm really worried about Sayori..."
+    "Monika picks up within seconds."
+    m "Hello, Monika speaking."
+    mc "Monika, it's me."
+    m "[player]? What's the call for?"
+    mc "I need to ask you something."
+    m "Ask me something?"
+    m "Well...alright, I suppose I can try to answer."
+    mc "It's about Sayori."
+    m "Sayori?"
+    if monika_type == 0:
+        m "What about her?"
+        mc "Do you know where she is?"
+        mc "She told me to meet at her house but she isn't here."
+        m "Ah..."
+        m "She's not with you?"
+        mc "She's not..."
+        mc "And I'm at her house right now."
+        m "Maybe she's out somewhere?"
+        mc "She did say she needed to do something."
+        mc "But she wouldn't tell me what."
+        m "I see."
+        mc "And for some reason..."
+        mc "All the doors in her house, they're all--"
+        "A strange sound comes from the phone."
+        "As if someone was clearing their throat really loudly."
+        m "[player], I think you should leave Sayori be."
+        mc "Huh?"
+        m "Come to the mall instead."
+        m "Sayori can handle it herself."
+        mc "Handle what herself?"
+        mc "Monika, do you know where she is?"
+        m "She's busy, okay?"
+        m "You really shouldn't get involved."
+        mc "But I need to help her."
+    else:
+        m "Aren't you with her right now?"
+        mc "No, I was just about to ask you if you knew where she was."
+        mc "Seeing as you're the vice president of the club."
+        mc "She would have told you something, right?"
+    call ch15_mall_shared
+    return
+
+label ch15_mall_shared:
     "Who would have thought that I'd be at the mall with everyone from the club?"
     if ch13_name != "Sayori":
         "Well...almost everyone."

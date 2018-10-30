@@ -2765,6 +2765,7 @@ default persistent.natsuki_house = [False, False, False, False]
 default persistent.arc_clear = [False,False,False,False,False]
 default persistent.markov_agreed = False
 default persistent.did_special_event = False
+default persistent.ch15_sayori_chance = False
 # Local Save
 default visited_sayori_sat = False
 default canload_ch5b = False
@@ -2851,6 +2852,7 @@ default ch14_m_ask = False
 default ch14_m_tellsayori = False
 default ch15poemwinner = "Sayori"
 default ch15_m_together = False
+default ch15_s_together = False
 default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","???","???","???","???","???"]
 default special_chapter = False
 default all_sayarc_poems_monika = False
