@@ -1707,6 +1707,8 @@ label ch15_exclusive_monika:
                 m "Then...!"
                 m "Shall we get going?"
                 m "Since we're doing everything together, we should make sure we don't waste any more time than we need to."
+                mc "To my house then."
+                m "Ahaha, lead the way."
                 call ch15_exclusive_monika_together
             "Let's meet at the mall.":
                 mc "I think it's better if we split up for now."
@@ -1773,8 +1775,65 @@ label ch15_exclusive_monika_together:
     play music t2
     "We make our way to my house."
     "The walk is pretty quiet, neither of us try to really make small talk."
-    "I did try to talk to her before but she seemed to dodge my questions."
+    "There's no one else here as well, it's just the two of us."
+    "I could even hear the wind rustling the leaves."
+    "I try to talk to her before but she seemed to dodge my questions."
     "I guess she's just not in the mood to talk right now."
+    "Is this what she wanted?"
+    "Does she even want to spend this time with me?"
+    "Her smile before made me think she was really happy about it."
+    "Like she really, genuinely enjoys spending time with me."
+    "..."
+    "She doesn't like me like {i}that{/i}, does she?"
+    "There's no way."
+    if sayori_confess:
+        "Besides, I'm with Sayori."
+        "But what if she did...do I feel the same way?"
+    else:
+        "But if did..."
+        "Would I feel the same?"
+    "What am I thinking?"
+    "A girl like Monika would never be interested in someone like me."
+    "There's just no way."
+    "We're just friends...right?"
+    "I really shouldn't think about things like that."
+    "It would make things awkward, especially with the stuff we need to do tonight."
+    "We continue to walk, just staying in silence."
+    "I'm almost tempted to ask her how she feels but..."
+    "It's not the time or place."
+    "We take the turn into my street."
+    "A single word still hasn't been said since I suggested we stay together."
+    scene bg house with wipeleft_scene
+    "We arrive at my house and I notice Monika let out a smile."
+    "She's been smiling the whole trip home, but this one is wider than before"
+    show monika 1a zorder 2 at t11
+    m "I'll just wait for you outside, [player]."
+    m "You can take however long you need to."
+    mc "O-Oh, okay."
+    mc "I won't be long."
+    m "And I'm sorry."
+    mc "Sorry for what?"
+    m "Being so close to you has just given me some time to think."
+    mc "About...?"
+    m "About what's important to me."
+    m "About how I'm going to achieve my goals."
+    if monika_type == 0:
+        m "And about what I'm going to do in the future."
+    else:
+        m "And about what I'm going to do when it's all mine."
+    mc "That happened because you were close to me?"
+    mc "Am I some kind of bad influence or something?"
+    m "No, it's not that."
+    m "Just seeing you care so much."
+    m "It just warms my heart."
+    m "I've never really felt like this, that is until..."
+    m "Until I met you."
+    m "But anyway...!"
+    m "You should go do what you need to."
+    m "We still have to pass by my house too, you know."
+    mc "Right."
+    mc "I'm just surprised, that's all."
+    m "You're not the only one~"
     return
 
 label ch15_exclusive_monika_alone:
@@ -2281,12 +2340,44 @@ label ch15_exclusive_sayori_alone:
     return
 
 label ch15_mall_shared:
-    "Who would have thought that I'd be at the mall with everyone from the club?"
+    "I sit down on the bench just outside of the food court."
     if ch13_name != "Sayori":
-        "Well...almost everyone."
+        "[ch13_name] told me to wait for her here so that's what I'm doing."
+        "I think after that, we're pretty much ready for tomorrow."
+    else:
+        "Monika told me to wait for her near the food court."
+        "I feel bad for leaving Sayori but I just don't know where she is."
+        "I even tried ringing her a couple more times just to find out but there was nothing."
+    show yuri 1ba zorder 2 at t11
+    if ch13_name == "Yuri":
+        y "There you are, [player]."
+    else:
+        y "[player]?"
+        y "Is that you?"
+        mc "Yuri?"
+        mc "What are you doing here?"
+    if ch13_name == "Monika":
+    else:
+    if ch13_name == "Natsuki":
+    else:
+    "Who would have thought that I'd be at the mall with everyone from the club?"
+    "Well...almost everyone."
     "I did not expect to be spending my evening like this."
     "Not that I mind spending time with everyone."
     "It just seems weird that we all arrived at the same time and that we're all here for preparations."
+    if ch13_name == "Sayori":
+        "Everyone already finished buying what they needed to."
+    else:
+        "We've all finished buying what we needed to."
+    "It feels like a pretty lucky coincidence that we all ended up meeting at this exact spot at his exact time."
+    "This feels just like a club meeting, except we're not at the club."
+    "Well...Sayori is somewhere else right now."
+    "So I suppose that's not entirely true."
+    show monika 3ba zorder 3 at f32
+    m "Okay, everyone!"
+    m "We don't really get a chance to do things together outside of the club."
+    m "But today is a really good opportunity to do just that."
+    m "Does anyone have any suggestions?"
     return
 
 label ch15_teaser:

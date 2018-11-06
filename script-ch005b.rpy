@@ -259,7 +259,7 @@ label ch5_mainb:
     mc "Huh?"
     play music mend fadeout 1.0
     s "What she did to me..."
-    s "And what what she did to fix it."
+    s "And what she did to fix it."
     s "This isn't right [player]."
     s "We have to get her back."
     s "You have to remember!"

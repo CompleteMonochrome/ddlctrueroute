@@ -5069,6 +5069,102 @@ label ch14_exclusive_natsuki:
             show natsuki at lhide
             hide natsuki
             mc "Wait...!"
+            "How in the world am I going to do this?"
+            "I have to keep both of them from reaching this room."
+            "I guess I can just block the way."
+            "I stand at the entrance to the room form where Natsuki's parents are."
+            show momsuki 1a zorder 2 at t11
+            mo "[player]."
+            mc "Hello."
+            mo "Um..."
+            mo "Are you okay there?"
+            mc "Oh, I've never been better."
+            mc "What about you?"
+            mo "I'm fine..."
+            mo "[player], can you--"
+            mc "You know there's something I've been meaning to ask about."
+            "Haruki looks at me impatiently."
+            mo "You can ask Yasuhiro about it."
+            show dadsuki 1a zorder 3 at f21
+            show momsuki zorder 2 at t22
+            d "You called?"
+            show dadsuki zorder 2 at t21
+            show momsuki zorder 3 at f22
+            mo "Could you be a dear and talk to [player] for me?"
+            mo "I need to--"
+            show momsuki zorder 2 at t22
+            mc "Actually...!"
+            mc "I need to speak to both of you about it."
+            mc "It's pretty important."
+            mc "So can both of you please just wait a moment?"
+            show dadsuki zorder 3 at f21
+            d "[player], what's this about?"
+            d "And why are you blocking the entrance to this room?"
+            show dadsuki zorder 2 at t21
+            mc "It's about Natsuki."
+            mc "Please listen to what I have to say."
+            "They both look at me expectantly."
+            mc "You know how she's been..."
+            mc "Well..."
+            show momsuki zorder 3 at f22
+            mo "What is it, [player]?!"
+            mo "Just say it!"
+            show momsuki zorder 2 at t22
+            mc "It's not good, Haruki."
+            "I look behind me and catch a glimpse of Natsuki with the sheet."
+            "She gives me a thumbs up and smiles mischievously."
+            "Just a minute more of this."
+            mc "She's got a sever case of--"
+            show dadsuki zorder 3 at f21
+            d "I knew it."
+            d "I'm sorry."
+            d "I should have listened to my conscience."
+            show dadsuki zorder 2 at t21
+            show momsuki zorder 3 at f22
+            mo "What is it?!"
+            mo "What's wrong with Natsuki?"
+            mo "Yasuhiro, what have you done?!"
+            show dadsuki zorder 3 at f21
+            show momsuki zorder 2 at t22
+            d "Haruki, I should never have influenced her."
+            d "She..."
+            "Yasuhiro looks down at the floor."
+            d "She's listening to rock music, isn't she?"
+            d "I gave her a bunch of CDs to listen to so that I could try to bond with her..."
+            d "To try to reconnect with her, you know?"
+            d "But now she's turning into a rebellious daughter."
+            show dadsuki zorder 2 at t21
+            mc "...What?"
+            show momsuki zorder 3 at f22
+            mo "What?!"
+            mo "That's..."
+            "Haruki breathes out a sigh of relief."
+            mo "...not as bad as I thought it would be."
+            mo "I guess I can live with that."
+            mo "The way you were building it up made it seem so much more serious."
+            show momsuki zorder 2 at t22
+            mc "T-That's not at all what I was going to say."
+            "I might have to ask Natsuki about that later."
+            mc "I was just going to say that Natsuki has been keeping a secret from both of you."
+            mc "You both need to know what it is."
+            show momsuki zorder 3 at f22
+            mo "She has?"
+            show dadsuki zorder 3 at f21
+            show momsuki zorder 2 at t22
+            d "What is it?"
+            show dadsuki zorder 2 at t21
+            "I look back and the sheet is on top of the easel."
+            "Natsuki looks at me curiously, signalling me to bring them over."
+            "She hides in the corridor."
+            mc "I think it's better if I just show you."
+            "I step aside and let them through."
+            show momsuki zorder 3 at f22
+            mo "What's with all this suspense...?"
+            mo "You're worrying me, [player]."
+            show momsuki zorder 2 at t22
+            mc "Just follow me, you'll see soon enough."
+            "I lead them towards the easel."
+            mc "Does this look familiar?"
         else:
             n "You'll have to keep him distracted."
             mc "What? I'm not good at distractions!"
@@ -5083,7 +5179,7 @@ label ch14_exclusive_natsuki:
             "What in the world do I do?"
             "I have to keep him out of this room, no matter what."
             "I stand at the entrance to the room from where Yasuhiro is."
-            show dadsuki zorder 2 at t11
+            show dadsuki 1a zorder 2 at t11
             d "Oh, hello, [player]."
             d "May I pass?"
             mc "Sure, but can I ask you something first?"
