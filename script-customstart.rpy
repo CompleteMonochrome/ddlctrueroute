@@ -1196,6 +1196,50 @@ label choose_start:
                     $ ch13_scene = "yuri"
             $ ch13_name = ch13_scene.capitalize()
             s "Alright..."
+
+            # Dumping Sayori for Natsuki
+            if ch13_name == "Natsuki" and (ch12_outcome == 3 or ch12_outcome == 1) and n_appeal >= 4 and n_appealS >= 1 and sayori_confess:
+                s "It's clear by this point, you're trying to appeal to Natsuki."
+                s "At least, it feels like you are with all your poem choices."
+                s "But even so, you..."
+                s "Are you going to leave the one you chose before?"
+                s "Even if you aren't going to try to be with Natsuki."
+                menu:
+                    s "So...are you leaving Sayori?"
+                    "Yes.":
+                        $ sayori_dumped = True
+                        $ sayori_personality += 2
+                        s "I...see."
+                        s "Then..."
+                        s "Sorry, it's just..."
+                        s "Never mind."
+                        s "I hope you two have a good time together."
+                    "No.":
+                        $ sayori_dumped = False
+                        if sayori_personality > 0:
+                            $ sayori_personality -= 1
+                        s "You aren't?"
+                        s "I see..."
+                        s "That's good!"
+                        s "Not that it matters or anything...!"
+                        s "It's just..."
+                        s "...just good."
+            # Going On Date
+            if ch13_name == "Natsuki" and (ch12_outcome == 3 or ch12_outcome == 1) and n_appeal >= 4 and n_appealS >= 1 and ((sayori_dumped and sayori_confess) or (not sayori_confess)):
+                s "You were given the opportunity to go with Natsuki..."
+                s "...On a date."
+                menu:
+                    s "Did you take that opportunity?"
+                    "Yes."
+                        $ natsuki_date = True
+                        s "So they're together now..."
+                        s "Okay."
+                    "No.":
+                        $ natsuki_date = False
+                        s "You didn't?"
+                        s "Then what was the point of it all..."
+                        s "Whatever."
+
             if ch13_name == "Monika":
                 s "Since you went with Monika, you chose some music, right?"
                 menu:
@@ -1217,6 +1261,16 @@ label choose_start:
                     "No.":
                         $ ch13_yuri_books = False
                 s "I see..."
+            elif ch13_name == "Natsuki":
+                s "At the end of the day with Natsuki..."
+                menu:
+                    s "Did you take three manga or just two?"
+                    "Three manga.":
+                        $ ch13_natsuki_books = True
+                        $ natsuki_approval += 1
+                    "Two manga.":
+                        $ ch13_natsuki_books = False
+                s "Okay, sure."
 
             s "Okay...so then..."
             menu:
@@ -1281,6 +1335,50 @@ label choose_start:
                     $ ch13_scene = "yuri"
             $ ch13_name = ch13_scene.capitalize()
             s "Alright..."
+
+            # Dumping Sayori for Natsuki
+            if ch13_name == "Natsuki" and (ch12_outcome == 3 or ch12_outcome == 1) and n_appeal >= 4 and n_appealS >= 1 and sayori_confess:
+                s "It's clear by this point, you're trying to appeal to Natsuki."
+                s "At least, it feels like you are with all your poem choices."
+                s "But even so, you..."
+                s "Are you going to leave the one you chose before?"
+                s "Even if you aren't going to try to be with Natsuki."
+                menu:
+                    s "So...are you leaving Sayori?"
+                    "Yes.":
+                        $ sayori_dumped = True
+                        $ sayori_personality += 2
+                        s "I...see."
+                        s "Then..."
+                        s "Sorry, it's just..."
+                        s "Never mind."
+                        s "I hope you two have a good time together."
+                    "No.":
+                        $ sayori_dumped = False
+                        if sayori_personality > 0:
+                            $ sayori_personality -= 1
+                        s "You aren't?"
+                        s "I see..."
+                        s "That's good!"
+                        s "Not that it matters or anything...!"
+                        s "It's just..."
+                        s "...just good."
+            # Going On Date
+            if ch13_name == "Natsuki" and (ch12_outcome == 3 or ch12_outcome == 1) and n_appeal >= 4 and n_appealS >= 1 and ((sayori_dumped and sayori_confess) or (not sayori_confess)):
+                s "You were given the opportunity to go with Natsuki..."
+                s "...On a date."
+                menu:
+                    s "Did you take that opportunity?"
+                    "Yes."
+                        $ natsuki_date = True
+                        s "So they're together now..."
+                        s "Okay."
+                    "No.":
+                        $ natsuki_date = False
+                        s "You didn't?"
+                        s "Then what was the point of it all..."
+                        s "Whatever."
+
             if ch13_name == "Monika":
                 s "Since you went with Monika, you chose some music, right?"
                 menu:
@@ -1302,6 +1400,16 @@ label choose_start:
                     "No.":
                         $ ch13_yuri_books = False
                 s "I see..."
+            elif ch13_name == "Natsuki":
+                s "At the end of the day with Natsuki..."
+                menu:
+                    s "Did you take three manga or just two?"
+                    "Three manga.":
+                        $ ch13_natsuki_books = True
+                        $ natsuki_approval += 1
+                    "Two manga.":
+                        $ ch13_natsuki_books = False
+                s "Okay, sure."
 
             s "Okay...so then..."
             menu:
