@@ -565,6 +565,10 @@ label after_load:
         $ special_chapter = False
     if not hasattr(store, 'all_sayarc_poems_monika'):
         $ all_sayarc_poems_monika = False
+    if not hasattr(store, 'monika_outfit'):
+        $ monika_outfit = 0
+    if not hasattr(store, 'sayori_outfit'):
+        $ sayori_outfit = 0
     if not hasattr(store, 'sInList'):
         $ sInList = False
     if not hasattr(store, 'nInList'):
