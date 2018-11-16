@@ -433,7 +433,7 @@ image sayori 5d = im.Composite((960, 960), (0, 0), "sayori/3d.png")
 
 image sayori 1gk = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "mod_assets/images/sayori/gk.png")
 
-# Sayori Normal Casual
+# Normal Casual Sayori
 image sayori 1casuala = im.Composite((960, 960), (0, 0), "sayori/1bl.png", (0, 0), "sayori/1br.png", (0, 0), "sayori/a.png")
 image sayori 1casualb = im.Composite((960, 960), (0, 0), "sayori/1bl.png", (0, 0), "sayori/1br.png", (0, 0), "sayori/b.png")
 image sayori 1casualc = im.Composite((960, 960), (0, 0), "sayori/1bl.png", (0, 0), "sayori/1br.png", (0, 0), "sayori/c.png")
@@ -538,7 +538,7 @@ image sayori 4casualw = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0
 image sayori 4casualx = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "sayori/2br.png", (0, 0), "sayori/x.png")
 image sayori 4casualy = im.Composite((960, 960), (0, 0), "sayori/2bl.png", (0, 0), "sayori/2br.png", (0, 0), "sayori/y.png")
 
-# Sayori Date Clothes
+# Date Clothes Sayori
 image sayori 1datea = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1cl.png", (0, 0), "mod_assets/images/sayori/1cr.png", (0, 0), "sayori/a.png")
 image sayori 1dateb = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1cl.png", (0, 0), "mod_assets/images/sayori/1cr.png", (0, 0), "sayori/b.png")
 image sayori 1datec = im.Composite((960, 960), (0, 0), "mod_assets/images/sayori/1cl.png", (0, 0), "mod_assets/images/sayori/1cr.png", (0, 0), "sayori/c.png")
@@ -1706,7 +1706,8 @@ image monika 1schoolgf = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0
 image monika 1schoolgg = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/images/monika/gg.png")
 image monika 1schoolgh = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/images/monika/gh.png")
 image monika 1schoolgi = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/images/monika/gi.png")
-image monika 1schoolgy = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/images/monika/gy.png")
+image monika 1schoolgy1 = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/images/monika/gy1.png")
+image monika 1schoolgy2 = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/images/monika/gy2.png")
 
 image monika 2schoolga = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/ga.png")
 image monika 2schoolge = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/ge.png")
@@ -1714,7 +1715,8 @@ image monika 2schoolgf = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0
 image monika 2schoolgg = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/gg.png")
 image monika 2schoolgh = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/gh.png")
 image monika 2schoolgi = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/gi.png")
-image monika 2schoolgy = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/gy.png")
+image monika 2schoolgy1 = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/gy1.png")
+image monika 2schoolgy2 = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/gy2.png")
 
 image monika 3schoolga = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/images/monika/ga.png")
 image monika 3schoolge = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/images/monika/ge.png")
@@ -1722,7 +1724,8 @@ image monika 3schoolgf = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0
 image monika 3schoolgg = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/images/monika/gg.png")
 image monika 3schoolgh = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/images/monika/gh.png")
 image monika 3schoolgi = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/images/monika/gi.png")
-image monika 3schoolgy = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/images/monika/gy.png")
+image monika 3schoolgy1 = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/images/monika/gy1.png")
+image monika 3schoolgy2 = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/1r.png", (0, 0), "mod_assets/images/monika/gy2.png")
 
 image monika 4schoolga = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/ga.png")
 image monika 4schoolge = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/ge.png")
@@ -1730,7 +1733,8 @@ image monika 4schoolgf = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0
 image monika 4schoolgg = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/gg.png")
 image monika 4schoolgh = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/gh.png")
 image monika 4schoolgi = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/gi.png")
-image monika 4schoolgy = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/gy.png")
+image monika 4schoolgy1 = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/gy1.png")
+image monika 4schoolgy2 = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/gy2.png")
 
 image monika 5schoolga = im.Composite((960, 960), (0, 0), "mod_assets/monika/3ga.png")
 image monika 5schoolgb = im.Composite((960, 960), (0, 0), "mod_assets/monika/3gb.png")
@@ -1834,7 +1838,8 @@ image monika 1downschoolgf = im.Composite((960, 960), (0, 0), "monika/1hl.png", 
 image monika 1downschoolgg = im.Composite((960, 960), (0, 0), "monika/1hl.png", (0, 0), "monika/1hr.png", (0, 0), "mod_assets/images/monika/hgg.png")
 image monika 1downschoolgh = im.Composite((960, 960), (0, 0), "monika/1hl.png", (0, 0), "monika/1hr.png", (0, 0), "mod_assets/images/monika/hgh.png")
 image monika 1downschoolgi = im.Composite((960, 960), (0, 0), "monika/1hl.png", (0, 0), "monika/1hr.png", (0, 0), "mod_assets/images/monika/hgi.png")
-image monika 1downschoolgy = im.Composite((960, 960), (0, 0), "monika/1hl.png", (0, 0), "monika/1hr.png", (0, 0), "mod_assets/images/monika/hgy.png")
+image monika 1downschoolgy1 = im.Composite((960, 960), (0, 0), "monika/1hl.png", (0, 0), "monika/1hr.png", (0, 0), "mod_assets/images/monika/hgy1.png")
+image monika 1downschoolgy2 = im.Composite((960, 960), (0, 0), "monika/1hl.png", (0, 0), "monika/1hr.png", (0, 0), "mod_assets/images/monika/hgy2.png")
 
 image monika 2downschoolga = im.Composite((960, 960), (0, 0), "monika/1hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hga.png")
 image monika 2downschoolge = im.Composite((960, 960), (0, 0), "monika/1hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hge.png")
@@ -1842,7 +1847,8 @@ image monika 2downschoolgf = im.Composite((960, 960), (0, 0), "monika/1hl.png", 
 image monika 2downschoolgg = im.Composite((960, 960), (0, 0), "monika/1hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hgg.png")
 image monika 2downschoolgh = im.Composite((960, 960), (0, 0), "monika/1hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hgh.png")
 image monika 2downschoolgi = im.Composite((960, 960), (0, 0), "monika/1hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hgi.png")
-image monika 2downschoolgy = im.Composite((960, 960), (0, 0), "monika/1hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hgy.png")
+image monika 2downschoolgy1 = im.Composite((960, 960), (0, 0), "monika/1hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hgy1.png")
+image monika 2downschoolgy2 = im.Composite((960, 960), (0, 0), "monika/1hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hgy2.png")
 
 image monika 3downschoolga = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/1hr.png", (0, 0), "mod_assets/images/monika/hga.png")
 image monika 3downschoolge = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/1hr.png", (0, 0), "mod_assets/images/monika/hge.png")
@@ -1850,7 +1856,8 @@ image monika 3downschoolgf = im.Composite((960, 960), (0, 0), "monika/2hl.png", 
 image monika 3downschoolgg = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/1hr.png", (0, 0), "mod_assets/images/monika/hgg.png")
 image monika 3downschoolgh = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/1hr.png", (0, 0), "mod_assets/images/monika/hgh.png")
 image monika 3downschoolgi = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/1hr.png", (0, 0), "mod_assets/images/monika/hgi.png")
-image monika 3downschoolgy = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/1hr.png", (0, 0), "mod_assets/images/monika/hgy.png")
+image monika 3downschoolgy1 = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/1hr.png", (0, 0), "mod_assets/images/monika/hgy1.png")
+image monika 3downschoolgy2 = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/1hr.png", (0, 0), "mod_assets/images/monika/hgy2.png")
 
 image monika 4downschoolga = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hga.png")
 image monika 4downschoolge = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hge.png")
@@ -1858,7 +1865,8 @@ image monika 4downschoolgf = im.Composite((960, 960), (0, 0), "monika/2hl.png", 
 image monika 4downschoolgg = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hgg.png")
 image monika 4downschoolgh = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hgh.png")
 image monika 4downschoolgi = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hgi.png")
-image monika 4downschoolgy = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hgy.png")
+image monika 4downschoolgy1 = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hgy1.png")
+image monika 4downschoolgy2 = im.Composite((960, 960), (0, 0), "monika/2hl.png", (0, 0), "monika/2hr.png", (0, 0), "mod_assets/images/monika/hgy2.png")
 
 image monika 5downschoolga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3hga.png")
 image monika 5downschoolgb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3hgb.png")
@@ -1960,29 +1968,37 @@ image monika 1casualga = im.Composite((960, 960), (0, 0), "mod_assets/images/mon
 image monika 1casualge = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/ge.png")
 image monika 1casualgf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/gf.png")
 image monika 1casualgg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/gg.png")
+image monika 1casualgh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/gh.png")
 image monika 1casualgi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/gi.png")
-image monika 1casualgy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/gy.png")
+image monika 1casualgy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/gy1.png")
+image monika 1casualgy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/gy2.png")
 
 image monika 2casualga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/ga.png")
 image monika 2casualge = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/ge.png")
 image monika 2casualgf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/gf.png")
 image monika 2casualgg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/gg.png")
+image monika 2casualgh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/gh.png")
 image monika 2casualgi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/gi.png")
-image monika 2casualgy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/gy.png")
+image monika 2casualgy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/gy1.png")
+image monika 2casualgy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/gy2.png")
 
 image monika 3casualga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/ga.png")
 image monika 3casualge = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/ge.png")
 image monika 3casualgf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/gf.png")
 image monika 3casualgg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/gg.png")
+image monika 3casualgh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/gh.png")
 image monika 3casualgi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/gi.png")
-image monika 3casualgy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/gy.png")
+image monika 3casualgy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/gy1.png")
+image monika 3casualgy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/1br.png", (0, 0), "mod_assets/images/monika/gy2.png")
 
 image monika 4casualga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/ge.png")
 image monika 4casualge = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/ge.png")
 image monika 4casualgf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/gf.png")
 image monika 4casualgg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/gg.png")
+image monika 4casualgh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/gh.png")
 image monika 4casualgi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/gi.png")
-image monika 4casualgy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/gy.png")
+image monika 4casualgy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/gy1.png")
+image monika 4casualgy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bl.png", (0, 0), "mod_assets/images/monika/2br.png", (0, 0), "mod_assets/images/monika/gy2.png")
 
 image monika 5casualga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3bga.png")
 image monika 5casualgb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3bgb.png")
@@ -2086,7 +2102,8 @@ image monika 1downcasualgf = im.Composite((960, 960), (0, 0), "mod_assets/images
 image monika 1downcasualgg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgg.png")
 image monika 1downcasualgh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgh.png")
 image monika 1downcasualgi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgi.png")
-image monika 1downcasualgy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgy.png")
+image monika 1downcasualgy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgy1.png")
+image monika 1downcasualgy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgy2.png")
 
 image monika 2downcasualga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hga.png")
 image monika 2downcasualge = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hge.png")
@@ -2094,7 +2111,8 @@ image monika 2downcasualgf = im.Composite((960, 960), (0, 0), "mod_assets/images
 image monika 2downcasualgg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgg.png")
 image monika 2downcasualgh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgh.png")
 image monika 2downcasualgi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgi.png")
-image monika 2downcasualgy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgy.png")
+image monika 2downcasualgy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgy1.png")
+image monika 2downcasualgy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgy2.png")
 
 image monika 3downcasualga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hga.png")
 image monika 3downcasualge = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hge.png")
@@ -2102,7 +2120,8 @@ image monika 3downcasualgf = im.Composite((960, 960), (0, 0), "mod_assets/images
 image monika 3downcasualgg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgg.png")
 image monika 3downcasualgh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgh.png")
 image monika 3downcasualgi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgi.png")
-image monika 3downcasualgy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgy.png")
+image monika 3downcasualgy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgy1.png")
+image monika 3downcasualgy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgy2.png")
 
 image monika 4downcasualga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hge.png")
 image monika 4downcasualge = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hge.png")
@@ -2110,7 +2129,8 @@ image monika 4downcasualgf = im.Composite((960, 960), (0, 0), "mod_assets/images
 image monika 4downcasualgg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgg.png")
 image monika 4downcasualgh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgh.png")
 image monika 4downcasualgi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgi.png")
-image monika 4downcasualgy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgy.png")
+image monika 4downcasualgy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgy1.png")
+image monika 4downcasualgy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgy2.png")
 
 image monika 5downcasualga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3bhga.png")
 image monika 5downcasualgb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3bhgb.png")
@@ -2213,33 +2233,37 @@ image monika 1datege = im.Composite((960, 960), (0, 0), "mod_assets/images/monik
 image monika 1dategf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1cl.png", (0, 0), "mod_assets/images/monika/1cr.png", (0, 0), "mod_assets/images/monika/gf.png")
 image monika 1dategg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1cl.png", (0, 0), "mod_assets/images/monika/1cr.png", (0, 0), "mod_assets/images/monika/gg.png")
 image monika 1dategi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1cl.png", (0, 0), "mod_assets/images/monika/1cr.png", (0, 0), "mod_assets/images/monika/gi.png")
-image monika 1dategy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1cl.png", (0, 0), "mod_assets/images/monika/1cr.png", (0, 0), "mod_assets/images/monika/gy.png")
+image monika 1dategy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1cl.png", (0, 0), "mod_assets/images/monika/1cr.png", (0, 0), "mod_assets/images/monika/gy1.png")
+image monika 1dategy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1cl.png", (0, 0), "mod_assets/images/monika/1cr.png", (0, 0), "mod_assets/images/monika/gy2.png")
 
 image monika 2datega = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/ga.png")
 image monika 2datege = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/ge.png")
 image monika 2dategf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/gf.png")
 image monika 2dategg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/gg.png")
 image monika 2dategi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/gi.png")
-image monika 2dategy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/gy.png")
+image monika 2dategy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/gy1.png")
+image monika 2dategy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/gy2.png")
 
 image monika 3datega = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/1cr.png", (0, 0), "mod_assets/images/monika/ga.png")
 image monika 3datege = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/1cr.png", (0, 0), "mod_assets/images/monika/ge.png")
 image monika 3dategf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/1cr.png", (0, 0), "mod_assets/images/monika/gf.png")
 image monika 3dategg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/1cr.png", (0, 0), "mod_assets/images/monika/gg.png")
 image monika 3dategi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/1cr.png", (0, 0), "mod_assets/images/monika/gi.png")
-image monika 3dategy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/1cr.png", (0, 0), "mod_assets/images/monika/gy.png")
+image monika 3dategy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/1cr.png", (0, 0), "mod_assets/images/monika/gy1.png")
+image monika 3dategy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/1cr.png", (0, 0), "mod_assets/images/monika/gy2.png")
 
 image monika 4datega = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/ge.png")
 image monika 4datege = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/ge.png")
 image monika 4dategf = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/gf.png")
 image monika 4dategg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/gg.png")
 image monika 4dategi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/gi.png")
-image monika 4dategy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/gy.png")
+image monika 4dategy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/gy1.png")
+image monika 4dategy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2cl.png", (0, 0), "mod_assets/images/monika/2cr.png", (0, 0), "mod_assets/images/monika/gy2.png")
 
 image monika 5datega = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3cga.png")
 image monika 5dategb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3cgb.png")
 
-# Casual Clothes Date - Hair Down
+# Date Clothes Monika - Hair Down
 image monika 1downdatea = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/ha.png")
 image monika 1downdateb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hb.png")
 image monika 1downdatec = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hc.png")
@@ -2338,7 +2362,8 @@ image monika 1downdategf = im.Composite((960, 960), (0, 0), "mod_assets/images/m
 image monika 1downdategg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hgg.png")
 image monika 1downdategh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hgh.png")
 image monika 1downdategi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hgi.png")
-image monika 1downdategy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hgy.png")
+image monika 1downdategy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hgy1.png")
+image monika 1downdategy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hgy2.png")
 
 image monika 2downdatega = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hga.png")
 image monika 2downdatege = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hge.png")
@@ -2346,7 +2371,8 @@ image monika 2downdategf = im.Composite((960, 960), (0, 0), "mod_assets/images/m
 image monika 2downdategg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hgg.png")
 image monika 2downdategh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hgh.png")
 image monika 2downdategi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hgi.png")
-image monika 2downdategy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hgy.png")
+image monika 2downdategy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hgy1.png")
+image monika 2downdategy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hgy2.png")
 
 image monika 3downdatega = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hga.png")
 image monika 3downdatege = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hge.png")
@@ -2354,7 +2380,8 @@ image monika 3downdategf = im.Composite((960, 960), (0, 0), "mod_assets/images/m
 image monika 3downdategg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hgg.png")
 image monika 3downdategh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hgh.png")
 image monika 3downdategi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hgi.png")
-image monika 3downdategy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hgy.png")
+image monika 3downdategy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hgy1.png")
+image monika 3downdategy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/1chr.png", (0, 0), "mod_assets/images/monika/hgy2.png")
 
 image monika 4downdatega = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hge.png")
 image monika 4downdatege = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hge.png")
@@ -2362,7 +2389,8 @@ image monika 4downdategf = im.Composite((960, 960), (0, 0), "mod_assets/images/m
 image monika 4downdategg = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hgg.png")
 image monika 4downdategh = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hgh.png")
 image monika 4downdategi = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hgi.png")
-image monika 4downdategy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hgy.png")
+image monika 4downdategy1 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hgy1.png")
+image monika 4downdategy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2chl.png", (0, 0), "mod_assets/images/monika/2chr.png", (0, 0), "mod_assets/images/monika/hgy2.png")
 
 image monika 5downdatega = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3chga.png")
 image monika 5downdategb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3chgb.png")
@@ -2558,7 +2586,8 @@ image monika 1gf = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "mo
 image monika 1gg = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 1downschoolgg", "True", "monika 1schoolgg")
 image monika 1gh = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 1downschoolgh", "True", "monika 1schoolgh")
 image monika 1gi = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 1downschoolgi", "True", "monika 1schoolgi")
-image monika 1gy = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 1downschoolgy", "True", "monika 1schoolgy")
+image monika 1gy1 = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 1downschoolgy1", "True", "monika 1schoolgy1")
+image monika 1gy2 = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 1downschoolgy2", "True", "monika 1schoolgy2")
 
 image monika 2ga = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 2downschoolga", "True", "monika 2schoolga")
 image monika 2ge = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 2downschoolge", "True", "monika 2schoolge")
@@ -2566,7 +2595,8 @@ image monika 2gf = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "mo
 image monika 2gg = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 2downschoolgg", "True", "monika 2schoolgg")
 image monika 2gh = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 2downschoolgh", "True", "monika 2schoolgh")
 image monika 2gi = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 2downschoolgi", "True", "monika 2schoolgi")
-image monika 2gy = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 2downschoolgy", "True", "monika 2schoolgy")
+image monika 2gy1 = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 2downschoolgy1", "True", "monika 2schoolgy1")
+image monika 2gy2 = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 2downschoolgy2", "True", "monika 2schoolgy2")
 
 image monika 3ga = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 3downschoolga", "True", "monika 3schoolga")
 image monika 3ge = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 3downschoolge", "True", "monika 3schoolge")
@@ -2574,7 +2604,8 @@ image monika 3gf = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "mo
 image monika 3gg = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 3downschoolgg", "True", "monika 3schoolgg")
 image monika 3gh = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 3downschoolgh", "True", "monika 3schoolgh")
 image monika 3gi = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 3downschoolgi", "True", "monika 3schoolgi")
-image monika 3gy = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 3downschoolgy", "True", "monika 3schoolgy")
+image monika 3gy1 = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 3downschoolgy1", "True", "monika 3schoolgy1")
+image monika 3gy2 = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 3downschoolgy2", "True", "monika 3schoolgy2")
 
 image monika 4ga = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 4downschoolga", "True", "monika 4schoolga")
 image monika 4ge = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 4downschoolge", "True", "monika 4schoolge")
@@ -2582,7 +2613,8 @@ image monika 4gf = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "mo
 image monika 4gg = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 4downschoolgg", "True", "monika 4schoolgg")
 image monika 4gh = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 4downschoolgh", "True", "monika 4schoolgh")
 image monika 4gi = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 4downschoolgi", "True", "monika 4schoolgi")
-image monika 4gy = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 4downschoolgy", "True", "monika 4schoolgy")
+image monika 4gy1 = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 4downschoolgy1", "True", "monika 4schoolgy1")
+image monika 4gy2 = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 4downschoolgy2", "True", "monika 4schoolgy2")
 
 image monika 5ga = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 5downschoolga", "True", "monika 5schoolga")
 image monika 5gb = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 5downschoolgb", "True", "monika 5schoolgb")
@@ -2594,7 +2626,8 @@ image monika 1bgf = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and
 image monika 1bgg = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 1downdategg", "monika_type == 1 and ch12_markov_agree", "monika 1downcasualgg", "monika_outfit == 1", "monika 1dategg", "True", "monika 1casualgg")
 image monika 1bgh = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 1downdategh", "monika_type == 1 and ch12_markov_agree", "monika 1downcasualgh", "monika_outfit == 1", "monika 1dategh", "True", "monika 1casualgh")
 image monika 1bgi = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 1downdategi", "monika_type == 1 and ch12_markov_agree", "monika 1downcasualgi", "monika_outfit == 1", "monika 1dategi", "True", "monika 1casualgi")
-image monika 1bgy = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 1downdategy", "monika_type == 1 and ch12_markov_agree", "monika 1downcasualgy", "monika_outfit == 1", "monika 1dategy", "True", "monika 1casualgy")
+image monika 1bgy1 = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 1downdategy1", "monika_type == 1 and ch12_markov_agree", "monika 1downcasualgy1", "monika_outfit == 1", "monika 1dategy1", "True", "monika 1casualgy1")
+image monika 1bgy2 = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 1downdategy2", "monika_type == 1 and ch12_markov_agree", "monika 1downcasualgy2", "monika_outfit == 1", "monika 1dategy2", "True", "monika 1casualgy2")
 
 image monika 2bga = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 2downdatega", "monika_type == 1 and ch12_markov_agree", "monika 2downcasualga", "monika_outfit == 1", "monika 2datega", "True", "monika 2casualga")
 image monika 2bge = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 2downdatege", "monika_type == 1 and ch12_markov_agree", "monika 2downcasualge", "monika_outfit == 1", "monika 2datege", "True", "monika 2casualge")
@@ -2602,7 +2635,8 @@ image monika 2bgf = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and
 image monika 2bgg = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 2downdategg", "monika_type == 1 and ch12_markov_agree", "monika 2downcasualgg", "monika_outfit == 1", "monika 2dategg", "True", "monika 2casualgg")
 image monika 2bgh = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 2downdategh", "monika_type == 1 and ch12_markov_agree", "monika 2downcasualgh", "monika_outfit == 1", "monika 2dategh", "True", "monika 2casualgh")
 image monika 2bgi = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 2downdategi", "monika_type == 1 and ch12_markov_agree", "monika 2downcasualgi", "monika_outfit == 1", "monika 2dategi", "True", "monika 2casualgi")
-image monika 2bgy = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 2downdategy", "monika_type == 1 and ch12_markov_agree", "monika 2downcasualgy", "monika_outfit == 1", "monika 2dategy", "True", "monika 2casualgy")
+image monika 2bgy1 = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 2downdategy1", "monika_type == 1 and ch12_markov_agree", "monika 2downcasualgy1", "monika_outfit == 1", "monika 2dategy1", "True", "monika 2casualgy1")
+image monika 2bgy2 = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 2downdategy2", "monika_type == 1 and ch12_markov_agree", "monika 2downcasualgy2", "monika_outfit == 1", "monika 2dategy2", "True", "monika 2casualgy2")
 
 image monika 3bga = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 3downdatega", "monika_type == 1 and ch12_markov_agree", "monika 3downcasualga", "monika_outfit == 1", "monika 3datega", "True", "monika 3casualga")
 image monika 3bge = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 3downdatege", "monika_type == 1 and ch12_markov_agree", "monika 3downcasualge", "monika_outfit == 1", "monika 3datege", "True", "monika 3casualge")
@@ -2610,7 +2644,8 @@ image monika 3bgf = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and
 image monika 3bgg = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 3downdategg", "monika_type == 1 and ch12_markov_agree", "monika 3downcasualgg", "monika_outfit == 1", "monika 3dategg", "True", "monika 3casualgg")
 image monika 3bgh = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 3downdategh", "monika_type == 1 and ch12_markov_agree", "monika 3downcasualgh", "monika_outfit == 1", "monika 3dategh", "True", "monika 3casualgh")
 image monika 3bgi = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 3downdategi", "monika_type == 1 and ch12_markov_agree", "monika 3downcasualgi", "monika_outfit == 1", "monika 3dategi", "True", "monika 3casualgi")
-image monika 3bgy = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 3downdategy", "monika_type == 1 and ch12_markov_agree", "monika 3downcasualgy", "monika_outfit == 1", "monika 3dategy", "True", "monika 3casualgy")
+image monika 3bgy1 = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 3downdategy1", "monika_type == 1 and ch12_markov_agree", "monika 3downcasualgy1", "monika_outfit == 1", "monika 3dategy1", "True", "monika 3casualgy1")
+image monika 3bgy2 = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 3downdategy2", "monika_type == 1 and ch12_markov_agree", "monika 3downcasualgy2", "monika_outfit == 1", "monika 3dategy2", "True", "monika 3casualgy2")
 
 image monika 4bga = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 4downdatega", "monika_type == 1 and ch12_markov_agree", "monika 4downcasualga", "monika_outfit == 1", "monika 4datega", "True", "monika 4casualga")
 image monika 4bge = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 4downdatege", "monika_type == 1 and ch12_markov_agree", "monika 4downcasualge", "monika_outfit == 1", "monika 4datege", "True", "monika 4casualge")
@@ -2618,7 +2653,8 @@ image monika 4bgf = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and
 image monika 4bgg = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 4downdategg", "monika_type == 1 and ch12_markov_agree", "monika 4downcasualgg", "monika_outfit == 1", "monika 4dategg", "True", "monika 4casualgg")
 image monika 4bgh = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 4downdategh", "monika_type == 1 and ch12_markov_agree", "monika 4downcasualgh", "monika_outfit == 1", "monika 4dategh", "True", "monika 4casualgh")
 image monika 4bgi = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 4downdategi", "monika_type == 1 and ch12_markov_agree", "monika 4downcasualgi", "monika_outfit == 1", "monika 4dategi", "True", "monika 4casualgi")
-image monika 4bgy = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 4downdategy", "monika_type == 1 and ch12_markov_agree", "monika 4downcasualgy", "monika_outfit == 1", "monika 4dategy", "True", "monika 4casualgy")
+image monika 4bgy = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 4downdategy1", "monika_type == 1 and ch12_markov_agree", "monika 4downcasualgy1", "monika_outfit == 1", "monika 4dategy1", "True", "monika 4casualgy1")
+image monika 4bgy = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 4downdategy2", "monika_type == 1 and ch12_markov_agree", "monika 4downcasualgy2", "monika_outfit == 1", "monika 4dategy2", "True", "monika 4casualgy2")
 
 image monika 5bga = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 5downdatega", "monika_type == 1 and ch12_markov_agree", "monika 5downcasualga", "monika_outfit == 1", "monika 5datega", "True", "monika 5casualga")
 image monika 5bgb = ConditionSwitch("monika_outfit == 1 and monika_type == 1 and ch12_markov_agree", "monika 5downdategb", "monika_type == 1 and ch12_markov_agree", "monika 5downcasualgb", "monika_outfit == 1", "monika 5dategb", "True", "monika 5casualgb")
@@ -2699,6 +2735,16 @@ image monika g9:
     "monika 5ga"
     pause 0.5
     "monika 5a"
+
+image monika 1bgy:
+    "monika 2bgy1"
+    pause 0.5
+    "monika 2bgy2"
+
+image monika 2bgy:
+    "monika 2bgy1"
+    pause 0.5
+    "monika 2bgy2"
 
 # Dadsuki
 image dadsuki 1 = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1a.png")

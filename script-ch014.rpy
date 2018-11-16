@@ -61,7 +61,7 @@ label ch14_main:
     play music mendcont
     if not persistent.markov_agreed:
         s "The day is coming quickly isn't it?"
-        s "The day that it all ends."
+        s "The day when it all ends."
         s "You've worked so hard to get this far."
         s 1k "And yet..."
         s "You haven't really gotten anything out of it."
@@ -4982,7 +4982,7 @@ label ch14_exclusive_natsuki:
             n "You know, those things they use to hold a canvas."
             n 1ba "Like a wooden tripod."
             mc "I have an idea..."
-            n 1bd  "I think I know what it is."
+            n 1bd "I think I know what it is."
             mc "We could put the portrait on that!"
             n 1ba "I was right."
             "Natsuki thinks for a moment."
@@ -5021,7 +5021,7 @@ label ch14_exclusive_natsuki:
             n "You know, those things they use to hold a canvas."
             n 1ba "Like a wooden tripod."
             mc "I have an idea..."
-            n 1bd  "I think I know what it is."
+            n 1bd "I think I know what it is."
             mc "We could put the portrait on that!"
             n 1ba "I was right."
             "Natsuki thinks for a moment."
@@ -5041,29 +5041,29 @@ label ch14_exclusive_natsuki:
         n "Do you really think this will work?"
         n "It seems really obvious..."
         mc "We're going to be showing them right away anyway, right?"
-        n "I guess..."
+        n 1bq "I guess..."
         mc "So let's do it."
         "Natsuki hesitates for a second."
         mc "You have to decide, Natsuki."
-        n "Alright, alright!"
+        n 1be "Alright, alright!"
         n "Quick, help me put it on there."
         "Natsuki and I take both sides of the portrait and lift it up."
         "We carefully place it on the easel."
         "It seems to be a perfect fit, literally."
         "The dimensions are just right so that it looks like it should be there."
         "Like this easel was made for this portrait."
-        n "Wow."
+        n 1bd "Wow."
         mc "I have a feeling we'll see the same reaction soon."
         mc "Do you have something to cover it with?"
         mc "Like a sheet or something?"
         mc "So we can do some sort of grand reveal."
-        n "I can try to get something from the laundry room but--"
+        n 1bc "I can try to get something from the laundry room but--"
         "A noise comes from the other room."
         if ch12_outcome == 3:
-            n "You'll have to keep them distracted."
+            n 1be "You'll have to keep them distracted."
             mc "A distraction?"
             mc "How do you expect me to do that?"
-            n "You'll figure it out."
+            n 1bl "You'll figure it out."
             "Natsuki winks at me."
             n "I need to go now, good luck!"
             show natsuki at lhide
@@ -5076,28 +5076,28 @@ label ch14_exclusive_natsuki:
             show momsuki 1a zorder 2 at t11
             mo "[player]."
             mc "Hello."
-            mo "Um..."
+            mo 1d "Um..."
             mo "Are you okay there?"
             mc "Oh, I've never been better."
             mc "What about you?"
-            mo "I'm fine..."
+            mo 1a "I'm fine..."
             mo "[player], can you--"
             mc "You know there's something I've been meaning to ask about."
             "Haruki looks at me impatiently."
-            mo "You can ask Yasuhiro about it."
+            mo 1h "You can ask Yasuhiro about it."
             show dadsuki 1a zorder 3 at f21
             show momsuki zorder 2 at t22
             d "You called?"
             show dadsuki zorder 2 at t21
-            show momsuki zorder 3 at f22
+            show momsuki 1e zorder 3 at f22
             mo "Could you be a dear and talk to [player] for me?"
             mo "I need to--"
-            show momsuki zorder 2 at t22
+            show momsuki 1h zorder 2 at t22
             mc "Actually...!"
             mc "I need to speak to both of you about it."
             mc "It's pretty important."
             mc "So can both of you please just wait a moment?"
-            show dadsuki zorder 3 at f21
+            show dadsuki 1c zorder 3 at f21
             d "[player], what's this about?"
             d "And why are you blocking the entrance to this room?"
             show dadsuki zorder 2 at t21
@@ -5106,50 +5106,50 @@ label ch14_exclusive_natsuki:
             "They both look at me expectantly."
             mc "You know how she's been..."
             mc "Well..."
-            show momsuki zorder 3 at f22
+            show momsuki 1e zorder 3 at f22
             mo "What is it, [player]?!"
             mo "Just say it!"
-            show momsuki zorder 2 at t22
+            show momsuki 1h zorder 2 at t22
             mc "It's not good, Haruki."
             "I look behind me and catch a glimpse of Natsuki with the sheet."
             "She gives me a thumbs up and smiles mischievously."
             "Just a minute more of this."
-            mc "She's got a sever case of--"
+            mc "She's got a severe case of--"
             show dadsuki zorder 3 at f21
             d "I knew it."
             d "I'm sorry."
-            d "I should have listened to my conscience."
+            d 1k "I should have listened to my conscience."
             show dadsuki zorder 2 at t21
-            show momsuki zorder 3 at f22
+            show momsuki 1h zorder 3 at f22
             mo "What is it?!"
             mo "What's wrong with Natsuki?"
-            mo "Yasuhiro, what have you done?!"
-            show dadsuki zorder 3 at f21
+            mo 1e "Yasuhiro, what have you done?!"
+            show dadsuki 1n zorder 3 at f21
             show momsuki zorder 2 at t22
             d "Haruki, I should never have influenced her."
             d "She..."
             "Yasuhiro looks down at the floor."
             d "She's listening to rock music, isn't she?"
-            d "I gave her a bunch of CDs to listen to so that I could try to bond with her..."
-            d "To try to reconnect with her, you know?"
+            d 1l "I gave her a bunch of CDs to listen to so that I could try to bond with her..."
+            d 1m "To try to reconnect with her, you know?"
             d "But now she's turning into a rebellious daughter."
             show dadsuki zorder 2 at t21
             mc "...What?"
-            show momsuki zorder 3 at f22
+            show momsuki 1d zorder 3 at f22
             mo "What?!"
-            mo "That's..."
+            mo 1a "That's..."
             "Haruki breathes out a sigh of relief."
-            mo "...not as bad as I thought it would be."
-            mo "I guess I can live with that."
+            mo 1c "...not as bad as I thought it would be."
+            mo 1b "I guess I can live with that."
             mo "The way you were building it up made it seem so much more serious."
             show momsuki zorder 2 at t22
             mc "T-That's not at all what I was going to say."
             "I might have to ask Natsuki about that later."
             mc "I was just going to say that Natsuki has been keeping a secret from both of you."
             mc "You both need to know what it is."
-            show momsuki zorder 3 at f22
+            show momsuki 1a zorder 3 at f22
             mo "She has?"
-            show dadsuki zorder 3 at f21
+            show dadsuki 1i zorder 3 at f21
             show momsuki zorder 2 at t22
             d "What is it?"
             show dadsuki zorder 2 at t21
@@ -5166,10 +5166,10 @@ label ch14_exclusive_natsuki:
             "I lead them towards the easel."
             mc "Does this look familiar?"
         else:
-            n "You'll have to keep him distracted."
+            n 1be "You'll have to keep him distracted."
             mc "What? I'm not good at distractions!"
             mc "What do you expect me to do?"
-            n "I'm sure you'll think of something."
+            n 1bl "I'm sure you'll think of something."
             "Natsuki winks at me."
             n "I need to go now, good luck!"
             show natsuki at lhide
@@ -5186,7 +5186,7 @@ label ch14_exclusive_natsuki:
     else:
         mc "You're right."
         mc "Are we going to be moving on to the baking?"
-        mc "Or is there something else you haev to do first?"
+        mc "Or is there something else you have to do first?"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
@@ -6841,7 +6841,7 @@ label ch14_exclusive_sayori:
     if ch14_overall_choice == "Sayori":
         mc "I know you've read the book and everything..."
         mc "But it's still going to be hard, isn't it?"
-        s 1bc"I know."
+        s 1bc "I know."
         s 1bd "But at least I won't be alone when I do it, right?"
         mc "That's right."
         mc "I'll be here for you."
