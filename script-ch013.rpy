@@ -8953,6 +8953,9 @@ label ch13_natsukidate:
     hide mysteriousclerk
     show natsuki zorder 2 at t11
     "The clerk goes to what I can only guess is a storeroom after saying that."
+    # I encourage you to do multiple playthroughs
+    $ persistent.ch13_nat_date = True
+    $ renpy.save_persistent()
     n 1bc "Guess we better move then."
     scene bg train with wipeleft_scene
     "We barely got onto the train."

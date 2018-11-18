@@ -1772,7 +1772,7 @@ label ch15_exclusive_monika_together:
     scene bg residential_day
     show monika 1a zorder 2 at t11
     with wipeleft_scene
-    play music t2
+    play music t3
     "We make our way to my house."
     "The walk is pretty quiet, neither of us try to really make small talk."
     "There's no one else here as well, it's just the two of us."
@@ -1839,7 +1839,7 @@ label ch15_exclusive_monika_together:
 label ch15_exclusive_monika_alone:
     $ ch15_m_together = False
     scene bg house with wipeleft_scene
-    play music t2
+    play music t3
     "I make it home pretty quickly."
     "With the way Monika was moving, I kinda felt inspired to do the same."
     return
@@ -1850,7 +1850,7 @@ label ch15_exclusive_sayori:
     scene bg residential_day
     show sayori 1a zorder 2 at t11
     with wipeleft_scene
-    play music t2
+    play music t3
     "Sayori and I make our way home."
     "She's been really quiet this whole time."
     "That's not like her at all."
@@ -1968,16 +1968,17 @@ label ch15_exclusive_sayori:
                             "Have to..."
                             $ style.say_dialogue = style.normal
                             "Go with her."
-                            jump ch15_exclusive_sayori_together
+                            jump ch15_sayori_check
                         "Leave her be.":
                             pass
                 else:
                     "This bad feeling won't stop bugging me."
                     "It's like I won't forgive myself if I don't go with her."
                     "So I'm going to go with her."
-                    jump ch15_exclusive_sayori_together
+                    jump ch15_sayori_check
             "Leave her be.":
                 pass
+    label ch15_sayori_check_fail:
     if persistent.ch15_sayori_chance:
         "I think I'm going crazy."
         "She'll be fine, I know it."
@@ -2044,6 +2045,18 @@ label ch15_exclusive_sayori:
     "I know it."
     "I make sure that I have everything I need and head towards Sayori's house."
     "I just hope I can make a difference."
+    scene bg house with wipeleft_scene
+    "My heart is beating fast."
+    "Why am I nervous to take this to Sayori?"
+    "I guess I know why."
+    "I'm wondering if this is the right thing to do."
+    "Will this really do?"
+    "Is this going to fix her issues?"
+    "I take a look at what I'm going to give to Sayori."
+    "As I do, a car drives past me incredibly fast."
+    "The sound of the tyres screeching the road almost make me drop what I'm holding."
+    "Okay, that was too close."
+    "I should keep it in my bag, where it belongs."
     scene bg sayori_bedroom with wipeleft_scene
     "The door to her house was already open."
     "I decided to let myself in and go to her room to look for her."
@@ -2104,13 +2117,32 @@ label ch15_exclusive_sayori:
     call ch15_exclusive_sayori_alone
     return
 
+label ch15_sayori_check:
+    # You really think ANY Sayori would let you explore the plot???
+    if ch14_sayori_date_choice and sayori_personality == 0:
+        jump ch15_exclusive_sayori_together
+    else:
+        mc "Sayori, wait."
+        s "H-Huh?"
+        s "I have no time to wait for you, [player]."
+        s "I have to go."
+        mc "But--"
+        s "I'm sorry."
+        s "It'll all be explained later."
+        s "But I'm really running out of time."
+        mc "It's just..."
+        s "I know."
+        s "You're worried."
+        s "But it's fine, really!"
+        "Sayori beams."
+        s "Don't worry."
+        mc "..."
+        jump ch15_sayori_check_fail
+    return
+
 label ch15_exclusive_sayori_together:
     $ ch15_s_together = True
     # Wow.
-    if sayori_personality > 0:
-        $ sayori_personality -= 2
-        if sayori_personality < 0:
-            $ sayori_personality = 0
     mc "Sayori, wait."
     s "H-Huh?"
     $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
@@ -2261,6 +2293,180 @@ label ch15_exclusive_sayori_together:
     "Did I just make her wait for nothing?"
     "Should I just give up looking for it?"
     "It looks like I'm going to have to."
+    "I probably don't need it anyway."
+    "I'll try looking for it again later."
+    "I definitely didn't move it.{nw}"
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    window hide(None)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.25)
+    stop sound
+    hide screen tear
+    window show(None)
+    "I definitely didn't move it.{fast}"
+    window auto
+    "In fact, I didn't get the idea to take it until just now."
+    scene bg house
+    show sayori 1a zorder 2 at t11
+    with wipeleft_scene
+    mc "You actually stayed."
+    s "Of course I did!"
+    s "I wasn't going to run away..."
+    s "Not after what you've done."
+    s "I know you're with me, [player]."
+    mc "Uh...right."
+    mc "So where are we going anyway?"
+    s "We're going to the city."
+    s "But first we need to stop by my house."
+    mc "The city?"
+    mc "What for?"
+    s "There's someone I need to meet there."
+    s "He's got some answers for me."
+    mc "Answers for...?"
+    s "I'll tell you when we have the time."
+    s "Right now, we have to get to my house."
+    s "Before it's too late."
+    mc "Too late?"
+    s "No time to explain!"
+    "Sayori grabs my hand."
+    "Despite the short distance, she starts running towards her house."
+    "I guess she's in a hurry?"
+    scene bg house
+    show sayori 1a zorder 2 at t11
+    with wipeleft
+    "We stand at the front of her house."
+    "She turns towards me and grabs me by the shoulders."
+    s "This is going to sound weird, [player]."
+    s "But I need you to help me open all the doors in my house."
+    mc "What?"
+    s "Do you trust me?"
+    mc "You know I do, but--"
+    s "Please, just do it."
+    s "This whole thing depends on it."
+    mc "Okay, Sayori."
+    mc "I'll do it."
+    scene bg black with wipeleft_scene
+    "She unlocks the door to her house."
+    "Immediately she runs up the stairs."
+    "I can hear the faint sound of doors opening."
+    "I guess I should be doing the same."
+    "I begin to open all the doors in Sayori's house."
+    "I'm not still not sure if this is a good idea or not."
+    "But it's her idea, and I trust her."
+    "Soon enough, all the doors to her home are open."
+    "I hear her going downstairs so I go outside to meet her there."
+    scene bg house with wipeleft_scene
+    "There's a taxi waiting outside Sayori's house."
+    "He looks at me impatiently but I just shrug at him."
+    "Maybe Sayori called him?"
+    show sayori 1a zorder 2 at t11
+    mc "You didn't change your--"
+    s "No time."
+    "Okay then."
+    s "Did you open all the doors?"
+    mc "Yeah, just like you asked me to."
+    s "Good."
+    "Sayori takes a deep breath."
+    s "Sorry, it's just my whole plan is really unstable."
+    s "And there are a couple of reasons for it."
+    s "I mean, have you seen the state of the world?"
+    mc "State of the world...?"
+    s "Never mind."
+    mc "Aren't you gonna close the front door at least?"
+    s "No."
+    s "Every door needs to be open."
+    s "Otherwise, it might not work."
+    mc "Are you gonna tell me what this plan of yours is?"
+    "Sayori pretends to ignore the question."
+    s "Hey, Taxi!"
+    "The taxi driver looks at Sayori."
+    "He looks as if he recognizes her."
+    s "Let's go."
+    mc "Alright."
+    "Sayori and I both step into the taxi."
+    "The taxi driver turns towards us and looks at us expectantly."
+    s "Do you know where this shop is?"
+    "Sayori shows the man a picture of a store front."
+    "It looks like some kind of art shop?"
+    "The taxi driver nods."
+    s "Take us there, please."
+    s "Go as fast as you can."
+    s "Please, you have to hurry."
+    "I think I saw the taxi driver let out some kind of smile through the rear view mirror."
+    "It almost seemed malicious."
+    "Almost immediately, the car screeches and starts accelerating."
+    "I hit my head on the seat in front of me in the commotion."
+    "I look out the window and someone walking by almost drops what they're holding."
+    "I hope whoever that was is okay."
+    "The thing they were holding looked pretty delicate."
+    scene bg city with wipeleft_scene
+    "Soon enough, we make it to the city."
+    "At this time, there's usually a decent amount of traffic."
+    "But..."
+    "The roads are almost empty."
+    "The streets and sidewalks are filled with people but quite literally the only things on the roads are public transport."
+    "What a strange day."
+    show sayori 1a zorder 2 at t11
+    s "I'll tell you everything when we get off this taxi."
+    s "I'm going to sound crazy."
+    s "And right now, I think I am."
+    s "But you're here with me."
+    s "And..."
+    if ch14_sayori_date_choice:
+        s "When I think about what there is to lose..."
+        s "I know that {i}we{/i} can do it."
+    else:
+        s "When I really think about it..."
+        s "I know that I can do it."
+    mc "Any reason we're going to this particular shop?"
+    s "It's someone I met."
+    s "Well...maybe met is the wrong word."
+    s "All you need to know is that he's really helpful."
+    s "You'll see him soon."
+    "The taxi stops outside a shop called 'Restoration'."
+    "The outside looks really clean and it has displays of various portraits and paintings."
+    "It's some kind of art shop?"
+    "The sign outside says it's closed."
+    "Sayori pays the taxi driver who looks at her wide eyed."
+    "He smiles and gets out of the car and opens the doors for us."
+    "How much did she just pay him?"
+    "We step outside and she gives him a friendly wave goodbye."
+    "He gets back in his taxi and honks his car before driving off."
+    "This time, at a legal speed."
+    mc "Are you going to explain to me what's happening now?"
+    s "Yeah."
+    "Sayori sighs."
+    s "Okay, you have to promise not to say anything until I'm finished."
+    s "Because my chain of thought is all over the place right now."
+    mc "Okay, I promise."
+    s "I'm breaking what I swore to myself by telling you this."
+    s "But..."
+    s "I think it won't matter."
+    s "Because you're not really you."
+    "I try to open my mouth."
+    "She puts her finger over it."
+    s "This whole world is collapsing."
+    if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
+        s "Between what I have to deal with and this thing that Monika told me."
+        s "This dark and cruel evil thing that I still don't really know how to deal with."
+    else:
+        s "And I can sense there's something else too."
+        s "Something dark."
+        s "Something evil."
+    s "All the weird stuff that's been happening."
+    s "It's not a coincidence."
+    s "It's the result of the world we know breaking."
+    s "Because it was never meant to be like this."
+    s "I'm not meant to be alive."
+    s "Yuri and Natsuki aren't either."
+    s "Not at this stage."
+    s "You're meant to be a puppet."
+    s "A blank person, meant to serve as a conduit."
+    s "And yet despite all of that, here we are."
+    s "Still alive, still ourselves."
+    "Sayori paces around."
+    s "I've been trying to fix it all."
+    s "But I can only do so much."
     return
 
 label ch15_exclusive_sayori_alone:
@@ -2448,6 +2654,7 @@ label ch15_exclusive_sayori_alone:
     return
 
 label ch15_mall_shared:
+    scene bg mall with wipeleft_scene
     "I sit down on the bench just outside of the food court."
     if ch13_name != "Sayori":
         "[ch13_name] told me to wait for her here so that's what I'm doing."
@@ -2475,6 +2682,7 @@ label ch15_mall_shared:
         y "What are you doing here?"
         if ch13_name != "Sayori":
             mc "I'm meant to be meeting up with [ch13_name] here."
+            mc "She wanted to do some last minute things with the preparations."
             y "I see."
             "Yuri looks around."
             y "Well, do you mind if I sit here?"
@@ -2531,7 +2739,7 @@ label ch15_mall_shared:
     y "B-But you're right, I've never acted like that before."
     y "Or at least, I never fell to that level..."
     y "Maybe it's--"
-    show monika 1ba zorder 3 at f33
+    show monika 1ba zorder 3 at hf33
     if ch13_name == "Monika":
         m "Oh, there you are!"
         m "I hope I didn't keep you waiting."
@@ -2673,27 +2881,289 @@ label ch15_mall_shared:
         m "Since I have no time to worry about it."
     show monika zorder 2 at t33
     mc "I guess you can't ignore it either."
-    mc "It see"
-    if ch13_name == "Natsuki":
+    mc "It seems like it's taking up a lot of your time."
+    mc "What are you going to do if it doesn't work out?"
+    show monika zorder 3 at f33
+    m "Well, the reason I'm preparing is so that it {i}does{/i} work out."
+    m "So I haven't really considered the possibility of failing."
+    m "Besides, if it doesn't work out..."
+    m "Then nothing matters anymore."
+    show yuri zorder 3 at f32
+    show monika zorder 2 at t33
+    y "That's rather bleak."
+    y "I'm sure you can still persevere even if things don't go your way, Monika."
+    "Monika simply sighs."
+    y "It couldn't be that bad, could it?"
+    show yuri zorder 2 at t32
+    show monika zorder 3 at f33
+    m "Who knows?"
+    m "If anything, it could be worse."
+    m "I suppose we'll all find out tomorrow, won't we?"
+    show monika zorder 2 at t33
+    if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
+        "The danger..."
+    mc "It's going to affect all of us, isn't it?"
+    "Monika simply smiles at me."
+    show yuri zorder 3 at f32
+    if ch13_name != "Monika":
+        y "A-Anyway, what are you doing here?"
+        y "Have you finished your preparations already?"
     else:
+        y "A-Anyway, I hope your preparations are going well."
+        y "I assume the two of you are done here."
+    show yuri zorder 2 at t32
+    show monika zorder 3 at f33
+    m "Just about finished actually!"
+    m "Now, if you don't mind..."
+    show yuri zorder 3 at f32
+    show monika zorder 2 at t33
+    y "Wait, Monika!"
+    y "I have to know..."
+    y "...Just what exactly is on the line?"
+    show monika 1bo
+    y "You're making it seem like like whatever is coming is terrible."
+    y "Isn't there anything we can do to help?"
+    if ch13_name == "Monika":
+        y "Does [player] even--"
+    else:
+        y "Something that will help you--"
+    show natsuki zorder 3 at hf31
+    show yuri zorder 2 at t32
+    if ch13_name == "Natsuki":
+        n "[player]!"
+        n "Why are you so hard to--"
+        "Natsuki cuts herself off as she notices Yuri and Monika."
+        "She turns towards me and I just give her a shrug."
+        n "W-What are you guys doing here?"
+        n "Aren't you all meant to be doing preparations?"
+        show natsuki zorder 2 at t31
+        show yuri zorder 3 at f32
+        y "I think we're all doing the same thing here, Natsuki."
+        y "Making a last minute trip for our preparations for tomorrow."
+        y "I guess we all should have prepared a bit more."
+        show yuri zorder 2 at t32
+        show monika zorder 3 at f33
+        m "Yeah..."
+        m "I don't know if I could have prepared more for tomorrow."
+        m "But I've done all that I can here."
+        show natsuki zorder 3 at f31
+        show monika zorder 2 at t33
+        n "[player], did you know they'd be here?"
+        show natsuki zorder 2 at t31
+        mc "Not really..."
+        mc "Everyone just kinda appeared."
+    else:
+        n "I thought I heard your voices."
+        n "It turns out, I was right."
+        n "So what are you all doing here?"
+        n "Shouldn't you guys be at home doing preparations or something?"
+        show natsuki zorder 2 at t31
+        show yuri zorder 3 at f32
+        y "I'm running some errands here."
+        y "It's got to do with the preparations for tomorrow."
+        y "What about you, Natsuki?"
+        show natsuki zorder 3 at f31
+        show yuri zorder 2 at t32
+        n "I'm...doing the same thing."
+        if ch13_name == "Yuri":
+            n "I guess that's why [player] is there too."
+            n "Then why is Monika here?"
+        else:
+            n "Then what are [player] and Monika doing here?"
+        show natsuki zorder 2 at t31
+        show monika zorder 3 at f33
+        m "The same thing you and Yuri are."
+        m "Getting some things ready for tomorrow."
+        "Monika smiles nervously."
+        m "Ahaha, I guess we were all a little underprepared."
+        show monika zorder 2 at t33
+        if ch13_name == "Monika":
+            mc "And I'm here with her."
+            mc "But I didn't really do much."
+        elif ch13_name == "Sayori":
+            mc "I'm here because Monika invited me."
+            mc "Sayori is..."
+            mc "...doing other things, I guess."
+            mc "She'll be fine."
+        else:
+            mc "I'm here with Yuri."
+            mc "I just came with her because otherwise I wouldn't know what to do with myself."
+    show natsuki zorder 3 at f31
+    n "Well, okay."
+    if ch13_name == "Sayori":
+        n "It's a shame about Sayori."
+        n "If she was here, we'd have the whole club."
+    else:
+        n "You know, if Sayori was here..."
+        n "We'd have the whole club."
+    show natsuki zorder 2 at t31
+    show yuri zorder 3 at f32
+    y "It sure is quite a coincidence that we'd all meet here."
+    y "At this exact time."
+    y "And we're all here for the same reasons too."
+    show yuri zorder 2 at t32
+    show monika zorder 3 at f33
+    m "What a coincidence."
+    if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
+        m "It is kinda unfortunate Sayori isn't here."
+        m "But she's got other matters to attend to."
+        m "Us meeting here is almost like fate, isn't it?"
+    else:
+        m "Almost like it was destined to happen."
+        m "Ah, but that just silly."
+    show monika zorder 2 at t33
+    mc "Well, it's definitely not the weirdest thing to have happened."
+    mc "And I suspect that it's only going to become even weirder."
+    show yuri zorder 3 at f32
+    y "I don't really want weirder things to happen..."
+    y "But I'd have to agree with you."
+    y "With all the things that have happened so far, I wouldn't be surprised if a serial killer showed up next."
+    "Everyone looks at Yuri with wide eyes."
+    y "T-That was meant to be a joke..."
+    y "L-Look, why don't the two of you sit down?"
+    y "We might as well talk while we're all here."
+    show yuri zorder 2 at t32
+    "Monika and Natsuki both take a seat."
     "Who would have thought that I'd be at the mall with everyone from the club?"
     "Well...almost everyone."
     "I did not expect to be spending my evening like this."
     "Not that I mind spending time with everyone."
     "It just seems weird that we all arrived at the same time and that we're all here for preparations."
     if ch13_name == "Sayori":
-        "Everyone already finished buying what they needed to."
+        "Everyone already finished doing what they needed to."
     else:
-        "We've all finished buying what we needed to."
+        "We've all finished doing what we needed to."
     "It feels like a pretty lucky coincidence that we all ended up meeting at this exact spot at his exact time."
     "This feels just like a club meeting, except we're not at the club."
     "Well...Sayori is somewhere else right now."
     "So I suppose that's not entirely true."
-    show monika 3ba zorder 3 at f32
+    show monika 3ba zorder 3 at f33
+    m "You know, I just thought of something."
+    show monika zorder 2 at t33
+    mc "What is it?"
+    show monika zorder 3 at f33
+    m "We're all here, aren't we?"
+    m "Most of us, anyway."
+    m "So..."
+    "Monika stands up."
     m "Okay, everyone!"
     m "We don't really get a chance to do things together outside of the club."
     m "But today is a really good opportunity to do just that."
     m "Does anyone have any suggestions?"
+    show natsuki zorder 3 at f31
+    show monika zorder 2 at t32
+    n "Is this really a good idea?"
+    n "Sayori isn't even here."
+    n "It feels kinda disrespectful to do something like that without our president."
+    show natsuki zorder 2 at t31
+    show monika zorder 3 at f32
+    m "Do you think so?"
+    m "I know Sayori would want us to have fun."
+    m "Don't you remember what she said a few days after [player] joined?"
+    $ currentpos = get_pos()
+    scene bg club_day_gray
+    show sayori 1g_gray zorder 2 at t41
+    show natsuki 5g_gray zorder 2 at t42
+    show monika 1d_gray zorder 3 at f43
+    show yuri 3w_gray zorder 2 at t44
+    show vignette zorder 100
+    with dissolve_scene_full
+    play music t3b fadeout 1.0
+    $ style.say_window = style.window_flashback
+    m "We're the only ones responsible for the fate of this club."
+    m "If we start the event and each put on a good performance..."
+    m 3a_gray "Then it will inspire others to do the same!"
+    m "And the more people who perform, the better we'll be able to show everyone what literature is all about!"
+    show monika zorder 2 at t43
+    show sayori 1r_gray zorder 3 at f41
+    s "Yeah!"
+    s 1x_gray "It's about expressing your feelings..."
+    s "Being intimate with yourself..."
+    s "Finding new horizons..."
+    s "And having fun!"
+    $ currentpos = get_pos()
+    $ audio.t3c = "<from " + str(currentpos) + " loop 4.618>bgm/3.ogg"
+    scene bg mall
+    show natsuki 1ba zorder 2 at t31
+    show yuri 1ba zorder 2 at t32
+    show monika 1ba zorder 3 at f33
+    with dissolve_scene_full
+    play music t3c fadeout 2.0
+    $ style.say_window = style.window
+    if monika_type == 2:
+        m "That's what happened, right?"
+        m "The details are kinda fuzzy in my head."
+        m "Because it was such a long time ago."
+        m "Anyway..."
+    else:
+        m "That's what happened."
+        m "Surely all of you remember?"
+    m "It's up to us."
+    m "The other four members of the club, to decide our fate."
+    m "So what do you all say to doing something, together?"
+    show yuri zorder 3 at f32
+    show monika zorder 2 at t33
+    y "Monika, I can't seem to recall Sayori ever saying that."
+    y "Yet..."
+    y "It feels {i}so{/i} familiar."
+    y "Like it actually did happen."
+    show yuri zorder 2 at t32
+    show monika zorder 3 at f33
+    m "W-What do you mean?"
+    m "Can't you remember?"
+    show natsuki zorder 3 at f31
+    show monika zorder 2 at t33
+    n "Yuri's right."
+    n "I can't place exactly when that happened."
+    n "Or if it happened at all."
+    n "I'm almost certain it did happen..."
+    n "But there's so many weird details."
+    show natsuki zorder 2 at t31
+    mc "..."
+    show monika zorder 3 at f33
+    m "[player], what's wrong?"
+    show monika zorder 2 at t33
+    mc "This didn't happen."
+    "Did it?"
+    mc "I...can't..."
+    "What's going on?"
+    "It."
+    "Did not."
+    "Happen."
+    "What in the world are the three of them talking about...?"
+    "Sayori never said those words."
+    mc "I definitely have no memory of it happening, so..."
+    show monika zorder 3 at f33
+    m "{i}(I think I understand.){/i}"
+    m "{i}(It's all messed up.){/i}"
+    m "{i}(She's messed with their minds...){/i}"
+    m "Okay, everyone!"
+    m "I may have made a mistake!"
+    m "But whether it did or didn't happen, I'm still sure Sayori would want us to have fun."
+    m "She's just that kind of person, wouldn't you agree?"
+    show yuri zorder 3 at f32
+    y "I suppose."
+    show natsuki zorder 3 at f31
+    show yuri zorder 2 at t32
+    n "Whatever."
+    show natsuki zorder 2 at t31
+    show monika zorder 3 at f33
+    m "Well, this is a great start."
+    m "No one gave a suggestion so we're just stuck here."
+    "Monika ponders to herself for a moment."
+    m "As the Vice President of the club, I'll assume leadership while Sayori isn't here."
+    m "And I actually have an idea for--"
+    show natsuki zorder 3 at f31
+    show monika zorder 2 at t33
+    n "Wait, you're actually making this an official club activity?"
+    show natsuki zorder 2 at t31
+    show monika zorder 3 at f33
+    m "Of course!"
+    if monika_type == 0:
+        m "It's going to be fun!"
+    else:
+        m "It's going to be very interesting."
+        m "Oh, and fun too!"
     return
 
 label ch15_teaser:
