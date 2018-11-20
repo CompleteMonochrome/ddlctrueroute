@@ -5165,6 +5165,45 @@ label ch14_exclusive_natsuki:
             mc "Just follow me, you'll see soon enough."
             "I lead them towards the easel."
             mc "Does this look familiar?"
+            show dadsuki zorder 3 at f21
+            d "What kind of question is that?"
+            d "Of course it looks familiar."
+            d "We literally put it there."
+            show dadsuki zorder 2 at t21
+            mc "Well...yeah."
+            mc "I meant--"
+            show dadsuki zorder 2 at t31
+            show natsuki zorder 3 at hf32
+            show momsuki zorder 2 at t33
+            n "Mom, dad!"
+            n "Listen up!"
+            n "[player] and I went to the city yesterday for a date."
+            n "But that's not all we did."
+            n "We--"
+            show natsuki zorder 2 at t32
+            show momsuki zorder 3 at f33
+            mo "Oh my goodness!"
+            mo "[player], what did you two get up to?!"
+            mo "I trusted you!"
+            show dadsuki zorder 3 at f31
+            show momsuki zorder 2 at t33
+            d "I can't believe it."
+            d "You're both so young..."
+            d "Why did you--"
+            show dadsuki zorder 2 at t31
+            mc "W-What?"
+            mc "I-I didn't..."
+            mc "W-We didn't...!"
+            show natsuki zorder 3 at hf32
+            n "Quiet!"
+            "Haruki and Yasuhiro stop talking and turn towards Natsuki."
+            "I guess they were't expecting her to yell."
+            n "Jeez, we didn't do anything!"
+            n "Just let me finish, okay?"
+            n "[player] had an idea."
+            n "It was sort of a present to me, but also towards both of you."
+            n "He knew..."
+            n "...that things between the three of us would never be the same."
         else:
             n 1be "You'll have to keep him distracted."
             mc "What? I'm not good at distractions!"

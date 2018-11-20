@@ -3142,6 +3142,18 @@ image ayame 1h = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.p
 image ayame 1i = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/i.png")
 image ayame 1j = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/j.png")
 
+# Ayame Casual
+image ayame 1ba = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1blr.png", (0, 0), "mod_assets/images/ayame/a.png")
+image ayame 1bb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1blr.png", (0, 0), "mod_assets/images/ayame/b.png")
+image ayame 1bc = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1blr.png", (0, 0), "mod_assets/images/ayame/c.png")
+image ayame 1bd = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1blr.png", (0, 0), "mod_assets/images/ayame/d.png")
+image ayame 1be = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1blr.png", (0, 0), "mod_assets/images/ayame/e.png")
+image ayame 1bf = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1blr.png", (0, 0), "mod_assets/images/ayame/f.png")
+image ayame 1bg = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1blr.png", (0, 0), "mod_assets/images/ayame/g.png")
+image ayame 1bh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1blr.png", (0, 0), "mod_assets/images/ayame/h.png")
+image ayame 1bi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1blr.png", (0, 0), "mod_assets/images/ayame/i.png")
+image ayame 1bj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1blr.png", (0, 0), "mod_assets/images/ayame/j.png")
+
 # Gray Images
 image bg residential_day_gray = im.Grayscale("bg/residential.png")
 image bg club_day_gray = im.Grayscale("bg/club.png")

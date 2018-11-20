@@ -19,9 +19,6 @@ label choose_start:
     s "We have to sort out a few things first."
     menu:
         s "Who did you spend the weekend with?"
-        "Sayori, I'm literally here to test something out.":
-            s "Oh."
-            jump ch15_teaser
         "Yuri.":
             $ persistent.ch4_preparations = "Yuri"
             $ ch4_scene = "yuri"

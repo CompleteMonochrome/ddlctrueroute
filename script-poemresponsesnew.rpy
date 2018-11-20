@@ -4421,7 +4421,7 @@ label ch15_m_start:
         m 2j "Part of the play."
         mc "Meaning...what exactly?"
         if ch13_name == "Monika":
-            m 5 "Meaning your time is coming."
+            m 5a "Meaning your time is coming."
             "My time?"
             m "And you had better be ready for it."
         else:

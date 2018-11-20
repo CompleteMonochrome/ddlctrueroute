@@ -1572,6 +1572,60 @@ label ch15_exclusive_yuri:
     "And besides, she's waiting for me outside."
     "I take one final look around before closing the door behind me."
     scene bg mall_day with wipeleft_scene
+    "Yuri and I travel to the mall."
+    "We took public transport there during rush hour so it took a bit longer than it would on the weekend."
+    "Despite that, it's still a short trip since Yuri lives kinda close to the mall."
+    "The ride gave us some time to talk about what we were going to be doing."
+    "It doesn't seem like it's going to be a quick in and out."
+    "There's a lot of different places we have to go to."
+    if yuri_date:
+        "And she also said she wanted to make a quick stop at the marina."
+        "I'm thinking that's probably the place where we dropped that knife."
+        "The knife that completely changed Yuri."
+        "Well, all the good parts about her are still there."
+    else:
+        "And she said she wanted to be alone for a little bit."
+        "Something about going to the marina."
+        "..."
+        "Didn't I see her there before?"
+        "What was that about again?"
+        "It probably doesn't matter."
+    show yuri 1ba zorder 2 at t11
+    y "Let's get moving."
+    y "All of the stuff we have to get is scattered all over the place."
+    mc "You'd think they'd have a single store that sells all that stuff."
+    y "It's really specific materials that are only avalaible in certain stores."
+    y "And most of them happen to be in completely different stores."
+    mc "What kind of materials are they anyway?"
+    y "I probably should have been more specific."
+    y "The specific material, made by brands I trust are in different stores."
+    y "I'm sure you could find a different brand of the same thing in another store."
+    mc "So what makes these particular ones so important to have then?"
+    y "I suppose there isn't any real reason for it."
+    y "But if I had to give a reason it's because I trust those brands."
+    y "They've been reliable in the past."
+    y "I'd say it's worth the trouble getting them."
+    y "Besides, we'll still have plenty of time to get everything together."
+    y "You don't have a problem with that, do you?"
+    mc "No, not really."
+    mc "But some of those stores are on opposite ends of the mall."
+    y "Don't like walking, [player]?"
+    mc "The mall is huge, Yuri."
+    y "It'll be some good exercise."
+    if yuri_date:
+        y "Besides, it'll be some good quality time together."
+    else:
+        y "It'll give us a chance to talk about how we're going to use the materials."
+    mc "I guess so."
+    "Yuri smiles."
+    mc "If I recall correctly, the first stop is..."
+    y "The store right next to the entrance."
+    "Yuri points towards a store."
+    "It covers two levels of the mall because it's such a big store."
+    "It seems they sell all sorts of stuff from clothes, to home renovation stuff to fabrics."
+    mc "It's a huge store."
+    y "And we're only getting one thing from it."
+    mc "Wow."
     return
 
 label ch15_exclusive_natsuki:
@@ -1765,6 +1819,7 @@ label ch15_exclusive_monika:
         "I guess I shouldn't just stand here."
         "After all, I really shouldn't keep her waiting at the mall."
         call ch15_exclusive_monika_alone
+    # After both of these, you're at the mall
     return
 
 label ch15_exclusive_monika_together:
@@ -1834,6 +1889,26 @@ label ch15_exclusive_monika_together:
     mc "Right."
     mc "I'm just surprised, that's all."
     m "You're not the only one~"
+    "What did she mean by that?"
+    scene bg bedroom with wipeleft_scene
+    "I can see Monika waiting outside from my window."
+    "She seems to just be there waiting patiently."
+    "I guess I shouldn't keep her waiting."
+    "I quickly change my clothes and gather what I need for the trip."
+    "I wonder what we're going to be doing at the mall."
+    "We're going to be buying things but...what?"
+    "What kind of things would Monika need to buy for tomorrow?"
+    "She already has a grand piano from Sayori."
+    "And it's not like she doesn't have other equipment for playing the piano already."
+    "That doesn't really leave many other options..."
+    if monika_type == 0 or monika_type == 1:
+        "Except maybe..."
+        "The danger?"
+        "But how could she possibly prepare for something like that?"
+        "Does she even know what it really is?"
+    "I don't know."
+    "I guess I could ask her for more details."
+    "But right now I have to hurry to her."
     return
 
 label ch15_exclusive_monika_alone:
@@ -1842,6 +1917,43 @@ label ch15_exclusive_monika_alone:
     play music t3
     "I make it home pretty quickly."
     "With the way Monika was moving, I kinda felt inspired to do the same."
+    "There's not really much to do tonight."
+    "For me, anyway."
+    "All of our preparations depends on Monika."
+    "I'm just kinda...there."
+    "I really hope I can be more useful."
+    "Maybe she can give me something to do at the mall."
+    "Carrying the stuff she was planning to buy, maybe?"
+    "I just really want to be useful to her."
+    "All I've done so far is pick a song for her."
+    "And even then, she's the one that's learning it."
+    scene bg bedroom with wipeleft_scene
+    "Maybe I can get Monika something."
+    "To show my appreciation for all the hard work she's doing."
+    "Would that even make sense?"
+    "How would she react?"
+    "Maybe I can just do something to help her perform better tomorrow."
+    if ch12_markov_agree:
+        "Reading the book could do it."
+        "She wanted me to do that, right?"
+        "I wonder how that could even help her."
+        "I don't need to wonder."
+        "Just do it."
+    else:
+        "I could surprise her somehow."
+        "Sayori already got her a grand piano to play on..."
+        "I'm not sure how I could top that."
+        "But I might be able to think of something before the end of the day."
+    "I lay down on my bed."
+    "There's so much going on tomorrow."
+    "Everyone is working so hard."
+    "Everyone except me."
+    "I sigh."
+    "The inspiration to move quickly is slowly disappearing."
+    "She's still relying on me."
+    "So at any rate..."
+    "There's no time to waste."
+    "I still have to meet her at the mall, after all."
     return
 
 label ch15_exclusive_sayori:
@@ -2900,7 +3012,7 @@ label ch15_mall_shared:
     m "If anything, it could be worse."
     m "I suppose we'll all find out tomorrow, won't we?"
     show monika zorder 2 at t33
-    if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
+    if monika_type == 0 or monika_type == 1:
         "The danger..."
     mc "It's going to affect all of us, isn't it?"
     "Monika simply smiles at me."
@@ -3010,7 +3122,7 @@ label ch15_mall_shared:
         m "Us meeting here is almost like fate, isn't it?"
     else:
         m "Almost like it was destined to happen."
-        m "Ah, but that just silly."
+        m "Ah, but that's just silly."
     show monika zorder 2 at t33
     mc "Well, it's definitely not the weirdest thing to have happened."
     mc "And I suspect that it's only going to become even weirder."
@@ -3164,12 +3276,9 @@ label ch15_mall_shared:
     else:
         m "It's going to be very interesting."
         m "Oh, and fun too!"
-    return
-
-label ch15_teaser:
-    scene bg library with dissolve_scene_full
-    show ayame 1h zorder 3 at t21
-    show yuri 3pa zorder 3 at f22
-    # show yuri 3pa zorder 2 at t22
-    y "If you have any questions, you should look for our president."
+    show yuri zorder 3 at f32
+    show monika zorder 2 at t33
+    y "Normally, I wouldn't have a problem with doing something together."
+    y "Don't get me wrong, I enjoy spending time with you all but..."
+    y "I still have to make some final things for the preparations for tomorrow."
     return
