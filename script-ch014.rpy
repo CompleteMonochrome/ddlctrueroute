@@ -6920,7 +6920,7 @@ label ch14_exclusive_sayori:
     if ch14_overall_choice == "Natsuki":
         "A copy of the first couple of volumes of Natsuki's manga."
     elif ch14_overall_choice == player:
-        "A copy of the first couple of volumes of my favourite manga."
+        "A copy of the first couple of volumes of my favorite manga."
     else:
         "A copy of [ch14_overall_choice]'s book."
         if ch14_overall_choice == "Sayori":

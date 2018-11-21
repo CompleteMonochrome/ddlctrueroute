@@ -559,6 +559,8 @@ label after_load:
         $ ch15_m_together = False
     if not hasattr(store,'ch15_s_together'):
         $ ch15_s_together = False
+    if not hasattr(store,'ch15_s_questions'):
+        $ ch15_s_questions = [False,False,False,False,False,False,False,False]
     if not hasattr(store, 'chapter_names'):
         $ chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","???","???","???","???","???"]
     if not hasattr(store, 'special_chapter'):

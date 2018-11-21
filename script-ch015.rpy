@@ -2194,8 +2194,8 @@ label ch15_exclusive_sayori:
     "Even though I literally just did that."
     scene bg black with wipeleft_scene
     $ persistent.ch15_sayori_chance = True
-    $ currentpos = get_pos()
     $ renpy.save_persistent()
+    $ currentpos = get_pos()
     stop music fadeout 2.0
     "I go downstairs and shut the door to her house."
     "I look around her house again for any sign of her."
@@ -2570,16 +2570,702 @@ label ch15_exclusive_sayori_together:
     s "It's the result of the world we know breaking."
     s "Because it was never meant to be like this."
     s "I'm not meant to be alive."
-    s "Yuri and Natsuki aren't either."
+    s "I was meant to die, [player]."
+    s "A suicide."
+    s "And you were meant to find me."
+    s "I'm not the only one."
+    s "Yuri and Natsuki aren't meant to be alive either."
     s "Not at this stage."
-    s "You're meant to be a puppet."
+    s "They're both meant to be...gone."
+    s "All of this...it's happening because of the mod that {i}you{/i} installed."
+    s "Everything is breaking."
+    s "And [player]...you're meant to be a puppet."
     s "A blank person, meant to serve as a conduit."
+    s "The connection to the real world that's out there."
     s "And yet despite all of that, here we are."
-    s "Still alive, still ourselves."
+    s "Still alive and still ourselves."
     "Sayori paces around."
-    s "I've been trying to fix it all."
+    s "Don't get me wrong."
+    s "I really appreciate what you've tried to do."
+    s "You wanted to give us happy endings."
+    s "At first, I thought it would be easy."
+    s "But now..."
+    "She stops pacing."
+    s "There's so much wrong with this world."
+    s "The others don't know the extent of it."
+    s "And I've been trying to fix it all."
     s "But I can only do so much."
-    return
+    s "I almost hate that Monika gave this responsibility to me."
+    s "But I suppose if she didn't, I wouldn't be here today."
+    s "I wouldn't be telling you how difficult this all is."
+    s "I never thought it would be {i}this{/i} difficult, [player]."
+    s "I just wish..."
+    s "That things could be normal."
+    s "That things were easier."
+    s "That I could just go back to the simple days of bliss."
+    s "But I know."
+    s "I can't give this up."
+    s "Getting rid of it now could make everything unstable."
+    s "I'm already too committed to this task."
+    s "Now, you've probably got a lot of questions."
+    s "I don't know if I can answer all of them."
+    s "I know that if you ask some certain questions, the game--"
+    s "This {i}world{/i} will...tear itself apart for all I know."
+    s "So please be careful in what you ask, okay?"
+    mc "I'll be careful."
+    s "Alright."
+    s "Ask away."
+    label ch15_exclusive_sayori_together_questions:
+    menu:
+        "What responsibility did Monika give you?" if not ch15_s_questions[0]:
+            $ ch15_s_questions[0] = True
+            s "Hmm..."
+            s "I don't know if I can really answer that."
+            s "Let's just say things were difficult before."
+            s "I wouldn't be who I am if Monika didn't give me this responsibility."
+            s "Maybe you know what I'm talking about."
+            s "It's a really dumb thing to think about."
+            s "I'm not even sure why all this responsibility is linked to it."
+            s "But that's the way things are."
+            s "I can't do anything to change them."
+            s "Handing this responsibility back to her in this current state would be terrible."
+            s "I wouldn't want to put that kind of burden on her."
+            s "It's just not fair."
+            s "So I have to deal with it."
+            jump ch15_exclusive_sayori_together_questions
+        "How do you know all of this?" if not ch15_s_questions[1]:
+            $ ch15_s_questions[1] = True
+            s "Getting this power gave me..."
+            s "The ability to gain knowledge."
+            s "Not just the normal way."
+            s "I can't just look it up on the internet."
+            s "No, I've had to do some terrible things."
+            s "I've had to experience things I never thought I would."
+            s "All because I could."
+            s "Because in the end, I could just undo it."
+            s "Does that make me a horrible person...?"
+            s "I try to tell myself that I'm doing it for them but..."
+            s "Who knows at this point?"
+            s "I could be doing this for myself."
+            s "My head isn't clear right now."
+            s "It's like these rainclouds are stopping me from seeing the sky."
+            s "But this time, I can't get rid of them."
+            s "They've become a part of me..."
+            jump ch15_exclusive_sayori_together_questions
+        "What's my role in all of this?" if not ch15_s_questions[2]:
+            $ ch15_s_questions[2] = True
+            s "I'm not entirely sure."
+            s "You're here but you're not like the others."
+            s "You're different."
+            s "You're not entirely bound to the underlying rules of this world."
+            s "And that's because you're being watched."
+            s "All your actions are determined by someone else."
+            s "Even you asking this question."
+            s "You didn't really ask it."
+            s "If you're talking about right now..."
+            s "How you aren't 'really you'..."
+            s "It's difficult to explain and I'm not sure how I can answer that without breaking things..."
+            s "But, I assume that {i}you{/i} want to know {i}your{/i} role too."
+            s "Your strawberries."
+            s "That's the main thing."
+            s "In fact, without them you wouldn't even be here right now."
+            s "Because I know you used them to get here."
+            s "How else could you have known?"
+            s "I'm afraid you're going to have to use them again at some point."
+            s "They're stronger than mine."
+            s "They can even make me forget."
+            s "That's terrifying to me, you know?"
+            s "Not being able to control my own destiny..."
+            s "Sigh..."
+            s "I guess you're the only one who can really do that."
+            s "I just hope you haven't made a big mistake."
+            jump ch15_exclusive_sayori_together_questions
+        "Is there anything I can do to help?" if not ch15_s_questions[3]:
+            $ ch15_s_questions[3] = True
+            s "There's nothing."
+            s "Everything is already set in motion."
+            s "It's not up to you to change things."
+            s "You can't do what I can, [player]."
+            s "If you could, I might have been a little more positive about this."
+            s "Because together, I know we can beat it."
+            s "And..."
+            s "At this point, it's not really up to me either."
+            s "But I have to try."
+            s "With everything I've got."
+            s "I'm going to do my best."
+            s "I just want you to be there."
+            s "Be there when it happens."
+            s "Be with me...when it happens."
+            s "Okay?"
+            jump ch15_exclusive_sayori_together_questions
+        "Who are you talking to?" if not ch15_s_questions[4]:
+            $ ch15_s_questions[4] = True
+            s "I can't...answer that."
+            s "I'm not sure what kind of effect it will have."
+            s "Especially since last time you knew..."
+            s "Things didn't go well."
+            s "I'm sorry."
+            s "I know you want to know."
+            s "You deserve to know."
+            s "But they deserve their happy ending more."
+            s "Besides, I'm sure whoever it is is probably listening right now."
+            s "I'm not sure why you'd even ask that question."
+            jump ch15_exclusive_sayori_together_questions
+        "Why did you leave all the doors open?" if not ch15_s_questions[5]:
+            $ ch15_s_questions[5] = True
+            s "Do you remember what I said?"
+            s "How you aren't really you?"
+            s "I'm sure soon enough the game will realize there are two [player]s."
+            s "And when that happens, you'll merge into a single person."
+            s "I know you noticed."
+            s "While we were in the car, someone almost dropped their things."
+            s "Do you know who that was?"
+            s "Don't say it."
+            s "I'm certain you know anyway."
+            jump ch15_exclusive_sayori_together_questions
+        "Who is this guy we're meeting?" if not ch15_s_questions[6]:
+            $ ch15_s_questions[6] = True
+            s "He's a friend."
+            s "You wouldn't know him."
+            s "At least...you shouldn't know him."
+            s "But I trust him and that should be enough for you as well."
+            s "Okay?"
+            jump ch15_exclusive_sayori_together_questions
+        "Why don't you just give up?" if persistent.markov_agreed and not ch15_s_questions[7]:
+            $ ch15_s_questions[7] = True
+            s "G-Give up?"
+            s "That's..."
+            s "Do you think I haven't thought about it?"
+            s "There's still thoughts of depression, you know."
+            s "You can't just cure it out of somebody."
+            s "Sure, you can reduce the effect."
+            s "But it never truly goes away."
+            s "If I gave up now, it would have all been for nothing."
+            s "All that time and effort, just wasted."
+            s "Why would you even ask something like that?"
+            s "Are you trying to get a response out of me?"
+            s "Well, good job."
+            s "You've done it."
+            s "I really thought I could believe in you, you know?"
+            s "I..."
+            s "I think I'm overreacting."
+            s "Am I overreacting?"
+            s "I'll just..."
+            s "Whatever."
+            jump ch15_exclusive_sayori_together_questions
+        "What are you going to do now?" if ch15_s_questions[0] and ch15_s_questions[1] and ch15_s_questions[2] and ch15_s_questions[3] and ch15_s_questions[5] and ch15_s_questions[6]:
+            s "Now?"
+            s "Well, I want some answers first."
+            s "I know he probably won't have them all."
+            s "But he's our best shot."
+            s "Even if he can give me something I don't already know."
+            s "Just a tiny bit of information."
+            s "That could be all I need to solve the puzzle."
+            jump ch15_exclusive_sayori_together_questions
+        "Never mind.":
+            pass
+    s "Then I guess this is it."
+    s "We're gonna go inside."
+    s "He's waiting for us."
+    s "Just be warned..."
+    s "He can be a little...peculiar."
+    s "But he's definitely really helpful."
+    s "I'm sure if anyone can help us, he can."
+    mc "Alright, Sayori."
+    mc "I'm not sure what we're in for."
+    s "I'm not sure either."
+    s "I just hope it's not all bad news."
+    mc "You're expecting bad news?"
+    s "Any news will be helpful."
+    s "Good or bad."
+    "Sayori puts her hand at the door then freezes."
+    "I try waving a hand in front of her face but she's not moving."
+    s "Let's go, we've got no time to lose."
+    s "Especially since your time is running out."
+    scene bg portraitshop_day with wipeleft_scene
+    "Sayori and I step into the shop."
+    "I didn't notice before but the sign outside showed opening hours."
+    "Right now, the store should be open."
+    "But it's closed."
+    "All around the place I can see canvases of artwork."
+    "And just things you'd see lying around in an arts and crafts class."
+    "Sayori and I approach the counter."
+    show sayori 1a zorder 2 at t11
+    s "Are you here?"
+    s "I need answers."
+    show sayori zorder 2 at t21
+    show mysteriousclerk 1a zorder 3 at f22
+    cl "My, my where are your manners dear?"
+    cl "Surely you haven't forgotten how to say the word 'please' since last we met, have you?"
+    cl "Ohoho, and it seems we've got company."
+    "The clerk notices me and skitters across towards me."
+    if persistent.ch13_nat_date:
+        cl "And who might you--"
+        cl "Wait..."
+        cl "I...I know you."
+        show mysteriousclerk zorder 2 at t22
+        mc "What?"
+        mc "I don't think we've met before."
+        mc "I definitely would have remembered someone like you."
+        show mysteriousclerk zorder 2 at t22
+        cl "No, no!"
+        cl "We've definitely met."
+        cl "You're--"
+    else:
+        cl "And who might you be, hmm?"
+        cl "Perhaps the dashing young boyfriend of our friend Sayori here."
+        cl "Curious."
+        cl "Definitely not the finest specimen but--"
+    show sayori zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    s "Look, we're not here for introductions, okay?"
+    s "And besides you know perfectly well who this is."
+    s "You know enough about him to have figured it out by now, right?"
+    "The clerk nods his head."
+    s "I'm here for answers."
+    s "I know you've got some."
+    s "So...please."
+    show sayori zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "I see."
+    cl "You're desperate."
+    cl "I mean, who wouldn't be given your situation?"
+    cl "Okay."
+    cl "Ask away, and I shall try to answer to the best of what I know."
+    cl "But it isn't much."
+    cl "I haven't learned as much as you would have wanted me to."
+    cl "It's just not possible."
+    cl "With the limited extent of power that I have over this world."
+    show sayori zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    s "That's all I can ask for."
+    s "Thank you."
+    show sayori zorder 2 at t21
+    mc "Wait a second..."
+    mc "What kind of power do you have?"
+    mc "Is it anytihng like Sayori's?"
+    "The clerk gives me a confused expression."
+    show mysteriousclerk zorder 3 at f22
+    cl "So she didn't tell you, did she?"
+    cl "Is that wise?"
+    cl "Keeping secrets from those we trust?"
+    cl "Hah."
+    cl "Whatever, it's none of my business."
+    cl "But a relationship is built on trust."
+    cl "You, of all people should know that."
+    show mysteriousclerk zorder 2 at t22
+    mc "Sayori, that's alright."
+    mc "You don't need to tell me."
+    mc "I still trust you."
+    mc "We've all got secrets to hide."
+    show sayori zorder 3 at f21
+    s "I couldn't tell him."
+    s "Even if I wanted to."
+    s "Do you know how broken this world is right now?"
+    s "Do you know he's not even meant to be here?"
+    s "The risk I'm taking even bringing him into contact with you..."
+    show mysteriousclerk zorder 3 at f22
+    cl "There's no risk."
+    cl "Believe me."
+    cl "I've been down this road before."
+    cl "And if there's anything I've learned..."
+    cl "It's that it was ruined because of a lack of trust."
+    cl "But it's up to you."
+    show mysteriousclerk zorder 2 at t22
+    mc "Sayori, really."
+    mc "You don't need to tell me."
+    mc "I'm sure it's better that way."
+    mc "Besides, I'm only here for you."
+    mc "To help you."
+    mc "You don't have to listen to this guy."
+    show sayori zorder 3 at f21
+    s "I know."
+    s "He's always been difficult to work with."
+    s "But still, I know he can help."
+    "Sayori changes the expression on her face."
+    "It seems all serious now."
+    s "Did you find anything new about what's going to happen tomorrow?"
+    show sayori zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "Not since the last time you asked."
+    cl "Like I said before, that evil thing that's coming..."
+    cl "I don't know if you can stop it."
+    show sayori zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    s "Then if I can't stop it, then who can?"
+    s "Who in this world can do something that I can't?!"
+    show sayori zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "I believe you know the answer already."
+    cl "You just don't want to accept it."
+    cl "Because of what it implies."
+    show sayori zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    s "..."
+    s "Have I reached the extent of what I can do?"
+    s "This is it?"
+    show sayori zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "That's it."
+    cl "You were never intended to become the--"
+    "The clerk looks at me then back at Sayori."
+    cl "To have it in the first place."
+    cl "So some of the powers are locked."
+    cl "Never to be accessed."
+    cl "It's just one of the rules of this world I suppose."
+    "The clerk shrugs."
+    cl "Those powers can only be unlocked by the true wielder of this power."
+    cl "The one that it was intended for."
+    show sayori zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    s "You know I can't do that."
+    s "There must be another way."
+    s "A way to prevent tomorrow."
+    s "Or at least, defeat what's coming."
+    s "You have to know something."
+    s "You have to!"
+    show sayori zorder 2 at t21
+    "The clerk takes a look at Sayori and laughs."
+    show mysteriousclerk zorder 3 at f22
+    cl "Ahaha..."
+    cl "If I knew the answers, I wouldn't be here running a store."
+    cl "It's an inevitability, you know that."
+    cl "Your time will come, the same happened to me."
+    cl "You just have to face it."
+    show sayori zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    s "I refuse to believe it."
+    s "We can change the future."
+    s "We haven't given up hope yet."
+    show sayori zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "Listen, Sayori."
+    cl "Even with all this new knowledge I know now..."
+    cl "It's not going to help."
+    cl "Knowing when it's going to happen wouldn't have helped me."
+    cl "Knowing what it is wouldn't have helped."
+    cl "You can't stop inevitability no matter how prepared you are."
+    cl "And trust me, I know."
+    cl "I was the most prepared out of everyone."
+    cl "I {i}warned{/i} everyone."
+    cl "And they were ready."
+    cl "At least, they thought they were."
+    cl "But you know how that story ends."
+    cl "And you."
+    "The clerk puts his arms on my shoulders."
+    cl "You know you're going to forget everything that's happened here, right?"
+    cl "So bringing you along was pointless."
+    show mysteriousclerk zorder 2 at t22
+    mc "What?"
+    mc "Is he right, Sayori?"
+    mc "Am I really going to forget everything?"
+    show sayori zorder 3 at f21
+    s "I don't know."
+    s "But I know you'll have to merge."
+    s "You're an impossibility, [player]."
+    s "You...shouldn't exist."
+    s "And I assume it's going to take the latest copy of you instead of..."
+    s "You won't keep your memories, [player]."
+    s "I'm sorry."
+    show sayori zorder 2 at t21
+    mc "So that's how it is?"
+    mc "I'm going to forget everything?"
+    mc "I won't be able to help Sayori tomorrow...?"
+    show mysteriousclerk zorder 3 at f22
+    cl "Cruel world, ain't it?"
+    cl "You get used to it."
+    show mysteriousclerk zorder 2 at t22
+    mc "All of this was for nothing?"
+    mc "I had this bad feeling and so I knew that I had to try to help Sayori."
+    mc "That I could..."
+    mc "Get her through this in one piece."
+    mc "Maybe I could have helped prepare for tomorrow."
+    mc "To deal with...whatever it coming."
+    mc "But if I'm just going to forget."
+    mc "Then..."
+    mc "I'm sorry."
+    mc "I wanted to help."
+    mc "I didn't you to be alone."
+    mc "To have to deal with this all by yourself."
+    mc "It seems more useless than I thought."
+    show sayori zorder 3 at f21
+    s "No, I'm sorry..."
+    s "I should have told you."
+    s "But there's just no way for you to keep your memories."
+    s "Unless you were the latest copy."
+    s "But you're not even a real copy...you're just..."
+    show sayori zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "Actually."
+    cl "There is some way you can get through all of this."
+    cl "Memory intact."
+    show sayori zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    s "What?"
+    s "Then why didn't you say anything?!"
+    show sayori zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "I had to be sure his heart was in the right place."
+    cl "There's still a possibility that it isn't."
+    cl "But hell..."
+    cl "It's all going to end soon so why not?"
+    show sayori zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    s "So you'll help him keep his memories of this?"
+    show sayori zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "I can't do much."
+    cl "I can only give instructions."
+    cl "But this is kinda..."
+    cl "Well, let's say morally gray."
+    show sayori zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    s "Morally gray?"
+    s "In what way?"
+    show sayori zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "We need to put his mind along with his memories into another person."
+    cl "But only temporarily."
+    cl "He neesd to make contact with his real self."
+    cl "Then if you do things correctly, the memories should just transfer right over."
+    cl "And the other person will be back to normal."
+    show sayori zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    s "Y-You're asking me to take away someone's free will?"
+    s "It's only temporary but still...!"
+    s "I..."
+    show sayori zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "It's the only option."
+    cl "Otherwise he's not gonna remember thing."
+    show mysteriousclerk zorder 2 at t22
+    mc "Sayori..."
+    mc "If you can't do it..."
+    mc "I won't force you to."
+    mc "I'd rather forget than make you manipulate someone else for me."
+    show sayori zorder 3 at f21
+    s "I've already..."
+    s "...crossed that boundary, [player]."
+    "Sayori avoids my eyes."
+    s "What's one more time, right?"
+    show sayori zorder 2 at t21
+    mc "Sayori..."
+    show mysteriousclerk zorder 3 at f22
+    cl "You know what, this might work."
+    cl "If he remembers everything then..."
+    cl "I may have something for you, Sayori."
+    cl "It's not foolproof."
+    cl "You still need to do a lot of preparations for it."
+    cl "I'm not sure you'll find the time get everything you need."
+    cl "Or if you would even want to go through with it, knowing what it implies."
+    show sayori zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    s "Anything to save my friends.{nw}"
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    window hide(None)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.25)
+    stop sound
+    hide screen tear
+    window show(None)
+    s "Anything to save my friends.{fast}"
+    window auto
+    s "Ehehe, oops."
+    s "And besides, I have all the time in the world."
+    s "Tell me what we have to do."
+    show sayori zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "Well...firstly, we need to get [player]'s memories."
+    cl "And to do that..."
+    cl "I'm gonna need something."
+    cl "I won't be a second."
+    show mysteriousclerk at thide
+    hide mysteriousclerk
+    show sayori zorder 2 at t11
+    "The clerk enters the back of the shop."
+    s "Are you ready, [player]?"
+    mc "I guess so."
+    mc "You know..."
+    mc "You're putting a lot of blind faith into this guy."
+    mc "What makes him so special that you'd just trust him like that?"
+    s "It's hard to explain..."
+    s "And if I told you, you wouldn't believe me."
+    s "Let's just say...he's like us."
+    mc "I'm not sure I get it but--"
+    $ currentpos = get_pos()
+    stop music
+    play sound fall
+    $ pause(0.25)
+    scene black
+    with close_eyes
+    $ pause(1.5)
+    s "What the--"
+    cl "He shouldn't be conscious for this."
+    cl "Trust me, the pain is unbearable."
+    s "That doesn't mean you had to do that!"
+    s "I could have--"
+    cl "Do you know how much time is left before he disappears?"
+    cl "Just transfer his memory already."
+    s "But to who?"
+    s "Yuri, Natsuki or--"
+    cl "There's a another person."
+    cl "She's at the mall right now buying your club members gifts."
+    s "But how do you--"
+    window hide
+    $ pause(1.5)
+    window show(None)
+    scene bg mall with open_eyes
+    $ audio.t3b = "<from " + str(currentpos) + " loop 4.618>bgm/3.ogg"
+    play music t3b fadein 1.0
+    "And it seems that I've finished buying gifts for everyone."
+    window auto
+    "Yuri didn't really tell me much about the club members."
+    "I sure hope they like what I've bought for them."
+    "I definitely didn't cheap out on it."
+    "I..."
+    "I grab my head."
+    "Who am I?"
+    "I'm..."
+    "[player]...right?"
+    "No, I'm Ayame."
+    "Why do I even need to ask myself that?"
+    "Why can't I think straight all of a sudden?"
+    "Ah...!"
+    "I need to sit down and figure things out."
+    "There's so many people talking at once."
+    "What do I have to do?"
+    "I...have to meet up with the club members, right?"
+    "That's what I have to do."
+    "But where are they?"
+    "Something in the back of my head is telling me to go to the food court."
+    "That's where they are, right?"
+    "I suppose I'll find out."
+    scene bg mall with wipeleft
+    "I make it to the food court."
+    "There's people all over the place."
+    "I notice a group of four people walking away."
+    "One with pink hair, another with brown and one with..."
+    "Purple!"
+    "That's Yuri, it's got to be."
+    "Where are they going in such a hurry?"
+    "I need to tap him on the shoulder."
+    "That should be enough."
+    "Enough...for what?"
+    "What am I even thinking about?"
+    "I start running towards them to catch up."
+    a "Hey, wait up you guys!"
+    "It seems like one of them is on their phone and doesn't turn around."
+    "Wait...does my voice sound different?"
+    a "Haaahhh...haaahhh..."
+    "I stop to catch my breath."
+    a "I didn't expect you guys to be here."
+    show yuri zorder 2 at t32
+    y "A-Ayame?"
+    y "W-What are you doing here?"
+    show natsuki zorder 3 at f31
+    n "You know her, Yuri?"
+    "Her...?"
+    n "Why don't you introduce us?"
+    show natsuki zorder 2 at t31
+    a "Oh, where are my manners?"
+    "I reach out a hand to the girl with pink hair."
+    "If I remember correctly, she's Natsuki...right?"
+    a "My name is Ayame."
+    a "I'm..."
+    a "Well, I don't know..."
+    show yuri zorder 3 at f32
+    y "She's planning to join the club."
+    y "I invited her."
+    show yuri zorder 2 at t32
+    show monika zorder 3 at f33
+    m "You did?"
+    "The girl with brown hair turns towards me."
+    m "You seem...familiar somehow."
+    "I know this girl."
+    "She's Monika."
+    m "Do I know you?"
+    show monika zorder 2 at t33
+    a "No, but I know you."
+    a "You're the..."
+    "Vice president."
+    a "Vice president of the Literature Club!"
+    show monika zorder 3 at f33
+    m "Yeah...that's right."
+    m "How did you know that?"
+    show monika zorder 2 at t33
+    a "I just did, I suppose."
+    a "Yuri must have told me or something."
+    a "Who's that over there?"
+    "I point towards the boy walking away from the group."
+    "Upon closer inspection, it seems he has earphones on."
+    "Maybe that's why he didn't notice that everyone else stopped."
+    a "Is he with you?"
+    show yuri zorder 3 at f32
+    y "Yes, he is."
+    y "It's [player]."
+    show yuri zorder 2 at t32
+    a "Oh, you told me about him!"
+    "Why does this name feel so familiar?"
+    "I start walking towards him."
+    a "[player], I want to ask you something."
+    "I tap him on the shoulder."
+    show sayori glitch zorder 2 at t11
+    python:
+        currentpos = get_pos()
+        startpos = currentpos - 0.3
+        if startpos < 0: startpos = 0
+        track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/3.ogg"
+        renpy.music.play(track, loop=True)
+    $ pause(1.0)
+    $ gtext = glitchtext(48)
+    "{cps=60}[gtext]{/cps}{nw}"
+    $ pause(1.0)
+    $ gtext = glitchtext(48)
+    "{cps=60}[gtext]{/cps}{nw}"
+    show screen tear(8, offtimeMult=1, ontimeMult=10)
+    $ pause(1.5)
+    hide screen tear
+    window hide(None)
+    window auto
+    scene black with trueblack
+    scene bg mall
+    with open_eyes
+    play music t3
+    "I'm...back?"
+    "I'm not sure what that means."
+    "But I remember everything."
+    "That whole conversation with Sayori and...that guy."
+    "Did I {i}merge{/i}?"
+    "What does that even mean...?"
+    "But if I did merge..."
+    "Does that mean I can help her?"
+    "He didn't really give us any useful information."
+    "Maybe he told Sayori something."
+    "But how did I even get here?"
+    "The details are kinda fuzzy."
+    a "Hello?"
+    "I look behind me."
+    show ayame 1bb zorder 2 at t11
+    "A girl I've never seen before is in front of me."
+    "The other three seem to have been talking to her."
+    "I take off my earphones."
+    mc "Oh!"
+    mc "I didn't realize somebody was talking to me."
+    mc "Did you need something?"
+    a "Um..."
+    a "I don't..."
+    a "I don't know?"
+    a "H-Hi!"
+    a "I'm Ayame."
+    "Ayame?"
+    "Why is that name so familiar?"
+    "She extends out her hand."
+    mc "[player]."
+    show natsuki 1ba zorder 2 at t41
+    show yuri 1ba zorder 3 at f42
+    show ayame zorder 2 at t43
+    show monika 1ba zorder 2 at t44
+    jump ch15_mall_shared_transfer
 
 label ch15_exclusive_sayori_alone:
     $ persistent.ch15_sayori_chance = False
@@ -3263,7 +3949,7 @@ label ch15_mall_shared:
     m "Well, this is a great start."
     m "No one gave a suggestion so we're just stuck here."
     "Monika ponders to herself for a moment."
-    m "As the Vice President of the club, I'll assume leadership while Sayori isn't here."
+    m "As the vice president of the club, I'll assume leadership while Sayori isn't here."
     m "And I actually have an idea for--"
     show natsuki zorder 3 at f31
     show monika zorder 2 at t33
@@ -3281,4 +3967,235 @@ label ch15_mall_shared:
     y "Normally, I wouldn't have a problem with doing something together."
     y "Don't get me wrong, I enjoy spending time with you all but..."
     y "I still have to make some final things for the preparations for tomorrow."
+    show natsuki zorder 3 at f31
+    show yuri zorder 2 at t32
+    n "Yuri's right."
+    n "I haven't finished baking everything yet."
+    n "But if it's not important..."
+    show natsuki zorder 2 at t31
+    show monika zorder 3 at f33
+    m "What could be more important than hanging out together?"
+    m "I promise it won't take long."
+    m "It's just going to take a few minutes."
+    show monika zorder 2 at t33
+    mc "I think it's a good idea."
+    mc "And if it won't take too long, then what do we really have to lose?"
+    mc "It's still kinda early anyway."
+    mc "But let's hear her out first."
+    show monika zorder 3 at f33
+    m "Thank you, [player]."
+    m "My idea is really simple, actually."
+    m "I want us all to go to the marina."
+    show yuri zorder 3 at f32
+    show monika zorder 2 at t33
+    y "The marina?"
+    y "W-What are we going to be doing there?"
+    show natsuki zorder 3 at f31
+    show yuri zorder 2 at t32
+    n "You're gonna have to be more specific than that, Monika."
+    n "I'm not convinced at all."
+    n "And I'm planning on leaving in less than thirty minutes."
+    show natsuki zorder 2 at t31
+    show monika zorder 3 at f33
+    m "I want us to all reflect."
+    m "A reflection on literature club and what you all think of it."
+    m "As the vice president, it's important to gather the member's opinions."
+    m "To see how we can improve the club."
+    show natsuki zorder 3 at f31
+    show monika zorder 2 at t33
+    n "I guess that makes sense..."
+    n "I don't really see how that's going to be fun though."
+    show natsuki zorder 2 at t31
+    show yuri zorder 3 at f32
+    y "I'm not opposed to the idea."
+    y "And I think it could be fun."
+    y "B-Being together outside of the club, I mean."
+    show natsuki zorder 3 at f31
+    show yuri zorder 2 at t32
+    n "Yuri, are you serious?"
+    n "How can you find that fun?!"
+    n "[player], you're not seriously considering this, are you?"
+    show natsuki zorder 2 at t31
+    mc "I don't really mind."
+    mc "Spending time with you guys is fine by me."
+    show natsuki zorder 3 at f31
+    n "Ugh, unbelievable."
+    "Natsuki looks around."
+    n "I guess I {i}have{/i} to do it now, don't I?"
+    n "Whatever. I'll go."
+    n "This better not take long."
+    show natsuki zorder 2 at t31
+    show monika zorder 3 at f33
+    if monika_type == 0:
+        m "That's the spirit...sort of."
+    else:
+        m "Good."
+    m "Then, shall we go?"
+    m "The sooner we get it done with, the sooner I can finish my preparations."
+    show monika zorder 2 at t33
+    "Monika gets up and the other two follow."
+    "I get up as well but as I do, I recieve a notification on my phone."
+    "It's a message."
+    "I open it up and there's an ominous audio file there."
+    "It came from an unknown number with a simple message."
+    "It says \"listen to this in private\"."
+    "Should I even open it?"
+    "What if it gives my phone a virus?"
+    "...When did I become this paranoid about everything?"
+    "Everyone is already walking towards the marina."
+    "I catch up to them as I take my earphones from my pocket."
+    "I download the audio file and start listening to it."
+    "It...doesn't sound like anything."
+    "It's making sound but it sounds like distorted static."
+    "So much for listening in private."
+    "I could have listened to it out loud and everyone would probably be just as confused as I am for playing white noise."
+    # This is where I'd put the audio file in the player's directory, if I had it right now
+    $ a_name = "???"
+    a "Hello?"
+    "I look behind me."
+    show ayame 1bb zorder 2 at t11
+    "A girl I've never seen before is in front of me."
+    "The other three seem to have been talking to her."
+    "I take off my earphones."
+    mc "Oh!"
+    mc "I didn't realize somebody was talking to me."
+    mc "Did you need something?"
+    a "Um..."
+    a "I don't..."
+    a "I don't know?"
+    a "H-Hi!"
+    if ch13_name == "Yuri" and yuri_date:
+        a "I know we really didn't get to meet properly before."
+        a "So I'd like to fix that."
+    a "I'm Ayame."
+    "She extends out her hand."
+    $ a_name = "Ayame"
+    mc "[player]."
+    show natsuki 1ba zorder 2 at t41
+    show yuri 1ba zorder 3 at f42
+    show ayame zorder 2 at t43
+    show monika 1ba zorder 2 at t44
+    label ch15_mall_shared_transfer:
+    "The others catch up to me as I shake Ayame's hand."
+    mc "So what are you doing here, Ayame?"
+    show ayame zorder 3 at f43
+    a "I..."
+    a "I was buying gifts."
+    a "Because you're all going to be my new friends, you see..."
+    a "And..."
+    "She looks around."
+    a "Oh!"
+    a "I-I don't mean to assume."
+    "Ayame bows her head."
+    a "I-If you don't want to be friends, that's fine."
+    a "But I'd still like to become a member of your club."
+    show ayame zorder 2 at t43
+    show monika zorder 3 at f44
+    m "You don't have to assume."
+    if monika_type == 0:
+        m "I'm more than happy to be friends."
+    elif monika_type == 1:
+        m "You're definitely going to be a useful {i}friend{/i}."
+    else:
+        m "I'm sure I can find some kind of use for you, {i}friend{/i}."
+    show natsuki zorder 3 at f41
+    show monika zorder 2 at t44
+    n "Do you...um..."
+    n "Read any sort of literature?"
+    show natsuki zorder 2 at t41
+    "Ayame raises her head."
+    show ayame zorder 3 at f43
+    a "I read all sorts of things."
+    a "Among my favorites are horror, emotion and love stories."
+    a "I also read manga on occasion."
+    a "But I know some don't reall count that as a form of literature, so--"
+    show natsuki zorder 3 at f41
+    show ayame zorder 2 at t43
+    n "Don't listen to those people."
+    n "Manga is a perfectly fine form of literature!"
+    n "Don't let anyone tell you otherwise."
+    show yuri zorder 3 at f42
+    show ayame zorder 2 at t43
+    y "Natsuki is very passionate about manga."
+    y "I'm sure you two can talk a lot about it."
+    y "I used to be somewhat opposed to manga."
+    y "But after being friends with Natsuki, I've alternated my view."
+    y "I still much prefer reading novels, but I wouldn't say no to a good manga now."
+    show yuri zorder 2 at t42
+    show ayame zorder 3 at f43
+    a "So you've changed since becoming a member?"
+    a "I wonder what will happen after I join..."
+    show ayame zorder 2 at t43
+    show monika zorder 3 at f44
+    m "We were just about to do an activity as a club."
+    m "You can come along, if you like."
+    show ayame zorder 3 at f43
+    show monika zorder 2 at t44
+    a "Really?"
+    "Ayame's face lights up."
+    a "But I'm not really a member..."
+    a "Is that really okay?"
+    a "I don't want to intrude or anything..."
+    show ayame zorder 2 at t43
+    show monika zorder 3 at f44
+    m "Of course!"
+    m "I'm the vice president of the club."
+    m "I could just instate you as a member now, if you'd like."
+    show yuri zorder 3 at f42
+    show monika zorder 2 at t44
+    y "I'm sure Sayori wouldn't mind."
+    y "In fact, I'm sure she'd like to be surprised by a new member tomorrow."
+    show natsuki zorder 3 at f41
+    show yuri zorder 2 at t42
+    n "You guys can do whatever you want."
+    n "B-But that's not to say I don't mind if you do."
+    show natsuki zorder 2 at t41
+    mc "I think it's up to Ayame to decide anyway."
+    show monika zorder 3 at f44
+    m "That's right."
+    m "So what do you say, Ayame?"
+    show ayame zorder 3 at f43
+    show monika zorder 2 at t44
+    a "I appreciate the offer..."
+    a "But I want to wait until tomorrow to become an official member."
+    a "Not that I don't recognize your authority or anything!"
+    a "It's just that I bought these gifts."
+    a "And I'd like to give them to all five of you at the same time."
+    a "Since you're missing a member, it wouldn't be fair."
+    show natsuki zorder 3 at f41
+    show ayame zorder 2 at t43
+    n "I guess that makes sense."
+    n "Does that mean you're not coming with us?"
+    show natsuki zorder 2 at t41
+    show monika zorder 3 at f44
+    m "The offer still stands, you know."
+    m "You can still come with us to do this activity."
+    m "Even as an interim member."
+    m "Besides, it's not really an official club thing."
+    if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
+        m "It's just something I came up with since a lot of us were together."
+    else:
+        m "It's simply a small activity."
+    m "It won't take long, I promise."
+    show ayame zorder 3 at f43
+    show monika zorder 2 at t44
+    a "Okay."
+    a "If you guys want me to go with you..."
+    a "Then what harm could it do, right?"
+    show yuri zorder 3 at f42
+    show ayame zorder 2 at t43
+    y "If Sayori was here, she would be saying something like \"yay, a new member\"..."
+    show natsuki zorder 3 at f41
+    show yuri zorder 2 at t42
+    n "That's so true!"
+    n "And she'd be jumping up and down, all excited..."
+    show natsuki zorder 2 at t41
+    show monika zorder 3 at f44
+    m "It's unfortuante she's not here."
+    m "But at least we still have five people."
+    m "And the more, the merrier."
+    m "But we should really be making our way to the marina right about now."
+    m "Or we're going to miss it."
+    show monika zorder 2 at t44
+    mc "Miss what?"
     return
