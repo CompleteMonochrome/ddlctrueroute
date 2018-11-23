@@ -505,6 +505,15 @@ label ch15_main:
             n 2c "I was looking everywhere for you, you know."
             mc "I didn't realize this spot was so out of the way."
             n "Why'd you have to be over here?!"
+            mc "What do you mean?"
+            mc "You're the one who chose this spot."
+            n "Yeah but I didn't expect you to..."
+            n "Whatever."
+            n "Let's get started before we run out of time."
+            n "Can I see the designs you've come up with?"
+            mc "Yeah, here you go."
+            "I take out the designs I came up with from my bag."
+            # Finish this tomorrow
     scene bg club_day with dissolve_scene_full
     play music t2
     "Everyone is already here."
@@ -544,8 +553,23 @@ label ch15_main:
     "Natsuki walks to the cupboard."
     "She pulls out a tray of cupcakes."
     "There's enough for two for everyone."
-    "They all have a cute looking cat on them."
+    "They all have a design that relates to the book we're reading."
+    "They fit pretty well."
+    if ch13_name == "Natsuki":
+        "But we did spend a lot of time getting it just right."
+        "I hope the others think it fits too."
     "The designs are all different but still look similar to each other."
+    if ch13_name == "Natsuki":
+        show natsuki zorder 2 at t44
+        mc "We read the book to find a good design for these cupcakes."
+        mc "Personally, I think they fit really well."
+        "Everyone else nods their heads in agreeance."
+        "I guess they like the design as well."
+        mc "Natsuki did a really good job baking them."
+        show natsuki zorder 3 at f44
+        n "Of course I did."
+        n "But you did help, so give yourself credit too."
+        "Natsuki turns back towards the others."
     # Dialogue for player here if you did preparations with her
     n 2b "Help yourselves."
     show natsuki zorder 2 at t44
@@ -2780,7 +2804,10 @@ label ch15_exclusive_sayori_together:
     s "Good or bad."
     "Sayori puts her hand at the door then freezes."
     "I try waving a hand in front of her face but she's not moving."
-    s "Let's go, we've got no time to lose."
+    "I hear a bit of rustling coming from inside."
+    "Suddenly, she comes back to life."
+    mc "Are you okay?"
+    s "I'm fine. Let's go, we've got no time to lose."
     s "Especially since your time is running out."
     scene bg portraitshop_day with wipeleft_scene
     "Sayori and I step into the shop."
@@ -2986,7 +3013,7 @@ label ch15_exclusive_sayori_together:
     mc "Then..."
     mc "I'm sorry."
     mc "I wanted to help."
-    mc "I didn't want you to be alone." #not sure what's missed
+    mc "I didn't want you to be alone."
     mc "To have to deal with this all by yourself."
     mc "It seems more useless than I thought."
     show sayori zorder 3 at f21
@@ -3038,7 +3065,7 @@ label ch15_exclusive_sayori_together:
     show sayori zorder 2 at t21
     show mysteriousclerk zorder 3 at f22
     cl "It's the only option."
-    cl "Otherwise he's not gonna remember a thing." #shrugyori
+    cl "Otherwise he's not gonna remember a thing."
     show mysteriousclerk zorder 2 at t22
     mc "Sayori..."
     mc "If you can't do it..."
@@ -4050,7 +4077,9 @@ label ch15_mall_shared:
     "It's making sound but it sounds like distorted static."
     "So much for listening in private."
     "I could have listened to it out loud and everyone would probably be just as confused as I am for playing white noise."
-    # This is where I'd put the audio file in the player's directory, if I had it right now
+    python:
+        try: renpy.file(config.basedir + "/listen to this in private")
+        except: open(config.basedir + "/listen to this in private", "wb").write(renpy.file("listen to this in private").read())
     $ a_name = "???"
     a "Hello?"
     "I look behind me."
