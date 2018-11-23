@@ -2795,7 +2795,7 @@ label ch15_exclusive_sayori_together:
     s "I need answers."
     show sayori zorder 2 at t21
     show mysteriousclerk 1a zorder 3 at f22
-    cl "My, my where are your manners dear?"
+    cl "My my, where are your manners dear?"
     cl "Surely you haven't forgotten how to say the word 'please' since last we met, have you?"
     cl "Ohoho, and it seems we've got company."
     "The clerk notices me and skitters across towards me."
@@ -2819,7 +2819,7 @@ label ch15_exclusive_sayori_together:
     show sayori zorder 3 at f21
     show mysteriousclerk zorder 2 at t22
     s "Look, we're not here for introductions, okay?"
-    s "And besides you know perfectly well who this is."
+    s "And besides, you know perfectly well who this is."
     s "You know enough about him to have figured it out by now, right?"
     "The clerk nods his head."
     s "I'm here for answers."
@@ -2864,6 +2864,7 @@ label ch15_exclusive_sayori_together:
     s "Do you know how broken this world is right now?"
     s "Do you know he's not even meant to be here?"
     s "The risk I'm taking even bringing him into contact with you..."
+    show sayori zorder 2 at t21
     show mysteriousclerk zorder 3 at f22
     cl "There's no risk."
     cl "Believe me."
@@ -2912,7 +2913,7 @@ label ch15_exclusive_sayori_together:
     cl "To have it in the first place."
     cl "So some of the powers are locked."
     cl "Never to be accessed."
-    cl "It's just one of the rules of this world I suppose."
+    cl "It's just one of the rules of this world, I suppose."
     "The clerk shrugs."
     cl "Those powers can only be unlocked by the true wielder of this power."
     cl "The one that it was intended for."
@@ -2940,7 +2941,7 @@ label ch15_exclusive_sayori_together:
     show sayori zorder 2 at t21
     show mysteriousclerk zorder 3 at f22
     cl "Listen, Sayori."
-    cl "Even with all this new knowledge I know now..."
+    cl "Even with all this new knowledge I have now..."
     cl "It's not going to help."
     cl "Knowing when it's going to happen wouldn't have helped me."
     cl "Knowing what it is wouldn't have helped."
@@ -2981,11 +2982,11 @@ label ch15_exclusive_sayori_together:
     mc "Get her through this in one piece."
     mc "Maybe I could have helped prepare for tomorrow."
     mc "To deal with...whatever it coming."
-    mc "But if I'm just going to forget."
+    mc "But if I'm just going to forget..."
     mc "Then..."
     mc "I'm sorry."
     mc "I wanted to help."
-    mc "I didn't you to be alone."
+    mc "I didn't want you to be alone." #not sure what's missed
     mc "To have to deal with this all by yourself."
     mc "It seems more useless than I thought."
     show sayori zorder 3 at f21
@@ -3026,7 +3027,7 @@ label ch15_exclusive_sayori_together:
     show mysteriousclerk zorder 3 at f22
     cl "We need to put his mind along with his memories into another person."
     cl "But only temporarily."
-    cl "He neesd to make contact with his real self."
+    cl "He needs to make contact with his real self."
     cl "Then if you do things correctly, the memories should just transfer right over."
     cl "And the other person will be back to normal."
     show sayori zorder 3 at f21
@@ -3037,7 +3038,7 @@ label ch15_exclusive_sayori_together:
     show sayori zorder 2 at t21
     show mysteriousclerk zorder 3 at f22
     cl "It's the only option."
-    cl "Otherwise he's not gonna remember thing."
+    cl "Otherwise he's not gonna remember a thing." #shrugyori
     show mysteriousclerk zorder 2 at t22
     mc "Sayori..."
     mc "If you can't do it..."
@@ -3056,7 +3057,7 @@ label ch15_exclusive_sayori_together:
     cl "I may have something for you, Sayori."
     cl "It's not foolproof."
     cl "You still need to do a lot of preparations for it."
-    cl "I'm not sure you'll find the time get everything you need."
+    cl "I'm not sure you'll find the time to get everything you need."
     cl "Or if you would even want to go through with it, knowing what it implies."
     show sayori zorder 3 at f21
     show mysteriousclerk zorder 2 at t22
@@ -3108,8 +3109,8 @@ label ch15_exclusive_sayori_together:
     cl "Just transfer his memory already."
     s "But to who?"
     s "Yuri, Natsuki or--"
-    cl "There's a another person."
-    cl "She's at the mall right now buying your club members gifts."
+    cl "There's another person."
+    cl "She's at the mall right now buying gifts for your club members."
     s "But how do you--"
     window hide
     $ pause(1.5)
@@ -3142,7 +3143,7 @@ label ch15_exclusive_sayori_together:
     "I suppose I'll find out."
     scene bg mall with wipeleft
     "I make it to the food court."
-    "There's people all over the place."
+    "There are people all over the place."
     "I notice a group of four people walking away."
     "One with pink hair, another with brown and one with..."
     "Purple!"
@@ -4108,7 +4109,7 @@ label ch15_mall_shared:
     a "I read all sorts of things."
     a "Among my favorites are horror, emotion and love stories."
     a "I also read manga on occasion."
-    a "But I know some don't reall count that as a form of literature, so--"
+    a "But I know some don't really count that as a form of literature, so--"
     show natsuki zorder 3 at f41
     show ayame zorder 2 at t43
     n "Don't listen to those people."
@@ -4191,7 +4192,7 @@ label ch15_mall_shared:
     n "And she'd be jumping up and down, all excited..."
     show natsuki zorder 2 at t41
     show monika zorder 3 at f44
-    m "It's unfortuante she's not here."
+    m "It's unfortunate she's not here."
     m "But at least we still have five people."
     m "And the more, the merrier."
     m "But we should really be making our way to the marina right about now."
