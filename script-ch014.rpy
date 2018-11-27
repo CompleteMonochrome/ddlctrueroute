@@ -4984,7 +4984,7 @@ label ch14_exclusive_natsuki:
             mc "I have an idea..."
             n 1bd "I think I know what it is."
             mc "We could put the portrait on that!"
-            n 1ba "I was right."
+            n "I was right."
             "Natsuki thinks for a moment."
             mc "Is it a bad idea?"
             n 1bc "It's not a bad idea...I was just thinking."
@@ -5023,7 +5023,7 @@ label ch14_exclusive_natsuki:
             mc "I have an idea..."
             n 1bd "I think I know what it is."
             mc "We could put the portrait on that!"
-            n 1ba "I was right."
+            n "I was right."
             "Natsuki thinks for a moment."
             mc "Is it a bad idea?"
             n 1bc "It's not a bad idea...I was just thinking."
@@ -5045,25 +5045,25 @@ label ch14_exclusive_natsuki:
         mc "So let's do it."
         "Natsuki hesitates for a second."
         mc "You have to decide, Natsuki."
-        n 1be "Alright, alright!"
+        n 2be "Alright, alright!"
         n "Quick, help me put it on there."
         "Natsuki and I take both sides of the portrait and lift it up."
         "We carefully place it on the easel."
         "It seems to be a perfect fit, literally."
         "The dimensions are just right so that it looks like it should be there."
         "Like this easel was made for this portrait."
-        n 1bd "Wow."
+        n 2bd "Wow."
         mc "I have a feeling we'll see the same reaction soon."
         mc "Do you have something to cover it with?"
         mc "Like a sheet or something?"
         mc "So we can do some sort of grand reveal."
-        n 1bc "I can try to get something from the laundry room but--"
+        n 2bc "I can try to get something from the laundry room but--"
         "A noise comes from the other room."
         if ch12_outcome == 3:
-            n 1be "You'll have to keep them distracted."
+            n 2be "You'll have to keep them distracted."
             mc "A distraction?"
             mc "How do you expect me to do that?"
-            n 1bl "You'll figure it out."
+            n 2bl "You'll figure it out."
             "Natsuki winks at me."
             n "I need to go now, good luck!"
             show natsuki at lhide
@@ -5115,7 +5115,7 @@ label ch14_exclusive_natsuki:
             "She gives me a thumbs up and smiles mischievously."
             "Just a minute more of this."
             mc "She's got a severe case of--"
-            show dadsuki zorder 3 at f21
+            show dadsuki 1l zorder 3 at f21
             d "I knew it."
             d "I'm sorry."
             d 1k "I should have listened to my conscience."
@@ -5139,8 +5139,8 @@ label ch14_exclusive_natsuki:
             mo "What?!"
             mo 1a "That's..."
             "Haruki breathes out a sigh of relief."
-            mo 1c "...not as bad as I thought it would be."
-            mo 1b "I guess I can live with that."
+            mo 1b "...not as bad as I thought it would be."
+            mo "I guess I can live with that."
             mo "The way you were building it up made it seem so much more serious."
             show momsuki zorder 2 at t22
             mc "T-That's not at all what I was going to say."
@@ -5173,19 +5173,19 @@ label ch14_exclusive_natsuki:
             mc "Well...yeah."
             mc "I meant--"
             show dadsuki zorder 2 at t31
-            show natsuki zorder 3 at hf32
+            show natsuki 1be zorder 3 at hf32
             show momsuki zorder 2 at t33
             n "Mom, dad!"
             n "Listen up!"
             n "[player] and I went to the city yesterday for a date."
-            n "But that's not all we did."
+            n 1bt "But that's not all we did."
             n "We--"
             show natsuki zorder 2 at t32
-            show momsuki zorder 3 at f33
+            show momsuki 1e zorder 3 at f33
             mo "Oh my goodness!"
             mo "[player], what did you two get up to?!"
             mo "I trusted you!"
-            show dadsuki zorder 3 at f31
+            show dadsuki 1l zorder 3 at f31
             show momsuki zorder 2 at t33
             d "I can't believe it."
             d "You're both so young..."
@@ -5194,29 +5194,29 @@ label ch14_exclusive_natsuki:
             mc "W-What?"
             mc "I-I didn't..."
             mc "W-We didn't...!"
-            show natsuki zorder 3 at hf32
+            show natsuki 1be zorder 3 at hf32
             n "Quiet!"
             "Haruki and Yasuhiro stop talking and turn towards Natsuki."
             "I guess they were't expecting her to yell."
-            n "Jeez, we didn't do anything like that!"
-            n "Just let me finish, okay?"
+            n 1br "Jeez, we didn't do anything like that!"
+            n 1bi "Just let me finish, okay?"
             n "[player] had an idea."
             n "It was sort of a present to me, but also towards both of you."
             n "He knew..."
-            n "...that things between the three of us would never be the same."
+            n 1bs "...that things between the three of us would never be the same."
             n "I think we all did."
-            n "But he wanted to help."
+            n 1bh "But he wanted to help."
             n "He wanted to try to make things how they were."
-            n "I know we can never really become how we were then."
+            n 1bu "I know we can never really become how we were then."
             n "I don't even have many memories anymore of how we were then."
             n "But I'd like to make some new ones."
             n "As a family."
             show natsuki zorder 2 at t32
-            show momsuki zorder 3 at f33
+            show momsuki 1h zorder 3 at f33
             mo "There's nothing more I want than to be a family again."
             mo "But..."
-            mo "That doesn't explain why you're telling us this now."
-            show natsuki zorder 3 at f32
+            mo 1e "That doesn't explain why you're telling us this now."
+            show natsuki 1bh zorder 3 at f32
             show momsuki zorder 2 at t33
             n "This is why."
             "Natsuki pulls the cloth from the easel."
@@ -5299,119 +5299,120 @@ label ch14_exclusive_natsuki:
             "Meanwhile, Haruki is still in tears."
             "Natsuki is next to me, looking at both of them."
             "Everyone looks so happy."
-            show natsuki 1ba zorder 2 at t11
+            show natsuki 1bj zorder 2 at t11
             n "I'd say this was a success."
-            n "I mean, look at them."
+            n 1bl "I mean, look at them."
             n "And I couldn't have done it without you."
             "Natsuki leans on me."
             "She's pretty small so it normally wouldn't be a problem, but it caught me by surprise."
             "I almost fall over as a result."
-            n "Are you okay?!"
+            n 1bp "Are you okay?!"
             mc "Yeah, I just wasn't expecting that."
             mc "And I didn't really expect to be part of your family hug either."
             mc "You three looked like you were having a really strong moment, you know?"
             mc "That kind that lasts forever in your memory."
-            n "W-Well, you know..."
+            n 1bt "W-Well, you know..."
             n "Um..."
             "Natsuki's voice becomes weak as her face becomes bright red."
             mc "I get it."
             mc "And I'm willing to see how far we can take this too."
-            show dadsuki 1a zorder 3 at f31
+            show dadsuki 1p zorder 3 at f31
             d "I think this needs to be put into a more public spot."
             d "I don't even remember why we kept it hidden."
             d "It's such a beautiful piece."
             show dadsuki at lhide
             hide dadsuki
             "Yasuhiro goes back to admiring the portrait."
-            show momsuki 1a zorder 3 at f33
+            show momsuki 1g zorder 3 at f33
             mo "It's definitely an amazing piece and deserves to be admired."
             mo "But we can worry about where we put it later."
-            mo "First, I have a question for the two of you."
+            mo 1b "First, I have a question for the two of you."
             show momsuki zorder 2 at t33
             mc "Me?"
             "What could she want to know from me?"
             show momsuki zorder 3 at f33
             mo "It applies to you and Natsuki."
-            mo "Don't worry, you're not in trouble or anything."
+            mo 1c "Don't worry, you're not in trouble or anything."
             show momsuki zorder 2 at t33
             mc "Right. What was your question?"
-            show momsuki zorder 3 at f33
+            show momsuki 1b zorder 3 at f33
             mo "Where did you go to get this fixed?"
-            mo "The level of detail is exceptional."
+            mo 1a "The level of detail is exceptional."
             mo "It's as if the very fabric is in it's original state."
             mo "If I didn't know any better..."
             mo "Which I unfortunately do..."
-            mo "Then I'd say this was the original piece."
+            mo 1c "Then I'd say this was the original piece."
             show natsuki zorder 3 at f32
             show momsuki zorder 2 at t33
-            n "We went to somewhere in the city."
+            n 1bc "We went to somewhere in the city."
             n "I forgot the name of the place..."
             show natsuki zorder 2 at t32
             mc "It was called 'Restoration'."
             mc "And it was run by..."
             mc "Well, it's kinda hard to explain his personality."
-            show momsuki zorder 3 at f33
+            show momsuki 1a zorder 3 at f33
             mo "Can you tell me what he looks like?"
-            mo "I'm just curious, that's all."
+            mo 1c "I'm just curious, that's all."
             show momsuki zorder 2 at t33
             mc "Um...he--"
             show momsuki zorder 3 at f33
             mo "Hmm..."
-            mo "Did he have brown hair?"
+            mo 1b "Did he have brown hair?"
             mo "Wear glasses?"
             mo "Kinda disgruntled looking?"
-            show momsuki zorder 2 at t33
+            show momsuki 1c zorder 2 at t33
             mc "Actually, yeah he did."
-            show natsuki zorder 3 at f32
+            show natsuki 1bk zorder 3 at f32
             n "Do you know him, mom?"
             n "You pretty much exactly described what he looked like."
             show natsuki zorder 2 at t32
-            show momsuki zorder 3 at f33
+            show momsuki 1a zorder 3 at f33
             mo "Who told you about this man?"
             "Haruki seems to ignore Natsuki's question."
             "It's that or she didn't hear it."
-            mo "He seems like quite a character."
+            mo 1g "He seems like quite a character."
             show momsuki zorder 2 at t33
             "She seems really intent on this person."
             "Does she know him?"
             "I guess there's no harm on telling her."
             mc "It was Sayori."
             mc "You met her before, right?"
-            show momsuki zorder 3 at f33
-            mo "Sayori told you, huh?"
+            show momsuki 1i zorder 3 at f33
+            $ pause(1.0)
+            mo 1b "Sayori told you, huh?"
             mo "She's the president of the literature club, if I'm not mistaken."
             mo "Interesting."
-            show natsuki zorder 3 at f32
-            show momsuki zorder 2 at t33
+            show natsuki 1ba zorder 3 at f32
+            show momsuki 1c zorder 2 at t33
             n "That's right."
             n "Without her, we never would have been able to do this."
-            n "So we're both really grateful to her."
+            n 1bd "So we're both really grateful to her."
             show natsuki zorder 2 at t32
-            show momsuki zorder 3 at f33
+            show momsuki 1b zorder 3 at f33
             mo "I might have to get in contact with this person."
             show momsuki zorder 2 at t33
             mc "Oh, did you have other portraits you want to restore?"
             mc "I'm not sure on the prices since he did it for free for us."
-            show momsuki zorder 3 at f33
+            show momsuki 1a zorder 3 at f33
             mo "Other portraits? No, I--"
-            show dadsuki zorder 3 at f31
+            show dadsuki 1p zorder 3 at f31
             show momsuki zorder 2 at t33
             d "It's truly incredible."
             d "It brings back memories of that day, doesn't it?"
             show dadsuki zorder 2 at t31
-            show momsuki zorder 3 at f33
+            show momsuki 1b zorder 3 at f33
             mo "Indeed it does."
             mo "That day was truly special."
             mo "The wedding cake was--"
             "Suddenly an alarm chimes."
-            mo "The cake!"
+            mo 1e "The cake!"
             "Haruki looks flustered."
             mo "I need to get the special ingredident!"
             mo "Yasuhiro!"
             show momsuki at thide
             hide momsuki
             "Haruki leaves in a rush, heading down the hallway."
-            show dadsuki zorder 3 at f31
+            show dadsuki 1m zorder 3 at f31
             d "Oh, you're right!"
             d "I'm on it!"
             "Yasuhiro looks at us, there's a grateful expression on his face."
@@ -5421,32 +5422,32 @@ label ch14_exclusive_natsuki:
             d "For now, I need to get something from upstairs for the cake."
             show dadsuki at thide
             hide dadsuki
-            show natsuki zorder 2 at t11
+            show natsuki 2bl zorder 2 at t11
             n "So I guess they're baking a cake."
             mc "Looks that way."
             mc "Think it's overcooked?"
-            n "I hope not."
+            n 2bz "I hope not."
             n "I'm excited to taste one of my mom's famous cakes again."
-            n "They're a lot better than mine."
+            n 2bl "They're a lot better than mine."
             mc "The way you're saying it, you're gonna make me want some too."
-            n "They're really good."
+            n 2bj "They're really good."
             n "A lot better than mine anyway."
             mc "I'm sure yours are better."
             mc "And do you know why?"
             "Natsuki sighs."
-            n "Why?"
+            n 2bt "Why?"
             mc "Because you made them."
-            n "Flattery is only gonna get you so far."
+            n 2bq "Flattery is only gonna get you so far."
             n "And while I don't mind..."
             n "There's no way my cupcakes are any better than hers."
             mc "I tried."
-            n "But anyway, we should get to the preparations."
+            n 2bb "But anyway, we should get to the preparations."
             mc "Sure, what were we going to do today?"
         else:
-            n 1be "You'll have to keep him distracted."
+            n 2be "You'll have to keep him distracted."
             mc "What? I'm not good at distractions!"
             mc "What do you expect me to do?"
-            n 1bl "I'm sure you'll think of something."
+            n 2bl "I'm sure you'll think of something."
             "Natsuki winks at me."
             n "I need to go now, good luck!"
             show natsuki at lhide
@@ -5460,7 +5461,7 @@ label ch14_exclusive_natsuki:
             d "Oh, hello, [player]."
             d "May I pass?"
             mc "Sure, but can I ask you something first?"
-            d "Can it wait?"
+            d 1c "Can it wait?"
             d "I'm really quite busy."
             mc "It's about Natsuki."
             mc "Please listen to what I have to say."
@@ -5473,17 +5474,17 @@ label ch14_exclusive_natsuki:
             "She gives me a thumbs up and smiles mischievously."
             "Just a minute more of this."
             mc "She's got a severe case of--"
-            d "Oh no."
+            d 1j "Oh no."
             d "I knew it."
             d "I'm sorry."
             d 1k "I should have listened to my conscience."
             mc "Uhh..."
             "What's he talking about?"
-            d "I should never have influenced her."
+            d 1l "I should never have influenced her."
             d "She..."
             "Yasuhiro looks down at the floor."
-            d "She's listening to rock music, isn't she?"
-            d 1l "I gave her a bunch of CDs to listen to so that I could try to bond with her..."
+            d 1n "She's listening to rock music, isn't she?"
+            d "I gave her a bunch of CDs to listen to so that I could try to bond with her..."
             d 1m "To try to reconnect with her, you know?"
             d "But now she's turning into a rebellious daughter."
             mc "...What?"
@@ -5491,13 +5492,13 @@ label ch14_exclusive_natsuki:
             "I might have to ask Natsuki about that later."
             mc "I was just going to say that Natsuki has been keeping a secret from you."
             mc "As her father, you need to know what it is."
-            d "What is it?"
+            d 1j "What is it?"
             "I look back and the sheet is on top of the easel."
             "Natsuki looks at me curiously, signalling me to bring him over."
             "She hides in the corridor."
             mc "I think it's better if I just show you."
             "I step aside and let him through."
-            d "Is this suspense necessary?"
+            d 1i "Is this suspense necessary?"
             mc "Just follow me, you'll see soon enough."
             "I lead him towards the easel."
             mc "Does this look familiar?"
@@ -5507,12 +5508,12 @@ label ch14_exclusive_natsuki:
             mc "Well...yeah."
             mc "I meant--"
             show dadsuki zorder 2 at t21
-            show natsuki zorder 3 at hf22
+            show natsuki 1be zorder 3 at hf22
             n "Dad, listen up!"
             n "[player] and I went to the city yesterday for a date."
-            n "But that's not all we did."
+            n 1bt "But that's not all we did."
             n "We--"
-            show dadsuki zorder 3 at f21
+            show dadsuki 1l zorder 3 at f21
             show natsuki zorder 2 at t22
             d "Oh no...it's worse than I imagined."
             d "I can't believe it."
@@ -5522,30 +5523,30 @@ label ch14_exclusive_natsuki:
             mc "W-What?"
             mc "I-I didn't..."
             mc "W-We didn't...!"
-            show natsuki zorder 3 at hf22
+            show natsuki 1be zorder 3 at hf22
             n "Quiet!"
-            "Yasuhiro stops talking and turn towards Natsuki."
+            "Yasuhiro stops talking and turns towards Natsuki."
             "I guess he wasn't expecting her to yell."
-            n "Jeez, we didn't do anything like that!"
-            n "Just let me finish, okay?"
+            n 1br "Jeez, we didn't do anything like that!"
+            n 1bi "Just let me finish, okay?"
             n "[player] had an idea."
             n "It was sort of a present to me, but also towards you."
             n "He knew..."
-            n "...that things between the two of us would never be the same."
+            n 1bs "...that things between the two of us would never be the same."
             n "I think we both did."
-            n "But he wanted to help."
+            n 1bh "But he wanted to help."
             n "He wanted to try to make things how they were."
-            n "I know we can never really become how we were then."
+            n 1bu "I know we can never really become how we were then."
             n "I don't even have many memories anymore of how we were then."
             n "But I'd like to make some new ones."
             n "As a family."
-            show dadsuki zorder 3 at f21
+            show dadsuki 1l zorder 3 at f21
             show natsuki zorder 2 at t22
             d "N-Natsuki..."
-            d "There's nothing more I want than that."
+            d 1m "There's nothing more I want than that."
             d "Ever since you gave me this chance."
             show dadsuki zorder 2 at t21
-            show natsuki zorder 3 at f22
+            show natsuki 1bh zorder 3 at f22
             n "Then I want to show you something."
             "Natsuki pulls the cloth from the easel."
             # Portrait here if I had a cg for it
@@ -5618,69 +5619,68 @@ label ch14_exclusive_natsuki:
             "He tries wiping his face to get a better look of it."
             "Natsuki is next to me, looking at him with me."
             "He just looks so...happy."
-            show natsuki 1ba zorder 2 at t11
+            show natsuki 1bj zorder 2 at t11
             n "I'd say this was a success."
-            n "I mean, look at him."
+            n 1bl "I mean, look at him."
             n "And I couldn't have done it without you."
             "Natsuki leans on me."
             "She's pretty small so it normally wouldn't be a problem, but it caught me by surprise."
             "I almost fall over as a result."
-            n "Are you okay?!"
+            n 1bp "Are you okay?!"
             mc "Yeah, I just wasn't expecting that."
             mc "And I didn't really expect to be part of your family hug either."
             mc "You three looked like you were having a really strong moment, you know?"
             mc "That kind that lasts forever in your memory."
-            n "W-Well, you know..."
+            n 1bt "W-Well, you know..."
             n "Um..."
             "Natsuki's voice becomes weak as her face becomes bright red."
             mc "I get it."
             mc "And I'm willing to see how far we can take this too."
-            show dadsuki 1a zorder 3 at f21
+            show dadsuki 1p zorder 3 at f21
             show natsuki zorder 2 at t22
             d "I think this needs to be put into a more public spot."
             "Yasuhiro manages to hold back the tears this time."
             d "I don't even remember why we kept it hidden."
             d "It's such a beautiful piece."
             show dadsuki zorder 2 at t21
-            show natsuki zorder 3 at f22
+            show natsuki 1bj zorder 3 at f22
             n "Yeah...it really is beautiful."
             n "I always wondered why you kept it in that room."
-            show dadsuki zorder 3 at f21
+            show dadsuki 1m zorder 3 at f21
             show natsuki zorder 2 at t22
             d "I believe it was your mother's idea."
             d "She wanted to keep it safe."
             d "Completely out of harm's way."
             d "She wouldn't let anyone near it."
-            d "I don't want to presume but..."
+            d 1k "I don't want to presume but..."
             show dadsuki zorder 2 at t21
             mc "Whatever you're thinking..."
             mc "I think you should keep her in a good light."
             mc "She might have done wrong but I think she really loved both of you."
             show natsuki zorder 3 at f22
-            n "Jeez, you haven't even met her."
-            n "And I agree with you."
-            n "This portrait will be the only thing that reminds me of her."
+            n 2bb "Jeez, you haven't even met her."
+            n 2bc "And I agree with you."
+            n 2ba "This portrait will be the only thing that reminds me of her."
             n "And I'll cherish it forever."
             show dadsuki zorder 3 at f21
             show natsuki zorder 2 at t22
             d "You're right, of course."
             d "I'll keep this piece of art somewhere in the house where you can see it."
             d "Rather than tucked in a room."
-            d "Speaking of which...where did you go for this anyway?"
+            d 1i "Speaking of which...where did you go for this anyway?"
             d "And how did you even come up with this idea?"
             show dadsuki zorder 2 at t21
             mc "I came up with the idea after Natsuki told me what happened."
             mc "We went to the city for it."
             mc "Some place called 'Restoration'."
-            show dadsuki zorder 2 at t21
-            show natsuki zorder 3 at f22
+            show natsuki 2bl zorder 3 at f22
             n "Yeah, it was run by some weirdo."
             n "At least he could do his job properly."
             show dadsuki zorder 3 at f21
             show natsuki zorder 2 at t22
             d "I see."
             "Yasuhiro turns towards the portrait again."
-            d "I just can't stop looking at this."
+            d 1p "I just can't stop looking at this."
             d "There's just something about it."
             show dadsuki zorder 2 at t21
             mc "It's certainly amazing."
@@ -5690,14 +5690,14 @@ label ch14_exclusive_natsuki:
             "Yasuhiro moves closer to the portrait and observes it more closely."
             d "There's--"
             "Suddenly an alarm chimes."
-            d "The oven!"
+            d 1l "The oven!"
             "Yasuhiro looks flustered."
-            d "I'm sorry, I completely forgot I was cooking something."
+            d 1m "I'm sorry, I completely forgot I was cooking something."
             d "I wish I could stay and talk for a little while longer but the house might burn down if I don't take a look at that."
             d "You two can do whatever you need to here."
             d "For now, I need to quickly get something upstairs."
             show dadsuki zorder 2 at t21
-            show natsuki zorder 3 at f22
+            show natsuki 1bj zorder 3 at f22
             n "Wait, before you go."
             show natsuki zorder 2 at t22
             "Natsuki gives Yasuhiro one final embrace."
@@ -5710,16 +5710,16 @@ label ch14_exclusive_natsuki:
             d "Good luck to both of you."
             show dadsuki at thide
             hide dadsuki
-            show natsuki zorder 2 at t11
+            show natsuki 2bl zorder 2 at t11
             n "I'm gonna guess he's baking something."
             n "Or at least, trying to."
             mc "Looks that way."
             mc "Think it's overcooked?"
-            n "I hope not."
+            n 2bz "I hope not."
             n "But then again, I don't really have much faith in my dad's cooking skills."
-            n "Unlike him, he didn't inherit his baking skills."
+            n 2bl "Unlike him, he didn't inherit his baking skills."
             mc "Are they really that bad?"
-            n "Well, let's just say mine are better."
+            n 2bj "Well, let's just say mine are better."
             n "By a lot."
             mc "At least he's trying to connect with you, right?"
             mc "Enjoying that rock music?"
