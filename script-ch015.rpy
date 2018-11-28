@@ -2957,7 +2957,6 @@ label ch15_exclusive_sayori:
 
 label ch15_sayori_check:
     # You really think ANY Sayori would let you explore the plot???
-    s "[sayori_personality]"
     if ch14_sayori_date_choice and sayori_personality == 0:
         jump ch15_exclusive_sayori_together
     else:
