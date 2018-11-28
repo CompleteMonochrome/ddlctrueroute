@@ -11,20 +11,6 @@ label choose_start:
     $ m_show = True
     s "Um..."
     s "What is this...?"
-    menu:
-        "Test":
-            "Test1."
-            $ chapter = 1
-            call poem
-            "Test2."
-            call poem(False,10,True)
-            menu:
-                "Test3.":
-                    call ch15_exclusive_sayori_together
-                "Test4.":
-                    call ch15_mall_shared
-        "No Test":
-            pass
     s "Do you suddenly get to decide when and where you start?"
     s "Wow..."
     s "This mod has it all, doesn't it?"
@@ -1480,7 +1466,7 @@ label choose_start:
                     $ ch14_overall_choice = "Yuri"
                     $ yuri_approval += 1
                     s "Yuri? Okay."
-                "Myself" if not (ch13_name == "Monika" and (monika_type == 2 or (monika_type == 1 and ch12_markov_agree))) or not persistent.markov_agreed or monika_type == 0:
+                "Myself" if not persistent.markov_agreed or monika_type == 0:
                     $ ch14_book_choice = player
                     s "Really?"
                     if (natsuki_date and natsuki_approval > 2) or (yuri_date and yuri_approval > 2) or monika_type == 0 or (sayori_personality == 0 or (sayori_confess and not sayori_dumped)):
@@ -1532,6 +1518,7 @@ label choose_start:
                         s "Well, maybe you have your reasons."
             elif ch13_name == "Sayori" and ((sayori_personality <= 0 and not sayori_confess) or (sayori_personality <= 1 and sayori_confess)) and s_appeal == 4:
                 if sayori_confess:
+                    $ ch14_sayori_date_choice = True
                     s "You agreed to a date, didn't you?"
                     s "Seeing as...well, you know."
                     s "Thank you."

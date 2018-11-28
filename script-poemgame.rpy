@@ -522,7 +522,7 @@ label poem(transition=True,totalWords=20,ayame_poem=False):
         hide screen quick_menu
         show black as fadeout:
             alpha 0
-            linear 1.0 alpha 1.0
+            linear 0.01 alpha 1.0
         $ pause(0.25)
     else:
         stop music fadeout 2.0

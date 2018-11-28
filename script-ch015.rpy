@@ -1189,6 +1189,9 @@ label ch15_main:
     return
 
 label ch15_end:
+    stop music fadeout 1.0
+    scene bg club_day with wipeleft_scene
+    play music t3
     show sayori 4d zorder 3 at t43
     s "Alright, everybody!"
     s "We've all finished sharing our poems now."
@@ -1209,7 +1212,7 @@ label ch15_end:
     show natsuki 1c zorder 2 at f44
     n "I don't know about you guys but I'm ready to just get home and finish it all."
     n "There's just this thing I need to do quickly at the mall."
-    if ch14_name == "Natsuki":
+    if ch13_name == "Natsuki":
         "I don't remember her talking about a mall at all yesterday or today."
         "Maybe she should have told me."
     n 1a "Some last supplies I need for baking and just things in general for tomorrow."
@@ -2429,7 +2432,7 @@ label ch15_exclusive_monika_together:
     scene bg residential_day
     show monika 1a zorder 2 at t11
     with wipeleft_scene
-    play music t3
+    play music t6
     "We make our way to my house."
     "The walk is pretty quiet, neither of us try to really make small talk."
     "There's no one else here as well, it's just the two of us."
@@ -2622,7 +2625,7 @@ label ch15_exclusive_monika_together:
 label ch15_exclusive_monika_alone:
     $ ch15_m_together = False
     scene bg house with wipeleft_scene
-    play music t3
+    play music t6
     "I make it home pretty quickly."
     "With the way Monika was moving, I kinda felt inspired to do the same."
     "There's not really much to do tonight."
@@ -2685,7 +2688,7 @@ label ch15_exclusive_sayori:
     scene bg residential_day
     show sayori 1a zorder 2 at t11
     with wipeleft_scene
-    play music t3
+    play music t6
     "Sayori and I make our way home."
     "She's been really quiet this whole time."
     "That's not like her at all."
@@ -2915,7 +2918,7 @@ label ch15_exclusive_sayori:
     "She wouldn't want some person to just go into her home."
     "..."
     "Even though I literally just did that."
-    scene bg black with wipeleft_scene
+    scene black with wipeleft_scene
     $ persistent.ch15_sayori_chance = True
     $ renpy.save_persistent()
     $ currentpos = get_pos()
@@ -2954,6 +2957,7 @@ label ch15_exclusive_sayori:
 
 label ch15_sayori_check:
     # You really think ANY Sayori would let you explore the plot???
+    s "[sayori_personality]"
     if ch14_sayori_date_choice and sayori_personality == 0:
         jump ch15_exclusive_sayori_together
     else:
@@ -3071,7 +3075,7 @@ label ch15_exclusive_sayori_together:
     scene bg house
     show sayori 2d zorder 2 at t11
     with wipeleft_scene
-    play music t3 fadeout 3.0
+    play music t6 fadeout 3.0
     "We arrive at my house after a brief walk."
     "Sayori is still in tow, still avoiding my gaze."
     "I open the door to my house and step inside."
@@ -3192,7 +3196,7 @@ label ch15_exclusive_sayori_together:
     s "This whole thing depends on it."
     mc "Okay, Sayori."
     mc "I'll do it."
-    scene bg black with wipeleft_scene
+    scene black with wipeleft_scene
     "She unlocks the door to her house."
     "Immediately she runs up the stairs."
     "I can hear the faint sound of doors opening."
@@ -3388,7 +3392,7 @@ label ch15_exclusive_sayori_together:
             s "It's just not fair."
             s "So I have to deal with it."
             jump ch15_exclusive_sayori_together_questions
-        "How do you know all of this?" if not ch15_s_questions[1]:
+        "How do you know all of this?" if not ch15_s_questions[1] and ch15_s_questions[0]:
             $ ch15_s_questions[1] = True
             s 1h "Getting this power gave me..."
             s "The ability to gain knowledge."
@@ -3435,7 +3439,7 @@ label ch15_exclusive_sayori_together:
             s 1j "I guess you're the only one who can really do that."
             s "I just hope you haven't made a big mistake."
             jump ch15_exclusive_sayori_together_questions
-        "Is there anything I can do to help?" if not ch15_s_questions[3]:
+        "Is there anything I can do to help?" if not ch15_s_questions[3] and ch15_s_questions[2]:
             $ ch15_s_questions[3] = True
             s 1k "There's nothing."
             s "Everything is already set in motion."
@@ -3469,7 +3473,7 @@ label ch15_exclusive_sayori_together:
             s 1d "Besides, I'm sure whoever it is is probably listening right now."
             s "I'm not sure why you'd even ask that question."
             jump ch15_exclusive_sayori_together_questions
-        "Why did you leave all the doors open?" if not ch15_s_questions[5]:
+        "Why did you leave all the doors open?" if not ch15_s_questions[5] and ch15_s_questions[4]:
             $ ch15_s_questions[5] = True
             s 1c "Do you remember what I said?"
             s "How you aren't really you?"
@@ -3489,7 +3493,7 @@ label ch15_exclusive_sayori_together:
             s 1d "But I trust him and that should be enough for you as well."
             s "Okay?"
             jump ch15_exclusive_sayori_together_questions
-        "Why don't you just give up?" if persistent.markov_agreed and not ch15_s_questions[7]:
+        "Why don't you just give up?" if persistent.markov_agreed and not ch15_s_questions[7] and ch15_s_questions[6]:
             $ ch15_s_questions[7] = True
             s 1g "G-Give up?"
             s "That's..."
@@ -3511,7 +3515,7 @@ label ch15_exclusive_sayori_together:
             s "I'll just..."
             s 1k "Whatever."
             jump ch15_exclusive_sayori_together_questions
-        "How did I forget and how did I remember it again?" if not persistent.markov_agreed and not ch15_s_questions[7]:
+        "How did I forget and how did I remember it again?" if not persistent.markov_agreed and not ch15_s_questions[7] and ch15_s_questions[6]:
             $ ch15_s_questions[7] = True
             s 1h "It's best you don't know that information."
             s "If I tell you, then it might just lead to ruin."
@@ -3521,7 +3525,8 @@ label ch15_exclusive_sayori_together:
             s 1l "Just...not so soon."
             s 1h "I'm sorry."
             jump ch15_exclusive_sayori_together_questions
-        "What are you going to do now?" if ch15_s_questions[0] and ch15_s_questions[1] and ch15_s_questions[2] and ch15_s_questions[3] and ch15_s_questions[5] and ch15_s_questions[6] and ((ch15_s_questions[7] and not persistent.markov_agreed) or persistent.markov_agreed):
+        "What are you going to do now?" if not ch15_s_questions[8] and ch15_s_questions[0] and ch15_s_questions[1] and ch15_s_questions[2] and ch15_s_questions[3] and ch15_s_questions[5] and ch15_s_questions[6] and ((ch15_s_questions[7] and not persistent.markov_agreed) or persistent.markov_agreed):
+            $ ch15_s_questions[8] = True
             s 1k "Now?"
             s "Well, I want some answers first."
             s "I know he probably won't have them all."
@@ -3907,8 +3912,8 @@ label ch15_exclusive_sayori_together:
     cl "But we can still do this, we just--"
     call poem(False,10,True)
     scene bg mall_sunset with open_eyes
-    $ audio.t3b = "<from " + str(currentpos) + " loop 4.618>bgm/3.ogg"
-    play music t3b fadein 1.0
+    play music t3g fadein 0.5
+    queue music t3g2
     "And it seems that I've finished buying gifts for everyone."
     window auto
     "Yuri didn't really tell me much about the club members."
@@ -4036,7 +4041,8 @@ label ch15_exclusive_sayori_together:
     scene black with trueblack
     scene bg mall_sunset
     with open_eyes
-    play music t3
+    play music t3g
+    queue music t3g2
     "I'm...back?"
     "I'm not sure what that means."
     "But I remember everything."
@@ -4261,7 +4267,7 @@ label ch15_exclusive_sayori_alone:
 
 label ch15_mall_shared:
     scene bg mall_sunset with wipeleft
-    play music t2
+    play music t3
     "I sit down on the bench just outside of the food court."
     if ch13_name != "Sayori":
         "[ch13_name] told me to wait for her here so that's what I'm doing."
@@ -4711,6 +4717,7 @@ label ch15_mall_shared:
     m "I know Sayori would want us to have fun."
     m 4be "Don't you remember what she said a few days after [player] joined?"
     $ currentpos = get_pos()
+    $ audio.t3fb = "<from " + str(currentpos) + " loop 4.618>mod_assets/bgm/3f.ogg"
     scene bg club_day_gray
     show sayori 1g_gray zorder 2 at t41
     show natsuki 5g_gray zorder 2 at t42
@@ -4718,7 +4725,7 @@ label ch15_mall_shared:
     show yuri 3w_gray zorder 2 at t44
     show vignette zorder 100
     with dissolve_scene_full
-    play music t3b fadeout 1.0
+    play music t3fb fadeout 1.0
     $ style.say_window = style.window_flashback
     m "We're the only ones responsible for the fate of this club."
     m "If we start the event and each put on a good performance..."
