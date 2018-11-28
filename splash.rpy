@@ -554,9 +554,10 @@ label after_load:
     if not hasattr(store, 'ch14_m_tellsayori'):
         $ ch14_m_tellsayori = False
     if not hasattr(store,'a_name'):
-        $ cl_name = "Ayame"
+        $ a_name = "Ayame"
     if not hasattr(store,'a'):
-        $ a = DynamicCharacter('a_name', image='ayame', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+        init:
+            $ a = DynamicCharacter('a_name', image='ayame', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
     if not hasattr(store,'ch15_m_together'):
         $ ch15_m_together = False
     if not hasattr(store,'ch15_s_together'):

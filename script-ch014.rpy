@@ -6504,6 +6504,7 @@ label ch14_exclusive_monika:
         window show(None)
         show monika 1bf zorder 3 at t11
         m "I desperately need to speak to you, [player]."
+        window auto
         m "And this is really the only chance I can."
         m 1bc "Sometimes, Sayori is listening."
         m "Other times, [player] hears the conversation."
@@ -6535,7 +6536,6 @@ label ch14_exclusive_monika:
         m "She'll understand, right?"
         label ch14_mystery:
         m 1bf "She has to."
-        window auto
         menu:
             m "So I should tell her, for everyone's sake."
             "Yes." if not ch14_m_ask:
@@ -6704,6 +6704,7 @@ label ch14_exclusive_monika:
             m 1be "That 'thing' I had to do was get the keyboard and hit [player] on the head with it."
         else:
             m 1ba "This feels oddly familiar to me."
+            window auto
             m "I don't have any memories of ever doing what I just did but..."
             m 1bc "It just felt right, somehow."
             m 1be "I guess Monika hits people on the head with a keyboard a lot."

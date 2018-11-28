@@ -1751,6 +1751,7 @@ label ch15_end:
             s 4q "Ehehe~"
         s "I'll see you soon, [player]..."
     $ a_name = "???"
+    $ insert_ayame_character()
     call expression "ch15_exclusive_" + ch13_scene
     return
 
