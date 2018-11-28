@@ -1,4 +1,10 @@
 label ch16_main:
+    if ch15_s_together:
+        "What the hell?"
+        "I've got these...memories flooding into my head."
+        "What...?"
+        "These aren't my memories."
+        "They can't be."
     return
 
 label ch16_play_normal:

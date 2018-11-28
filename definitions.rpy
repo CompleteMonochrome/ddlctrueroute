@@ -187,6 +187,12 @@ image bg kitchen = "bg/kitchen.png"
 
 image bg notebook = "bg/notebook.png"
 image bg notebook-glitch = "bg/notebook-glitch.png"
+image bg notebook-glitch-switch:
+    "bg/notebook.png"
+    pause 3.16666
+    "bg/notebook-glitch.png"
+    pause 3.16666
+    repeat
 
 image bg glitch = LiveTile("bg/glitch.jpg")
 

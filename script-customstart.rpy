@@ -11,6 +11,20 @@ label choose_start:
     $ m_show = True
     s "Um..."
     s "What is this...?"
+    menu:
+        "Test":
+            "Test1."
+            $ chapter = 1
+            call poem
+            "Test2."
+            call poem(False,10,True)
+            menu:
+                "Test3.":
+                    call ch15_exclusive_sayori_together
+                "Test4.":
+                    call ch15_mall_shared
+        "No Test":
+            pass
     s "Do you suddenly get to decide when and where you start?"
     s "Wow..."
     s "This mod has it all, doesn't it?"
@@ -1227,7 +1241,7 @@ label choose_start:
                 s "...On a date."
                 menu:
                     s "Did you take that opportunity?"
-                    "Yes."
+                    "Yes.":
                         $ natsuki_date = True
                         s "So they're together now..."
                         s "Okay."
@@ -1366,7 +1380,7 @@ label choose_start:
                 s "...On a date."
                 menu:
                     s "Did you take that opportunity?"
-                    "Yes."
+                    "Yes.":
                         $ natsuki_date = True
                         s "So they're together now..."
                         s "Okay."

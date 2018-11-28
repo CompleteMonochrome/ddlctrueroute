@@ -192,15 +192,22 @@ init python:
 
 
 
-label poem(transition=True,totalWords=20):
-    stop music fadeout 2.0
+label poem(transition=True,totalWords=20,ayame_poem=False):
+    if ayame_poem:
+        stop music
+    else:
+        stop music fadeout 2.0
     if persistent.playthrough == 3:
         scene bg notebook-glitch
+    elif ayame_poem:
+        scene bg notebook-glitch-switch
     else:
         scene bg notebook
     show screen quick_menu
     if persistent.playthrough == 3:
         show m_sticker at sticker_mid
+    elif ayame_poem:
+        show glitch_sticker at sticker_mid
     else:
         # Sayori, Natsuki and Monika Normal - Set Normal Positions before Glitch shows Monika
         if persistent.playthrough == 0:
@@ -238,6 +245,8 @@ label poem(transition=True,totalWords=20):
         with dissolve_scene_full
     if persistent.playthrough == 3:
         play music ghostmenu
+    elif ayame_poem:
+        play music t13
     else:
         play music t4
     $ config.skipping = False
@@ -315,6 +324,14 @@ label poem(transition=True,totalWords=20):
                     if persistent.playthrough == 3:
                         s = list("Monika")
                         for k in range(6):
+                            if random.randint(0, 4) == 0:
+                                s[k] = ' '
+                            elif random.randint(0, 4) == 0:
+                                s[k] = random.choice(nonunicode)
+                        word = PoemWord("".join(s), 0, 0, 0, 0, False)
+                    elif ayame_poem:
+                        s = list("Ayame")
+                        for k in range(5):
                             if random.randint(0, 4) == 0:
                                 s[k] = ' '
                             elif random.randint(0, 4) == 0:
@@ -411,72 +428,73 @@ label poem(transition=True,totalWords=20):
             if progress > numWords:
                 break
 
-        if persistent.playthrough == 0:
+        if not ayame_poem:
+            if persistent.playthrough == 0:
 
-            if chapter == 1:
-                exec(ch1_choice[0] + "PointTotal += 5")
+                if chapter == 1:
+                    exec(ch1_choice[0] + "PointTotal += 5")
 
-            unsorted_pointlist = {"sayori": sPointTotal, "natsuki": nPointTotal, "yuri": yPointTotal, "monika": mPointTotal}
-            pointlist = sorted(unsorted_pointlist, key=unsorted_pointlist.get)
+                unsorted_pointlist = {"sayori": sPointTotal, "natsuki": nPointTotal, "yuri": yPointTotal, "monika": mPointTotal}
+                pointlist = sorted(unsorted_pointlist, key=unsorted_pointlist.get)
+
+                if chapter < 5:
+                    poemwinner[chapter] = pointlist[3]
+                    if poemwinner[0] and poemwinner[1] and poemwinner[2] == "monika":
+                        monika_appeal[2] = True
+                elif chapter >= 12:
+                    sayarcpoemwinner[chapter-12] = pointlist[3]
+                elif chapter == 11:
+                    natarcpoemwinner[chapter-11] = pointlist[3]
+                elif chapter > 7 and chapter < 10:
+                    newpoemwinner[chapter-6] = pointlist[3]
+                else:
+                    newpoemwinner[chapter-5] = pointlist[3]
+
+            else:
+                if nPointTotal > yPointTotal: poemwinner[chapter] = "natsuki"
+                else: poemwinner[chapter] = "yuri"
 
             if chapter < 5:
-                poemwinner[chapter] = pointlist[3]
-                if poemwinner[0] and poemwinner[1] and poemwinner[2] == "monika":
-                    monika_appeal[2] = True
+                exec(poemwinner[chapter][0] + "_appeal += 1")
             elif chapter >= 12:
-                sayarcpoemwinner[chapter-12] = pointlist[3]
+                exec(sayarcpoemwinner[chapter-12][0] + "_appealS += 1")
             elif chapter == 11:
-                natarcpoemwinner[chapter-11] = pointlist[3]
-            elif chapter > 7 and chapter < 10:
-                newpoemwinner[chapter-6] = pointlist[3]
+                exec(natarcpoemwinner[chapter-11][0] + "_appeal += 1")
+            elif chapter > 7:
+                exec(newpoemwinner[chapter-6][0] + "_appeal += 1")
             else:
-                newpoemwinner[chapter-5] = pointlist[3]
-
-        else:
-            if nPointTotal > yPointTotal: poemwinner[chapter] = "natsuki"
-            else: poemwinner[chapter] = "yuri"
-
-        if chapter < 5:
-            exec(poemwinner[chapter][0] + "_appeal += 1")
-        elif chapter >= 12:
-            exec(sayarcpoemwinner[chapter-12][0] + "_appealS += 1")
-        elif chapter == 11:
-            exec(natarcpoemwinner[chapter-11][0] + "_appeal += 1")
-        elif chapter > 7:
-            exec(newpoemwinner[chapter-6][0] + "_appeal += 1")
-        else:
-            exec(newpoemwinner[chapter-5][0] + "_appeal += 1")
+                exec(newpoemwinner[chapter-5][0] + "_appeal += 1")
 
 
-        if chapter >= 11:
-            if sPointTotal < POEM_DISLIKE_THRESHOLD: s_poemappeal2[chapter-11] = -1
-            elif sPointTotal > POEM_LIKE_THRESHOLD: s_poemappeal2[chapter-11] = 1
-            if nPointTotal < POEM_DISLIKE_THRESHOLD: n_poemappeal2[chapter-11] = -1
-            elif nPointTotal > POEM_LIKE_THRESHOLD: n_poemappeal2[chapter-11] = 1
-            if yPointTotal < POEM_DISLIKE_THRESHOLD: y_poemappeal2[chapter-11] = -1
-            elif yPointTotal > POEM_LIKE_THRESHOLD: y_poemappeal2[chapter-11] = 1
-            if mPointTotal < POEM_DISLIKE_THRESHOLD: m_poemappeal2[chapter-11] = -1
-            elif mPointTotal > POEM_LIKE_THRESHOLD: m_poemappeal2[chapter-11] = 1
-        else:
-            if sPointTotal < POEM_DISLIKE_THRESHOLD: s_poemappeal[chapter] = -1
-            elif sPointTotal > POEM_LIKE_THRESHOLD: s_poemappeal[chapter] = 1
-            if nPointTotal < POEM_DISLIKE_THRESHOLD: n_poemappeal[chapter] = -1
-            elif nPointTotal > POEM_LIKE_THRESHOLD: n_poemappeal[chapter] = 1
-            if yPointTotal < POEM_DISLIKE_THRESHOLD: y_poemappeal[chapter] = -1
-            elif yPointTotal > POEM_LIKE_THRESHOLD: y_poemappeal[chapter] = 1
-            if mPointTotal < POEM_DISLIKE_THRESHOLD: m_poemappeal[chapter] = -1
-            elif mPointTotal > POEM_LIKE_THRESHOLD: m_poemappeal[chapter] = 1
+            if chapter >= 11:
+                if sPointTotal < POEM_DISLIKE_THRESHOLD: s_poemappeal2[chapter-11] = -1
+                elif sPointTotal > POEM_LIKE_THRESHOLD: s_poemappeal2[chapter-11] = 1
+                if nPointTotal < POEM_DISLIKE_THRESHOLD: n_poemappeal2[chapter-11] = -1
+                elif nPointTotal > POEM_LIKE_THRESHOLD: n_poemappeal2[chapter-11] = 1
+                if yPointTotal < POEM_DISLIKE_THRESHOLD: y_poemappeal2[chapter-11] = -1
+                elif yPointTotal > POEM_LIKE_THRESHOLD: y_poemappeal2[chapter-11] = 1
+                if mPointTotal < POEM_DISLIKE_THRESHOLD: m_poemappeal2[chapter-11] = -1
+                elif mPointTotal > POEM_LIKE_THRESHOLD: m_poemappeal2[chapter-11] = 1
+            else:
+                if sPointTotal < POEM_DISLIKE_THRESHOLD: s_poemappeal[chapter] = -1
+                elif sPointTotal > POEM_LIKE_THRESHOLD: s_poemappeal[chapter] = 1
+                if nPointTotal < POEM_DISLIKE_THRESHOLD: n_poemappeal[chapter] = -1
+                elif nPointTotal > POEM_LIKE_THRESHOLD: n_poemappeal[chapter] = 1
+                if yPointTotal < POEM_DISLIKE_THRESHOLD: y_poemappeal[chapter] = -1
+                elif yPointTotal > POEM_LIKE_THRESHOLD: y_poemappeal[chapter] = 1
+                if mPointTotal < POEM_DISLIKE_THRESHOLD: m_poemappeal[chapter] = -1
+                elif mPointTotal > POEM_LIKE_THRESHOLD: m_poemappeal[chapter] = 1
 
-        if chapter < 5:
-            exec(poemwinner[chapter][0] + "_poemappeal[chapter] = 1")
-        elif chapter >= 12:
-            exec(sayarcpoemwinner[chapter-12][0] + "_poemappeal2[chapter-12] = 1")
-        elif chapter == 11:
-            exec(natarcpoemwinner[chapter-11][0] + "_poemappeal2[chapter-11] = 1")
-        elif chapter > 7:
-            exec(newpoemwinner[chapter-6][0] + "_poemappeal[chapter] = 1")
-        else:
-            exec(newpoemwinner[chapter-5][0] + "_poemappeal[chapter] = 1")
+            if chapter < 5:
+                exec(poemwinner[chapter][0] + "_poemappeal[chapter] = 1")
+            elif chapter >= 12:
+                exec(sayarcpoemwinner[chapter-12][0] + "_poemappeal2[chapter-12] = 1")
+            elif chapter == 11:
+                exec(natarcpoemwinner[chapter-11][0] + "_poemappeal2[chapter-11] = 1")
+            elif chapter > 7:
+                exec(newpoemwinner[chapter-6][0] + "_poemappeal[chapter] = 1")
+            else:
+                exec(newpoemwinner[chapter-5][0] + "_poemappeal[chapter] = 1")
 
     if persistent.playthrough == 2 and persistent.seen_eyes == None and renpy.random.randint(0,5) == 0:
         $ seen_eyes_this_chapter = True
@@ -499,12 +517,20 @@ label poem(transition=True,totalWords=20):
     $ config.allow_skipping = True
     $ allow_skipping = True
     $ m_hairdown_poemglitch = False
-    stop music fadeout 2.0
-    hide screen quick_menu
-    show black as fadeout:
-        alpha 0
-        linear 1.0 alpha 1.0
-    $ pause(1.0)
+    if ayame_poem:
+        stop music
+        hide screen quick_menu
+        show black as fadeout:
+            alpha 0
+            linear 1.0 alpha 1.0
+        $ pause(0.25)
+    else:
+        stop music fadeout 2.0
+        hide screen quick_menu
+        show black as fadeout:
+            alpha 0
+            linear 1.0 alpha 1.0
+        $ pause(1.0)
     return
 
 image bg eyes_move:
@@ -687,6 +713,30 @@ image y_sticker glitch:
             function randomMoveYuri
         repeat
 
+image glitch_sticker:
+    parallel:
+        choice:
+            "gui/poemgame/s_sticker_1.png"
+            xoffset sayoriOffset xzoom sayoriZoom
+        choice:
+            "gui/poemgame/n_sticker_1.png"
+            xoffset natsukiOffset xzoom natsukiZoom
+        choice:
+            "gui/poemgame/y_sticker_1.png"
+            xoffset yuriOffset xzoom yuriZoom
+        choice:
+            "gui/poemgame/m_sticker_1.png"
+            xoffset monikaOffset xzoom monikaZoom
+        pause 0.09996
+        repeat
+    parallel:
+        block:
+            function randomPauseSayori
+            parallel:
+                sticker_move_n
+            parallel:
+                function randomMoveSayori
+            repeat
 
 # sticker positions
 # Four Stickers
