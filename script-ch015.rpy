@@ -1756,7 +1756,7 @@ label ch15_end:
 
 label ch15_exclusive_yuri:
     if yuri_date:
-        scene bg hallway with wipeleft_scene
+        scene bg corridor with wipeleft_scene
         "Sayori is still in the clubroom."
         "I think she's just cleaning up."
         "Meanwhile Yuri is sitting on the floor, writing down notes."
@@ -2154,7 +2154,7 @@ label ch15_exclusive_natsuki:
     return
 
 label ch15_exclusive_monika:
-    scene bg hallway with wipeleft_scene
+    scene bg corridor with wipeleft_scene
     "I leave Sayori in the clubroom by herself."
     "I think she's just packing up her things then she'll leave."
     "I wonder if Monika heard the conversation we had in there."
@@ -4688,7 +4688,7 @@ label ch15_mall_shared:
     else:
         "We've all finished doing what we needed to."
     "So we're just wasting our time at the mall when we could be doing the preparations we're meant to be."
-    "Still, it feels like a pretty lucky coincidence that we all ended up meeting at this exact spot at his exact time."
+    "Still, it feels like a pretty lucky coincidence that we all ended up meeting at this exact spot at this exact time."
     "This feels just like a club meeting, except we're not at the club."
     "Well...Sayori is somewhere else right now."
     "So I suppose that's not entirely true."
