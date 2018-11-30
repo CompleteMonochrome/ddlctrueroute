@@ -207,6 +207,21 @@ label start:
         call poemresponse_start_new
         call ch14_end
 
+        call poem
+
+        # NEED TO CHANGE ALL INSTANCES OF VISITED_YURI_HOSPITAL TO YURI_DATE
+        # Player can dump Sayori early and go for the neutral route from there
+        label ch15_skip:
+        $ chapter = 15
+        call ch15_main
+        call poemresponse_start_new
+        call ch15_end
+
+        label ch16_skip:
+        $ chapter = 16
+        call ch16_main
+        call ch16_end
+
         label endgame_skip:
         $ renpy.full_restart(transition=None, label="splashscreen")
         return

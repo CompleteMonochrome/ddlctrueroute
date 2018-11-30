@@ -18,6 +18,11 @@ init python:
 
     full_wordlist = []
     full_wordlist_old = []
+    sayori_wordlist = []
+    natsuki_wordlist = []
+    yuri_wordlist = []
+    monika_wordlist = []
+
     # New Wordlist
     with renpy.file('poemwords_mod.txt') as wordfile:
         for line in wordfile:
@@ -28,7 +33,16 @@ init python:
 
 
             x = line.split(',')
+            # currentword = PoemWord(x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4]))
             full_wordlist.append(PoemWord(x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4])))
+            # if currentword.sPoint >= 3:
+            #     sayori_wordlist.append(currentword)
+            # elif currentword.nPoint >= 3:
+            #     natsuki_wordlist.append(currentword)
+            # elif currentword.yPoint >= 3:
+            #     yuri_wordlist.append(currentword)
+            # elif currentword.mPoint >= 3:
+            #     monika_wordlist.append(currentword)
     # Original Wordlist
     with renpy.file('poemwords.txt') as wordfile:
         for line in wordfile:
@@ -178,15 +192,22 @@ init python:
 
 
 
-label poem(transition=True,totalWords=20):
-    stop music fadeout 2.0
+label poem(transition=True,totalWords=20,ayame_poem=False):
+    if ayame_poem:
+        stop music
+    else:
+        stop music fadeout 2.0
     if persistent.playthrough == 3:
         scene bg notebook-glitch
+    elif ayame_poem:
+        scene bg notebook-glitch-switch
     else:
         scene bg notebook
     show screen quick_menu
     if persistent.playthrough == 3:
         show m_sticker at sticker_mid
+    elif ayame_poem:
+        show glitch_sticker at sticker_mid
     else:
         # Sayori, Natsuki and Monika Normal - Set Normal Positions before Glitch shows Monika
         if persistent.playthrough == 0:
@@ -194,7 +215,7 @@ label poem(transition=True,totalWords=20):
                 show s_sticker at sticker_4left
                 show n_sticker at sticker_4midleft
                 # Check if hair down Monika playthrough
-                if monika_type == 1 and ch12_markov_agree:
+                if monika_type == 1 and ch12_markov_agree and chapter > 12:
                     if random.randint(0,50) == 0 and not m_hairdown_poemglitch:
                         $ m_hairdown_poemglitch = True
                         play sound "sfx/glitch3.ogg"
@@ -224,6 +245,8 @@ label poem(transition=True,totalWords=20):
         with dissolve_scene_full
     if persistent.playthrough == 3:
         play music ghostmenu
+    elif ayame_poem:
+        play music t13
     else:
         play music t4
     $ config.skipping = False
@@ -252,6 +275,10 @@ label poem(transition=True,totalWords=20):
         mPointTotal = 0
         if persistent.playthrough == 0:
             wordlist = list(full_wordlist)
+            # swordlist = list(sayori_wordlist)
+            # nwordlist = list(natsuki_wordlist)
+            # ywordlist = list(yuri_wordlist)
+            # mwordlist = list(monika_wordlist)
         else:
             wordlist = list(full_wordlist_old)
 
@@ -285,6 +312,10 @@ label poem(transition=True,totalWords=20):
             else:
                 pstring = str(progress)
             ui.text(pstring + "/" + str(numWords), style="poemgame_text", xpos=810, ypos=80, color='#000')
+            sInList = False
+            nInList = False
+            yInList = False
+            mInList = False
             for j in range(2):
                 if j == 0: x = 440
                 else: x = 680
@@ -297,11 +328,52 @@ label poem(transition=True,totalWords=20):
                                 s[k] = ' '
                             elif random.randint(0, 4) == 0:
                                 s[k] = random.choice(nonunicode)
-                        word = PoemWord("".join(s), 0, 0, 0, False)
+                        word = PoemWord("".join(s), 0, 0, 0, 0, False)
+                    elif ayame_poem:
+                        s = list("Ayame")
+                        for k in range(5):
+                            if random.randint(0, 4) == 0:
+                                s[k] = ' '
+                            elif random.randint(0, 4) == 0:
+                                s[k] = random.choice(nonunicode)
+                        word = PoemWord("".join(s), 0, 0, 0, 0, False)
                     elif persistent.playthrough == 2 and not poemgame_glitch and chapter >= 1 and progress < numWords and random.randint(0, 400) == 0:
-                        word = PoemWord(glitchtext(80), 0, 0, 0, True)
+                        word = PoemWord(glitchtext(80), 0, 0, 0, 0, True)
                     else:
-                        word = random.choice(wordlist)
+                        if not sInList and i >= 1 and j == 1 and persistent.playthrough == 0:
+                            word = random.choice([a for a in wordlist if a.sPoint >= 3])
+                            # wordlist.remove(word)
+                            # swordlist.remove(newword)
+                            # word.word = word.word+" tests"
+                            sInList = True
+                        elif not nInList and i >= 2 and j == 1 and persistent.playthrough == 0:
+                            word = random.choice([a for a in wordlist if a.nPoint >= 3])
+                            # wordlist.remove(word)
+                            # nwordlist.remove(word)
+                            # word.word = word.word+" testn"
+                            nInList = True
+                        elif not yInList and i >= 3 and j == 1 and persistent.playthrough == 0:
+                            word = random.choice([a for a in wordlist if a.yPoint >= 3])
+                            # wordlist.remove(word)
+                            # ywordlist.remove(word)
+                            # word.word = word.word+" testy"
+                            yInList = True
+                        elif not mInList and i >= 4 and j == 1 and persistent.playthrough == 0:
+                            word = random.choice([a for a in wordlist if a.mPoint >= 3])
+                            # wordlist.remove(word)
+                            # mwordlist.remove(word)
+                            # word.word = word.word+" testm"
+                            mInList = True
+                        else:
+                            word = random.choice(wordlist)
+                            if word.sPoint >= 3:
+                                sInList = True
+                            elif word.nPoint >= 3:
+                                nInList = True
+                            elif word.yPoint >= 3:
+                                yInList = True
+                            elif word.mPoint >= 3:
+                                mInList = True
                         wordlist.remove(word)
                     ui.textbutton(word.word, clicked=ui.returns(word), text_style="poemgame_text", xpos=x, ypos=i * 56 + ystart)
                 ui.close()
@@ -324,7 +396,7 @@ label poem(transition=True,totalWords=20):
                         if t.yPoint >= 3:
                             renpy.show("y_sticker hop")
                         if t.mPoint >= 3:
-                            if ch12_markov_agree and monika_type == 1:
+                            if ch12_markov_agree and monika_type == 1 and chapter > 12:
                                 if random.randint(0,500) == 0 and not m_hairdown_poemglitch:
                                     m_hairdown_poemglitch = True
                                     renpy.sound.play([ "<silence .72>", "sfx/glitch3.ogg" ])
@@ -356,72 +428,73 @@ label poem(transition=True,totalWords=20):
             if progress > numWords:
                 break
 
-        if persistent.playthrough == 0:
+        if not ayame_poem:
+            if persistent.playthrough == 0:
 
-            if chapter == 1:
-                exec(ch1_choice[0] + "PointTotal += 5")
+                if chapter == 1:
+                    exec(ch1_choice[0] + "PointTotal += 5")
 
-            unsorted_pointlist = {"sayori": sPointTotal, "natsuki": nPointTotal, "yuri": yPointTotal, "monika": mPointTotal}
-            pointlist = sorted(unsorted_pointlist, key=unsorted_pointlist.get)
+                unsorted_pointlist = {"sayori": sPointTotal, "natsuki": nPointTotal, "yuri": yPointTotal, "monika": mPointTotal}
+                pointlist = sorted(unsorted_pointlist, key=unsorted_pointlist.get)
+
+                if chapter < 5:
+                    poemwinner[chapter] = pointlist[3]
+                    if poemwinner[0] and poemwinner[1] and poemwinner[2] == "monika":
+                        monika_appeal[2] = True
+                elif chapter >= 12:
+                    sayarcpoemwinner[chapter-12] = pointlist[3]
+                elif chapter == 11:
+                    natarcpoemwinner[chapter-11] = pointlist[3]
+                elif chapter > 7 and chapter < 10:
+                    newpoemwinner[chapter-6] = pointlist[3]
+                else:
+                    newpoemwinner[chapter-5] = pointlist[3]
+
+            else:
+                if nPointTotal > yPointTotal: poemwinner[chapter] = "natsuki"
+                else: poemwinner[chapter] = "yuri"
 
             if chapter < 5:
-                poemwinner[chapter] = pointlist[3]
-                if poemwinner[0] and poemwinner[1] and poemwinner[2] == "monika":
-                    monika_appeal[2] = True
+                exec(poemwinner[chapter][0] + "_appeal += 1")
             elif chapter >= 12:
-                sayarcpoemwinner[chapter-12] = pointlist[3]
+                exec(sayarcpoemwinner[chapter-12][0] + "_appealS += 1")
             elif chapter == 11:
-                natarcpoemwinner[chapter-11] = pointlist[3]
-            elif chapter > 7 and chapter < 10:
-                newpoemwinner[chapter-6] = pointlist[3]
+                exec(natarcpoemwinner[chapter-11][0] + "_appeal += 1")
+            elif chapter > 7:
+                exec(newpoemwinner[chapter-6][0] + "_appeal += 1")
             else:
-                newpoemwinner[chapter-5] = pointlist[3]
-
-        else:
-            if nPointTotal > yPointTotal: poemwinner[chapter] = "natsuki"
-            else: poemwinner[chapter] = "yuri"
-
-        if chapter < 5:
-            exec(poemwinner[chapter][0] + "_appeal += 1")
-        elif chapter >= 12:
-            exec(sayarcpoemwinner[chapter-12][0] + "_appealS += 1")
-        elif chapter == 11:
-            exec(natarcpoemwinner[chapter-11][0] + "_appeal += 1")
-        elif chapter > 7:
-            exec(newpoemwinner[chapter-6][0] + "_appeal += 1")
-        else:
-            exec(newpoemwinner[chapter-5][0] + "_appeal += 1")
+                exec(newpoemwinner[chapter-5][0] + "_appeal += 1")
 
 
-        if chapter >= 11:
-            if sPointTotal < POEM_DISLIKE_THRESHOLD: s_poemappeal2[chapter-11] = -1
-            elif sPointTotal > POEM_LIKE_THRESHOLD: s_poemappeal2[chapter-11] = 1
-            if nPointTotal < POEM_DISLIKE_THRESHOLD: n_poemappeal2[chapter-11] = -1
-            elif nPointTotal > POEM_LIKE_THRESHOLD: n_poemappeal2[chapter-11] = 1
-            if yPointTotal < POEM_DISLIKE_THRESHOLD: y_poemappeal2[chapter-11] = -1
-            elif yPointTotal > POEM_LIKE_THRESHOLD: y_poemappeal2[chapter-11] = 1
-            if mPointTotal < POEM_DISLIKE_THRESHOLD: m_poemappeal2[chapter-11] = -1
-            elif mPointTotal > POEM_LIKE_THRESHOLD: m_poemappeal2[chapter-11] = 1
-        else:
-            if sPointTotal < POEM_DISLIKE_THRESHOLD: s_poemappeal[chapter] = -1
-            elif sPointTotal > POEM_LIKE_THRESHOLD: s_poemappeal[chapter] = 1
-            if nPointTotal < POEM_DISLIKE_THRESHOLD: n_poemappeal[chapter] = -1
-            elif nPointTotal > POEM_LIKE_THRESHOLD: n_poemappeal[chapter] = 1
-            if yPointTotal < POEM_DISLIKE_THRESHOLD: y_poemappeal[chapter] = -1
-            elif yPointTotal > POEM_LIKE_THRESHOLD: y_poemappeal[chapter] = 1
-            if mPointTotal < POEM_DISLIKE_THRESHOLD: m_poemappeal[chapter] = -1
-            elif mPointTotal > POEM_LIKE_THRESHOLD: m_poemappeal[chapter] = 1
+            if chapter >= 11:
+                if sPointTotal < POEM_DISLIKE_THRESHOLD: s_poemappeal2[chapter-11] = -1
+                elif sPointTotal > POEM_LIKE_THRESHOLD: s_poemappeal2[chapter-11] = 1
+                if nPointTotal < POEM_DISLIKE_THRESHOLD: n_poemappeal2[chapter-11] = -1
+                elif nPointTotal > POEM_LIKE_THRESHOLD: n_poemappeal2[chapter-11] = 1
+                if yPointTotal < POEM_DISLIKE_THRESHOLD: y_poemappeal2[chapter-11] = -1
+                elif yPointTotal > POEM_LIKE_THRESHOLD: y_poemappeal2[chapter-11] = 1
+                if mPointTotal < POEM_DISLIKE_THRESHOLD: m_poemappeal2[chapter-11] = -1
+                elif mPointTotal > POEM_LIKE_THRESHOLD: m_poemappeal2[chapter-11] = 1
+            else:
+                if sPointTotal < POEM_DISLIKE_THRESHOLD: s_poemappeal[chapter] = -1
+                elif sPointTotal > POEM_LIKE_THRESHOLD: s_poemappeal[chapter] = 1
+                if nPointTotal < POEM_DISLIKE_THRESHOLD: n_poemappeal[chapter] = -1
+                elif nPointTotal > POEM_LIKE_THRESHOLD: n_poemappeal[chapter] = 1
+                if yPointTotal < POEM_DISLIKE_THRESHOLD: y_poemappeal[chapter] = -1
+                elif yPointTotal > POEM_LIKE_THRESHOLD: y_poemappeal[chapter] = 1
+                if mPointTotal < POEM_DISLIKE_THRESHOLD: m_poemappeal[chapter] = -1
+                elif mPointTotal > POEM_LIKE_THRESHOLD: m_poemappeal[chapter] = 1
 
-        if chapter < 5:
-            exec(poemwinner[chapter][0] + "_poemappeal[chapter] = 1")
-        elif chapter >= 12:
-            exec(sayarcpoemwinner[chapter-12][0] + "_poemappeal2[chapter-12] = 1")
-        elif chapter == 11:
-            exec(natarcpoemwinner[chapter-11][0] + "_poemappeal2[chapter-11] = 1")
-        elif chapter > 7:
-            exec(newpoemwinner[chapter-6][0] + "_poemappeal[chapter] = 1")
-        else:
-            exec(newpoemwinner[chapter-5][0] + "_poemappeal[chapter] = 1")
+            if chapter < 5:
+                exec(poemwinner[chapter][0] + "_poemappeal[chapter] = 1")
+            elif chapter >= 12:
+                exec(sayarcpoemwinner[chapter-12][0] + "_poemappeal2[chapter-12] = 1")
+            elif chapter == 11:
+                exec(natarcpoemwinner[chapter-11][0] + "_poemappeal2[chapter-11] = 1")
+            elif chapter > 7:
+                exec(newpoemwinner[chapter-6][0] + "_poemappeal[chapter] = 1")
+            else:
+                exec(newpoemwinner[chapter-5][0] + "_poemappeal[chapter] = 1")
 
     if persistent.playthrough == 2 and persistent.seen_eyes == None and renpy.random.randint(0,5) == 0:
         $ seen_eyes_this_chapter = True
@@ -444,12 +517,20 @@ label poem(transition=True,totalWords=20):
     $ config.allow_skipping = True
     $ allow_skipping = True
     $ m_hairdown_poemglitch = False
-    stop music fadeout 2.0
-    hide screen quick_menu
-    show black as fadeout:
-        alpha 0
-        linear 1.0 alpha 1.0
-    $ pause(1.0)
+    if ayame_poem:
+        stop music
+        hide screen quick_menu
+        show black as fadeout:
+            alpha 0
+            linear 0.01 alpha 1.0
+        $ pause(0.25)
+    else:
+        stop music fadeout 2.0
+        hide screen quick_menu
+        show black as fadeout:
+            alpha 0
+            linear 1.0 alpha 1.0
+        $ pause(1.0)
     return
 
 image bg eyes_move:
@@ -632,6 +713,30 @@ image y_sticker glitch:
             function randomMoveYuri
         repeat
 
+image glitch_sticker:
+    parallel:
+        choice:
+            "gui/poemgame/s_sticker_1.png"
+            xoffset sayoriOffset xzoom sayoriZoom
+        choice:
+            "gui/poemgame/n_sticker_1.png"
+            xoffset natsukiOffset xzoom natsukiZoom
+        choice:
+            "gui/poemgame/y_sticker_1.png"
+            xoffset yuriOffset xzoom yuriZoom
+        choice:
+            "gui/poemgame/m_sticker_1.png"
+            xoffset monikaOffset xzoom monikaZoom
+        pause 0.09996
+        repeat
+    parallel:
+        block:
+            function randomPauseSayori
+            parallel:
+                sticker_move_n
+            parallel:
+                function randomMoveSayori
+            repeat
 
 # sticker positions
 # Four Stickers

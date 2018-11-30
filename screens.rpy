@@ -520,8 +520,6 @@ init -1 style navigation_button_text:
 init -501 screen main_menu() tag menu:
 
 
-
-
     style_prefix "main_menu"
 
     if persistent.ghost_menu:
@@ -823,6 +821,8 @@ init -1 python:
         elif persistent.playthrough == 3 and renpy.current_screen().screen_name[0] == "save":
             return Show(screen="dialog", message="There's no point in saving anymore.\nDon't worry, I'm not going anywhere.", ok_action=Hide("dialog"))
 
+        elif persistent.playthrough == 0 and special_chapter:
+            return Show(screen="dialog", message="This is an alternate reality. You can't save them.", ok_action=Hide("dialog"))
 
         # Monika Bad Ending Saturday
         elif persistent.playthrough == 0 and persistent.monika_ch3_skip and renpy.current_screen().screen_name[0] == "save":
@@ -832,6 +832,11 @@ init -1 python:
         #    return Show(screen="dialog", message="Aha, you're so cute!\nNo need for these if we're already happy.", ok_action=delete_all_saves())
 
         else:
+            if renpy.current_screen().screen_name[0] == "save" and persistent.name_saves:
+                # renpy.store.save_name = chapter_names[chapter]
+                return Show(screen="save_input", message="Enter save name", ok_action=[Hide("save_input"), FileAction(name)])
+            elif renpy.current_screen().screen_name[0] == "save":
+                renpy.store.save_name = chapter_names[chapter]
             return FileAction(name)
 
 
@@ -880,11 +885,17 @@ init -501 screen file_slots(title):
 
                         add FileScreenshot(slot) xalign 0.5
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
-                            style "slot_time_text"
+                        if persistent.name_saves:
+                            text FileSaveName(slot):
+                                style "slot_name_text"
+                            text FileTime(slot, format=_("{#file_time}%m/%d/%Y, %H:%M"), empty=_("empty slot")):
+                                style "slot_time_text"
+                        else:
+                            text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                                style "slot_time_text"
+                            # text FileSaveName(slot):
+                            #     style "slot_name_text"
 
-                        text FileSaveName(slot):
-                            style "slot_name_text"
 
                         key "save_delete" action FileDelete(slot)
 
@@ -904,7 +915,7 @@ init -501 screen file_slots(title):
 
 
 
-                for page in range(1, 10):
+                for page in range(1, 20):
                     textbutton "[page]" action FilePage(page)
 
 
@@ -991,6 +1002,12 @@ init -501 screen preferences() tag menu:
                     label _("Skip")
                     textbutton _("Unseen Text") action Preference("skip", "toggle")
                     textbutton _("After Choices") action Preference("after choices", "toggle")
+
+                vbox:
+                    style_prefix "radio"
+                    label _("Save Names")
+                    textbutton _("Enabled") action SetField(persistent, "name_saves", True)
+                    textbutton _("Disabled") action SetField(persistent, "name_saves", False)
 
 
 
@@ -1383,7 +1400,41 @@ init -1 style history_label_text:
 
 
 
+init -501 screen save_input(message, ok_action):
 
+
+    modal True
+
+    zorder 200
+
+    style_prefix "confirm"
+
+    add "gui/overlay/confirm.png"
+    key "K_RETURN" action [Play("sound", gui.activate_sound), ok_action]
+
+    frame:
+
+        has vbox:
+            xalign .5
+            yalign .5
+            spacing 30
+
+        label _(message):
+            style "confirm_prompt"
+            xalign 0.5
+
+        input default chapter_names[chapter] value VariableInputValue("save_name") length 30 allow "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890()-=!@#$%^&*()_+ "
+
+
+
+
+
+
+        hbox:
+            xalign 0.5
+            spacing 100
+
+            textbutton _("OK") action ok_action
 
 init -501 screen name_input(message, ok_action):
 

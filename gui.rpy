@@ -228,21 +228,21 @@ define -2 gui.choice_button_text_hover_color = "#fa9"
 
 
 
-define -2 gui.slot_button_width = 276
-define -2 gui.slot_button_height = 206
+define -2 gui.slot_button_width = 176
+define -2 gui.slot_button_height = 156
 define -2 gui.slot_button_borders = Borders(10, 10, 10, 10)
-define -2 gui.slot_button_text_size = 14
+define -2 gui.slot_button_text_size = 13
 define -2 gui.slot_button_text_xalign = 0.5
 define -2 gui.slot_button_text_idle_color = gui.idle_small_color
 define -2 gui.slot_button_text_hover_color = gui.hover_color
 
 
-define -2 config.thumbnail_width = 256
-define -2 config.thumbnail_height = 144
+define -2 config.thumbnail_width = 156
+define -2 config.thumbnail_height = 105
 
 
-define -2 gui.file_slot_cols = 3
-define -2 gui.file_slot_rows = 2
+define -2 gui.file_slot_cols = 5
+define -2 gui.file_slot_rows = 3
 
 
 
@@ -408,56 +408,56 @@ init -2 python:
 
 
     if renpy.variant("touch"):
-        
+
         gui.quick_button_borders = Borders(60, 14, 60, 0)
 
 
 
     if renpy.variant("small"):
-        
-        
+
+
         gui.text_size = 30
         gui.name_text_size = 36
         gui.notify_text_size = 25
         gui.interface_text_size = 36
         gui.button_text_size = 34
         gui.label_text_size = 36
-        
-        
+
+
         gui.textbox_height = 240
         gui.name_xpos = 80
         gui.text_xpos = 90
         gui.text_width = 1100
-        
-        
+
+
         gui.choice_button_width = 1240
-        
+
         gui.navigation_spacing = 20
         gui.pref_button_spacing = 10
-        
+
         gui.history_height = 190
         gui.history_text_width = 690
-        
-        
+
+
         gui.file_slot_cols = 2
         gui.file_slot_rows = 2
-        
-        
+
+
         gui.nvl_height = 170
-        
+
         gui.nvl_name_width = 305
         gui.nvl_name_xpos = 325
-        
+
         gui.nvl_text_width = 915
         gui.nvl_text_xpos = 345
         gui.nvl_text_ypos = 5
-        
+
         gui.nvl_thought_width = 1240
         gui.nvl_thought_xpos = 20
-        
+
         gui.nvl_button_width = 1240
         gui.nvl_button_xpos = 20
-        
-        
+
+
         gui.quick_button_text_size = 20
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

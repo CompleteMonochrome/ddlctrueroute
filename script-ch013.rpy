@@ -344,31 +344,31 @@ label ch13_main:
         m 4b "Anyway, we should get inside."
         m "We've kept the others waiting for long enough."
     elif ch12_markov_agree and monika_type == 1:
-        show monika 1ha zorder 2 at t11
+        show monika 1a zorder 2 at t11
         m "Hi [player]~"
         "It's Monika, but..."
         "...she's not wearing her white ribbon and her hair is down."
-        m 3hb "I suppose you're late too?"
+        m 3b "I suppose you're late too?"
         mc "A-Ah, I guess."
-        m 3hc "What's the matter? You seem kinda shocked."
+        m 3c "What's the matter? You seem kinda shocked."
         mc "I'm a little surprised at your new look, that's all."
         "Monika looks at her herself."
-        m 4hb "Oh, this?"
-        m 4he "Yeah...I thought I would change it up a little."
+        m 4b "Oh, this?"
+        m 4e "Yeah...I thought I would change it up a little."
         m "We can talk about it later."
         mc "Alright..."
-        m 2ha "So why aren't you in the club yet?"
+        m 2a "So why aren't you in the club yet?"
         m "Ahaha, I thought I would be the late one~"
         mc "I had to think about a few things."
         mc "I guess I just lost track of time."
-        m 2hc "I see..."
+        m 2c "I see..."
         mc "What's your reason?"
-        m 4ha "Well, I was practicing piano and asked for a slightly extended lesson from the tutor."
+        m 4a "Well, I was practicing piano and asked for a slightly extended lesson from the tutor."
         m "I just want to get better faster, you know?"
         mc "Any reason in particular?"
-        m 2hb "Maybe~"
+        m 2b "Maybe~"
         mc "I'd love to hear you play that song you talked about in the first week."
-        m 2he "Maybe when the time is right, [player]."
+        m 2e "Maybe when the time is right, [player]."
         m "For now, we should get to the meeting. We've probably kept them waiting long enough."
     else:
         show monika 1c zorder 2 at t11
@@ -413,7 +413,7 @@ label ch13_main:
         m "And [player] was..."
         m "Um..."
     elif ch12_markov_agree and monika_type == 1:
-        show monika 2hb zorder 3 at f31
+        show monika 2b zorder 3 at f31
         m "Sorry for that. I had a piano lesson I went to."
         m "It went for slightly longer than usual, so that's why I'm late."
         m "As for [player]..."
@@ -422,12 +422,12 @@ label ch13_main:
         s "W-Wait a second..."
         s "Before any of that...what did you do to your hair?"
         s 2o "It's...different!"
-        show monika 2hj zorder 3 at f31
+        show monika 2j zorder 3 at f31
         show sayori zorder 2 at t32
         m "Ahaha, you noticed?"
         m "You're quite sharp, Sayori."
         m "I actually decided to wear my hair down today..."
-        m 2he "Because..."
+        m 2e "Because..."
         "Monika looks at me and winks."
         m "Well, just because~"
     else:
@@ -487,7 +487,7 @@ label ch13_main:
         m "There's nothing wrong with doing that."
         m "Sometimes you just have to say what's on your mind."
     elif ch12_markov_agree and monika_type == 1:
-        show monika 2hb zorder 3 at f31
+        show monika 2b zorder 3 at f31
         m "If you say so, Sayori."
         m "Just try to relax a little, okay?"
     else:
@@ -545,19 +545,19 @@ label ch13_main:
         m "Then...I guess his influence made the school go for it."
         m 4k "It might be a good idea for the Literature Club, if we ever wanted it to grow."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 3hj zorder 3 at f31
+        show monika 3j zorder 3 at f31
         m "Oh, I might have an idea~"
         show monika zorder 2 at t31
         show yuri 3pf zorder 3 at f33
         y "Do you know something we don't, Monika?"
-        show monika 4hk zorder 3 at f31
+        show monika 4k zorder 3 at f31
         show yuri zorder 2 at t33
         m "Well, all I can really say is what I heard about it during lunch."
         m "A couple of the smaller club's presidents wanted to try to get more members."
         m "I guess they actually managed to get the school to do it?"
         m "Now that I think about, it's probably because one of the presidents was also a president of a larger club."
-        m 4hb "So he probably had a pretty big influence on the whole thing..."
-        m 2ha "I think it would be a great opportunity for the Literature Club to do something though!"
+        m 4b "So he probably had a pretty big influence on the whole thing..."
+        m 2a "I think it would be a great opportunity for the Literature Club to do something though!"
     else:
         show monika 2h zorder 3 at f31
         m "It doesn't really matter, does it?"
@@ -596,7 +596,7 @@ label ch13_main:
         m "Maybe I could help you write it this time."
         m 2e "Ah...that is, if we are really doing this."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 2ha zorder 3 at f31
+        show monika 2a zorder 3 at f31
         m "Well, I can always lend you a hand."
         m "It would definitely be good for the club if we do this..."
     else:
@@ -639,7 +639,7 @@ label ch13_main:
         m "Ah...don't you mean 'sentiment'?"
         m "Sediments are something completely different, Sayori."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 3hl zorder 3 at f31
+        show monika 3l zorder 3 at f31
         m "I think the word you're looking for is 'sentiment', Sayori."
     else:
         show monika 3c zorder 3 at f31
@@ -738,7 +738,7 @@ label ch13_main:
         m "She would probably appreciate you visiting."
         m 2m "I wonder how she's dealing with everything..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 2ha zorder 3 at f31
+        show monika 2a zorder 3 at f31
         m "Knowing Natsuki, she'd probably appreciate the company."
         m "That's really kind of you, Sayori."
     else:
@@ -774,7 +774,7 @@ label ch13_end:
         show monika 1c zorder 3 at f33
         m "Really? I don't think anything is wrong..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hc zorder 3 at f33
+        show monika 1c zorder 3 at f33
         m "I think you're overthinking it a little, Yuri."
     else:
         show monika 1c zorder 3 at f33
@@ -831,7 +831,7 @@ label ch13_end:
         m "We should probably assign some tasks to help you with your preparation, Sayori."
         m "After all, it wouldn't be fair if you did everything by yourself."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 3ha zorder 3 at f33
+        show monika 3a zorder 3 at f33
         m "Maybe we should assign tasks to help with the preparation."
         m "It would make it easier for you, Sayori."
     else:
@@ -879,10 +879,10 @@ label ch13_end:
         m 4a "Aside from small snacks, we could get Natsuki to bake something for us."
         m "The stuff she bakes is delicious after all!"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 3hb zorder 3 at f33
+        show monika 3b zorder 3 at f33
         m "I know what everyone could do."
         m "We all have different kinds of talents, don't we?"
-        m 4ha "Natsuki, for example, could bake us some cupcakes for the day."
+        m 4a "Natsuki, for example, could bake us some cupcakes for the day."
         m "The stuff she bakes is delicious after all!"
     else:
         show monika 3a zorder 3 at f33
@@ -909,14 +909,14 @@ label ch13_end:
         m 1n "Maybe you could make some banners about the Literature Club to set the atmosphere."
         m "I know you'll do a great job!"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 3hl zorder 3 at f33
+        show monika 3l zorder 3 at f33
         m "Ahaha, it's not like that Yuri."
         m "You definitely have some talents that we could use to help the preparations."
-        m 1ha "For example, your handwriting is really beautiful."
+        m 1a "For example, your handwriting is really beautiful."
         m "Every time I read one of your poems I'm in awe at how good it is!"
-        m 1hb "I think it's helped a lot by your handwriting."
+        m 1b "I think it's helped a lot by your handwriting."
         m "So I was thinking you could make some banners for the club to set the atmosphere."
-        m 1hj "I'm sure they'll end up great!"
+        m 1j "I'm sure they'll end up great!"
     else:
         show monika 3c zorder 3 at f33
         m "Maybe not."
@@ -950,7 +950,7 @@ label ch13_end:
         m "Hmm..."
         m "What should I do then?"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1hc zorder 3 at f33
+        show monika 1c zorder 3 at f33
         m "Okay...then what should I do?"
     else:
         show monika 1d zorder 3 at f33
@@ -986,11 +986,11 @@ label ch13_end:
         m "It's true I've been practicing for a while but..."
         m 2e "I don't know if the play is the right time."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 2hl zorder 3 at f33
+        show monika 2l zorder 3 at f33
         m "Ah..."
         m "Is it really a good idea for me to play?"
         m "If you all think I'm good enough to do that, then I might consider it."
-        m 2he "I'm just not sure that it's the right time."
+        m 2e "I'm just not sure that it's the right time."
     else:
         show monika 2c zorder 3 at f33
         m "Playing the piano for the day?"
@@ -1009,7 +1009,7 @@ label ch13_end:
     show sayori zorder 2 at t32
     "Monika looks at all of us one by one."
     if monika_type == 1 and ch12_markov_agree:
-        show monika 2hb zorder 3 at f33
+        show monika 2b zorder 3 at f33
     else:
         show monika 2b zorder 3 at f33
     m "Okay, I'll do it."
@@ -1090,15 +1090,15 @@ label ch13_end:
         m "Even if I enjoy your company, you have to think of the bigger picture..."
         m 1j "...After all, this whole thing is for the club."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 3ha zorder 3 at f33
+        show monika 3a zorder 3 at f33
         m "Hmm..."
         m "Maybe [player] could help me."
-        m 3hb "If I'm going to play the piano on the day, I could use an audience to practice to."
+        m 3b "If I'm going to play the piano on the day, I could use an audience to practice to."
         m "He could also help with choosing the pieces I could play."
         m "Ahaha, it could be fun."
-        m 3he "However, I'm not going to force you."
+        m 3e "However, I'm not going to force you."
         m "You should go because you think I need the help not because you want to hang out with me..."
-        m 1hj "But I certainly wouldn't mind if that was the reason~"
+        m 1j "But I certainly wouldn't mind if that was the reason~"
     else:
         show monika 3a zorder 3 at f33
         m "[player] could be useful helping me."
@@ -1142,7 +1142,7 @@ label ch13_end:
         m "That really does sound like a lot of work, Sayori."
         m 1e "Are you sure you can handle all of that if [player] doesn't choose to help you?"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1ha zorder 3 at f33
+        show monika 1a zorder 3 at f33
         m "Ahaha, wow..."
         m "That sure is a lot of work you've set for yourself."
     else:
@@ -1306,7 +1306,7 @@ label ch13_end:
         show monika zorder 2 at t33
         "Sayori wipes her face one more time before returning to form."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1he zorder 3 at f33
+        show monika 1e zorder 3 at f33
         m "I actually have a few words I want to say."
         m "It has to do with all of you..."
         m "...And I know Natsuki isn't here but I'll be sure to relay the message to her."
@@ -1315,25 +1315,25 @@ label ch13_end:
         y "This sounds important..."
         y "Is it something bad?"
         show yuri zorder 2 at t31
-        show monika 3hj zorder 3 at f33
+        show monika 3j zorder 3 at f33
         m "It's just the opposite."
         m "I wanted to say something {i}good{/i} about the Literature Club."
-        m 3hk "To make everyone feel better after what's been happening recently."
-        m 3he "So...you all might want to listen."
+        m 3k "To make everyone feel better after what's been happening recently."
+        m 3e "So...you all might want to listen."
         m "Because it's kinda hard for me to say."
         show sayori 1q zorder 3 at f32
         show monika zorder 2 at t33
         s "Well, I definitely wanna hear this!"
         show sayori zorder 2 at t32
-        show monika 1ha zorder 3 at f33
+        show monika 1a zorder 3 at f33
         m "Okay..."
         m "When I first...joined the Literature Club..."
-        m 1hc "I wasn't expecting it to become such an important part of my life."
+        m 1c "I wasn't expecting it to become such an important part of my life."
         m "My passion for literature is what drove me to sta--"
-        m 1he "...to {i}join{/i} this club."
+        m 1e "...to {i}join{/i} this club."
         m "And through this club, I found something special."
         m "Something I never would have found anywhere else."
-        m 1hm "And that's..."
+        m 1m "And that's..."
         "Monika seems unable to finish her sentence."
         show sayori 1d zorder 3 at f32
         show monika zorder 2 at t33
@@ -1342,35 +1342,35 @@ label ch13_end:
         s "You didn't expect all of us to become to important to you."
         s "Like we're somehow unique in your life...?"
         show sayori zorder 2 at t32
-        show monika 3hl zorder 3 at f33
+        show monika 3l zorder 3 at f33
         m "Y-Yeah...!"
         m "That's right Sayori."
-        m 4hm "Going to this club after every school day just made me feel so..."
+        m 4m "Going to this club after every school day just made me feel so..."
         m "...happy."
-        m 4hf "I know it hasn't always been the best place."
+        m 4f "I know it hasn't always been the best place."
         m "The club has been through lots of ups and downs..."
-        m 2hm "But honestly..."
-        m 2he "I woudn't trade the time I've spent here for anything."
+        m 2m "But honestly..."
+        m 2e "I woudn't trade the time I've spent here for anything."
         m "The Literature Club will always have a place in my...heart."
         show yuri 3pv zorder 3 at f31
         show monika zorder 2 at t33
         y "I...don't know how to respond to that..."
         y "S-Sorry, I'm not really the best when it comes to situations like this."
         show yuri zorder 2 at t31
-        show monika 2hm zorder 3 at f33
+        show monika 2m zorder 3 at f33
         m "It's okay, Yuri."
         m "But anyway..."
-        m 2hn "I guess what I'm trying to say is..."
-        m 2he "...thank you."
+        m 2n "I guess what I'm trying to say is..."
+        m 2e "...thank you."
         m "For everything that you've done for me."
         m "For helping me get this far."
-        m 2hj "I wouldn't be the person I am today without you."
+        m 2j "I wouldn't be the person I am today without you."
         show sayori 1t zorder 3 at f32
         show monika zorder 2 at t33
         s "Y-You..."
         s "You didn't have to say those things, Monika."
         show sayori zorder 2 at t32
-        show monika 1hm zorder 3 at f33
+        show monika 1m zorder 3 at f33
         m "I know..."
         m "But I feel like I had to after everything that's happened."
         show sayori 2t zorder 3 at f32
@@ -1408,7 +1408,7 @@ label ch13_end:
         scene bg club_day
         show yuri 3pv zorder 2 at i31
         show sayori 2t zorder 3 at i32
-        show monika 1hm zorder 3 at i33
+        show monika 1m zorder 3 at i33
         with Dissolve(1.5)
         $ style.say_window = style.window
         $ del _history_list[-10:]
@@ -1416,7 +1416,7 @@ label ch13_end:
         "That was during the first week, right?"
         "Why would Monika say she was the president...?"
         "I really have no idea what's going on..."
-        show monika 3he zorder 3 at f33
+        show monika 3e zorder 3 at f33
         m "There's nothing wrong with crying, Sayori."
         m "It's good to let your emotions out once in a while."
         m "It's definitely better than keeping it bottled up, you know?"
@@ -1426,11 +1426,11 @@ label ch13_end:
         s "You're right."
         s "T-Thanks again, Monika..."
         show sayori zorder 2 at t32
-        show monika 1hj zorder 3 at f33
+        show monika 1j zorder 3 at f33
         m "Take care of yourself, Sayori."
         m "I wouldn't want anything bad happening to you~"
         "Monika turns towards Yuri."
-        m 2ha "Yuri, you too."
+        m 2a "Yuri, you too."
         m "I know you had a tough time before."
         m "But I want to personally thank you as well."
         show yuri 3pq zorder 3 at f31
@@ -1438,9 +1438,9 @@ label ch13_end:
         y "M-Me?"
         y "W-What for...?"
         show yuri zorder 2 at t31
-        show monika 1ha zorder 3 at f33
+        show monika 1a zorder 3 at f33
         m "Ahaha, oh you know..."
-        m 1hb "Being you."
+        m 1b "Being you."
         show yuri 2pf zorder 3 at f31
         show monika zorder 2 at t33
         y "T-Thanks...I suppose."
@@ -1450,7 +1450,7 @@ label ch13_end:
         mc "If she didn't bring me here that one morning then..."
         mc "I never would have met the rest of you."
         mc "So I wouldn't trade any of the time I've spent here either."
-        show monika 1he zorder 3 at f33
+        show monika 1e zorder 3 at f33
         m "Ahaha, I'm glad."
         "Monika notices Sayori tearing up."
         m "Sorry! I didn't mean to ruin the mood."
@@ -1491,7 +1491,7 @@ label ch13_end:
         hide yuri
         show sayori zorder 2 at t21
         show monika zorder 2 at t22
-        "Yuri waves goodbye before exiting the club room."
+        "Yuri waves goodbye before exiting the clubroom."
         show sayori 1q zorder 3 at f21
         s "Bye, Yuri!"
         show sayori zorder 2 at t21
@@ -1501,7 +1501,7 @@ label ch13_end:
             m "I want to get as much practice done as possible."
             m "You'll get my book list tomorrow as well."
         elif monika_type == 1 and ch12_markov_agree:
-            show monika 2ha zorder 3 at f22
+            show monika 2a zorder 3 at f22
             m "I'll get some practice in for Friday."
             m "You can expect my book choices in by tomorrow as well."
         else:
@@ -1522,7 +1522,7 @@ label ch13_end:
         "Sayori skips out of the room."
         mc "See you later, Sayori."
         if monika_type == 1 and ch12_markov_agree:
-            show monika 2ha zorder 3 at t22
+            show monika 2a zorder 3 at t22
         else:
             show monika 2a zorder 3 at t22
         m "Well..."
@@ -1550,11 +1550,11 @@ label ch13_end:
                 m "But anyway, we're wasting time here."
                 mc "Yeah..."
             elif monika_type == 1 and ch12_markov_agree:
-                m 1ha "We should probably get going."
+                m 1a "We should probably get going."
                 m "We don't want to be the ones who are lacking, especially since there's two of us!"
                 mc "Yeah, you're right."
                 mc "But I'm sure we'll do fine."
-                m 1hb "You know what? I believe you..."
+                m 1b "You know what? I believe you..."
                 m "But we should get our preparations done sooner rather than later."
                 mc "Agreed."
             else:
@@ -1704,12 +1704,12 @@ label ch13_end_monika:
         m 4a "I'm sure I could really use your help."
         m "And maybe I can tell you more about that conversation we had earlier..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 2hc zorder 3 at f33
+        show monika 2c zorder 3 at f33
         m "Even after all the work Sayori said she has to do...?"
-        m 2hd "I'm not going to decline so I guess I should be saying is..."
-        m 2hk "Thank you."
+        m 2d "I'm not going to decline so I guess I should be saying is..."
+        m 2k "Thank you."
         m "I really appreciate you choosing to help me [player]~"
-        m 2ha "Maybe I'll even tell you more about what we discussed earlier..."
+        m 2a "Maybe I'll even tell you more about what we discussed earlier..."
     else:
         show monika 1c zorder 3 at f33
         m "Interesting choice, [player]."
@@ -1801,7 +1801,7 @@ label ch13_end_sayori:
         m "Just make sure you don't hurt yourself doing too much."
         m "Knowing you, you probably have a lot more stuff than what you've let on planned..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1ha zorder 3 at f33
+        show monika 1a zorder 3 at f33
         m "Be careful not to waste all your energy, Sayori."
         m "That could be really bad for when the day comes."
     else:
@@ -1919,7 +1919,7 @@ label ch13_exclusive_natsuki:
                 if sayori_personality > 0:
                     $ sayori_personality -= 1
                 mc "Sayori, you can't be serious..."
-                mc "Of course I love you more than Yuri."
+                mc "Of course I love you more than Natsuki."
                 mc "And if me writing like Natsuki makes you uncomfortable..."
                 mc "Then--"
                 s 1c "Ah..."
@@ -2337,14 +2337,14 @@ label ch13_exclusive_natsuki:
                 "I should take this chance."
             menu:
                 "What am I gonna do...?"
-                "Ask her on a date.":
-                    call ch14_natsuki_outcome3_date
+                "Ask her out to a date.":
+                    jump ch13_natsuki_outcome3_date
                 "Focus on preparations.":
                     "I like Natsuki but I should respect what she wants."
                     "And that's a normal day."
-                    jump ch14_natsuki_outcome3_nodate
+                    jump ch13_natsuki_outcome3_nodate
         else:
-            label ch14_natsuki_outcome3_nodate:
+            label ch13_natsuki_outcome3_nodate:
             mc "We should think of the stuff we're going to bake."
             mc "Maybe a big cake and some cupcakes?"
             n 1bc "That could work."
@@ -2582,7 +2582,7 @@ label ch13_exclusive_natsuki:
             if persistent.markov_agreed:
                 mc "Of course."
                 mc "I'll go do that..."
-                scene bg n_livingroom with wipeleft_scene
+                scene bg n_bedroom with wipeleft_scene
                 play music t6
                 show natsuki 1ba zorder 2 at t11
                 n "Five eggs and..."
@@ -2600,7 +2600,7 @@ label ch13_exclusive_natsuki:
                 window hide(None)
                 play sound "sfx/s_kill_glitch1.ogg"
                 scene bg n_bedroom
-                show natsuki 1ba zorder 2 at i11
+                show natsuki 1bk zorder 2 at i11
                 $ pause(0.25)
                 stop sound
                 hide screen tear
@@ -2613,19 +2613,19 @@ label ch13_exclusive_natsuki:
             mc "It went okay."
             mc "Your mom came in and stopped me before I could do much."
             mc "So now I'm here."
-            n "I thought you were good at cleaning?"
+            n 2bc "I thought you were good at cleaning?"
             mc "I am?"
             mc "I just didn't have much time..."
-            n "Jeez, you must clean pretty slow then..."
-            n "Anyway, we have a pretty good idea of what we're going to be doing."
+            n 2be "Jeez, you must clean pretty slow then..."
+            n 2bb "Anyway, we have a pretty good idea of what we're going to be doing."
             mc "We do?"
             n "Yeah, this cake is going to be our main focus."
             n "Then we can have cupcakes on the side."
             mc "Good plan."
             mc "Now we just have to choose some books."
-            n "I have some right here."
+            n 1bd "I have some right here."
             "Natsuki points to her desk which has a pile of books."
-            n "There's a lot of manga here."
+            n 1ba "There's a lot of manga here."
             n "I'm sure you'll find a couple that you like."
             mc "Do you have somewhere you're going to put all of these?"
             mc "It seems like a lot of books to just keep on your desk."
@@ -2783,7 +2783,7 @@ label ch13_exclusive_natsuki:
             mc "I guess I should be heading home then."
             n "I'll go downstairs with you."
             scene bg n_house_sunset
-            show natsuki 1ba zorder 2 at t11
+            show natsuki 1bg zorder 2 at t11
             with wipeleft_scene
             "Natsuki was right."
             "It's already sunset when we step outside."
@@ -2792,43 +2792,45 @@ label ch13_exclusive_natsuki:
             n "You didn't have to do that."
             mc "Yeah, but I wanted to."
             mc "I know you probably didn't need the help but..."
-            n "I appreciate it, [player]."
+            n 2bq"I appreciate it, [player]."
             n "Thank you."
             show natsuki zorder 2 at t21
             show momsuki 1a zorder 3 at f22
             mo "Leaving already, [player]?"
             mo "That's a shame."
-            show natsuki zorder 3 at f21
+            show natsuki 1bc zorder 3 at f21
             show momsuki zorder 2 at t22
             n "Mom? What are you doing out here?"
             show natsuki zorder 2 at t21
-            show momsuki 1a zorder 3 at f22
+            show momsuki 1b zorder 3 at f22
             mo "Just saying goodbye to our guest."
             "Haruki shows a warm smile."
-            mo "Have a wonderful night, [player]."
+            mo 1c "Have a wonderful night, [player]."
             mo "Don't forget to do your assignments."
             show momsuki zorder 2 at t22
             mc "Assignments?"
-            show dadsuki 1a zorder 3 at f31
+            show dadsuki 1i zorder 3 at f31
             show natsuki zorder 2 at t32
             show momsuki zorder 2 at t33
             d "Is he gone already?"
             show dadsuki zorder 2 at t31
-            show momsuki zorder 3 at f33
+            show momsuki 1g zorder 3 at f33
             mo "No, he's still here dear."
             mo "And yes, [player], assignments."
-            mo "You know those things you get from school?"
+            mo 1f "You know those things you get from school?"
             mo "Natsuki has already done hers."
             show momsuki zorder 2 at t33
             mc "Oh...right."
             mc "Thanks for reminding me."
+            "I'm not sure how I forgot about those..."
             mc "Anyway, I should get going."
-            show dadsuki zorder 3 at f31
+            show dadsuki 1c zorder 3 at f31
             d "Goodbye, [player]."
+            d "Thank you for visiting."
             show dadsuki zorder 2 at t31
-            show momsuki zorder 3 at f33
+            show momsuki 1b zorder 3 at f33
             mo "Until next time~"
-            show natsuki zorder 3 at f32
+            show natsuki 1bh zorder 3 at f32
             show momsuki zorder 2 at t33
             n "I-I'll see you tomorrow."
             n "Thanks again for coming."
@@ -3487,76 +3489,77 @@ label ch13_exclusive_natsuki:
         n 2br "H-Huh? B-But why?"
         n "You have better things to do...don't you?"
         mc "This is the best thing I could be doing, Natsuki."
-        n "No, it really isn't."
+        n 2bg "No, it really isn't."
         n "I don't know why you'd want to spend your time with me of all people."
-        n "Wouldn't you rather be helping Sayori or Monika?"
+        n 2bi "Wouldn't you rather be helping Sayori or Monika?"
         n "Or even Yuri?"
-        n "I can handle myself..."
+        n 2bs "I can handle myself..."
         n "I have been for a long time anyway..."
         mc "Natsuki..."
         mc "I want to help you."
         mc "You have to believe me when I say that."
         mc "You think I came all this way just to lie to you?"
-        n "No."
+        n 1bn "No..."
         n "I've been hurt before in the past, [player]."
         n "By people I've trusted."
-        n "You don't know what that feels like."
-        mc "I don't."
-        n "Of course not!"
+        n 1bm "You don't know what that feels like."
+        mc "I know I don't but--"
+        n 5bo "Of course not!"
         n "How could you?"
         n "One of the people you cherished the most in the world..."
-        n "Became someone you grew to despise..."
-        n "Now suddenly that person is back to normal?!"
+        n 5bf "Became someone you grew to despise..."
+        n 5br "Now suddenly that person is back to normal?!"
         "It wasn't hard to figure out who Natsuki was talking about."
-        n "It's hard to believe."
+        n 5bs "It's hard to believe."
         mc "I can't speak for Yasuhiro."
         mc "But I know deep down, he's a good person."
         mc "Maybe you need to find it in yourself to forgive him."
-        n "I don't want your advice, [player]."
+        n 2bq "I don't want your advice, [player]."
         mc "I know."
         mc "I'm not really in a position to tell you anything."
         mc "But you know I just want to help."
         mc "I care about you, Natsuki."
         mc "You know that, don't you?"
-        n "I..."
+        n 2bs "I..."
         n "I know."
-        n "Out of everyone right now, you're the person I trust the most, [player]."
+        n 2bm "Out of everyone right now, you're the person I trust the most, [player]."
         n "Even more than Sayori."
         n "With everything you've done for me..."
         n "I should be thanking you..."
-        n "Instead, I'm just taking out my frustration on you."
+        n 2bu "Instead, I'm just taking out my frustration on you."
         n "I'm sorry, I shouldn't have."
         mc "I understand."
         mc "Things are difficult right now, aren't they?"
         "Natsuki nods."
         mc "Harder than before?"
-        n "He won't even look me in the eye."
+        n 1bm "He won't even look me in the eye."
         n "Like he's too embarassed..."
         mc "He's probably ashamed..."
-        n "He should be!"
+        show natsuki at h11
+        n 1bo "He should be!"
         mc "But he's still your father."
         mc "I know you care about him."
-        n "So what?"
+        n 1bq "So what?"
         "Clearly, I'm not going to get anywhere with her dad as the topic of conversation."
         mc "Never mind."
-        n "Sigh..."
+        n 1bs "Sigh..."
         n "I've been stuck here all day."
         n "We tried talking but we couldn't even have a proper conversation."
-        n "Honestly, I could use a little time outside."
+        n 1bg "Honestly, I could use a little time outside."
         mc "Before we do anything, we should probably decide what we're going to do."
         mc "You know, for Inauguration Day."
-        n "Oh...right."
+        n 1bh "Oh...right."
         n "Did you have anything in mind?"
         mc "Hmm..."
         mc "Well, in the club we talked about some ideas."
         mc "I'm not sure if you want to do that though."
-        n "What was it?"
+        n 1bc "What was it?"
         mc "Don't you have anything you want to do?"
         mc "We don't have to do what the club said."
-        n "I don't really have any other ideas."
+        n 1bb "I don't really have any other ideas."
         n "I guess there is something..."
         mc "What is it?"
-        n "We could bake something."
+        n 2bc "We could bake something."
         if ch4_name == "Natsuki":
             n "We've done it before."
             n "What's the harm in doing it again?"
@@ -3566,24 +3569,24 @@ label ch13_exclusive_natsuki:
         mc "That's weird."
         n "What is?"
         mc "That's exactly what the club suggested you do."
-        n "Oh."
+        n 2bh "Oh."
         "Natsuki stops to think for a moment."
         mc "Is something wrong?"
-        n "Not really..."
+        n 2bk "Not really..."
         n "But how come you seemed so hesistant to tell me?"
         mc "About them choosing you to bake stuff?"
         n "Yeah."
         mc "I just thought it would be better for if you got to decide yourself."
         mc "I know you're good at baking but you shouldn't have to do something you don't want to."
-        n "I don't mind it."
+        n 4ba "I don't mind it."
         n "Since they wanted me to bake, they obviously know that I'm good at it."
         n "And there's nothing wrong with that."
         mc "I suppose."
-        n "Why do you care so much anyway?"
+        n 4bb "Why do you care so much anyway?"
         n "It's not like you have an obligation to make sure I get what I want."
         mc "I guess not."
         mc "Still, I wanted to be thoughtful."
-        n "Whatever."
+        n 2be "Whatever."
         n "I just want this whole thing to be normal."
         "I can definitely understand where Natsuki is coming from."
         "The events in the last few weeks have been pretty...exciting."
@@ -3605,14 +3608,14 @@ label ch13_exclusive_natsuki:
                 "I should take this chance."
             menu:
                 "What am I gonna do...?"
-                "Ask her on a date.":
-                    call ch14_natsuki_outcome1_date
+                "Ask her out to a date.":
+                    jump ch13_natsuki_outcome1_date
                 "Focus on preparations.":
                     "I like Natsuki but I should respect what she wants."
                     "And that's a normal day."
-                    jump ch14_natsuki_outcome1_nodate
+                    jump ch13_natsuki_outcome1_nodate
         else:
-            label ch14_natsuki_outcome1_nodate:
+            label ch13_natsuki_outcome1_nodate:
             mc "We should think of the stuff we're going to bake."
             mc "Maybe a big cake and some cupcakes?"
             n 1bc "That could work."
@@ -3620,106 +3623,107 @@ label ch13_exclusive_natsuki:
             n "I'm more used to baking cupcakes."
             mc "Well, that's no problem."
             mc "We can always get a recipe from online or from a recipe book."
-            n "I don't know..."
+            n 1bq "I don't know..."
             n "I'd rather bake something I'm confident will be good."
             n "I don't wanna trust something from online."
             mc "It's up to you."
             mc "I'm just giving suggestions."
-            n "I know."
+            n 1bs "I know."
             n "It wasn't a bad suggestion..."
             n "It's just..."
-            n "I don't want to give people the wrong idea."
+            n 1bk "I don't want to give people the wrong idea."
             mc "The wrong idea?"
             mc "In what way?"
-            n "They'll think whatever I'm going to be bringing represents who I am."
+            n 3bh "They'll think whatever I'm going to be bringing represents who I am."
             n "If I get something from online..."
             n "Then I'm just copying."
-            n "That isn't me, is it?"
+            n 3be "That isn't me, is it?"
             mc "I guess not."
-            n "Though we won't be able to bake anything without any supplies."
+            n 3bc "Though we won't be able to bake anything without any supplies."
             n "Let's go downstairs."
             mc "Why?"
-            n "So I can ask Yasu--"
+            n 1bg "So I can ask Yasu--"
             n "{i}My dad{/i} is there's any supplies."
             "I guess it's still a bit difficult for her to really consider Yasuhiro as her dad."
             "I can understand where she's coming from after being treated like that for so long."
-            n "What?"
+            n 1bc "What?"
             mc "Huh?"
-            n "You're staring, [player]."
+            n 1bb "You're staring, [player]."
             n "What are you thinking?"
             mc "Oh, it was nothing."
             mc "Don't worry about it."
-            n "If you say so..."
+            n 1bi "If you say so..."
             n "Anyway, let's go."
             scene bg n_livingroom with wipeleft_scene
             "We go downstairs to try to look for Yasuhiro."
             "He's cleaning the living room, putting bottles away and wiping the walls."
             "How the walls even got that dirty...I don't want to know."
-            show natsuki 1ba zorder 2 at t11
+            show natsuki 1bb zorder 2 at t11
             n "Dad?"
-            n "We need to ask you something."
-            show dadsuki 1a zorder 3 at f21
+            n "Can I speak to you?"
+            show dadsuki 1k zorder 3 at f21
             show natsuki zorder 2 at t22
             d "Natsuki?"
             d "Did you need something?"
             show dadsuki zorder 2 at t21
-            show natsuki zorder 3 at f22
+            show natsuki 1bg zorder 3 at f22
             n "Actually, yes."
             n "We've got this thing on for Friday."
             n "And [player] and I decided we're going to bake."
-            show dadsuki zorder 3 at f21
+            show dadsuki 1m zorder 3 at f21
             show natsuki zorder 2 at t22
             d "That's great!"
             d "I'm glad you're getting back into it, Natsuki."
             show dadsuki zorder 2 at t21
-            show natsuki zorder 3 at f22
+            show natsuki 1bm zorder 3 at f22
             n "But I was never out of it..."
-            n "It was harder but..."
-            n "Never mind."
-            n "The point is, we don't have any supplies here."
-            show dadsuki zorder 3 at f21
+            n "Sure, it was harder but..."
+            n 1br "Never mind."
+            n 2bi "The point is, we don't have any supplies here."
+            show dadsuki 1j zorder 3 at f21
             show natsuki zorder 2 at t22
             d "Oh, I see."
             d "I suppose you want some money to buy some?"
             d "That's easy enough..."
             show dadsuki zorder 2 at t21
-            show natsuki zorder 3 at f22
-            n "I was hoping you could buy some supplies for us."
+            show natsuki 1bk zorder 3 at f22
+            n "Um...I was hoping you could buy the supplies for us."
+            n "[player] and I still have to do some other things for preparations."
             n "I have a list right here."
             show natsuki zorder 2 at t22
             "Natsuki pulls out a piece of paper from her pocket."
             mc "Wait, you do?"
             mc "Did you already know we were going to be baking?"
-            show natsuki zorder 3 at f22
+            show natsuki 1bh zorder 3 at f22
             n "No, it's just the usual stuff that I like to have around when I'm baking."
             n "We haven't had much of the stuff on the list for a long time..."
             show natsuki zorder 2 at t22
-            show dadsuki zorder 3 at f21
-            d "I see..."
+            show dadsuki 1i zorder 3 at f21
+            d "Ah...I see..."
             d "Don't worry, Natsuki."
-            d "I won't let you down again."
+            d 1j "I won't let you down again."
             d "I promise."
             d "Let me see the list."
             show dadsuki zorder 2 at t21
-            show natsuki zorder 3 at f22
+            show natsuki 2bq zorder 3 at f22
             n "Y-You don't need to promise that."
             "Natsuki hands the list over to Yasuhiro."
-            n "I-It's fine, okay?"
+            n 2br "I-It's fine, okay?"
             n "You don't have to try so hard to--"
-            show dadsuki zorder 3 at f21
+            show dadsuki 1k zorder 3 at f21
             show natsuki zorder 2 at t22
             d "But I've been such a terrible father, Natsuki."
             d "I need to try my hardest so that..."
             d "S-So that..."
             d "I'm sorry."
             show dadsuki zorder 2 at t21
-            show natsuki zorder 3 at f22
+            show natsuki 2bo zorder 3 at f22
             n "{i}(This is why it's so weird around here...){/i}"
-            n "D-Dad, really."
+            n 2br "D-Dad, really."
             n "It's fine, okay?"
-            n "You don't need to say sorry."
+            n 2bs "You don't need to say sorry."
             n "Just be normal."
-            show dadsuki zorder 3 at f21
+            show dadsuki 1n zorder 3 at f21
             show natsuki zorder 2 at t22
             d "We both know..."
             d "That life around here can't be normal again, Natsuki."
@@ -3736,18 +3740,18 @@ label ch13_exclusive_natsuki:
             mc "But you just need to slow down."
             mc "Change comes slowly..."
             mc "At least, that's how I see it."
-            show natsuki zorder 3 at f22
+            show natsuki 1bm zorder 3 at f22
             n "[player]..."
-            show dadsuki zorder 3 at f21
+            show dadsuki 1l zorder 3 at f21
             show natsuki zorder 2 at t22
             d "..."
             "Yasuhiro is speechless."
             "Whether that's because he believes or because he has no hope in what I'm saying..."
             "I don't know."
-            d "I'll just get ready to go get the supplies for this list of yours."
+            d 1j "I'll just get ready to go get the supplies from this list of yours."
             d "Don't worry about it."
             d "I'm sorry for the mess, [player]."
-            d "It'll be better next time."
+            d 1i "It'll be better next time."
             show dadsuki zorder 2 at t21
             mc "Ah, no problem."
             mc "I'm used to a mess like this hanging out with Sayori so much."
@@ -3757,32 +3761,32 @@ label ch13_exclusive_natsuki:
             d "You can count on me."
             show dadsuki at thide
             hide dadsuki
-            show natsuki 1ba zorder 2 at t11
+            show natsuki 1bg zorder 2 at t11
             n "Do you see what I mean, [player]?"
             n "It's hard to talk to him when he's like this."
             mc "He's just sorry about what he did in the past."
             mc "I can understand him."
-            n "So can I..."
+            n 1br "So can I..."
             n "But that doesn't mean I want him to act like that!"
             mc "I don't want to tell you what to do but..."
             if natsuki_approval < 2:
-                n "Then don't!"
+                n 1bo "Then don't!"
                 n "You don't have to tell me what to do, [player]."
                 n "I can handle myself."
                 mc "Sorry..."
-                n "Whatever."
+                n 1bs "Whatever."
             else:
                 mc "Try to put up with it."
                 mc "At least until he's more comfortable being around you."
-                n "..."
+                n 1bs "..."
                 n "We'll see..."
             mc "Anyway, what are we going to do now?"
             mc "We don't have any supplies to bake with."
-            n "Well, we have to choose some books, right?"
+            n 1bm "Well, we have to choose some books, right?"
             n "Why don't we do that now?"
             mc "Great idea."
             mc "I didn't bring any books though..."
-            n "I have a bunch on my desk upstairs."
+            n 1bc "I have a bunch on my desk upstairs."
             n "You can choose from there."
             mc "Lead the way."
             scene bg n_bedroom
@@ -3936,19 +3940,19 @@ label ch13_exclusive_natsuki:
                     "I look through the pile to find another novel I think is popular."
             "Natsuki puts the manga she took in her bag."
             "I do the same with my manga."
-            n "I think I heard dad leave the house."
+            n 1bc "I think I heard dad leave the house."
             n "So it's just the two of us now..."
             mc "So what do we do now?"
             mc "We've pretty much done all there is to do with what we have."
-            n "Hmm..."
+            n 1bg "Hmm..."
             n "I was going to get more books from my dad's room."
             mc "You don't have enough here already?"
-            n "It's just in case!"
-            n "Besides, I read pretty quickly."
+            n 1be "It's just in case!"
+            n 1ba "Besides, I read pretty quickly."
             mc "If you say so."
             mc "But are you even allowed in there?"
             mc "It's still Yasuhiro's room."
-            n "Why wouldn't I be?"
+            n 1bc "Why wouldn't I be?"
             mc "Well--"
             n "Just follow me."
             scene bg n_dadroom with wipeleft_scene
@@ -3956,16 +3960,16 @@ label ch13_exclusive_natsuki:
             "There's no danger of being found out."
             "It's not like we're technically trespassing or anything."
             "It still feels strange entering a room without asking Yasuhiro first."
-            show natsuki 1ba zorder 2 at t11
+            show natsuki 1bg zorder 2 at t11
             n "Just wait over there."
             n "I won't be a minute."
             mc "Can't I take a look too?"
-            n "You can if you want."
+            n 2bc "You can if you want."
             n "But there isn't much beyond what I'm looking at."
             n "The rest are just random books I've never really heard of."
             mc "I see."
             mc "I'll just wait over there then."
-            n "Suit yourself."
+            n 4ba "Suit yourself."
             show natsuki at thide
             hide natsuki
             "I take a seat on Yasuhiro's bed."
@@ -3973,7 +3977,7 @@ label ch13_exclusive_natsuki:
             "I would have thought he'd have at least done up his bed though."
             "Seeing as he's trying to change for Natsuki."
             mc "Hmm..."
-            "I look under the bed, purely out of curiousity."
+            "I look under the bed, purely out of curiosity."
             "I see something that captures my interest."
             mc "What's this?"
             n "Probably nothing..."
@@ -3997,24 +4001,24 @@ label ch13_exclusive_natsuki:
             "[player]..."
             "But I still can't keep my eyes off the arrow-sword thing."
             "[player]...!"
-            show natsuki 1ba zorder 2 at t11
+            show natsuki 1bp zorder 2 at t11
             n "[player]!"
             mc "W-What?"
-            n "Are you okay?"
+            n 1bo "Are you okay?"
             n "You kinda..."
-            n "Just stopped."
+            n 1bg "Just stopped."
             mc "Just stopped?"
             n "You just stopped moving."
             mc "I did?"
             mc "Have you already gotten your books?"
-            n "Yeah, I managed to get my books already."
+            n 1bq "Yeah, I managed to get my books already."
             n "I thought you'd go with me after but..."
             n "But you just kept looking under the bed."
-            n "I thought that maybe you were just preoccupied so I told you I'd just meet you back in my room."
+            n 1bs "I thought that maybe you were just preoccupied so I told you I'd just meet you back in my room."
             n "But I waited a while and you still hadn't come back."
             mc "I was here the whole time?"
             mc "I feel like I've only been here a couple of seconds..."
-            n "What are you looking at anyway?"
+            n 2bk "What are you looking at anyway?"
             "Natsuki begins to kneel down to see."
             "Before she can, a voice comes from downstairs."
             d "Natsuki! I've got your supplies."
@@ -4022,91 +4026,94 @@ label ch13_exclusive_natsuki:
             n "I'll be down in a minute!"
             "Natsuki raised her voice so that Yasuhiro could hear."
             d "Where are you?"
-            n "Just...upstairs!"
+            n 1bo "Just...upstairs!"
             "Natsuki lowers her voice."
-            n "Never mind, [player]."
+            n 1bh "Never mind, [player]."
             n "I can look another time."
-            n "We should get out of here."
+            n 2bg "We should get out of here."
             mc "But what's wrong with us being in here?"
-            n "N-Nothing but we have to go!"
+            n 2be "N-Nothing but we have to go!"
             n "I just don't wanna be seen in here."
-            n "Let's head outside."
+            n 2bb "Let's head outside."
             n "Bring your bag."
             mc "A-Alright, then."
             scene bg n_house_sunset with wipeleft_scene
             "We meet Yasuhiro outside carrying shopping bags."
             "I'm surprised it's already this late."
             "Did I really waste that much time in Yasuhiro's room?"
-            show dadsuki 1a zorder 2 at t21
+            show dadsuki 1g zorder 2 at t21
             d "I've got your supplies here."
             d "I'm sorry I was so late."
-            d "You wouldn't believe what happened."
-            show natsuki 1ba zorder 3 at f22
+            d 1i "You wouldn't believe what happened."
+            show natsuki 1bc zorder 3 at f22
             n "I'm glad you're back, dad."
             n "Thank you for getting my supplies."
             n "[player] and I can start baking tomorrow."
-            show dadsuki zorder 3 at f21
+            show dadsuki 1j zorder 3 at f21
             show natsuki zorder 2 at t22
             d "Um..."
             d "You're welcome!"
-            d "I'm glad I could help."
+            d 1m "I'm glad I could help."
             show dadsuki zorder 2 at t21
             mc "Thanks for your help, Yasuhiro."
             mc "Can I ask you something though?"
-            show dadsuki zorder 3 at f21
+            show dadsuki 1k zorder 3 at f21
             d "I'll try to answer."
             d "But what's this about?"
             show dadsuki zorder 2 at t21
             mc "I found something."
             mc "Under your--"
-            show natsuki zorder 3 at f22
-            n "So, dad."
+            show natsuki 2bl zorder 3 at hf22
+            n "Soooo, dad."
             n "Can you put the supplies in the kitchen?"
-            n "I need to speak to [player] for a little bit."
+            n 2bj "I need to speak to [player] for a little bit."
             n "Don't worry I'll answer his question."
-            show dadsuki zorder 3 at f21
+            show dadsuki 1j zorder 3 at f21
             show natsuki zorder 2 at t22
-            d "Oh..."
+            d "O-Oh..."
             d "Alright, goodbye [player]."
             d "Hopefully Natsuki can answer your question."
             show dadsuki at lhide
             hide dadsuki
             show natsuki zorder 2 at t11
             mc "But..."
-            n "[player], he can't know we were in there."
+            n 2bg "[player], he can't know we were in there."
             n "You shouldn't ask about what you saw."
             mc "You said it was okay to be in there."
-            n "Is it not obvious?"
+            n 2be "Isn't it obvious?"
             n "I was lying!"
             mc "You were?"
-            n "We aren't on good terms right now..."
+            n 2bq "We aren't on good terms right now..."
             n "I can't just tell him I went into his room without asking."
+            n 2br "We have to learn to trust each other again."
             n "He won't be mad but he'd probably be really upset."
             n "And I don't want to hurt him."
             mc "So you do care about him."
-            n "Of course I do!"
-            n "It's just...hard."
+            n 2bp "Of course I do!"
+            n 2bn "It's just...hard."
             "There's an odd silence between us."
-            "Natsuki breaks the silence."
-            n "What did you see anyway?"
-            n "Under the bed?"
+            "Her words are still hanging in the air."
+            "It's a decent amount of time before Natsuki breaks the silence."
+            n 1bs "What did you see anyway?"
+            n "Under the bed, I mean."
             mc "I don't know..."
             mc "There was tally marks and..."
             mc "That was it."
             "Why did I just lie?"
+            n 1bk "Tally marks? That's weird."
             n "Are you sure?"
             "I want to tell her the truth."
             mc "Yeah."
             "There's no reason to lie to her."
-            n "Okay."
+            n 1bc "Okay."
             n "I believe you."
             "Natsuki sighs."
-            n "Thanks for coming today, [player]."
+            n 2ba "Thanks for coming today, [player]."
             n "It was better than being alone, that's for sure."
             mc "No problem, Natsuki."
             mc "I'm glad I could help...sort of."
             mc "I know we didn't actually get to do anything."
-            n "We can start tomorrow."
+            n 4bd "We can start tomorrow."
             mc "Yes, definitely."
             n "I guess I'll see you at the club then..."
             mc "I'll see you at the club, Natsuki."
@@ -4682,11 +4689,12 @@ label ch13_exclusive_natsuki:
         n "I want to thank you for coming."
         mc "You don't need to do that."
         mc "I came here because I wanted to help you."
-        n "You kept me company, [player]."
+        n 1bq "You kept me company, [player]."
         n "You're the one who didn't need to do that."
         mc "Ah..."
-        n "You know, if things were different..."
-        n "We could be..."
+        n 1bs "You know, if things were different..."
+        n 1bm "We could be..."
+        show natsuki 1bq
         "Natsuki looks away."
         n "N-Never mind."
         "I think I know what she means."
@@ -4694,56 +4702,57 @@ label ch13_exclusive_natsuki:
         "If the circumstances were different, there's every possibility..."
         mc "It's okay, Natsuki."
         mc "I know."
-        n "Sometimes life isn't fair, you know?"
+        n 1bi "Sometimes life isn't fair, you know?"
         "Natsuki's voice begins to break."
         n "I know it's selfish to say..."
         n "I just wish more people were here for me."
         n "Like you are."
         mc "I think if everyone wasn't so busy..."
         mc "Then we'd all be here."
-        n "Maybe..."
+        n 2bq "Maybe..."
         mc "Sayori came here, didn't she?"
         mc "Clearly she cares too."
         mc "I'm sure Monika and Yuri are wishing you well too."
         n "You really think so?"
         mc "I'm sure of it."
         mc "They missed you a lot in the club, you know."
-        n "I missed them too..."
+        n 2bt "I missed them too..."
         n "But enough about me."
-        n "I don't want to take up more of your time."
+        n 2bj "I don't want to take up more of your time."
         n "So get your books and go home, [player]."
         mc "I can stay longer if you need me."
         mc "I'm here to help."
-        n "Thanks...but after seeing whatever that was in the room..."
+        n 1bc "Thanks...but after seeing whatever that was in the room..."
         n "I think I need some time alone."
         n "I still appreciate what you're trying to do."
-        n "So don't get me wrong...!"
+        n 1bf "So don't get the wrong idea...!"
         mc "Ah...I understand."
         "I put the books I took from Natsuki into my bag."
         mc "I guess I'll be going then..."
-        n "I'll see you out."
+        n 1ba "I'll see you out."
         scene bg n_house_sunset with wipeleft_scene
         "It's sunset already."
         "It really doesn't feel like I've spent that time with Natsuki..."
         "But I guess time flies when you're having fun."
         "Though I'm not sure if all of that was exactly what I'd call fun."
         "Hanging out with Natsuki makes it worth it though."
-        show natsuki 1ba zorder 2 at t11
+        show natsuki 1bc zorder 2 at t11
         n "Well..."
         n "I guess that's it for today."
         n "I'll be sure to buy some supplies for baking tomorrow."
         mc "Don't do everything yourself."
         mc "Send me the stuff you need me to buy."
         mc "After all, we're doing this together."
-        n "Are you sure?"
+        n 2bh "Are you sure?"
         n "I don't want to--"
         mc "I'm sure, Natsuki."
         mc "Don't worry."
+        show natsuki 2bl
         "Natsuki shows a faint smile."
         n "We're going to make the best cupcakes ever."
         mc "No doubt about it."
         mc "I'll see you tomorrow, Natsuki."
-        n "G-Goodbye, [player]."
+        n 2bt "G-Goodbye, [player]."
         n "Thanks for coming..."
         "I wave a goodbye to Natsuki and head home."
         scene bg bedroom with wipeleft_scene
@@ -4872,7 +4881,7 @@ label ch13_exclusive_yuri:
     "Yuri's frown slowly disappears."
     y 3ph "But before we do that, I need to ask {i}you{/i} something, [player]."
     mc "Huh? What is it?"
-    if monika_type == 0 or monika_type == 1:
+    if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
         y 3pe "Do you think Sayori has been acting a little different lately?"
         mc "Sayori acting strange...?"
         mc "What do you mean?"
@@ -5327,21 +5336,21 @@ label ch13_exclusive_monika:
         "I wonder what \"not too far\" actually means to Monika..."
         "I guess I shouldn't be complaining..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1ha zorder 2 at t11
+        show monika 1a zorder 2 at t11
         m "You keeping up okay, [player]?"
         m "You look a little tired."
         mc "Ah..."
         mc "It's fine. I just wasn't expecting to walk this far."
-        m 2hb "Well, I wasn't lying about the distance to my house."
+        m 2b "Well, I wasn't lying about the distance to my house."
         m "Ahaha, though I may have omitted how far we would actually have to travel."
         m "I hope it's not too much of a problem."
         mc "Not at all..."
-        m 2hc "We could have done this at your house but..."
-        m 2he "...I'd like to get some practice in tonight."
+        m 2c "We could have done this at your house but..."
+        m 2e "...I'd like to get some practice in tonight."
         mc "It's fine, don't worry about it."
-        m 5ha "Thanks, [player]~"
+        m 5a "Thanks, [player]~"
         m "It really isn't too far now."
-        m 3ha "Just a couple more turns."
+        m 3a "Just a couple more turns."
         "I have to wonder what \"too far\" really means to Monika."
         "Not that I should be complaining..."
     else:
@@ -5365,7 +5374,7 @@ label ch13_exclusive_monika:
         show monika 1a zorder 2 at t11
         m "We're finally here!"
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 1ha zorder 2 at t11
+        show monika 1a zorder 2 at t11
         m "And we're here!"
     else:
         show monika 1a zorder 2 at t11
@@ -5405,9 +5414,10 @@ label ch13_exclusive_monika:
         "That was a pretty sudden mood shift from Monika."
         "Did I say something to cause that?"
         "I hope not, otherwise working together is going to be incredibly awkward."
-        scene bg m_livingroom with wipeleft_scene
-        "Her living room isn't big but it's actually a lot more spacious than it looks."
-        "There are bits and pieces lying everywhere and a keyboard in front of the TV."
+        scene bg m_bedroom with wipeleft_scene
+        "We go straight up the stairs into Monika's bedroom."
+        "Her bedroom isn't big but it's actually a lot more spacious than it looks."
+        "There are bits and pieces lying everywhere."
         "Honestly, I thought the place would be cleaner."
         "I thought Monika would have prepared in case something like this happens."
         "I suppose it's not really a big deal."
@@ -5427,7 +5437,7 @@ label ch13_exclusive_monika:
         mc "I didn't know you were affected that much."
         mc "I certainly didn't mean to hurt you, Monika."
         m 2q "I know..."
-        "I notice a keyboard in the middle of the room."
+        "I notice a keyboard on one side of the room."
         "There seems to be some neatly made sheet music on it."
         "Is this what she's been practicing this whole time?"
         m 2e "Yeah...that's my keyboard."
@@ -5486,16 +5496,16 @@ label ch13_exclusive_monika:
         m "You still need to get some books for the play."
         mc "What about you?"
         m 1a "Well, since I'm home I might as well make myself comfortable."
-        m "I'm going to go upstairs and change into some different clothes."
-        m "You can stay here and look for some books to bring tomorrow."
-        "Monika points towards a bookshelf."
-        m 1b "See that bookshelf over there?"
+        m "I'm going to go change into some different clothes."
+        m "Can you go downstairs and search for some books you want want to bring in?"
+        m 1b "There's a pretty big bookshelf downstairs."
         m "It's got plenty of books you could bring tomorrow."
         m "I'm sure you can manage to find something that you like."
-        m "See you soon."
-        show monika at lhide
-        hide monika
-        "Monika heads up the stairs."
+        mc "I'm sure I can manage that."
+        m "Great, I'll see you soon~"
+        scene bg m_livingroom with wipeleft_scene
+        "I head downstairs towards Monika's living room."
+        "It's a lot cleaner than her room but that doesn't matter."
         "I walk towards her bookshelf and I only just realize just how much literature is here."
         "There's all sorts of books here, from fiction to tutorial books."
         "I wonder if Monika actually bought all of these for the club or if she made the club because she had so much literature."
@@ -5520,7 +5530,7 @@ label ch13_exclusive_monika:
         "I think that covers everyone's interest in the club."
         "I'm not too interested in what we actually perform so it doesn't matter what I choose in the end."
         show monika 1ba zorder 2 at t11
-        m "I'm back~"
+        m "I'm here~"
         m "Have you chosen your books yet?"
         mc "Yeah, have a look."
         "I show Monika the four books I picked from her shelf."
@@ -5548,81 +5558,82 @@ label ch13_exclusive_monika:
         m "Anyway, I still have to choose some books for the play."
         m "It shouldn't take me too long. I already have a few in mind after all."
     elif monika_type == 1 and ch12_markov_agree:
-        m 1hl "Welcome to my house~"
+        m 1l "Welcome to my house~"
         m "I know it isn't much..."
-        m 1hm "It probably isn't what you expected either."
+        m 1m "It probably isn't what you expected either."
         mc "I don't know what I expected."
-        m 2hf "Probably something that would fit a popular person like me, right?"
+        m 2f "Probably something that would fit a popular person like me, right?"
         m "Maybe a mansion or...at least something more impressive than this."
         mc "It's not like that."
-        m 2ho "Despite everything...{i}you{/i} don't really know much about..."
-        m 2hq "Well...me."
+        m 2o "Despite everything...{i}you{/i} don't really know much about..."
+        m 2q "Well...me."
         mc "I didn't mean to offend you..."
-        m 1hm "I know."
-        m 1hn "It's just people expect a lot from someone like me."
+        m 1m "I know."
+        m 1n "It's just people expect a lot from someone like me."
         mc "The house isn't even that bad."
-        m 1ho "Sigh..."
+        m 1o "Sigh..."
         m "We should go inside before we waste any more time out here, [player]."
         show monika at thide
         hide monika
         "I didn't realize she was sensitive about her property."
         "It was just a comment, I didn't mean any offense."
         "I just hope she doesn't hold a grudge or this whole night is going to be incredibly awkward."
-        scene bg m_livingroom with wipeleft_scene
-        "Her living room isn't big but it's actually a lot more spacious than it looks."
-        "There's bits and pieces lying everywhere and a keyboard in front of the TV."
+        scene bg m_bedroom with wipeleft_scene
+        "We go straight up the stairs into Monika's bedroom."
+        "Her bedroom isn't big but it's actually a lot more spacious than it looks."
+        "There are bits and pieces lying everywhere."
         "Honestly, I thought the place would be cleaner."
         "I thought Monika would have prepared in case something like this happened."
         "I suppose it's not really a big deal."
-        show monika 1hc zorder 2 at t11
-        m "The house isn't exactly cleaned up, I'm sorry for that."
-        m 2he "I hope that doesn't affect the preparations we're going to do."
+        show monika 1c zorder 2 at t11
+        m "My room isn't exactly cleaned up, I'm sorry for that."
+        m 2e "I hope that doesn't affect the preparations we're going to do."
         mc "It's fine. I don't really think it's a big issue."
         mc "After all, I don't expect you to have your house clean when you weren't really expecting guests."
         m "Ahaha, well I suppose you're right."
         "I notice the keyboard Monika has setup in the room."
         "There appears to be some sheet music with several handwritten notes on them."
         "Just how much has she been practicing?"
-        m 1ha "I'm still quite a novice at the piano, if I'm honest."
+        m 1a "I'm still quite a novice at the piano, if I'm honest."
         m "Though I am getting better!"
-        m 3hb "I'm actually writing my own piece right now."
+        m 3b "I'm actually writing my own piece right now."
         mc "Are you planning to play it for the day?"
         mc "Or maybe you're looking for something easier...?"
-        m 3ha "I was kinda doing this for a special occasion, to mark something."
+        m 3a "I was kinda doing this for a special occasion, to mark something."
         m "But with the circumstances, that doesn't seem to be possible."
-        m 4he "I guess the day will have to do, if I want my part to be satisfactory."
+        m 4e "I guess the day will have to do, if I want my part to be satisfactory."
         mc "So is that all you're going to be playing on the day?"
         m "Of course not!"
-        m 2hc "I was thinking of playing some smaller, easier pieces to accompany the main piece."
+        m 2c "I was thinking of playing some smaller, easier pieces to accompany the main piece."
         m "I don't really know what I should do, nor do I particularly mind."
-        m 2hb "Which is where you come in!"
+        m 2b "Which is where you come in!"
         mc "Me?"
-        m 2ha "Yeah! You could be the one who finds me some pieces to play."
+        m 2a "Yeah! You could be the one who finds me some pieces to play."
         m "As long as they aren't that difficult, I should be able to learn the piece I want to play and the ones you find too!"
         mc "S-Sure, but I don't know if I'd trust my own taste in music."
         mc "You might not like what I find."
-        m 2he "Like I said, I don't really mind."
+        m 2e "Like I said, I don't really mind."
         m "As long as it's easy and doesn't take away from what I'm going to play."
         mc "Speaking of which..."
         mc "How long have you been practicing it for?"
         mc "I noticed there was a lot of handwritten notes on the sheet music so it looks like you worked on it a lot."
-        m 1ha "You're quite observant, [player]!"
+        m 1a "You're quite observant, [player]!"
         m "I was quite busy last night just trying to come up with this piece."
-        m 1hl "In fact, I didn't actually get much sleep because of it."
-        m 1hm "It's also why the room is in a..."
+        m 1l "In fact, I didn't actually get much sleep because of it."
+        m 1m "It's also why the room is in a..."
         m "...less than ideal state."
-        m 1hn "I want to apologize again for that."
+        m 1n "I want to apologize again for that."
         mc "I don't blame you."
         mc "It must have been hard work to compose your own song."
-        m 1he "Ahaha, yeah it was a little bit. And it's just a piece, not a song, silly~"
+        m 1e "Ahaha, yeah it was a little bit. And it's just a piece, not a song, silly~"
         "Monika's face suddenly lights up."
-        m 1ha "Actually, do you want to hear a little bit?"
+        m 1a "Actually, do you want to hear a little bit?"
         m "It's still a bit rough but I think I've got this first part pretty much perfected!"
         m "I mean...you don't have to."
         menu:
             m "But I'd like to give you the choice~"
             "Yes.":
-                m 1hb "Well...here goes nothing."
+                m 1b "Well...here goes nothing."
                 "Monika approaches her keyboard and takes a deep breath."
                 "She turns it on before looking at me and smiling."
                 m "The title is \"Hear Me, My Love\"..."
@@ -5633,35 +5644,34 @@ label ch13_exclusive_monika:
                 m "So...what did {i}you{/i} think?"
                 mc "That was amazing, Monika."
                 mc "I'm sure once you finish practicing it, everybody will love it."
-                m 2he "Ahaha, I hope so."
+                m 2e "Ahaha, I hope so."
             "No.":
-                m 1hf "Ah...that's fine."
-                m 2he "I'm sure you're probably waiting for when it's done, right?"
+                m 1f "Ah...that's fine."
+                m 2e "I'm sure you're probably waiting for when it's done, right?"
         m "Anyway...!"
         m "We still have to get some books for the play, right?"
-        m "I've actually got a pretty big collection of books right over there."
-        "Monika points towards a bookshelf."
-        m 2ha "You can look through that bookshelf later. It's got quite the collection and I think you'll find something you like."
-        m "In the meantime, I thought I'd show you this one."
-        m 4hb "You've probably seen it before, so maybe you can tell me your thoughts on it."
+        m "I've actually got a pretty big collection of books downstairs, in my living room."
+        m 2a "You can look through the bookshelf there. It's got quite the collection and I think you'll find something you like."
+        m "In the meantime, I thought I'd show you this book."
+        m 4b "You've probably seen it before, so maybe you can tell me your thoughts on it."
         "Monika searches her bag and pulls out a red book after a few seconds."
         "It doesn't look at all familiar."
         "It's hard to make out because it looks kinda faded but I think the cover has some ominous looking eye on it."
         m "You don't recognize it, do you?"
         mc "Should I?"
-        m 4hc "If I--"
-        m 4hd "If {i}she{/i} did everything properly, then you wouldn't."
-        m 4hh "It's a little annoying that she actually managed to get rid of one of the copies of this book."
+        m 4c "If I--"
+        m 4d "If {i}she{/i} did everything properly, then you wouldn't."
+        m 4h "It's a little annoying that she actually managed to get rid of one of the copies of this book."
         m "Not to mention that she wiped your memory of it, removing almost all my influence in this world."
-        m 3ha "{i}Almost{/i}..."
+        m 3a "{i}Almost{/i}..."
         mc "W-What are you talking about?"
-        m 3hb "[player] had a copy hidden somewhere, while I still had him under my influence."
+        m 3b "[player] had a copy hidden somewhere, while I still had him under my influence."
         m "It was quite difficult to find, but not impossible..."
-        m 3hn "After all, they give off a familiar type of...radiation I guess is the best way to describe it."
+        m 3n "After all, they give off a familiar type of...radiation I guess is the best way to describe it."
         mc "M-Monika, I have no clue what you're talking about."
         mc "It's kinda creepy, if I'm honest with you."
-        m 1ha "Like it matters."
-        m 5ha "I'm not even talking to you, after all."
+        m 1a "Like it matters."
+        m 5a "I'm not even talking to you, after all."
         show monikared zorder 5:
             alpha 0
             linear 2.0 alpha 0.3
@@ -5674,111 +5684,115 @@ label ch13_exclusive_monika:
         "I find myself staring at Monika's smile."
         "It's really easy to lose myself in it..."
         m "Now we have all the privacy we could want."
-        m 1hb "By now, you've locked yourself into an ending that might be undesireable."
+        m 1b "By now, you've locked yourself into an ending that might be undesireable."
         m "Ahaha, at least for everyone else."
-        m 2hb "For us, it'll be like a new beginning."
-        m 2hm "I don't quite understand these feelings."
-        m 4hn "But I'm learning to accept them."
-        m 4he "Being with you, they're only getting stronger."
+        m 2b "For us, it'll be like a new beginning."
+        m 2m "I don't quite understand these feelings."
+        m 4n "But I'm learning to accept them."
+        m 4e "Being with you, they're only getting stronger."
         m "Maybe it's a weakness, adopted from Monika."
         m "But..."
-        m 4hm "This feeling of love, I can't help it any longer."
+        m 4m "This feeling of love, I can't help it any longer."
         m "After you chose to help me yesterday and accept my offer, it's just become an overwhelming feeling."
-        m 2hn "I even did my hair this way to try to get you to like me more."
-        m 2ho "I'm being irrational and wasting my time."
-        m 2hp "This piece I'm composing is even for you..."
-        m 2hq "Yet..."
-        m 1he "I don't regret any of it."
+        m 2n "I even did my hair this way to try to get you to like me more."
+        m 2o "I'm being irrational and wasting my time."
+        m 2p "This piece I'm composing is even for you..."
+        m 2q "Yet..."
+        m 1e "I don't regret any of it."
         m "As long as I fulfill my goals and end up with you..."
         m "Nothing else matters."
-        m 1hl "Ahaha, sorry."
+        m 1l "Ahaha, sorry."
         m "I seem to have gone on a tangent, haven't I?"
-        m 1hm "It's just become a little hard to focus my thoughts."
+        m 1m "It's just become a little hard to focus my thoughts."
         m "Anyway, back to what we were discussing..."
-        m 1hn "My plan."
+        m 1n "My plan."
         m "Take a look at this book, I'm sure you know what it is."
         $ style.say_dialogue = style.edited
         "Monika gives me the red book she's holding in her hands."
         "Looking at it more closely, I can see that it's titled \"Portrait of Markov\"."
         $ style.say_dialogue = style.normal
-        m 1ha "[player] is going to need to read this."
+        m 1a "[player] is going to need to read this."
         m "But not like it matters at this point..."
         m "I've already set up everything so that you can't change what's going to happen."
-        m 1hc "I mean...you did see that file I made, right?"
-        m 1he "I suppose since you're working with me, I can tell you more about the book."
-        m 2he "It clearly isn't just an ordinary book, as you probably know."
+        m 1c "I mean...you did see that file I made, right?"
+        m 1e "I suppose since you're working with me, I can tell you more about the book."
+        m 2e "It clearly isn't just an ordinary book, as you probably know."
         m "Within it, I've stored a part of...the {i}real{/i} me."
         m "So that whoever reads it will come under my influence."
-        m 2ha "What I am isn't important, just know that I have that kind of ability."
+        m 2a "What I am isn't important, just know that I have that kind of ability."
         m "You already know what I'm talking about."
-        m 2hc "After all, I'm not {i}really{/i} Monika anymore."
+        m 2c "After all, I'm not {i}really{/i} Monika anymore."
         m "Even though I can't help but act like her..."
-        m 2hm "Speaking of which, I apologize for getting upset at you..."
+        m 2m "Speaking of which, I apologize for getting upset at you..."
         m "...or rather {i}[player]{/i} outside."
-        m 2ho "It just brought back some terrible memories from..."
+        m 2o "It just brought back some terrible memories from..."
         m "Well...before everything that I'd rather not think about."
         m "That's besides the point."
-        m 2hc "I'm almost certain Sayori has a copy of the book."
+        m 2c "I'm almost certain Sayori has a copy of the book."
         m "She probably got it from Yuri...and I think she read some of it."
         m "Despite that, I can't...really influence her."
-        m 1hd "I think it's got something to do with being the president, and all the power you get from it."
+        m 1d "I think it's got something to do with being the president, and all the power you get from it."
         m "What matters is that we still have this one copy of the book available to us."
-        m 1he "Two would be better, but one is enough."
+        m 1e "Two would be better, but one is enough."
         m "Once he reads the book, I'll have a way to get through Sayori."
-        m 2ha "I can't be certain but I think she's going to end it after Inauguration Day."
+        m 2a "I can't be certain but I think she's going to end it after Inauguration Day."
         m "Since everyone will have their 'happy' ending."
-        m 4hl "Pathetic."
+        m 4l "Pathetic."
         m "..."
-        m 3ho "You know, I'm not actually certain that this whole plan of mine will work."
+        m 3o "You know, I'm not actually certain that this whole plan of mine will work."
         m "Sayori has changed since the first week you joined."
-        m 1hq "She's become more independent, more cunning and more intelligent."
+        m 1q "She's become more independent, more cunning and more intelligent."
         m "To everyone else, she's still the same..."
-        m 1hr "That makes her really hard to deal with."
-        m 1hp "But I admit...I'm getting desperate."
+        m 1r "That makes her really hard to deal with."
+        m 1p "But I admit...I'm getting desperate."
         m "Even with all this knowledge and extended power, there's still so little I can do by myself."
-        m 1hm "But if everything goes well..."
+        m 1m "But if everything goes well..."
         m "Then I'll be inaugurated as the president of the Literature Club."
-        m 2he "Ahaha, the whole day was my idea of course."
+        m 2e "Ahaha, the whole day was my idea of course."
         m "I'll tell you more later."
-        m 2ha "Right now, [player] needs to find some books."
+        m 2a "Right now, [player] needs to find some books."
         m "After all, Sayori might get suspicious that she can't see what [player] is up to."
-        m 4hb "So..."
+        m 4b "So..."
         m "Thanks for listening~"
         "What just happened?"
         "It's like...I wasn't myself."
         hide monikared
         $ audio.t6c = "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"
         play music t6c fadeout 0.5
-        m 5ha "Any of the books on the shelf over there are ones you can choose."
+        m 5a "Any of the books on the shelf downstairs are ones you can choose."
         m "Despite the small house, we do have a lot of books!"
         mc "Ah..."
         "I grasp my head. I feel like I just had a huge headache."
         mc "...Not to be rude but what were we talking about again?"
         mc "I may have stopped listening."
-        m 5hb "You missed my whole explanation?"
+        m 5b "You missed my whole explanation?"
         m "I can't believe you."
         mc "I-I think I heard the end of it..."
         mc "I can probably figure it out."
-        m 1hc "[player], is something wrong?"
+        m 1c "[player], is something wrong?"
         m "It looks like you've hurt your head."
         mc "I don't know..."
         mc "It just started hurting all of a sudden."
-        show monika 1hf
+        show monika 1f
         "Monika looks at me worriedly."
         m "I've actually got something for headaches."
         m "Do you want it?"
         mc "That's too kind of you but I can't just accept something like--"
-        m 1he "It's okay! I insist."
-        "Monika walks over to the kitchen and takes some tablets and a glass of water."
-        m "Here, take it."
+        m 1e "It's okay! I insist."
+        "Monika walks over to the bathroom next to her room and takes some tablets and a glass of water."
+        "She must get headaches a lot...?"
+        m "Here, take this."
         m "It might help your headache."
-        m "I need to go upstairs quickly, so try to find some books while I'm gone."
-        mc "Thanks, Monika..."
+        m "You should go downstairs and try to find some books."
+        mc "What are you going to be doing?"
+        m "I need to do something up here for a while."
+        m 1a "I won't be long, okay?"
+        mc "Alright..."
         m "Get better soon, [player]."
-        show monika at lhide
-        hide monika
-        "Monika starts heading for the stairs."
-        "I don't know what are in these tablets."
+        scene bg m_livingroom with wipeleft_scene
+        "I head downstairs towards Monika's living room."
+        "It's a lot cleaner than her room but that doesn't matter."
+        "I look at the tablets Monika gave me."
         "Monika said that they're for my headache...there's no reason she'd lie to me."
         "I put them in my mouth and drink the water she gave me."
         mc "Hopefully that fixes things soon..."
@@ -5809,21 +5823,21 @@ label ch13_exclusive_monika:
         "Sayori said to pick a couple so I guess I'll just pick other ones that look interesting."
         "..."
         "Soon, I've selected four novels from the shelf."
-        show monika 1bha zorder 2 at t11
+        show monika 1ba zorder 2 at t11
         m "Hi [player]~"
         m "Have you finished choosing your books?"
         mc "Ah...yeah."
-        m 1bhd "Can I see what you chose?"
+        m 1bd "Can I see what you chose?"
         "I show Monika the four books I took from her shelf."
-        m 2bhb "Interesting choices!"
+        m 2bb "Interesting choices!"
         m "You probably chose them based on their popularity, right?"
         mc "Is it that easy to tell?"
-        m 2bha "Ahaha, it doesn't matter too much."
+        m 2ba "Ahaha, it doesn't matter too much."
         mc "I don't really read much...or at least I didn't, until this whole play thing."
         mc "So I thought that choosing books that everyone has heard of would make things easier."
         m "That makes sense! It would make it easier to relate to the club."
         mc "Yeah, that's sort of what I was going for."
-        m 2bhc "I still have to pick some books..."
+        m 2bc "I still have to pick some books..."
     else:
         m 1c "I know what you're thinking."
         m "This house isn't something that suits someone like me, right?"
@@ -5848,9 +5862,10 @@ label ch13_exclusive_monika:
         "If I had known she would have taken offence to something like that I never would have thought about it in the first place."
         "Well, it's too late for that now..."
         "The only thing I can do is hope this doesn't ruin the preparations tonight."
-        scene bg m_livingroom with wipeleft_scene
-        "Her living room isn't big but it's actually a lot more spacious than it looks."
-        "There's bits and pieces lying everywhere and a keyboard in front of the TV."
+        scene bg m_bedroom with wipeleft_scene
+        "We go straight up the stairs into Monika's bedroom."
+        "Her bedroom isn't big but it's actually a lot more spacious than it looks."
+        "There are bits and pieces lying everywhere."
         "Honestly, I thought the place would be cleaner."
         "I thought Monika would have prepared in case something like this happened."
         "I suppose it's not really a big deal."
@@ -5859,7 +5874,8 @@ label ch13_exclusive_monika:
         m "There's just been a lot of stuff going on lately and I haven't had the chance to clean up."
         m 1e "Ahaha, if I knew you were coming then..."
         m "Well, never mind."
-        "I look at Monika's keyboard and notice she has some sheet music."
+        "I look at Monika's keyboard positioned on one of the walls of her room."
+        "It looks like she has some sheet music."
         "I wonder what she's been trying to learn..."
         m 2e "I'm not {i}that{/i} great at playing the piano yet."
         m "I can't just come up with a tune off the top of my head, you know."
@@ -6013,7 +6029,7 @@ label ch13_exclusive_monika:
         $ audio.t6c = "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"
         play music t6c fadeout 0.5
         m 2a "So, just choose a couple of books that you like."
-        m "I have a bunch on my shelf over there."
+        m "There's a bunch on the bookshelf downstairs."
         m 5 "I know the house is a little small, but we do have a lot of books!"
         mc "Um...sorry, what were we talking about?"
         mc "I think I zoned out a little bit."
@@ -6022,9 +6038,10 @@ label ch13_exclusive_monika:
         mc "Ah...I heard the end of it."
         mc "I'm sure I can figure it out."
         m 2h "If you say so..."
-        "Monika heads for the stairs."
-        mc "Where are you going?"
+        "Monika points towards the door."
+        mc "What?"
         m 2q "If you were listening, I said I was going to change my clothes."
+        m "So I told you to go downstairs."
         "Monika frowns."
         m 1f "Sorry."
         m "I guess I'm just a little pressured about this whole thing."
@@ -6032,10 +6049,11 @@ label ch13_exclusive_monika:
         mc "I didn't even say anything..."
         m 1m "R-Right but..."
         m 1n "Well, never mind!"
-        m "Just try to find some books before I get back."
+        m "Just try to find some books before I come down."
         mc "Alright..."
-        show monika at lhide
-        hide monika
+        scene bg m_livingroom with wipeleft_scene
+        "I head downstairs towards Monika's living room."
+        "It's a lot cleaner than her room but that doesn't matter."
         if ch12_markov_agree:
             "I put the red book I'm holding into my bag."
             "How did this even get on my hand?"
@@ -6234,10 +6252,10 @@ label ch13_exclusive_monika:
         "I don't know if she would tell me but at least I can comfort her."
         "I hope I can do something..."
     elif monika_type == 1 and ch12_markov_agree:
-        show monika 2bha zorder 2 at t11
+        show monika 2ba zorder 2 at t11
         m "I think...this is the last one."
         "Monika takes a book from the shelf."
-        m 2bhb "I've got all my books chosen."
+        m 2bb "I've got all my books chosen."
         mc "What did you choose?"
         m "Take a look~"
         "Monika hands me the stack of books she's holding."
@@ -6245,97 +6263,97 @@ label ch13_exclusive_monika:
         "I haven't really seen or heard of the books she has chosen, so I guess she chose based on what she actually liked..."
         "Unlike me who chose based on what others might like."
         "But the novels look short enough to do a play on, at least for a few chapters."
-        m 2bhe "What do you think?"
+        m 2be "What do you think?"
         m "You probably haven't heard of them before, have you?"
         mc "You're right, I haven't really heard of them before."
         mc "But from the first glance by reading the blurb, they all seem kinda..."
         mc "Um...romantic?"
-        m 2bhl "Ahaha, I guess you could say that."
+        m 2bl "Ahaha, I guess you could say that."
         m "The covers of the books kinda give it away."
-        m 2bhm "They're all actually a romantic adventure, which isn't what I'd normally prefer..."
-        m 2bhn "Things have just been kinda weird lately. You understand, right?"
+        m 2bm "They're all actually a romantic adventure, which isn't what I'd normally prefer..."
+        m 2bn "Things have just been kinda weird lately. You understand, right?"
         mc "I guess..."
         mc "I mean we all have our preferences, it would be wrong me to judge you based on yours."
         mc "I'm sure your choices are great, Monika."
-        m 2bha "That's up to everyone else to decide."
+        m 2ba "That's up to everyone else to decide."
         m "Anyway...!"
         m "What kind of music did you choose for me?"
-        m 2bhe "It's not too easy to play, is it?"
+        m 2be "It's not too easy to play, is it?"
         mc "I made sure you wouldn't have trouble learning it...I think."
         mc "I'm not really sure how hard it is to play the piano so I just searched for basic piano pieces."
         mc "In the end, I choose some [ch13_music_type]-sounding pieces."
-        m 4bhe "Is that sheet music I see in your hands?"
+        m 4be "Is that sheet music I see in your hands?"
         mc "Yeah, take a look."
         "I hand over the sheet music to Monika."
-        m 3bhc "Hmm..."
-        m 3bha "You're right, [player]."
-        m 3bhj "Ahaha, these look a little too easy for me."
+        m 3bc "Hmm..."
+        m 3ba "You're right, [player]."
+        m 3bj "Ahaha, these look a little too easy for me."
         m "That's actually perfectly fine."
-        m 3bha "It just means I can focus on my main piece more."
+        m 3ba "It just means I can focus on my main piece more."
         mc "Glad to know I wasn't completely useless."
-        m 1bhe "You should give yourself more credit than that."
+        m 1be "You should give yourself more credit than that."
         m "You've made my day just by being here."
         mc "I did?"
-        m 1bha "You did!"
+        m 1ba "You did!"
         m "So thank you."
         "Monika smiles meaningfully."
-        m 1bhb "I'm gonna try to play these pieces you've chosen."
+        m 1bb "I'm gonna try to play these pieces you've chosen."
         m "Care to listen?"
         mc "I'd love to."
-        m 1bhe "Great. This shouldn't be too long."
+        m 1be "Great. This shouldn't be too long."
         mc "I don't mind staying all night if I have to."
-        m 1bhm "That means a lot..."
+        m 1bm "That means a lot..."
         m "But I'm afraid I've still got other things to do tonight."
         mc "Then I'll stay as long as you'll have me."
-        m 2bhe "Ahaha, okay~"
+        m 2be "Ahaha, okay~"
         m "Can you hold on to those books while I practice?"
         mc "Sure..."
         "Monika smiles and walks towards her keyboard."
         "She takes the sheet music already there and puts it aside carefully."
         "She then places the sheet music I found for her on the keyboard."
-        m 2bhc "Choosing [ch13_music_type]..."
-        m 1bha "Let's see what we can do..."
+        m 2bc "Choosing [ch13_music_type]..."
+        m 1ba "Let's see what we can do..."
         "Monika starts playing the first piece I found for her."
         "Almost effortlessly, she gets it right on the first attempt..."
         "At least I think she did."
         "I'm not really sure how it's supposed to sound exactly."
         "I did click the preview button before I printed it but I wasn't really listening properly."
-        m 1bhb "How did that sound?"
+        m 1bb "How did that sound?"
         mc "It sounded great. You played it perfectly."
         m "Do you think so? I'm almost positive I missed a couple of notes there."
         mc "Ah...it's kinda hard for me to tell."
         mc "It still sounded incredible, especially on your first attempt at it."
-        m 2bha "Well, I'm glad you think so."
+        m 2ba "Well, I'm glad you think so."
         m "With how easy these pieces are, it shouldn't take more than a couple of hours to get them perfect."
-        m 1bhe "So...let's try this second one..."
+        m 1be "So...let's try this second one..."
         "The second one is slightly longer than the first one so she looks at it more carefully."
         "After looking over it for a couple of minutes and muttering something to herself, she smiles at me."
-        m 1bha "And now..."
+        m 1ba "And now..."
         "Once again Monika plays the keyboard."
         "It sounds perfect in my ears."
-        show monika 1bho
+        show monika 1bo
         "She kinda looks like she's holding back tears."
         mc "Is something wrong?"
         mc "That sounded great..."
-        m 1bhm "I-It's nothing..."
+        m 1bm "I-It's nothing..."
         m "Just something about playing piano for someone..."
-        m 1bhn "Ah...I'm just being emotional for no reason."
+        m 1bn "Ah...I'm just being emotional for no reason."
         m "Forget what you've just seen."
         mc "I don't think that's possible."
         "Monika looks away for a second."
         "She then turns back and smiles meaningfully."
-        m 1bhq "Thank you for choosing these pieces, [player]."
+        m 1bq "Thank you for choosing these pieces, [player]."
         m "I really appreciate you taking your time to help me."
         mc "It's not a problem, really."
-        m 1bhr "But it's time for you to leave now, I think."
+        m 1br "But it's time for you to leave now, I think."
         mc "Oh..."
-        m 2bhm "Please don't take it the wrong way."
+        m 2bm "Please don't take it the wrong way."
         m "I'm still adapting to everything and..."
         m "I'll just say it's my fault we're stopping now."
-        m 2bhn "I'll get the other pieces done, don't you worry."
+        m 2bn "I'll get the other pieces done, don't you worry."
         m "You were definitely a big help today."
         mc "Maybe I can still help..."
-        m 2bhe "No...there's nothing you can do right now..."
+        m 2be "No...there's nothing you can do right now..."
         m "I'm sorry, [player]."
         mc "It's okay. I know you're dealing with a lot."
         mc "I'll be there for you if you need me, Monika."
@@ -7181,53 +7199,53 @@ label ch13_exclusive_sayori:
         "After all, she's my best friend."
     return
 
-label ch14_natsuki_outcome1_date:
+label ch13_natsuki_outcome1_date:
     mc "Natsuki..."
     mc "I know this probably isn't the best time."
     mc "I don't really know what I'm thinking."
-    n "What?"
+    n 1bk "What?"
     n "What are you talking about, [player]?"
     mc "Are you opposed..."
-    n "Opposed?"
+    n 1bh "Opposed?"
     n "To what exactly?"
     mc "Ah...this is a lot harder than I thought it would be."
-    n "[player]!"
+    n 2be "[player]!"
     n "Just tell me already."
-    n "Stop wasting both of our times."
+    n "Stop wasting both of our time."
     mc "Alright."
     "Here goes nothing."
     mc "I was wondering if you wanted to go somewhere."
-    n "Go somewhere?"
+    n 2bc "Go somewhere?"
     n "What do you mean?"
     mc "You said you wanted to go outside, right?"
     mc "How about going to the city?"
     mc "There's lots of stuff we can do there."
-    n "Um...don't we have preparations to do?"
+    n 2bg "Um...don't we have preparations to do?"
     n "I guess we could go out and buy some supplies..."
     mc "I should just say it, shouldn't I?"
-    n "Say what?"
+    n 2bh "Say what?"
     n "[player], are you okay?"
     mc "I'm actually kinda nervous."
     mc "But this is my chance."
     "I take a deep breath."
     mc "Do you want to go on a date?"
-    show natsuki at h11
+    show natsuki 1bo at h11
     n "W-What?!"
     "She jumps backwards out of surprise."
-    n "W-What did you say?"
+    n 1bp "W-What did you say?"
     mc "I said..."
     mc "Do you want to go on a date?"
-    n "I heard what you said!"
+    n 1bo "I heard what you said!"
     mc "Then why did you--"
     n "Ugh! You're so difficult sometimes!"
     mc "Just hear me out first."
-    n "Fine."
+    n 1br "Fine."
     mc "Natsuki, I know you want a normal day."
     mc "And I'm being a little selfish here asking you now but..."
     mc "I want to make you feel better."
     mc "With everything that's happened, you should know by now..."
     mc "Our lives aren't normal anymore."
-    n "Sayori didn't set you up to do this, did she?"
+    n 1bo "Sayori didn't set you up to do this, did she?"
     n "B-Because if she did...!"
     mc "No, of course not."
     mc "I'm here because I want to be."
@@ -7235,65 +7253,66 @@ label ch14_natsuki_outcome1_date:
     mc "I just hope you'll accept."
     mc "Because otherwise it's going to be a pretty awkward afternoon."
     if sayori_dumped:
-        n "That's nice and all..."
+        n 1bq "Yeah..."
         n "But aren't you with Sayori?"
-        n "What's she going to think when she finds out?"
+        n "I don't want to hurt her, [player]."
+        n 1bs "We're friends..."
         mc "She already knows."
-        n "Yeah, that's what I--"
-        n "What?"
+        n 1bu "Yeah, that's what I--"
+        n 1bm "What?"
         mc "Sayori and I went our separate ways."
         mc "We're still friends...I think."
-        n "When did {i}that{/i} happen?"
+        n 2bm "When did {i}that{/i} happen?"
         n "Did I cause this?"
         mc "No, it's not your fault."
         mc "What matters is that I realized Sayori wasn't the one for me."
         mc "You are, Natsuki."
     else:
-        n "{i}(You could have lead with that, you know.){/i}"
+        n 2bm "{i}(You could have lead with that, you know.){/i}"
         "Natsuki mumbles something that I can't really hear."
         mc "What did you say?"
     n "[player], this is all so sudden..."
-    n "I..."
+    n 2br "I..."
     n "I don't know what to tell you."
     n "I wasn't expecting this at all."
     n "With all that's been happening, this is..."
     n "I-I don't know, [player]."
     mc "Well, let me ask you this."
     mc "You like me, right?"
-    n "..."
+    n 2bs "..."
     mc "I like you, Natsuki."
     mc "If you don't like me then just say so."
     mc "I don't want to take this further if you don't feel anything for me."
-    n "O-Of course I like you...!"
+    n 2bv "O-Of course I like you...!"
     "Natsuki turns away."
-    n "{i}(Why wouldn't I...?){/i}"
+    n 2bs "{i}(Why wouldn't I...?){/i}"
     mc "Do you trust me?"
-    n "More than anyone."
+    n 1bi "More than anyone."
     mc "Then I promise."
-    n "Promise what...?"
+    n 1bh "Promise what...?"
     mc "I promise to try to make this the best day ever for you."
     mc "You deserve it after all you've been through."
     n "But [player]..."
     n "Even if I said yes..."
-    n "Don't we have some preparations to do?"
+    n 2bc "Don't we have some preparations to do?"
     mc "I guess we'll just have to work harder."
     mc "If it means I can spend more time with you, then I don't see a downside."
-    n "F-Fine..."
+    n 2bg "F-Fine..."
     mc "Is that a yes?"
-    n "Y-Yes."
+    n "...Y-Yes."
     "So she actually accepted the invitation to go on a date."
     "I didn't know what to expect from Natsuki."
     "But now I have no idea where we're going to go."
-    n "There's one thing you need to do first."
+    n 2bb "There's one thing you need to do first."
     mc "There is?"
-    n "My dad is downstairs and..."
+    n 2bq "My dad is downstairs and..."
     n "Even though he doesn't really have the right to interfere with my own personal stuff..."
     n "You should still tell him that you're going to be taking me on a date."
     mc "E-Eh?"
-    n "If things are going back to normal around here, both of us need to be willing."
+    n 2bi "If things are going back to normal around here, both of us need to be willing."
     n "I can't just ignore his existence."
     mc "I guess you're right."
-    n "I didn't want to have to put this on you, [player]."
+    n 2bg "I didn't want to have to put this on you, [player]."
     mc "It's alright, Natsuki."
     mc "I understand completely."
     "Do I though?"
@@ -7302,21 +7321,21 @@ label ch14_natsuki_outcome1_date:
     "We go downstairs to look for Natsuki's dad."
     "We find him sitting down on the couch with his head down and hands on his head."
     "He looks like he's deep in though or something."
-    show natsuki 1ba zorder 2 at t21
+    show natsuki 1bc zorder 2 at t21
     n "Are you okay?"
-    show dadsuki 1a zorder 3 at hf22
+    show dadsuki 1j zorder 3 at hf22
     d "Ah!"
-    d "Sorry, I didn't see you there."
+    d 1i "Sorry, I didn't see you there."
     d "I thought you'd be staying upstairs."
     "Yasuhiro wipes his face with a tissue and looks at us."
-    d "Is there something I can help you and your friend with, Natsuki?"
-    show natsuki zorder 3 at f21
+    d 1l "Is there something I can help you and your friend with, Natsuki?"
+    show natsuki 2bh zorder 3 at f21
     show dadsuki zorder 2 at t22
     n "Actually..."
     "Natsuki eyes me."
     n "[player] has something to tell you."
     show natsuki zorder 2 at t21
-    show dadsuki zorder 3 at f22
+    show dadsuki 1i zorder 3 at f22
     d "He does?"
     "Yasuhiro turns towards me."
     d "What would that be?"
@@ -7327,71 +7346,75 @@ label ch14_natsuki_outcome1_date:
     "Is it because Natsuki is here?"
     mc "Natsuki is..."
     mc "How do I say this?"
-    show dadsuki zorder 3 at hf22
+    show dadsuki 1b zorder 3 at hf22
     d "What's wrong with Natsuki?"
     "Yasuhiro suddenly gets up and puts his hands on my shoulders."
     d "What is it?"
-    d "Tell me!"
-    show natsuki zorder 3 at f21
+    d 1h "Tell me!"
+    show natsuki 2bf zorder 3 at f21
     show dadsuki zorder 2 at t22
     n "Dad, let go of him!"
     "Natsuki forcefully takes her dad's hands off me."
     "It feels like there's a lot of tension between the two of them."
-    n "I'm fine!"
+    n 2be "I'm fine!"
     n "Just listen to what he has to say, okay?"
     show natsuki zorder 2 at t21
-    show dadsuki zorder 3 at f22
+    show dadsuki 1k zorder 3 at f22
     d "Sorry..."
     d "I shouldn't have reacted like that."
-    d "It's just..."
+    d 1n "It's just..."
     "Yasuhiro glances at Natsuki."
     "She returns a cold look."
-    d "Never mind..."
+    d 1l "Never mind..."
     d "Please continue, [player]."
     show dadsuki zorder 2 at t22
     mc "Right..."
     mc "Well, I was just gonna say that we were planning on going somewhere."
     mc "Just a couple of places in the city."
-    show dadsuki zorder 3 at f22
+    show dadsuki 1i zorder 3 at f22
     d "The city...?"
     d "Don't the two of you have preparations to do?"
     d "A-At least, I was under the assumption that you were."
     show dadsuki zorder 2 at t22
     mc "Right...but Natsuki..."
-    show natsuki zorder 3 at f21
+    show natsuki 2bi zorder 3 at f21
     n "Just say it, [player]."
     n "Or I will."
     show natsuki zorder 2 at t21
-    show dadsuki zorder 3 at f22
+    show dadsuki 1j zorder 3 at f22
     d "Say what?"
     d "You're just going to the city aren't you?"
     "Natsuki shakes her head."
-    d "Then just tell me."
+    d 1l "Then just tell me."
     d "I won't get mad."
-    d "I promise."
+    d 1m "I promise."
     show dadsuki zorder 2 at t22
+    "Yasuhiro shows me a smile."
     mc "Alright, if you say so."
     mc "I'm...taking Natsuki out on a date."
-    show dadsuki zorder 3 at f22
+    show dadsuki 1l zorder 3 at f22
     d "What?!"
     d "Did I hear that correctly?"
     d "You're taking my dau--"
-    d "{i}Natsuki{/i} out on a date?!"
-    d "Is this some kind of trick?"
-    show natsuki zorder 3 at f21
+    d 1n "{i}Natsuki{/i} out on a date?!"
+    d "Is this some kind of joke?"
+    show natsuki 2bh zorder 3 at f21
     show dadsuki zorder 2 at t22
     n "No, and I already agreed to it."
-    n "We're just telling you because it's the right thing to do."
+    n 2bs "We're just telling you because it's the right thing to do."
     n "Because I'm your daughter."
     show natsuki zorder 2 at t21
-    show dadsuki zorder 3 at f22
-    d "I see..."
+    show dadsuki 1k zorder 3 at f22
+    d "I-I see..."
     d "I suppose there's nothing I can do to make you change your mind?"
-    show natsuki zorder 3 at f21
+    show natsuki 1bh zorder 3 at f21
     show dadsuki zorder 2 at t22
-    n "Even if there was, what do you have against [player]?"
-    n "He's always been there for me."
-    n "I trust him, okay?"
+    n "Not really..."
+    n "But if you do then there must be something you have against him."
+    n 1bf "So what is it?"
+    n "He's always been there for me, you know."
+    n "More than you have been..."
+    n 1bi "I trust him, okay?"
     show natsuki zorder 2 at t21
     mc "Yasuhiro, there's no way I'd ever hurt Natsuki."
     mc "You know that."
@@ -7399,83 +7422,84 @@ label ch14_natsuki_outcome1_date:
     mc "I promise."
     "Yasuhiro looks hesitant."
     "He simply sighs."
-    show dadsuki zorder 3 at f22
+    show dadsuki 1l zorder 3 at f22
     d "It's young love, isn't it?"
     d "Well, this happened sooner than I expected."
-    d "But who I am to stop it?"
+    d 1p "But who I am to stop it?"
     d "Everyone deserves a chance after all."
     show dadsuki zorder 2 at t22
     mc "Yeah..."
     mc "I'm glad we could reach an understanding, mister Natsuki."
-    show dadsuki zorder 3 at f22
+    show dadsuki 1m zorder 3 at f22
     d "D-Did you just call me {i}mister Natsuki{/i}?"
     "I can feel the tension relieving."
     "Yasuhiro lets out a faint smile."
     "I can see Natsuki roll her eyes too."
     d "P-Please, it's Yasuhiro."
     d "There's no reason to change that just because you're taking Natsuki out on a date."
-    d "I guess you have the potential, [player]."
+    d 1p "I guess you have the potential, [player]."
     d "Make her happy, okay?"
     show dadsuki zorder 2 at t22
     mc "I'll try my best."
-    show natsuki zorder 3 at f21
+    show natsuki 1bl zorder 3 at f21
     n "Thanks...dad."
-    n "We'll have a good time."
+    n "We'll try to have a good time."
     show natsuki zorder 2 at t21
-    show dadsuki zorder 3 at f22
+    show dadsuki 1c zorder 3 at f22
     d "First dates are always fun."
     d "If you don't mind me asking..."
     d "What exactly are you two up to?"
     show dadsuki zorder 2 at t22
     mc "Ah...you see I haven't really--"
-    show natsuki zorder 3 at f21
+    show natsuki 1bd zorder 3 at f21
     n "[player] has it all planned out."
     n "It would be too long to explain everything now."
     n "We just need to get some things and we'll be on our way."
     show natsuki zorder 2 at t21
     mc "I do...?"
-    show dadsuki zorder 3 at f22
+    show dadsuki 1f zorder 3 at f22
     d "I see..."
     d "Then I hope the two of you have a great time."
     "Yasuhiro gets up and heads towards the kitchen."
-    d "I should really clean up this mess."
+    d 1i "I should really clean up this mess."
     d "Don't worry about me."
     show dadsuki at thide
     hide dadsuki
     show natsuki zorder 2 at t11
     "I hear Yasuhiro open a cupboard in the kitchen."
     mc "That went...well?"
-    n "I guess."
+    n 1bc "I guess."
     mc "Are you okay, Natsuki?"
     mc "You two didn't seem to be in good terms."
-    n "I already told you."
+    mc "But I could feel that both of you were trying."
+    n 1bq "I already told you."
     n "I can't really say more about it, [player]."
     mc "Right."
     mc "Well, I'm glad Yasuhiro decided to let us go."
-    n "I don't think he really has the right to stop me."
+    n 1br "I don't think he really has the right to stop me."
     n "It's my choice now."
     n "I can't let him control my life again."
     mc "Yeah but..."
     mc "I don't think he's doing it to hurt you anymore, Natsuki."
     mc "He just wants to protect you."
-    n "..."
+    n 1bs "..."
     "Natsuki looks down."
-    n "Still...I can't go back."
+    n 1bq "Still...I can't go back."
     n "Even if his intentions have changed it doesn't change what's happened."
     mc "Are you ever going to fully forgive him?"
-    n "I don't know."
+    n 1bu "I don't know."
     n "Besides, if he did say no..."
-    n "I still would have gone with you."
+    n 1bm "I still would have gone with you."
     mc "You would have?"
-    n "Like I said, he doesn't control my life anymore."
+    n 1bq "Like I said, he doesn't control my life anymore."
     n "But I know he wouldn't have disagreed."
     n "He's...in a tough spot right now."
     mc "Then shouldn't you be going easy on him...?"
-    n "Maybe..."
+    n 1bi "Maybe..."
     n "I just don't know anymore, [player]."
     n "But let's get back on topic."
     "She changed the subject pretty quickly."
-    n "The date."
+    n 1bg "The date."
     n "You do have some sort of plan, right?"
     mc "Do you want me to answer honestly?"
     n "Just tell me."
@@ -7483,11 +7507,11 @@ label ch14_natsuki_outcome1_date:
     mc "Let alone for you to accept."
     mc "So I was thinking we could just get the train into the city and go from there."
     mc "Unless you have a better idea?"
-    n "I can't really think of any."
+    n 1bc "I can't really think of any."
     n "I suppose we'll have to figure it out on the way there."
     jump ch13_natsuki_outcomeshared_date
 
-label ch14_natsuki_outcome3_date:
+label ch13_natsuki_outcome3_date:
     mc "Hey, Natsuki..."
     mc "I've been meaning to ask you something."
     mc "This is probably the best opportunity I'm going to get."
@@ -7740,10 +7764,6 @@ label ch14_natsuki_outcome3_date:
     mc "Unless you have any better ideas?"
     n "I don't really..."
     n "I guess we can figure it out on the way there...?"
-    "I have this really random idea in my head."
-    "Natsuki told me about the portrait that Yasuhiro destroyed."
-    "So maybe..."
-    mc "Actually, I just thought of something."
     jump ch13_natsuki_outcomeshared_date
 
 label ch13_natsuki_outcomeshared_date:
@@ -7798,7 +7818,7 @@ label ch13_natsuki_outcomeshared_date:
         mc "It's like a pleasant surprise."
         n 2bb "I guess but..."
     else:
-        n 1bh "My dad isn't just going to listen you take it away from the house."
+        n 1bh "My dad isn't just going to let you take it away from the house."
         n "Just because it's broken doesn't mean he's gonna give it away."
         mc "Then we won't tell him."
         mc "He's busy cleaning after all."
@@ -7925,7 +7945,7 @@ label ch13_natsuki_outcomeshared_date:
     "There's garbled writing and drawings of {i}something{/i} all over it."
     "For some reason, just looking at it makes me feel sick."
     n 2bg "Well, we should move quickly."
-    n "I don't know how long it's going to clean downstairs."
+    n "I don't know how long it's going to take to clean downstairs."
     n "So the sooner we get out of here, the better."
     mc "Right."
     "Natsuki and I pick up the pieces and put them into the bag."
@@ -8933,6 +8953,9 @@ label ch13_natsukidate:
     hide mysteriousclerk
     show natsuki zorder 2 at t11
     "The clerk goes to what I can only guess is a storeroom after saying that."
+    # I encourage you to do multiple playthroughs
+    $ persistent.ch13_nat_date = True
+    $ renpy.save_persistent()
     n 1bc "Guess we better move then."
     scene bg train with wipeleft_scene
     "We barely got onto the train."
@@ -8940,32 +8963,32 @@ label ch13_natsukidate:
     "Still, it was pretty close."
     "Within a few seconds of getting into the train, it started moving."
     "Since there's a lot of free space, Natsuki and I take a group of seats to ourselves."
-    show natsuki 1ba zorder 2 at t11
+    show natsuki 1bd zorder 2 at t11
     n "[player]..."
     "Natsuki tugs at my shoulder."
-    mc "Hey Natsuki."
-    n "Thanks for taking me to the city."
+    mc "Hey, Natsuki."
+    n 2bl "Thanks for taking me to the city."
     n "I know you didn't have to."
     mc "But I wanted to."
     mc "I'm just glad you agreed."
-    n "It's hard to say no to you, you know?"
+    n 2bt "It's hard to say no to you, you know?"
     n "Everytime I do, it makes me have second thoughts."
     mc "Well, I want you to be direct with me from now on."
     mc "If you don't like something about me, then you should tell me."
     mc "I want to become better, for you."
-    n "That's..."
+    n 2br "That's..."
     n "...you don't need to--"
-    n "I can't..."
+    n 2bu "I can't..."
     "Natsuki struggles to find the words to say."
     mc "Take your time."
     mc "This is meant to be your day after all."
     "Natsuki takes a deep breath."
-    n "You coming over today..."
+    n 2bm "You coming over today..."
     n "I didn't expect it."
     n "After how I treated you in the first week..."
-    n "And how cold I've been to you."
+    n 2bi "And how cold I've been to you."
     n "I thought you'd never see past that part of me."
-    n "For all you know, you could have just ended up having your heart broken."
+    n 2bh "For all you know, you could have just ended up having your heart broken."
     if ch4_name == "Natsuki":
         mc "Maybe."
         mc "But spending time with you on that first weekend..."
@@ -8974,7 +8997,7 @@ label ch13_natsukidate:
         mc "Well..."
         mc "I'm glad it didn't."
         mc "I don't know what I'd be doing otherwise..."
-    n "Yeah..."
+    n 2bq "Yeah..."
     mc "Natsuki, I know I'm not perfect."
     mc "I don't aim to be."
     mc "It's just not who I am."
@@ -8982,99 +9005,100 @@ label ch13_natsukidate:
     mc "I'm not the smartest person."
     mc "I make a lot of mistakes, some of them so bad that it might make you think differently of me in a bad way."
     mc "If this is a mistake..."
-    n "[player]..."
+    n 2bs "[player]..."
     mc "Just let me finish."
     "Natsuki looks away."
     mc "Then I'm glad I made it."
     mc "Spending time with you is unlike anything I've ever experienced."
     mc "You're talented and have interests that are like mine."
     mc "I think you're also the most sane person in the club."
-    n "Sane person?"
+    n 2bk "Sane person?"
     n "You think the rest of them are insane or something?"
     mc "N-No, I didn't mean it like that."
     mc "It's just..."
     mc "I feel more at ease with you."
-    n "I-It's hard for me to say the same..."
+    n 4bq "I-It's hard for me to say the same..."
     mc "Huh?"
     n "Being around you is just so...exciting."
-    n "It's like having a sundae."
+    n 4bk "It's like having a sundae."
     mc "A sundae, eh?"
     mc "Maybe next time we can go out for sundaes."
-    n "Good idea!"
+    n 3ba "Good idea!"
     "Natsuki pulls out her phone."
     "She quickly glances at it before realizing it's out of battery."
-    n "Ugh! I knew I should have charged this."
+    n 3bf "Ugh! I knew I should have charged this."
     mc "Ahaha..."
-    n "What's so funny?"
+    n 3be "What's so funny?"
     n "This isn't a laughing matter, [player]!"
     mc "It's just...you're so cute when you're frustrated."
-    n "C-Cute?!"
+    n 3bo "C-Cute?!"
     n "I-I'm not...!"
     "Natsuki's face turns a bright red."
-    n "..."
+    n 3bp "..."
+    "She doesn't say anything."
     mc "Not denying it this time?"
     mc "I'm just stating what I'm seeing."
     mc "It's the truth after all."
     mc "You are cute."
-    n "Hmph!"
+    n 4by "Hmph!"
     "Natsuki crosses her arms and looks away."
     mc "I don't know why you try to hide it so much."
     mc "Isn't it better to just admit it?"
     mc "It's all the same to me but..."
     mc "Don't you feel restrained acting like that?"
     mc "Wouldn't you just feel more free being the 'real' you?"
-    n "The real...me?"
-    n "I've..."
+    n 1bh "The real...me?"
+    n 1bm "I've..."
     "Natsuki's voice trembles a little bit."
-    n "I've had this charade up for so long...[player]."
+    n 1br "I've had this charade up for so long...[player]."
     n "It's just become a part of me."
-    n "I don't know if I'll ever truly overcome it."
+    n 1bu "I don't know if I'll ever truly overcome it."
     n "...If I'll ever be who I was before..."
     n "Before everything."
     mc "I see..."
     mc "So what Natsuki am I talking to right now?"
     mc "The charade...or the real Natsuki?"
-    n "I...don't know."
+    n 1br "I...don't know."
     n "I want to say the real one."
     n "But..."
     mc "Well, then there's only one thing to do."
     "Natsuki sighs."
-    n "Okay, I knew this was too good to be--"
+    n 2bu "Okay, I knew this was too good to be--"
     mc "I'll have to stay with you until I'm certain I've found the real you."
-    n "What?!"
+    n 2bo "What?!"
     mc "It's the only way, isn't it?"
-    n "Are you listening to yourself?"
+    n 2bp "Are you listening to yourself?"
     mc "I'm just as upset at you are about this, you know."
     "I show a slight smile."
-    n "Y-Yeah?"
-    n "W-Well...fine!"
+    n 2bq "Y-Yeah?"
+    n 1bh "W-Well...fine!"
     n "I guess that's the only way we can really find out."
     n "Only because you really want to know, okay?"
     "I think Natsuki picked up on what I was doing."
     mc "Good enough for me."
     mc "Hopefully this doesn't take too long."
     mc "I'd say a couple of years."
-    n "That's optimistic."
+    n 1by "That's optimistic."
     mc "One of my many faults."
     mc "If it takes longer, then so be it."
     mc "I shall carry out this monumental task."
-    n "That's some terrible acting."
+    n 1bt "That's some terrible acting."
     mc "You think so?"
     mc "I tried my best, you know."
     mc "How am I ever going to perform the play on Inauguration Day now?"
     mc "My confidence is ruined."
     "Natsuki lets out a slight giggle."
-    n "You're such an idiot, you know that?"
+    n 1bd "You're such an idiot, you know that?"
     mc "So I've been told."
     "Both of us let out a short laugh."
     "She turns towards the bag on the seat next to me."
-    n "What do you think will happen?"
+    n 1bc "What do you think will happen?"
     mc "What do you mean?"
-    n "The portrait."
+    n 1bh "The portrait."
     "I turn towards the bag."
     mc "I have no idea."
     mc "Hopefully, something good will happen."
-    n "That's all you have to say?"
+    n 1bg "That's all you have to say?"
     mc "Well..."
     if ch12_outcome == 3:
         mc "They're your parents."
@@ -9085,24 +9109,24 @@ label ch13_natsukidate:
     mc "What do {i}you{/i} think, Natsuki?"
     mc "You must have some thoughts."
     mc "You agreed to this whole thing after all."
-    n "I don't know..."
+    n 1bq "I don't know..."
     n "I hope it's a step in the right direction."
     mc "What direction would that be?"
     n "Just things being normal again."
     mc "You think restoring the portrait is gonna make things normal?"
-    n "No."
-    n "But it's a start."
+    n 1br "No."
+    n 1bt "But it's a start."
     mc "I guess you're right."
     mc "Though this whole date of ours wasn't very normal, was it?"
-    n "You can't have get everything you want."
+    n 1bk "You can't get everything you want."
     n "At the very least, I got to spend it with you."
-    n "Normal or not, being with you..."
+    n 1bh "Normal or not, being with you..."
     n "I don't care what happens, as long as we're together."
     mc "That's my line."
-    n "I know."
+    n 1bl "I know."
     n "I thought I'd say something before you used your flair again."
     mc "I'll get you back one day."
-    n "I'll be waiting."
+    n 1bd "I'll be waiting."
     "Natsuki beams."
     scene bg n_house_sunset with wipeleft_scene
     "We arrive back at Natsuki's house."
@@ -9113,25 +9137,27 @@ label ch13_natsukidate:
     "I have some ideas of my own."
     "I'm assuming Natsuki does too."
     "And with everything we've seen, I'm sure it won't take too long to decide what we're going to do."
-    show natsuki 1ba zorder 2 at t11
+    show natsuki 1bc zorder 2 at t11
     n "Are you just going to stare at my house?"
     n "Or are we going to go inside?"
     mc "Oh, right."
     mc "Sorry, I was just thinking."
-    n "About what?"
+    n 2bc "About what?"
     mc "About Friday."
     mc "The things we're going to do."
-    n "We should probably go inside first."
+    n 2ba "We should probably go inside first."
+    n "No use staying out here."
+    n "Besides..."
     if ch12_outcome == 3:
-        n "I want to see their reactions."
+        n 2bd "I want to see their reactions."
         mc "I'm sure they'll love it."
     else:
-        n "I kinda wanna see my dad's reaction."
+        n 2bq "I kinda wanna see my dad's reaction."
         mc "I'm sure he'll love it."
-    n "I hope so."
+    n 2bk "I hope so."
     n "I just hope it doesn't backfire."
     mc "Why would it backfire?"
-    n "We basically stole something."
+    n 2bh "We basically stole something."
     if ch12_outcome == 3:
         n "How do you think they're going to react to that?"
     else:
@@ -9139,12 +9165,12 @@ label ch13_natsukidate:
     mc "I don't know."
     mc "But you had good intentions."
     mc "And the portrait was ruined anyway."
-    n "I guess..."
+    n 2bs "I guess..."
     mc "It'll be fine, Natsuki."
     mc "I'm sure of it."
-    n "I...believe you."
+    n 2bl "I...believe you."
     mc "Then let's hurry up and show it."
-    n "Right!"
+    n 2bd "Right!"
     show natsuki at thide
     hide natsuki
     "Natsuki opens the door to her house and heads inside."
@@ -9154,19 +9180,19 @@ label ch13_natsukidate:
     mc "And now I'm talking to myself."
     "I should get inside."
     scene bg n_corridor with wipeleft_scene
-    if ch12_outcome == 1:
+    if ch12_outcome == 3:
         "Natsuki's parents aren't anywhere in sight."
         "I wonder where they could be."
         "It's not like they just left."
         "They were cleaning the house before we left."
         "And as far as I can tell, the house still looks pretty messy."
-        show natsuki 1ba zorder 2 at t11
+        show natsuki 1bd zorder 2 at t11
         n "Mom?"
         n "Dad?"
-        n "Are you home?"
+        n 1ba "Are you home?"
         mc "I guess they're away."
         "I put the bag with the portrait down slowly."
-        n "Where did they go?"
+        n 1bc "Where did they go?"
         n "They didn't tell me anything."
         mc "So what do we do?"
         mc "They aren't here."
@@ -9176,22 +9202,22 @@ label ch13_natsukidate:
         "I wonder where he is..."
         "He was still cleaning the house when we left."
         "As far as I can tell, the house is still pretty messy."
-        show natsuki 1ba zorder 2 at t11
+        show natsuki 1bc zorder 2 at t11
         n "Dad?"
         n "Are you home?"
         mc "I guess he's not here."
         "I put the bag with the portrait down slowly."
-        n "Where did he go?"
+        n 1bh "Where did he go?"
         n "He didn't tell me he was going anywhere."
         mc "So what do we do now?"
         mc "I don't think he's here."
         mc "And we don't know where he is."
-    n "I guess we wait."
+    n 1bk "I guess we wait."
     n "Or we can choose our books now."
-    n "Because we have to do that, right?"
+    n 2bk "Because we have to do that, right?"
     mc "Oh, right."
     mc "I didn't really bring any books."
-    n "That's okay!"
+    n 2bd "That's okay!"
     n "I have a lot of books."
     n "I'm sure you can find something you like."
     n "Let's go."
@@ -9199,11 +9225,13 @@ label ch13_natsukidate:
     show natsuki 1ba zorder 2 at t11
     with wipeleft_scene
     n "It feels good to be home."
-    mc "Yeah, I know the feeling."
-    n "I'm just so tired after all of that."
+    n 1bo "N-Not to say that trip was bad or anything...!"
+    n "It was great!"
+    mc "Ahaha, it's okay. I know the feeling."
+    n 1bj "I'm just so tired after all of that."
     n "But I don't regret anything."
     mc "Me neither."
-    n "Anyway..."
+    n 2bq "Anyway..."
     "Natsuki looks through the books on the desk."
     n 2bc "I already know the books I'm going to choose."
     n "Do you?"
@@ -9341,68 +9369,77 @@ label ch13_natsukidate:
     n 1bc "Anyway...it's getting kinda late."
     mc "Yeah, it is."
     mc "I'm sorry we couldn't show the portrait."
-    n "No...it's not your fault."
+    n 1bq "No...it's not your fault."
     mc "Still, I'd have loved to see the reaction."
-    n "Me too."
+    n 1ba "Me too."
     n "You know, we can still see it together."
     mc "What are you suggesting?"
-    n "We can just hide the portrait."
+    n 1bb "I can just hide the portrait."
     n "Until tomorrow."
     n "Then we can show it together."
     mc "Are you sure?"
     mc "I know you're kinda excited to show it."
-    n "And nervous too..."
+    n 2bq "And nervous too..."
     n "But still..."
     n "I want it to be together."
     "Natsuki smiles meaningfully."
     n "I'm glad we did that today."
     mc "Me too."
-    n "Listen, spending time together today was the best thing ever."
-    n "I know that sounds kinda childish but--"
+    n 2bs "Listen, spending time together today was the best thing ever."
+    if ch12_outcome == 1:
+        n "It made me remember all the good memories I've had."
+        n 2bt "And it made the bad ones not seem so bad..."
+        n "I know that doesn't really make any sense but--"
+    else:
+        n "It made me really happy, just being with you."
+        n 2bt "I could remember what it was like to have someone so close to me again..."
+        n "I know that sounds kinda childish but--"
     mc "No way."
     mc "You're right."
     mc "It was the best thing ever."
-    n "It wouldn't have been possible without you."
+    n 2bd "It wouldn't have been possible without you."
     mc "Nor you."
-    n "But anyway..."
+    n 2bq "But anyway..."
     n "It's getting kinda late."
-    n "And I know how far away you live."
+    n 2bj "And I know how far away you live."
     n "Maybe you should get home."
     mc "You're probably right."
-    n "..."
+    n 1bg "..."
     n "I'll walk you to the door."
     mc "Sounds great."
     scene bg n_house_sunset
-    show natsuki 1ba zorder 2 at t11
+    show natsuki 1bc zorder 2 at t11
     with wipeleft_scene
     n "So..."
     n "Here we are."
     mc "Yes, the front door of your house."
     mc "Quite the sight."
-    n "You know what I mean...!"
+    n 1be "You know what I mean...!"
     mc "Do I?"
-    n "[player]..."
+    n 1bq "[player]..."
     mc "Yeah?"
-    n "Have you ever...read a romance anime?"
+    n 1br "Have you ever...read a romance anime?"
     n "Or like...watched a romance film...?"
     mc "I've read and seen a couple..."
     mc "Why?"
-    n "Oh..."
+    n 1bm "Oh..."
     n "Um..."
     mc "Is something wrong?"
-    n "No...!"
+    n 1bo "No...!"
     n "It's just..."
-    n "I..."
+    n 1bp "I..."
     mc "Natsuki, are you okay?"
     mc "You seem on edge."
+    show natsuki 1bv at h11
     n "I'm not on edge!"
-    n "I'm just..."
+    n 1bt "I'm just..."
     mc "Natsuki."
     mc "Look at me."
+    show natsuki 1bm
     "Natsuki looks at me directly."
     mc "Is something wrong?"
     mc "Answer me."
-    n "..."
+    n 1bn "..."
     "Natsuki looks at the ground before looking up again."
     stop music fadeout 2.0
     show natsuki 1bi at face with dissolve
@@ -9423,14 +9460,14 @@ label ch13_natsukidate:
     "Incredible timing."
     "I take my phone for my pocket."
     mc "It's Sayori."
-    n "I see..."
+    n 1bq "I see..."
     "Natsuki smiles."
-    n "There's always other times."
+    n 1bt "There's always another time."
     n "Answer the call, [player]."
-    n "Then I'll give you something before you leave."
+    n 1bj "Then I'll give you something before you leave."
     mc "Alright."
     mc "Sorry about this."
-    n "It's fine."
+    n 2bj "It's fine."
     "I answer the phone."
     mc "What's up Sayori?"
     s "I'm glad your date went well, [player]."
@@ -9442,6 +9479,7 @@ label ch13_natsukidate:
     s "How is she anyway?"
     mc "She's actually right here with me."
     mc "Do you wanna talk to her?"
+    show natsuki 1bc
     s "O-Oh, that's okay."
     s "I don't want to ruin your moment."
     "You have no idea, Sayori."
@@ -9451,33 +9489,43 @@ label ch13_natsukidate:
     mc "See you tomorrow, Sayori."
     s "See you then, [player]!"
     "Sayori hangs up."
-    n "Friends like Sayori are hard to find, aren't they?"
+    n 1ba "Friends like Sayori are hard to find, aren't they?"
     mc "Yeah, she's one of a kind."
-    n "No doubt."
+    n 1bd "No doubt."
     "Natsuki pulls something out of her pocket."
-    n "Here..."
+    n 1bq "Here..."
     n "I know I wasn't at the club today."
     n "But I want you to have this."
     "Natsuki gives me a piece of paper."
     mc "What is it?"
-    n "Just something I wrote."
-    n "I thought of you when i wrote it."
+    n 1bs "Just something I wrote."
+    n "I thought of you when I wrote it."
     mc "You wrote it before we went on a date?"
-    n "I..."
+    n 1bo "I...!"
     "Natsuki's face turns red."
-    n "Yes."
+    n 1bs "Yes."
     mc "You knew we were going on a date?"
-    n "No...but..."
+    n 1bq "No...but..."
     n "I had some kind of hope."
-    n "And...I guess it paid off."
+    n 1bt "And...I guess it paid off."
     mc "I'm glad."
-    n "You should get going before it gets dark."
+    mc "You know...I also wrote a poem."
+    mc "I already shared it with everyone in the club but..."
+    mc "It was meant for you?"
+    n 1bc "R-Really?"
+    mc "Yes, I want you to have it."
+    "I take the poem from my bag and give it to Natsuki."
+    "She stares at me."
+    n "Thank you, [player]."
+    n "You didn't have to give this to me."
+    mc "Yeah, but I wanted to."
+    n 1bj "Y-Yeah, well you should probably get going before it gets dark."
     n "Thank you again for today."
     mc "Thank you for coming with me."
     mc "It's a shame about the portrait."
-    n "There's always tomorrow."
+    n 1bd "There's always tomorrow."
     mc "Yeah."
-    n "G-Goodbye, then!"
+    n 1ba "G-Goodbye, then!"
     mc "See you, Natsuki!"
     "I waved goodbye to Natsuki and started heading home."
     "I turned back several times and Natsuki was still waving at me."

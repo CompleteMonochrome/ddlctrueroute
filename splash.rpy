@@ -543,8 +543,45 @@ label after_load:
         $ ch14_votes = [0, 0, 0, 0, 0]
     if not hasattr(store,'ch14_overall_choice'):
         $ ch14_overall_choice = "Sayori"
+    if not hasattr(store,'ch15poemwinner'):
+        $ ch15poemwinner = "Sayori"
     if not hasattr(store,'cl_name'):
         $ cl_name = "Mysterious Clerk"
+    if not hasattr(store, 'ch14_sayori_date_choice'):
+        $ ch14_sayori_date_choice = False
+    if not hasattr(store, 'ch14_m_ask'):
+        $ ch14_m_ask = False
+    if not hasattr(store, 'ch14_m_tellsayori'):
+        $ ch14_m_tellsayori = False
+    if not hasattr(store,'ay_name'):
+        $ ay_name = "Ayame"
+    if not hasattr(store,'ay'):
+        init:
+            $ ay = DynamicCharacter('ay_name', image='ayame', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+    if not hasattr(store,'ch15_m_together'):
+        $ ch15_m_together = False
+    if not hasattr(store,'ch15_s_together'):
+        $ ch15_s_together = False
+    if not hasattr(store,'ch15_s_questions'):
+        $ ch15_s_questions = [False,False,False,False,False,False,False,False,False]
+    if not hasattr(store, 'chapter_names'):
+        $ chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","???","???","???","???","???"]
+    if not hasattr(store, 'special_chapter'):
+        $ special_chapter = False
+    if not hasattr(store, 'all_sayarc_poems_monika'):
+        $ all_sayarc_poems_monika = False
+    if not hasattr(store, 'monika_outfit'):
+        $ monika_outfit = 0
+    if not hasattr(store, 'sayori_outfit'):
+        $ sayori_outfit = 0
+    if not hasattr(store, 'sInList'):
+        $ sInList = False
+    if not hasattr(store, 'nInList'):
+        $ nInList = False
+    if not hasattr(store, 'yInList'):
+        $ yInList = False
+    if not hasattr(store, 'mInList'):
+        $ mInList = False
 
     # Because of a change in an update - remove with 0.9.4f
     if ch14_book_choice == "Player":
@@ -667,7 +704,13 @@ label autoload_yurikill:
     jump expression persistent.autoload
 
 label before_main_menu:
-    $ config.main_menu_music = audio.t1
+    if persistent.playthrough == 0 and persistent.monika_change and not persistent.monika_gone:
+        if persistent.markov_agreed:
+            $ config.main_menu_music = audio.t1c
+        else:
+            $ config.main_menu_music = audio.t1m
+    else:
+        $ config.main_menu_music = audio.t1
     return
 
 label quit:
