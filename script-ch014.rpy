@@ -7009,7 +7009,7 @@ label ch14_exclusive_monika:
         "Monika looks disappointed."
         m "You make me sick."
         m "But I suppose that's enough for now."
-        m 2be "I'll just supress those memories, you know, just in case."
+        m 2be "I'll just suppress those memories, you know, just in case."
         mc "Don't do it."
         mc "Please."
         mc "I can't bear to lose my memories again."

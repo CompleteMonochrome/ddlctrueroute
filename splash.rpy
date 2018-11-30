@@ -553,11 +553,11 @@ label after_load:
         $ ch14_m_ask = False
     if not hasattr(store, 'ch14_m_tellsayori'):
         $ ch14_m_tellsayori = False
-    if not hasattr(store,'a_name'):
-        $ a_name = "Ayame"
-    if not hasattr(store,'a'):
+    if not hasattr(store,'ay_name'):
+        $ ay_name = "Ayame"
+    if not hasattr(store,'ay'):
         init:
-            $ a = DynamicCharacter('a_name', image='ayame', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+            $ ay = DynamicCharacter('ay_name', image='ayame', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
     if not hasattr(store,'ch15_m_together'):
         $ ch15_m_together = False
     if not hasattr(store,'ch15_s_together'):

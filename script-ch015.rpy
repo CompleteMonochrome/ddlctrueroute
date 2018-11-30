@@ -176,7 +176,7 @@ label ch15_main:
             y 3pt "Is that a problem?"
             y "It makes things more interesting."
             mc "I never took you for someone with a rebellious side, Yuri."
-            y 2pv "Ah...is it dislikeable?"
+            y 2pv "Ah...is it unlikeable?"
             mc "Not at all."
             mc "Just unexpected, that's all."
             mc "I'm all for it."
@@ -213,7 +213,7 @@ label ch15_main:
             y 1w "I picked the lock."
             mc "What? Really?"
             y "Y-Yeah..."
-            mc "Who knew you could picklock?"
+            mc "Who knew you could pick locks?"
             mc "Have you always been able to?"
             y 1t "Not many really know..."
             y "It's kind of private."
@@ -256,7 +256,7 @@ label ch15_main:
                     mc "Since it's based on romance, maybe we could put some hearts on it."
                     mc "But color them gray since it's based on the main character's perspective."
                 else:
-                    mc "It's centred around a literature club, so maybe books could work?"
+                    mc "It's centered around a literature club, so maybe books could work?"
                     mc "Maybe a pen and pieces of stationary around the banner."
             elif ch14_overall_choice == "Sayori":
                 mc "I thought maybe some rainbows to symbolize hope."
@@ -281,7 +281,7 @@ label ch15_main:
             "Yuri puts the lid back on the marker she was using."
             y 3pt "I don't think there was an official name."
             mc "There isn't?"
-            y "No, but I thought something easily recognizeable would be good."
+            y "No, but I thought something easily recognizable would be good."
             y 3pu "Something with a nice ring to it."
             mc "A nice ring, eh?"
             mc "What did you have in mind?"
@@ -332,7 +332,7 @@ label ch15_main:
             "Yuri and I spend the rest of our time working on the banner."
             "We actually work rather quickly."
             "She writes \"Doki Doki Literature Club\" within the banner's bounds."
-            "It's perfectly centred too."
+            "It's perfectly centered too."
             "She must have already planned it."
             "Meanwhile, I've just put random bits and pieces around it."
             "To give the banner some sort of eye-catching aspect to it."
@@ -455,7 +455,7 @@ label ch15_main:
                 y "I don't you want you to be late on my account."
                 y "I'll take the equipment."
                 mc "I'll help you."
-                "Yuri takes the equipment while I sort of stand there awkardly trying to help."
+                "Yuri takes the equipment while I sort of stand there awkwardly trying to help."
                 "We begin walking toward the door when Yuri suddenly stops."
                 y 2pf "I almost forgot."
                 mc "What is it?"
@@ -513,7 +513,7 @@ label ch15_main:
             "I can only assume it's full of the cupcakes she baked last night."
             n 2c "I was looking everywhere for you, you know."
             mc "I didn't realize this meeting spot was so out of the way."
-            n 1o "Why'd you have to be over here?!"
+            n 1o "Why did you have to be over here?!"
             mc "What do you mean?"
             mc "You're the one who chose this spot."
             n 2o "Yeah but I meant over there."
@@ -802,7 +802,7 @@ label ch15_main:
             n 1c "I was planning to leave them in the clubroom."
             n "But there's probably a class on before then."
             n "And if a teacher spots it in the closet then who knows what could happen to them?"
-            mc "Maybe we could make some kind of deterrant."
+            mc "Maybe we could make some kind of deterrent."
             n "Like a sign or something?"
             mc "Yeah."
             n 1b "What exactly did you have in mind?"
@@ -962,7 +962,7 @@ label ch15_main:
         show natsuki zorder 2 at t44
         mc "We read the book to find a good design for these cupcakes."
         mc "Personally, I think they fit really well."
-        "Everyone else nods their heads in agreeance."
+        "Everyone else nods their heads to agree."
         "I guess they like the design as well."
         mc "Natsuki did a really good job baking them."
         show natsuki zorder 3 at f44
@@ -976,7 +976,7 @@ label ch15_main:
     "It looks and smells delicious."
     "I take a bite and it's like an explosion of flavor in my mouth."
     "The sweetness of the toppings combined with the base makes it taste just incredible."
-    "I look at everyone else reassuredly."
+    "I look at everyone else reassuringly."
     mc "It's good!"
     mc "Try one."
     "Everyone else begins to take one."
@@ -1255,7 +1255,7 @@ label ch15_end:
     m "I think we're going to be fine, Sayori."
     m "After all, we wouldn't just go to the mall unless it was absolutely necessary or we planned our evening accordingly."
     m 2a "Besides, it might be nice running into each other outside the club."
-    m "It feels like it's a really rare occurence, you know?"
+    m "It feels like it's a really rare occurrence, you know?"
     show yuri 3pa zorder 3 at f41
     show monika zorder 2 at t42
     y "I'm inclined to agree..."
@@ -1367,12 +1367,13 @@ label ch15_end:
             show yuri zorder 2 at t31
             mc "Yeah, I might just do that."
             mc "Should we go now?"
-            show sayori 1l zorder 3 at f32
+            show sayori 1l zorder 3 at f33
             s "Um...actually, Yuri..."
             s "I need to speak with him in private, first."
             s 1d "It won't be long, I promise."
             s "You can wait outside if you're still planning to go together."
             show yuri 1s zorder 3 at f31
+            show sayori zorder 2 at t33
             y "O-Oh, okay..."
             y "I'll just wait for you outside then, [player]."
         else:
@@ -1386,8 +1387,8 @@ label ch15_end:
     "Yuri nods her head to everyone and leaves the clubroom."
     "I wonder what business she has with the school."
     "It's probably for Inauguration Day tomorrow."
-    show sayori 1g zorder 3 at f22
     if ch13_name == "Sayori":
+        show sayori 1g zorder 3 at f22
         s "We really need to talk, [player]."
         s "There's something I have to tell you in private."
         show sayori zorder 2 at t22
@@ -1395,6 +1396,7 @@ label ch15_end:
         mc "What's this about?"
         "Sayori's eyes shift towards Monika."
     elif ch13_name != "Yuri":
+        show sayori 1g zorder 3 at f22
         s "[player], I need to speak with you."
         s "In private, just for a little while."
         show sayori zorder 2 at t22
@@ -1490,10 +1492,10 @@ label ch15_end:
         s 1j "What you've done on this sav--"
         s "This {i}strawberry{/i} or one before."
         s "Let me ask you something."
-        s 1k "Is it your curiousity?"
+        s 1k "Is it your curiosity?"
         menu:
             s "Or are you just pure evil?"
-            "Curiousity.":
+            "Curiosity.":
                 s "We don't deserve this."
             "I'm evil.":
                 s "I guess deep down..."
@@ -1750,7 +1752,7 @@ label ch15_end:
             mc "I doubt it..."
             s 4q "Ehehe~"
         s "I'll see you soon, [player]..."
-    $ a_name = "???"
+    $ ay_name = "???"
     $ insert_ayame_character()
     call expression "ch15_exclusive_" + ch13_scene
     return
@@ -1830,8 +1832,8 @@ label ch15_exclusive_yuri:
         mc "So where is she?"
         y 3f "She should be right--"
         show ayame 1h zorder 3 at f21
-        a "Hi!"
-        a "Yuri...right?"
+        ay "Hi!"
+        ay "Yuri...right?"
         show ayame zorder 2 at t21
         "A tall girl taps Yuri on the back."
         "I guess this is her?"
@@ -1841,16 +1843,16 @@ label ch15_exclusive_yuri:
         y "We've been looking everywhere for you, Ayame."
         "So this is her."
         "Ayame, huh?"
-        $ a_name = "Ayame"
+        $ ay_name = "Ayame"
         show ayame 1i zorder 3 at f21
         show yuri zorder 2 at t22
-        a "Sorry, did you say 'we'?"
-        a "Who's the other..."
+        ay "Sorry, did you say 'we'?"
+        ay "Who's the other..."
         "The tall girl turn towards me."
         show ayame 1b at hf21
-        a "Oh, I'm so sorry!"
-        a "I didn't notice you there."
-        s 1g "Please accept my apologies!"
+        ay "Oh, I'm so sorry!"
+        ay "I didn't notice you there."
+        a 1g "Please accept my apologies!"
         "Ayame bows her head."
         show ayame zorder 2 at t21
         mc "Uh...okay."
@@ -1860,11 +1862,11 @@ label ch15_exclusive_yuri:
         "Not that that's a bad thing."
         "The more, the merrier I suppose."
         show ayame 1b zorder 3 at f21
-        a "I'm Ayame, what's your name?"
+        ay "I'm Ayame, what's your name?"
         show ayame zorder 2 at t21
         mc "[player]."
         show ayame 1d zorder 3 at f21
-        a "Great to meet you!"
+        ay "Great to meet you!"
         "She turns her attention back to Yuri."
         a 1h "Do you have it?"
         show ayame zorder 2 at t21
@@ -1876,24 +1878,24 @@ label ch15_exclusive_yuri:
         y "If you have any questions, you should look for our president."
         show ayame 1e zorder 3 at f21
         show yuri zorder 2 at t22
-        a "Wonderful! Thank you so much."
+        ay "Wonderful! Thank you so much."
         "Ayame starts looking at what Yuri's written down."
         "I can hear her mumbling under her breath."
         a 1i "One question..."
-        a "Who exactly is your president?"
-        a "Probably a dumb question, I know!"
-        a "I should know already."
+        ay "Who exactly is your president?"
+        ay "Probably a dumb question, I know!"
+        ay "I should know already."
         show ayame zorder 2 at t21
         mc "It's Sayori."
         mc "You know, red hair, wears a bow..."
         mc "Might ask you for spare change sometimes..."
         show ayame 1d zorder 3 at f21
-        a "Aha!"
-        a "I know exactly who that is."
+        ay "Aha!"
+        ay "I know exactly who that is."
         a 1b "Right."
         "She folds the piece of paper and puts it into her pocket."
-        a "I really need to be going now."
-        a "I have some {i}extreme{/i} shopping to do tonight!"
+        ay "I really need to be going now."
+        ay "I have some {i}extreme{/i} shopping to do tonight!"
         show ayame zorder 2 at t21
         show yuri 3e zorder 3 at f22
         y "Shopping?"
@@ -1901,9 +1903,9 @@ label ch15_exclusive_yuri:
         y 3f "Y-You don't have to tell me, if you don't want to."
         show ayame 1h zorder 3 at f21
         show yuri zorder 2 at t22
-        a "Actually, I'm glad you stopped me because I almost forgot to tell you!"
-        a "I'll be buying some gifts for everyone in your club for tomorrow."
-        a "It's going to be a surprise."
+        ay "Actually, I'm glad you stopped me because I almost forgot to tell you!"
+        ay "I'll be buying some gifts for everyone in your club for tomorrow."
+        ay "It's going to be a surprise."
         a 1i "Though...by telling you, I suppose I ruined the surprise."
         a 1e "Hehe, oops~"
         show ayame zorder 2 at t21
@@ -1912,9 +1914,9 @@ label ch15_exclusive_yuri:
         y "We should be the ones gifting you..."
         show ayame 1h zorder 3 at f21
         show yuri zorder 2 at t22
-        a "Nonsense!"
-        a "I want to thank you all for accepting me as a member!"
-        a "So many members do you have?"
+        ay "Nonsense!"
+        ay "I want to thank you all for accepting me as a member!"
+        ay "So many members do you have?"
         a 1j "I could look at the paper you gave me but I always say it's better to talk it out!"
         show ayame zorder 2 at t21
         mc "Right..."
@@ -1924,9 +1926,9 @@ label ch15_exclusive_yuri:
         mc "There's only five of us, including Yuri and I."
         mc "Me, Sayori, Yuri, Natsuki and Monika."
         show ayame 1i zorder 3 at f21
-        a "Did you say Monika?"
-        a "I thought she was part of the debating club or something!"
-        a "I remember watching her debate last year..."
+        ay "Did you say Monika?"
+        ay "I thought she was part of the debating club or something!"
+        ay "I remember watching her debate last year..."
         show ayame zorder 2 at t21
         show yuri 3f zorder 3 at f22
         y "I don't think she's a part of it anymore."
@@ -1934,35 +1936,35 @@ label ch15_exclusive_yuri:
         y "That's why she left to form the literature club."
         show ayame 1d zorder 3 at f21
         show yuri zorder 2 at t22
-        a "Well, good for her!"
+        ay "Well, good for her!"
         show ayame zorder 2 at t21
         mc "You really don't need to get us anything."
         mc "Joining the club is more than enough."
         mc "Besides, you barely know us..."
         show ayame 1h zorder 3 at f21
-        a "The thing is, I want to!"
+        ay "The thing is, I want to!"
         a 1e "It means new friends, new experiences and something to look forward to everyday!"
         "Ayame shows a wide smile."
         a 1g "Now that I think about it, that's a pretty small club..."
-        a "Though I suppose it's more cozy that way!"
-        a "Five members..."
+        ay "Though I suppose it's more cozy that way!"
+        ay "Five members..."
         a 1h "I'll be more than happy to make it six!"
-        a "Hehe, it also means I can get you all more expensive gifts!"
+        ay "Hehe, it also means I can get you all more expensive gifts!"
         show ayame zorder 2 at t21
         "She seems pretty carefree."
         "I think Sayori and her would get along really well."
         mc "I think you and the president would become really good friends."
         mc "Her personality seems a lot like yours."
         show ayame 1d zorder 3 at f21
-        a "That's great!"
-        a "I can't wait to meet her."
+        ay "That's great!"
+        ay "I can't wait to meet her."
         show ayame zorder 2 at t21
         mc "I thought you said you knew exactly who Sayori was."
         show ayame 1i zorder 3 at f21
-        a "I did?"
-        a "I must have thought of somebody else."
+        ay "I did?"
+        ay "I must have thought of somebody else."
         a 1j "Anyway, I really have to get going."
-        a "I'll see you both tomorrow hopefully!"
+        ay "I'll see you both tomorrow hopefully!"
         show ayame at lhide
         hide ayame
         show yuri zorder 2 at t11
@@ -2071,7 +2073,7 @@ label ch15_exclusive_yuri:
     y "Let's get moving."
     y "All of the stuff we have to get is scattered all over the place."
     mc "You'd think they'd have a single store that sells all that stuff."
-    y 2be "It's really specific materials that are only avalaible in certain stores."
+    y 2be "It's really specific materials that are only available in certain stores."
     y "And most of them happen to be in completely different stores."
     mc "What kind of materials are they anyway?"
     y 2bg "I probably should have been more specific."
@@ -2694,7 +2696,7 @@ label ch15_exclusive_sayori:
     "She's been really quiet this whole time."
     "That's not like her at all."
     "She's also been walking behind me, instead of beside me."
-    "And everytime I turn my head to look at her, she's just looking at the ground."
+    "And every time I turn my head to look at her, she's just looking at the ground."
     "Maybe I should say something."
     mc "So..."
     mc "What am I going to be doing tonight?"
@@ -3184,7 +3186,7 @@ label ch15_exclusive_sayori_together:
     "I guess she's in a hurry?"
     scene bg house
     show sayori 1b zorder 2 at t11
-    with wipeleft
+    with wipeleft_scene
     "We stand at the front of her house."
     "She turns towards me and grabs me by the shoulders."
     s "This is going to sound weird, [player]."
@@ -3953,12 +3955,12 @@ label ch15_exclusive_sayori_together:
     "Enough...for what?"
     "What am I even thinking about?"
     "I start running towards them to catch up."
-    a "Hey, wait up you guys!"
+    ay "Hey, wait up you guys!"
     "It seems like one of them is on their phone and doesn't turn around."
     "Wait...does my voice sound different?"
-    a "Haaahhh...haaahhh..."
+    ay "Haaahhh...haaahhh..."
     "I stop to catch my breath."
-    a "I didn't expect you guys to be here."
+    ay "I didn't expect you guys to be here."
     show yuri 3be zorder 2 at t32
     y "A-Ayame?"
     y "W-What are you doing here?"
@@ -3967,12 +3969,12 @@ label ch15_exclusive_sayori_together:
     "Her...?"
     n "Why don't you introduce us?"
     show natsuki zorder 2 at t31
-    a "Oh, where are my manners?"
+    ay "Oh, where are my manners?"
     "I reach out a hand to the girl with pink hair."
     "If I remember correctly, she's Natsuki...right?"
-    a "My name is Ayame."
-    a "I'm..."
-    a "Well, I don't know..."
+    ay "My name is Ayame."
+    ay "I'm..."
+    ay "Well, I don't know..."
     show yuri 3ba zorder 3 at f32
     y "She's planning to join the club."
     y "I invited her."
@@ -3986,31 +3988,31 @@ label ch15_exclusive_sayori_together:
     m 2ba "Do I know you?"
     "She clearly doesn't know me."
     show monika zorder 2 at t33
-    a "No, but I know you."
-    a "You used to be such a great debater!"
-    a "And now you're the..."
+    ay "No, but I know you."
+    ay "You used to be such a great debater!"
+    ay "And now you're the..."
     "Vice president."
     "That's what it said on the piece of paper, I think."
-    a "Vice president of the Literature Club!"
+    ay "Vice president of the Literature Club!"
     "I don't even remember reading it from the paper."
     "But...how else could I have known?"
     show monika 2bc zorder 3 at f33
     m "Yeah...that's right."
     m 3ba "How did you know that?"
     show monika zorder 2 at t33
-    a "I just did, I suppose."
-    a "Yuri must have told me or something."
+    ay "I just did, I suppose."
+    ay "Yuri must have told me or something."
     "I'm not sure on the answer myself."
-    a "Who's that over there?"
+    ay "Who's that over there?"
     "I point towards the boy walking away from the group."
     "Upon closer inspection, it seems he has earphones on."
     "Maybe that's why he didn't notice that everyone else stopped."
-    a "Is he with you?"
+    ay "Is he with you?"
     show yuri 3bb zorder 3 at f32
     y "Yes, he is."
     y "It's [player]."
     show yuri zorder 2 at t32
-    a "Oh, you told me about him!"
+    ay "Oh, you told me about him!"
     "Why does this name feel so familiar?"
     "Not just his name..."
     "But his whole being."
@@ -4018,7 +4020,7 @@ label ch15_exclusive_sayori_together:
     "So why...?"
     "Walk towards him."
     "I start walking towards him."
-    a "[player], I want to ask you something."
+    ay "[player], I want to ask you something."
     "I tap him on the shoulder."
     show sayori glitch zorder 2 at t11
     python:
@@ -4056,7 +4058,7 @@ label ch15_exclusive_sayori_together:
     "Maybe he told Sayori something."
     "But how did I even get here?"
     "The details are kinda fuzzy."
-    a "Hello?"
+    ay "Hello?"
     "I look behind me."
     show ayame 1bb zorder 2 at t11
     "A girl I've never seen before is in front of me."
@@ -4066,10 +4068,10 @@ label ch15_exclusive_sayori_together:
     mc "I didn't realize somebody was talking to me."
     mc "Did you need something?"
     a 1bg "Um..."
-    a "I don't..."
-    a "I don't know?"
+    ay "I don't..."
+    ay "I don't know?"
     a 1bh "H-Hi!"
-    a "I'm Ayame."
+    ay "I'm Ayame."
     "Ayame?"
     "Why is that name so familiar?"
     "She extends out her hand."
@@ -4495,7 +4497,7 @@ label ch15_mall_shared:
     else:
         m 1bc "I'm nervous about tomorrow."
         m "But not for the reasons you're saying."
-        m "In fact, I'm probably most confident about my performace on the piano tomorrow."
+        m "In fact, I'm probably most confident about my performance on the piano tomorrow."
         show yuri 2be zorder 3 at f32
         show monika zorder 2 at t33
         y "You're not nervous about having to play the piano?"
@@ -4627,7 +4629,7 @@ label ch15_mall_shared:
         m "The same thing you and Yuri are."
         m 1bn "Buying things last minute for tomorrow and getting distracted by you guys."
         "Monika smiles nervously."
-        m "Ahaha, I guess we were all a little underprepared."
+        m "Ahaha, I guess we were all a little under prepared."
         show monika zorder 2 at t33
         if ch13_name == "Monika":
             mc "And I'm here with her."
@@ -4653,7 +4655,7 @@ label ch15_mall_shared:
     y "It sure is quite a coincidence that we'd all meet here."
     y "At this exact time."
     y "And we're all here for the same reasons too."
-    y "When you all said you were going to the mall, I didnt't actually expect to see you all here."
+    y "When you all said you were going to the mall, I didn't actually expect to see you all here."
     show yuri zorder 2 at t32
     show monika 1be zorder 3 at f33
     m "What a coincidence indeed."
@@ -4729,12 +4731,12 @@ label ch15_mall_shared:
     $ style.say_window = style.window_flashback
     m "We're the only ones responsible for the fate of this club."
     m "If we start the event and each put on a good performance..."
-    m 3a_gray "Then it will inspire others to do the same!"
+    m 3a_gra "Then it will inspire others to do the same!"
     m "And the more people who perform, the better we'll be able to show everyone what literature is all about!"
     show monika zorder 2 at t43
     show sayori 1r_gray zorder 3 at f41
     s "Yeah!"
-    s 1x_gray "It's about expressing your feelings..."
+    s 1x_gra "It's about expressing your feelings..."
     s "Being intimate with yourself..."
     s "Finding new horizons..."
     s "And having fun!"
@@ -4802,7 +4804,7 @@ label ch15_mall_shared:
     show monika zorder 2 at t33
     y "I suppose."
     show natsuki zorder 3 at f31
-    show yuri 4bq zorder 2 at t32
+    show yuri 3bq zorder 2 at t32
     n "Whatever."
     show natsuki zorder 2 at t31
     show monika 3bn zorder 3 at f33
@@ -4901,7 +4903,7 @@ label ch15_mall_shared:
     hide yuri
     show monika at thide
     hide monika
-    "I get up as well but as I do, I recieve a notification on my phone."
+    "I get up as well but as I do, I receive a notification on my phone."
     "It's a message."
     "I open it up and there's an ominous audio file there."
     "It came from an unknown number with a simple message."
@@ -4919,29 +4921,36 @@ label ch15_mall_shared:
     python:
         try: renpy.file(config.basedir + "/listen to this in private")
         except: open(config.basedir + "/listen to this in private", "wb").write(renpy.file("listen to this in private").read())
-    $ a_name = "???"
-    a "Hello?"
+    $ ay_name = "???"
+    ay "Hello?"
     "I look behind me."
     show ayame 1bb zorder 2 at t11
-    "A girl I've never seen before is in front of me."
+    if ch13_name == "Yuri" and yuri_date:
+        "It's..."
+        "...the girl I met in the library with Yuri."
+    else:
+        "A girl I've never seen before is in front of me."
     "The other three seem to have been talking to her."
     "I take off my earphones."
     mc "Oh!"
     mc "I didn't realize somebody was talking to me."
     mc "Did you need something?"
     a 1bg "Um..."
-    a "I don't..."
-    a "I don't know?"
+    ay "I don't..."
+    ay "I don't know?"
     a 1bh "H-Hi!"
-    mc "I'm [player]..."
     if ch13_name == "Yuri" and yuri_date:
-        a "I know we really didn't get to meet properly before."
+        ay "I know we really didn't get to meet properly before."
         a 1bg "So I'd like to fix that."
         a 1bh "At least, I think I do..."
-    a "I'm Ayame."
+    ay "I'm Ayame."
     "She extends out her hand."
-    $ a_name = "Ayame"
-    mc "[player]."
+    $ ay_name = "Ayame"
+    if ch13_name == "Yuri" and yuri_date:
+        mc "Once again, I'm [player]."
+        mc "Nice to meet you."
+    else:
+        mc "I'm [player], nice to meet you."
     show natsuki 1bc zorder 2 at t41
     show yuri 1bf zorder 3 at f42
     show ayame zorder 2 at t43
@@ -4949,18 +4958,19 @@ label ch15_mall_shared:
     label ch15_mall_shared_transfer:
     "The others catch up to me as I shake Ayame's hand."
     mc "So what are you doing here, Ayame?"
+    show yuri zorder 2 at t42
     show ayame 1bi zorder 3 at f43
-    a "I..."
-    a "I was buying gifts."
+    ay "I..."
+    ay "I was buying gifts."
     a 1bb "Because you're all going to be my new friends, you see..."
-    a "S-Since I'm joining the club..."
-    a "And..."
+    ay "S-Since I'm joining the club..."
+    ay "And..."
     "She looks around."
     a 1bi "Oh!"
     a 1bg "I-I don't mean to assume."
     "Ayame bows her head."
-    a "I-If you don't want to be friends, that's fine."
-    a "But I'd still like to become a member of your club."
+    ay "I-If you don't want to be friends, that's fine."
+    ay "But I'd still like to become a member of your club."
     show ayame zorder 2 at t43
     show monika 1be zorder 3 at f44
     m "You don't have to assume."
@@ -4977,10 +4987,10 @@ label ch15_mall_shared:
     show natsuki zorder 2 at t41
     "Ayame raises her head."
     show ayame 1bb zorder 3 at f43
-    a "I read all sorts of things."
-    a "Among my favorites are horror, emotion and love stories."
+    ay "I read all sorts of things."
+    ay "Among my favorites are horror, emotion and love stories."
     a 1bh "I also read manga on occasion."
-    a "But I know some don't really count that as a form of literature, so--"
+    ay "But I know some don't really count that as a form of literature, so--"
     show natsuki 2bg zorder 3 at f41
     show ayame zorder 2 at t43
     n "Don't listen to those people."
@@ -4995,20 +5005,20 @@ label ch15_mall_shared:
     y "I still much prefer reading novels, but I wouldn't say no to a good manga now."
     show yuri zorder 2 at t42
     show ayame 1bb zorder 3 at f43
-    a "So you've changed since becoming a member?"
+    ay "So you've changed since becoming a member?"
     a 1bd "I wonder what will happen after I join..."
     show ayame zorder 2 at t43
-    show monika 2a zorder 3 at f44
+    show monika 2ba zorder 3 at f44
     m "You know, Ayame..."
     m "We were just about to do an activity as a club."
     m "You can come along, if you like."
     show ayame 1bi zorder 3 at f43
     show monika zorder 2 at t44
-    a "Really?"
+    ay "Really?"
     show ayame 1bj
     "Ayame's face lights up."
-    a "But I'm not really a member..."
-    a "Is that really okay?"
+    ay "But I'm not really a member..."
+    ay "Is that really okay?"
     a 1bg "I don't want to intrude or anything..."
     show ayame zorder 2 at t43
     show monika 2bb zorder 3 at f44
@@ -5030,12 +5040,12 @@ label ch15_mall_shared:
     m 1ba "So what do you say, Ayame?"
     show ayame 1bb zorder 3 at f43
     show monika zorder 2 at t44
-    a "I appreciate the offer..."
-    a "But I want to wait until tomorrow to become an official member."
+    ay "I appreciate the offer..."
+    ay "But I want to wait until tomorrow to become an official member."
     a 1bf "Not that I don't recognize your authority or anything!"
-    a "It's just that I bought these gifts."
+    ay "It's just that I bought these gifts."
     a 1bh "And I'd like to give them to all five of you at the same time."
-    a "Since you're missing a member, it wouldn't be fair."
+    ay "Since you're missing a member, it wouldn't be fair."
     show natsuki 1bc zorder 3 at f41
     show ayame zorder 2 at t43
     n "I guess that makes sense."
@@ -5055,9 +5065,9 @@ label ch15_mall_shared:
     m "It won't take long, I promise."
     show ayame 1bd zorder 3 at f43
     show monika zorder 2 at t44
-    a "Okay."
-    a "If you guys want me to go with you..."
-    a "Then what harm could it do, right?"
+    ay "Okay."
+    ay "If you guys want me to go with you..."
+    ay "Then what harm could it do, right?"
     show yuri 3bi zorder 3 at f42
     show ayame zorder 2 at t43
     y "If Sayori was here, she would be saying something like \"yay, a new member\"..."

@@ -1747,8 +1747,8 @@ image monika 4schoolgi = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0
 image monika 4schoolgy1 = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/gy1.png")
 image monika 4schoolgy2 = im.Composite((960, 960), (0, 0), "monika/2l.png", (0, 0), "monika/2r.png", (0, 0), "mod_assets/images/monika/gy2.png")
 
-image monika 5schoolga = im.Composite((960, 960), (0, 0), "mod_assets/monika/3ga.png")
-image monika 5schoolgb = im.Composite((960, 960), (0, 0), "mod_assets/monika/3gb.png")
+image monika 5schoolga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3ga.png")
+image monika 5schoolgb = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/3gb.png")
 
 # School Clothes Monika - Hair Down
 image monika 1downschoola = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1hl.png", (0, 0), "mod_assets/images/monika/1hr.png", (0, 0), "mod_assets/images/monika/ha.png")
@@ -3211,7 +3211,7 @@ define mo = DynamicCharacter('mo_name', image='momsuki', what_prefix='"', what_s
 define ny = Character('Nat & Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define e = Character('Everyone', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define cl = DynamicCharacter('cl_name', image='mysteriousclerk', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define a = DynamicCharacter('a_name', image='ayame', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define ay = DynamicCharacter('ay_name', image='ayame', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
 define _dismiss_pause = config.developer
 
@@ -3250,7 +3250,7 @@ default y_name = "Yuri"
 default d_name = "Yasuhiro"
 default mo_name = "Haruki"
 default cl_name = "Mysterious Clerk"
-default a_name = "Ayame"
+default ay_name = "Ayame"
 
 
 
