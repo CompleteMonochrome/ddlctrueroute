@@ -5083,5 +5083,102 @@ label ch15_mall_shared:
     m "Or we're going to miss it."
     show monika zorder 2 at t44
     mc "Miss what?"
+    show monika zorder 3 at f44
+    m "The sunset!"
+    m "It's going to be beautiful tonight."
+    m "We wouldn't want to miss it."
+    show yuri zorder 3 at f42
+    show monika zorder 2 at t44
+    y "I wouldn't mind seeing it."
+    y "In fact, I'd love to."
+    y "Something about watching the sun dip into the waves and the moon taking it's place really excites me."
+    show natsuki zorder 3 at f41
+    show yuri zorder 2 at t42
+    n "Um...Yuri, you know the sun doesn't actually dip into the waves, right?"
+    n "It's just crossing over onto the other side of the planet."
+    show natsuki zorder 2 at t41
+    show yuri zorder 3 at f42
+    y "Of course I did!"
+    y "I was speaking metaphorically."
+    show natsuki zorder 3 at f41
+    show yuri zorder 2 at t42
+    n "Oh, now that does make sense."
+    n "W-Well, in case Monika or [player] or even Ayame didn't know."
+    n "Now they do, so...!"
+    show natsuki zorder 2 at t41
+    show ayame zorder 3 at f43
+    ay "Hehe, you guys are great!"
+    ay "I know I'm gonna have a wonderful time when I officially join."
+    show ayame zorder 2 at t43
+    show monika zorder 3 at f44
+    m "Come on guys! Let's hurry and get to the marina."
+    m "I don't know if you guys have ever seen it but..."
+    if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
+        m "The view really is beautiful."
+        m "I used to go see it a lot when I was younger."
+    else:
+        m "The view is something you definitely need to see."
+    show monika zorder 2 at t44
+    mc "Is watching the sunset really that interesting?"
+    "And doing a reflection while watching one?"
+    "Wouldn't we be too distracted by the sunset to even reflect properly?"
+    if ch15_s_together:
+        "...That's what we were going to do?"
+        "I'm glad I know that now."
+    show yuri zorder 3 at f42
+    y "[player], have you never seen a sunset?"
+    show yuri zorder 2 at t42
+    mc "I haven't really ever gone out of my way to see one."
+    show monika zorder 3 at f44
+    m "Then this will be a great experience for you, [player]."
+    m "It might not seem like much but a sunset can mean a lot of different things to a lot of different people."
+    if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
+        m "For example, to some, it might even symbolize something..."
+        m "...romantic."
+        show monika zorder 2 at t44
+        mc "Romantic?"
+        mc "How exactly?"
+        show monika zorder 3 at f44
+        m "I'm not sure."
+        m "Maybe just watching such beautiful view incites feelings of love."
+    else:
+        m "To some, it could mean the end of something."
+        m "And the start of a new one."
+        show monika zorder 2 at t44
+        mc "You mean like the sun disappearing and the moon appearing?"
+        show monika zorder 3 at f44
+        m "Something like that."
+    show natsuki zorder 3 at f41
+    show monika zorder 2 at t44
+    n "Can we get going already?"
+    n "We might miss it if we stay here too long."
+    show natsuki zorder 2 at t41
+    show ayame zorder 3 at f43
+    ay "Natsuki..."
+    "Ayame looks at Natsuki as if to make sure that was her name."
+    "Natsuki looks at her and gives a slight nod."
+    ay "...is right."
+    ay "After all, you still have to do your reflections, right?"
+    show ayame zorder 2 at t43
+    if ch15_s_together:
+        "Wait, how does she know that?"
+        "I--"
+        "{i}She{/i} wasn't there when Monika was talking about it...was she?"
+        "Maybe our memories are..."
+    show monika zorder 3 at f44
+    m "That's right."
+    m "Come on, follow me I know a shortcut."
+    scene bg pier_sunset with wipeleft_scene
+    "Monika took us through this whole section of the mall I didn't even know existed."
+    "It seemed to avoid a lot of the weird winding sections of the mall."
+    "As a result, we got to the marina pretty quickly."
+    "We went to the pier, since that was the best place to watch the sunset according to Monika."
+    "As I can see the sun setting, I can sort of get the appeal to it."
+    show monika 1ba zorder 3 at t42
+    m "Okay, everyone!"
+    m "We're here!"
+    show ayame zorder 3 at f43
+    ay "I can't really stay for long."
+    ay "There's so many things I need to do for tomorrow."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
