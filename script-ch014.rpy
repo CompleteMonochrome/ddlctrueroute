@@ -7282,7 +7282,7 @@ label ch14_exclusive_monika:
         m 1be "Because I know exactly what happens."
         m "You can say a page and I could probably tell you what is happening."
         mc "You really know that much about the book?"
-        m 1bj "I was obssessed with it at one point."
+        m 1bj "I was obsessed with it at one point."
         m "Ahaha, I'm not sure you could call it very healthy~"
         m "But still."
         if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
@@ -7434,7 +7434,7 @@ label ch14_exclusive_monika:
             "The story seems oddly...familiar."
             "Like it's stuff that I've experienced before."
             "I'm not really sure how to feel about that."
-            "On one hand, it's relateable because the protagonist is going through similar stuff as I did."
+            "On one hand, it's relatable because the protagonist is going through similar stuff as I did."
             "He's joining a club because his best friend made him."
             "On the other hand, it's really creepy..."
             "The circumstances, the events are almost exactly what happened to me."

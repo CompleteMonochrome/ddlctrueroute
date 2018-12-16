@@ -141,6 +141,8 @@ define audio.t13 = "<loop 1.700>mod_assets/bgm/13.ogg"
 define audio.t15 = "mod_assets/bgm/15.ogg"
 # Mod Tracks - 16: I'm Coming For You
 define audio.t16 = "mod_assets/bgm/16.ogg"
+# Mod Tracks - 17: Mysterious Clerk Theme
+define audio.t17 = "<loop 0>mod_assets/bgm/17.ogg"
 
 define audio.m1 = "<loop 0>bgm/m1.ogg"
 define audio.mend = "<loop 6.424>bgm/monika-end.ogg"

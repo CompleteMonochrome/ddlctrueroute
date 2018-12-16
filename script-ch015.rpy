@@ -3574,6 +3574,7 @@ label ch15_exclusive_sayori_together:
     s "I need answers."
     show sayori zorder 2 at t21
     show mysteriousclerk 2c zorder 3 at f22
+    play music t17 fadeout 0.5
     cl "My my, where are your manners dear?"
     cl "Surely you haven't forgotten how to say the word 'please' since last we met, have you?"
     cl 4b "Ohoho, and it seems we've got company."
@@ -5177,8 +5178,155 @@ label ch15_mall_shared:
     show monika 1ba zorder 3 at t42
     m "Okay, everyone!"
     m "We're here!"
-    show ayame zorder 3 at f43
+    show ayame 1ba zorder 3 at f43
     ay "I can't really stay for long."
     ay "There's so many things I need to do for tomorrow."
+    ay "So I'll try to reflect as best as I can and as quick as I can."
+    ay "Even though there isn't really much I can reflect on."
+    show ayame zorder 2 at t43
+    show yuri 1ba zorder 3 at f44
+    y "You could reflect on your first impressions of everyone."
+    y "You do have that notebook after all."
+    show natsuki 1ba zorder 3 at f41
+    show yuri zorder 2 at t44
+    n "Notebook?"
+    n "What do you mean by notebook?"
+    show natsuki zorder 2 at t41
+    show ayame zorder 3 at f43
+    ay "Oh, you didn't know?"
+    ay "I suppose it is a rather odd thing to ask for."
+    ay "I can imagine why Yuri didn't tell you all."
+    show ayame zorder 2 at t43
+    show yuri zorder 3 at f44
+    y "Ayame...!"
+    show natsuki zorder 3 at f41
+    show yuri zorder 2 at t44
+    n "What didn't Yuri tell us?"
+    n "What are you hiding, Yuri?"
+    show natsuki zorder 2 at t41
+    if ch13_name == "Yuri" and yuri_date:
+        mc "It's not that big of a deal."
+    else:
+        mc "What is it?"
+    show yuri zorder 3 at f44
+    y "I was going to tell you all but..."
+    "Yuri looks at everyone then at the ground."
+    y "I just...didn't."
+    show monika zorder 3 at f42
+    show yuri zorder 2 at t44
+    m "What kind of stuff did you put in this notebook anyway?"
+    m "I'm sure it wasn't anything bad...right, Yuri?"
+    show monika zorder 2 at t42
+    show yuri zorder 3 at f44
+    y "N-No! O-Of course not!"
+    y "I would never do that to you guys..."
+    show ayame zorder 3 at f43
+    show yuri zorder 2 at t44
+    ay "I'm really sorry about this."
+    ay "I didn't mean to cause any trouble."
+    ay "I just wanted to know more about the club."
+    show ayame zorder 2 at t43
+    show yuri zorder 3 at f44
+    y "I thought it would be easier to join that way."
+    y "After all, no one wants to join something they'll later regret, right?"
+    y "It would only cause pain to the person joining and the club they joined in the end."
+    y "And I thought it wasn't an unreasonable request so I went along with it..."
+    y "It was just a notebook containing some details about everyone in the club."
+    y "N-Nothing personal, I think."
+    show monika zorder 3 at f42
+    show yuri zorder 2 at t44
+    m "What did you write about us and the club?"
+    m "Ahaha, hopefully nothing embarrassing~"
+    show natsuki zorder 3 at f41
+    show monika zorder 2 at t42
+    n "Yeah!"
+    n "Yuri didn't talk herself up, did she?"
+    show natsuki zorder 2 at t41
+    show ayame zorder 3 at f43
+    ay "Oh, I can assure you it's nothing like that!"
+    ay "From what I've read, you seem like great people."
+    ay "And from what I've read of Yuri, it doesn't seem like that at all, Natsuki."
+    "Ayame smiles reassuringly."
+    ay "Though some things don't really add up properly."
+    ay "I'm sure it's nothing though, probably just some small mistakes because it was so sudden."
+    show monika zorder 3 at f42
+    show ayame zorder 2 at t43
+    m "I'm curious to know what sort of things don't add up."
+    m "Yuri is definitely careful with her work so making mistakes like that seems out of character."
+    show natsuki zorder 3 at f41
+    show monika zorder 2 at t42
+    n "That's a good point."
+    n "But I'm sure it's probably just due to the preparations she had to do."
+    n "She probably wasn't thinking straight."
+    show natsuki zorder 2 at t42
+    show yuri zorder 3 at f44
+    y "It wasn't that, I can assure you."
+    y "I definitely made this carefully."
+    y "I wouldn't want to give false information about the club."
+    show yuri zorder 2 at t44
+    mc "So what exactly didn't add up, Ayame?"
+    show ayame zorder 3 at f43
+    ay "Well, everything about you, Yuri and Natsuki make sense."
+    ay "All the things Yuri put in there seem to have no conflicts that I could find."
+    ay "But there were some things relating to Sayori and Monika."
+    show ayame zorder 2 at t43
+    show yuri zorder 3 at f44
+    y "Are you sure?"
+    y "I'm almost certain I wrote the events that happened in chronological order."
+    y "M-Maybe I did make a mistake."
+    show monika zorder 3 at f42
+    show yuri zorder 2 at t44
+    if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+        m "D-Did you say you wrote them in chronological order?"
+    else:
+        m "In chronological order? Interesting..."
+    show monika zorder 2 at t42
+    show yuri zorder 3 at f44
+    y "That's right."
+    y "So I'm not sure how Ayame could have--"
+    show monika zorder 3 at f42
+    m "Ayame, can I see that notebook for a second?"
+    m "You do have it with you, right?"
+    show monika zorder 2 at t42
+    show ayame zorder 3 at f43
+    ay "I have it right here."
+    "Ayame takes the notebook out from her purse."
+    ay "It's been really helpful but I don't really feel like I'll need it much longer if at all."
+    "She offers it to Monika who starts looking through it."
+    if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+        "Starting from the back of it."
+    ay "I haven't really finished it yet, I'm up to reading about the play with the lumberjack."
+    ay "It's really fascinating to see what kinds of stuff your club does, you know?"
+    ay "But I've learned lots of things about everyone too!"
+    ay "Like how [player] joined because of cupcakes."
+    "I almost forgot."
+    ay "How Natsuki is an extraordinary baker."
+    "Natsuki gives a smug expression."
+    ay "And how Yuri is extremely talented."
+    "Yuri looks away but smiles shyly."
+    ay "Sayori seems like a really nice girl who's great at diffusing situations."
+    ay "But from the description Yuri gave, it's strange to think that she's the president of your club."
+    ay "From what I know and what I've read, she doesn't really have the qualities of a leader."
+    ay "I think she would have been more suited to be vice president."
+    ay "And instead the president should have been--"
+    show monika zorder 3 at f42
+    show ayame zorder 2 at t43
+    if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+        m "Oops!"
+        "Monika drops the book into the water."
+        m "My hand slipped...I'm so sorry!"
+    else:
+        m "Do you mind if I keep this for a while?"
+        m "At least just the first couple of pages."
+    show monika zorder 2 at t42
+    show ayame zorder 3 at f43
+    if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+        ay "Well, that's quite unfortunate."
+        ay "But it's okay."
+    else:
+        ay "Sure, take the whole notebook if you have to."
+        ay "I don't really need it anymore."
+    ay "I'd much prefer to learn about the five of you in person anyway."
+    ay "It's much better than doing it through a notebook."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return

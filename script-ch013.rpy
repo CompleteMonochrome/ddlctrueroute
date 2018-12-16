@@ -8166,6 +8166,7 @@ label ch13_natsukidate:
     cl "Hello there!"
     show natsuki zorder 2 at t21
     show mysteriousclerk 2a zorder 3 at f22
+    play music t17 fadeout 2.0
     cl "Sorry for the mess, but there was an art class just before!"
     "Suddenly, a loosely kept man appears in front of us."
     "He seems like the type of person who would keep a messy room..."
@@ -8344,6 +8345,7 @@ label ch13_natsukidate:
     scene bg city_day
     show natsuki 1bc zorder 2 at t11
     with wipeleft_scene
+    play music t12n fadeout 2.0
     n "What took so long for you to get out?"
     n "Did you see something?"
     mc "Not exactly..."
@@ -8832,6 +8834,7 @@ label ch13_natsukidate:
     n "We're back..."
     n "Have you--"
     show mysteriousclerk 4b zorder 3 at hf22
+    play music t17 fadeout 0.5
     cl "Hello, hello!"
     "Natsuki jumps backwards as the clerk suddenly appears seemingly out of nowhere."
     show natsuki 2bo zorder 2 at hf21
@@ -8958,6 +8961,7 @@ label ch13_natsukidate:
     $ renpy.save_persistent()
     n 1bc "Guess we better move then."
     scene bg train with wipeleft_scene
+    play music t12n fadeout 2.0
     "We barely got onto the train."
     "There wasn't many people so we got past the gates pretty quickly."
     "Still, it was pretty close."
