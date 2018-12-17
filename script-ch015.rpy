@@ -5328,5 +5328,65 @@ label ch15_mall_shared:
         ay "I don't really need it anymore."
     ay "I'd much prefer to learn about the five of you in person anyway."
     ay "It's much better than doing it through a notebook."
+    show ayame zorder 2 at t43
+    show yuri zorder 3 at f44
+    y "I spent a good amount of time writing that for you." 
+    y "I hope it wasn't a waste of time..."
+    show ayame zorder 3 at f43
+    show yuri zorder 2 at t44
+    ay "No, of course not!"
+    ay "It was actually a lot more helpful than I expected."
+    ay "To be honest, it was a lot to take in."
+    ay "But your amazing handwriting really helped."
+    "Ayame smiles widely."
+    ay "So don't worry, it was a big help."
+    ay "Usually, I like to take things as they go."
+    ay "I always say the best way to experience something is to dive right in."
+    ay "I guess the club was just an exception for me because it was something I was nervous about."
+    show monika zorder 3 at f42
+    show ayame zorder 2 at t43
+    m "There's nothing to worry about!"
+    m "I assure you."
+    m "We're all friendly people."
+    show monika zorder 2 at t42
+    show ayame zorder 3 at f43
+    ay "Hehe, I can see that."
+    show natsuki zorder 3 at f41
+    show ayame zorder 2 at t43
+    n "Can we get on with it?"
+    n "We're here to do a reflection, right?"
+    n "So let's hurry up and do one."
+    show natsuki zorder 2 at t41
+    show monika zorder 3 at f42
+    m "You're right."
+    m "So...now that we're here."
+    # CG HERE L u L, maybe a dynamic one where the sun slowly sets?
+    scene black with dissolve_cg
+    play music t10 fadeout 2.0
+    m "Let's reflect about the club as we stare into the sunset."
+    m "Does anyone want to start us off?"
+    "..."
+    m "No?"
+    m "Ahaha, then I suppose I'll take the responsibility."
+    if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
+        m "My time in the club has been pretty amazing so far."
+        m "Starting it with Sayori and meeting all of you has been one of the best decisions of my life."
+        m "It's been a really fun experience to get to know each of you."
+        m "One of the things I've learned is about Natsuki and her manga."
+        m "She has a passion for it that is unrivaled."
+        m "You can ask her anything and everything about manga."
+        m "I've discovered if she's read it, she probably knows everything about it."
+        m "It's incredible the lengths someone would go to."
+        m "And then there's Yuri."
+        m "A quiet and timid girl who has a lot going on behind the scenes."
+        m "I've always thought of Yuri as someone exceptional."
+        m "Beneath that quiet exterior, she's actually got a lot of depth to her."
+        m "You wouldn't know just by looking at her but she's actually really into the more horrific aspects of life."
+        m "And I can respect that."
+        
+    elif monika_type == 1:
+
+    else:
+
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return

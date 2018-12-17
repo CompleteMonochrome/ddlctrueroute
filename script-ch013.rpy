@@ -922,7 +922,7 @@ label ch13_end:
         m "Maybe not."
         m 3e "I'm sure we can find {i}something{/i} for you to do."
         m "Hmm..."
-        m 1a "Your poems have really beatiful handwriting."
+        m 1a "Your poems have really beautiful handwriting."
         m "Maybe you could use that to make something for the club."
         m 1b "Maybe some banners or something to help set the atmosphere."
     show yuri 2pe zorder 3 at f31
@@ -1113,7 +1113,7 @@ label ch13_end:
     mc "I'd like to know that before I make a decision."
     show sayori 1c zorder 3 at f32
     s "Well, like I said, I was gonna handle all the background preparations."
-    s 1a "You know, getting our club registered for Inauguration Day and organising a space we could use."
+    s 1a "You know, getting our club registered for Inauguration Day and organizing a space we could use."
     s "I was also gonna make us the script of the book we chose, like I've done before."
     s 1q "And then I was gonna help out everyone else a little bit, to make their parts really good!"
     s "Not that I don't trust them to make it great already..."
@@ -1350,7 +1350,7 @@ label ch13_end:
         m 4f "I know it hasn't always been the best place."
         m "The club has been through lots of ups and downs..."
         m 2m "But honestly..."
-        m 2e "I woudn't trade the time I've spent here for anything."
+        m 2e "I wouldn't trade the time I've spent here for anything."
         m "The Literature Club will always have a place in my...heart."
         show yuri 3pv zorder 3 at f31
         show monika zorder 2 at t33
@@ -1484,7 +1484,7 @@ label ch13_end:
             show yuri zorder 2 at t31
             mc "Sure."
         else:
-            y 2pe "I'll be sure to have my preprations started."
+            y 2pe "I'll be sure to have my preparations started."
             show yuri zorder 2 at t31
             mc "See you, Yuri."
         show yuri at lhide
@@ -1638,7 +1638,7 @@ label ch13_end_natsuki:
     else:
         y 3pq "I-It's really nothing..."
         y "Just forget I even said anything."
-        y 3pv  "Besides, he made the choice on his own."
+        y 3pv "Besides, he made the choice on his own."
         y "It's not like I can change his mind anyway..."
         y "Um..."
         y 3pn "Did I say that out loud...?"
@@ -2469,7 +2469,7 @@ label ch13_exclusive_natsuki:
             mo 1d "Do you know how long..."
             mo "...I've been cleaning this house for?"
             mc "What?"
-            mo 1a"I've been at this since I got home yesterday!"
+            mo 1a "I've been at this since I got home yesterday!"
             mo 1d "It's a tough job, you know."
             mc "Y-Yeah, I can imagine."
             "Haruki looks around the room and spots a broom."
@@ -2792,7 +2792,7 @@ label ch13_exclusive_natsuki:
             n "You didn't have to do that."
             mc "Yeah, but I wanted to."
             mc "I know you probably didn't need the help but..."
-            n 2bq"I appreciate it, [player]."
+            n 2bq "I appreciate it, [player]."
             n "Thank you."
             show natsuki zorder 2 at t21
             show momsuki 1a zorder 3 at f22
@@ -2839,7 +2839,7 @@ label ch13_exclusive_natsuki:
             scene bg bedroom with wipeleft_scene
             play music t2 fadeout 0.5
             "I arrive home, just about ready to do those assignments Haruki mentioned I had."
-            "It's strange, it feels like my whole life is centred around the literature club that I don't really remember doing any assignments."
+            "It's strange, it feels like my whole life is centered around the literature club that I don't really remember doing any assignments."
             "I must be doing them though because I'm still in school and haven't really been in trouble for them lately."
             "I get my bag and take out the four books I took from Natsuki's house and place them on my desk."
             "I think these books are probably enough."
@@ -3354,7 +3354,7 @@ label ch13_exclusive_natsuki:
         show natsuki zorder 2 at t21
         show momsuki 1b zorder 3 at f22
         mo "Call it a mother's intuition."
-        "Harsuki smiles gently."
+        "Haruki smiles gently."
         mo "You should get going."
         show momsuki zorder 2 at t22
         mc "Right...well, I'll see you tomorrow Natsuki."
@@ -3434,7 +3434,7 @@ label ch13_exclusive_natsuki:
         scene bg bedroom with wipeleft_scene
         play music t2 fadeout 0.5
         "I arrive home, just about ready to do those assignments Haruki mentioned I had."
-        "It's strange, it feels like my whole life is centred around the literature club that I don't really remember doing any assignments."
+        "It's strange, it feels like my whole life is centered around the literature club that I don't really remember doing any assignments."
         "I must be doing them though because I'm still in school and haven't really been in trouble for them lately."
         "I get my bag and take out the four books I took from Natsuki's house and place them on my desk."
         "I think these books are probably enough."
@@ -3533,7 +3533,7 @@ label ch13_exclusive_natsuki:
         "Natsuki nods."
         mc "Harder than before?"
         n 1bm "He won't even look me in the eye."
-        n "Like he's too embarassed..."
+        n "Like he's too embarrassed..."
         mc "He's probably ashamed..."
         show natsuki at h11
         n 1bo "He should be!"
@@ -3573,7 +3573,7 @@ label ch13_exclusive_natsuki:
         "Natsuki stops to think for a moment."
         mc "Is something wrong?"
         n 2bk "Not really..."
-        n "But how come you seemed so hesistant to tell me?"
+        n "But how come you seemed so hesitant to tell me?"
         mc "About them choosing you to bake stuff?"
         n "Yeah."
         mc "I just thought it would be better for if you got to decide yourself."
@@ -4205,7 +4205,7 @@ label ch13_exclusive_natsuki:
         hide natsuki
         "Before I can finish my sentence, Natsuki runs off to the kitchen."
         "I guess she must have something to clear the air."
-        "Or at the very least, reduce the smell of the alochol."
+        "Or at the very least, reduce the smell of the alcohol."
         "I take one last look at her living room."
         "Despite the smell and the stains of alcohol, it's actually in good shape."
         "The furniture isn't broken or anything like that."
@@ -5206,7 +5206,7 @@ label ch13_exclusive_yuri:
     mc "How about some scented candles?"
     mc "Those aren't generally specific to a type of play, right?"
     y "Right! And how about some banner paper so we can make a banner themed by the book?"
-    y "And some markers of lots of different colours...!"
+    y "And some markers of lots of different colors...!"
     mc "Now you're getting it."
     mc "You seem to be quite excited about this."
     y 3pf "I'd like to show everyone what I can do and with you here..."
@@ -5456,7 +5456,7 @@ label ch13_exclusive_monika:
         m "But I need you to hear this at least once."
         m "So this will be the piece I play on the day."
         mc "I assume you're going to learn some shorter songs to accompany it?"
-        mc "This song, I mean piece, is probably the centrepiece, right?"
+        mc "This song, I mean piece, is probably the centerpiece, right?"
         m "That was the idea I had in my head."
         m 1m "But I don't really know if it'll work."
         mc "Well, I think it's a great idea."
@@ -5511,7 +5511,7 @@ label ch13_exclusive_monika:
         "I wonder if Monika actually bought all of these for the club or if she made the club because she had so much literature."
         "Nothing really catches my eye on her shelf though."
         "There's a lot of popular book series on it, so I might look at those if I don't find anything else."
-        "Suprisingly, there's also manga on the shelf."
+        "Surprisingly, there's also manga on the shelf."
         "I didn't really take manga as something Monika would collect but I guess it counts as literature."
         "What should I choose though?"
         "I guess an even spread of manga and novels would do."
@@ -5859,7 +5859,7 @@ label ch13_exclusive_monika:
         hide monika
         "What was that?"
         "It was like she read my mind..."
-        "If I had known she would have taken offence to something like that I never would have thought about it in the first place."
+        "If I had known she would have taken offense to something like that I never would have thought about it in the first place."
         "Well, it's too late for that now..."
         "The only thing I can do is hope this doesn't ruin the preparations tonight."
         scene bg m_bedroom with wipeleft_scene
@@ -7041,7 +7041,7 @@ label ch13_exclusive_sayori:
     s 2bd "I'm sure I'll come up with something."
     s "In the meantime, what do you think about this piano I found for Monika?"
     "Sayori points towards her computer screen which has an image of a grand piano."
-    "It's hard to describe but the black colour almost makes it look majestic."
+    "It's hard to describe but the black color almost makes it look majestic."
     "As if anything played on it would sound amazing."
     "I can see why Sayori chose this piano. I'm sure Monika would look and sound great playing on it."
     "I scan the page until I notice the price tag."
@@ -7620,7 +7620,7 @@ label ch13_natsuki_outcome3_date:
     show dadsuki zorder 2 at t33
     "Asking Natsuki was hard enough already."
     "Did she do this just to see me make a fool out of myself?"
-    "And I don't think parents are meant to see the boy their daugher is going out with until they're official, right?"
+    "And I don't think parents are meant to see the boy their daugther is going out with until they're official, right?"
     mc "N-Nothing is the matter!"
     mc "I just want to make an announcement, that's all."
     show momsuki 1d zorder 3 at f32
@@ -7786,7 +7786,7 @@ label ch13_natsuki_outcomeshared_date:
     n 1bi "What?"
     n "How did you come up with this idea?"
     mc "I figured it's a pretty important thing in your life."
-    mc "It has a lot of sentinmental value, doesn't it?"
+    mc "It has a lot of sentimental value, doesn't it?"
     n 1bq "Well...yeah but..."
     n "How exactly are we going to do that?"
     mc "I was thinking we could hire someone to do it for us."
@@ -8472,7 +8472,7 @@ label ch13_natsukidate:
     "It's probably the same reaction I had when I first went here."
     "When someone told me of a place that made purely desserts, I thought to myself that I had to check it out."
     "Not only that, but the food is pretty filling too despite being dessert."
-    "The main problem for me is that it's so far away from where I live so it's incovenient for me to come here..."
+    "The main problem for me is that it's so far away from where I live so it's inconvenient for me to come here..."
     n 1bb "There's...so many choices."
     n "I've never seen such a big dessert menu before."
     n 2bc "I don't even know what to order."
@@ -8525,8 +8525,8 @@ label ch13_natsukidate:
     show natsuki 3ba
     "Natsuki smiles."
     mc "So you've decided your order?"
-    n 3bd "Yeah, it's number fifthteen on the menu."
-    mc "Number fifthteen? That's all?"
+    n 3bd "Yeah, it's number fifteen on the menu."
+    mc "Number fifteen? That's all?"
     n "It seems like a pretty big dessert."
     mc "Well, alright..."
     mc "I'll make the order then."
@@ -8534,11 +8534,11 @@ label ch13_natsukidate:
     "I take the menu from her and return to the counter."
     show natsuki at thide
     hide natsuki
-    mc "Hey, I'll have the cupcake special, ice cream wonder and number fifthteen."
-    "The person behind the counter looks at me strangely when I say number fifthteen."
+    mc "Hey, I'll have the cupcake special, ice cream wonder and number fifteen."
+    "The person behind the counter looks at me strangely when I say number fifteen."
     "It's like I said something completely wrong."
     "But it's what Natsuki ordered, isn't it?"
-    "What even is number fifthteen on the menu?"
+    "What even is number fifteen on the menu?"
     mc "How much is this going to cost?"
     "What Natsuki doesn't know is that this place makes you pay first."
     "So I'm paying for her, despite her protests."
@@ -8564,7 +8564,7 @@ label ch13_natsukidate:
     "I guess it's up to me."
     mc "So that guy was pretty strange, right?"
     mc "The one in the store."
-    n 2bk  "Yeah...not what I expected."
+    n 2bk "Yeah...not what I expected."
     mc "What did you expect?"
     n 2bs "I don't know...something normal, I guess?"
     mc "You wanted a normal date."
@@ -8738,8 +8738,8 @@ label ch13_natsukidate:
     "Natsuki takes another piece of her dessert."
     mc "What is that anyway?"
     mc "It looks pretty good."
-    n 2bc "It's number fifthteen, like I said."
-    mc "But what is number fifthteen?"
+    n 2bc "It's number fifteen, like I said."
+    mc "But what is number fifteen?"
     mc "You're just saying a number."
     n 2bk "That's what it's called."
     n "You should know more than me."
@@ -8794,7 +8794,7 @@ label ch13_natsukidate:
     "What's special about it is the actual cone."
     "The cone is made from some kind of dark chocolate but still has that familiar waffle cone taste."
     "It's basically just a really sweet ice cream."
-    "Meanwhile, Natsuki finished off her number fifthteen."
+    "Meanwhile, Natsuki finished off her number fifteen."
     "Whatever that is exactly..."
     mc "I guess that's it."
     mc "Shall we head back?"
@@ -8950,7 +8950,7 @@ label ch13_natsukidate:
     n 1bg "The train is arriving soon, I think."
     show natsuki zorder 2 at t21
     show mysteriousclerk 4c zorder 3 at f22
-    cl "The next one is in fifthteen minutes."
+    cl "The next one is in fifteen minutes."
     cl "Better move quickly, otherwise you have to wait an hour for the next one."
     show mysteriousclerk at thide
     hide mysteriousclerk
@@ -9533,7 +9533,7 @@ label ch13_natsukidate:
     mc "See you, Natsuki!"
     "I waved goodbye to Natsuki and started heading home."
     "I turned back several times and Natsuki was still waving at me."
-    "She was stll waving when she was finally out of sight."
+    "She was still waving when she was finally out of sight."
     "I'm so lucky to have her."
     scene bg bedroom with wipeleft_scene
     play music t2 fadeout 0.5
