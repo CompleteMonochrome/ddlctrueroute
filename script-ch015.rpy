@@ -5311,7 +5311,7 @@ label ch15_mall_shared:
     ay "And instead the president should have been--"
     show monika zorder 3 at f42
     show ayame zorder 2 at t43
-    if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+    if monika_type == 0 or monika_type == 1:
         m "Oops!"
         "Monika drops the book into the water."
         m "My hand slipped...I'm so sorry!"
@@ -5320,7 +5320,7 @@ label ch15_mall_shared:
         m "At least just the first couple of pages."
     show monika zorder 2 at t42
     show ayame zorder 3 at f43
-    if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+    if monika_type == 0 or monika_type == 1:
         ay "Well, that's quite unfortunate."
         ay "But it's okay."
     else:
@@ -5383,10 +5383,45 @@ label ch15_mall_shared:
         m "Beneath that quiet exterior, she's actually got a lot of depth to her."
         m "You wouldn't know just by looking at her but she's actually really into the more horrific aspects of life."
         m "And I can respect that."
-        
+        m "We've all got our own personal delights."
+        m "She was open enough to us to share that about her."
+        m "I know some people wouldn't be willing to share that type of information, even with some of their closest friends."
+        m "Of course, there's [player]."
+        m "[player] hasn't been with us since the beginning."
+        m "But it's like he's been here {i}since{/i} the beginning."
+        m "The beginning of everything important anyway."
     elif monika_type == 1:
-
+        m "The time in the club, for me at least, has been really enlightening."
+        m "From the start, I didn't really know what entirely was going on."
+        m "This time around, I mean."
+        m "But because of the club, I've learned all the things I've needed to."
+        m "Who I can trust."
+        m "What I need for the future."
+        m "What I need for success."
+        m "And what I still need to do to achieve that success."
+        m "I've learned so much about everyone."
+        m "From my prior knowledge and what I've gained from your choices."
+        m "It's been an immense help."
+        m "I especially want to thank [player]."
+        "Huh?"
+        "What did I do...?"
+        m "He hasn't been here since the club's inception."
+        m "But that hasn't made him any less valuable than anyone else."
+        m "In fact, it's thanks to him that I'm here."
+        m "I'm glad he joined at the beginning of everything important."
+        m "If he didn't, I don't know where I'd be right now."
     else:
-
+        m "I can't really say much about the club."
+        m "I can only assume it's been quite the place to be."
+        m "With all the events that have been happening..."
+        m "Who really knows what to think of the club right now?"
+        m "That's not to say it's a bad thing."
+        m "In fact, it's just the opposite."
+        m "Sure, there are and will continue to be difficult times."
+        m "But it's nothing I--"
+        m "{i}We{/i} can't get through."
+        
+    "I look at Monika, not quite understanding what she means."
+    "The beginning of everything important...?"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return

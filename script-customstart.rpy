@@ -75,6 +75,16 @@ label choose_start:
             stop music fadeout 1.0
             $ renpy.save_persistent()
             jump special_chapter
+        "Christmas Eve." if (currentdate <= (datetime.date(2018, 12, 23) + weekrange)) and persistent.arc_clear[0]:
+            s "Christmas Eve?"
+            s "Is it really that time already?"
+            s "I guess it's time to get our festivities up!"
+            $ christmas_chapter = True
+            $ quick_menu = True
+            $ s_name = "Sayori"
+            stop music fadeout 1.0
+            $ renpy.save_persistent()
+            jump christmas_chapter
 
     label custom_yuristart:
     s "Yuri's problem, eh?"
