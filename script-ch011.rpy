@@ -428,7 +428,7 @@ label ch11_main:
         y 1bm "We should start going there before more people arrive."
         y "That way, it can just be the two of us."
         mc "Sounds good to me."
-        scene bg marina with wipeleft_scene
+        scene bg marina_day with wipeleft_scene
         "Yuri and I arrive at the marina."
         "The walk from the entrance where we met up and the marina was a good distance."
         "No wonder I haven't been to the ocean part of it before."
@@ -594,7 +594,7 @@ label ch11_main:
         y "So..."
         mc "Right."
         "We walk back to the bench and take a seat."
-        scene bg marina with dissolve_cg
+        scene bg marina_day with dissolve_cg
         "We spend the rest of our time throwing food at the ducks."
         "It's quiet other than the quacks and water splashing."
         "Neither of us say a word after we take our seat."
@@ -748,7 +748,7 @@ label ch11_main:
         "I had no idea that the mall was near any sort of water."
         "How did I not notice these sort of things before now?"
         "I go through the doors and head to the outside of the mall."
-        scene bg marina with wipeleft_scene
+        scene bg marina_day with wipeleft_scene
         "I'm greeted by what seems to be some sort of harbor."
         "I never realized just how much I didn't know existed from one place."
         "I always just saw the mall as the place to go to for shopping for stuff I couldn't get at the local store..."

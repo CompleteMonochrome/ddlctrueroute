@@ -5169,7 +5169,7 @@ label ch15_mall_shared:
     show monika zorder 3 at f44
     m "That's right."
     m "Come on, follow me I know a shortcut."
-    scene bg pier_sunset with wipeleft_scene
+    scene bg marina_sunset with wipeleft_scene
     "Monika took us through this whole section of the mall I didn't even know existed."
     "It seemed to avoid a lot of the weird winding sections of the mall."
     "As a result, we got to the marina pretty quickly."
@@ -5420,7 +5420,9 @@ label ch15_mall_shared:
         m "Sure, there are and will continue to be difficult times."
         m "But it's nothing I--"
         m "{i}We{/i} can't get through."
-        
+        m "After all, I wouldn't be here if it wasn't for him."
+        m "Being here at the start of everything important..."
+        m "It's almost like fate."
     "I look at Monika, not quite understanding what she means."
     "The beginning of everything important...?"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))

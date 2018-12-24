@@ -570,6 +570,10 @@ label after_load:
         $ special_chapter = False
     if not hasattr(store, 'christmas_chapter'):
         $ christmas_chapter = False
+    if not hasattr(store, 'christmas_gifts'):
+        $ christmas_gifts = [0,0,0,0,0]
+    if not hasattr(store, 'christmas_approval'):
+        $ christmas_approval = 0
     if not hasattr(store, 'all_sayarc_poems_monika'):
         $ all_sayarc_poems_monika = False
     if not hasattr(store, 'monika_outfit'):
