@@ -40,6 +40,19 @@ image menu_bg:
     "gui/menu_bg.png"
     menu_bg_move
 
+image menu_bg_gray:
+    topleft
+    im.Grayscale("gui/menu_bg.png")
+    menu_bg_move
+
+image menu_bg_insta:
+    "gui/menu_bg.png"
+    menu_bg_move_insta
+
+image menu_bg_gray_insta:
+    im.Grayscale("gui/menu_bg.png")
+    menu_bg_move_insta
+
 image game_menu_bg:
     topleft
     "gui/menu_bg.png"
@@ -202,6 +215,14 @@ transform menu_bg_move:
         ypos 0
         time 0.65
         ease_cubic 2.5 ypos -500
+
+transform menu_bg_move_insta:
+    subpixel True
+    topleft
+    parallel:
+        xoffset 0 yoffset 0
+        linear 3.0 xoffset -100 yoffset -100
+        repeat
 
 transform menu_bg_loop:
     subpixel True

@@ -203,6 +203,9 @@ init -1 style window_monika is window:
 init -1 style window_flashback is window:
     background Image("mod_assets/gui/textbox_flashback.png", xalign=0.5, yalign=1.0)
 
+init -1 style window_christmas is window:
+    background Image("mod_assets/gui/textbox_christmas.png", xalign=0.5, yalign=1.0)
+
 init -1 style namebox:
     xpos gui.name_xpos
     xanchor gui.name_xalign
@@ -537,8 +540,11 @@ init -1 style navigation_button_text:
 
 
 
-
 init -501 screen main_menu() tag menu:
+    python:
+        import datetime
+        currentdate = datetime.date.today()
+        weekrange = datetime.timedelta(days = 7)
 
 
     style_prefix "main_menu"
@@ -548,7 +554,10 @@ init -501 screen main_menu() tag menu:
         add "menu_art_y_ghost"
         add "menu_art_n_ghost"
     else:
-        add "menu_bg"
+        if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2018, 12, 23) + weekrange))) and persistent.arc_clear[0]:
+            add "menu_bg_gray"
+        else:
+            add "menu_bg"
         add "menu_art_y"
         add "menu_art_n"
         frame
@@ -1598,6 +1607,53 @@ init -501 screen gender_input(message, male_action, female_action):
             textbutton _("Female") action female_action
 
 
+init -501 screen arc_choose_1():
+    python:
+        import datetime
+        currentdate = datetime.date.today()
+        weekrange = datetime.timedelta(days = 7)
+
+    default tt = Tooltip("")
+
+    if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2018, 12, 23) + weekrange))) and persistent.arc_clear[0]:
+        add "menu_bg_gray_insta" at show_hide_fade_bg
+    else:
+        add "menu_bg_insta" at show_hide_fade_bg
+
+
+    fixed at show_hide_fade:
+        xalign 0.5
+        yalign 0.5
+        
+        label _("Choose an arc to begin"):
+            text_style "game_menu_label_text"
+            xalign 0.5
+            yalign 0.0
+
+        grid 4 1:
+            xalign 0.5
+            yalign 0.7
+            spacing 60
+
+            imagebutton xsize 450 idle "gui/menu_art_m.png" hover "mod_assets/gui/menu_art_m_hover.png" action Return(0) hovered tt.Action("{color=#8ed73a}Festival Day{/color}\n{color=#ff0000}Warning: Your saves will be deleted upon proceeding.{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound at custom_start_zoom_1
+            imagebutton xsize 450 idle "gui/menu_art_y.png" hover "mod_assets/gui/menu_art_y_hover.png" action Return(1) hovered tt.Action("{color=#d88dee}Book of Despair{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound at custom_start_zoom_2
+            if persistent.arc_clear[0]:
+                imagebutton xsize 450 idle "gui/menu_art_n.png" hover "mod_assets/gui/menu_art_n_hover.png" action Return(2) hovered tt.Action("{color=#cf0f88}Second Chance{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound at custom_start_zoom_3
+            else:
+                imagebutton xsize 450 idle "mod_assets/gui/menu_art_n_locked.png" action NullAction() hovered tt.Action("This arc is locked") at custom_start_zoom_3
+            if persistent.arc_clear[1]:
+                imagebutton xsize 450 idle "gui/menu_art_s.png" hover "mod_assets/gui/menu_art_s_hover.png" action Return(3) hovered tt.Action("{color=#6ecbfa}Inauguration Day{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound at custom_start_zoom_4
+            else:
+                imagebutton xsize 450 idle "mod_assets/gui/menu_art_s_locked.png" action NullAction() hovered tt.Action("This arc is locked") at custom_start_zoom_4
+
+    fixed at show_hide_fade_after:
+        vbox:
+            xalign 0.5
+            yalign 0.99
+
+            text tt.value:
+                text_align 0.5
+
 
 init -1 style confirm_frame is gui_frame
 init -1 style confirm_prompt is gui_prompt
@@ -1708,6 +1764,53 @@ transform -1 notify_appear:
         linear .25 alpha 1.0
     on hide:
         linear .5 alpha 0.0
+
+transform -1 custom_start_zoom_1:
+    zoom 0.6
+    alpha 0
+    linear 0.8 alpha 1.0
+
+transform -1 custom_start_zoom_2:
+    zoom 0.6
+    alpha 0
+    0.4
+    linear 0.8 alpha 1.0
+
+transform -1 custom_start_zoom_3:
+    zoom 0.6
+    alpha 0
+    0.8
+    linear 0.8 alpha 1.0
+
+transform -1 custom_start_zoom_4:
+    zoom 0.6
+    alpha 0
+    1.2
+    linear 0.8 alpha 1.0
+
+transform -1 show_hide_fade_bg:
+    on show:
+        alpha .0
+        easein 1.0 alpha 1.0
+    on hide:
+        alpha 1.0
+        easeout 2.0 alpha .0
+
+transform -1 show_hide_fade:
+    on show:
+        alpha .0
+        linear 2.0 alpha 1.0
+    on hide:
+        alpha 1.0
+        linear 1.0 alpha .0
+
+transform -1 show_hide_fade_after:
+    alpha 0
+    1.6
+    linear 0.4 alpha 1.0
+    on hide:
+        alpha 1.0
+        linear 1.0 alpha .0
 
 
 init -1 style notify_frame is empty

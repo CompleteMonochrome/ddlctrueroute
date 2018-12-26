@@ -18,11 +18,14 @@ label choose_start:
     if persistent.player_female:
         call female_pronouns
 
-    scene black
-    with dissolve_scene_full
+    # Disable menu as player chooses arc
+    $ quick_menu = False
+    call screen arc_choose_1
+    $ custom_start_arc_choice = _return
+
+    scene black with Dissolve(2.5)
     play music mend
     $ s_name = "???"
-    $ quick_menu = False
     $ style.say_dialogue = style.normal
     $ allow_skipping = True
     $ config.allow_skipping = True
@@ -33,9 +36,7 @@ label choose_start:
     s "Do you suddenly get to decide when and where you start?"
     s "Wow..."
     s "This mod has it all, doesn't it?"
-    s "I just want you to know..."
-    s "...that if you decide to start from the festival then your saves will be deleted."
-    s "We have to sort out a few things first."
+    s "But we have to sort out a few things first."
     menu:
         s "Who did you spend the weekend with?"
         "Yuri.":
@@ -66,45 +67,64 @@ label choose_start:
         currentdate = datetime.date.today()
         weekrange = datetime.timedelta(days = 7)
 
-    menu:
-        s "Which part are you starting from? The options that show up are in the right order of events...I think..."
-        "Festival Day.":
-            s "I hope you realize that your saves will be deleted if you choose this."
-            s "So you should close the game, if you didn't want that..."
-            s "Last chance..."
-            s "Okay..."
-            $ quick_menu = True
-            $ s_name = "Sayori"
-            stop music fadeout 1.0
-            $ persistent.custom_starts_used += 1
-            $ renpy.save_persistent()
-            jump ch5_skip
-        "Yuri's problem.":
-            jump custom_yuristart
-        "Natsuki's problem." if persistent.arc_clear[0]:
-            jump custom_natstart
-        "Sayori's problem." if persistent.arc_clear[1]:
-            jump custom_saystart
-        "Special Day." if (currentdate <= (datetime.date(2018, 9, 22) + weekrange)) and persistent.arc_clear[0]:
-            s "What's this?"
-            s "What have you done?"
-            s "What are we in for...?"
-            $ special_chapter = True
-            $ quick_menu = True
-            $ s_name = "Sayori"
-            stop music fadeout 1.0
-            $ renpy.save_persistent()
-            jump special_chapter
-        "Christmas Eve." if (currentdate <= (datetime.date(2018, 12, 23) + weekrange)) and persistent.arc_clear[0]:
-            s "Christmas Eve?"
-            s "Is it really that time already?"
-            s "I guess it's time to get our festivities up!"
-            $ christmas_chapter = True
-            $ quick_menu = True
-            $ s_name = "Sayori"
-            stop music fadeout 1.0
-            $ renpy.save_persistent()
-            jump christmas_chapter
+    # Check Special or Christmas Days
+    if (currentdate <= (datetime.date(2018, 9, 22) + weekrange)) and persistent.arc_clear[0]:
+        s "I know you've already chosen where you want to start but..."
+        s "A new part in the game opened up, but only for a while."
+        s "There's something going on."
+        s "Do you know what that is?"
+        menu:
+            s "...Do you want to try this Special Day?"
+            "Start the Special Day.":
+                s "What are we in for...?"
+                $ special_chapter = True
+                $ quick_menu = True
+                $ s_name = "Sayori"
+                stop music fadeout 1.0
+                $ renpy.save_persistent()
+                jump special_chapter
+            "No.":
+                s "Oh, okay."
+                s "Then let's get to it."
+    elif (currentdate <= (datetime.date(2018, 12, 23) + weekrange)) and persistent.arc_clear[0]:
+        s "I know you've already chosen where you want to start but..."
+        s "A new part in the game opened up, but only for a while."
+        s "And it's the festive season, isn't it?"
+        s "I think there's going to be some celebrations if we check it out..."
+        s "...So do you want to see what it's all about?"
+        menu:
+            s "I think it's got to do with Christmas Eve."
+            "Celebrate Christmas Eve":
+                s "Let's see what's in store for us..."
+                $ christmas_chapter = True
+                $ quick_menu = True
+                $ s_name = "Sayori"
+                stop music fadeout 1.0
+                $ renpy.save_persistent()
+                jump christmas_chapter
+            "No.":
+                s "Oh, okay."
+                s "Then let's get to it."
+
+    s "Let's see what you're going to do..."
+    if custom_start_arc_choice == 0:
+        s "Oh."
+        s "I hope you realized that your saves will be deleted."
+        s "So you should close the game, if you didn't want that..."
+        s "Last chance..."
+        s "Okay..."
+        $ quick_menu = True
+        $ s_name = "Sayori"
+        stop music fadeout 1.0
+        $ persistent.custom_starts_used += 1
+        $ renpy.save_persistent()
+        jump ch5_skip
+    elif custom_start_arc_choice == 1:
+        jump custom_yuristart
+    elif custom_start_arc_choice == 2:
+        jump custom_natstart
+    elif custom_start_arc_choice == 3:
+        jump custom_saystart
 
     label custom_yuristart:
     s "Yuri's problem, eh?"

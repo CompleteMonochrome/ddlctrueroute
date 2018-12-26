@@ -7044,8 +7044,8 @@ label ch14_exclusive_monika:
         m 2bb "I feel nothing for you, [player]."
         m "Do you hear me?"
         m "The only person I care about is the one behind the screen."
-        "{cps=5}Behind...the...screen...?{/cps=5}"
-        "{cps=5}It's {i}you{/i}...isn't it?{/cps=5}{nw}"
+        "{cps=15}Behind...the...screen...?{/cps}"
+        "{cps=15}It's {i}you{/i}...isn't it?{/cps}{nw}"
         stop music fadeout 1.0
         scene black with close_eyes
         $ pause(3.0)

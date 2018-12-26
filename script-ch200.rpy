@@ -156,7 +156,7 @@ label ch200_main2:
         n "Seriously? You brought a boy?"
         n "Way to kill the atmosphere."
     else:
-        n "Seriously? Another girl?"
+        n "Oh...you brought another girl."
         n "I thought you wanted some diversity, Monika..."
     show monika 3m zorder 3 at f31
     m "Don't be mean, Natsuki..."

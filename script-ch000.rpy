@@ -208,7 +208,7 @@ label ch0_main:
         n "Seriously? You brought a boy?"
         n "Way to kill the atmosphere."
     else:
-        n "Seriously? Another girl?"
+        n "Oh...you brought another girl."
         n "I thought you wanted some diversity, Sayori..."
     show yuri zorder 2 at t33
     show natsuki zorder 2 at t32

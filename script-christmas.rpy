@@ -1,6 +1,5 @@
 label christmas_chapter:
-    $ monika_type = 1
-    $ ch12_markov_agree = True
+    # Alternate Reality?
     scene black
     $ s_name = "???"
     $ cl_name = "???"
@@ -12,13 +11,19 @@ label christmas_chapter:
     else:
         s "Are we going backwards?"
     s "Or...is it forward?"
+    scene bg random_gray with Dissolve(0.5)
+    $ style.say_window = style.window_flashback
     s "Do events like this even exist in our world?"
     s "I'm not really sure myself."
     s "I've lived enough years to know whether it should or shouldn't exist."
-    s "At least, to me I have."
+    s "At least, to me I have lived a long time."
+    s "That's what my memories are telling me anyway."
     s "To you, I could just be completely new."
+    s "Maybe I'm just a month old to you."
     s "But from my memories, I can't really give an answer."
-    s "Ours is based off of yours but..."
+    s "I just {i}know{/i} that I've been alive longer than you've known me."
+    s "Our world is based off of yours but..."
+    s "Hehe, never mind..."
     s "I shouldn't complain."
     s "This is good for us."
     s "It's nice to have a little rest, I guess."
@@ -48,10 +53,11 @@ label christmas_chapter:
             $ renpy.utter_restart()
     s "Thank you."
     s "I'm glad we're on the same page."
-    s "{cps=5}I really hope you know what you're doing...{/cps}{nw}"
+    s "{cps=15}I really hope you know what you're doing...{/cps}{nw}"
     stop music fadeout 1.5
     scene bg mall_day with Dissolve(1.5)
     play music t2 fadein 3.0
+    $ style.say_window = style.window_christmas
     "I'm completely useless here."
     "I don't know the girls well enough to get each of them the right gift!"
     "What am I going to do?"
@@ -65,7 +71,8 @@ label christmas_chapter:
     "But when it comes to other things, it feels like I just procrastinate until the last minute."
     "Now...back to shopping."
     "Maybe I should start with something easy."
-    "I know what Sayori would want out of a Christmas present."
+    "I think out of everyone..."
+    "I at least know what Sayori would want out of a Christmas present."
     "What did I get her last year?"
     "Maybe I can use that as some sort of base."
     "..."
@@ -100,12 +107,12 @@ label christmas_chapter:
     cl "Something like that."
     "Who is this guy...?"
     cl "I'm the owner of this fine establishment."
+    "Did I even say that out loud?"
+    "If not, why the hell did this guy just introduce himself like that all of a sudden?"
     cl "The executive officer of this humble abode."
     cl "The master of this venerable estate."
     cl "The--"
     mc "Alright, I get it."
-    "Did I even say that out loud?"
-    "If not, why the hell did this guy just introduce himself like that all of a sudden?"
     cl "Like I said, you pick up a few tricks."
     mc "..."
     cl "Anyway, what can I do for you?"
@@ -128,7 +135,10 @@ label christmas_chapter:
     mc "Look, I'm not sure how exactly you knew this much already."
     mc "But I really doubt you know enough about those girls to know what gift to get them."
     cl "Is that a test?"
-    cl "Good sir, are you challenging my knowledge?"
+    if player_gender == "boy":
+        cl "Good sir, are you challenging my knowledge?"
+    else:
+        cl "Madam, are you challenging my knowledge?"
     "I let out a quiet sigh."
     "I just want to get out of here."
     "This guy is seriously getting on my nerves."
@@ -206,7 +216,20 @@ label christmas_chapter:
     cl "Has a knife collection..."
     mc "What?!"
     cl "The gifts for her are right over here."
-    
+    cl "So come on!"
+    cl "Get a move on!"
+    cl "You don't have much time, let's go, let's go."
+    mc "Jeez, I'm going..."
+    mc "Can you at least tell me how you learned all of this information?"
+    mc "I know you said you picked up a few tricks but..."
+    mc "What the hell does that even mean?"
+    mc "There's no way you can just know everything about someone from looking at them."
+    cl "Who said I knew everything about you?"
+    cl "The mundane things about a person are not my specialty."
+    cl "I wouldn't care to learn those things about someone."
+    cl "Like your favorite color."
+    cl "Who even cares about that?"
+    cl ""
     $ persistent.did_christmas_event = True
     $ special_chapter = False
     $ pause(1.0)

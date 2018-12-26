@@ -73,7 +73,10 @@ label ch203_main:
         n 1q "I guess I really felt threatened or something."
         n 1h "But I know this is something we're doing together."
         n 1q "Another new member wouldn't hurt, as long as they're cool..."
-        n 5w "And I guess another girl would be nice this time..."
+        if player_gender == "boy":
+            n 5w "And I guess another girl would be nice this time..."
+        else:
+            n 5w "And we could always use another girl or even a boy..."
         n 5u "So..."
         show natsuki zorder 2 at t33
         show yuri zorder 3 at f32
@@ -193,7 +196,10 @@ label ch203_main:
         n 1q "I guess I really felt threatened or something."
         n 1h "But I know this is something we're doing together."
         n 1q "Another new member wouldn't hurt, as long as they're cool..."
-        n 5w "And I guess another girl would be nice this time..."
+        if player_gender == "boy":
+            n 5w "And I guess another girl would be nice this time..."
+        else:
+            n 5w "And we could always use another girl or even a boy..."
         n 5e "...But more importantly, I would hate to see the event suck just because I chose to back out!"
         n "I'm a pro, you know!"
         n 5c "So I'm gonna help too, and we'll make sure it's done right."
