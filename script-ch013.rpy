@@ -681,8 +681,8 @@ label ch13_main:
                 m "That was a pretty mean thing to say."
                 show monika zorder 2 at t31
                 show yuri 3pn zorder 3 at f33
-                y "Sayori, he didn't mean it."
-                y "I don't know what's come over him but..."
+                y "Sayori, [player_personal] didn't mean it."
+                y "I don't know what's come over [player_reflexive] but..."
                 "Yuri looks at me with a bewildered expression."
                 y "You didn't mean it, right?"
                 show yuri zorder 2 at t33
@@ -1047,7 +1047,7 @@ label ch13_end:
         mc "After I visited her at the hospital, it became pretty obvious that she was important to me."
         show yuri 2pu zorder 3 at f31
         y "Ah...I wasn't expecting you to say it so suddenly."
-        y "But he's right..."
+        y "But [player_personal]'s right..."
         show yuri zorder 2 at t31
         show sayori 2d zorder 3 at f32
         s "Well, you should think about what's right for the club."
@@ -1075,7 +1075,7 @@ label ch13_end:
         show sayori 2a zorder 3 at f32
         s "That's not true..."
         s "All of us need some help but we can also all do it by ourselves."
-        s 2d "It's just up to [player] to decide who he really thinks could use his help for Inauguration Day."
+        s 2d "It's just up to [player] to decide who [player_personal] really thinks could use [player_possessive] help for Inauguration Day."
         show sayori zorder 2 at t32
         mc "Alright..."
     if monika_type == 0:
@@ -1094,7 +1094,7 @@ label ch13_end:
         m "Hmm..."
         m "Maybe [player] could help me."
         m 3b "If I'm going to play the piano on the day, I could use an audience to practice to."
-        m "He could also help with choosing the pieces I could play."
+        m "[cPlayer_personal] could also help with choosing the pieces I could play."
         m "Ahaha, it could be fun."
         m 3e "However, I'm not going to force you."
         m "You should go because you think I need the help not because you want to hang out with me..."
@@ -1102,9 +1102,9 @@ label ch13_end:
     else:
         show monika 3a zorder 3 at f33
         m "[player] could be useful helping me."
-        m "There might be some pieces he wants to hear on the day that I could play for him."
+        m "There might be some pieces [player_personal] wants to hear on the day that I could play for [player_reflexive]."
         m 3b "It also helps if I practice in front of an audience so I can get some instant feedback after I play."
-        m 1c "But it's up to him, of course."
+        m 1c "But it's up to [player_reflexive], of course."
     show sayori 1l zorder 3 at f32
     show monika zorder 2 at t33
     s "You know it kinda sounds like everyone is trying to convince you to help them."
@@ -1628,18 +1628,18 @@ label ch13_end_natsuki:
     if visited_yuri_hospital:
         y 3ps "Well, it's not a big deal."
         y "I just wanted to spend the preparation time with [player]."
-        y "I understand he can make his own decisions..."
+        y "I understand [player_personal] can make [player_possessive] own decisions..."
         y "So I'm not really that upset."
-        y 3pu "I know he only wants what's best for the club after all."
+        y 3pu "I know [player_personal] only wants what's best for the club after all."
         y "And..."
         show yuri 3pa
         "Yuri looks at me."
-        y "I trust he knows what he's doing."
+        y "I trust [player_personal] knows what [player_personal]'s doing."
     else:
         y 3pq "I-It's really nothing..."
         y "Just forget I even said anything."
-        y 3pv "Besides, he made the choice on his own."
-        y "It's not like I can change his mind anyway..."
+        y 3pv "Besides, [player_personal] made the choice on [player_possessive] own."
+        y "It's not like I can change [player_possessive] mind anyway..."
         y "Um..."
         y 3pn "Did I say that out loud...?"
         y 3pq "D-Don't mind me."
@@ -1667,7 +1667,7 @@ label ch13_end_yuri:
     show yuri zorder 2 at t31
     show sayori 1q zorder 3 at f32
     s "Ehehe, Yuri you need to calm down a little!"
-    s "I really think he just knows you need the most help."
+    s "I really think [player_personal] just knows you need the most help."
     s "Besides, it's everyone's responsibility to make sure that this event ends up amazing!"
     show sayori zorder 2 at t32
     mc "Sayori is right."
@@ -1990,8 +1990,8 @@ label ch13_exclusive_natsuki:
         d 1k "What are you--"
         show momsuki 1c zorder 3 at f21
         show dadsuki zorder 2 at t22
-        mo "He's come to work with Natsuki."
-        mo "I've already invited him inside."
+        mo "[cPlayer_personal]'s come to work with Natsuki."
+        mo "I've already invited [player_reflexive] inside."
         mo "I think it's best if we give them some space, wouldn't you agree?"
         show momsuki zorder 2 at t21
         show dadsuki 1n zorder 3 at f22
@@ -2438,8 +2438,11 @@ label ch13_exclusive_natsuki:
             mc "I'm sure."
             mc "Don't worry about me."
             show momsuki 1g zorder 3 at f22
-            mo "What a fine young man."
-            mo 1f "Seems like boyfriend material, Natsuki."
+            mo "What a fine young [player_other]."
+            if player_gender == "boy":
+                mo 1f "Seems like boyfriend material, Natsuki."
+            else:
+                mo 1f "I can see why you're so interested in her."
             show natsuki 1bp zorder 3 at f21
             show momsuki zorder 2 at t22
             n "Mom...!"
@@ -2812,10 +2815,10 @@ label ch13_exclusive_natsuki:
             show dadsuki 1i zorder 3 at f31
             show natsuki zorder 2 at t32
             show momsuki zorder 2 at t33
-            d "Is he gone already?"
+            d "Is [player_personal] gone already?"
             show dadsuki zorder 2 at t31
             show momsuki 1g zorder 3 at f33
-            mo "No, he's still here dear."
+            mo "No, [player_personal]'s still here dear."
             mo "And yes, [player], assignments."
             mo 1f "You know those things you get from school?"
             mo "Natsuki has already done hers."
@@ -3338,7 +3341,7 @@ label ch13_exclusive_natsuki:
         mc "It's a secret, isn't it?"
         show momsuki 1c zorder 3 at f22
         mo "I think [player] is right, Natsuki."
-        mo "He might be better off going home and doing his assignments."
+        mo "[cPlayer_personal] might be better off going home and doing [player_possessive] assignments."
         mo "You still have those, right?"
         show momsuki zorder 2 at t22
         mc "Um...yeah."
@@ -4067,7 +4070,7 @@ label ch13_exclusive_natsuki:
             n "Soooo, dad."
             n "Can you put the supplies in the kitchen?"
             n 2bj "I need to speak to [player] for a little bit."
-            n "Don't worry I'll answer his question."
+            n "Don't worry I'll answer [player_possessive] question."
             show dadsuki 1j zorder 3 at f21
             show natsuki zorder 2 at t22
             d "O-Oh..."
@@ -5665,7 +5668,7 @@ label ch13_exclusive_monika:
         m "Not to mention that she wiped your memory of it, removing almost all my influence in this world."
         m 3a "{i}Almost{/i}..."
         mc "W-What are you talking about?"
-        m 3b "[player] had a copy hidden somewhere, while I still had him under my influence."
+        m 3b "[player] had a copy hidden somewhere, while I still had [player_reflexive] under my influence."
         m "It was quite difficult to find, but not impossible..."
         m 3n "After all, they give off a familiar type of...radiation I guess is the best way to describe it."
         mc "M-Monika, I have no clue what you're talking about."
@@ -5734,7 +5737,7 @@ label ch13_exclusive_monika:
         m 1d "I think it's got something to do with being the president, and all the power you get from it."
         m "What matters is that we still have this one copy of the book available to us."
         m 1e "Two would be better, but one is enough."
-        m "Once he reads the book, I'll have a way to get through Sayori."
+        m "Once [player_personal] reads the book, I'll have a way to get through Sayori."
         m 2a "I can't be certain but I think she's going to end it after Inauguration Day."
         m "Since everyone will have their 'happy' ending."
         m 4l "Pathetic."
@@ -5985,8 +5988,8 @@ label ch13_exclusive_monika:
             m 1a "The plan is simple."
             m "Just get [player] to read it again."
             m "Ahaha, wait a second..."
-            m 1b "It's not like you'll actually get a choice on whether or not he does that."
-            m "Because he {i}will{/i} be doing that, no matter what."
+            m 1b "It's not like you'll actually get a choice on whether or not [player_personal] does that."
+            m "Because [player_personal] {i}will{/i} be doing that, no matter what."
             m "After [player] reads the book, I'll have a way to get past Sayori."
             m 2m "I'm not certain it will work yet but it's really my only option."
             m "After the day, I'm sure Sayori is going to end this whole 'helping' everyone thing and I'll lose my chance."
@@ -7320,7 +7323,7 @@ label ch13_natsuki_outcome1_date:
     scene bg n_livingroom with wipeleft_scene
     "We go downstairs to look for Natsuki's dad."
     "We find him sitting down on the couch with his head down and hands on his head."
-    "He looks like he's deep in though or something."
+    "He looks like he's deep in thought or something."
     show natsuki 1bc zorder 2 at t21
     n "Are you okay?"
     show dadsuki 1j zorder 3 at hf22
@@ -7336,7 +7339,7 @@ label ch13_natsuki_outcome1_date:
     n "[player] has something to tell you."
     show natsuki zorder 2 at t21
     show dadsuki 1i zorder 3 at f22
-    d "He does?"
+    d "[cPlayer_personal] does?"
     "Yasuhiro turns towards me."
     d "What would that be?"
     show dadsuki zorder 2 at t22
@@ -7353,11 +7356,11 @@ label ch13_natsuki_outcome1_date:
     d 1h "Tell me!"
     show natsuki 2bf zorder 3 at f21
     show dadsuki zorder 2 at t22
-    n "Dad, let go of him!"
+    n "Dad, let go of [player_reflexive]!"
     "Natsuki forcefully takes her dad's hands off me."
     "It feels like there's a lot of tension between the two of them."
     n 2be "I'm fine!"
-    n "Just listen to what he has to say, okay?"
+    n "Just listen to what [player_personal] has to say, okay?"
     show natsuki zorder 2 at t21
     show dadsuki 1k zorder 3 at f22
     d "Sorry..."
@@ -7410,11 +7413,11 @@ label ch13_natsuki_outcome1_date:
     show natsuki 1bh zorder 3 at f21
     show dadsuki zorder 2 at t22
     n "Not really..."
-    n "But if you do then there must be something you have against him."
+    n "But if you do then there must be something you have against [player_reflexive]."
     n 1bf "So what is it?"
-    n "He's always been there for me, you know."
+    n "[cPlayer_personal]'s always been there for me, you know."
     n "More than you have been..."
-    n 1bi "I trust him, okay?"
+    n 1bi "I trust [player_reflexive], okay?"
     show natsuki zorder 2 at t21
     mc "Yasuhiro, there's no way I'd ever hurt Natsuki."
     mc "You know that."
@@ -7602,7 +7605,7 @@ label ch13_natsuki_outcome3_date:
     "Haruki and Yasuhiro immediately stop what they're doing and head over to where we're standing."
     "They seem a lot more intimidating now for some reason..."
     show momsuki zorder 3 at f32
-    mo "He does?"
+    mo "[cPlayer_personal] does?"
     "Haruki looks at me curiously."
     mo "And what would that be?"
     show momsuki zorder 2 at t32
@@ -7620,7 +7623,11 @@ label ch13_natsuki_outcome3_date:
     show dadsuki zorder 2 at t33
     "Asking Natsuki was hard enough already."
     "Did she do this just to see me make a fool out of myself?"
-    "And I don't think parents are meant to see the boy their daugther is going out with until they're official, right?"
+    if player_gender == "boy":
+        "And I don't think parents are meant to see the boy their daughter is going out with until they're official, right?"
+    else:
+        "Would her parents even approve of this kind of relationship?"
+        "We're not even official yet..."
     mc "N-Nothing is the matter!"
     mc "I just want to make an announcement, that's all."
     show momsuki 1d zorder 3 at f32
@@ -7667,27 +7674,29 @@ label ch13_natsuki_outcome3_date:
     mo "A-Are you serious?"
     show natsuki 2bd zorder 3 at f31
     show momsuki zorder 2 at t32
-    n "Mom, he's completely serious."
+    n "Mom, [player_personal]'s completely serious."
     n "And I accepted."
     show natsuki zorder 2 at t31
     show momsuki 1g zorder 3 at f32
     mo "Now, just wait a second."
-    mo "[player] seems like a nice guy and everything but..."
+    mo "[player] seems like a nice [player_casual] and everything but..."
     "She looks at me from top to bottom."
     mo 1h "Natsuki, are you completely sure about this?"
     mo "You're not just messing with me, right?"
+    if player_gender == "girl":
+        mo "I-I mean, I didn't even know you liked girls."
     mo 1g "I only just got back...I don't think my heart is ready for one of your pranks yet."
     show natsuki 2bc zorder 3 at f31
     show momsuki zorder 2 at t32
     n "It's not a prank or anything like that!"
-    n "He asked me if I wanted to go on a date with him and I said yes."
+    n "[cPlayer_personal] asked me if I wanted to go on a date with [player_reflexive] and I said yes."
     n "That's all there is to it."
-    n 1bd "And I know he isn't much but it's fine!"
+    n 1bd "And I know [player_personal] isn't much but it's fine!"
     show natsuki zorder 2 at t31
     show dadsuki 1i zorder 3 at f33
     d "I'm not against [player] going with our daughter."
-    d "He and the others in that club of theirs took better care of Natsuki than I did."
-    d "I think he's got what it takes to make our daughter happy, Haruki."
+    d "[cPlayer_personal] and the others in that club of theirs took better care of Natsuki than I did."
+    d "I think [player_personal]'s got what it takes to make our daughter happy, Haruki."
     show momsuki 1h zorder 3 at f32
     show dadsuki zorder 2 at t33
     mo "It's just so sudden!"
@@ -7726,8 +7735,8 @@ label ch13_natsuki_outcome3_date:
     show dadsuki zorder 2 at t33
     mc "Actually--"
     show natsuki 1bb zorder 3 at f31
-    n "Of course he does!"
-    n "He has this whole trip planned out for the city!"
+    n "Of course [player_personal] does!"
+    n "[cPlayer_personal] has this whole trip planned out for the city!"
     n 1bj "We're just going to get some things and then head off."
     n "Thank you mom and dad!"
     show natsuki zorder 2 at t31
@@ -8202,7 +8211,7 @@ label ch13_natsukidate:
     cl "In the bag, it must be!"
     "The clerk tries to pulls the bag from me."
     "I resist and take it back."
-    cl 4g "What's the matter boy?"
+    cl 4g "What's the matter [player_gender]?"
     cl "Don't you want it fixed?"
     show mysteriousclerk zorder 2 at t22
     mc "Well, yeah but--"
@@ -8254,7 +8263,7 @@ label ch13_natsukidate:
     mc "Don't those belong to people?"
     mc "Why do you still have them?"
     show mysteriousclerk 1f zorder 3 at f22
-    cl "Oh no, young man."
+    cl "Oh no, young [player_other]."
     cl "These are ones I've done in my spare time."
     cl 1b "All the ones people send me are already back in their homes..."
     cl "...or wherever it is they keep them."
@@ -8293,8 +8302,9 @@ label ch13_natsukidate:
     cl 1f "It's a long story, just get going already!"
     "The clerk takes the bag and unzips it."
     "He pulls out the portrait and stares it."
-    cl 1e "I see..."
-    cl "I'll get this done before you come back, I promise you this."
+    cl 1e "I see...you really did a number on this, didn't you?"
+    cl "It's quite horrifying actually."
+    cl "But I'll get this done before you come back, I promise you this."
     "He takes one of the glasses on the table and puts it on."
     cl "Let's see..."
     show mysteriousclerk zorder 2 at thide
@@ -8324,7 +8334,7 @@ label ch13_natsukidate:
     "Natsuki exits the building and pulls out her phone."
     "Just as I'm about to leave, I feel a hand on my shoulder."
     show mysteriousclerk 1e zorder 2 at t11
-    cl "Young man."
+    cl "Young [player_other]."
     cl "Before you go..."
     mc "I didn't even see or hear you leave where you were sitting."
     mc "How did--"
@@ -8877,7 +8887,7 @@ label ch13_natsukidate:
     mc "You can charge based on mood?"
     mc "Is that even legal?"
     show mysteriousclerk 1i zorder 3 at f22
-    cl "My boy!"
+    cl "My [player_gender]!"
     cl "In this world of infinite choices, everything is legal!"
     cl 1f "For example!"
     cl "I could hold you at gunpoint and no one could stop me!"

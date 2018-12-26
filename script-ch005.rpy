@@ -283,7 +283,7 @@ label ch5_main:
     "I can't believe I ended up doing this after all."
     "Waking her up in her own house..."
     if sayori_confess:
-        "That really is something that a boyfriend would do, isn't it?"
+        "That really is something that a [player_gender]friend would do, isn't it?"
     else:
         "Isn't that more like something a boyfriend would do?"
     "In any case..."

@@ -6,6 +6,12 @@ label ch0_main:
         except: pass
         try: os.remove(config.basedir + "/game/script-saturday.rtf")
         except: pass
+        try: os.remove(config.basedir + "/characters/yasuhiro.chr")
+        except: pass
+        try: os.remove(config.basedir + "/characters/haruki.chr")
+        except: pass
+        try: os.remove(config.basedir + "/characters/ayame.chr")
+        except: pass
     $ m_name = '???'
     stop music fadeout 2.0
     scene black
@@ -198,8 +204,12 @@ label ch0_main:
     y "Sayori always says nice things about you."
     show yuri zorder 2 at t22
     show natsuki 4c zorder 2 at t21
-    n "Seriously? You brought a boy?"
-    n "Way to kill the atmosphere."
+    if player_gender == "boy":
+        n "Seriously? You brought a boy?"
+        n "Way to kill the atmosphere."
+    else:
+        n "Seriously? Another girl?"
+        n "I thought you wanted some diversity, Sayori..."
     show yuri zorder 2 at t33
     show natsuki zorder 2 at t32
     show monika 1k zorder 2 at t31

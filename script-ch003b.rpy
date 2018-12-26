@@ -182,11 +182,11 @@ label ch3_mainc_name:
     "Sayori's room is as messy as it's always been."
     mc "Listen Sayori, I know about your problem."
     "Sayori looks at Monika and forces out a smile."
-    s 1bk "You told him?"
+    s 1bk "You told [player_reflexive]?"
     show sayori zorder 2 at t21
     show monika 1be zorder 3 at f22
-    m "Of course I did. You mean a lot to him."
-    m "It wouldn't be fair to him if he didn't know."
+    m "Of course I did. You mean a lot to [player_reflexive]."
+    m "It wouldn't be fair to [player_reflexive] if [player_personal] didn't know."
     "Sayori tries to find something to stare at."
     "Everything about her is so uncharacteristic."
     show sayori zorder 2 at t21
@@ -730,9 +730,9 @@ label ch3_maine_name:
     m 1e "Ahaha...the game didn't like that, did it?"
     m 1b "I should probably stop messing with that 'you' in the game."
     m "Though it is quite amusing."
-    m "I don't really know how he'll react if I let him be."
+    m "I don't really know how [player_personal]'ll react if I let [player_reflexive] be."
     m 1a "It might be really bad."
-    m "Maybe I'll just mute him."
+    m "Maybe I'll just mute [player_reflexive]."
     m "Anyway..."
     m 1e "I didn't think the game would glitch out so bad that my house wouldn't load."
     m 4a "Let's go to someplace more familiar place instead."

@@ -24,6 +24,10 @@ label start:
     $ allow_skipping = True
     $ config.allow_skipping = True
 
+    # Check player gender after input
+    if persistent.player_female:
+        call female_pronouns
+
     if persistent.playthrough == 0:
         $ chapter = 0
         call ch0_main

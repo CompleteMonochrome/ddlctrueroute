@@ -164,10 +164,10 @@ label ch14_main:
     s "That's hardly possible now."
     s 1c "[player] is thinking for himself."
     s "Well...to a degree."
-    s "You still get to make his choices."
-    s "What he says and how he acts for the most part isn't up to you."
-    s "I'm sure he wouldn't do anything to mess everything up."
-    s 1h "If he did, then that would fall entirely to you, wouldn't it?"
+    s "You still get to make [player_possessive] choices."
+    s "What [player_personal] says and how [player_personal] acts for the most part isn't up to you."
+    s "I'm sure [player_personal] wouldn't do anything to mess everything up."
+    s 1h "If [player_personal] did, then that would fall entirely to you, wouldn't it?"
     s "Because you're the only thing I can't really account for when I make these days."
     s 1i "If something goes wrong, then I know who I'm going to be looking for."
     s "But it's not like I can really stop you."
@@ -325,7 +325,7 @@ label ch14_main:
     s "I don't know anymore."
     mc "Maybe it isn't."
     if sayori_confess and not sayori_dumped:
-        mc "But if it's something I should know about, as your boyfriend..."
+        mc "But if it's something I should know about, as your [player_gender]friend..."
     else:
         mc "But as your best friend, you can tell me anything..."
     show sayori 1t
@@ -657,7 +657,7 @@ label ch14_main:
     show sayori 1d zorder 3 at f44
     if ch13_name == "Sayori":
         s "I have help already."
-        s "[player] chose to help me, didn't he?"
+        s "[player] chose to help me, didn't [player_personal]?"
     else:
         s "It's fine..."
         s "I work fast when I need to."
@@ -981,7 +981,7 @@ label ch14_end:
     y 2pf "It's about someone who got hired as a security guard at a local restaurant."
     y "But it's during the night when things get weird."
     y "The mascots of the restaurant come to life and start roaming around the restaurant."
-    y "The security guard kinda has to deal with it and as he gets throught the nights, some ulterior story is told."
+    y "The security guard kinda has to deal with it and as he gets through the nights, some ulterior story is told."
     y 2pq "When I say involved, I mean there's some parts that might need to be changed."
     show natsuki 2t zorder 3 at f41
     show yuri zorder 2 at t43
@@ -1365,15 +1365,23 @@ label ch14_end:
         n "Look, Monika."
         n 2g "Have you thought about how [player] feels about all of this?"
         if ch13_name == "Monika":
-            n "Did you even talk to him about this?"
-        n "I mean, he's the only guy here so how do you think he feels about having to..."
+            n "Did you even talk to [player_reflexive] about this?"
+        if player_gender == "boy":
+            n "I mean, he's the only guy here so how do you think he feels about having to..."
+        else:
+            n "I mean, she's the newest member here and with how she acts it's pretty obvious that..."
         n 2s "Y-You know..."
         show natsuki zorder 2 at t41
         show yuri 2pr zorder 3 at f43
         y "I agree with Natsuki here."
         y "We should consider how [player] feels about all of this."
-        y 2pq "He's going to have to play the role of the person who has to do...that thing."
-        y "N-Not that I'm entirely opposed to him doing that, of course."
+        y 2pq "[cPlayer_personal]'s going to have to play the role of the person who has to do...that thing."
+        if player_gender == "girl":
+            y "Because, let's be honest..."
+            y "She's the most masculine out of all of us."
+            "Was that meant to be an insult or a compliment...?"
+            y "And she's already done the lumberjack role and that other male shinobi role from before..."
+        y "N-Not that I'm entirely opposed to [player_reflexive] doing that, of course."
         y "I-It's just..."
         show yuri zorder 2 at t43
         "Are they actually arguing because I'm going to have to kiss one of them if we choose Monika's books?"
@@ -1383,8 +1391,13 @@ label ch14_end:
         mc "If it's for the play...then I'll do it."
         show monika 4l zorder 3 at f44
         m "Now hold on a second..."
-        m "The two people who have to kiss don't have to be a guy and a girl, you know!"
-        m 4a "One of the novels even has two female lead characters that play the role."
+        if player_gender == "boy":
+            m "The two people who have to kiss don't have to be a guy and a girl, you know!"
+            m 4a "One of the novels even has two female lead characters that play the role."
+        else:
+            m "I don't want to force you into anything, [player]!"
+            m 4a "Though it's not like I wouldn't mind--"
+            m 4e "Ah...!"
         "Everyone looks at Monika in disbelief."
         m 4b "I'm not saying that we {i}should{/i} be doing that!"
         m "I'm just saying that there's equal opportunity and [player] doesn't have to be the one to do everything."
@@ -1448,8 +1461,8 @@ label ch14_end:
         m 1a "Anyway, the fourth and final book is probably my favorite one out of all of them."
         "Monika takes the fourth book from the desk and holds it high for everyone to see."
         m 1e "It's probably the book that's closest to my heart, which is fitting given it's name."
-        m "It's called 'Sound of your Heartbeat' and it centers around a girl who comes to a realisation about life."
-        m 1f "Even though she's surrounded by a lot of friends, she starts to despise life because of the realisation."
+        m "It's called 'Sound of your Heartbeat' and it centers around a girl who comes to a realization about life."
+        m 1f "Even though she's surrounded by a lot of friends, she starts to despise life because of the realization."
         m "It becomes really difficult for her to do anything until this one guy comes along and changes her life."
         m 1e "Over the course of a week, they become great friends but they figure out that it's almost as if the world is keeping them apart."
         m "They have to figure out a way to be together to reach their happy ending against all the odds."
@@ -1516,15 +1529,23 @@ label ch14_end:
         n "Look, Monika."
         n 2g "Have you thought about how [player] feels about all of this?"
         if ch13_name == "Monika":
-            n "Did you even talk to him about this?"
-        n "I mean, he's the only guy here so how do you think he feels about having to..."
+            n "Did you even talk to [player_reflexive] about this?"
+        if player_gender == "boy":
+            n "I mean, he's the only guy here so how do you think he feels about having to..."
+        else:
+            n "I mean, she's the newest member here and with how she acts it's pretty obvious that..."
         n 2s "Y-You know..."
         show natsuki zorder 2 at t41
         show yuri 2pr zorder 3 at f43
         y "I agree with Natsuki here."
         y "We should consider how [player] feels about all of this."
-        y 2pq "He's going to have to play the role of the person who has to do...that thing."
-        y "N-Not that I'm entirely opposed to him doing that, of course."
+        y 2pq "[cPlayer_personal]'s going to have to play the role of the person who has to do...that thing."
+        if player_gender == "girl":
+            y "Because, let's be honest..."
+            y "She's the most masculine out of all of us."
+            "Was that meant to be an insult or a compliment...?"
+            y "And she's already done the lumberjack role and that other male shinobi role from before..."
+        y "N-Not that I'm entirely opposed to [player_reflexive] doing that, of course."
         y "I-It's just..."
         show yuri zorder 2 at t43
         "Are they actually arguing because I'm going to have to kiss one of them if we choose Monika's books?"
@@ -1534,8 +1555,13 @@ label ch14_end:
         mc "If it's for the play...then I'll do it."
         show monika 4l zorder 3 at f44
         m "Now hold on a second..."
-        m "The two people who have to kiss don't have to be a guy and a girl, you know!"
-        m 4a "One of the novels even has two female lead characters that play the role."
+        if player_gender == "boy":
+            m "The two people who have to kiss don't have to be a guy and a girl, you know!"
+            m 4a "One of the novels even has two female lead characters that play the role."
+        else:
+            m "I don't want to force you into anything, [player]!"
+            m 4a "Though it's not like I wouldn't mind--"
+            m 4e "Ah...!"
         "Everyone looks at Monika in disbelief."
         m 4b "I'm not saying that we {i}should{/i} be doing that!"
         m "I'm just saying that there's equal opportunity and [player] doesn't have to be the one to do everything."
@@ -1649,11 +1675,11 @@ label ch14_end:
         show monika zorder 2 at t44
         n "Since when were you into horror?"
         n "The last book I saw you reading before [player] joined the club was some cheesy romance book!"
-        n "Don't tell me he got you into horror books?"
+        n "Don't tell me [player_personal] got you into horror books?"
         show natsuki zorder 2 at t41
         show monika 2f zorder 3 at f44
         m "There's nothing wrong with that, is there?"
-        m 2a "But no, he didn't get me into horror books."
+        m 2a "But no, [player_personal] didn't get me into horror books."
         m "I was into this long before everything else."
         m "I'm just sharing it now, because it's appropriate for what we're doing."
         show sayori 1o zorder 3 at f42
@@ -2447,9 +2473,9 @@ label ch14_end:
             show sayori zorder 2 at t42
             show yuri 2pq zorder 3 at f43
             y "I didn't force [player] to choose it or anything, Sayori."
-            y "He chose it of his own volition."
-            y "He didn't have to bring it to share either."
-            y "I think we should just let him talk."
+            y "[cPlayer_personal] chose it of [player_possessive] own volition."
+            y "[cPlayer_personal] didn't have to bring it to share either."
+            y "I think we should just let [player_reflexive] talk."
             show sayori 1c zorder 3 at f42
             show yuri zorder 2 at t43
             s "Alright, Yuri."
@@ -2469,7 +2495,7 @@ label ch14_end:
             y "I'd like to say that at some point it begins to merge the two perspectives."
             y "So it isn't too confusing."
             y 3pc "It's a really appropriate choice for the play."
-            y "But I suppose I'm a little bit bias since I'm the one who gave the book to him."
+            y "But I suppose I'm a little bit bias since I'm the one who gave the book to [player_reflexive]."
             show yuri zorder 2 at t43
             mc "Ah...yeah."
             mc "I was going to mention that but I thought it would have been too much of a spoiler."
@@ -3344,8 +3370,8 @@ label ch14_end:
                 show yuri 1a zorder 3 at f43
                 y "I'm sure."
                 y "[player] may not have chosen the book I really want to do."
-                y "But it's clearly special to him if he's so intent on it."
-                y "I want to give him something back after all he's done for me."
+                y "But it's clearly special to [player_reflexive] if [player_personal]'s so intent on it."
+                y "I want to give [player_reflexive] something back after all [player_personal]'s done for me."
                 show yuri zorder 2 at t43
                 mc "Yuri, you don't need to do this."
                 mc "It's entirely your choice."
@@ -3411,9 +3437,9 @@ label ch14_end:
                 show natsuki 1i zorder 3 at f41
                 show sayori zorder 2 at t42
                 n "I've already made up my mind, Sayori."
-                n "It's not just because of his choice, there's other reasons."
+                n "It's not just because of [player_possessive] choice, there's other reasons."
                 n 1q "Other reasons that have made me...smile, okay?"
-                n "So it's like I owe him."
+                n "So it's like I owe [player_reflexive]."
                 show natsuki zorder 2 at t41
                 mc "You don't owe me anything."
                 mc "If you don't want to go with my choice..."
@@ -3497,9 +3523,9 @@ label ch14_end:
                 n "Just think about it carefully."
                 show natsuki zorder 2 at t41
                 show sayori 2l zorder 3 at f42
-                s "Ehehe, I think you're putting a bit too much pressure on him."
-                s "Just let him decide for himself."
-                s "He did volunteer after all."
+                s "Ehehe, I think you're putting a bit too much pressure on [player_reflexive]."
+                s "Just let [player_reflexive] decide for himself."
+                s "[cPlayer_personal] did volunteer after all."
                 show sayori zorder 2 at t42
                 mc "Let me think..."
                 "I should be considerate of all the choices here."
@@ -3605,7 +3631,7 @@ label ch14_end:
                         show monika zorder 2 at t44
                         s "You know, something about the way you said that kinda creeps me out."
                         s "Ehehe, I guess it has something to do with the book you chose."
-                        s 1a "But [player] must like your book, he did choose it after all."
+                        s 1a "But [player] must like your book, [player_personal] did choose it after all."
                         show sayori zorder 2 at t42
                         mc "I think Monika's book could be really good."
                         mc "I guess you could say it's a feeling."
@@ -5494,7 +5520,7 @@ label ch14_exclusive_natsuki:
             mc "As her father, you need to know what it is."
             d 1j "What is it?"
             "I look back and the sheet is on top of the easel."
-            "Natsuki looks at me curiously, signalling me to bring him over."
+            "Natsuki looks at me curiously, signaling me to bring him over."
             "She hides in the corridor."
             mc "I think it's better if I just show you."
             "I step aside and let him through."
@@ -5531,11 +5557,11 @@ label ch14_exclusive_natsuki:
             n 1bi "Just let me finish, okay?"
             n "[player] had an idea."
             n "It was sort of a present to me, but also towards you."
-            n "He knew..."
+            n "[cPlayer_personal] knew..."
             n 1bs "...that things between the two of us would never be the same."
             n "I think we both did."
-            n 1bh "But he wanted to help."
-            n "He wanted to try to make things how they were."
+            n 1bh "But [player_personal] wanted to help."
+            n "[cPlayer_personal] wanted to try to make things how they were."
             n 1bu "I know we can never really become how we were then."
             n "I don't even have many memories anymore of how we were then."
             n "But I'd like to make some new ones."
@@ -5718,7 +5744,7 @@ label ch14_exclusive_natsuki:
             mc "Think it's overcooked?"
             n 2bz "I hope not."
             n "But then again, I don't really have much faith in my dad's cooking skills."
-            n 2bl "Unlike him, he didn't inherit his baking skills."
+            n 2bl "Unlike me, he didn't inherit his baking skills."
             mc "Are they really that bad?"
             n 2bj "Well, let's just say mine are better."
             n "By a lot."
@@ -6508,9 +6534,9 @@ label ch14_exclusive_monika:
         m "And this is really the only chance I can."
         m 1bc "Sometimes, Sayori is listening."
         m "Other times, [player] hears the conversation."
-        m 1bd "I hate to hurt him but..."
+        m 1bd "I hate to hurt [player_reflexive] but..."
         m "What other way is there?"
-        m 1bf "I can't just make him fall asleep."
+        m 1bf "I can't just make [player_reflexive] fall asleep."
         m "..."
         m 1be "I told Sayori."
         m "Not everything."
@@ -6725,7 +6751,7 @@ label ch14_exclusive_monika:
         m 1bd "At least, I don't think they do."
         m "I'm pretty sure it's like nothing ever happened to them."
         m 1ba "But with [player]..."
-        m "It's different for him, for whatever reason."
+        m "It's different for [player_reflexive], for whatever reason."
         m 1bj "As for me, I convinced her to let me keep my memories."
         m "I had to make up some garbage about being her friend from Monika's memories."
         m 1bg "She was definitely hesitant."
@@ -6742,10 +6768,10 @@ label ch14_exclusive_monika:
         m "..."
         m 1ba "Not much of a difference, is there?"
         m "[player] was kind of different."
-        m 1bc "He was also...mindless, in a way."
-        m "There was some resistance and reluctance from him too."
-        m 1bd "Like he was actively trying to resist whatever was happening to him."
-        m "Not like I actually know what was happening to him."
+        m 1bc "[cPlayer_personal] was also...mindless, in a way."
+        m "There was some resistance and reluctance from [player_reflexive] too."
+        m 1bd "Like [player_personal] was actively trying to resist whatever was happening to [player_reflexive]."
+        m "Not like I actually know what was happening to [player_reflexive]."
         m 1be "I was just watching with intrigue."
         m 1bm "Of course, Sayori made me promise not to tell anyone."
         m "Including you."
@@ -6761,8 +6787,8 @@ label ch14_exclusive_monika:
                 pass
         m 1bk "Of course it does!"
         m "I should probably wake [player] up now."
-        m 1bb "I need him to answer some questions."
-        m "Though I suppose I could just probe his memory..."
+        m 1bb "I need [player_reflexive] to answer some questions."
+        m "Though I suppose I could just probe [player_possessive] memory..."
         m 1bc "No, that's an unnecessary risk."
         m 1ba "Here goes."
         show monika at thide
@@ -6888,7 +6914,7 @@ label ch14_exclusive_monika:
         "I take a deep breath and exhale."
         $ style.say_dialogue = style.normal
         m 1bn "Not like that!"
-        m 2be "I'm trying to exert a bit of power on him but also giving him somewhat free thought."
+        m 2be "I'm trying to exert a bit of power on [player_reflexive] but also giving [player_reflexive] somewhat free thought."
         m "It's a lot more difficult than I thought."
         m "Usually it's all or nothing..."
         m 2ba "Let me try again."
@@ -7102,10 +7128,10 @@ label ch14_exclusive_monika:
             play music mkov fadeout 3.0 fadein 2.0
             $ pause(2.0)
             m 2bga "I'm going to implant false memories."
-            m "If he figures this out then the whole thing will just collapse."
+            m "If [player_personal] figures this out then the whole thing will just collapse."
             m "At least, that's what I think."
-            m 1bge "I'm just being precautious."
-            m "I'm not talking to him."
+            m 1bge "I'm just being precarious."
+            m "I'm not talking to [player_reflexive]."
             m "I'm talking to you."
             m 1bgh "I know you're listening."
             m "Whatever you are."
@@ -7150,7 +7176,7 @@ label ch14_exclusive_monika:
             m "At least, that's what I think."
             m 4bgh "Because there's gaps in my memory too..."
             m "After I convinced her to let me retain my memories, she made the other two go home."
-            m "[player] came with me, because he needed to continue preparations so it was only natural."
+            m "[player] came with me, because [player_personal] needed to continue preparations so it was only natural."
             m "I don't know the full extent of her powers."
             m 2bgh "What I do know is that her power is immense."
             m 2bga "And it will be mine."
@@ -7353,7 +7379,7 @@ label ch14_exclusive_monika:
             "I open the next chapter of the book and keep reading."
             "This goes on until we get through quite a bit of the book."
             "I think I'm starting to understand the story now."
-            "Basically this one guy becomes the centre of the protagonist's world."
+            "Basically this one guy becomes the center of the protagonist's world."
             "Everything he does seems 'authentic'."
             "He makes mistakes unlike everyone else but has a good heart."
             "The protagonist seems to get curious about him so befriends him."

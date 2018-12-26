@@ -19,7 +19,7 @@ label ch1_main:
     y "I hope this isn't too overwhelming of a commitment for you."
     y 1u "Making you dive headfirst into literature when you're not accustomed to it..."
     show natsuki 4e zorder 2 at t33
-    n "Oh, come on! Like he deserves any slack."
+    n "Oh, come on! Like [player_personal] deserves any slack."
     n "Sayori told me you didn't even want to join any clubs this year."
     n "And last year, too!"
     n 4c "I don't know if you plan to just come here and hang out, or what..."
@@ -38,8 +38,8 @@ label ch1_main:
     show yuri zorder 2 at t22
     show sayori 2x zorder 3 at f21
     s "Don't worry, guys~"
-    s "[player] always gives it his best as long as he's having fun."
-    s "He helps me with busywork without me even asking."
+    s "[player] always gives it [player_possessive] best as long as [player_personal]'s having fun."
+    s "[cPlayer_personal] helps me with busywork without me even asking."
     s "Like cooking, cleaning my room..."
     show sayori 2a zorder 2 at t21
     show yuri zorder 3 at f22
@@ -239,7 +239,7 @@ label ch1_end:
     show natsuki zorder 2 at t22
     show yuri zorder 3 at f21
     y 1k "And [player] liked my poem too, you know."
-    y "He even told me he was impressed by it."
+    y "[cPlayer_personal] even told me [player_personal] was impressed by it."
     stop music fadeout 1.0
     "Natsuki suddenly stands up."
     show yuri zorder 2 at t21
@@ -254,10 +254,10 @@ label ch1_end:
     y 1o "Uu..."
     y "You...You're just..."
     "Yuri stands up as well."
-    y 2r "Maybe you're just jealous that [player] appreciates my advice more than he appreciated yours!"
+    y 2r "Maybe you're just jealous that [player] appreciates my advice more than [player_personal] appreciated yours!"
     show yuri zorder 2 at t21
     show natsuki zorder 3 at f22
-    n 1e "Huh! And how do you know he didn't appreciate {i}my{/i} advice more?"
+    n 1e "Huh! And how do you know [player_personal] didn't appreciate {i}my{/i} advice more?"
     n "Are you that full of yourself?"
     show natsuki zorder 2 at t22
     show yuri zorder 3 at f21

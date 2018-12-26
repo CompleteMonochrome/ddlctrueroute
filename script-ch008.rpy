@@ -1378,7 +1378,7 @@ label ch8_end:
     s "You're worried about her."
     show sayori zorder 2 at t32
     show monika 1g zorder 3 at f33
-    m "I don't think he's the only one."
+    m "I don't think [player_personal]'s the only one."
     m "All of us just saw what happened."
     m "It would be wrong not to be worried about her."
     show natsuki 1h zorder 3 at f31

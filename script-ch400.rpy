@@ -282,7 +282,7 @@ label ch40_main:
     y 2f "Eh?"
     show yuri at t22
     show natsuki at f21
-    n 2h "Well, about...you know, the first thing he said..."
+    n 2h "Well, about...you know, the first thing [player_personal] said..."
     show natsuki at t21
     mc "Manga?"
     show yuri at f22
@@ -294,13 +294,13 @@ label ch40_main:
     "For some reason, Natsuki seems embarrassed about it."
     n 1q "Besides..."
     n "Manga...is literature too, you know?"
-    n 1w "So...if [player] wants to read some of my manga, then don't try to stop him or anything!"
+    n 1w "So...if [player] wants to read some of my manga, then don't try to stop [player_reflexive] or anything!"
     show natsuki 1i at t21
     show yuri at f22
     y 1l "Natsuki..."
     y "I wouldn't do such a thing."
     y 1i "However, it could also be nice for us to diversify ourselves a little..."
-    y "He can take this opportunity to try something new, as well."
+    y "[cPlayer_personal] can take this opportunity to try something new, as well."
     y 1s "Wouldn't you agree, [player]?"
     show yuri at t33
     show natsuki at t32
@@ -520,7 +520,7 @@ label ch40_main:
         show sayori end-glitch onlayer screens
         s "...Eh?"
         s "W-What's happening...?"
-        call screen dialog("I won't let you hurt him.", ok_action=Return())
+        call screen dialog("I won't let you hurt [player_reflexive].", ok_action=Return())
         s "Who..."
         s "I-It hurts--"
         show screen tear(20, 0.1, 0.1, 0, 40)

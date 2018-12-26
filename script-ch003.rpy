@@ -384,7 +384,7 @@ label ch3_start_yuri:
     y "To have you...feel that way about her."
     mc "Yuri..."
     mc "You're giving me too much credit."
-    mc "I'm a pretty simple guy."
+    mc "I'm a pretty simple [player_casual]."
     mc "So I think I'm pretty good at understanding my own feelings."
     mc "I'm not nearly as sophisticated as you."
     y 2t "A-Ah..."
@@ -906,9 +906,9 @@ label ch3_end:
     y "Um..."
     y "If I recall, Natsuki..."
     y 2f "You mentioned that you would like to handle the baking on your own."
-    y "[player] may not like to be around if you only make him out to be a nuisance..."
+    y "[player] may not like to be around if you only make [player_reflexive] out to be a nuisance..."
     y 2i "So therefore..."
-    y "He may be more suited to assisting with the decorations."
+    y "[cPlayer_personal] may be more suited to assisting with the decorations."
     show yuri zorder 2 at t33
     show natsuki 4e zorder 3 at f31
     n "Hold on! I never said that!"
@@ -926,13 +926,13 @@ label ch3_end:
     show monika 2g zorder 3 at f32
     m "Guys, guys!"
     m "Let's settle down for a moment..."
-    m 2d "In the end, I think it's up to [player] to decide how he'd like to contribute."
+    m 2d "In the end, I think it's up to [player] to decide how [player_personal]'d like to contribute."
     m "Besides..."
     if act_one_dialogue[0] or act_one_dialogue[1]:
-        m 5 "He might want to spend his time with me."
+        m 5 "[cPlayer_personal] might want to spend [player_possessive] time with me."
     else:
-        m 5 "He hasn't really gotten the chance to spend any time with me yet, you know?"
-    m "So I'm sure he's interested in--"
+        m 5 "[cPlayer_personal] hasn't really gotten the chance to spend any time with me yet, you know?"
+    m "So I'm sure [player_personal]'s interested in--"
     show monika zorder 2 at t32
     show natsuki zorder 3 at f31
     n 4f "You {i}literally{/i} just said--"
@@ -1089,7 +1089,7 @@ label ch3_end_monika:
     show monika zorder 2 at t32
     show natsuki 3c zorder 3 at f31
     n "That doesn't matter."
-    n "You were the one who scared him into picking you in the first place."
+    n "You were the one who scared [player_reflexive] into picking you in the first place."
     n 3e "You're the club president, Monika."
     n "You're supposed to make responsible decisions for the club!"
     show natsuki zorder 2 at t31
@@ -1326,8 +1326,14 @@ label ch3_end_natsuki:
     mc "I mean..."
     mc "I just figured that since I'm the one helping, I would be going to your house..."
     n "Yeah, right."
-    n 5x "Like I could have a guy over my house..."
-    n "My dad would kill me."
+    if player_gender == "boy":
+        n 5x "Like I could have a guy over my house..."
+        n "My dad would kill me."
+    else:
+        n 5x "Like I could have someone like you over my house..."
+        mc "Someone like me?"
+        n "Well...anyone, really."
+        n "The point is my dad would kill me."
     mc "Really?"
     mc "That's kinda strict, if you ask me."
     n 5r "Yeah, how do you think I feel?"

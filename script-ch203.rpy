@@ -223,7 +223,7 @@ label ch203_main:
     show yuri zorder 3 at f32
     y 1y6 "That's correct."
     y "[player] is already engaged in a novel that we're reading together."
-    y 1y5 "Aren't you glad I've already gotten him into literature, Monika?"
+    y 1y5 "Aren't you glad I've already gotten [player_reflexive] into literature, Monika?"
     show yuri 1a zorder 2 at t32
     show monika zorder 3 at f31
     m 2l "I..."
@@ -379,7 +379,7 @@ label ch203_end:
     n 3c "We can just--"
     show natsuki zorder 2 at t31
     show yuri zorder 3 at f33
-    y 2r "Natsuki, shut your fucking mouth and let him decide for himself."
+    y 2r "Natsuki, shut your fucking mouth and let [player_reflexive] decide for himself."
     show yuri zorder 2 at t33
     show natsuki zorder 3 at f31
     n 1o "{i}You{/i} shut your mouth!"
@@ -449,7 +449,7 @@ label ch203_end:
     show natsuki zorder 2 at t31
     show monika zorder 3 at f32
     m 2i "It is fair, Natsuki."
-    m "It's what he chose."
+    m "It's what [player_personal] chose."
     show monika zorder 2 at t32
     show yuri 3r zorder 3 at f33
     y "No, it's not fair!"
@@ -482,7 +482,7 @@ label ch203_end:
     show monika zorder 2 at t32
     show yuri zorder 3 at f33
     y 2y3 "See, that wasn't very hard."
-    y "All I want is to spend a little time with him."
+    y "All I want is to spend a little time with [player_reflexive]."
     y "Is that so much to ask?"
     hide natsuki
     hide monika

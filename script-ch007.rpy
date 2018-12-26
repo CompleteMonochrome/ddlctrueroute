@@ -142,7 +142,7 @@ label ch7_main:
     s "Sorry, I realize it was meant to be private..."
     show sayori zorder 2 at t21
     show monika zorder 3 at f22
-    m 1f "Ah, so you know about the favor I asked him to do?"
+    m 1f "Ah, so you know about the favor I asked [player_reflexive] to do?"
     show sayori zorder 3 at f21
     show monika zorder 2 at t22
     s 1g "That's right."
@@ -169,29 +169,29 @@ label ch7_main:
         s 1h "We might need to do something like that again..."
         show sayori zorder 2 at t21
         show monika zorder 3 at f22
-        m 1d "What did he do?"
+        m 1d "What did [player_personal] do?"
         show sayori zorder 3 at f21
         show monika zorder 2 at t22
-        s 1d "He made it work."
+        s 1d "[cPlayer_personal] made it work."
         s "That's all I can really say without breaking the game."
         s 1t "Today is going to go great, I can feel it."
         show sayori zorder 2 at t21
         show monika zorder 3 at f22
     elif read_book:
-        s 1b "From what I can tell, he read quite a bit of the book."
+        s 1b "From what I can tell, [player_personal] read quite a bit of the book."
         s "So we don't have much to worry about."
-        s 1k "His poem on the other hand leaves something to be desired."
+        s 1k "[cPlayer_possessive] poem on the other hand leaves something to be desired."
         s 1i "It isn't that important but it could affect the [player] in the game."
         s 1d "Regardless, I can tell today is going to be okay."
         s "It's not ideal but it's the second best possibility."
         show sayori zorder 2 at t21
         show monika zorder 3 at f22
         m 1d "What do you mean?"
-        m "Was he meant to do something?"
+        m "Was [player_personal] meant to do something?"
         show sayori zorder 3 at f21
         show monika zorder 2 at t22
-        s 1g "I told him."
-        s "He didn't do it and I can't make him."
+        s 1g "I told [player_reflexive]."
+        s "[cPlayer_personal] didn't do it and I can't make [player_reflexive]."
         s "If I tell you directly, the game might break."
         s 1h "I don't want to risk it."
         show sayori zorder 2 at t21
@@ -200,11 +200,11 @@ label ch7_main:
     else:
         s 1i "Why would you get [player] to write a poem?"
         s "We wanted you to read the book so you could talk to Yuri..."
-        s 1k "Now he's going to be super weird when he talks to her."
-        s "He won't have anything to discuss..."
+        s 1k "Now [player_personal]'s going to be super weird when [player_personal] talks to her."
+        s "[cPlayer_personal] won't have anything to discuss..."
         show sayori zorder 2 at t21
         show monika zorder 3 at f22
-        m 1e "I could go with him."
+        m 1e "I could go with [player_reflexive]."
         m "I've read a decent amount of the book."
         m "We can--"
         show sayori zorder 3 at f21
@@ -584,7 +584,7 @@ label ch7_main:
         m "Hmm..."
         m "I should let you know..."
         m "It isn't entirely because of the game 'you' that she's feeling that way."
-        m 1f "He was just the catalyst."
+        m 1f "[cPlayer_personal] was just the catalyst."
         m "It's the book."
         m 1g "I read some of it and it's got the same effect on me."
         m "Once I realized, I stopped immediately."
@@ -968,8 +968,16 @@ label ch7_main:
     s "Monika can be the wanderer..."
     s "Natsuki, you should be the younger daughter."
     s 4l "Which...leaves me as the older daughter I guess!"
-    show monika 1g zorder 3 at f42
     show sayori zorder 2 at t43
+    if player_gender == "girl":
+        mc "Wait, why am I the lumberjack?"
+        mc "Why can't I be someone else?"
+        show sayori 4a zorder 3 at f43
+        s "I think it fits you the most."
+        s "Don't you agree?"
+        show sayori zorder 2 at t43
+        mc "I...suppose."
+    show monika 1g zorder 3 at f42
     m "H-Hold on a second Sayori...!"
     m "I don't think putting me as the wanderer is a good idea..."
     m 1n "I mean, I have nothing in common with her!"
@@ -1197,7 +1205,7 @@ label ch7_end:
     show sayori 1b zorder 3 at f33
     s "Um...Yuri..."
     s 2l "I think [player] has to agree to it too."
-    s "You can't just force him to go with you."
+    s "You can't just force [player_reflexive] to go with you."
     show yuri 2n zorder 3 at f31
     show sayori zorder 2 at t33
     y "But..."
@@ -1205,8 +1213,8 @@ label ch7_end:
     show yuri zorder 2 at t42
     show natsuki zorder 2 at t43
     show sayori zorder 2 at t44
-    m "Yuri, I'm sure if he feels the same way about you..."
-    m "He'll end up choosing you, right?"
+    m "Yuri, I'm sure if [player_personal] feels the same way about you..."
+    m "[cPlayer_personal]'ll end up choosing you, right?"
     if sayori_confess:
         m 3l "Besides, [player] and Sayori are kinda a couple."
         m "So--"
@@ -1221,7 +1229,7 @@ label ch7_end:
     show yuri 2r zorder 3 at f42
     show natsuki zorder 2 at t43
     y "Natsuki..."
-    y 2y4 "Why don't you just shut your fucking mouth and let him decide for himself?"
+    y 2y4 "Why don't you just shut your fucking mouth and let [player_reflexive] decide for himself?"
     show monika 3i
     show natsuki 2q
     stop music fadeout 1.5
@@ -1243,7 +1251,7 @@ label ch7_end:
     $ renpy.save_persistent()
     $ quick_menu = True
 
-    s "Because in the end, it's up to him to decide who he reads with."
+    s "Because in the end, it's up to [player_reflexive] to decide who [player_personal] reads with."
     show sayori zorder 2 at t44
     menu:
         s "So, do you have a preference?"

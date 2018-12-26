@@ -1,4 +1,23 @@
+label female_pronouns:
+    $ player_gender = "girl"
+    $ cPlayer_gender = player_gender.capitalize()
+    $ player_other = "lady"
+    $ cPlayer_other = player_other.capitalize()
+    $ player_casual = "girl"
+    $ cPlayer_casual = player_casual.capitalize()
+    $ player_personal = "she"
+    $ cPlayer_personal = player_personal.capitalize()
+    $ player_possessive = "her"
+    $ cPlayer_possessive = player_possessive.capitalize()
+    $ player_reflexive = "her"
+    $ cPlayer_reflexive = player_reflexive.capitalize()
+    return
+
 label choose_start:
+    # Check player gender after input
+    if persistent.player_female:
+        call female_pronouns
+
     scene black
     with dissolve_scene_full
     play music mend
@@ -57,6 +76,7 @@ label choose_start:
             $ quick_menu = True
             $ s_name = "Sayori"
             stop music fadeout 1.0
+            $ persistent.custom_starts_used += 1
             $ renpy.save_persistent()
             jump ch5_skip
         "Yuri's problem.":
@@ -131,6 +151,7 @@ label choose_start:
             $ quick_menu = True
             $ s_name = "Sayori"
             stop music fadeout 1.0
+            $ persistent.custom_starts_used += 1
             $ renpy.save_persistent()
             jump ch6_skip
         # Chapter 7
@@ -205,6 +226,7 @@ label choose_start:
             $ s_name = "Sayori"
             $ quick_menu = True
             stop music fadeout 1.0
+            $ persistent.custom_starts_used += 1
             $ renpy.save_persistent()
             jump ch7_skip
         # Chapter 8
@@ -318,6 +340,7 @@ label choose_start:
             $ s_name = "Sayori"
             $ quick_menu = True
             stop music fadeout 1.0
+            $ persistent.custom_starts_used += 1
             $ renpy.save_persistent()
             jump ch8_redirect
 
@@ -484,6 +507,7 @@ label choose_start:
             $ s_name = "Sayori"
             $ quick_menu = True
             stop music fadeout 1.0
+            $ persistent.custom_starts_used += 1
             $ renpy.save_persistent()
             jump ch9_skip
         # Chapter 10
@@ -528,6 +552,7 @@ label choose_start:
             $ s_name = "Sayori"
             $ quick_menu = True
             stop music fadeout 1.0
+            $ persistent.custom_starts_used += 1
             $ renpy.save_persistent()
             jump ch10_skip
         # Chapter 11
@@ -611,6 +636,7 @@ label choose_start:
             $ s_name = "Sayori"
             $ quick_menu = True
             stop music fadeout 1.0
+            $ persistent.custom_starts_used += 1
             $ renpy.save_persistent()
             jump ch11_skip
         # Chapter 12
@@ -749,6 +775,7 @@ label choose_start:
             $ s_name = "Sayori"
             $ quick_menu = True
             stop music fadeout 1.0
+            $ persistent.custom_starts_used += 1
             $ renpy.save_persistent()
             jump ch12_skip
 
@@ -1166,6 +1193,7 @@ label choose_start:
             $ s_name = "Sayori"
             $ quick_menu = True
             stop music fadeout 1.0
+            $ persistent.custom_starts_used += 1
             $ renpy.save_persistent()
             jump ch13_skip
         "Second day of preparations.":
@@ -1305,6 +1333,7 @@ label choose_start:
             $ s_name = "Sayori"
             $ quick_menu = True
             stop music fadeout 1.0
+            $ persistent.custom_starts_used += 1
             $ renpy.save_persistent()
             jump ch14_skip
         "Third day of preparations.":
@@ -1578,5 +1607,6 @@ label choose_start:
             $ s_name = "Sayori"
             $ quick_menu = True
             stop music fadeout 1.0
+            $ persistent.custom_starts_used += 1
             $ renpy.save_persistent()
             jump ch15_skip

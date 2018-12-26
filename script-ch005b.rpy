@@ -981,7 +981,7 @@ label ch5_mainc:
     show monika zorder 3 at f21
     show sayori zorder 2 at t22
     m 1b "Sayori..."
-    m "May I have a word with him in private?"
+    m "May I have a word with [player_reflexive] in private?"
     show monika zorder 2 at t21
     show sayori 4d zorder 3 at f22
     s "Okay, ehehe~"
@@ -1087,7 +1087,7 @@ label ch5_mainc:
         mc "What's up with you today?"
         mc "It's like all the time we spent on Sunday didn't matter."
         n 1p "It did matter!"
-        n 1n "But everyone knows you're Monika's boyfriend now."
+        n 1n "But everyone knows you're Monika's [player_gender]friend now."
         "What?"
         "I'm not..."
         if sayori_confess:
@@ -1160,7 +1160,7 @@ label ch5_mainc:
         mc "But I'm not."
         y "Everyone knows you're Monika's..."
         "She takes a deep breath."
-        y 1h "Boyfriend..."
+        y 1h "[cPlayer_gender]friend..."
         mc "What?!"
         if sayori_confess:
             mc "I'm with Sayori..."
@@ -1181,9 +1181,9 @@ label ch5_mainc:
     with wipeleft_scene
     "I go back to my desk."
     "Well, that didn't go well at all."
-    "Apparently, I'm Monika's boyfriend now."
+    "Apparently, I'm Monika's [player_gender]friend now."
     "I don't think that's true, because if anything..."
-    "{i}You{/i} should be her boyfriend."
+    "{i}You{/i} should be her [player_gender]friend."
     "Just how much has happened ever since the weekend?"
     "I should talk to Monika about this."
     "She looks like she's done helping Sayori."
@@ -1207,7 +1207,7 @@ label ch5_mainc:
     mc "Monika, at this point I think I have some idea of what's going on."
     mc "I still don't fully get it either."
     mc "But there's someone watching us, right now, isn't there?"
-    mc "He must be the one you've been talking to."
+    mc "[cPlayer_personal] must be the one you've been talking to."
     mc "Which makes sense, now that I think about it."
     play music t10 fadeout 2.0
     m 1h "..."
@@ -1297,7 +1297,7 @@ label ch5_mainc:
     show monika 1o
     show sayori 1i
     "Monika looks away and Sayori nods sadly."
-    mc "He's the one that's been influencing my decisions, isn't he?{nw}"
+    mc "[cPlayer_personal]'s the one that's been influencing my decisions, isn't [player_personal]?{nw}"
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
@@ -1305,7 +1305,7 @@ label ch5_mainc:
     stop sound
     hide screen tear
     window show(None)
-    mc "He's the one that's been influencing my decisions, isn't he?{fast}"
+    mc "[cPlayer_personal]'s the one that's been influencing my decisions, isn't [player_personal]?{fast}"
     window auto
     mc "..."
     mc "Well, you've done good so far."

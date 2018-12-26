@@ -89,13 +89,13 @@ label special_chapter:
     show natsuki 1be zorder 3 at f31
     n "Jeez, Sayori."
     n "Can't you just wait until we get there?"
-    n 2bb "And if [player] doesn't want to tell you then he doesn't have to."
-    n "You can't just force him like that, you know!"
+    n 2bb "And if [player] doesn't want to tell you then [player_personal] doesn't have to."
+    n "You can't just force [player_reflexive] like that, you know!"
     show natsuki zorder 2 at t31
     show yuri 1bb zorder 3 at f33
     y "Natsuki is right."
-    y "If [player] wants to keep it a surprise, then let him."
-    y 2bf "We can't and shouldn't control his actions."
+    y "If [player] wants to keep it a surprise, then let [player_reflexive]."
+    y 2bf "We can't and shouldn't control [player_possessive] actions."
     show yuri zorder 2 at t33
     mc "Thanks for backing me up, you two."
     mc "She's been like this ever since yesterday."
@@ -214,7 +214,7 @@ label special_chapter:
     "Everyone except me nods their head."
     s "So here's my plan."
     s 2bc "[player] is going to stay out here and get Monika to look away."
-    s "We'll use him as a distraction so that we can sneak inside."
+    s "We'll use [player_reflexive] as a distraction so that we can sneak inside."
     s "Then we'll get ready to surprise her when she comes back inside with [player]."
     show sayori zorder 2 at t32
     show yuri 1bh zorder 3 at f33

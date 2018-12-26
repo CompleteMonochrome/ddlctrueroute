@@ -428,11 +428,24 @@ init -1 style quick_button_text:
 
 
 init -1 python:
-    def FinishEnterName():
+    def FinishEnterName(label="start"):
         if not player: return
         persistent.playername = player
         renpy.hide_screen("name_input")
-        renpy.jump_out_of_context("start")
+        if persistent.prompt_info:
+            renpy.show_screen("gender_input", message="What pronouns would you like to use?", male_action=Function(CheckPronouns, label=label, female=False), female_action=Function(CheckPronouns, label=label, female=True))
+        else:
+            renpy.jump_out_of_context(label)
+
+    def CheckPronouns(label, female):
+        renpy.hide_screen("gender_input")
+        persistent.player_female = female
+        renpy.jump_out_of_context(label)
+
+    def HideConfirmThenName(goto="choose_start"):
+        renpy.hide_screen("confirm")
+        renpy.show_screen("name_input", message="Please enter your name", ok_action=Function(FinishEnterName, label=goto))
+
 
 init -501 screen navigation():
 
@@ -454,11 +467,19 @@ init -501 screen navigation():
                     textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Show(screen="dialog", message="File error: \"characters/monika.chr\"\n\nThe file is missing or corrupt.",
                 ok_action=Show(screen="dialog", message="The game is corrupt. Continuing from next chapter.", ok_action=Function(renpy.full_restart, label="ch5_premainb"))), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
                 else:
-                    textbutton _("New Game") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                    textbutton _("New Game") action If(persistent.playername,
+                        true=If(persistent.prompt_info,
+                            true=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)),
+                            false=Start()),
+                        false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
                     if persistent.playthrough == 0 and persistent.monika_change and not persistent.monika_gone:
                         textbutton _("Custom Start") action If(persistent.playername,
-                        true=Show(screen="confirm", message="Are you sure you want to use Custom Start?\nYou may find different outcomes if you\nchoose differently from your previous choices.", yes_action=Start("choose_start"), no_action=Hide("confirm")),
-                        false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                        true=Show(screen="confirm", message="Are you sure you want to use Custom Start?\nYou may find different outcomes if you\nchoose differently from your previous choices.",
+                            yes_action=If(persistent.prompt_info,
+                                true=Function(HideConfirmThenName),
+                                false=Start("choose_start")),
+                            no_action=Hide("confirm")),
+                        false=Function(HideConfirmThenName))
 
             else:
 
@@ -1012,6 +1033,12 @@ init -501 screen preferences() tag menu:
                     textbutton _("Enabled") action SetField(persistent, "name_saves", True)
                     textbutton _("Disabled") action SetField(persistent, "name_saves", False)
 
+                vbox:
+                    style_prefix "radio"
+                    label _("Prompt Info")
+                    textbutton _("Enabled") action SetField(persistent, "prompt_info", True)
+                    textbutton _("Disabled") action SetField(persistent, "prompt_info", False)
+
 
 
 
@@ -1540,6 +1567,35 @@ init -501 screen confirm(message, yes_action, no_action):
             textbutton _("No") action no_action
 
 
+
+init -501 screen gender_input(message, male_action, female_action):
+
+
+    modal True
+
+    zorder 200
+
+    style_prefix "confirm"
+
+    add "gui/overlay/confirm.png"
+
+    frame:
+
+        has vbox:
+            xalign .5
+            yalign .5
+            spacing 30
+
+        label _(message):
+            style "confirm_prompt"
+            xalign 0.5
+
+        hbox:
+            xalign 0.5
+            spacing 100
+
+            textbutton _("Male") action male_action
+            textbutton _("Female") action female_action
 
 
 

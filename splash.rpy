@@ -479,6 +479,28 @@ label splashscreen:
 
 label after_load:
     # For some reason we need to set these
+    if not hasattr(store, 'player_gender'):
+        # If you don't have the gender, you clearly don't have the rest
+        if persistent.player_female:
+            $ player_gender = "girl"
+            $ player_other = "lady"
+            $ player_casual = "girl"
+            $ player_personal = "she"
+            $ player_possessive = "her"
+            $ player_reflexive = "her"
+        else:
+            $ player_gender = "boy"
+            $ player_other = "man"
+            $ player_casual = "guy"
+            $ player_personal = "he"
+            $ player_possessive = "his"
+            $ player_reflexive = "him"
+        $ cPlayer_gender = player_gender.capitalize()
+        $ cPlayer_other = player_other.capitalize()
+        $ cPlayer_casual = player_casual.capitalize()
+        $ cPlayer_personal = player_personal.capitalize()
+        $ cPlayer_possessive = player_possessive.capitalize()
+        $ cPlayer_reflexive = player_reflexive.capitalize()
     if not hasattr(store, 'ch11_badpoem'):
         $ ch11_badpoem = False
     if not hasattr(store,'monika_type'):
@@ -571,7 +593,7 @@ label after_load:
     if not hasattr(store, 'christmas_chapter'):
         $ christmas_chapter = False
     if not hasattr(store, 'christmas_gifts'):
-        $ christmas_gifts = [0,0,0,0,0]
+        $ christmas_gifts = ["plush","knife",0,0,0]
     if not hasattr(store, 'christmas_approval'):
         $ christmas_approval = 0
     if not hasattr(store, 'all_sayarc_poems_monika'):

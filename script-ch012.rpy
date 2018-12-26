@@ -608,7 +608,7 @@ label ch12_main:
                 show sayori zorder 2 at t21
                 show monika 3e zorder 3 at f22
                 m "At the same time, you can't really blame [player] for this."
-                m "He's just honestly saying what's on his mind."
+                m "[cPlayer_personal]'s just honestly saying what's on [player_possessive] mind."
                 m "Isn't it better to tell the truth than to lie to someone you care about...?"
                 show sayori 1f zorder 3 at f21
                 show monika zorder 2 at t22
@@ -1050,7 +1050,7 @@ label ch12_play:
     mc "I think we'd be here a while if I did."
     s 5b "N-No, that's okay!"
     s 5c "Just take this script, you big meanie."
-    "Sayori gives me a copy of the script of Sweet Opression."
+    "Sayori gives me a copy of the script of Sweet Oppression."
     "Upon first inspection, it doesn't look very comprehensive compared to her last one."
     mc "So you did prepare another one..."
     show sayori 4q at t11
@@ -1150,7 +1150,7 @@ label ch12_play:
     show natsuki 2i zorder 3 at f31
     show sayori zorder 2 at t11
     n "Ugh...whatever."
-    n "Just let [player] finish his part so we can get this over with."
+    n "Just let [player] finish [player_possessive] part so we can get this over with."
     show natsuki at thide
     hide natsuki
     show sayori 3d zorder 2 at t11
@@ -1359,7 +1359,7 @@ label ch12_play:
     show natsuki zorder 2 at t42
     show sayori 2k zorder 3 at f44
     s "Maybe if Maemi and I combine our strength..."
-    s "If he could control his ability, just for a litte bit, then..."
+    s "If he could control his ability, just for a little bit, then..."
     show natsuki 1y zorder 3 at f42
     show sayori zorder 2 at t44
     n "Hah! I doubt it."
@@ -1633,7 +1633,7 @@ label ch12_play:
     show dadsuki zorder 2 at t11
     mc "I could be asking you the same question."
     show dadsuki 1c zorder 3 at f11
-    d "You're the delivery boy, aren't you?"
+    d "You're the delivery [player_gender], aren't you?"
     d "I was just told to come here if I ever wanted a chance at seeing her again."
     d 1k "I would take any chance at seeing her again..."
     d 1e "That still doesn't explain why any of you are here."
@@ -1688,7 +1688,7 @@ label ch12_play:
     mc "No."
     mc "Don't do any of that."
     show dadsuki 1h zorder 3 at f43
-    d "Boy..."
+    d "[cPlayer_gender]..."
     d "Who are you to tell me what to do?"
     d "You know nothing!"
     show dadsuki zorder 2 at t43
@@ -1842,7 +1842,7 @@ label ch12_play:
         d "But as long as I get to see her again, then it will all be worth it..."
         show dadsuki zorder 2 at t43
         "He doesn't sound at all sorry for what he did to Natsuki."
-        "I can only imagine what he'll do if Natsuki's mom doesn't actually arrrive here..."
+        "I can only imagine what he'll do if Natsuki's mom doesn't actually arrive here..."
         show monika zorder 3 at f41
         if monika_type == 0:
             m 1h "You really don't care about Natsuki, don't you?"
@@ -3936,7 +3936,7 @@ label ch12_harukinoplace:
         mc "You'll have to go through me too."
         mc "Natsuki is my friend and if you want to hurt her, then you'll have to go through me."
         show dadsuki zorder 3 at f41
-        d "Ahahahaha, you stupid boy."
+        d "Ahahahaha, you stupid [player_gender]."
         d "Do you really think you can stop me?"
         show dadsuki zorder 2 at t41
         show monika zorder 3 at f42

@@ -410,7 +410,7 @@ label ch202_end:
     mc "Ah..."
     show natsuki zorder 3 at f31
     n 42c "Oh, come on!"
-    n "You can't take advantage of [player] to agree with you just because he doesn't know how to say no to anything."
+    n "You can't take advantage of [player] to agree with you just because [player_personal] doesn't know how to say no to anything."
     stop music fadeout 1
     n 1c "Look, Monika."
     n "Do you really think any of us here joined the club with other people in mind?"
@@ -605,7 +605,7 @@ label ch202_end:
     m 1d "Um--"
     m 1p "Please don't take this the wrong way, but..."
     m "I'm going to chat a little bit with [player] before we leave."
-    m 1d "Just to see what he thinks of his time here and all that..."
+    m 1d "Just to see what [player_personal] thinks of [player_possessive] time here and all that..."
     m "It's important to me, as President."
     show monika zorder 2 at t21
     show yuri zorder 3 at f22

@@ -257,7 +257,7 @@ label sayori_exclusive_2:
     show monika 1a zorder 3 at f21
     m "Ah, are you going with [player] to get the supplies?"
     m "There's no need to trouble yourself."
-    m "I'd be happy to go with him."
+    m "I'd be happy to go with [player_reflexive]."
     show monika zorder 2 at t21
     show sayori 1h at s22
     s "Aw, but I wanted to go!"
@@ -583,7 +583,10 @@ label sayori_exclusive_3:
         "Hopefully there's still time."
     else:
         mc "I'll help Sayori out with the new club members."
-        mc "They might feel more inclined if they see another guy."
+        if player_gender == "boy":
+            mc "They might feel more inclined if they see another guy."
+        else:
+            mc "I know she's probably struggling with all that attention."
     m 1a "Well, it's up to you [player]."
     m "I thought you'd be more into having some fun at the festival."
     m "Sayori is probably gonna be stuck there for a while..."
@@ -731,7 +734,7 @@ label sayori_exclusive_3:
     s 4d "You know, you really didn't have to bore yourself out here."
     s "I thought you'd want to spend some time with [ch4_name] or Monika..."
     if sayori_confess:
-        mc "Ahaha, well I am your boyfriend now."
+        mc "Ahaha, well I am your [player_gender]friend now."
         mc "So I have an obligation to spend some time with you."
         mc "Besides, if I wasn't here you'd have a lot of trouble on your hands."
     else:
@@ -792,7 +795,7 @@ label sayori_exclusive_3:
     show sayori 1c zorder 3 at f22
     s "Actually, you're the first one here!"
     s "Well...except [player]."
-    s "He stayed here with me so he never left."
+    s "[cPlayer_personal] stayed here with me so [player_personal] never left."
     show yuri 1b zorder 3 at f21
     show sayori zorder 2 at t22
     y 3j "Well...that's a relief."

@@ -80,7 +80,7 @@ label ch6_main:
     s 1k "I can't do things the way you could..."
     s "But I'm trying my hardest, you have to believe me."
     s 1d "I want everyone to be as happy as you were..."
-    s "...when he told you that he loved you."
+    s "...when [player_personal] told you that [player_personal] loved you."
     s "Ah, we don't have much time left..."
     s "...today is about to start..."
     $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
@@ -569,7 +569,7 @@ label ch6_end:
     show sayori zorder 2 at t42
     show monika 2f zorder 3 at f44
     m "Um..."
-    m "Could he stay for a bit as well?"
+    m "Could [player_personal] stay for a bit as well?"
     m 2e "Just outside, until I finish speaking with Yuri."
     m "Is that alright?"
     show monika zorder 2 at t44
@@ -922,7 +922,7 @@ label ch6_end:
                 s 1bj "No."
                 s "I'm not taking no for an answer here."
                 mc "Sayori...?"
-                s "You'd better change his mind..."
+                s "You'd better change [player_possessive] mind..."
                 s 1bk "I'm not going to like this..."
                 s "But it's all for my friends..."
                 s 1bf "So..."
@@ -936,7 +936,7 @@ label ch6_end:
                 $ style.say_dialogue = style.edited
                 s "{cps=*3}But it's all for my friends...{/cps}{nw}"
                 s 1bj "{cps=*3}I'm not going to like this...{/cps}{nw}"
-                s "{cps=*3}You'd better change his mind...{/cps}{nw}"
+                s "{cps=*3}You'd better change [player_possessive] mind...{/cps}{nw}"
                 mc "{cps=*3}Sayori...?{/cps}{nw}"
                 s "{cps=*3}I'm not taking no for an answer here.{/cps}{nw}"
                 s "{cps=*3}No.{/cps}{nw}"

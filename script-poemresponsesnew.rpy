@@ -726,7 +726,7 @@ label ch12_n_end:
         n "L-Look, I'm sorry for being rude just before..."
         n "But I really l--"
         n 1s "{i}(Wait, what am I saying...?){/i}"
-        n "{i}(What if he doesn't feel the same...?){/i}"
+        n "{i}(What if [player_personal] doesn't feel the same...?){/i}"
         mc "You really what?"
         n 1u "Nothing..."
     else:
@@ -2178,7 +2178,7 @@ label ch15_m_end:
                 m "Just because we're working together doesn't mean you can get comfortable."
             m "You do your thing and I'll do mine."
             m 3i "I know you probably feel like you can't trust me just yet."
-            m "But impeding me by making me talk to {i}him{/i} isn't helping anyone."
+            m "But impeding me by making me talk to {i}[player_reflexive]{/i} isn't helping anyone."
             m "Do you understand?"
             m "Nod your head if you do."
             "..."
@@ -3538,7 +3538,7 @@ label ch14_s_med:
     s "It's for the best, trust me."
     if sayori_confess and not sayori_dumped:
         mc "You can tell me, Sayori."
-        mc "I'm your boyfriend, aren't I?"
+        mc "I'm your [player_gender]friend, aren't I?"
         mc "We shouldn't keep secrets from each other."
     else:
         mc "I'm your best friend, aren't I Sayori?"

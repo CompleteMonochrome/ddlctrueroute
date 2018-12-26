@@ -72,7 +72,7 @@ label ch15_main:
     if ch14_sayori_date_choice:
         s "I know I said yesterday that [player] and I would go on a date."
         s "But I really don't know if I'll be able to follow through."
-        s 1h "I just said that to encourage him to prepare."
+        s 1h "I just said that to encourage [player_reflexive] to prepare."
         if sayori_personality <= 0:
             s 1g "And lately..."
             s "I've been having second thoughts."
@@ -81,7 +81,7 @@ label ch15_main:
             s 1k "...something else."
         else:
             s 1j "I have more important things to worry about."
-            s "As much I hate to hurt him..."
+            s "As much I hate to hurt [player_reflexive]..."
             s 1k "It's for the best."
     else:
         s 1d "It's just a matter of finding the right time."
@@ -116,7 +116,7 @@ label ch15_main:
         s 1l "Well, not {i}you{/i}..."
         s "But [player]."
         s 1h "I tried to look at what was happening yesterday."
-        s "To him and Monika."
+        s "To [player_reflexive] and Monika."
         s 1g "But..."
         s "I just couldn't."
         s 1c "You wouldn't have anything to do about that, would you?"
@@ -1369,7 +1369,7 @@ label ch15_end:
             mc "Should we go now?"
             show sayori 1l zorder 3 at f33
             s "Um...actually, Yuri..."
-            s "I need to speak with him in private, first."
+            s "I need to speak with [player_reflexive] in private, first."
             s 1d "It won't be long, I promise."
             s "You can wait outside if you're still planning to go together."
             show yuri 1s zorder 3 at f31
@@ -1483,7 +1483,7 @@ label ch15_end:
         "Sayori sighs."
         s "Did you have to make those ridiculous decisions?"
         mc "I didn't--"
-        s 1h "I'm not talking to him."
+        s 1h "I'm not talking to [player_reflexive]."
         s "I'm talking to you."
         s "The absolute {i}idiot{/i} making [player] do these terrible things."
         "Where is this coming from?"
@@ -3593,14 +3593,17 @@ label ch15_exclusive_sayori_together:
         cl "You're--"
     else:
         cl 4e "And who might you be, hmm?"
-        cl "Perhaps the dashing young boyfriend of our friend Sayori here."
+        if player_gender == "boy":
+            cl "Perhaps the dashing young boyfriend of our friend Sayori here."
+        else:
+            cl "Perhaps the beautiful young girlfriend of our friend Sayori here."
         cl 4f "Curious."
         cl "Definitely not the finest specimen but--"
     show sayori 2j zorder 3 at hf21
     show mysteriousclerk zorder 2 at t22
     s "Look, we're not here for introductions, okay?"
     s "And besides, you know perfectly well who this is and how and why he's here."
-    s 2h "You know enough about him to have figured it out by now, right?"
+    s 2h "You know enough about [player_reflexive] to have figured it out by now, right?"
     "The clerk nods his head."
     s 2g "I'm here for answers."
     s "I know you've got some."
@@ -3639,11 +3642,11 @@ label ch15_exclusive_sayori_together:
     mc "I still trust you."
     mc "We've all got secrets to hide."
     show sayori 2h zorder 3 at f21
-    s "I couldn't tell him."
+    s "I couldn't tell [player_reflexive]."
     s "Even if I wanted to."
     s "You know he's not even meant to be here."
     s 1k "Do you know how broken this world is right now?"
-    s "The risk I'm taking even bringing him into contact with you..."
+    s "The risk I'm taking even bringing [player_reflexive] into contact with you..."
     show sayori zorder 2 at t21
     show mysteriousclerk 5b zorder 3 at f22
     cl "There's no risk, if you do things correctly."
@@ -3793,13 +3796,13 @@ label ch15_exclusive_sayori_together:
     s "Then why didn't you say anything?!"
     show sayori zorder 2 at t21
     show mysteriousclerk 4e zorder 3 at f22
-    cl "I had to be sure his heart was in the right place."
+    cl "I had to be sure [player_possessive] heart was in the right place."
     cl "There's still a possibility that it isn't."
     cl 4f "But hell..."
     cl "It's all going to end soon so why not?"
     show sayori 1n zorder 3 at f21
     show mysteriousclerk zorder 2 at t22
-    s "So you'll help him keep his memories of this?"
+    s "So you'll help [player_reflexive] keep [player_possessive] memories of this?"
     show sayori zorder 2 at t21
     mc "Why are my memories so important?"
     mc "Even if I remember, what can I do?"
@@ -3818,9 +3821,9 @@ label ch15_exclusive_sayori_together:
     s "In what way?"
     show sayori zorder 2 at t21
     show mysteriousclerk 3d zorder 3 at f22
-    cl "We need to put his mind along with his memories into another person."
+    cl "We need to put [player_possessive] mind along with [player_possessive] memories into another person."
     cl "But only temporarily."
-    cl 3f "He needs to make physical contact with his real self."
+    cl 3f "He needs to make physical contact with [player_possessive] real self."
     cl "Then if you do things correctly, the memories should just transfer right over."
     cl "And the other person will be back to normal without a memory of what he tried to do."
     show sayori 1k zorder 3 at f21
@@ -3872,7 +3875,7 @@ label ch15_exclusive_sayori_together:
     show sayori zorder 2 at t21
     show mysteriousclerk 5h zorder 3 at f22
     cl "Well...firstly, we need to get [player]'s memories."
-    cl "And quickly. I think his time is running out quicker than we thought."
+    cl "And quickly. I think [player_possessive] time is running out quicker than we thought."
     cl "To do that..."
     cl 5a "I'm gonna need something."
     cl "I won't be a second."
@@ -3902,7 +3905,7 @@ label ch15_exclusive_sayori_together:
     s "That doesn't mean you had to do that!"
     s "I could have--"
     cl "Do you know how much time is left before he disappears?"
-    cl "Just transfer his memory already."
+    cl "Just transfer [player_possessive] memory already."
     s "But to who?"
     s "Yuri, Natsuki or--"
     cl "There's another person."
@@ -3951,7 +3954,7 @@ label ch15_exclusive_sayori_together:
     "Purple!"
     "That's Yuri, it's got to be."
     "Where are they going in such a hurry?"
-    "I need to tap him on the shoulder."
+    "I need to tap [player_reflexive] on the shoulder."
     "That should be enough."
     "Enough...for what?"
     "What am I even thinking about?"
@@ -4013,16 +4016,16 @@ label ch15_exclusive_sayori_together:
     y "Yes, he is."
     y "It's [player]."
     show yuri zorder 2 at t32
-    ay "Oh, you told me about him!"
+    ay "Oh, you told me about [player_reflexive]!"
     "Why does this name feel so familiar?"
-    "Not just his name..."
-    "But his whole being."
-    "I only read his name and remembered his face."
+    "Not just [player_possessive] name..."
+    "But [player_possessive] whole being."
+    "I only read [player_possessive] name and remembered [player_possessive] face."
     "So why...?"
-    "Walk towards him."
-    "I start walking towards him."
+    "Walk towards [player_reflexive]."
+    "I start walking towards [player_reflexive]."
     ay "[player], I want to ask you something."
-    "I tap him on the shoulder."
+    "I tap [player_reflexive] on the shoulder."
     show sayori glitch zorder 2 at t11
     python:
         currentpos = get_pos()
@@ -5406,8 +5409,8 @@ label ch15_mall_shared:
         "Huh?"
         "What did I do...?"
         m "He hasn't been here since the club's inception."
-        m "But that hasn't made him any less valuable than anyone else."
-        m "In fact, it's thanks to him that I'm here."
+        m "But that hasn't made [player_reflexive] any less valuable than anyone else."
+        m "In fact, it's thanks to [player_reflexive] that I'm here."
         m "I'm glad he joined at the beginning of everything important."
         m "If he didn't, I don't know where I'd be right now."
     else:
@@ -5420,7 +5423,7 @@ label ch15_mall_shared:
         m "Sure, there are and will continue to be difficult times."
         m "But it's nothing I--"
         m "{i}We{/i} can't get through."
-        m "After all, I wouldn't be here if it wasn't for him."
+        m "After all, I wouldn't be here if it wasn't for [player_reflexive]."
         m "Being here at the start of everything important..."
         m "It's almost like fate."
     "I look at Monika, not quite understanding what she means."

@@ -195,7 +195,7 @@ label ch30_main:
     m "Ahaha..."
     m "You know, I guess we can just skip over that stuff at this point."
     m "After all, I'm not even talking to that person anymore, am I?"
-    m "That 'you' in the game, whatever you want to call him."
+    m "That 'you' in the game, whatever you want to call [player_reflexive]."
     m "I'm talking to {i}you{/i}, [player]."
     $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
     if not list(set(process_list).intersection(stream_list)):
@@ -204,6 +204,7 @@ label ch30_main:
             m "...Do you actually go by [currentuser] or something?"
     m "Now that I think about it, I don't really know anything about the real you."
     m "In fact, I don't even know if you're a boy or a girl..."
+    m "I know you chose something before but for all I know, you could have been lying."
     m "Well, I guess it doesn't really matter."
     m "Wait..."
     m "You do know I'm aware that this is all a game, right?"
@@ -1547,7 +1548,7 @@ label ch30_36:
     m "Gosh, it all sounds like a dream come true."
     m "When you're here, everything that we do is fun."
     m "I'm so happy that I'm your girlfriend, [player]."
-    m "I'll make you a proud boyfriend~"
+    m "I'll make you a proud [player_gender]friend~"
     return
 
 label ch30_37:

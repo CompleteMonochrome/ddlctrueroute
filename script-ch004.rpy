@@ -514,7 +514,10 @@ label ch4_exclusive_natsuki:
     n 2by "What, you're not even gonna offer to take this heavy bag from me?"
     n "Where's your hospitality, [player]?"
     mc "Come on..."
-    mc "Since when did I need to be a gentleman?"
+    if player_gender == "boy":
+        mc "Since when did I need to be a gentleman?"
+    else:
+        mc "Since when did I need to be a {i}lady{/i}?"
     "I grab the bag Natsuki holds out to me."
     mc "Ghk--"
     mc "This is ridiculously heavy--!"

@@ -51,7 +51,7 @@ label christmas_chapter:
     s "{cps=5}I really hope you know what you're doing...{/cps}{nw}"
     stop music fadeout 1.5
     scene bg mall_day with Dissolve(1.5)
-    play music t5christmas fadein 3.0
+    play music t2 fadein 3.0
     "I'm completely useless here."
     "I don't know the girls well enough to get each of them the right gift!"
     "What am I going to do?"
@@ -79,7 +79,7 @@ label christmas_chapter:
     "Could I still do something like that?"
     "Or would that look like me just being cheap?"
     show mysteriousclerk 1cha zorder 2 at t11
-    cl "Hey there, little man."
+    cl "Hey there, little [player_other]."
     cl "Watch where you're going."
     "A strange looking man appears in front of me."
     "He seems to be stocking the shelves with...something."
@@ -112,12 +112,15 @@ label christmas_chapter:
     cl "Want some help getting some gifts?"
     mc "What? No."
     mc "Especially not from--"
-    cl "Call me Nick."
+    cl "Please, my friends call me Clark."
+    cl 2che "But that's not actually my name!"
+    cl 2cha "Nor are you my friend."
+    cl "So instead, you may call me Nick."
     $ cl_name = "Nick"
     mc "Right...Well, I was just about to leave, {i}Nick{/i}."
     mc "So, if you don't mind."
     "I try to make my way past him but he blocks my way."
-    cl "Ho, ho, ho little man."
+    cl "Ho, ho, ho little [player_other]."
     cl "Are you sure you wanna do that?"
     cl "I know exactly the sort of thing those girls would like."
     cl "Well, it's more of a fifty-fifty."
@@ -179,9 +182,31 @@ label christmas_chapter:
     menu:
         mc "In that case, I'll take the..."
         "Cow plush.":
-            $ christmas_gifts[0] = 0
+            $ christmas_gifts[0] = "plush"
+            "Sayori has one of these already."
+            "Or at least, something similar to this."
+            "I'm sure she'd appreciate a miniature version."
         "Management book.":
-            $ christmas_gifts[0] = 1
+            $ christmas_gifts[0] = "book"
+            "Well..."
+            "We are a club about literature."
+            "I guess this book would help her."
+            "Somehow."
+            "Even though she's not the president of the club."
+            "Maybe she could "
+    mc "I'll take the--"
+    cl "Great!"
+    "Without even letting me finish, Nick takes the [christmas_gifts][0] and puts it into a plastic bag."
+    cl "Now moving on."
+    cl "How about we get a gift for the tall one?"
+    mc "The tall one?"
+    cl "The creepy one."
+    mc "Creepy one? No one is--"
+    cl "You know the one, likes horror books..."
+    cl "Has a knife collection..."
+    mc "What?!"
+    cl "The gifts for her are right over here."
+    
     $ persistent.did_christmas_event = True
     $ special_chapter = False
     $ pause(1.0)

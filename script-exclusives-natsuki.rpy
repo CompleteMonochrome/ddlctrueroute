@@ -735,7 +735,7 @@ label natsuki_exclusive_3:
     mc "It's not that, it's just I've only spent money on Sayori."
     mc "It's a little weird spending it for someone else."
     mc "But you're one of my friends so I'll make an exception."
-    n 1q "{i}(He thinks of me as one of his friends?){/i}"
+    n 1q "{i}([cPlayer_personal] thinks of me as one of [player_possessive] friends?){/i}"
     "Suddenly Natsuki's face lightens up."
     n 1d "W-Well, I am a great friend, aren't I?"
     n "Ehehe."

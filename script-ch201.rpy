@@ -20,7 +20,7 @@ label ch201_main:
     y 1a "I hope this isn't too overwhelming of a commitment for you."
     y 1u "Making you dive headfirst into literature when you're not accustomed to it..."
     show natsuki glitch1 zorder 2 at i33
-    n "Oh, come on! Like he deserves any slack."
+    n "Oh, come on! Like [player_personal] deserves any slack."
     n 4e "You already had to be dragged here by Monika."
     n "I don't know if you plan to just come here and hang out, or what..."
     n "But if you don't take us seriously, then you won't see the end of it."
@@ -172,7 +172,7 @@ label ch201_end:
     show natsuki zorder 2 at t22
     show yuri zorder 3 at f21
     y 1k "And [player] liked my poem too, you know."
-    y "He even told me he was impressed by it."
+    y "[cPlayer_personal] even told me [player_personal] was impressed by it."
     stop music fadeout 1.0
     "Natsuki suddenly stands up."
     show yuri zorder 2 at t21
@@ -187,10 +187,10 @@ label ch201_end:
     y 1o "Uu..."
     y "You...You're just..."
     "Yuri stands up as well."
-    y 2r "Maybe you're just jealous that [player] appreciates my advice more than he appreciated yours!"
+    y 2r "Maybe you're just jealous that [player] appreciates my advice more than [player_personal] appreciated yours!"
     show yuri zorder 2 at t21
     show natsuki zorder 3 at f22
-    n 1e "Huh! And how do you know he didn't appreciate {i}my{/i} advice more?"
+    n 1e "Huh! And how do you know [player_personal] didn't appreciate {i}my{/i} advice more?"
     n "Are you that full of yourself?"
     show natsuki zorder 2 at t22
     show yuri zorder 3 at f21
@@ -255,7 +255,7 @@ label ch201_end:
     show natsuki zorder 3 at f22
     n 1e "Yeah, go on!"
     n "Let [player] hear everything you really think!"
-    n "I'm sure he'll be head over heels for you after this!"
+    n "I'm sure [player_personal]'ll be head over heels for you after this!"
     show natsuki zorder 2 at t22
     show yuri zorder 3 at f21
     y 3n "A-Ah--!"

@@ -1033,7 +1033,7 @@ label yuri_exclusive_4:
             y 1by4 "She started making the other daughter more cold to everyone else."
             y "And the wife started harming herself."
             y 1by1 "She'd find time to be alone and just start ripping through her own skin."
-            y "Of course, the lumberjack knew nothing and the wanderer just grew closer and closer with him."
+            y "Of course, the lumberjack knew nothing and the wanderer just grew closer and closer to him."
             y 1by6 "Wow, maybe I was wrong."
             y 2bc "This sounds a lot like a horror book now."
             y 2ba "Eventually the wife and the daughter kill themselves."

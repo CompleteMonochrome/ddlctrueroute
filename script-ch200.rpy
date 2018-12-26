@@ -152,8 +152,12 @@ label ch200_main2:
     y "Eh?"
     y "A...a guest?"
     show natsuki 4c zorder 2 at t32
-    n "Seriously? You brought a boy?"
-    n "Way to kill the atmosphere."
+    if player_gender == "boy":
+        n "Seriously? You brought a boy?"
+        n "Way to kill the atmosphere."
+    else:
+        n "Seriously? Another girl?"
+        n "I thought you wanted some diversity, Monika..."
     show monika 3m zorder 3 at f31
     m "Don't be mean, Natsuki..."
     m 3b "...But anyway, welcome to the club, [player]!"
@@ -165,7 +169,10 @@ label ch200_main2:
 
     show natsuki zorder 3 at f32
     n 5c "So, let me guess..."
-    n "You're Monika's boyfriend, right?"
+    if player_gender == "boy":
+        n "You're Monika's boyfriend, right?"
+    else:
+        n "You're part of the school committee for approving clubs, right?"
     show natsuki zorder 2 at t32
     mc "Wha--"
     mc "No, I'm not!"
@@ -187,7 +194,7 @@ label ch200_main2:
     show yuri zorder 2 at t33
     mc "Yeah... It's nice to meet both of you."
     show monika zorder 3 at f31
-    m 1a "So, I ran into [player] in a classroom, and he decided to come check out the club."
+    m 1a "So, I ran into [player] in a classroom, and [player_personal] decided to come check out the club."
     m "Isn't that great?"
     show monika zorder 2 at t31
     show natsuki zorder 3 at f32
@@ -197,7 +204,7 @@ label ch200_main2:
     show natsuki zorder 2 at t32
     show monika zorder 3 at f31
     m 1e "Sorry, sorry!"
-    m "I didn't forget that, but I just happened to run into him."
+    m "I didn't forget that, but I just happened to run into [player_reflexive]."
     show monika zorder 2 at t31
     show yuri zorder 3 at f33
     y 1a "In that case, I should at least make some tea, right?"
