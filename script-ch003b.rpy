@@ -703,7 +703,7 @@ label ch3_maine_name:
     "Just Monika and nothing else."
     "Just Monika."
     stop music fadeout 2.0
-    scene bg new_house
+    scene bg m_house
     with wipeleft_scene
     "I arrive at Monika's house."
     "I don't even know how I got here."

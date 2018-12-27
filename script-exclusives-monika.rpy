@@ -476,7 +476,7 @@ label monika_exclusive_2_important:
     m 1j "Ah, so you two are pretty close, huh?"
     m "Ehehe~"
     mc "W-Wait! It's not like that."
-    mc "We're just close friends because we grew up as neighbours..."
+    mc "We're just close friends because we grew up as neighbors..."
     mc "But she's still one of the most important people in my life."
     mc "I'm not sure where I'd be today without her."
     mc "Probably in the anime club or pouting at home."

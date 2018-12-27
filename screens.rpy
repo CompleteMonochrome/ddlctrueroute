@@ -1810,7 +1810,7 @@ transform -1 show_hide_fade_after:
     linear 0.4 alpha 1.0
     on hide:
         alpha 1.0
-        linear 1.0 alpha .0
+        linear 1.4 alpha .0
 
 
 init -1 style notify_frame is empty

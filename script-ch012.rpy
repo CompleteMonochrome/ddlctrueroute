@@ -1610,7 +1610,7 @@ label ch12_play:
     show monika at thide
     hide monika
     "Footsteps echo across the gym as a person walks in."
-    "It's hard to recognise them at first since we're on the other side of the gym."
+    "It's hard to recognize them at first since we're on the other side of the gym."
     "Could this be the special guest Sayori was talking about?"
     "Why did she leave the gym when he arrived?"
     "As he gets closer, I begin to recognize his face."
@@ -2042,7 +2042,7 @@ label ch12_harukiplace:
             $ haruki_personality[1] = False
         "Baking.":
             $ haruki_personality[1] = False
-        "Modelling.":
+        "Modeling.":
             $ haruki_personality[1] = False
     s 2k "Now..."
     s "This next one is...pretty sensitive."
@@ -2645,7 +2645,7 @@ label ch12_harukiplace:
             s "So I think we should call the end of the meeting there."
             show sayori zorder 2 at t31
             show yuri 2pa zorder 3 at f33
-            y "It does seem like an appropiate time to end the meeting."
+            y "It does seem like an appropriate time to end the meeting."
             show monika zorder 3 at f32
             show yuri zorder 2 at t33
             if monika_type == 0:
@@ -2914,7 +2914,7 @@ label ch12_harukiplace:
             mc "I'm just speechless, really."
             show sayori 1d zorder 3 at f32
             s "It was a pretty weird thing to happen, right?"
-            s 1l "Especally that whole keyboard thing with Monika!"
+            s 1l "Especially that whole keyboard thing with Monika!"
             s 1d "Anyway, there isn't really a point continuing without Natsuki."
             s "So you guys can go home now!"
             show monika zorder 3 at f31
@@ -3444,7 +3444,7 @@ label ch12_harukinoplace:
     mc "But if it makes you all feel safer, then..."
     show monika 3h zorder 3 at f41
     m "I agree with Yoshiko."
-    m "Sensing his ill intent again would be the most appropiate thing to do right now."
+    m "Sensing his ill intent again would be the most appropriate thing to do right now."
     show monika zorder 2 at t41
     show sayori 1j zorder 3 at f43
     s "Why are you both so suspicious towards Maemi now that he's activated his powers?"
@@ -3500,7 +3500,7 @@ label ch12_harukinoplace:
         d "She was so nervous back then, like you right now."
         d 1k "You might be nervous because of different reasons."
         d "For Haruki.."
-        d 1m "She had to perform in front of a large crowd of people in the theatre..."
+        d 1m "She had to perform in front of a large crowd of people in the theater..."
         d "But you..."
         d 1k "You have to perform in front of me."
         show dadsuki zorder 2 at t51
@@ -4257,7 +4257,7 @@ label ch12_end:
         else:
             $ ch12_markov_agree = False
             show monika 2h zorder 2 at t11
-            m "You've disapppointed me."
+            m "You've disappointed me."
             mc "What are you--"
             $ currentpos = get_pos()
             play music mkov fadeout 2.0 fadein 0.5

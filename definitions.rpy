@@ -207,7 +207,6 @@ image bg glitch = LiveTile("bg/glitch.jpg")
 
 image markovred = "#f21237"
 image monikared = "#e03638"
-image bg new_house = "bg/house.jpg"
 image bg gym = "mod_assets/images/bg/gym.png"
 image bg rooftop = "mod_assets/images/bg/rooftop.png"
 image bg library = "mod_assets/images/bg/library.png"
@@ -249,8 +248,10 @@ image bg school_front = "mod_assets/images/bg/school_front.png"
 image bg school_hallway = "mod_assets/images/bg/school_hallway.png"
 image bg school_insideroof = "mod_assets/images/bg/school_insideroof.png"
 image bg school_stairway = "mod_assets/images/bg/school_stairway.png"
+image bg m_house = "mod_assets/images/bg/m_house.png"
 image bg m_livingroom = "mod_assets/images/bg/m_livingroom.png"
 image bg m_bedroom = "mod_assets/images/bg/m_bedroom.png"
+image bg anticshop = "mod_assets/images/bg/anticshop.png"
 
 image glitch_color:
     ytile 3

@@ -5168,7 +5168,7 @@ label ch13_exclusive_yuri:
             $ yuri_approval += 1
             "I decide to take one of Yuri's books."
             "The one I chose looks the most tame out of all of them."
-            "I also take three of my own books, two of which are mangas."
+            "I also take three of my own books, two of which are manga."
             "The third one was a popular book series that someone gifted me that I never got around to reading."
         "Select from my own books only.":
             $ ch13_yuri_books = False
@@ -5372,7 +5372,7 @@ label ch13_exclusive_monika:
         "Trying to keep up with her pace is difficult..."
         "But I shouldn't complain."
     "After all, I did choose her."
-    show bg new_house with wipeleft_scene
+    show bg m_house with wipeleft_scene
     if monika_type == 0:
         show monika 1a zorder 2 at t11
         m "We're finally here!"
@@ -5687,7 +5687,7 @@ label ch13_exclusive_monika:
         "I find myself staring at Monika's smile."
         "It's really easy to lose myself in it..."
         m "Now we have all the privacy we could want."
-        m 1b "By now, you've locked yourself into an ending that might be undesireable."
+        m 1b "By now, you've locked yourself into an ending that might be undesirable."
         m "Ahaha, at least for everyone else."
         m 2b "For us, it'll be like a new beginning."
         m 2m "I don't quite understand these feelings."
@@ -7865,7 +7865,7 @@ label ch13_natsuki_outcomeshared_date:
     mc "Right..."
     show natsuki at thide
     hide natsuki
-    "I move a few metres away from Natsuki and answer the phone."
+    "I move a few meters away from Natsuki and answer the phone."
     mc "Hello?"
     if not sayori_confess:
         mc "Sayori, why are you calling?"
@@ -8682,7 +8682,7 @@ label ch13_natsukidate:
     mc "It has?"
     n 1bb "Yeah, just something about Naomik seems so familiar."
     mc "Doesn't seem familiar to me."
-    n "Hmm...how do you think it's spelt?"
+    n "Hmm...how do you think it's spelled?"
     mc "If I had to guess..."
     "I take out a pen from my pocket and write it down the spelling on a tissue."
     "I give the tissue to Natsuki."
@@ -8773,7 +8773,7 @@ label ch13_natsukidate:
     mc "Your cupcakes are still better though."
     n 1bo "W-What?"
     mc "The cupcakes you brought in for me on the first day."
-    mc "It beats these cupcakes anyday."
+    mc "It beats these cupcakes any day."
     "I put down the third and final cupcake I have."
     n 1bq "You're just saying that."
     mc "Am I?"
@@ -8986,7 +8986,7 @@ label ch13_natsukidate:
     mc "But I wanted to."
     mc "I'm just glad you agreed."
     n 2bt "It's hard to say no to you, you know?"
-    n "Everytime I do, it makes me have second thoughts."
+    n "Every time I do, it makes me have second thoughts."
     mc "Well, I want you to be direct with me from now on."
     mc "If you don't like something about me, then you should tell me."
     mc "I want to become better, for you."

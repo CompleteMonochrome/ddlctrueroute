@@ -1894,7 +1894,7 @@ label ch14_end:
     s "That's for the rest of us to decide!"
     s 2a "I should probably start showing you guys the books that I chose though."
     "Sayori gets four books from her bag."
-    "All of them have rather exquisitive covers compared to all the books I've seen so far today."
+    "All of them have rather exquisite covers compared to all the books I've seen so far today."
     "One of them even looks like it's gold plated."
     "Everyone looks kinda surprised at how fancy the books Sayori brought look."
     "So much for saving the best for last..."
@@ -1909,7 +1909,7 @@ label ch14_end:
     show sayori 2l zorder 3 at f42
     s "That was a bit of an exaggeration!"
     s "I have read these books more than once but not six times."
-    s 4d "But everytime I did read them, it made me cry."
+    s 4d "But every time I did read them, it made me cry."
     s "I'm sure you guys will probably feel something as well."
     s 4l "The books aren't just pure sadness!"
     s "There's a lot of happy parts and sweet parts too."
@@ -2373,7 +2373,7 @@ label ch14_end:
         s "Becoming better friends?"
         s "If they were on a team, wouldn't they already be friends?"
         show sayori zorder 2 at t42
-        mc "The teams are chosen based on a skillset."
+        mc "The teams are chosen based on a skill set."
         mc "So five people with compatible skills were put into a team."
         mc "They don't like each other at the beginning but despite that they're still one of the best teams of the sport."
         mc "It might be interesting to do a play on that and show the people how the sport works."
@@ -2539,7 +2539,7 @@ label ch14_end:
                     $ sayori_personality += 1
                     "I guess I should just tell them."
                     "I don't want to dig an even deeper hole for myself."
-                    mc "Instead of embarassing myself even further, I'll be honest with you all."
+                    mc "Instead of embarrassing myself even further, I'll be honest with you all."
                     mc "I have no idea what this book is about."
                     mc "I know it's popular and I did read a little bit of it but I can't seem to remember."
                     mc "So instead of lying, I'm just going to say that."
@@ -2600,7 +2600,7 @@ label ch14_end:
                         mc "We know the story already."
                         mc "It's um..."
                         "I look at the cover and see a cave."
-                        mc "About some time travellers who go back in time to the bronze age."
+                        mc "About some time travelers who go back in time to the bronze age."
                         mc "They go--"
                         show natsuki 1h zorder 3 at f42
                         n "[player]...I don't think that's right at all."
@@ -2626,7 +2626,7 @@ label ch14_end:
                         show sayori zorder 3 at f42
                         if sayori_confess and not sayori_dumped:
                             s 1d "[player], I love you and everything..."
-                            s 1l "But save yourself the embarassment and just skip your next two books."
+                            s 1l "But save yourself the embarrassment and just skip your next two books."
                             s "Alright?"
                         else:
                             s 1k "I don't even want to hear your next two choices."
@@ -3070,7 +3070,7 @@ label ch14_end:
     "It would only make sense."
     if ((natsuki_date and natsuki_approval > 2) or (yuri_date and yuri_approval > 2)) and ch14_player_choice:
         if natsuki_date:
-            "So what would have happend if Natsuki didn't ask who I was voting for?"
+            "So what would have happened if Natsuki didn't ask who I was voting for?"
         else:
             "So what would have happened if Yuri didn't vote with me?"
         "Would we all have ended up with one vote?"
@@ -3082,7 +3082,7 @@ label ch14_end:
         "I voted for myself..."
         "Does that mean we all have one vote?"
         "How is it going to work if that's the case?"
-        "If we do a revote, then we're still going to vote on our own books."
+        "If we do a re-vote, then we're still going to vote on our own books."
         "Unless Sayori has some sort of plan..."
     show sayori 2a zorder 3 at f42
     s "Alright, everybody!"
@@ -3199,7 +3199,7 @@ label ch14_end:
         show sayori 1a zorder 3 at f42
         s "Well, there are only five of us."
         s "It might be a tie between two books."
-        s 1d "In that case, we'll just do a revote on those two books only."
+        s 1d "In that case, we'll just do a re-vote on those two books only."
     s 1b "But there's still one vote that hasn't been counted yet."
     s "So let's see what book it's for..."
     "Sayori takes the last piece of paper and unfolds it."
@@ -3471,7 +3471,7 @@ label ch14_end:
                     show monika 1e zorder 3 at f44
                     m "If we're all agreed on it, then I suppose it's okay."
                     m "There doesn't really seem to be another option."
-                    m "Unless we do some kind of revote but we're not allowed to choose our own book."
+                    m "Unless we do some kind of re-vote but we're not allowed to choose our own book."
                     m 1l "But that would be redundant."
                 elif monika_type == 1 and ch12_markov_agree:
                     show monika 1a zorder 3 at f44
@@ -3727,7 +3727,7 @@ label ch14_end:
     elif monika_type == 1 and ch12_markov_agree:
         show monika 1n zorder 3 at f44
         m "This all seems like a rather big responsibility, don't you think?"
-        m "Not that I'm complaing but..."
+        m "Not that I'm complaining but..."
         m "None of us have any experience in directing anything, like Natsuki said."
         m 1m "It's going to be difficult getting it the way you want it."
         m "And what's this about rehearsals?"
@@ -3801,7 +3801,7 @@ label ch14_end:
     show sayori zorder 2 at t42
     n "I think I know."
     n "I think what Yuri is trying to say is that you're more..."
-    n "...charimastic?"
+    n "...charismatic?"
     n 2k "Since you've been president, it's been pretty obvious that you're getting better at leading people."
     n "And that includes managing us, despite everything that's happened."
     n "You always know what to say or do, in any situation even if it isn't always the right thing."
@@ -4276,7 +4276,7 @@ label ch14_exclusive_yuri:
     mc "Or at least the important stuff?"
     y 2bf "We probably have time to buy them but I'm not sure if we'll be able to start creating some."
     mc "I see..."
-    mc "Then we shoudn't waste any more time, right?"
+    mc "Then we shouldn't waste any more time, right?"
     mc "Let's get going."
     "I try to stand up through the pain in my head."
     if sayori_personality <= 0:
@@ -4361,7 +4361,7 @@ label ch14_exclusive_yuri:
     s "You gave me a list, [player]."
     "Sayori gives me a piece of paper."
     "It's definitely the one Yuri and I made yesterday."
-    "It has some checks on it, presumeably to indicate the stuff in the wheelbarrow."
+    "It has some checks on it, presumably to indicate the stuff in the wheelbarrow."
     s 1bb "Is something wrong?"
     show sayori zorder 2 at t21
     "I turn towards Yuri."
@@ -4725,7 +4725,7 @@ label ch14_exclusive_yuri:
             mc "There's nothing wrong with that."
             y 2bk "I know, I'm just saying this isn't something I would voluntarily read."
             mc "Right..."
-            y 1bf "Anyway, I can sort of sympathise with her."
+            y 1bf "Anyway, I can sort of sympathize with her."
             y "The main protagonist, that is."
             y "Her life isn't what it seemed."
             y "So she's finding someone who seems authentic."
@@ -4870,7 +4870,7 @@ label ch14_exclusive_yuri:
             y 2bq "To certain others you aren't ordinary..."
             y "Y-You're..."
             mc "What?"
-            y 2bs "N-Nevermind, [player]."
+            y 2bs "N-Never mind, [player]."
         mc "Anyway, I think that an ordinary person suddenly getting the power to control events is interesting."
         mc "Would he be a force for good or use it for his own selfish means?"
         mc "It kinda makes me question what I'd do in the same situation."
@@ -5180,7 +5180,7 @@ label ch14_exclusive_natsuki:
             d "What is it?"
             show dadsuki zorder 2 at t21
             "I look back and the sheet is on top of the easel."
-            "Natsuki looks at me curiously, signalling me to bring them over."
+            "Natsuki looks at me curiously, signaling me to bring them over."
             "She hides in the corridor."
             mc "I think it's better if I just show you."
             "I step aside and let them through."
@@ -5223,7 +5223,7 @@ label ch14_exclusive_natsuki:
             show natsuki 1be zorder 3 at hf32
             n "Quiet!"
             "Haruki and Yasuhiro stop talking and turn towards Natsuki."
-            "I guess they were't expecting her to yell."
+            "I guess they weren't expecting her to yell."
             n 1br "Jeez, we didn't do anything like that!"
             n 1bi "Just let me finish, okay?"
             n "[player] had an idea."
@@ -5433,7 +5433,7 @@ label ch14_exclusive_natsuki:
             "Suddenly an alarm chimes."
             mo 1e "The cake!"
             "Haruki looks flustered."
-            mo "I need to get the special ingredident!"
+            mo "I need to get the special ingredient!"
             mo "Yasuhiro!"
             show momsuki at thide
             hide momsuki
@@ -5963,7 +5963,7 @@ label ch14_exclusive_natsuki:
         "Natsuki does the same."
         mc "Here we go."
         "I begin reading the first chapter at a decent pace."
-        "I suspect that Natsuki reads more books than I doso she should easily be able to keep up."
+        "I suspect that Natsuki reads more books than I do so she should easily be able to keep up."
         "I try to speed it up a little bit."
         "When it's her turn to read she uses the same pace as I did."
         "It's a good pace for both of us and allows me to understand what's happening in the book."
@@ -6272,7 +6272,7 @@ label ch14_exclusive_natsuki:
         mc "Where are they anyway?"
         mc "Shouldn't they be here?"
         n 1bu "I-I don't know."
-        n 1bs "Maybe they're upstairs or doing some yardwork."
+        n 1bs "Maybe they're upstairs or doing some yard work."
         n "But it looks like they're finished with the kitchen."
         n 1bt "Which means we can go there after we come up with a design."
         "She takes another bite from the cake."
@@ -6315,7 +6315,7 @@ label ch14_exclusive_natsuki:
     n 1bo "I don't want you getting robbed on the way home or anything!"
     n "So it might be a good idea to leave while there's still light."
     n 1br "I insist you prioritize your safety first."
-    mc "That's surpisingly responsible of you."
+    mc "That's surprisingly responsible of you."
     n 2bo "What's {i}that{/i} meant to mean?"
     if natsuki_date:
         mc "Ahaha, it was great seeing you, Natsuki."
@@ -6551,7 +6551,7 @@ label ch14_exclusive_monika:
         m "Do you think that maybe...it's the book?"
         m 1bo "I-It's possible, isn't it?"
         m "It's affecting my decisions."
-        m 1bp "My judgement."
+        m 1bp "My judgment."
         m "I don't even know if speaking to you now was my idea."
         m 1bf "It was like...an impulse."
         m "I'm scared."
@@ -6849,7 +6849,7 @@ label ch14_exclusive_monika:
         m 2ba "Yes, that's probably it."
         m "I'm using Monika's powers on you right now."
         m "And not my own."
-        m 2be "So you still have some semblence of free will."
+        m 2be "So you still have some semblance of free will."
         m "A very little part of you exists in your current state."
         m 2ba "But I suppose that's enough for you to want to ask questions."
         m "Ahaha."
@@ -7582,7 +7582,7 @@ label ch14_exclusive_monika:
                 m 2bd "Being able to set events in motion like that..."
             else:
                 m 2be "It's...different."
-                m "I don't exactly read mangas, [player]."
+                m "I don't exactly read manga, [player]."
                 m "So I don't really know how to evaluate one properly."
                 mc "I see..."
                 m 2ba "That said, I am kind of interested to see where the story goes."
@@ -8279,7 +8279,7 @@ label ch14_exclusive_sayori:
         "I get the first volume of manga and open to the first page."
     else:
         "I take the book and open to the first page."
-    "Sayori clicks her laptop a few times before signalling me to start."
+    "Sayori clicks her laptop a few times before signaling me to start."
     mc "Here goes nothing."
     if ch14_overall_choice == "Natsuki" or ch14_overall_choice == player:
         "I begin to describe the setting of what's going on in the manga."
@@ -8439,7 +8439,7 @@ label ch14_exclusive_sayori:
             s 1bj "No, they didn't!"
             mc "A new person joins the club?"
             mc "They write poems to each other?"
-            mc "Sounds pretty coincidential to me."
+            mc "Sounds pretty coincidental to me."
             "Or maybe there's more to it than that."
             s 1bk "There's still more to go."
             s "It could still change."
@@ -8512,7 +8512,7 @@ label ch14_exclusive_sayori:
         s 1bc "Do you really think you're that ordinary?"
         s "There's a lot of things special about you, [player]."
         mc "Maybe."
-        mc "But that's just how I percieve myself."
+        mc "But that's just how I perceive myself."
         s "You think you're just like that guy in the manga?"
         mc "In a lot of ways, yeah."
         mc "We do the same things..."
@@ -8568,7 +8568,7 @@ label ch14_exclusive_sayori:
     "Sayori either didn't hear me or ignored what I just said."
     "She seems like she's waiting for an answer from Natsuki."
     "I wonder how her preparations are going."
-    "And everyone elses..."
+    "And everyone else's..."
     "I should focus on myself too."
     "I still have to write a poem when I get home."
     "We're still doing this after all..."

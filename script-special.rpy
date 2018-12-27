@@ -179,7 +179,7 @@ label special_chapter:
     show sayori 2bc zorder 3 at f32
     show yuri zorder 2 at t33
     s "You're right, let's go!"
-    scene bg new_house with wipeleft_scene
+    scene bg m_house with wipeleft_scene
     "The four of us arrive in front a house."
     "This should be the right one."
     "Sayori seems confident it is."
@@ -271,7 +271,7 @@ label special_chapter:
     m "W-What are you doing here?"
     mc "Monika..."
     "I look towards the car they're hiding behind."
-    "Sayori is signalling me something."
+    "Sayori is signaling me something."
     "From where I am, it looks like random hand signs that don't mean anything."
     mc "Hello..."
     m 2bf "Hi?"
@@ -419,7 +419,7 @@ label special_chapter:
     show natsuki zorder 2 at t43
     show yuri 1bh zorder 3 at f44
     y "Your mother can bake?"
-    y "I thought she was just an actor in the theatre..."
+    y "I thought she was just an actor in the theater..."
     y 2bf "I didn't know she had that much talent."
     show natsuki 2bd zorder 3 at f43
     show yuri zorder 2 at t44

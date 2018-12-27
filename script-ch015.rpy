@@ -1075,7 +1075,7 @@ label ch15_main:
     n "Since we're going to be so busy with our own preparations."
     show natsuki zorder 2 at t43
     show yuri 2pf zorder 3 at f44
-    y "It feels like we're really underprepared for this."
+    y "It feels like we're really under prepared for this."
     y "We only started preparing for this a couple of days ago..."
     y 2ph "But at the same time, I don't have any worries for our preparations."
     y "It's strange."
@@ -2531,7 +2531,7 @@ label ch15_exclusive_monika_together:
     m 1c "Yeah, if you're done all here?"
     mc "I'm ready."
     m 1a "Then let's go."
-    scene bg new_house with wipeleft_scene
+    scene bg m_house with wipeleft_scene
     "Once again, the walk is quiet again."
     "I don't know if she knows just how awkward this is for me."
     "I feel like I should be doing more to interact with her."
@@ -2547,7 +2547,7 @@ label ch15_exclusive_monika_together:
     show monika at thide
     hide monika
     "Monika heads into her house."
-    "I sigh and sit down on the seat out on her frontyard."
+    "I sigh and sit down on the seat out on her front yard."
     "I really don't know Monika's feelings towards me."
     "Should I even be thinking about this kinda thing?"
     if sayori_confess and not sayori_dumped:
@@ -5087,41 +5087,41 @@ label ch15_mall_shared:
     m "Or we're going to miss it."
     show monika zorder 2 at t44
     mc "Miss what?"
-    show monika zorder 3 at f44
+    show monika 3bb zorder 3 at f44
     m "The sunset!"
     m "It's going to be beautiful tonight."
     m "We wouldn't want to miss it."
     show yuri zorder 3 at f42
-    show monika zorder 2 at t44
+    show monika 3bb zorder 2 at t44
     y "I wouldn't mind seeing it."
     y "In fact, I'd love to."
     y "Something about watching the sun dip into the waves and the moon taking it's place really excites me."
-    show natsuki zorder 3 at f41
+    show natsuki 2bg zorder 3 at f41
     show yuri zorder 2 at t42
     n "Um...Yuri, you know the sun doesn't actually dip into the waves, right?"
     n "It's just crossing over onto the other side of the planet."
     show natsuki zorder 2 at t41
-    show yuri zorder 3 at f42
+    show yuri 3bf zorder 3 at f42
     y "Of course I did!"
-    y "I was speaking metaphorically."
-    show natsuki zorder 3 at f41
+    y 3bg "I was speaking metaphorically."
+    show natsuki 2br zorder 3 at f41
     show yuri zorder 2 at t42
     n "Oh, now that does make sense."
-    n "W-Well, in case Monika or [player] or even Ayame didn't know."
+    n 1bs "W-Well, in case Monika or [player] or even Ayame didn't know."
     n "Now they do, so...!"
     show natsuki zorder 2 at t41
-    show ayame zorder 3 at f43
+    show ayame 1be zorder 3 at f43
     ay "Hehe, you guys are great!"
     ay "I know I'm gonna have a wonderful time when I officially join."
     show ayame zorder 2 at t43
-    show monika zorder 3 at f44
+    show monika 4bj zorder 3 at f44
     m "Come on guys! Let's hurry and get to the marina."
     m "I don't know if you guys have ever seen it but..."
     if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
-        m "The view really is beautiful."
+        m 2be "The view really is beautiful."
         m "I used to go see it a lot when I was younger."
     else:
-        m "The view is something you definitely need to see."
+        m 2be "The view is something you definitely need to see."
     show monika zorder 2 at t44
     mc "Is watching the sunset really that interesting?"
     "And doing a reflection while watching one?"
@@ -5129,47 +5129,50 @@ label ch15_mall_shared:
     if ch15_s_together:
         "...That's what we were going to do?"
         "I'm glad I know that now."
-    show yuri zorder 3 at f42
+        "I'm still trying to piece together what the hell is going on from my memories."
+    show yuri 2bf zorder 3 at f42
     y "[player], have you never seen a sunset?"
     show yuri zorder 2 at t42
-    mc "I haven't really ever gone out of my way to see one."
-    show monika zorder 3 at f44
+    mc "Of course I have."
+    mc "But I haven't really ever gone out of my way to see one for the sake of it."
+    show monika 2bb zorder 3 at f44
     m "Then this will be a great experience for you, [player]."
     m "It might not seem like much but a sunset can mean a lot of different things to a lot of different people."
     if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
-        m "For example, to some, it might even symbolize something..."
+        m 2ba "For example, to some, it might even symbolize something..."
         m "...romantic."
         show monika zorder 2 at t44
         mc "Romantic?"
         mc "How exactly?"
-        show monika zorder 3 at f44
+        show monika 2bl zorder 3 at f44
         m "I'm not sure."
         m "Maybe just watching such beautiful view incites feelings of love."
     else:
-        m "To some, it could mean the end of something."
-        m "And the start of a new one."
+        m 2bf "To some, it could mean the end of something."
+        m 2ba "And the start of a new one."
         show monika zorder 2 at t44
         mc "You mean like the sun disappearing and the moon appearing?"
-        show monika zorder 3 at f44
+        show monika 2bl zorder 3 at f44
         m "Something like that."
-    show natsuki zorder 3 at f41
+    show natsuki 1bg zorder 3 at f41
     show monika zorder 2 at t44
     n "Can we get going already?"
     n "We might miss it if we stay here too long."
     show natsuki zorder 2 at t41
-    show ayame zorder 3 at f43
-    ay "Natsuki..."
+    show ayame 1ba zorder 3 at f43
+    ay "Natsuki...?"
     "Ayame looks at Natsuki as if to make sure that was her name."
     "Natsuki looks at her and gives a slight nod."
-    ay "...is right."
+    ay 1bb "...is right."
     ay "After all, you still have to do your reflections, right?"
     show ayame zorder 2 at t43
     if ch15_s_together:
         "Wait, how does she know that?"
         "I--"
-        "{i}She{/i} wasn't there when Monika was talking about it...was she?"
-        "Maybe our memories are..."
-    show monika zorder 3 at f44
+        "{i}She{/i} wasn't there when Monika was talking about the reflections part...was she?"
+        "Maybe she overheard her."
+        "Or maybe our memories are..."
+    show monika 1ba zorder 3 at f44
     m "That's right."
     m "Come on, follow me I know a shortcut."
     scene bg marina_sunset with wipeleft_scene
@@ -5178,31 +5181,33 @@ label ch15_mall_shared:
     "As a result, we got to the marina pretty quickly."
     "We went to the pier, since that was the best place to watch the sunset according to Monika."
     "As I can see the sun setting, I can sort of get the appeal to it."
-    show monika 1ba zorder 3 at t42
+    show monika 4ba zorder 3 at t42
     m "Okay, everyone!"
     m "We're here!"
-    show ayame 1ba zorder 3 at f43
-    ay "I can't really stay for long."
+    show ayame 1bb zorder 3 at f43
+    ay "Wow, this place is incredible."
+    ay "I haven't really been to this side of the mall before."
+    ay 1bg "It's too bad that I can't really stay for long."
     ay "There's so many things I need to do for tomorrow."
     ay "So I'll try to reflect as best as I can and as quick as I can."
-    ay "Even though there isn't really much I can reflect on."
+    ay 1bi "Even though there isn't really much I can reflect on."
     show ayame zorder 2 at t43
     show yuri 1ba zorder 3 at f44
     y "You could reflect on your first impressions of everyone."
     y "You do have that notebook after all."
-    show natsuki 1ba zorder 3 at f41
+    show natsuki 1bc zorder 3 at f41
     show yuri zorder 2 at t44
     n "Notebook?"
     n "What do you mean by notebook?"
     show natsuki zorder 2 at t41
-    show ayame zorder 3 at f43
+    show ayame 1bj zorder 3 at f43
     ay "Oh, you didn't know?"
     ay "I suppose it is a rather odd thing to ask for."
     ay "I can imagine why Yuri didn't tell you all."
     show ayame zorder 2 at t43
-    show yuri zorder 3 at f44
+    show yuri 3bo zorder 3 at f44
     y "Ayame...!"
-    show natsuki zorder 3 at f41
+    show natsuki 4bf zorder 3 at f41
     show yuri zorder 2 at t44
     n "What didn't Yuri tell us?"
     n "What are you hiding, Yuri?"
@@ -5211,87 +5216,87 @@ label ch15_mall_shared:
         mc "It's not that big of a deal."
     else:
         mc "What is it?"
-    show yuri zorder 3 at f44
+    show yuri 3bo zorder 3 at f44
     y "I was going to tell you all but..."
     "Yuri looks at everyone then at the ground."
     y "I just...didn't."
-    show monika zorder 3 at f42
+    show monika 2bm zorder 3 at f42
     show yuri zorder 2 at t44
     m "What kind of stuff did you put in this notebook anyway?"
-    m "I'm sure it wasn't anything bad...right, Yuri?"
+    m 2bn "I'm sure it wasn't anything bad...right, Yuri?"
     show monika zorder 2 at t42
-    show yuri zorder 3 at f44
+    show yuri 3bp zorder 3 at f44
     y "N-No! O-Of course not!"
     y "I would never do that to you guys..."
-    show ayame zorder 3 at f43
+    show ayame 1bg zorder 3 at f43
     show yuri zorder 2 at t44
     ay "I'm really sorry about this."
     ay "I didn't mean to cause any trouble."
     ay "I just wanted to know more about the club."
     show ayame zorder 2 at t43
-    show yuri zorder 3 at f44
+    show yuri 2bn zorder 3 at f44
     y "I thought it would be easier to join that way."
     y "After all, no one wants to join something they'll later regret, right?"
     y "It would only cause pain to the person joining and the club they joined in the end."
-    y "And I thought it wasn't an unreasonable request so I went along with it..."
+    y 2bq "And I thought it wasn't an unreasonable request so I went along with it..."
     y "It was just a notebook containing some details about everyone in the club."
     y "N-Nothing personal, I think."
-    show monika zorder 3 at f42
+    show monika 4bl zorder 3 at f42
     show yuri zorder 2 at t44
     m "What did you write about us and the club?"
     m "Ahaha, hopefully nothing embarrassing~"
-    show natsuki zorder 3 at f41
+    show natsuki 4bw zorder 3 at f41
     show monika zorder 2 at t42
     n "Yeah!"
     n "Yuri didn't talk herself up, did she?"
     show natsuki zorder 2 at t41
-    show ayame zorder 3 at f43
+    show ayame 1be zorder 3 at f43
     ay "Oh, I can assure you it's nothing like that!"
     ay "From what I've read, you seem like great people."
-    ay "And from what I've read of Yuri, it doesn't seem like that at all, Natsuki."
+    ay 1bj "And from what I've read of Yuri, it doesn't seem like that at all, Natsuki."
     "Ayame smiles reassuringly."
-    ay "Though some things don't really add up properly."
+    ay 1bi "Though some things don't really add up properly."
     ay "I'm sure it's nothing though, probably just some small mistakes because it was so sudden."
-    show monika zorder 3 at f42
+    show monika 2bc zorder 3 at f42
     show ayame zorder 2 at t43
     m "I'm curious to know what sort of things don't add up."
     m "Yuri is definitely careful with her work so making mistakes like that seems out of character."
-    show natsuki zorder 3 at f41
+    show natsuki 2bc zorder 3 at f41
     show monika zorder 2 at t42
     n "That's a good point."
     n "But I'm sure it's probably just due to the preparations she had to do."
     n "She probably wasn't thinking straight."
     show natsuki zorder 2 at t42
-    show yuri zorder 3 at f44
-    y "It wasn't that, I can assure you."
+    show yuri 1bf zorder 3 at f44
+    y "It wasn't that, I'm certain of it."
     y "I definitely made this carefully."
-    y "I wouldn't want to give false information about the club."
+    y 1bg "I wouldn't want to give false information about the club."
     show yuri zorder 2 at t44
     mc "So what exactly didn't add up, Ayame?"
-    show ayame zorder 3 at f43
+    show ayame 1ba zorder 3 at f43
     ay "Well, everything about you, Yuri and Natsuki make sense."
     ay "All the things Yuri put in there seem to have no conflicts that I could find."
-    ay "But there were some things relating to Sayori and Monika."
+    ay 1bg "But there were some things relating to Sayori and Monika that just...seemed conflicting."
     show ayame zorder 2 at t43
-    show yuri zorder 3 at f44
+    show yuri 2be zorder 3 at f44
     y "Are you sure?"
     y "I'm almost certain I wrote the events that happened in chronological order."
-    y "M-Maybe I did make a mistake."
+    y 2bo "M-Maybe I did make a mistake."
     show monika zorder 3 at f42
     show yuri zorder 2 at t44
     if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
-        m "D-Did you say you wrote them in chronological order?"
+        m 2bn "D-Did you say you wrote them in chronological order?"
     else:
-        m "In chronological order? Interesting..."
+        m 2bc "In chronological order? Interesting..."
     show monika zorder 2 at t42
-    show yuri zorder 3 at f44
+    show yuri 3bf zorder 3 at f44
     y "That's right."
     y "So I'm not sure how Ayame could have--"
-    show monika zorder 3 at f42
+    show monika 2be zorder 3 at f42
     m "Ayame, can I see that notebook for a second?"
     m "You do have it with you, right?"
     show monika zorder 2 at t42
-    show ayame zorder 3 at f43
+    show ayame 1bh zorder 3 at f43
     ay "I have it right here."
     "Ayame takes the notebook out from her purse."
     ay "It's been really helpful but I don't really feel like I'll need it much longer if at all."
@@ -5299,72 +5304,75 @@ label ch15_mall_shared:
     if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
         "Starting from the back of it."
     ay "I haven't really finished it yet, I'm up to reading about the play with the lumberjack."
-    ay "It's really fascinating to see what kinds of stuff your club does, you know?"
+    ay 1bj "It's really fascinating to see what kinds of stuff your club does, you know?"
     ay "But I've learned lots of things about everyone too!"
     ay "Like how [player] joined because of cupcakes."
     "I almost forgot."
     ay "How Natsuki is an extraordinary baker."
     "Natsuki gives a smug expression."
-    ay "And how Yuri is extremely talented."
+    ay 1bh "And how Yuri is extremely talented."
     "Yuri looks away but smiles shyly."
     ay "Sayori seems like a really nice girl who's great at diffusing situations."
-    ay "But from the description Yuri gave, it's strange to think that she's the president of your club."
+    ay 1bi "But from the description Yuri gave, it's strange to think that she's the president of your club."
     ay "From what I know and what I've read, she doesn't really have the qualities of a leader."
     ay "I think she would have been more suited to be vice president."
-    ay "And instead the president should have been--"
+    ay 1bj "And instead the president should have been--"
     show monika zorder 3 at f42
     show ayame zorder 2 at t43
     if monika_type == 0 or monika_type == 1:
-        m "Oops!"
+        m 1bn "Oops!"
+        play sound "mod_assets/sfx/splash.ogg"
+        $ pause(2.0)
         "Monika drops the book into the water."
-        m "My hand slipped...I'm so sorry!"
+        m 1bf "My hand slipped...I'm so sorry!"
     else:
-        m "Do you mind if I keep this for a while?"
+        m 1ba "Do you mind if I keep this for a while?"
         m "At least just the first couple of pages."
     show monika zorder 2 at t42
-    show ayame zorder 3 at f43
+    show ayame 1bi zorder 3 at f43
     if monika_type == 0 or monika_type == 1:
         ay "Well, that's quite unfortunate."
-        ay "But it's okay."
+        ay 1bj "But it's okay."
     else:
         ay "Sure, take the whole notebook if you have to."
-        ay "I don't really need it anymore."
+        ay 1bj "I don't really need it anymore."
     ay "I'd much prefer to learn about the five of you in person anyway."
     ay "It's much better than doing it through a notebook."
     show ayame zorder 2 at t43
-    show yuri zorder 3 at f44
+    show yuri 3bg zorder 3 at f44
     y "I spent a good amount of time writing that for you." 
     y "I hope it wasn't a waste of time..."
-    show ayame zorder 3 at f43
+    show ayame 1bh zorder 3 at f43
     show yuri zorder 2 at t44
     ay "No, of course not!"
     ay "It was actually a lot more helpful than I expected."
-    ay "To be honest, it was a lot to take in."
-    ay "But your amazing handwriting really helped."
+    ay 1bb "To be honest, it was a lot to take in."
+    ay 1be "But your amazing handwriting really helped."
     "Ayame smiles widely."
     ay "So don't worry, it was a big help."
-    ay "Usually, I like to take things as they go."
+    ay 1bb "Usually, I like to take things as they go."
     ay "I always say the best way to experience something is to dive right in."
     ay "I guess the club was just an exception for me because it was something I was nervous about."
-    show monika zorder 3 at f42
+    show monika 2be zorder 3 at f42
     show ayame zorder 2 at t43
     m "There's nothing to worry about!"
     m "I assure you."
     m "We're all friendly people."
     show monika zorder 2 at t42
-    show ayame zorder 3 at f43
+    show ayame 1bd zorder 3 at f43
     ay "Hehe, I can see that."
-    show natsuki zorder 3 at f41
+    show natsuki 2bg zorder 3 at f41
     show ayame zorder 2 at t43
-    n "Can we get on with it?"
-    n "We're here to do a reflection, right?"
+    n "I don't want to be {i}that{/i} person but..."
+    n 2bf "Can we get on with it?"
+    n 2be "We're here to do a reflection, right?"
     n "So let's hurry up and do one."
     show natsuki zorder 2 at t41
-    show monika zorder 3 at f42
+    show monika 2ba zorder 3 at f42
     m "You're right."
     m "So...now that we're here."
-    # CG HERE L u L, maybe a dynamic one where the sun slowly sets?
-    scene black with dissolve_cg
+    # Sunset CG thats really bad rip
+    scene sunset_cg1_bg with dissolve_cg
     play music t10 fadeout 2.0
     m "Let's reflect about the club as we stare into the sunset."
     m "Does anyone want to start us off?"

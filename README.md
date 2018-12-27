@@ -52,7 +52,7 @@ A: It's probably an undefined variable. It might be my fault but I have done upd
 **Credits:**
 
 - Proofreaders: the people of my discord server
-- Background Art: petan, mugenjohncel, BIGLOBE, Nuxill
+- Background Art: petan, mugenjohncel, BIGLOBE, Nuxill, hello hello, ぐったりにゃんこ [3DBG]
 - Character Art: Monika After Story Team (particularly: Ryuse [for the new Monika leaning sprite], TheAloofPotato, NotSoGiantDad, Daydreamer, Danymations, Yuro Foxclaw, Therationalpi), Reddit users /u/SovietSpartan, /u/singusasongpianoman, /u/Drealengo, /u/NormallyAverage, Discord users Erni_Editions™, Malukah Maker, bman and finally MUGかぶり and wingzofdarkness from lemmasoft forums
 - Music: G-RiNe Project, ScubDomino and Reddit users: /u/Zerorurariro and /u/-ShInIgAmIsAmA-
 - Special Thanks: truesonic53, Chronos, /r/DDLCMods Discord server, Creativetacos

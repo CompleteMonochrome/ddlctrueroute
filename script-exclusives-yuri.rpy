@@ -1122,7 +1122,7 @@ label yuri_exclusive_4:
                 mc "I want to help you get through this."
                 mc "I know you're not in control when you cut yourself."
                 mc "It's like someone is making you do it..."
-                mc "And all you feel is ecstacy..."
+                mc "And all you feel is ecstasy..."
                 mc "Right?"
                 y 3bt "How..."
                 y "...did you know that?"

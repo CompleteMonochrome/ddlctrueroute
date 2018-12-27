@@ -216,6 +216,9 @@ image m_cg1_exp1:
 image m_cg1_exp2:
     "mod_assets/images/cg/m_cg1_exp2.png"
 
+image sunset_cg1_bg:
+    "mod_assets/images/cg/cg1_bg.png"
+
 image s_kill_bg:
     subpixel True
     "images/cg/s_kill_bg.png"
