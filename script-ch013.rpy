@@ -8945,7 +8945,10 @@ label ch13_natsukidate:
     show natsuki zorder 2 at t21
     show mysteriousclerk 1e zorder 3 at f22
     cl "You should listen to the young lady."
-    cl 4e "Women know best, after all."
+    if player_gender == "boy":
+        cl 4e "Women know best, after all."
+    else:
+        cl 4e "She's a lot wiser than you."
     "The clerk chuckles to himself."
     cl 4k "Now leave."
     show natsuki 2be zorder 3 at f21

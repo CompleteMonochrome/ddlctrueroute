@@ -1,3 +1,11 @@
+init python:
+    if not persistent.ayame_deleted:
+        def ayame_deletecheck(event, interact=True, **kwargs):
+            try:
+                renpy.file("../characters/ayame.chr")
+            except:
+                renpy.jump("ch15_delete")
+
 label ch15_main:
     scene black
     show sayori 1a zorder 2 at t11
@@ -999,7 +1007,7 @@ label ch15_main:
     n 1d "Here."
     show sayori 2d zorder 3 at f42
     show natsuki zorder 2 at t43
-    s "Oh...yeah, everything's fine."
+    s "Oh...yeah, everything is fine."
     "Sayori takes the cupcake from Natsuki."
     s "I was just thinking..."
     "She takes a small bite out of the cupcake."
@@ -2098,6 +2106,7 @@ label ch15_exclusive_yuri:
     mc "I guess so."
     show yuri 3bs
     "Yuri smiles."
+    scene bg mall_interior with wipeleft_scene
     mc "So where exactly are we going first?"
     y 2ba "The store right next to the entrance."
     "Yuri points towards a store."
@@ -2934,7 +2943,7 @@ label ch15_exclusive_sayori:
     "Every single door in her house was open."
     "There's no reason for that, is there?"
     "I check the back of her house and as I expected, it's open."
-    "The other houses in the neighbourhood didn't have open doors."
+    "The other houses in the neighborhood didn't have open doors."
     "It was just Sayori."
     "I'm getting worried."
     "I take my phone out and dial her number."
@@ -3044,7 +3053,7 @@ label ch15_exclusive_sayori_together:
     "There's something in my room."
     "Something that I just know will lift Sayori's mood."
     mc "Sayori, can you wait for me?"
-    "She unburies her head."
+    "She pulls her head back from me."
     s "W-What?"
     mc "I need to get something from my room."
     mc "My house is right around the corner, I won't be a minute."
@@ -3259,7 +3268,7 @@ label ch15_exclusive_sayori_together:
     "But..."
     "The roads are almost empty."
     "The streets and sidewalks are filled with people but quite literally the only things on the roads are public transport."
-    "Sayori got a lot of phonecalls on the way here."
+    "Sayori got a lot of phone calls on the way here."
     "But she didn't answer any of them, instead letting it get to voicemail."
     "She just told me that it wasn't important."
     "I guess whoever was calling her she was trying to ignore because after the third call she turned off the sound on her phone."
@@ -3626,7 +3635,7 @@ label ch15_exclusive_sayori_together:
     show sayori zorder 2 at t21
     mc "Wait a second..."
     mc "What kind of power do you have?"
-    mc "Is it anytihng like Sayori's?"
+    mc "Is it anything like Sayori's?"
     "The clerk gives me a confused expression."
     show mysteriousclerk 1b zorder 3 at f22
     cl "So she didn't tell you, did she?"
@@ -3946,7 +3955,7 @@ label ch15_exclusive_sayori_together:
     "Something in the back of my head is telling me to go to the food court."
     "That's where they are, right?"
     "I suppose I'll find out."
-    scene bg mall_sunset with wipeleft
+    scene bg mall_interior with wipeleft
     "I make it to the food court."
     "There are people all over the place."
     "I notice a group of four people walking away."
@@ -4252,7 +4261,7 @@ label ch15_exclusive_sayori_alone:
         "So maybe I should go to the mall."
     "I put my phone away."
     "I'm still worried about Sayori."
-    "I don't know what kind of situation she could have possibily gotten herself into."
+    "I don't know what kind of situation she could have possibly gotten herself into."
     "But after that call with Monika."
     "I guess I'm a little more reassured."
     "Sayori can take care of herself."
@@ -4272,9 +4281,10 @@ label ch15_exclusive_sayori_alone:
     return
 
 label ch15_mall_shared:
-    scene bg mall_sunset with wipeleft
+    scene bg mall_interior with wipeleft
     play music t3
     "I sit down on the bench just outside of the food court."
+    "It's almost sunset just from looking at the light outside."
     if ch13_name != "Sayori":
         "[ch13_name] told me to wait for her here so that's what I'm doing."
         "I think after that, we're pretty much ready for tomorrow."
@@ -4372,7 +4382,7 @@ label ch15_mall_shared:
     y 2bt "Why I turned crazy, you mean...?"
     y "I'm not sure."
     y "It could be."
-    y 2bv "I mean at first I thought it was because of me being so obssessed with you."
+    y 2bv "I mean at first I thought it was because of me being so obsessed with you."
     y "Because of the way you treated me."
     if yuri_date:
         mc "Do you really think that's the reason?"
@@ -4746,7 +4756,7 @@ label ch15_mall_shared:
     s "And having fun!"
     $ currentpos = get_pos()
     $ audio.t3c = "<from " + str(currentpos) + " loop 4.618>bgm/3.ogg"
-    scene bg mall_sunset
+    scene bg mall_interior
     show natsuki 2be zorder 2 at t31
     show yuri 3bq zorder 2 at t32
     show monika 4be zorder 3 at f33
@@ -5438,3 +5448,33 @@ label ch15_mall_shared:
     "The beginning of everything important...?"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
+
+label ch15_delete:
+    python:
+        persistent.yasuhiro_deleted = True
+        n.display_args["callback"] = None
+        mc.display_args["callback"] = None
+        m.display_args["callback"] = None
+        s.display_args["callback"] = None
+        d.display_args["callback"] = None
+        narrator.display_args["callback"] = None
+        _history_list = []
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    window hide(None)
+    play sound "sfx/s_kill_glitch1.ogg"
+    scene black
+    $ pause(0.25)
+    stop sound
+    hide screen tear
+    window show(None)
+    $ gtext = glitchtext(70)
+    "[gtext]{nw}"
+    window auto
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    window hide(None)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(1.0)
+    stop sound
+    hide screen tear
+    window show(None)
+    jump ch15_bad

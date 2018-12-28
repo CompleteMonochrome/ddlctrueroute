@@ -887,17 +887,17 @@ label ch14_end:
     show sayori 1a zorder 3 at f42
     show yuri zorder 2 at t43
     s "Of course not, Yuri!"
-    s "We've all got books that might be embarassing to share."
+    s "We've all got books that might be embarrassing to share."
     s "But that's nothing compared to what's going to happen on Friday!"
     s "It's gonna be--"
     show natsuki 1e zorder 3 at f41
     show sayori zorder 2 at t42
-    n "I dont't think you're helping, Sayori..."
+    n "I don't think you're helping, Sayori..."
     n "Look at her!"
     show natsuki zorder 2 at t41
     "Yuri looks a bit shaken from what Sayori said."
     "I guess I am a little bit too."
-    "Doing something like a play in front of so many people seems like it would be really embarassing."
+    "Doing something like a play in front of so many people seems like it would be really embarrassing."
     "For some reason though, I don't feel so tense about it."
     show sayori 2l zorder 3 at f42
     s "Sorry! I didn't mean it like that."
@@ -1034,7 +1034,7 @@ label ch14_end:
     y 2pj "It's about this person who joins some kind of club at school."
     y "Everything seems normal at first but as time goes on, weird thing start to happen."
     y 1q "People start dying and memories are changed."
-    y "The person becomes traumatised because they can't escape or do anything to stop the madness that's happening."
+    y "The person becomes traumatized because they can't escape or do anything to stop the madness that's happening."
     y 1s "Eventually, there's only--"
     "Yuri pauses and smiles."
     y 2pq "Actually, I think saying that would be too much of a spoiler."
@@ -1625,8 +1625,8 @@ label ch14_end:
         m 1a "Anyway, the fourth and final book is probably my favorite one out of all of them."
         "Monika takes the fourth book from the desk and holds it high for everyone to see."
         m 1e "It's probably the book that's closest to my heart, which is fitting given it's name."
-        m "It's called 'Sound of your Heartbeat' and it centers around a girl who comes to a realisation about life."
-        m 1f "Even though she's surrounded by a lot of friends, she starts to despise life because of the realisation."
+        m "It's called 'Sound of your Heartbeat' and it centers around a girl who comes to a realization about life."
+        m 1f "Even though she's surrounded by a lot of friends, she starts to despise life because of the realization."
         m "It becomes really difficult for her to do anything until this one guy comes along and changes her life."
         m 1e "Over the course of a week, they become great friends but they figure out that it's almost as if the world is keeping them apart."
         m "They have to figure out a way to be together to reach their happy ending against all the odds."
@@ -1748,7 +1748,7 @@ label ch14_end:
         mc "Obviously there are some books that we brought that we knew wouldn't get a single vote."
         "I know that's the case for me."
         mc "Monika also brought in a book that she still wanted to share."
-        mc "So maybe we can look on the brightside?"
+        mc "So maybe we can look on the bright side?"
         mc "After all, we still have to vote on a book."
         mc "It'd be pretty bad if we didn't vote on someone else's choice out of spite."
         show sayori 1n

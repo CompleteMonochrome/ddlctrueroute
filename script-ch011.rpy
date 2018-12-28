@@ -661,6 +661,7 @@ label ch11_main:
         "The second place I usually go to in the mall is probably the anime and manga retailer."
         "They sell things at a reasonable price and always have the latest stuff when it comes out."
         "I don't really have any money, but it's a nice place to hang out since the people there are pretty friendly."
+        scene bg mall_interior with wipeleft_scene
         "I've never noticed how big the mall was until now."
         "From the arcade to the store I like, it's a good five minute walk."
         "I've never had to go to a second option before because of how little I visit the mall, so I'm only now realizing how big this place is."
@@ -668,7 +669,7 @@ label ch11_main:
         "There's no one else here except me and the person at the counter."
         "I vaguely recognize him from all the times I've been here before."
         "There doesn't seem to be much that caught my eye here."
-        "There's some new seasons of an anime I kinda watch and a bunch of mangas I don't really have any interest in."
+        "There's some new seasons of an anime I kinda watch and a bunch of manga I don't really have any interest in."
         "I guess it's good that I don't have much money since there's nothing here I really want to buy."
         "I wave goodbye to the clerk but just as I'm about to leave I notice something."
         "The manga that Sayori got us..."

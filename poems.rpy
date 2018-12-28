@@ -2288,6 +2288,9 @@ label showpoem(poem=None, music=True, track=None, revert_music=True, img=None, w
             $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>" + track
         elif poem == poem_m5:
             $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>mod_assets/bgm/5_monika2.ogg"
+        # If Markov takes over Monika, she plays a perfect Okay, Everyone! Or after enough practice (chapter 14), she plays it perfectly regardless
+        elif poem.author == "monika" and chapter >= 7 and (not did_all_tasks or monika_type == 1 or chapter >= 14):
+            $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>mod_assets/bgm/5_monikaperfect.ogg"
         else:
             $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>bgm/5_" + poem.author + ".ogg"
         stop music fadeout 2.0

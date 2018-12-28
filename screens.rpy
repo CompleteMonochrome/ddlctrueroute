@@ -451,6 +451,19 @@ init -1 python:
 
 
 init -501 screen navigation():
+    python:
+        import datetime
+        currentdate = datetime.date.today()
+        weekrange = datetime.timedelta(days = 7)
+
+        customstartoutlines = [(4, "#b59", 0, 0), (2, "#b59", 2, 2)]
+        customstarthover_outlines = [(4, "#fac", 0, 0), (2, "#fac", 2, 2)]
+        customstartinsensitive_outlines = [(4, "#fce", 0, 0), (2, "#fce", 2, 2)]
+
+        if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2018, 12, 23) + weekrange))) and persistent.arc_clear[0]:
+            customstartoutlines = [(4, "#228B22", 0, 0), (2, "#228B22", 2, 2)]
+            customstarthover_outlines = [(4, "#32CD32", 0, 0), (2, "#32CD32", 2, 2)]
+            customstartinsensitive_outlines = [(4, "#00FF00", 0, 0), (2, "#00FF00", 2, 2)]
 
     vbox:
         style_prefix "navigation"
@@ -482,7 +495,7 @@ init -501 screen navigation():
                                 true=Function(HideConfirmThenName),
                                 false=Start("choose_start")),
                             no_action=Hide("confirm")),
-                        false=Function(HideConfirmThenName))
+                        false=Function(HideConfirmThenName)) text_outlines customstartoutlines text_hover_outlines customstarthover_outlines text_insensitive_outlines customstartinsensitive_outlines
 
             else:
 

@@ -192,7 +192,7 @@ init python:
 
 
 
-label poem(transition=True,totalWords=20,ayame_poem=False):
+label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame"):
     if ayame_poem:
         stop music
     else:
@@ -330,7 +330,7 @@ label poem(transition=True,totalWords=20,ayame_poem=False):
                                 s[k] = random.choice(nonunicode)
                         word = PoemWord("".join(s), 0, 0, 0, 0, False)
                     elif ayame_poem:
-                        s = list("Ayame")
+                        s = list(ayame_word)
                         for k in range(5):
                             if random.randint(0, 4) == 0:
                                 s[k] = ' '

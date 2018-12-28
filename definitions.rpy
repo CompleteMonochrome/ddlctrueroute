@@ -114,7 +114,7 @@ define audio.t5 = "<loop 4.444>bgm/5.ogg"
 define audio.t5b = "<loop 4.444>bgm/5.ogg"
 define audio.t5c = "<loop 4.444>bgm/5.ogg"
 # Mod Tracks - 18: Okay, Everyone (Christmas Edition)
-define audio.t5christmas = "<loop 1.611 to 1.28.844>mod_assets/bgm/5christmas.ogg"
+define audio.t5christmas = "<loop 4.444>mod_assets/bgm/5christmas.ogg"
 define audio.t6 = "<loop 10.893>bgm/6.ogg"
 define audio.t6b = "<loop 10.893>bgm/6.ogg"
 define audio.t6g = "<loop 10.893>bgm/6g.ogg"
@@ -236,6 +236,7 @@ image bg shop_day = "mod_assets/images/bg/shop_day.png"
 image bg shop_sunset = "mod_assets/images/bg/shop_sunset.png"
 image bg mall_day = "mod_assets/images/bg/mall_day.png"
 image bg mall_sunset = "mod_assets/images/bg/mall_sunset.png"
+image bg mall_interior = "mod_assets/images/bg/mall_interior.png"
 image bg city_day = "mod_assets/images/bg/city_day.png"
 image bg city_sunset = "mod_assets/images/bg/city_sunset.png"
 image bg portraitshop_day = "mod_assets/images/bg/portraitshop_day.png"
@@ -252,6 +253,8 @@ image bg m_house = "mod_assets/images/bg/m_house.png"
 image bg m_livingroom = "mod_assets/images/bg/m_livingroom.png"
 image bg m_bedroom = "mod_assets/images/bg/m_bedroom.png"
 image bg anticshop = "mod_assets/images/bg/anticshop.png"
+image bg ay_house = "mod_assets/images/bg/ay_house.png"
+image bg ay_livingroom = "mod_assets/images/bg/ay_livingroom.png"
 
 image glitch_color:
     ytile 3
@@ -4281,7 +4284,7 @@ default ch15_s_questions = [False,False,False,False,False,False,False,False,Fals
 default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","???","???","???","???","???"]
 default special_chapter = False
 default christmas_chapter = False
-default christmas_gifts = ["plush","knife",0,0,0]
+default christmas_gifts = ["plush","knife","manga","Xileh","bracelet"]
 default christmas_approval = 0
 default all_sayarc_poems_monika = False
 default monika_outfit = 0
