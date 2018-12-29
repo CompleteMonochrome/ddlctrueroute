@@ -623,6 +623,8 @@ label after_load:
         $ monika_outfit = 0
     if not hasattr(store, 'sayori_outfit'):
         $ sayori_outfit = 0
+    if not hasattr(store, 'ay_readpoem'):
+        $ ay_readpoem = False
     if not hasattr(store, 'sInList'):
         $ sInList = False
     if not hasattr(store, 'nInList'):

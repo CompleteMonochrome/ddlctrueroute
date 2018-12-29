@@ -4125,6 +4125,8 @@ default s_readpoem = False
 default n_readpoem = False
 default y_readpoem = False
 default m_readpoem = False
+# Really only here for christmas event but maybe I'll use later
+default ay_readpoem = False
 
 
 default n_read3 = False

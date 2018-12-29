@@ -1,5 +1,283 @@
+# Literally poem response start except not
+label giftexchange_start:
+    $ poemsread = 0
+    $ skip_transition = False
+    label giftexchange_loop:
+        $ skip_poem = False
+        if renpy.music.get_playing() and not (renpy.music.get_playing() == audio.t5christmas or renpy.music.get_playing() == audio.t5c):
+            $ renpy.music.play(audio.t5christmas, fadeout=1.0, if_changed=True)
+        if skip_transition:
+            scene bg ay_livingroom
+        else:
+            scene bg ay_livingroom
+            with wipeleft_scene
+        $ skip_transition = False
+        if not renpy.music.get_playing():
+            play music t5christmas
+    label giftexchange_start2:
+        $ skip_poem = False
+        if poemsread == 0:
+            $ menutext = "Who should I exchange gifts with first?"
+        else:
+            $ menutext = "Who should I exchange gifts with next?"
+
+        menu:
+            "[menutext]"
+
+            "Sayori" if not s_readpoem:
+                $ s_readpoem = True
+                "I wonder what Sayori got me. Hopefully something she knows I like."
+                "She's my good friend, after all."
+                call giftexchange_sayori
+            "Natsuki" if not n_readpoem:
+                $ n_readpoem = True
+                "I'm curious to know if the [christmas_gifts[2]] is gonna be something she likes."
+                "So I'll go exchange with Natsuki now."
+                call giftexchange_natsuki
+            "Yuri" if not y_readpoem:
+                $ y_readpoem = True
+                "The gift I got Yuri is definitely the most different out of everyone's."
+                "I hope she likes it."
+                call giftexchange_yuri
+            "Monika" if not m_readpoem:
+                $ m_readpoem = True
+                "The clerk seemed really different when it came to Monika."
+                "Regardless, I hope she enjoys the gift I give her."
+                call giftexchange_monika
+            "Ayame" if not ay_readpoem:
+                $ ay_readpoem = True
+                "I don't really know Ayame well."
+                "But I'd like to, and hopefully this gift will give us something to talk about."
+                call giftexchange_ayame
+        $ poemsread += 1
+        if poemsread < 5:
+            jump giftexchange_loop
+
+
+    $ s_readpoem = False
+    $ n_readpoem = False
+    $ y_readpoem = False
+    $ m_readpoem = False
+    $ ay_readpoem = False
+    $ poemsread = 0
+    return
+
+label giftexchange_sayori:
+    call giftexchange_startmusic
+    scene bg ay_livingroom
+    show sayori 1cha zorder 2 at t11
+    with wipeleft_scene
+    s "What's in the box, [player]?"
+    mc "You're gonna find out, aren't you?"
+    s "I told you, I can't wait!"
+    s "Come on! Gimme, gimme, gimme!"
+    mc "Alright, calm down..."
+    "I hand over the wrapped box with Sayori's name on it."
+    "Immediately, she begins tearing it apart."
+    mc "Wow..."
+    mc "You're really excited for this present, aren't you?"
+    s "Ehehe, it's coming from you after all~"
+    mc "I wouldn't get my hopes up if I were you."
+    s "Why not?"
+    "Sayori finishes 'unwrapping' the present."
+    "In reality, she basically tore through it, leaving lots of pieces of wrapping paper on the floor."
+
+    $ nextscene = "gift_" + christmas_gifts[0] + "_s"
+    call expression nextscene
+
+    s "Well..."
+    s "I guess it's my turn to share my gift."
+    s "So...here."
+    "Sayori hands me a neatly wrapped box."
+    "It has a red ribbon holding it all together."
+    s "Are you gonna open it?"
+    mc "Do you want me to?"
+    s "I wanna see your reaction."
+    mc "Then I suppose I will."
+    "I pull the ribbon and carefully tear the wrapping paper."
+    "There's a blank cardboard box inside."
+    s "Go on, open it."
+    "I open the cardboard box and pull out..."
+    mc "Is this a toy plush?"
+    mc "Of me?!"
+    s "Do you like it?"
+    "The plush is actually quite cute."
+    "I'd say it captures me pretty well."
+    mc "It's a wonderful gift."
+    mc "Thank you so much, Sayori."
+    s "Aww, you really mean it?"
+    mc "Of course I do."
+    mc "You had this custom made, didn't you?"
+    s "Mhm!"
+    s "The guy even charged extra because there was a lot of people doing something like this."
+    s "But I paid him anyway."
+    mc "Huh? Why?!"
+    mc "You don't need to go out of your way for me like that."
+    s "It wasn't just for you."
+    s "It was for everyone."
+    mc "You got everyone else something similar?"
+    s "Ehehe, yeah..."
+    s "But now I have no money..."
+    s "S-So..."
+    mc "You're not getting any money from me."
+    s "Aww, you big meanie!"
+    s "It's Christmas!"
+    mc "I know."
+    "I give Sayori a hug and she returns it."
+    mc "Merry Christmas, Sayori."
+    s "Merry Christmas, [player]!"
+    call giftexchange_revertmusic
+    return
+
+label giftexchange_natsuki:
+    call giftexchange_startmusic
+    scene bg ay_livingroom
+    show natsuki 1chc zorder 2 at t11
+    with wipeleft_scene
+
+    $ nextscene = "gift_" + christmas_gifts[2] + "_n"
+    call expression nextscene
+
+    mc "Merry Christmas, Natsuki."
+    n "Yeah, you too, [player]."
+    call giftexchange_revertmusic
+    return
+
+label giftexchange_yuri:
+    call giftexchange_startmusic
+    scene bg ay_livingroom
+    show yuri 1cha zorder 2 at t11
+    with wipeleft_scene
+
+    $ nextscene = "gift_" + christmas_gifts[1] + "_y"
+    call expression nextscene
+    mc "Merry Christmas, Yuri."
+    y "M-Merry Christmas, [player]..."
+    call giftexchange_revertmusic
+    return
+
+label giftexchange_monika:
+    call giftexchange_startmusic
+    scene bg ay_livingroom
+    show monika 1cha zorder 2 at t11
+    with wipeleft_scene
+
+    $ nextscene = "gift_" + christmas_gifts[4] + "_m"
+    call expression nextscene
+
+    mc "Merry Christmas, Monika."
+    m "Merry Christmas, [player]!"
+    call giftexchange_revertmusic
+    return
+
+label giftexchange_ayame:
+    # call giftexchange_startmusic
+    scene bg ay_livingroom
+    show ayame 1chh zorder 2 at t11
+    with wipeleft_scene
+
+    $ nextscene = "gift_" + christmas_gifts[3] + "_ay"
+    call expression nextscene
+
+    ay "Happy holidays, [player]!"
+    mc "Merry Christmas, Ayame."
+    # call giftexchange_revertmusic
+    return
+
+label gift_plush_s:
+    $ christmas_approval += 1
+    s "Oh my gosh!"
+    s "It's so cuuuuuuuuuuuuuuuuuuuuuuute!"
+    s "Thank you, thank you, thank you, [player]!"
+    mc "You're really into this, aren't you?"
+    s "Why wouldn't I be?"
+    s "Doing this is so much fun!"
+    mc "Does it look familiar at all to you?"
+    "Sayori stares at the cow plush I bought her."
+    s "It's..."
+    s "It's the same one from my room!"
+    mc "That's right."
+    s "That's even better!"
+    s "It's like a smaller version of it."
+    s "This is incredible."
+    mc "I think you're overstating what's really happening."
+    mc "But I'm glad you're enjoying it."
+    return
+
+label gift_book_s:
+    s "Eh...?"
+    s "A book?"
+    s "How Not To Break Things As A Manager?"
+    mc "You don't like it?"
+    s "I-I never said that."
+    s "I'm just wondering about a couple of things."
+    mc "What is it?"
+    s "Why would I need a book like this?"
+    s "And what kind of name is Clark Nick Mysterio Maximilian?"
+    mc "I thought if you ever started your own club, you could use it."
+    mc "Or maybe if you ever became a manager."
+    s "I see..."
+    s "Thanks, I guess."
+    mc "And the name?"
+    mc "I had no idea that was the author's name."
+    s "Ehehe, did you even really think about this gift?"
+    mc "..."
+    s "It doesn't matter."
+    s "I'm grateful anyway, [player]."
+    mc "I'm glad you're in good spirits, Sayori."
+    return
+
+label gift_manga_n:
+    return
+
+label gift_anime_n:
+    $ christmas_approval += 1
+    return
+
+label gift_knife_y:
+    $ christmas_approval += 1
+    return
+
+label gift_ARM_y:
+    return
+
+label gift_bracelet_m:
+    $ christmas_approval += 3
+    return
+
+label gift_Markov_m:
+    return
+
+label gift_Xileh_ay:
+    $ christmas_approval += 1
+    return
+
+label gift_Edom_ay:
+    return
+
+label giftexchange_startmusic:
+    $ currentpos = get_pos()
+    if poem.author == "monika":
+        $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>mod_assets/bgm/5_monikaperfect.ogg"
+    elif poem.author == "ayame":
+        $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>mod_assets/bgm/5_ayame.ogg"
+    else:
+        $ audio.t5b = "<from " + str(currentpos) + " loop 4.444>bgm/5_" + poem.author + ".ogg"
+    stop music fadeout 2.0
+    $ renpy.music.play(audio.t5b, channel="music_poem", fadein=2.0, tight=True)
+    return
+
+label giftexchange_revertmusic:
+    if music and revert_music:
+        $ currentpos = get_pos(channel="music_poem")
+        $ audio.t5c = "<from " + str(currentpos) + " loop 4.444>mod_assets/bgm/5christmas.ogg"
+        stop music_poem fadeout 2.0
+        $ renpy.music.play(audio.t5c, fadein=2.0)
+    return
+
 label christmas_chapter:
     # Alternate Reality?
+    $ chapter = 999
     scene black
     $ s_name = "???"
     $ cl_name = "???"
@@ -27,7 +305,7 @@ label christmas_chapter:
     s "I shouldn't complain."
     s "This is good for us."
     s "It's nice to have a little rest, I guess."
-    s "This is Christmas Eve..."
+    s "The time we're going to is Christmas Eve..."
     s "I know all about it."
     s "And yet, I don't know if that's because I've experienced it before..."
     s "...or because I've looked into it in your world."
@@ -63,6 +341,7 @@ label christmas_chapter:
     stop music fadeout 1.5
     scene bg mall_interior with Dissolve(1.5)
     play music t2 fadein 3.0
+    $ s_name = "Sayori"
     $ style.say_window = style.window_christmas
     "I'm completely useless here."
     "I don't know the girls well enough to get each of them the right gift!"
@@ -634,11 +913,20 @@ label christmas_chapter:
     if persistent.markov_agreed:
         $ markov_resistance += 5
     label christmas_monika_choice:
+    $ config.allow_skipping = True
+    $ gtext = glitchtext(10)
     if markov_resistance > 0 and markov_resistance < 5:
         $ style.say_dialogue = style.normal
         "What the...?"
         window auto
-        "I feel like...I can't make up my mind for some reason."
+        if markov_resistance == 4:
+            "I feel like...I can't make up my mind for some reason."
+        elif markov_resistance == 3:
+            "What is happening...?"
+        elif markov_resistance == 2:
+            "Is something wrong with me?"
+        elif markov_resistance == 1:
+            "This has to be some kind of trick."
     menu:
         "Obviously, I'm going to take the..."
         "Bracelet.":
@@ -646,6 +934,8 @@ label christmas_chapter:
             if markov_resistance > 0:
                 $ markov_resistance -= 1
                 $ style.say_dialogue = style.edited
+                $ config.skipping = False
+                $ config.allow_skipping = False
             if markov_resistance >= 4:
                 "Unacceptable."
             elif markov_resistance == 3:
@@ -661,6 +951,7 @@ label christmas_chapter:
                 "Not by him."
                 "And certainly not by some--"
                 $ style.say_dialogue = style.normal
+                $ config.allow_skipping = True
                 "What the hell?"
                 "It feels like a huge weight was just lifted off my shoulders..."
                 "Like I can finally think properly."
@@ -682,7 +973,7 @@ label christmas_chapter:
             "I don't know enough about the book to make the proper decision to gift it to her."
             "Plus the clerk sounded really nervous when he offered it to me."
             "It's the safe choice, that's for sure."
-        "Portrait of ³´µ¶·¸¹º»ÕÖØÚ¼Þßà½ÅâÆÇÛÝö÷":
+        "Portrait of [gtext]":
             $ christmas_gifts[4] = "Markov"
             if persistent.markov_agreed:
                 "This is the right choice."
@@ -776,7 +1067,7 @@ label christmas_chapter:
         mc "E-Eh?"
         mc "This is like the price of everything I'm buying twice over."
         cl "Your point?"
-        cl "The more you waste my time, the more"
+        cl "The more you waste my time, the more expensive it gets."
         "I pay the bizarre price on the register and take the plastic bag with the gifts."
         cl "Good day!"
         show mysteriousclerk at thide
@@ -790,6 +1081,37 @@ label christmas_chapter:
     "I mean he did manage to scare off Ayame..."
     "I should get home and finish wrapping these gifts though."
     "Hopefully everyone likes them."
+    scene bg house with wipeleft_scene
+    play music t2 fadeout 2.0
+    "I arrive home carrying my gifts for the others."
+    "But before I can enter my house, I'm interrupted."
+    show sayori 1ba zorder 2 at t11
+    s "Heeeeey!"
+    mc "What is it, Sayori?"
+    s "Just wondering what you have there."
+    s "Those aren't gifts, are they?"
+    s "You didn't go last minute shopping, did you?"
+    mc "I'm not gonna answer that."
+    mc "So what are you here for really?"
+    s "I just want to thank you."
+    mc "For what?"
+    s "For doing this."
+    s "I know you have other people you'd rather spend Christmas with."
+    s "I'm glad you're doing it with the club."
+    mc "It's really not a problem."
+    s "If you say so."
+    s "Don't forget to wrap your gifts~"
+    mc "Well, I was going to do that now."
+    mc "But you're in my way."
+    s "Oh..."
+    s "Then, see you tomorrow!"
+    mc "See you tomorrow."
+    s "Don't be late."
+    show sayori at thide
+    hide sayori
+    "Sayori hurries off home, probably to finish wrapping her own gifts."
+    "Something tells me I will be late."
+    "But I can't worry about that now, I got gifts to wrap."
     "Good thing I don't have to write a poem tonight."
     stop music fadeout 2.0
     if christmas_gifts[4] == "Markov":
@@ -823,8 +1145,10 @@ label christmas_chapter:
     "Her house looks really quite nice."
     "All the houses here do."
     "Why did someone like her decide to join the literature club...?"
-    show ayame 1bd zorder 2 at l11
+    show ayame 1chd zorder 2 at l11
     ay "[player]!!"
+    "Ayame seems to be wearing some kind of hat."
+    "I guess she's really getting into the holiday season."
     ay "You're finally here!"
     show ayame at h11
     "Ayame runs from her door and gives me a tight embrace."
@@ -844,7 +1168,9 @@ label christmas_chapter:
     ay "And trust me, yours wasn't even the best reaction!"
     ay "Now come oooooooooooooon!"
     "Ayame takes my hand and drags me inside."
-    scene bg ay_livingroom with wipeleft_scene
+    scene bg ay_livingroom
+    show ayame 1chd zorder 2 at t11
+    with wipeleft_scene
     play music t3 fadeout 2.0
     "Ayame takes me to her living room."
     "The other four are already there waiting."
@@ -853,10 +1179,111 @@ label christmas_chapter:
     "I feel like there's a lack of furniture in here just by how big it is."
     "I'm still at awe at how big her home is."
     "But I guess I shouldn't be so surprised considering where she lives..."
-    show sayori zorder 2 at t52
+    ay "Listen, I gotta quickly take care of something."
+    ay "I just remembered."
+    ay "Silly me, haha."
+    mc "Ha..."
+    "I force out an awkward laugh."
+    ay "Anyway, let them know you're here."
+    ay "I won't be a moment."
+    mc "Okay, good luck."
+    ay "Thanks~"
+    show ayame at thide
+    hide ayame
+    "Ayame runs off and I slowly enter the room."
+    "I was going to try to surprise them but..."
+    show sayori 1cha zorder 2 at t11
     s "[player]!"
     s "You're sooooooooooo late!"
     mc "Hello, Sayori."
+    s "What took you so long?"
+    s "We've been here for ages!"
+    show sayori zorder 2 at t21
+    show monika 1cha zorder 3 at f22
+    m "Don't get the wrong idea."
+    m "You really aren't that late."
+    m "And we've kept ourselves entertained."
+    show natsuki 1cha zorder 3 at f31
+    show sayori zorder 2 at t32
+    show monika zorder 2 at t33
+    n "Yeah, this place is huge..."
+    n "We spent like an hour just looking through every room."
+    n "I don't like it."
+    show natsuki zorder 2 at t41
+    show sayori zorder 2 at t42
+    show monika zorder 2 at t43
+    show yuri 1cha zorder 3 at f44
+    y "Um...I don't mean to interrupt this conversation."
+    y "But I believe it's your turn, Monika."
+    "Yuri looks at me from behind one of the cards she's holding."
+    y "Glad you could make it, [player]."
+    show yuri zorder 2 at t44
+    "It seems all the girls are wearing something to commemorate Christmas."
+    "Meanwhile, here I am just wearing plain regular clothes."
+    "I really should have worn something more...festive."
+    show monika zorder 3 at f43
+    m "Oh, right."
+    m "But I think now is a good time to stop."
+    m "We're all here, after all."
+    m "It would be a great time to start the gift exchange, right?"
+    m "What do you think, Sayori?"
+    show sayori zorder 3 at f42
+    show monika zorder 2 at t43
+    s "Huh?"
+    s "I dunno, you're the pres and all."
+    s "You should make the decision."
+    show natsuki zorder 2 at t51
+    show sayori zorder 2 at t52
+    show monika zorder 2 at t53
+    show ayame 1chd zorder 3 at f54
+    show yuri zorder 2 at t55
+    ay "Phew..."
+    ay "Sorry I'm late!"
+    ay "I had to take care of something quickly."
+    ay "Are we ready to start the gift exchange?"
+    show monika zorder 3 at f53
+    show ayame zorder 2 at t54
+    m "Ahaha, I suppose we are."
+    m "Okay, every--"
+    "Monika stops herself suddenly."
+    m "Hmm..."
+    show monika zorder 2 at t53
+    mc "Is something wrong?"
+    show monika zorder 3 at f53
+    m "Well...no."
+    m "It's just that it feels like its been a while since I've addressed the club like this."
+    show natsuki zorder 3 at f51
+    show monika zorder 2 at t53
+    n "What are you talking about?"
+    n "You've always addressed the club like this."
+    n "In fact, you did it the last time we all saw each other."
+    show natsuki zorder 2 at t51
+    show monika zorder 3 at f53
+    m "I suppose..."
+    m "Though I meant as the--"
+    "Monika simply smiles."
+    m "Never mind, let's just get started."
+    m "Okay, everyone!"
+    m "I want to make something clear before we begin."
+    m "When you get your present, you are allowed to open it if you want to."
+    show monika zorder 2 at t53
+    show yuri zorder 3 at f55
+    y "Isn't tomorrow the day that's meant to happen?"
+    show monika zorder 3 at f53
+    show yuri zorder 2 at t55
+    m "Well, yes."
+    m "But I know some of you are more eager than others to open your gifts."
+    m "Plus, it's not really compulsory to open it tomorrow."
+    show sayori zorder 3 at f52
+    show monika zorder 2 at t53
+    s "I have a question."
+    s "...Can we get started already?!"
+    s "I can't wait!"
+    show sayori zorder 2 at t52
+    show monika zorder 3 at f53
+    m "It's time to exchange our presents!"
+    call giftexchange_start
+
     $ persistent.did_christmas_event = True
     $ christmas_chapter = False
     $ pause(1.0)

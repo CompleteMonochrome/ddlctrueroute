@@ -304,6 +304,8 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame"):
 
 
         while True:
+            # Need to replace the s, Dan why did you even use s
+            wordmix = ""
             ystart = 160
             if persistent.playthrough == 2 and chapter == 2:
                 pstring = ""
@@ -322,21 +324,21 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame"):
                 ui.vbox()
                 for i in range(5):
                     if persistent.playthrough == 3:
-                        s = list("Monika")
+                        wordmix = list("Monika")
                         for k in range(6):
                             if random.randint(0, 4) == 0:
-                                s[k] = ' '
+                                wordmix[k] = ' '
                             elif random.randint(0, 4) == 0:
-                                s[k] = random.choice(nonunicode)
-                        word = PoemWord("".join(s), 0, 0, 0, 0, False)
+                                wordmix[k] = random.choice(nonunicode)
+                        word = PoemWord("".join(wordmix), 0, 0, 0, 0, False)
                     elif ayame_poem:
-                        s = list(ayame_word)
+                        wordmix = list(ayame_word)
                         for k in range(5):
                             if random.randint(0, 4) == 0:
-                                s[k] = ' '
+                                wordmix[k] = ' '
                             elif random.randint(0, 4) == 0:
-                                s[k] = random.choice(nonunicode)
-                        word = PoemWord("".join(s), 0, 0, 0, 0, False)
+                                wordmix[k] = random.choice(nonunicode)
+                        word = PoemWord("".join(wordmix), 0, 0, 0, 0, False)
                     elif persistent.playthrough == 2 and not poemgame_glitch and chapter >= 1 and progress < numWords and random.randint(0, 400) == 0:
                         word = PoemWord(glitchtext(80), 0, 0, 0, 0, True)
                     else:
