@@ -45,10 +45,14 @@ label choose_start:
     # Check Special or Christmas Days
     if (currentdate <= (datetime.date(2018, 9, 22) + weekrange)) and persistent.arc_clear[0]:
         s "Uhh...hey listen."
-        s "I know you've already chosen where you want to start but..."
-        s "A new part in the game opened up, but only for a while."
-        s "There's something going on."
-        s "Do you know what that is?"
+        if persistent.did_special_event:
+            s "I know you've already done this."
+            s "But I'll ask again anyway."
+        else:
+            s "I know you've already chosen where you want to start but..."
+            s "A new part in the game opened up, but only for a while."
+            s "There's something going on."
+            s "Do you know what that is?"
         menu:
             s "...Do you want to try this Special Day?"
             "Start the Special Day.":
@@ -62,13 +66,18 @@ label choose_start:
             "No.":
                 s "Oh, okay."
                 s "Then let's get to it."
-    elif (currentdate <= (datetime.date(2018, 12, 23) + weekrange)) and persistent.arc_clear[0]:
+    elif (currentdate <= (datetime.date(2019, 1, 1) + weekrange)) and persistent.arc_clear[0]:
         s "Uhh...hey listen."
-        s "I know you've already chosen where you want to start but..."
-        s "A new part in the game opened up, but only for a while."
-        s "And it's the festive season, isn't it?"
-        s "I think there's going to be some celebrations if we check it out..."
-        s "...So do you want to see what it's all about?"
+        if persistent.did_christmas_event:
+            s "I know you've already done this."
+            s "But I'll say it again anyway."
+            s "There's a special event that's opened up in the game."
+        else:
+            s "I know you've already chosen where you want to start but..."
+            s "A new part in the game opened up, but only for a while."
+            s "And it's the festive season, isn't it?"
+            s "I think there's going to be some celebrations if we check it out..."
+            s "...So do you want to see what it's all about?"
         menu:
             s "I think it's got to do with Christmas."
             "Celebrate Christmas.":

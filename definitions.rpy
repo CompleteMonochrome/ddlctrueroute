@@ -74,6 +74,56 @@ init python:
         delete_character("ayame")
         try: open(config.basedir + "/characters/ayame.chr", "wb").write(renpy.file("ayame.chr").read())
         except: pass
+    def delete_character_alternate(name,timeline=None):
+        import os
+        basedir = config.basedir + "/characters/"
+        if timeline:
+            basedir = config.basedir + "/characters_"+str(timeline)+"/"
+
+        try: os.remove(basedir + "/characters/" + name + ".chr")
+        except: pass
+    def insert_characters_alternate(timeline=None,sayori=True,natsuki=True,yuri=True,monika=True,mc=False,dadsuki=False,momsuki=False,ayame=False):
+        import os
+        basedir = config.basedir + "/characters/"
+        if timeline:
+            basedir = config.basedir + "/characters_"+str(timeline)+"/"
+
+        # Make directory
+        try: os.mkdir(basedir)
+        except: pass
+
+        if sayori:
+            delete_character_alternate("sayori",timeline)
+            try: open(basedir+"sayori.chr", "wb").write(renpy.file("sayori.chr").read())
+            except: pass
+        if natsuki:
+            delete_character_alternate("natsuki",timeline)
+            try: open(basedir+"natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
+            except: pass
+        if yuri:
+            delete_character_alternate("yuri",timeline)
+            try: open(basedir+"yuri.chr", "wb").write(renpy.file("yuri.chr").read())
+            except: pass
+        if monika:
+            delete_character_alternate("monika",timeline)
+            try: open(basedir+"monika.chr", "wb").write(renpy.file("monika.chr").read())
+            except: pass
+        if mc:
+            delete_character_alternate("mc",timeline)
+            try: open(basedir+"mc.chr", "wb").write(renpy.file("mc.chr").read())
+            except: pass
+        if dadsuki:
+            delete_character_alternate("yasuhiro",timeline)
+            try: open(basedir+"yasuhiro.chr", "wb").write(renpy.file("yasuhiro.chr").read())
+            except: pass
+        if momsuki:
+            delete_character_alternate("haruki",timeline)
+            try: open(basedir+"haruki.chr", "wb").write(renpy.file("harukinormal.chr").read())
+            except: pass
+        if ayame:
+            delete_character_alternate("ayame",timeline)
+            try: open(basedir+"ayame.chr", "wb").write(renpy.file("ayame.chr").read())
+            except: pass
     def pause(time=None):
         global _windows_hidden
         if not time:
@@ -3629,6 +3679,37 @@ image monika 4chs = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2
 image monika 4cht = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/ht.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
 image monika 4chu = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hu.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
 
+# Why is this here?
+image monika 1chga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hga.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+image monika 1chge = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hge.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+
+image monika 2chga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hga.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+image monika 2chge = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hge.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+
+image monika 3chga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hga.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+image monika 3chge = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hge.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+
+image monika 4chga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hga.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+image monika 4chge = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hge.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+
+image monika gcha:
+    "monika 1chga"
+    pause 0.25
+    "monika 1cha"
+    pause 0.25
+    "monika 1chga"
+    pause 0.25
+    "monika 1cha"
+
+image monika gche:
+    "monika 1chge"
+    pause 0.25
+    "monika 1che"
+    pause 0.25
+    "monika 1chge"
+    pause 0.25
+    "monika 1che"
+
 # Mysterious Clerk Christmas
 image mysteriousclerk 1cha = im.Composite((960, 960), (0, 0), "mod_assets/images/mysteriousclerk/1l.png", (0, 0), "mod_assets/images/mysteriousclerk/1r.png", (0, 0), "mod_assets/images/mysteriousclerk/a.png", (0, 0), "mod_assets/images/mysteriousclerk/hats/santahat.png")
 image mysteriousclerk 1chb = im.Composite((960, 960), (0, 0), "mod_assets/images/mysteriousclerk/1l.png", (0, 0), "mod_assets/images/mysteriousclerk/1r.png", (0, 0), "mod_assets/images/mysteriousclerk/b.png", (0, 0), "mod_assets/images/mysteriousclerk/hats/santahat.png")
@@ -4000,35 +4081,41 @@ image bg sayori_bedroom_gray = im.Grayscale("bg/sayori_bedroom.png")
 image bg bedroom_gray = im.Grayscale("bg/bedroom.png")
 image bg m_livingroom_gray = im.Grayscale("mod_assets/images/bg/m_livingroom.png")
 image bg mall_day_gray = im.Grayscale("mod_assets/images/bg/mall_day.png")
+image bg n_house_day_gray = im.Grayscale("mod_assets/images/bg/n_house_day.png")
 image bg random_gray:
-    choice:
-        im.Grayscale("bg/club.png") with Dissolve(1.5)
-    choice:
-        im.Grayscale("bg/residential.png") with Dissolve(1.5)
-    choice:
-        im.Grayscale("bg/house.png") with Dissolve(1.5)
-    choice:
-        im.Grayscale("bg/bedroom.png") with Dissolve(1.5)
-    choice:
-        im.Grayscale("bg/kitchen.png") with Dissolve(1.5)
-    choice:
-        im.Grayscale("bg/sayori_bedroom.png") with Dissolve(1.5)
-    choice:
-        im.Grayscale("mod_assets/images/bg/gym.png") with Dissolve(1.5)
-    choice:
-        im.Grayscale("mod_assets/images/bg/city_day.png") with Dissolve(1.5)
-    choice:
-        im.Grayscale("mod_assets/images/bg/portraitshop_day.png") with Dissolve(1.5)
-    choice:
-        im.Grayscale("mod_assets/images/bg/mall_day.png") with Dissolve(1.5)
-    choice:
-        im.Grayscale("bg/closet.png") with Dissolve(1.5)
-    choice:
-        im.Grayscale("mod_assets/images/bg/n_hitroom.png") with Dissolve(1.5)
-    choice:
-        im.Grayscale("mod_assets/images/bg/n_dadroom.png") with Dissolve(1.5)
-    4.5
-    repeat
+    im.Grayscale("mod_assets/images/bg/n_house_day.png")
+    alpha 0
+    linear 1.5 alpha 1.0
+    3.0
+    block:
+        choice:
+            im.Grayscale("bg/club.png") with Dissolve(1.5)
+        choice:
+            im.Grayscale("bg/residential.png") with Dissolve(1.5)
+        choice:
+            im.Grayscale("bg/house.png") with Dissolve(1.5)
+        choice:
+            im.Grayscale("bg/bedroom.png") with Dissolve(1.5)
+        choice:
+            im.Grayscale("bg/kitchen.png") with Dissolve(1.5)
+        choice:
+            im.Grayscale("bg/sayori_bedroom.png") with Dissolve(1.5)
+        choice:
+            im.Grayscale("mod_assets/images/bg/gym.png") with Dissolve(1.5)
+        choice:
+            im.Grayscale("mod_assets/images/bg/city_day.png") with Dissolve(1.5)
+        choice:
+            im.Grayscale("mod_assets/images/bg/portraitshop_day.png") with Dissolve(1.5)
+        choice:
+            im.Grayscale("mod_assets/images/bg/mall_day.png") with Dissolve(1.5)
+        choice:
+            im.Grayscale("bg/closet.png") with Dissolve(1.5)
+        choice:
+            im.Grayscale("mod_assets/images/bg/n_hitroom.png") with Dissolve(1.5)
+        choice:
+            im.Grayscale("mod_assets/images/bg/n_dadroom.png") with Dissolve(1.5)
+        4.5
+        repeat
 image sayori 1g_gray = im.Grayscale("mod_assets/images/sayori/preset/1g.png")
 image sayori 1r_gray = im.Grayscale("mod_assets/images/sayori/preset/1r.png")
 image sayori 1x_gray = im.Grayscale("mod_assets/images/sayori/preset/1x.png")
@@ -4179,6 +4266,7 @@ default persistent.arc_names = ["Book of Despair","Second Chance","Inauguration 
 default persistent.markov_agreed = False
 default persistent.did_special_event = False
 default persistent.did_christmas_event = False
+default persistent.markov_christmas = False
 default persistent.ch13_nat_date = False
 default persistent.ch15_sayori_chance = False
 # Local Save

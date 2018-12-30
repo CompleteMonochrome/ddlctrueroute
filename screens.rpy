@@ -460,7 +460,7 @@ init -501 screen navigation():
         customstarthover_outlines = [(4, "#fac", 0, 0), (2, "#fac", 2, 2)]
         customstartinsensitive_outlines = [(4, "#fce", 0, 0), (2, "#fce", 2, 2)]
 
-        if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2018, 12, 23) + weekrange))) and persistent.arc_clear[0]:
+        if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2019, 1, 1) + weekrange))) and persistent.arc_clear[0]:
             customstartoutlines = [(4, "#228B22", 0, 0), (2, "#228B22", 2, 2)]
             customstarthover_outlines = [(4, "#32CD32", 0, 0), (2, "#32CD32", 2, 2)]
             customstartinsensitive_outlines = [(4, "#00FF00", 0, 0), (2, "#00FF00", 2, 2)]
@@ -567,7 +567,7 @@ init -501 screen main_menu() tag menu:
         add "menu_art_y_ghost"
         add "menu_art_n_ghost"
     else:
-        if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2018, 12, 23) + weekrange))) and persistent.arc_clear[0]:
+        if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2019, 1, 1) + weekrange))) and persistent.arc_clear[0]:
             add "menu_bg_gray"
         else:
             add "menu_bg"
@@ -868,7 +868,7 @@ init -1 python:
             return Show(screen="dialog", message="This is an alternate reality. You can't save them.", ok_action=Hide("dialog"))
 
         elif persistent.playthrough == 0 and christmas_chapter:
-            return Show(screen="dialog", message="You can't ruin their Christmas with your saves.", ok_action=Hide("dialog"))
+            return Show(screen="dialog", message="You have no influence on this timeline.", ok_action=Hide("dialog"))
 
         # Monika Bad Ending Saturday
         elif persistent.playthrough == 0 and persistent.monika_ch3_skip and renpy.current_screen().screen_name[0] == "save":
@@ -1628,7 +1628,7 @@ init -501 screen arc_choose_1():
 
     default tt = Tooltip("")
 
-    if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2018, 12, 23) + weekrange))) and persistent.arc_clear[0]:
+    if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2019, 1, 1) + weekrange))) and persistent.arc_clear[0]:
         add "menu_bg_gray_insta" at show_hide_fade_bg
     else:
         add "menu_bg_insta" at show_hide_fade_bg

@@ -71,6 +71,7 @@ label special_chapter:
     stop music fadeout 1.5
     scene bg residential_day with Dissolve(1.5)
     play music t2 fadein 3.0
+    $ insert_characters_alternate(timeline=1511)
     $ s_name = "Sayori"
     $ style.say_window = style.window
     "We're on our way."

@@ -2173,6 +2173,54 @@ Here rides
     The once white knight."""
 )
 
+    poem_m_special = Poem(
+    author = "monika",
+    title = "Christmas Day",
+    text = """\
+Snow falls
+Particles of white reach the ground
+Melting,
+    
+    only to rise,
+
+        And fall again.
+
+
+A girl once lost
+Saw a light in the tunnel,
+
+    A guide,
+
+        In the deep abyss.
+
+
+A missing feeling
+A feeling deep within
+A feeling that leads to love
+A feeling that could lead,
+
+        To despair.
+
+Yet I must pursue
+For the girl is no longer lost.
+It is he who is lost
+And her quest to seek out this feeling,
+
+    This feeling of missing longing.
+
+Will lead to true love
+This is the path to oblivion.
+But I cannot turn back,
+
+    For he brought me out of the abyss
+
+And I must venture back,
+
+To retrieve my true love
+To pay my debt
+On Christmas Day."""
+    )
+
 image paper = "images/bg/poem.jpg"
 image paper_glitch = LiveComposite((1280, 720), (0, 0), "paper_glitch1", (0, 0), "paper_glitch2")
 image paper_glitch1 = "images/bg/poem-glitch1.png"
