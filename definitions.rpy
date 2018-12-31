@@ -80,7 +80,7 @@ init python:
         if timeline:
             basedir = config.basedir + "/characters_"+str(timeline)+"/"
 
-        try: os.remove(basedir + "/characters/" + name + ".chr")
+        try: os.remove(basedir + name + ".chr")
         except: pass
     def insert_characters_alternate(timeline=None,sayori=True,natsuki=True,yuri=True,monika=True,mc=False,dadsuki=False,momsuki=False,ayame=False):
         import os
@@ -110,7 +110,9 @@ init python:
             except: pass
         if mc:
             delete_character_alternate("mc",timeline)
-            try: open(basedir+"mc.chr", "wb").write(renpy.file("mc.chr").read())
+            try:
+                mcfile = open(basedir+"mc.chr", "wb")
+                print(currentuser,file=mcfile)
             except: pass
         if dadsuki:
             delete_character_alternate("yasuhiro",timeline)
@@ -3682,33 +3684,37 @@ image monika 4chu = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2
 # Why is this here?
 image monika 1chga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hga.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
 image monika 1chge = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hge.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+image monika 1chgy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgy.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+image monika 1chgy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgy2.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
 
 image monika 2chga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hga.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
 image monika 2chge = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hge.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+image monika 2chgy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgy.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+image monika 2chgy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/1bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgy2.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
 
 image monika 3chga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hga.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
 image monika 3chge = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hge.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+image monika 3chgy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgy.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+image monika 3chgy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/1bhr.png", (0, 0), "mod_assets/images/monika/hgy2.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
 
 image monika 4chga = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hga.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
 image monika 4chge = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hge.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+image monika 4chgy = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgy.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
+image monika 4chgy2 = im.Composite((960, 960), (0, 0), "mod_assets/images/monika/2bhl.png", (0, 0), "mod_assets/images/monika/2bhr.png", (0, 0), "mod_assets/images/monika/hgy2.png", (0, 0), "mod_assets/images/monika/hats/santahat.png")
 
 image monika gcha:
     "monika 1chga"
     pause 0.25
     "monika 1cha"
     pause 0.25
-    "monika 1chga"
-    pause 0.25
-    "monika 1cha"
+    repeat
 
 image monika gche:
     "monika 1chge"
     pause 0.25
     "monika 1che"
     pause 0.25
-    "monika 1chge"
-    pause 0.25
-    "monika 1che"
+    repeat
 
 # Mysterious Clerk Christmas
 image mysteriousclerk 1cha = im.Composite((960, 960), (0, 0), "mod_assets/images/mysteriousclerk/1l.png", (0, 0), "mod_assets/images/mysteriousclerk/1r.png", (0, 0), "mod_assets/images/mysteriousclerk/a.png", (0, 0), "mod_assets/images/mysteriousclerk/hats/santahat.png")
@@ -4082,6 +4088,8 @@ image bg bedroom_gray = im.Grayscale("bg/bedroom.png")
 image bg m_livingroom_gray = im.Grayscale("mod_assets/images/bg/m_livingroom.png")
 image bg mall_day_gray = im.Grayscale("mod_assets/images/bg/mall_day.png")
 image bg n_house_day_gray = im.Grayscale("mod_assets/images/bg/n_house_day.png")
+image bg ay_house_gray = im.Grayscale("mod_assets/images/bg/ay_house.png")
+image bg ay_livingroom_gray = im.Grayscale("mod_assets/images/bg/ay_livingroom.png")
 image bg random_gray:
     im.Grayscale("mod_assets/images/bg/n_house_day.png")
     alpha 0

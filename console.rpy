@@ -30,14 +30,11 @@ label updateconsole(text="", history=""):
     $ pause(0.5)
     return
 
-label updateconsole_parallel(text="", history="", timeline=None, char=None):
+label updateconsole_parallel(text="", char=None, timeline=None):
     show console_bg zorder 100
     show console_caret zorder 100
     show console_text "_" as ctext zorder 100
     show console_text "[text]" as ctext zorder 100
-    hide ctext
-    show console_text "_" as ctext zorder 100
-    call updateconsolehistory (history)
     if timeline and char:
         $ delete_character_alternate(char,timeline)
     return

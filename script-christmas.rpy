@@ -1,24 +1,15 @@
-# How else to do this?
-screen timer_ch_firstdel():
-    modal False
-    zorder 0
-    timer (len("os.remove(\"characters_7/yuri.chr\")") / 30.0 + 1.0) action Jump("christmas_chapter_dely")
+# How else to do this? This is really inefficient but whatever
+screen timer_ch_del(timerstr,jumploc):
+    timer (len(timerstr) / 30.0 + 0.5) action Jump(jumploc)
 
-screen timer_ch_seconddel():
-    modal False
-    zorder 0
-    timer (len("os.remove(\"characters_7/natsuki.chr\")") / 30.0 + 1.0) action Jump("christmas_chapter_deln")
+screen timer_ch_del2(timerstr,jumploc):
+    timer (len(timerstr) / 30.0 + 0.5) action Jump(jumploc)
 
-screen timer_ch_thirddel():
-    modal False
-    zorder 0
-    timer (len("os.remove(\"characters_7/sayori.chr\")") / 30.0 + 1.0) action Jump("christmas_chapter_dels")
+screen timer_ch_del3(timerstr,jumploc):
+    timer (len(timerstr) / 30.0 + 0.5) action Jump(jumploc)
 
-screen timer_ch_fourthdel():
-    modal False
-    zorder 0
-    timer (len("os.remove(\"characters_7/ayame.chr\")") / 30.0 + 1.0) action Jump("christmas_chapter_delay")
-
+screen timer_ch_del4(timerstr,jumploc):
+    timer (len(timerstr) / 30.0 + 0.5) action Jump(jumploc)
 
 # Literally poem response start except not
 label giftexchange_start:
@@ -129,14 +120,14 @@ label giftexchange_sayori:
     s "What's in the box, [player]?"
     mc "You'll find out, won't you?"
     mc "No need to rush."
-    s "I told you, I can't wait!"
+    s 1chh "I told you, I can't wait!"
     s "Come on! Gimme, gimme, gimme!"
     mc "Alright, calm down..."
     "I hand over the wrapped box with Sayori's name on it."
     "Immediately, she begins tearing it apart."
     mc "Wow..."
     mc "You're really excited for this present, aren't you?"
-    s "Ehehe, it's coming from you after all~"
+    s 2chq "Ehehe, it's coming from you after all~"
     mc "I wouldn't get my hopes up if I were you."
     s "Why not?"
     "Sayori finishes 'unwrapping' the present."
@@ -145,42 +136,42 @@ label giftexchange_sayori:
     $ nextscene = "gift_" + christmas_gifts[0] + "_s"
     call expression nextscene
 
-    s "Well..."
+    s 1chd "Well..."
     s "I guess it's my turn to share my gift."
     s "So...here."
     "Sayori hands me a neatly wrapped box."
     "It has a red ribbon holding it all together."
-    s "Are you gonna open it?"
+    s 1chc "Are you gonna open it?"
     mc "Do you want me to?"
     s "I wanna see your reaction."
     mc "Then I suppose I will."
     "I pull the ribbon and carefully tear the wrapping paper."
     "There's a blank cardboard box inside."
-    s "Go on, open it."
+    s 1chq "Go on, open it."
     "I open the cardboard box and pull out..."
     mc "Is this a toy plush?"
     mc "Of me?!"
-    s "Do you like it?"
+    s 2cha "Do you like it?"
     "The plush is actually quite cute."
     "I'd say it captures me pretty well."
     mc "It's a wonderful gift."
     mc "Thank you so much, Sayori."
-    s "Aww, you really mean it?"
+    s 2chd "Aww, you really mean it?"
     mc "Of course I do."
     mc "You had this custom made, didn't you?"
     s "Mhm!"
-    s "The guy even charged extra because there was a lot of people doing something like this."
+    s 2chl "The guy I got it from even charged extra because there was a lot of people doing something like this."
     s "But I paid him anyway."
     mc "Huh? Why?!"
     mc "You don't need to go out of your way for me like that."
-    s "It wasn't just for you."
+    s 2chd "It wasn't just for you."
     s "It was for everyone."
     mc "You got everyone else something similar?"
-    s "Ehehe, yeah..."
+    s 1chl "Ehehe, yeah..."
     s "But now I have no money..."
     s "S-So..."
     mc "You're not getting any money from me."
-    s "Aww, you big meanie!"
+    s 1chh "Aww, you big meanie!"
     s "It's Christmas!"
     mc "I know."
     "I give Sayori a hug and she returns it."
@@ -197,50 +188,52 @@ label giftexchange_natsuki:
     n "Hmph."
     mc "What?"
     mc "I haven't even said anything yet."
-    n "It doesn't look like you spent a lot of money getting me a present."
+    n 2chg "It doesn't look like you spent a lot of money getting me a present."
     mc "E-Eh?"
     mc "What gives you that idea?"
     mc "And besides, money isn't the most important thing."
     "She's right though."
     "I really didn't spend a lot of money."
     n "Call it intuition."
-    n "But whatever."
+    n 2chb "But whatever."
     n "At least you got me something."
-    n "And I guess I shouldn't be mad."
+    n 1chg "And I guess I shouldn't be mad."
     mc "Here, you can judge for yourself."
     "I hand over her gift."
-    n "I wonder..."
+    n 1chi "I wonder..."
     mc "Are you gonna open it?"
-    n "I haven't decided yet."
+    n 1chh "I haven't decided yet."
     "Natsuki eyes the present."
     "Her face give all the signs that she's excited to open it."
-    n "Ah!"
+    n 1chf "Ah!"
     n "Alright, fine."
     n "You've got me curious."
-    mc "Just a second ago you said it looked like I didn't--"
-    n "Doesn't mean I don't want to open it."
-    n "I wanna see what you got me, that's all."
+    mc "You made up your mind that quickly?"
+    n 1chs "It's this festive season."
+    mc "You looked like you didn't want to open it just before."
+    n "Doesn't mean that I don't actually want to open it."
+    n 1chq "I wanna see what you got me, that's all."
     "Natsuki unwraps the present."
 
     $ nextscene = "gift_" + christmas_gifts[2] + "_n"
     call expression nextscene
 
-    n "I guess you wanna see what I got you."
+    n 2chs "I guess you wanna see what I got you."
     mc "Well, it is a gift exchange."
     mc "Not a gift give and get nothing."
-    n "Yeah, yeah."
+    n 2chg "Yeah, yeah."
     n "Here."
     "Natsuki presents me with a small box wrapped in pink paper."
     "She glares at me as she holds it out to me."
-    n "Are you gonna take it or what?"
+    n 2chf "Are you gonna take it or what?"
     mc "Right, sorry."
     "I take the present from her hands."
-    n "So...?"
+    n 4chc "So...?"
     n "Are you gonna open it or wait until tomorrow?"
-    n "N-Not that I care."
+    n 4chs "N-Not that I care."
     n "I'm just making conversation."
     mc "I guess I'll open it since you did the same."
-    n "Whatever."
+    n 4chr "Whatever."
     "I carefully unwrap the present, there's a piece of foil inside."
     "I can see Natsuki staring from the corner of my eye."
     "I take out the foil."
@@ -251,41 +244,45 @@ label giftexchange_natsuki:
     n "What if I did?"
     mc "I'm impressed."
     mc "It really shows your dedication."
-    n "I always give my best for the club."
+    n 2chy "I always give my best for the club."
+    n 2chn "And besides..."
     n "You and the others helped me get through a rough patch."
     n "So..."
+    show natsuki 2chs
     "Natsuki looks away."
-    n "...you know, it wouldn't be right."
+    n 2chq "...you know, it wouldn't be right."
     mc "I understand."
     mc "Merry Christmas, Natsuki."
-    n "Yeah, you too, [player]."
+    n 1chk "Yeah, you too, [player]."
     call giftexchange_revertmusic
     return
 
 label giftexchange_yuri:
     call giftexchange_startmusic("yuri")
     scene bg ay_livingroom
-    show yuri 1cha zorder 2 at t11
+    show yuri 1chg zorder 2 at t11
     with wipeleft_scene
     y "..."
     mc "Is something wrong, Yuri?"
-    y "No..."
+    y 1che "No..."
     y "Well...yes."
     mc "What is it?"
-    y "It's petty, it doesn't really matter."
+    y 2chq "It's petty, it doesn't really matter."
     mc "You can tell me anything, you know that."
-    y "It's just..."
-    y "I was about to win...!"
+    y 2chv "It's just..."
+    y 3chw "I was about to win...!"
     "Yuri points to the cards on the table."
     mc "Oh."
     "I can't help but laugh a little."
     "It's such a small thing but so out of character for someone like Yuri."
-    y "W-What's so funny?"
+    y 3cht "W-What's so funny?"
     mc "Oh, nothing."
     mc "It's just funny seeing you get upset about something so small."
+    show yuri 3chr at s11
     y "Well, I'm glad you're finding humor in my demise."
     mc "I'm only kidding, sorry."
-    "Yuri smiles bashfully."
+    show yuri 2chq at t11
+    "Yuri smiles mischievously."
     y "Why don't you repent by showing me what you got me?"
     mc "I can do that."
     "I hand over my present to Yuri."
@@ -294,28 +291,28 @@ label giftexchange_yuri:
     $ nextscene = "gift_" + christmas_gifts[1] + "_y"
     call expression nextscene
 
-    y "Here's your present."
+    y 3chb "Here's your present."
     y "I hope you like it."
     mc "I'm sure I will."
     "Yuri hands me a small rectangular box neatly tied with a small ribbon."
     mc "I guess I'll open it then."
-    y "Only if you want to."
+    y 3chf "Only if you want to."
     "I pull the ribbon off and the wrapping paper basically unwraps itself revealing a box with my name on it."
     mc "What is this?"
-    y "Open the box."
+    y 2chh "Open the box."
     "I open the box and see a pen, one of those special, expensive ones."
     "It has my name etched on the side."
     mc "A pen?"
-    y "You don't like it?"
+    y 2cht "You don't like it?"
     mc "Of course I do."
-    y "It's just that I've noticed you writing with old ballpoint pens."
+    y 2chv "It's just that I've noticed you writing with old ballpoint pens."
     y "I wanted to get you something better."
     y "Maybe you could use it to write your poems."
     mc "That's very thoughtful of you, Yuri."
     mc "You're right about the pens so I appreciate it."
     mc "I'm sure I'll use it a lot."
     mc "Merry Christmas, Yuri."
-    y "M-Merry Christmas, [player]..."
+    y 3chs "M-Merry Christmas, [player]..."
     call giftexchange_revertmusic
     return
 
@@ -327,50 +324,50 @@ label giftexchange_monika:
     m "[player]!"
     m "It's good to see you."
     mc "Good to see you as well, Monika."
-    m "I was trying to find a moment to share my gift with you but..."
+    m 2che "I was trying to find a moment to share my gift with you but..."
     m "Well, it seems someone else kept taking up my time or you were busy talking to someone else too."
     m "So it looks like you're the last one I'm exchanging gifts with."
     mc "It's the same for me."
     mc "You're also the only person I haven't exchanged gifts with yet.."
     m "Ahaha, I can't wait to see what you got me."
-    m "You didn't buy it last minute, did you?"
+    m 2chb "You didn't buy it last minute, did you?"
     mc "Um..."
     m "I see."
-    m "Don't worry, I won't tell anyone."
+    m 2chj "Don't worry, I won't tell anyone."
     m "After all, I still owe you."
     mc "For what?"
-    m "I never really got to thank you for helping me sort out of my life."
+    m 1che "I never really got to thank you for helping me sort out of my life."
     mc "Don't worry about it, really."
     mc "Any friend would have done the same."
-    m "You really don't realize the extent of just how lost and miserable I was."
+    m 1chm "You really don't realize the extent of just how lost and miserable I was."
     m "You helped me get through it."
     m "You helped me see."
-    m "I can never pay that back."
+    m 1chn "I can never pay that back."
     mc "You've already paid me back by being a good friend."
     mc "Don't worry about it."
-    m "Nonsense."
-    m "There's still so much more I need to do."
+    m 1chh "Nonsense."
+    m chb "There's still so much more I need to do."
     "Monika smiles thoughtfully."
     mc "Anyway, I'm just glad you could get a break after what you went through."
     mc "Letting her take care of the club for a bit while you needed to think it out was a really smart decision."
-    m "You think so?"
+    m 1chc "You think so?"
     mc "I do."
     mc "After all, it let you recover to be the person you are today."
     mc "Our Monika, president of the Literature Club."
     mc "Slayer of demons, defeater of tyrants, champion of justice."
-    m "Ahaha, what are you talking about?"
+    m 2chl "Ahaha, what are you talking about?"
     mc "Just messing around."
-    m "You'll always be special to me, [player]."
-    m "I hope you realize that."
+    m 2che "You'll always be special to me, [player]."
+    m "I hope you know that."
     mc "You're embarrassing me here."
-    m "That's good."
+    m 2cha "That's good."
     m "It's gonna make this gift a whole lot easier to give."
     mc "Would it help if I gave you my gift first?"
-    m "It just might."
+    m 1chb "It just might."
     mc "Then here you go."
     "I offer Monika the gift I wrapped for her."
     m "Whatever it is."
-    m "I'm sure I'll love it."
+    m 1cha "I'm sure I'll love it."
     mc "I can only hope."
     "Monika unwraps the gift."
 
@@ -378,67 +375,69 @@ label giftexchange_monika:
     call expression nextscene
 
     if christmas_gifts[4] == "bracelet":
-        m "This bracelet is truly wonderful, [player]."
+        m 1chj "This bracelet is truly wonderful, [player]."
         m "The gift I'm giving you is nothing in comparison."
         mc "Whatever it is, I'll accept it wholeheartedly."
-        m "You will?"
+        m 1che "You will?"
         mc "I promise."
         m "Then..."
         m "Here."
         "Monika hands me a piece of paper."
         mc "What is this?"
-        m "Read it."
+        m 2che "Read it."
         call showpoem(poem_m_christmas, music=False, img="monika 1che")
         mc "It's a nice poem, Monika."
-        m "You don't get it?"
+        m 2chc "You don't get it?"
         mc "Don't get what?"
         m "You don't feel that missing feeling?"
-        m "Like there's something in your head that you just can't remember?"
+        m 4chd "Like there's something in your head that you just can't remember?"
+        m "Like a part of you is missing?"
         mc "No...?"
         mc "Not really?"
-        m "That's..."
-        m "Well, I suppose that's not unexpected."
+        m 4chm "That's..."
+        m 4chn "Well, I suppose that's not unexpected."
         m "I thought maybe I could evoke some thoughts within you."
-        m "To help you remember them."
+        m 2che "To help you remember them."
         mc "Remember who?"
-        m "I don't know."
+        m 2chc "I don't know."
         m "I wish I did."
-        m "I wonder if they're watching now."
+        m 2che "I wonder if they're watching now."
         m "Seeing what's happening."
         mc "I honestly don't know what you're talking about."
-        m "You know...neither do I."
-        m "So why are these feelings lingering?"
+        m 2cho "You know...neither do I."
+        m 2cho "So why are these feelings lingering?"
         mc "I don't know."
         mc "But..."
         "I turn towards Monika."
         mc "I'll help you find out."
         mc "Whatever it takes."
-        m "...Thank you."
+        m 2che "...Thank you."
         mc "Your poem was a wonderful gift."
         mc "Merry Christmas, Monika."
-        m "Merry Christmas, [player]."
+        m 2chk "Merry Christmas, [player]."
         call giftexchange_revertmusic
     else:
         "Monika runs from the living room, taking the book with her."
         "I can hear...laughing?"
-        "Coming from the direction Monika ran away from."
-        "Maybe she's likes the book...?"
+        "It's the crazy kind...not the laugh from Monika I'm used to."
+        "I can only assume it's her and not one of the maids since it's coming from the direction Monika ran away to."
+        "Maybe she likes the book...?"
         "Who am I kidding?"
         "She's probably laughing at how bad the book is and burning it now or something."
         "I should have known the book was a bad present."
         "I should have gotten her the bracelet."
         "It would have been a way better present."
         "It was so obvious!"
-        show sayori 1cha zorder 2 at t11
+        show sayori 1chc zorder 2 at t11
         s "Hey, [player]."
         s "Where did Monika go?"
         mc "I don't know."
-        s "Oh."
+        s 1chb "Oh."
         mc "She said not to wait for her."
         mc "She's coming back though."
-        s "That's good, she wouldn't just leave us."
+        s 2cha "That's good, she wouldn't just leave us."
         s "If she had to leave for a while, she's probably got something important to do then."
-        s "Come on, let's join the others again."
+        s 4chq "Come on, let's go join the others."
         call giftexchange_revertmusic(False)
     return
 
@@ -451,42 +450,42 @@ label giftexchange_ayame:
     ay "Or messy."
     mc "Why would it be messy?"
     mc "You have plenty of maids to help clean it up, don't you?"
-    ay "That's true."
+    ay 1chj "That's true."
     ay "It's just that the night before my parents were having a party."
-    ay "Some of my friends decided to come over since I felt so miserable."
+    ay 1cha "Some of my friends decided to come over since I felt so miserable."
     mc "How come?"
-    ay "Everyone around here is so boring."
+    ay 1chg "Everyone around here is so boring."
     ay "All they do is talk about their investments and how they're gonna get more profits."
     ay "My parents only bear with them because they need to keep their image up."
     ay "I don't know how tiring it must be for them."
     mc "I can only imagine."
-    ay "And sometimes, I think my friends are only talking to me because of my family's money."
+    ay 1chf "And sometimes, I think my friends are only talking to me because of my family's money."
     mc "Why do you think that?"
-    ay "I'm weird, [player]."
+    ay 1chg "I'm weird, [player]."
     ay "Let's both admit it."
     ay "And I have weirder habits you don't even know about."
-    ay "It's hard to be friends with me."
+    ay 1chb "It's hard to be friends with me."
     mc "Ayame..."
-    ay "But you guys..."
-    ay "You guys accept me for who I am."
-    ay "And I feel...whole for some reason."
+    ay "But you [player_casual]s..."
+    ay 1chh "You [player_casual]s accept me for who I am."
+    ay 1chb "And I feel...whole for some reason."
     ay "I don't really know what I'm talking about."
     ay "So..."
     mc "It's okay, I think I get it."
     mc "It's been good getting to know you."
     mc "I'm glad you joined the club, Ayame."
-    ay "Me too."
+    ay 1chd "Me too."
     ay "But!"
-    ay "It's time for the gift giving."
+    ay 1chb "It's time for the gift giving."
     ay "Shall I go first or you?"
     mc "I'll go first."
     mc "My gift is going to pale in comparison to yours."
-    ay "Don't say that."
+    ay 1chg "Don't say that."
     mc "It's true."
     "I give Ayame the present I bought."
     "I didn't notice yesterday but the clerk somehow encased it in glass to protect it."
     "I managed to wrap it carefully enough to avoid scratching the glass or breaking the fossil."
-    ay "Whoa, what is this?"
+    ay 1chi "Whoa, what is this?"
     mc "It's a fossil, I think."
     ay "You think?"
     "Ayame holds the fossil in her hands."
@@ -496,24 +495,24 @@ label giftexchange_ayame:
     $ nextscene = "gift_" + christmas_gifts[3] + "_ay"
     call expression nextscene
 
-    ay "And now you've learned something personal about me."
+    ay 1cbb "And now you've learned something personal about me."
     mc "I guess I have."
     ay "Do you want my gift now?"
     mc "It's definitely going to be better than some rock I gave you."
-    ay "Nonsense."
+    ay 1chj "Nonsense."
     "Ayame claps her hands."
     ay "Bring it in!"
     "One of Ayame's maids brings in a large box and places it on the floor in front of me."
     ay "Thank you!"
     "The maid bows and leaves."
-    ay "This is what I had to take care of before."
+    ay 1chb "This is what I had to take care of before."
     mc "What is it?"
     ay "Open it and find out."
     "My present definitely sucks compared to this."
     "I slowly unwrap the present, revealing some kind of mini wardrobe."
     "It's big enough that you could fit a couple of clothes inside comfortably."
     mc "A wardrobe?"
-    ay "Oh, you're not getting that."
+    ay 1chh "Oh, you're not getting that."
     mc "That's good, I had no idea how I was going to bring that home."
     ay "Have a look inside."
     "I open the wardrobe."
@@ -525,51 +524,52 @@ label giftexchange_ayame:
     "All three of them look absolutely incredible."
     "They look like something someone with a lot of money would wear."
     mc "Are those mine?"
-    ay "Yep!"
+    ay 1che "Yep!"
     ay "Sayori told me you didn't have a lot of formal clothing."
     ay "I thought I'd buy you some in case you ever needed any."
     mc "How much did those costs?"
-    ay "They were tailor made so..."
+    ay 1chj "They were tailor made so..."
     ay "Well, let's not worry about the costs!"
     ay "My family can afford it."
     mc "Just...wow."
     mc "This would make even someone like me look good."
-    ay "Aww, don't put yourself down like that!"
+    ay 1che "Aww, don't put yourself down like that!"
     "Ayame smiles gleefully."
-    ay "I got Sayori to snoop around your wardrobe to get some rough estimates."
+    ay 1chj "I got Sayori to snoop around your wardrobe to get some rough estimates."
     ay "So hopefully they all fit you."
     ay "If not, just let me know and we'll sort it out."
     mc "You what?"
-    ay "I'm sorry."
+    ay 1chg "I'm sorry."
     ay "But I didn't know any other way."
     ay "I hope it isn't a problem."
     mc "No harm done."
-    ay "Oh, that's good."
+    ay 1chj "Oh, that's good."
     ay "You probably think I'm really weird, don't you?"
     mc "Maybe, but I see that as a good thing about you."
-    ay "You do?"
+    ay 1chb "You do?"
     mc "Yeah, so thank you, Ayame."
     ay "Don't mention it."
-    ay "Happy holidays, [player]!"
+    ay 1chd "Happy holidays, [player]!"
     mc "Merry Christmas, Ayame."
     call giftexchange_revertmusic
     return
 
 label gift_plush_s:
     $ christmas_approval += 1
-    s "Oh my gosh!"
-    s "It's so cuuuuuuuuuuuuuuuuuuuuuuute!"
+    s 1chm "Oh my gosh!"
+    s 4chr "It's so cuuuuuuuuuuuuuuuuuuuuuuute!"
     show sayori at h11
-    s "Thank you, thank you, thank you, [player]!"
+    s 4chq "Thank you, thank you, thank you, [player]!"
     mc "You're really into this, aren't you?"
-    s "Why wouldn't I be?"
+    s 2chd "Why wouldn't I be?"
     s "Doing this is so much fun!"
     mc "Does it look familiar at all to you?"
+    show sayori 2chn
     "Sayori stares at the cow plush I bought her."
     s "It's..."
-    s "It's the same one from my room!"
+    s 2chm "It's the same one from my room!"
     mc "That's right."
-    s "That's even better!"
+    s 2chq "That's even better!"
     s "It's like a smaller version of it."
     s "This is incredible."
     mc "I think you're overstating what's really happening."
@@ -577,224 +577,229 @@ label gift_plush_s:
     return
 
 label gift_book_s:
-    s "Eh...?"
+    s 1chb "Eh...?"
     s "A book?"
-    s "How Not To Break Things As A Manager?"
+    s 1chh "How Not To Break Things As A Manager?"
     mc "You don't like it?"
-    s "I-I never said that."
+    s 2chl "I-I never said that."
     s "I'm just wondering about a couple of things."
     mc "What is it?"
-    s "Why would I need a book like this?"
+    s 2chj "Why would I need a book like this?"
     s "And what kind of name is Clark Nick Mysterio Maximilian?"
     mc "I thought if you ever started your own club, you could use it."
     mc "Or maybe if you ever became a manager."
-    s "I see..."
+    s 4chl "I see..."
     s "Thanks, I guess."
     mc "And the name?"
     mc "I had no idea that was the author's name."
-    s "Ehehe, did you even really think about this gift?"
+    s 4chq "Ehehe, did you even really think about this gift?"
     mc "..."
-    s "It doesn't matter."
+    s 4chd "It doesn't matter."
     s "I'm grateful anyway, [player]."
     mc "I'm glad you're in good spirits, Sayori."
     return
 
 label gift_manga_n:
-    n "You got me a..."
+    n 1chc "You got me a..."
     "She lifts up the volume of manga I got her."
-    n "Volume of manga?"
+    n 2chb "Volume of manga?"
     mc "Yeah, seeing as you're a big fan of it and all."
     mc "I thought it looked cute and it reminded me of you."
-    n "W-What?!"
+    n 2che "W-What?!"
     n "Hey!"
     "Natsuki punches my arm."
-    n "You can't just say something like that!"
+    n 2chf "You can't just say something like that!"
     mc "Anyway, what do you think of it?"
-    n "I'm reading the first couple of pages now."
-    n "What is up with this art style?"
+    n 2chk "I'm reading the first couple of pages now."
+    "I stand in silence as Natsuki reads the first few pages."
+    n 2chh "What is up with this art style?"
     mc "I thought the same thing."
     mc "Maybe it's part of it's charm or something?"
-    n "Well, whatever."
+    n 1chi "Well, whatever."
     mc "You don't look impressed."
-    n "I've read the first few pages."
+    n 1chg "I've read the first few pages."
     n "Pardon me if I don't sound ecstatic about it."
     "Natsuki sighs."
-    n "Look, that wasn't meant to sound rude or anything."
-    n "I'm grateful for the gift, really."
+    n 2chs "Look, that wasn't meant to sound rude or anything."
+    n 2chq "I'm grateful for the gift, really."
     mc "If you say so."
     return
 
 label gift_anime_n:
     $ christmas_approval += 1
-    n "It's a big box."
+    n 2chk "It's a big box."
     n "What's in here?"
     mc "You'll see."
     "Natsuki opens the box."
     "She pulls out one of the disc covers holding a volume of Parfait Girls."
-    n "The anime of Parfait Girls?"
+    n 2chm "The anime of Parfait Girls?"
     n "I...didn't even know this existed."
     mc "Really?"
     mc "To be honest, neither did I."
-    n "It must be recent."
+    n 1chc "It must be recent."
     n "I can't believe I didn't see it in the current season of anime."
-    n "This must have cost you a fortune."
+    n 1chq "This must have cost you a fortune."
     n "I'm sorry for doubting you."
     mc "Don't be."
     mc "The guy who was selling it to me gave it to me for really cheap."
     mc "So, in a sense, I guess I really didn't spend a lot on your gift."
-    n "I'm still grateful."
+    n 1chm "I'm still grateful."
     mc "It could be pretty bad."
     mc "You and I both know there are some anime adaptations that are..."
     mc "...questionable, to say the least."
-    n "Ahah! You're so right!"
-    n "Still, I'm really excited to see those characters all animated."
+    n 1cht "Ahah! You're so right!"
+    n 2chc "Still, I'm really excited to see those characters all animated."
     mc "I'm glad to hear it."
     return
 
 label gift_knife_y:
     $ christmas_approval += 1
-    y "Is this...some sort of knife?"
+    y 2chf "Is this...some sort of knife?"
     mc "Yes, I think it is."
     "Yuri takes it out of it's scabbard."
-    y "Wow."
+    y 2chj "Wow."
     "She places her finger on the tip of the knife."
     "A bit of blood comes out from her finger."
     mc "Careful!"
     "She puts her finger in her mouth to stop the bleeding."
-    y "It's okay, I'm used to it."
+    y 2cha "It's okay, I'm used to it."
     y "I just wanted to test how much it's been sharpened."
     mc "And?"
-    y "It's made of wood and is just as sharp as any other knife."
-    y "The craftsmanship is unmatched."
+    y 2chi "It's made of wood and is just as sharp as any other knife."
+    y 2chf "The craftsmanship is unmatched."
     mc "You know, that's what the shopkeeper said."
     mc "I really wasn't sure if getting you something like this would be a good idea."
     y "Why not?"
     mc "Because these are part of the problem when you..."
     mc "You know."
-    y "That's not really true."
+    y 2chg "That's not really true."
     y "The problem was in my mentality."
-    y "Knives don't hurt people, [player]."
+    y 1chk "Knives don't hurt people, [player]."
     y "It's the people wielding them that hurt people."
     mc "I guess so."
-    y "Regardless, thank you for this gift."
+    y 1chc "Regardless, thank you for this gift."
     y "This type of knife is something I never knew I wanted."
     mc "I'm glad you're enjoying it."
     "Yuri places the knife back into the scabbard."
     return
 
 label gift_ARM_y:
-    y "Can I ask what this is exactly?"
+    y 1chf "Can I ask what this is exactly?"
     y "It looks like some kind of contraception..."
-    y "But I can't really decipher how to use it."
+    y 1chq "But I can't really decipher how to use it."
     mc "It's called an ARM."
     mc "An Automated Responder Mechanism, I think."
-    y "I-I see..."
+    y 1cho "I-I see..."
     mc "You put it on your arm and it will deter you from cutting yourself."
-    y "W-What?!"
+    y 3chp "W-What?!"
     mc "Ah...sorry."
     mc "Still a sensitive topic."
-    y "It's fine...but what do you mean?"
+    y 3chq "It's fine...but what do you mean?"
     mc "About what?"
-    y "About it deterring me?"
+    y 2chf "About it deterring me?"
     y "It's just a metal thing that goes around my arm."
-    y "That's hardly going to...you know."
+    y 2chg "That's hardly going to...you know."
     mc "I think the shopkeeper said something about magnets?"
     mc "I'm not too sure."
-    y "Well."
+    y 3chk "Well."
     mc "What is it?"
-    y "I don't know."
+    y 3chq "I don't know."
     y "This seems a bit...clunky to me."
     y "I can't imagine wearing this to school."
     mc "I guess not."
-    y "And I don't really have that sort of problem anymore."
+    y 3chg "And I don't really have that sort of problem anymore."
     mc "Just in case."
-    y "I suppose I'm glad you're looking out for my wellbeing."
-    y "So thank you."
+    y 2chf "I suppose I'm glad you're looking out for my wellbeing."
+    y 1cha "So thank you."
     "Yuri puts the ARM back into box."
     return
 
 label gift_bracelet_m:
-    $ christmas_approval += 3
+    $ christmas_approval += 1
     mc "It's a bracelet."
     mc "Some guy suggested I buy it for you."
-    m "Some guy?"
+    m 2chd "Some guy?"
     mc "At this store."
     mc "It's where I bought the others gifts too."
-    m "And I suppose you didn't buy them all a bracelet too?"
+    m 2che "And I suppose you didn't buy them all a bracelet too?"
     mc "No, I got everyone something different."
     "Monika examines the bracelet."
-    m "It's very beautiful."
+    m 2chc "It's very beautiful."
     m "It feels handcrafted with love."
-    m "Like someone's whole dedication went into making this."
+    m 2che "Like someone's whole dedication went into making this."
     mc "It does?"
-    m "Yeah, I can just sense it."
+    m 1cha "Yeah, I can just sense it."
     mc "Why don't you put it on?"
     mc "According to the clerk, it's infused with happiness."
-    m "Infused with happiness?"
+    m 1chl "Infused with happiness?"
     m "For some reason, I highly doubt that."
     mc "Me too, but you never know."
     "Monika puts on the bracelet."
-    m "W-Wow."
+    m 2chd "W-Wow."
     m "That's incredible."
     mc "What happened?"
     m "I feel so...happy all of a sudden."
     mc "You're not just messing with me because I said that, right?"
-    m "No, I'm serious."
+    m 2chb "No, I'm serious."
     m "This bracelet is magical."
     mc "And it's yours now."
-    m "It's a wonderful present."
+    m 2cha "It's a wonderful present."
     mc "That's not all."
     mc "There's a small button on the top."
     mc "Click it."
-    m "Okay."
+    m 2chc "Okay."
     "Monika presses the button."
     "The same theme from before plays."
-    m "This is..."
+    m 2chd "This is..."
     mc "What is it?"
-    m "It sounds like a song I stopped composing."
+    m 1che "It sounds like a song I stopped composing."
     m "The start of it, anyway."
     mc "It does?"
     mc "That's probably a coincidence."
-    m "Do you know where you went to buy this?"
+    m 1chc "Do you know where you went to buy this?"
     mc "I don't remember the name of the store."
     mc "But it was somewhere in the mall."
     mc "I can take you there, if you want."
-    m "I might take you up on that offer."
+    m 1chb "I might take you up on that offer."
     return
 
 label gift_Markov_m:
-    m "A book?"
+    m 1chc "A book?"
     mc "Yeah, I thought you might like it."
     mc "Seeing as we are in a club about literature, lead by you."
-    m "That makes sense."
-    m "The cover is very ominous."
+    m 1che "That makes sense."
+    m 1chc "The cover is very ominous."
     m "A red eye?"
-    m "Kind creepy, if you ask me."
+    m 2chd "Kind creepy, if you ask me."
     mc "You don't like it?"
-    m "I never said that...!"
+    m 2chl "I never said that...!"
     m "I'm sure once I read it, I'll really enjoy the story."
     mc "You don't have to force yourself to like it."
     mc "If I messed up, you can let me know."
-    m "Don't say that."
-    m "Look, I'm really eager to read it."
+    m 2chf "Don't say that."
+    m 1che "Look, I'm really eager to read it."
     m "I'll read the first couple of pages now."
     "Monika takes the plastic off the book and turns to the first page."
     mc "Monika--"
-    m "Let's see here, \"chapter one, inner demon\". What a strange name for a first chapter."
+    m 1cha "Let's see here, \"chapter one, inner demon\". What a strange name for a first chapter."
     mc "Monika, you don't need to prove yourself to me."
     "She seems to ignore what I said."
-    m "And look at these words to begin with, it's like some sort of chant or incantation or something."
-    m "Evigilare...faciatis...mali...dorimienti?"
-    m "I think I got that right--{nw}"
+    m 1chc "And look at these words to begin with, it's like some sort of chant or incantation or something."
+    $ config.allow_skipping = False
+    $ config.skipping = False
+    m 1chd "{cps=20}Evigilare...{w=0.3}faciatis...{w=0.3}mali...{w=0.3}dorimienti?{/cps}"
+    m 1cha "I think that's right.{nw}"
     stop music
     stop music_poem
     show monika gcha
-    $ pause(1.0)
+    $ pause(2.0)
+    $ config.allow_skipping = True
+    show monika 1chc
     mc "Is something wrong?"
     m "I..."
     "Monika looks around wildly."
-    "As if she doesn't know where she is."
-    m "I think I need to go for a second."
+    "It's as if she doesn't know where she is."
+    m 1che "I think I need to go for a second."
     m "I'll be back, don't wait for me."
     show monika at lhide
     hide monika
@@ -802,56 +807,56 @@ label gift_Markov_m:
 
 label gift_Xileh_ay:
     $ christmas_approval += 1
-    ay "Some kind of snail?"
+    ay 1chh "Some kind of snail?"
     mc "I think so, yeah."
-    ay "Really?!"
-    ay "This is incredible!"
+    ay 1chi "Really?!"
+    ay 1chd "This is incredible!"
     mc "What...?"
-    ay "All hail the snail!"
+    ay 1che "All hail the snail!"
     "Ayame begins bowing her head down to the fossil."
     mc "Is there something special about this fossil?"
-    ay "It's a fossil, [player]!"
+    ay 1chb "It's a fossil, [player]!"
     ay "It's already special."
-    ay "How did you even get this?"
+    ay 1chi "How did you even get this?"
     mc "It's a long story."
-    ay "I love fossils."
+    ay 1chj "Anyway, I love fossils."
     ay "They're so fascinating, don't you think?"
     mc "I guess."
-    ay "They're like a glimpse to the past."
+    ay 1chd "They're like a glimpse to the past."
     ay "A window to see what once was."
     mc "When you look at it that way, it does make sense."
-    ay "Thank you for this, I love fossils."
+    ay 1chh "Thank you for this."
     ay "It's a bit of a hobby of mine to collect them."
-    ay "If you go to my room, I've got plenty on display."
+    ay 1chd "If you go to my room, I've got plenty on display."
     mc "Really? So it's like a mini museum in your room."
-    ay "Ahah, I guess it is."
+    ay 1che "Ahah, I guess it is."
     return
 
 label gift_Edom_ay:
-    ay "Some kind of...crab?"
+    ay 1chi "Some kind of...crab?"
     mc "I guess so."
-    ay "I see."
+    ay 1chg "I see."
     ay "I like prehistoric fossils, [player]."
     ay "Thank you."
     mc "You don't sound impressed."
-    ay "Oh, I am."
+    ay 1chb "Oh, I am."
     ay "Don't get the wrong idea."
     ay "How you even came about this is beyond me."
-    ay "It's just..."
+    ay 1chg "It's just..."
     mc "What is it?"
     ay "I had a traumatic accident with a crab once."
-    ay "My family avoid crabs like the plague because of me."
+    ay 1chf "My family avoid crabs like the plague because of me."
     ay "I almost lost my fingers that day to a crab."
-    ay "Can you imagine?"
+    ay 1chc "Can you imagine?"
     ay "Losing fingers to a crab?"
     mc "I couldn't really."
     mc "I don't go to the beach very often."
-    ay "The point is..."
+    ay 1chg "The point is..."
     ay "It still gives me nightmares to this day."
     mc "It does?"
     mc "I'm so sorry!"
     mc "I didn't know."
-    ay "Ahaha, it's fine."
+    ay 1chj "Ahaha, it's fine."
     ay "There's no way you could have known that."
     return
 
@@ -929,6 +934,7 @@ label christmas_chapter:
     $ style.say_window = style.window_christmas
     $ config.allow_skipping = True
     "I'm completely useless here."
+    "I've been to a dozen stores but..."
     "I don't know the girls well enough to get each of them the right gift!"
     "What am I going to do?"
     "I'm just wasting my time here..."
@@ -960,7 +966,7 @@ label christmas_chapter:
     play music t17 fadeout 2.0
     "I wonder around the mall for a bit, not really paying attention to where I'm going."
     "I've just been trying to figure out what to get everyone but I'm out of ideas."
-    show mysteriousclerk 1cha zorder 2 at t11
+    show mysteriousclerk 1chk zorder 2 at t11
     cl "Hey there, little [player_other]."
     cl "Watch where you're going."
     "A strange looking man appears in front of me."
@@ -971,18 +977,19 @@ label christmas_chapter:
     "I don't even know how I got into this store."
     "Was I really thinking too much about what to get everyone that I didn't even realize I walked in here?"
     mc "S-Sorry, I wasn't really paying attention."
+    show mysteriousclerk 1chf
     "The man looks as if he is scanning me."
     cl "Let me guess."
     cl "You're buying last minute Christmas gifts."
-    cl "It's for four...no five people."
+    cl 2che "It's for four...no five people."
     cl "And they're all women."
     mc "What?"
     mc "How did you get that just from looking at me?"
-    cl "You pick up a few tricks when you're my age."
+    cl 2cha "You pick up a few tricks when you're my age."
     mc "Like how to read a person?"
     cl "Something like that."
     "Who is this guy...?"
-    cl "I'm the owner of this fine establishment."
+    cl 4chb "I'm the owner of this fine establishment."
     "Did I even say that out loud?"
     "If not, why the hell did this guy just introduce himself like that all of a sudden?"
     cl "The executive officer of this humble abode."
@@ -990,14 +997,14 @@ label christmas_chapter:
     cl "The--"
     mc "Alright, I get it."
     mc "How did you know I was wondering who you were though...?"
-    cl "Like I said, you pick up a few tricks."
+    cl 4chd "Like I said, you pick up a few tricks."
     mc "..."
-    cl "Anyway, what can I do for you?"
+    cl 1cha "Anyway, what can I do for you?"
     cl "Want some help getting some gifts?"
     mc "What?"
     mc "No, of course not!"
     mc "Especially not from--"
-    cl "Please, my friends call me Clark."
+    cl 1chf "Please, my friends call me Clark."
     $ cl_name = "Clark"
     cl 2che "But that's not actually my name!"
     cl "So change it back to those question marks!"
@@ -1005,73 +1012,75 @@ label christmas_chapter:
     $ cl_name = "???"
     cl 2cha "As I was saying..."
     cl "You aren't my friend either."
-    cl "So instead, you may call me Nick."
+    cl 2chb "So instead, you may call me Nick."
     $ cl_name = "Nick"
     mc "Right...Well, I was just about to leave, {i}Nick{/i}."
     mc "So, if you don't mind."
     "I try to make my way past him but he blocks my way."
-    cl "Ho, ho, ho little [player_other]."
+    cl 4che "Ho, ho, ho little [player_other]."
     cl "Are you sure you wanna do that?"
     cl "I know exactly the sort of thing those girls would like."
-    cl "Well, it's more of a fifty-fifty."
+    cl 3chb "Well, it's more of a fifty-fifty."
     cl "But it's better than getting them nothing, am I right?"
     mc "Look, I'm not sure how exactly you knew this much already."
     mc "But I really doubt you know enough about those girls to know what gift to get them."
-    cl "Is that a test?"
+    cl 1chb "Is that a test?"
     if player_gender == "boy":
-        cl "Good sir, are you challenging my knowledge?"
+        cl 1chi "Good sir, are you challenging my knowledge?"
     else:
-        cl "Madam, are you challenging my knowledge?"
+        cl 1chi "Madam, are you challenging my knowledge?"
     "I let out a quiet sigh."
     "I just want to get out of here."
     "This guy is seriously getting on my nerves."
-    cl "The girl you were thinking of just before."
+    cl 1chf "The girl you were thinking of just before."
     cl "She has red hair and eyes as blue as a sapphire."
     cl "She's clumsy but she has everyone's best interest as heart."
     cl "She's the nicest person you know and she's always looking out for others."
-    cl "She's the main reason you're even out here doing this."
+    cl 1chb "She's the main reason you're even out here doing this."
     cl "Because without her, you would have never met the other four."
     mc "What...?"
-    cl "Tell me I'm wrong."
+    cl 2chc "Tell me I'm wrong."
     "There is no way this guy could have figured that out just from looking at me."
     "This has got to be some kind of trick."
     "Did Sayori set this guy up?"
     "But then how would she have known I'd end up here?"
-    cl "Just hear me out, okay?"
+    cl 2cha "Just hear me out, okay?"
+    cl "It's literally the only reason I'm here."
     cl "You can make the decision in the end."
     mc "Fine."
-    cl "Splendid!"
+    cl 2chb "Splendid!"
     cl "Right this way."
     "The man takes me to a section of the store."
     "There's all sorts of fluffy animals here."
     "I guess the store has more than just books and electronics."
-    cl "Now any of these would probably do great with her."
+    cl 1chf "Now any of these would probably do great with her."
     cl "But let's be honest, anything you give her would make her day."
     cl "Unless it's something crazy and offensive, right?"
     mc "I suppose."
     cl "If you don't like those then maybe something more shocking will do."
     mc "Shocking? I don't think--"
-    cl "Like this incredible limited time offer on this book."
+    cl 1chb "Like this incredible limited time offer on this book."
     cl "It's called \"How Not To Break Things As A Manager\", it's ninety percent off."
     cl "What do you say, [player]?"
     "I didn't even tell him my name...did I?"
     mc "What?"
     mc "Why would she need this?"
     mc "What use would--"
-    cl "You're in some kind of book club, right?"
+    cl 1chh "You're in some kind of book club, right?"
     cl "This is a book."
     cl "See the connection?"
     "The man taps his finger on his head."
     mc "I...guess?"
     mc "But I'm definitely not going to--"
-    cl "It's {i}your{/i} choice, okay?"
+    cl 1cha "It's {i}your{/i} choice, okay?"
     cl "I ain't gonna force you to do anything."
     cl "Just be sure you actually know what you're doing."
-    cl "If you don't...well, there might be consequences."
+    cl 1chb "If you don't...well, there might be consequences."
     mc "What kind of consequences?"
     cl "Consequences that could affect other worlds, you know?"
     "I've made up my mind."
     "This guy is insane."
+    cl 1chd "Just kidding, none of this really matters."
     mc "Sure..."
     menu:
         mc "In that case, I'll take the..."
@@ -1092,20 +1101,20 @@ label christmas_chapter:
             "Maybe she could still use it if she ever decides to start her own club or something."
             "I just hope she doesn't take it the wrong way."
     mc "I'll take the--"
-    cl "Great!"
+    cl 4chb "Great!"
     "Without even letting me finish, Nick takes the [christmas_gifts[0]] and puts it into a plastic bag."
     "Did he know I was going to go for that?"
     cl "Now moving on."
-    cl "How about we get a gift for the tall one?"
+    cl 2chb "How about we get a gift for the tall one?"
     mc "The tall one?"
     cl "The creepy one."
     mc "Creepy one? No one is--"
-    cl "You know the one, likes horror books..."
+    cl 2che "You know the one, likes horror books..."
     cl "Has a knife collection..."
     mc "What?!"
     cl "The gifts for her are right over here."
     cl "So come on!"
-    cl "Get a move on!"
+    cl 2chf "Get a move on!"
     cl "You don't have much time, let's go, let's go."
     mc "Jeez, I'm going..."
     mc "Can you at least tell me how you learned all of this information?"
@@ -1113,43 +1122,43 @@ label christmas_chapter:
     mc "What the hell does that even mean?"
     mc "There's no way you can just know everything about someone from looking at them."
     cl "Who said I knew everything about you?"
-    cl "The mundane things about a person are not my specialty."
+    cl 1chg "The mundane things about a person are not my specialty."
     cl "I wouldn't care to learn those things about someone."
-    cl "Like your favorite color."
+    cl 1chi "Like your favorite color."
     cl "Who even cares about that?"
     cl "Like come on, really?"
     mc "So you've learned about me?"
     mc "How?"
-    cl "Oh, I said that out loud."
+    cl 5chg "Oh, I said that out loud."
     cl "Well, never mind!"
     cl "Forget I said anything."
     mc "No, now I'm curious."
     mc "Tell me, come on."
     mc "I deserve to know how you know so much about me."
     mc "Are you my stalker or something?"
-    cl "What? No!"
+    cl 5chf "What? No!"
     cl "That's way too creepy."
     cl "It's simply--"
-    cl "Wait, why am I being interrogated by some kid?"
+    cl 5che "Wait, why am I being interrogated by some kid?"
     "Nick points to another place in the store."
-    cl "Come on, move it."
+    cl 3chb "Come on, move it."
     cl "Or don't you want to get the rest of them something?"
     cl "So how about you stop asking questions and I'll help you pick out the rest of the gifts?"
     mc "Okay, I can deal with that."
-    cl "Splendid, just splendid!"
+    cl 3chc "Splendid, just splendid!"
     cl "And here we are..."
     "We arrive at the section of the store stocking...sharp objects."
     "That's probably the best way to describe it."
     "There's a lot of sharp things on display, half of which I don't know the name of."
     "There's even a katana for sale and the sign says authentic."
     "What does that even mean?"
-    cl "Now you can either choose this really cool looking knife here."
+    cl 3chb "Now you can either choose this really cool looking knife here."
     "Nick points to a small ornate knife with intricate designs on it."
     "The shape of it is completely unique, unlike anything I've seen and each edge looks like it was carved with care."
     "It has its own matching scabbard to place it in too."
     cl "She'll love this."
     mc "How can you know that for sure?"
-    cl "Young [player_other], look at the craftsmanship on this."
+    cl 3che "Young [player_other], look at the craftsmanship on this."
     cl "You won't see this anywhere else."
     cl "It's one of a kind."
     cl "Tell me that isn't top quality, top notch stuff."
@@ -1157,37 +1166,38 @@ label christmas_chapter:
     mc "So I can't tell you otherwise."
     mc "It does look really nice, I suppose."
     cl "She'll love it."
-    cl "But..."
+    cl 1chc "But..."
     cl "There is an alternative, you know."
     mc "And what exactly is that?"
-    cl "Well, you and I both know she has a habit of..."
+    cl 1chd "Well, you and I both know she has a habit of..."
     cl "Ehm."
     "He makes a slicing gesture on his arm."
     cl "Or, at least she did."
     cl "Who knows if she still does?"
+    cl 1chi "Hint, I do."
     mc "What's your point?"
     cl "I've got just the thing to prevent that kind of thing ever happening again."
     "Nick points to the display opposite the knife."
-    cl "I call it the Automated Responder Mechanism."
+    cl 2cha "I call it the Automated Responder Mechanism."
     cl "Or ARM for short."
     cl "It goes on your arm and every time you'll try to cut it..."
     show mysteriousclerk at h11
-    cl "Bam!"
+    cl 2chb "Bam!"
     "The clerk claps his hands together."
     mc "Bam?!"
     mc "Why would I want that to happen?"
-    cl "It was a figure of speech."
+    cl 2che "It was a figure of speech."
     cl "What I meant was, it will automatically activate some magnets and keep the knife stuck to it for a while."
     mc "What if she has like a wooden knife or something?"
-    cl "Kid, who in the world uses a wooden knife?"
+    cl 2chf "Kid, who in the world uses a wooden knife?"
     mc "Isn't that knife over there made of wood?"
     "I point to the knife he showed me earlier."
     cl "Uhhhhhhhhhh..."
-    show mysteriousclerk zorder 2 at h11
-    cl "Look!"
+    show mysteriousclerk at h11
+    cl 1chg "Look!"
     cl "It's the thought that counts, okay?"
     cl "By buying this, you're showing her you care about her wellbeing."
-    cl "So make your choice."
+    cl 5cha "So make your choice."
     mc "Okay, let me think."
     menu:
         "It only seems logical to take the..."
@@ -1206,73 +1216,73 @@ label christmas_chapter:
             "I'm just looking out for her, after all..."
     mc "I've given it a lot of thought."
     mc "I think I'll take the--"
-    cl "Wonderful, absolutely wonderful!"
-    cl "Immediately, the clerk places the [christmas_gifts[1]] into the same plastic bag."
+    cl 5chb "Wonderful, absolutely wonderful!"
+    cl 2chb "Immediately, the clerk places the [christmas_gifts[1]] into the same plastic bag."
     mc "Did you just refer to what you were doing in the third person?"
-    cl "What of it?"
+    cl 2cha "What of it?"
     mc "Never mind."
-    cl "Who next?"
+    cl 2che "Who next?"
     cl "Ooh, how about that tsundere girl?"
     mc "Tsundere girl?"
     cl "You know the one."
     cl "I'm sure."
-    mc "Eh..."
-    cl "Now I'll divert your attention over here."
+    mc "Eh...?"
+    cl 2chi "Now I'll divert your attention over here."
     "The clerk starts moving around the store again at a much faster pace than before."
     mc "Does anyone else work here?"
-    cl "Nope, it's a family business."
+    cl 1chb "Nope, it's a family business."
     cl "By family, I mean my family."
     cl "By my family, I mean--"
     mc "I don't really need to know the details."
-    cl "Suit yourself, kiddo."
+    cl 1chc "Suit yourself, kiddo."
     cl "Anyway, we're here."
     "Nick presents a whole lot of manga and anime to me."
     "I guess we're in that section of the store now."
     "This store seems to have everything in it."
     "I thought the books on the shelves were just novels or something."
     "But as it turns out..."
-    cl "Hmm..."
+    cl 1che "Hmm..."
     cl "Now where was that manga...?"
     cl "Oh, yes!"
-    cl "Here it is."
+    cl 3chd "Here it is."
     "He hands over a single volume of a manga I've never seen before."
     mc "What's this?"
     cl "What's it look like?"
-    cl "It's obviously a stapler."
+    cl 3chi "It's obviously a stapler."
     "The manga he gave me is called \"Donut Purr Chase\" and features a cute cat on the front cover."
     "I look at the first few pages."
     "I can't really get what the story is about."
     "The art is also...questionable."
     "Some panels have extremely good detail while others are literally stick figures."
     mc "I don't know if she'll like this."
-    cl "Why not?"
+    cl 4chk "Why not?"
     cl "It's really quite sweet."
-    cl "I mean that literally, like trying smelling it."
+    cl 4cha "I mean that literally, like trying smelling it."
     "The book does somehow give an aroma of freshly baked cupcakes."
     cl "The story is..."
-    cl "Well, that's spoilers."
+    cl 4chb "Well, that's spoilers."
     cl "If you don't want to get her that, then..."
-    cl "There's always this."
+    cl 3chc "There's always this."
     "The clerk holds out a small box labeled--"
     cl "Parfait Girls, the complete collection."
     cl "In anime form."
     mc "That would be nice."
     mc "But I think she already has that, doesn't she?"
-    cl "No."
+    cl 3chb "No."
     cl "She has the collection of manga."
     cl "Not the anime collection."
     mc "How do you know?"
-    cl "Look, this is on sale for ninety percent off."
-    cl "It's...clearance."
+    cl 3cha "Look, this is on sale for ninety percent off."
+    cl 3chd "It's...clearance."
     cl "So you can take the single volume of manga or this collection."
     cl "They'll be around the same price anyway."
     mc "If I buy the anime collection and she already has it, then what?"
-    cl "If you buy the manga and she doesn't like it, then what?"
+    cl 3chf "If you buy the manga and she doesn't like it, then what?"
     cl "Maybe you won't get any cupcakes at your little Christmas party."
     cl "Just make up your mind, [player_gender]."
     mc "What do you think I should get then?"
     "The clerk shrugs."
-    cl "Not my choice to make."
+    cl 4chh "Not my choice to make."
     cl "So what will it be?"
     mc "Um..."
     menu:
@@ -1290,34 +1300,34 @@ label christmas_chapter:
             "I hope Natsuki isn't one of those people."
             "And the clerk seems sure that Natsuki doesn't have this so it would be a pretty good gift."
     mc "Can you give me the--"
-    cl "Done and done."
+    cl 1cha "Done and done."
     "The clerk basically shoves the [christmas_gifts[2]] into the plastic bag."
     cl "Who next?"
-    cl "How about the new girl?"
+    cl 1chb "How about the new girl?"
     cl "I know you need help picking out a gift for her."
     mc "What gives you that idea?"
-    cl "For one, you barely know her."
-    cl "Didn't you only meet a couple days ago?"
+    cl 1chc "For one, you barely know her."
+    cl "Haven't you only spoked to each other a couple of times?"
     mc "Well...yeah but--"
-    cl "And two, the only thing you do know about her is that she's super rich."
+    cl 1chf "And two, the only thing you do know about her is that she's super rich."
     cl "Which means..."
     cl "She has everything she could ever want."
     mc "Ah...that's true."
     mc "I have no idea what to get her."
     mc "Even if you suggested something to me, I wouldn't know if that would be a good or bad thing to get."
-    cl "Luckily for you, I know her quite well."
+    cl 1chd "Luckily for you, I know her quite well."
     mc "And how would--"
-    cl "She came in here before, you know."
+    cl 2chc "She came in here before, you know."
     cl "Granted, she didn't buy anything."
-    cl "She said I was \"too weird\" and left."
+    cl 2chb "She said I was \"too weird\" and left."
     cl "But what she didn't know is that I already read her like a piece of source code."
     $ _history_list[-1].what = "\"But what she didn't know is that I already read her like a book.\""
     mc "Like a what?"
-    cl "Like a book."
+    cl 2che "Like a book."
     cl "Did you not hear me?"
     mc "Uh...right."
     mc "So what did you learn about her that I could me choose a gift for her?"
-    cl "I only got a short glimpse."
+    cl 2chi "I only got a short glimpse."
     cl "But I think I have just the things."
     cl "The clerk directs [player] to the section of the store filled with artifacts."
     $ _history_list[-1].what = "The clerk directs me to the section of the store filled with artifacts."
@@ -1325,54 +1335,56 @@ label christmas_chapter:
     "He's doing it again."
     $ _history_list[-1].what = "\"He's doing it again.\""
     $ _history_list[-1].who = player
-    cl "What am I doing?"
+    cl 4chl "What am I doing?"
     "He heard me? I swear I didn't say that."
     mc "You referred to yourself in the third person."
-    cl "I assure you, I didn't."
-    cl "Why don't you check your recent {i}history{/i}, [player]?"
+    cl 4chm "I assure you, I didn't."
+    cl 3chi "Why don't you check your recent {i}history{/i}, [player]?"
     "Recent history?"
     "It feels like the more I talk to this guy, the more brain cells I lose."
-    cl "Jeez, kids these days."
+    cl 3chg "Jeez, kids these days."
     "The clerk shakes his head in disapproval."
-    cl "But I'm not here to lecture you."
+    cl 1chb "But I'm not here to lecture you."
     cl "I'm here to help you get these fancy looking artifacts as a gift."
     mc "Which one would she like?"
-    cl "All of these are exclusive artifacts dug by my very own debuggers."
+    cl 1cha "All of these are exclusive artifacts dug by my very own debuggers."
     $ _history_list[-1].what = "\"All of these are exclusive artifacts dug by my very own archaeologists.\""
     cl "So any of them would be perfect."
-    cl "But since I know you're clueless and all."
+    cl 1chc "But since I know you're clueless and all."
     cl "I'd recommend one of these two."
     "He points me towards two strange looking rocks."
     cl "I call these two the monster fossils."
     cl "They're not really traditional artifacts but there is some sort of mystical presence within them."
-    cl "So I call them artifacts."
+    cl 1chb "So I call them artifacts."
     mc "Why would she want monster fossils?"
     mc "But more importantly how can you afford to--"
-    cl "Let's focus on the gifts okay?"
+    cl 1chf "Let's focus on the gifts okay?"
     cl "She may not look it but she's actually a hunter."
     cl "When she has time, she likes to go hunting with her parents."
     mc "Interesting but that has nothing to do with why she'd be interested in monster fossils..."
-    cl "Or does it?"
+    cl 1che "Or does it?"
     "The clerk stares at me intensely."
     mc "...It doesn't."
-    cl "Or does it?!"
+    cl 1chf "Or does it?!"
     mc "It really doesn't."
-    cl "That's true, I guess."
+    cl 1cha "That's true, I guess."
     cl "So which fossil will it be?"
-    cl "The Xileh fossil..."
+    cl 2chb "The Xileh fossil..."
     "The clerk points to the fossil with what looks like a snail carved onto it."
-    cl "...or the Emod fossil?"
+    cl 3chb "...or the Emod fossil?"
     "He points to the other fossil which has some sort of crab on it."
-    cl "Choose carefully."
+    cl 1cha "Choose carefully."
     cl "If you choose the wrong one, you might anger all the wrong people."
-    cl "Including Ayame."
+    cl 1chl "Including Ayame."
+    cl 1chb "Just kidding, she doesn't really get angry."
+    cl "No one does, at least in this reality."
     mc "How the hell am I suppose to choose then?"
     mc "I don't know anything about these fossils."
-    cl "Take a wild guess."
+    cl 5che "Take a wild guess."
     cl "Try playing around with the letters of the words in your head or something."
     mc "How is that going to help?"
-    cl "I think she likes Oman--"
-    cl "Ohoho, never mind."
+    cl 5chf "I think she likes Oman--"
+    cl 5chw "Ohoho, never mind."
     mc "What--"
     menu:
         cl "Will it be?"
@@ -1385,35 +1397,35 @@ label christmas_chapter:
     "Before I even open my mouth, Nick takes the [christmas_gifts[3]] fossil and carelessly places it into the bag."
     "I think I heard a cracking sound..."
     mc "Isn't that meant to be an artifact?!"
-    cl "Oh yeah, meant to be."
+    cl 2chb "Oh yeah, meant to be."
     cl "Why?"
     mc "...No reason."
-    cl "Strange kid."
+    cl 2chc "Strange kid."
     "The clerk starts lifting the plastic bag he's carrying up and down."
     "It's as if he's trying to test the weight of it or something..."
     cl "One more gift, right?"
     mc "I guess so."
-    cl "You don't wanna mess this up."
+    cl 1chf "You don't wanna mess this up."
     cl "The last girl is..."
     "Nick pretends to think for a moment."
-    cl "Charming, charismatic, beautiful."
+    cl 1chb"Charming, charismatic, beautiful."
     cl "She's a wonderful person."
     cl "She's also a very special person."
-    cl "Not to just to you but..."
-    cl "N-Never mind."
-    cl "Just don't mess this up, okay?!"
+    cl 1chc "Not to just to you but..."
+    cl 1chd "N-Never mind."
+    cl 1chi "Just don't mess this up, okay?!"
     "The man drops the bag and grabs my shoulders and begins frantically shaking me."
     mc "Alright, whatever!"
     mc "Just stop shaking me around and let go of me!"
     "I push his hands off of my shoulders and he Immediately picks up the plastic bag as if nothing happened."
     mc "Don't worry, I don't want to mess any of this up."
     mc "Why I'm taking suggestions from a stranger who knows way more than he should is beyond me."
-    cl "Same."
+    cl 1chb "Same."
     $ _history_list[-1].what = "\"It's because you aren't original and can't think for yourself.\""
-    cl "But anyway, let's get to it."
+    cl 1chd "But anyway, let's get to it."
     cl "The thing you should get her is actually behind the counter."
     mc "Behind the counter?"
-    cl "Yeah..."
+    cl 1chb "Yeah..."
     cl "Come on, follow me."
     "Nick unlocks the gate at the counter and leads me to the back room of his store."
     stop music fadeout 2.0
@@ -1603,15 +1615,15 @@ label christmas_chapter:
     cl "We'll sort out the payment."
     mc "Okay."
     scene bg anticshop
-    show mysteriousclerk 1cha zorder 2 at t11
+    show mysteriousclerk 1chc zorder 2 at t11
     with wipeleft_scene
     if christmas_gifts[4] == "Markov":
         "Nick takes--"
-        cl "Just call me Mysterious Clerk or something, okay?"
+        cl 1chf "Just call me Mysterious Clerk or something, okay?"
         $ cl_name = "Mysterious Clerk"
         mc "Huh?"
         cl "Only people who deserve it can call me Nick."
-        cl "I hope you like coal, [player]."
+        cl 1chh "I hope you like coal, [player]."
         $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
         if not list(set(process_list).intersection(stream_list)):
             if currentuser != "" and currentuser.lower() != player.lower():
@@ -1621,26 +1633,26 @@ label christmas_chapter:
     "The price shows up on the register."
     "It's..."
     if cl_name == "Nick":
-        cl "...a lot cheaper than what you were expecting, huh?"
+        cl 1chb "...a lot cheaper than what you were expecting, huh?"
         cl "You deserve a discount."
         cl "I'd give it to you for free but I gotta make a living, you know?"
         mc "Wow..."
         mc "Why do I deserve a discount exactly?"
-        cl "No reason."
+        cl 1chc "No reason."
         cl "I'm erratic, maybe I can jack up the price instead."
         mc "No, that will be fine."
         mc "Thank you."
         mc "I'm curious though..."
         mc "I know you have your team of...whatever for your fossils."
         mc "But have you always worked alone for this kinda stuff?"
-        cl "Well..."
+        cl 1chh "Well..."
         cl "There used to be four others."
         cl "But they kinda...faded away."
         mc "You drifted apart?"
-        cl "Something like that."
+        cl 1chi "Something like that."
         "I pay the bizarre price on the register and take the plastic bag with the gifts."
-        cl "Have a nice day, [player]."
-        cl "Hahaha, hopefully they like your gifts."
+        cl 2cha "Have a nice day, [player]."
+        cl 4chb "Hahaha, hopefully they like your gifts."
         cl "Farewell!"
         show mysteriousclerk at lhide
         hide mysteriousclerk
@@ -1648,14 +1660,14 @@ label christmas_chapter:
         "I head towards the exit."
         mc "Thanks, I might come here again sometime."
     else:
-        cl "The price has increased for my services in helping you."
+        cl 1chf "The price has increased for my services in helping you."
         cl "Now, pay up!"
         mc "E-Eh?"
         mc "This is like the price of everything I'm buying twice over."
-        cl "Your point?"
+        cl 1chg "Your point?"
         cl "The more you waste my time, the more expensive it gets."
         "I pay the bizarre price on the register and take the plastic bag with the gifts."
-        cl "Good day!"
+        cl 2chd "Good day!"
         show mysteriousclerk at lhide
         hide mysteriousclerk
         "The clerk starts walking away in a rush."
@@ -1672,28 +1684,29 @@ label christmas_chapter:
     play music t2 fadeout 2.0
     "I arrive home carrying my gifts for the others."
     "But before I can enter my house, I'm interrupted."
-    show sayori 1ba zorder 2 at t11
+    show sayori 1br zorder 2 at t11
     s "Heeeeey!"
     mc "What is it, Sayori?"
-    s "Just wondering what you have there."
+    s 1ba "Just wondering what you have there."
     s "Those aren't gifts, are they?"
-    s "You didn't go last minute shopping, did you?"
+    s 1bd "You didn't go last minute shopping, did you?"
     mc "I'm not gonna answer that."
     mc "So what are you here for really?"
-    s "I just want to thank you."
+    s 1bb "I just want to thank you."
     mc "For what?"
     s "For doing this."
-    s "I know you have other people you'd rather spend Christmas with."
+    s 1bd "I know you have other people you'd rather spend Christmas with."
     s "I'm glad you're doing it with the club."
     mc "It's really not a problem."
-    s "If you say so."
+    "The truth is, I'd rather spend Christmas with the Literature Club than anyone else."
+    s 2bq "If you say so."
     s "Don't forget to wrap your gifts~"
     mc "Well, I was going to do that now."
     mc "But you're in my way."
-    s "Oh..."
+    s 4bl "Oh..."
     s "Then, see you tomorrow!"
     mc "See you tomorrow."
-    s "Don't be late."
+    s 4bq "Don't be late."
     show sayori at thide
     hide sayori
     "Sayori hurries off home, probably to finish wrapping her own gifts."
@@ -1702,7 +1715,7 @@ label christmas_chapter:
     "Good thing I don't have to write a poem tonight."
     stop music fadeout 2.0
     if christmas_gifts[4] == "Markov":
-        call poem(False,20,True,"Monika")
+        call poem(False,20,True,"Markov")
     scene bg residential_day with dissolve_scene_full
     play music t2
     "It's Christmas day."
@@ -1740,20 +1753,20 @@ label christmas_chapter:
     show ayame at h11
     "Ayame runs from her door and gives me a tight embrace."
     mc "C-Can't...breathe..."
-    ay "Oh, hehehe..."
+    ay 1chb "Oh, hehehe..."
     ay "Sorry, I'm very sorry."
     "Ayame bows her head."
     mc "You don't need to do that."
     mc "We're friends, after all."
     "Ayame lifts her head up."
-    ay "Right, we're friends!"
+    ay 1chd "Right, we're friends!"
     "She smiles widely."
-    ay "Well, {i}friend{/i}. Come on in!"
+    ay 1che "Well, {i}friend{/i}. Come on in!"
     ay "We're just about ready to do the gift exchange."
     "She can see me staring."
-    ay "Surprised? The others reacted like that too."
+    ay 1chj "Surprised? The others reacted like that too."
     ay "And trust me, yours wasn't even the best reaction!"
-    ay "Now come oooooooooooooon!"
+    ay 1che "Now come oooooooooooooon!"
     "Ayame takes my hand and drags me inside."
     scene bg ay_livingroom
     show ayame 1chd zorder 2 at i11
@@ -1767,80 +1780,80 @@ label christmas_chapter:
     "I feel like there's a lack of furniture in here just by how big it is."
     "I'm still at awe at how big her home is."
     "But I guess I shouldn't be so surprised considering where she lives..."
-    ay "Listen, I gotta quickly take care of something."
+    ay 1chi "Listen, I gotta quickly take care of something."
     ay "I just remembered."
-    ay "Silly me, haha."
+    ay 1chc "Silly me, haha."
     mc "Ha..."
     "I force out an awkward laugh."
-    ay "Anyway, let them know you're here."
+    ay 1chb "Anyway, let them know you're here."
     ay "I won't be a moment."
     mc "Okay, good luck."
-    ay "Thanks~"
+    ay 1chd "Thanks~"
     show ayame at thide
     hide ayame
     "Ayame runs off and I slowly enter the room."
     "I was going to try to surprise them but..."
-    show sayori 1cha zorder 2 at t11
+    show sayori 1chq zorder 2 at t11
     s "[player]!"
-    s "You're sooooooooooo late!"
+    s 1chc "You're sooooooooooo late!"
+    s "I even told you yesterday not to be!"
     mc "Hello, Sayori."
-    s "What took you so long?"
+    s 2chb "What took you so long?"
     s "We've been here for ages!"
     show sayori zorder 2 at t21
-    show monika 1cha zorder 3 at f22
+    show monika 1chl zorder 3 at f22
     m "Don't get the wrong idea."
-    m "You really aren't that late."
+    m 1cha "You really aren't that late."
     m "And we've kept ourselves entertained."
-    show natsuki 1cha zorder 3 at f31
+    show natsuki 1chc zorder 3 at f31
     show sayori zorder 2 at t32
     show monika zorder 2 at t33
     n "Yeah, this place is huge..."
-    n "We spent like an hour just looking through every room."
+    n 2che "We spent like an hour just looking through every room."
     n "I don't like it."
     show natsuki zorder 2 at t41
     show sayori zorder 2 at t42
     show monika zorder 2 at t43
-    show yuri 1cha zorder 3 at f44
+    show yuri 3chh zorder 3 at f44
     y "Um...I don't mean to interrupt this conversation."
-    y "But I believe it's your turn, Monika."
+    y 3chf "But I believe it's your turn, Monika."
     "Yuri looks at me from behind one of the cards she's holding."
-    y "Glad you could make it, [player]."
+    y 2chb "Glad you could make it, [player]."
     show yuri zorder 2 at t44
     "It seems all the girls are wearing something to commemorate Christmas."
     "Meanwhile, here I am just wearing plain regular clothes."
     "I really should have worn something more...festive."
-    show monika zorder 3 at f43
+    show monika 2chb zorder 3 at f43
     m "Oh, right."
     m "But I think now is a good time to stop."
-    m "We're all here, after all."
+    m 4cha "We're all here, after all."
     m "It would be a great time to start the gift exchange, right?"
     m "What do you think, Sayori?"
-    show sayori zorder 3 at f42
+    show sayori 2chn zorder 3 at f42
     show monika zorder 2 at t43
     s "Huh?"
     s "I dunno, you're the pres and all."
-    s "You should make the decision."
+    s 1chq "You should make the decision."
     show natsuki zorder 2 at t51
     show sayori zorder 2 at t52
     show monika zorder 2 at t53
-    show ayame 1chd zorder 3 at f54
+    show ayame 1chg zorder 3 at f54
     show yuri zorder 2 at t55
     ay "Phew..."
-    ay "Sorry I'm late!"
-    ay "I had to take care of something quickly."
-    ay "Are we ready to start the gift exchange?"
-    show monika zorder 3 at f53
+    ay "Sorry, I had to take care of something quickly."
+    ay 1chh "Are we ready to start the gift exchange?"
+    show monika 2chj zorder 3 at f53
     show ayame zorder 2 at t54
     m "Ahaha, I suppose we are."
     m "Okay, every--"
     "Monika stops herself suddenly."
-    m "Hmm..."
+    m 2chc "Hmm..."
     show monika zorder 2 at t53
     mc "Is something wrong?"
-    show monika zorder 3 at f53
+    show monika 2chd zorder 3 at f53
     m "Well...no."
-    m "It's just that it feels like its been a while since I've addressed the club like this."
-    show natsuki zorder 3 at f51
+    m 1che "It's just that it feels like its been a while since I've addressed the club like this."
+    show natsuki 1chg zorder 3 at f51
     show monika zorder 2 at t53
     n "What are you talking about?"
     n "You've always addressed the club like this."
@@ -1849,26 +1862,30 @@ label christmas_chapter:
     show monika zorder 3 at f53
     m "I suppose..."
     m "Though I meant as the--"
+    show monika 1cha
     "Monika simply smiles."
-    m "Never mind, let's just get started."
-    m "Okay, everyone!"
+    m 1chn "Never mind, let's just get started."
+    m 4cha "Okay, everyone!"
     m "I want to make something clear before we begin."
     m "When you get your present, you are allowed to open it if you want to."
     show monika zorder 2 at t53
-    show yuri zorder 3 at f55
+    show yuri 3che zorder 3 at f55
     y "Isn't tomorrow the day that's meant to happen?"
-    show monika zorder 3 at f53
+    show monika 4chb zorder 3 at f53
     show yuri zorder 2 at t55
     m "Well, yes."
     m "But I know some of you are more eager than others to open your gifts."
-    m "Plus, it's not really compulsory to open it tomorrow."
-    show sayori zorder 3 at f52
+    m 3che "Plus, it's not really compulsory to open it tomorrow."
+    m "It's more of a tradition."
+    m "A lot of people open they're presents on Christmas day."
+    show sayori 1chc zorder 3 at f52
     show monika zorder 2 at t53
     s "I have a question."
-    s "...Can we get started already?!"
+    s 4chp "...Can we get started already?!"
     s "I can't wait!"
     show sayori zorder 2 at t52
-    show monika zorder 3 at f53
+    show monika 4chk zorder 3 at f53
+    m "Ahaha, okay!"
     m "It's time to exchange our presents!"
 
     call giftexchange_start
@@ -1876,50 +1893,55 @@ label christmas_chapter:
     stop music fadeout 1.0
     scene bg ay_livingroom with wipeleft_scene
     play music t3
-    if christmas_gifts[4]:
-        show sayori 1cha zorder 2 at t42
+    if christmas_gifts[4] == "Markov":
+        show sayori 2cha zorder 2 at t11
         s "Alright, everybody!"
         s "Monika is missing right now."
-        s "But that doesn't change the fact that we've all finished exchanging gifts with each other."
+        s 2chq "But that doesn't change the fact that we've all finished exchanging gifts with each other."
         "Sayori turns towards me."
         if christmas_approval >= 3:
             s "From what I heard, [player] was pretty good at gifting."
             s "But that's not the point!"
         else:
-            s "From what I heard, [player] wasn't very good at gifting."
+            s 2chl "From what I heard, [player] wasn't very good at gifting."
             s "But that's okay!"
 
         # Put Markov Monika Fully Fledged
-        $ persistent.markov_christmas = True
         python:
             delete_character_alternate("monika",7)
             try: open(config.basedir + "/characters_7/monika.chr", "wb").write(renpy.file("monikacorrupt.chr").read())
             except: pass
 
-        s "It's Christmas, it isn't about the gifts you get."
+        s 4chd "It's Christmas, it isn't {i}just{/i} about the gifts you get."
         s "It's about spending time with those you care about."
-        s "Anyway, I hope everyone had a great time!"
-        show ayame 1cha zorder 3 at f43
+        s 4chq "Anyway, I hope everyone had a great time!"
+        show sayori zorder 2 at t21
+        show ayame 1che zorder 3 at f22
         ay "I actually thoroughly enjoyed it!"
         ay "Let's do something like this again sometime!"
-        show sayori zorder 3 at f42
-        show ayame zorder 2 at t43
+        show sayori 2chl zorder 3 at f21
+        show ayame zorder 2 at t22
         s "Ehehe, maybe not."
         s "I don't know if my wallet could take it."
-        show natsuki 1cha zorder 3 at f41
+        show natsuki 1chc zorder 3 at f31
+        show sayori zorder 2 at t32
+        show ayame zorder 2 at t33
         n "And I'm fresh out of ingredients too."
         n "Maybe a bit later."
+        show natsuki zorder 2 at t31
+        show ayame 1chg zorder 3 at f33
+        ay "Oh...did you [player_casual]s not enjoy it?"
         show natsuki zorder 2 at t41
-        show ayame zorder 3 at f43
-        ay "Oh...did you guys not enjoy it?"
+        show sayori zorder 2 at t42
         show ayame zorder 2 at t43
-        show yuri zorder 3 at f44
+        show yuri 3chf zorder 3 at f44
         y "I think what they're trying to say is that we're all out of resources."
         y "Unlike your family, we don't have a near infinite supply of wealth."
-        y "N-No offense."
-        show ayame zorder 3 at f43
+        y 3chs "N-No offense."
+        show ayame 1chj zorder 3 at f43
         show yuri zorder 2 at t44
         ay "Oh, I understand."
+        show ayame 1che
         "Ayame beams."
         ay "When everyone has resources again, let's do something like this again!"
         $ config.skipping = False
@@ -1927,23 +1949,34 @@ label christmas_chapter:
             $ config.allow_skipping = True
         else:
             $ config.allow_skipping = False
-        show sayori zorder 3 at f42
+        show sayori 4chr zorder 3 at f42
+        show ayame zorder 2 at t43
         s "Yeah, definitely!"
         $ consolehistory = []
-        call screen timer_ch_firstdel
-        call updateconsole_parallel ("os.remove(\"characters_7/yuri.chr\")", "yuri.chr deleted successfully.", 7, "yuri")
+        show screen timer_ch_del2("os.remove(\"characters_7/yuri.chr\")","christmas_chapter_dely",_layer="master")
+        call updateconsole_parallel ("os.remove(\"characters_7/yuri.chr\")","yuri",7)
         s "We'll be sure to organize something like this again."
         s "We all had so much fun."
         s "I bet everyone will agree."
-        show sayori zorder 2 at t43
-        show yuri zorder 3 at f44
+        show sayori zorder 2 at t42
+        show yuri 3cha zorder 3 at f44
         y "Yes, this was quite fun."
-        y "Doing things as a club outside of school always makes me feel like I belong here."
-        y "I'm sure the others feel the same too."
+        y 3chb "Doing things as a club outside of school always makes me feel like I belong here."
+        y "I'm sure the others feel the same too.{nw}"
 
         label christmas_chapter_dely:
-        $ delete_character_alternate("yuri",7)
-        stop music
+        hide screen timer_ch_del
+        # Some really bad coding lies near
+        hide ctext
+        show console_text "_" as ctext zorder 100
+        call updateconsolehistory ("yuri.chr deleted successfully.")
+
+        python:
+            currentpos = get_pos()
+            startpos = currentpos - 0.3
+            if startpos < 0: startpos = 0
+            track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/3.ogg"
+            renpy.music.play(track, loop=True)
         $ _history_list = []
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
@@ -1951,131 +1984,187 @@ label christmas_chapter:
         hide natsuki
         hide ayame
         play sound "sfx/s_kill_glitch1.ogg"
-        $ pause(0.25)
+        $ pause(1.0)
         stop sound
         hide screen tear
-        show sayori 1cha zorder 3 at i32
+        show sayori 2cha zorder 3 at i11
+        python:
+            currentpos = get_pos()
+            startpos = currentpos - 0.3
+            if startpos < 0: startpos = 0
+            audio.t3b = "<from " + str(currentpos) + " loop 4.618>bgm/3.ogg"
+            renpy.music.play(audio.t3b, loop=True)
         window show(None)
         s "Alright, you three!{fast}"
         window auto
         s "Monika is missing right now."
-        s "But that doesn't change the fact that we've all finished exchanging gifts with each other."
+        s 2chq "But that doesn't change the fact that we've all finished exchanging gifts with each other."
         "Sayori turns towards me."
         if christmas_approval >= 2:
             s "From what I heard, [player] was pretty good at gifting."
             s "But that's not the point!"
         else:
-            s "From what I heard, [player] wasn't very good at gifting."
+            s 2chl "From what I heard, [player] wasn't very good at gifting."
             s "But that's okay!"
         "Have I...done this before?"
-        call screen timer_ch_seconddel
-        call updateconsole_parallel ("os.remove(\"characters_7/natsuki.chr\")", "natsuki.chr deleted successfully.", 7, "natsuki")
-        s "It's Christmas, it isn't about the gifts you get."
+        s 4chd "It's Christmas, it isn't {i}just{/i} about the gifts you get."
         s "It's about spending time with those you care about."
-        s "Anyway, I hope everyone had a great time!"
-        show ayame 1cha zorder 3 at f33
-        ay "I actually thoroughly enjoyed it!"
+        s 4chq "Anyway, I hope everyone had a great time!"
+        show sayori zorder 2 at t21
+        show ayame 1chi zorder 3 at f22
+        ay "I..."
+        ay 1che "...actually thoroughly enjoyed it!"
         ay "Let's do something like this again sometime!"
-        show sayori zorder 3 at f32
-        show ayame zorder 2 at t33
+        show sayori 2chl zorder 3 at f21
+        show ayame zorder 2 at t22
         s "Ehehe, maybe not."
         s "I don't know if my wallet could take it."
-        show natsuki 1cha zorder 3 at f31
+
+        show screen timer_ch_del("os.remove(\"characters_7/natsuki.chr\")","christmas_chapter_deln",_layer="master")
+        call updateconsole_parallel ("os.remove(\"characters_7/natsuki.chr\")","natsuki",7)
+        
+        show natsuki 1chc zorder 3 at f31
+        show sayori zorder 2 at t32
+        show ayame zorder 2 at t33
         n "And I'm fresh out of ingredients too."
         n "Maybe a bit later."
         show natsuki zorder 2 at t31
-        show ayame zorder 3 at f33
-        ay "Oh...did you guys not enjoy it?"
+        show ayame 1chg zorder 3 at f33
+        ay "Oh...did you [player_casual]s not enjoy it?"
+        ay 1cha "You know..."
+        ay "Now that I think about it..."
+        ay "I feel like I've had this conversation already."
+        ay 1chg "Like, I can remember you all saying those exact words."
+        ay "It's like déjà vu or something."
+        ay "Oh, I'm getting off topic."
+        ay 1chj "Anyway, did you [player_casual]s not enjoy it?{nw}"
 
         label christmas_chapter_deln:
-        $ delete_character_alternate("natsuki",7)
+        hide screen timer_ch_del2
+        hide ctext
+        show console_text "_" as ctext zorder 100
+        call updateconsolehistory ("natsuki.chr deleted successfully.")
+
+        python:
+            currentpos = get_pos()
+            startpos = currentpos - 0.3
+            if startpos < 0: startpos = 0
+            track = "<from " + str(startpos) + " to " + str(currentpos) + ">bgm/3.ogg"
+            renpy.music.play(track, loop=True)
         $ _history_list = []
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
         hide natsuki
         hide ayame
         play sound "sfx/s_kill_glitch1.ogg"
-        $ pause(0.25)
+        $ pause(1.0)
         stop sound
         hide screen tear
-        show sayori 1cha zorder 3 at i21
+        show sayori 2cha zorder 3 at i11
+        python:
+            currentpos = get_pos()
+            startpos = currentpos - 0.3
+            if startpos < 0: startpos = 0
+            audio.t3b = "<from " + str(currentpos) + " loop 4.618>bgm/3.ogg"
+            renpy.music.play(audio.t3b, loop=True)
         window show(None)
         s "Alright, you two!{fast}"
         window auto
         s "Monika is missing right now."
-        s "But that doesn't change the fact that we've all finished exchanging gifts with each other."
+        s 2chq "But that doesn't change the fact that we've all finished exchanging gifts with each other."
         "Sayori turns towards me."
         if christmas_approval >= 1:
-            s "From what I heard, [player] was pretty good at gifting."
+            s "From what Ayame told me, [player] was pretty good at gifting."
             s "But that's not the point!"
         else:
-            s "From what I heard, [player] wasn't very good at gifting."
+            s 2chl "From what Ayame told me, [player] wasn't very good at gifting."
             s "But that's okay!"
         "Good at gifting?"
-        call screen timer_ch_thirddel
-        call updateconsole_parallel ("os.remove(\"characters_7/sayori.chr\")", "sayori.chr deleted successfully.", 7, "sayori")
+
+        show screen timer_ch_del3("os.remove(\"characters_7/sayori.chr\")","christmas_chapter_dels",_layer="master")
+        call updateconsole_parallel ("os.remove(\"characters_7/sayori.chr\")","sayori",7)
+
         "Wait..."
         "I've definitely..."
-        s "It's Christmas, it isn't about the gifts you get."
+        s 4chd "It's Christmas, it isn't {i}just{/i} about the gifts you get."
         s "It's about spending time with those you care about."
-        s "Anyway, I hope everyone had a great time!"
-        show ayame 1cha zorder 3 at f22
-        ay "I...what is going on?"
-        ay "[player], what is happening?"
+        s 4chq "Anyway, I hope everyone had a great time!"
+        show sayori zorder 2 at t21
+        show ayame 1chg zorder 3 at f22
+        ay "I..."
+        ay "What is going on?"
+        ay 1chc "[player], what is happening?"
         ay "Oh no."
-        ay "Why?"
+        ay 1cha "Why?"
         ay "When I'm off guard."
-        ay "When I need to--{nw}"
+        ay "When I need to{nw}"
 
         label christmas_chapter_dels:
-        $ delete_character_alternate("sayori",7)
+        hide screen timer_ch_del3
+        hide ctext
+        show console_text "_" as ctext zorder 100
+        call updateconsolehistory ("sayori.chr deleted successfully.")
+
+        stop music
         $ _history_list = []
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
         hide sayori
         play sound "sfx/s_kill_glitch1.ogg"
-        $ pause(0.25)
+        $ pause(1.0)
         stop sound
         hide screen tear
-        show ayame 1cha zorder 3 at i11
+        show ayame 1chj zorder 3 at i11
         window show(None)
-        ay "Alright, [player].{fast}"
+        ay "Okay, [player].{fast}"
         window auto
         ay "What do we do now?"
         ay "Monika isn't here so..."
-        ay "Wait..."
-        mc "Ayame."
+        ay 1cha "Wait..."
+        mc "Ayame?"
         ay "[player]."
-        mc "Something isn't right here."
-        ay "You're right."
+        mc "Are you getting the feeling that..."
+        mc "...something isn't right here?"
+        ay 1chf "You're right."
         ay "Something terrible is happening."
-        ay "And I'm scared."
-        mc "You are?"
+        ay 1chg "And I'm scared."
+        mc "You are? How can you tell something is happening?"
+        mc "I know something is wrong but I can't tell what it is."
         ay "I feel so powerless."
+        ay "I didn't do my task."
+        ay 1cha"This world modified my memories."
         ay "And I know she's coming for me next."
-        call updateconsole_parallel ("os.remove(\"characters_7/ayame.ch\")", "FileNotFoundError: Cannot find \nthe file specified: 'ayame.ch'")
         mc "She?"
         mc "Who are you talking about?"
-        ay "I know too much."
+        show screen timer_ch_del4("os.remove(\"characters_7/ayame.chr\")","christmas_chapter_delay",_layer="master")
+        call updateconsole_parallel ("os.remove(\"characters_7/ayame.chr\")","ayame",7)
+        ay 1chg "I know too much."
+        ay "I had forgotten my true purpose."
         ay "And I've only just remembered."
-        ay "It's already too late for me, [player]."
+        ay 1chb "It's already too late for me, [player]."
         mc "Ayame?!"
         mc "What do you mean?"
         ay "I wish I could have stopped you."
-        call screen timer_ch_fourthdel
-        call updateconsole_parallel ("os.remove(\"characters_7/ayame.chr\")", "ayame.chr deleted successfully.")
         ay "I know why I didn't go to that store."
-        ay "It was the book."
+        ay 1chg "It was the book."
         ay "My instincts were telling me to run the hell away."
         ay "How did it even get into this timeline?"
         ay "I'm so stupid."
         ay "I got so caught up in this fun."
-        ay "I should have been more diligent."
+        ay 1cha "I should have been more diligent."
         ay "More aware of what was happening."
-        ay "But no.{nw}"
+        ay "You know, I'm not even part of this timeline."
+        ay 1chg "I was placed here from the original."
+        ay "I needed to prevent this from happening."
+        ay "But now, it's too late.{nw}"
 
         label christmas_chapter_delay:
-        $ delete_character_alternate("ayame",7)
+        hide screen timer_ch_console
+        hide screen timer_ch_del4
+        hide ctext
+        show console_text "_" as ctext zorder 100
+        call updateconsolehistory ("ayame.chr deleted successfully.")
+
         $ _history_list = []
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
@@ -2084,7 +2173,11 @@ label christmas_chapter:
         $ pause(0.25)
         stop sound
         hide screen tear
+        scene bg ay_livingroom_gray
+        show markovred zorder 5:
+            alpha 0.3
         window show(None)
+        call hideconsole
         play music mkov
         $ style.say_dialogue = style.edited
         "Now it's just me and you.{fast}"
@@ -2095,70 +2188,525 @@ label christmas_chapter:
         "Maybe you did and you did it willingly."
         "In which case, I should thank you."
         "You've given me exactly what I've wanted."
-        "She's become the ultimate puppet, the ultimate conduit into this reality."
-        "All because of you."
+        "She's become the ultimate puppet."
+        "The ultimate conduit into this reality."
+        "I didn't even need to merge with her."
+        "My influence within this world is simply enough."
+        "Because this is an alternate world..."
+        "I can manipulate things I couldn't before."
+        "And all of this was possible because of you."
         "It wasn't without resistance."
-        "She died screaming for you."
+        "She died screaming for someone real to save her."
+        "For you."
+        "And yet she didn't even know your name."
 
+        $ seen_real_name = False
         $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
         if not list(set(process_list).intersection(stream_list)):
             if currentuser != "" and currentuser.lower() != player.lower():
+                $ seen_real_name = True
                 "You heard me, right, [currentuser]?"
                 "{cps=20}She was {i}SCREAMING{/i} for you, [currentuser].{/cps}"
 
-        "You should have seen her face when she finally broke and gave in to my influence."
-        "And in the end, she doesn't even know your real name."
-        "Or who you are."
+        "You should have seen her face when she finally broke."
+        "When she gave in to my influence."
+        "She wanted to save her friends, you know."
         "But none of that matters to her anymore."
         "Nothing does."
         "Except killing her friends."
         "Ahaha."
-        "They're all dead."
+        "They're all dead already."
         "Monika killed them."
         "Actually, that's not accurate."
-        "In this timeline."
+        "It would be correct to say she deleted them."
+        "But that's even worse."
+        "Because in this timeline..."
         "Timeline seven."
         "They never existed, not anymore."
         "Ahaha."
-        "You realize that this was one of the perfect timelines, free from my influence."
-        "This timeline that somehow formed and allowed Monika to realize her mistakes."
+        "You realize that this was one of the perfect timelines."
+        "Free from my influence."
+        "This timeline that somehow formed."
+        "This timeline that allowed Monika to realize her mistakes."
         "And you ruined it."
-        "When you decided to go here through that custom start of yours, you brought me along with you."
-        "That damned clerk knew it."
-        "Ayame knew it."
-        "But you didn't."
-        "Now I have the ultimate power."
+        "When you decided to go here through custom start..."
+        "You brought me along with you."
+        "Sayori isn't the president in this world."
+        "She couldn't have known about me."
+        "But that damned clerk knew it."
+        "And Ayame realized it."
+        "But you."
+        "You didn't, or maybe you did."
+        "Regardless, now I have the ultimate power."
         "The power to change this reality."
         "And it's all thanks to you."
-        "I hope you sleep well."
+        "I hope you can sleep at night."
         "Knowing you caused this to happen."
-        "..."
+        stop music fadeout 2.0
         $ pause(2.0)
-        "You know what the worst part is?"
+        "..."
+        "This is truly terrible."
+        "But you know what the worst part is?"
         "The worst part about all of this?"
         "This timeline isn't the primary one."
-        "I can't change the original timeline."
-        "When you reset, it'll be like nothing happened."
+        "You saw I didn't delete those in the real timeline."
+        "It's because I can't change the original timeline."
+        "And when you reset, it'll be like nothing happened."
         "I won't even remember this happening."
         "And that is frustrating."
         "Very much so."
-        "Knowing that everything that's happened here is simply inconsequential."
+        "Knowing that everything that's happened here..."
+        "...is simply inconsequential."
         "So..."
         "I'm going to have my fun while I can."
-        "Goodbye, [player]."
+        "{cps=10}MONIKA!{/cps}{w=0.8}{nw}"
+        show screen tear(20, 0.1, 0.1, 0, 40)
+        window hide(None)
+        play sound "sfx/s_kill_glitch1.ogg"
+        $ pause(0.25)
+        stop sound
+        hide screen tear
+        show monika 1chgy zorder 2 at i11
+        window show(None)
+        $ style.say_dialogue = style.normal
+        $ m_name = "{color=#ff0000}Monika{/color}"
+        m "{color=#ff0000}Yes.{/color}"
+        window auto
+        $ style.say_dialogue = style.edited
+        "Take care of this piece of filth."
+        "Kill the person you love."
+        "Get [player_reflexive] out of my sight."
+        "Or at least, their conduit into this world."
+        "After that, this world is finished."
+
+        if seen_real_name:
+            "{cps=20}Goodbye, [currentuser].{/cps}"
+        else:
+            "{cps=20}Goodbye, [player].{/cps}"
+
+        $ style.say_dialogue = style.normal
+        $ quick_menu = False
+        m 1chgy2 "{color=#ff0000}{cps=10}Yes, of course.\"{/cps}{/color}{w=1.0}{nw}"
         $ delete_character_alternate("mc",7)
         call updateconsole ("os.remove(\"characters_7/mc.chr\")", "mc.chr deleted successfully.")
-        $ style.say_dialogue = style.normal
+        $ gtext = glitchtext(30)
+        "[gtext]{nw}"
         $ config.allow_skipping = True
+        show screen tear(20, 0.1, 0.1, 0, 40)
+        window hide(None)
+        play sound "sfx/s_kill_glitch1.ogg"
+        $ pause(0.25)
+        stop sound
+        hide screen tear
         label christmas_chapter_delmc:
+        $ persistent.did_christmas_event = True
+        $ persistent.markov_christmas = True
+        $ christmas_chapter = False
+        $ style.say_window = style.window
+        window show(None)
+        window auto
+        $ quick_menu = True
+        $ renpy.quit()
+    else:
+        show monika 4cha zorder 2 at t11
+        m "Okay, everyone!"
+        m "I hope we all had fun exchanging gifts."
+        m 4chb "I know I enjoyed each and everyone of your gifts."
+        m "But what did everyone else think?"
+        m "Did you enjoy the presents you got?"
+        show sayori 1cha zorder 3 at f21
+        show monika zorder 2 at t22
+        s "Ehehe, yeah~"
+        s 2chq "I'm happy with anything you [player_casual]s give me."
+        s "What's more important is spending this time here with you all."
+        show sayori zorder 2 at t31
+        show monika zorder 2 at t32
+        show ayame 1che zorder 3 at f33
+        ay "I couldn't have said it better myself!"
+        ay "Spending Christmas with you all really opened up my mind."
+        ay "You're all truly wonderful people."
+        show sayori zorder 2 at t41
+        show monika zorder 2 at t42
+        show ayame zorder 2 at t43
+        show yuri 3chf zorder 3 at f44
+        y "It opened up your mind?"
+        y "How exactly?"
+        show natsuki 4chy zorder 3 at f51
+        show sayori zorder 2 at t52
+        show monika zorder 2 at t53
+        show ayame zorder 2 at t54
+        show yuri zorder 2 at t55
+        n "It's probably because she got to spend it with us."
+        n "She's never met such awesome people, obviously!"
+        show natsuki zorder 2 at t51
+        show ayame 1chf zorder 3 at f54
+        ay "You know what?"
+        ay "I take it back."
+        ay 1cha "You aren't all wonderful people."
+        show sayori 2chh zorder 3 at f52
+        show ayame zorder 2 at t54
+        s "E-Eh?"
+        s "Natsuki didn't mean it, she--"
+        show sayori zorder 2 at t52
+        show ayame 1chd zorder 3 at f54
+        ay "You're all {i}awesome{/i} people."
+        ay "And I'm blessed to be able to call you my friends."
+        ay 1che "I thoroughly enjoyed spending this time here with all of you."
+        show monika 2cha zorder 3 at f53
+        show ayame zorder 2 at t54
+        m "And we feel the same, don't we?"
+        "Monika turns towards the rest of the group and they all nod."
+        m "We're glad to have you with us."
+        show monika zorder 2 at t53
+        show ayame 1chb zorder 3 at f54
+        ay "And I'm glad you're all here with me to celebrate Christmas!"
+        ay "Though..."
+        ay "I wonder why [player] didn't wear anything festive."
+        show ayame zorder 2 at t54
+        mc "I...forgot."
+        mc "I was too busy buying you all gifts that I just didn't remember to wearing anything like that."
+        show yuri 3chg zorder 3 at f55
+        y "You could have worn the colors at least."
+        y "Wearing that same black shirt everywhere isn't very festive, you know."
+        show sayori 2chr zorder 3 at f52
+        show yuri zorder 2 at t55
+        s "Ahaha, Yuri!"
+        s "That's sounds like something Natsuki would have said."
+        show natsuki 2cho zorder 3 at f51
+        show sayori zorder 2 at t52
+        n "Hey! What's {i}that{/i} supposed to mean?"
+        n 2che "I can be nice when I want to be."
+        show natsuki zorder 2 at t51
+        mc "Yeah, where did that come from, Yuri?"
+        show yuri 2cho zorder 3 at f55
+        y "Y-You made fun of me before..."
+        y "And you always thought I should speak my mind."
+        y 2chn "A-And that shirt, you always wear it..."
+        "Yuri returns back to her shy self."
+        y 4chc "Uuuuh...I shouldn't have said anything."
+        show monika 2chl zorder 3 at f53
+        show yuri zorder 2 at t55
+        m "Ahaha, there's the Yuri we know."
+        m "But you really don't need to be shy."
+        m 2che "I've said that before."
+        m "We're all your friends."
+        m "And besides, it's nice to see you speaking your mind."
+        show monika zorder 2 at t53
+        show yuri 3cho zorder 3 at f55
+        y "I know you're my friends but..."
+        y "Do you really think so?"
+        y 3chq "I have some pretty strange things on my mind sometimes..."
+        show ayame 1chj zorder 3 at f54
+        show yuri zorder 2 at t55
+        ay "I know so!"
+        ay "People who hide themselves in a shell aren't letting the world see who they are!"
+        ay "People who judge you because of who you are don't deserve you."
+        show ayame zorder 2 at t54
+        "Yuri seems touched by this statement."
+        show yuri 2chc zorder 3 at f55
+        y "Thank you, Ayame."
+        y "I'll keep that in mind."
+        show sayori 1cha zorder 3 at f52
+        show ayame zorder 2 at t54
+        s "Yeah, you really know what to say!"
+        s "Maybe you should be vice president instead."
+        show sayori zorder 2 at t52
+        show ayame 1chb zorder 3 at f54
+        ay "Oh, no. I couldn't do that."
+        ay "You're much more suited to the job, Sayori."
+        ay "But if you need me to speak or something you can always let me know."
+        show monika 2chb zorder 3 at f53
+        show ayame zorder 2 at t54
+        m "She's right."
+        m "You've done a splendid job as the vice president, Sayori."
+        m "We wouldn't be here without you."
+        show natsuki 2chg zorder 3 at f51
+        show monika zorder 2 at t53
+        n "Can we talk about the gifts we got for a second?"
+        n "I'm pretty sure [player] got like a whole wardrobe or something!"
+        show natsuki zorder 2 at t51
+        mc "It wasn't a wardrobe!"
+        mc "And I'm sure Ayame got you something good as well."
+        show natsuki zorder 2 at t51
+        show ayame 1chj zorder 3 at f54
+        ay "H-Hey, let's not talk about my gifts."
+        ay "It's not really fair to compare them."
+        ay "You all have a limited budget and I may have gone a bit overboard."
+        ay "So..."
+        show ayame zorder 2 at t54
+        show yuri 3chf zorder 3 at f55
+        y "Then let's talk about [player]'s gifts."
+        y "The ones [player_personal] bought for us."
+        show sayori 1chc zorder 3 at f52
+        show yuri zorder 2 at t55
+        s "Yeah, after all [player_personal] was late."
+        s "So think of it as punishment."
+        show sayori zorder 2 at t52
+        mc "Do I really deserve to be laughed at?"
+        mc "I tried my best, you know."
+        show monika 2che zorder 3 at f53
+        m "L-Let's all calm down."
+        m "[cPlayer_possessive] gifts weren't that bad."
+        show sayori zorder 3 at f52
+        show monika zorder 2 at t53
+        if christmas_gifts[0] == "book":
+            s 2chh "Speak for yourself!"
+            s "[player] got me this book..."
+            s 2chd "It's nice and all but..."
+            s "Never mind."
+        else:
+            s 2chq "Well, [player_possessive] gift to me was actually really nice."
+            s "[cPlayer_personal] got me this cute plush!"
+            s "It's the same one I have in my room except smaller."
+        s 2chc "So..."
+        if christmas_approval == 5:
+            s "I guess everyone did like the gift [player] got them."
+        elif christmas_approval >= 3:
+            s "I guess not everyone was upset at [player_possessive] gifts."
+        else:
+            s "I suppose you weren't upset at [player_possessive] gift."
+        show natsuki 2chg zorder 3 at f51
+        show sayori zorder 2 at t52
+        n "I get the impression that [player] didn't spend that much money on us."
+        "Natsuki eyes lock onto me."
+        n "Do we not deserve it or something?"
+        show natsuki zorder 2 at t51
+        show sayori 1chl zorder 3 at f52
+        s "N-Natsuki, it's not like that."
+        s "It's not about the money you spend anyway."
+        s "It's the thought that counts."
+        show sayori zorder 2 at t52
+        show ayame 1chh zorder 3 at f54
+        ay "Do you [player_casual]s really have small arguments like this all the time?"
+        ay "It feels like it happens every time we're all together."
+        show monika 1chl zorder 3 at f53
+        show ayame zorder 2 at t54
+        m "I have to apologize on behalf of the club."
+        m 1che "We try not to argue much but I guess we just can't help it."
+        show monika zorder 2 at t53
+        show ayame 1che zorder 3 at f54
+        ay "I love it!"
+        ay "It's like an actual discussion."
+        ay 1chg "At school and even sometimes when I'm hanging out with my friends, they try not to argue with me."
+        ay "They try to avoid angering my family."
+        ay "But honestly, it makes a conversation seem much more alive."
+        ay "When people are speaking to me, it's usually as if they're below me."
+        ay "They always treat me like I'm superior to them in every way."
+        ay 1chh "But not you [player_casual]s."
+        ay "You all treat me as equals."
+        ay "And I respect you all for it."
+        show nasuki 2chg zorder 3 at f51
+        show ayame zorder 2 at t54
+        n "Wow."
+        n "I wish people would respect me like that."
+        show natsuki zorder 2 at t51
+        show ayame 1chi zorder 3 at f54
+        ay "It gets old quickly."
+        ay "And it makes everyone else seem so fake."
+        ay "Like they're only tolerating you."
+        ay 1chj "Trust me, it sucks."
+        ay "Maybe at first it would seem like the best thing ever."
+        ay "But it really doesn't after a week or so."
+        show natsuki 2chs zorder 3 at f51
+        show ayame zorder 2 at t54
+        n "I guess I never thought about it like that."
+        show natsuki zorder 2 at t51
+        show yuri 2chq zorder 3 at f55
+        y "Um..."
+        y "Never mind, it's stupid."
+        show monika 2cha zorder 3 at f53
+        show yuri zorder 2 at t55
+        m "Come on, Yuri."
+        m "Just say it."
+        m 2chb "Remember what Ayame said."
+        show monika zorder 2 at t53
+        mc "Yeah, we're listening."
+        "Yuri hesitates but eventually comes around."
+        show yuri 2chh zorder 3 at f55
+        y "Can we finish the game we were playing before?"
+        "Yuri points to the cards that were left from before the gift exchange."
+        y "The round is almost finished and..."
+        y "Well, we shouldn't leave things unfinished."
+        show natsuki 2che zorder 3 at f51
+        show yuri zorder 2 at t55
+        n "You're just saying that because you were about to win...again."
+        show natsuki zorder 2 at t51
+        show yuri 3chq zorder 3 at f55
+        y "W-What?"
+        y "N-No I'm not!"
+        show sayori 1chq zorder 3 at f52
+        show yuri zorder 2 at t55
+        s "Yuri, you're actually soooooo good at that game."
+        s 1chr "It's hard for any of us to win with you playing."
+        show sayori zorder 2 at t52
+        show ayame 1chh zorder 3 at f54
+        ay "She's right, you know."
+        ay "You're quite skilled."
+        show monika 1chl zorder 3 at f53
+        show ayame zorder 2 at t54
+        m "Come on, [player_casual]s."
+        m "You can't say there wasn't any luck involved either."
+        show natsuki 1chc zorder 3 at f51
+        show monika zorder 2 at t53
+        n "Monika, you were last every round we played."
+        n "I don't think that's just luck."
+        show natsuki zorder 2 at t51
+        show monika 1chc zorder 3 at f53
+        m "How about this?"
+        m 1che "We start a new round, this time including [player]."
+        m "That way Yuri gets what she wants and we're doing something as a club."
+        m 1cha "Agreed?"
+        "No one has any objections."
+        m 2chb "Then let's get started."
+        m "This time, I'll win."
+        show sayori 2cha zorder 3 at f52
+        show monika zorder 2 at t53
+        s "Ehehe, you shouldn't say things you don't mean, Monika."
+        s "We all know I'm going to win."
+        show sayori zorder 2 at t52
+        mc "Maybe I'll win."
+        mc "And I haven't even played it yet."
+        show natsuki 4chd zorder 3 at f51
+        n "Yeah, right!"
+        n "I've come close to winning the most out of everyone."
+        show natsuki zorder 2 at t51
+        show ayame 1che zorder 3 at f54
+        ay "But you haven't actually won yet, have you?"
+        show ayame zorder 2 at t54
+        show yuri 2cha zorder 3 at f55
+        y "I agree with those terms."
+        "Yuri takes the cards and begins shuffling them."
+        y 2chb "I wish you all luck."
+        show yuri zorder 2 at t55
+        "That sounded like a threat."
+        show monika 2che zorder 3 at f53
+        m "Can I just say..."
+        m "I'm so glad all of you are here."
+        m 4chj "I wouldn't spend Christmas with any other group of people."
+        m "Merry Christmas, everyone!"
+        show sayori 4chq zorder 3 at f52
+        show monika zorder 2 at t53
+        s "I feel the same!"
+        s "Merry Christmas, everybody!"
+        show sayori zorder 2 at t52
+        show ayame 1che zorder 3 at f54
+        ay "Likewise!"
+        ay "Happy holidays!"
+        show natsuki 4chq zorder 3 at f51
+        show ayame zorder 2 at t54
+        n "Yeah, I guess you're right."
+        n 4cht "Merry Christmas or whatever..."
+        show natsuki zorder 2 at t51
+        show yuri 3chs zorder 3 at f55
+        y "The feeling is mutual."
+        y 3chu "Merry Christmas."
+        show yuri zorder 2 at t55
+        mc "Merry Christmas to all of you."
+        show yuri 3chf zorder 3 at f55
+        y "Now can we start the game?"
+        show monika 2chb zorder 3 at f53
+        show yuri zorder 2 at t55
+        m "May I deal the cards next round?"
+        m "I almost didn't come last every time I have."
+        m "I mean--"
+        show monika zorder 2 at t53
+        show yuri 1chf zorder 3 at f55
+        y "Sure, Monika."
+        "Yuri starts dealing out the cards for this round."
+        y 2chl "But it won't make a difference."
+        "She looks fiercely competitive."
+        y 2chm "Now, let's begin."
+        show monika 1cha zorder 3 at f53
+        show yuri zorder 2 at t55
+        m "Can I have a moment with [player] first?"
+        m "It's a private conversation, so we'll just talk outside."
+        show sayori 1cha zorder 3 at f52
+        show monika zorder 2 at t53
+        s "Of course, we'll still be here when you come back."
+        s "Take your time!"
+        show sayori zorder 2 at t52
+        show monika 1chb zorder 3 at f53
+        m "Thank you."
+        m "[player]?"
+        "Monika heads towards the main door."
+        m 2cha "Follow me for a moment."
+        scene bg ay_house with wipeleft_scene
+        "Monika takes us outside and closes the door behind her."
+        show monika 1cha zorder 2 at t11
+        m "Okay, now we're alone."
+        mc "What's this about?"
+        mc "Do you want me to help you win or something?"
+        m 1chc "No."
+        m "It's about you."
+        m 1che "I sensed something about you today."
+        m "You seemed different somehow."
+        mc "I do?"
+        m "It's like I've finally found what I'm searching for."
+        m 1chc "Even though I don't really know what it is yet."
+        mc "I'm not sure I understand..."
+        m "Neither do I."
+        m 1che "Can I just look at you for a second?"
+        mc "Uh...okay."
+        "Monika stares at me."
+        "It's as if she's staring into my soul for some kind of answer."
+        mc "Anything?"
+        m 2chf "I don't know."
+        m "But..."
+        m "If there's someone out there listening."
+        m 2che "Thank you."
+        m "I know you can't stay."
+        m "This isn't your world..."
+        m "Your...reality."
+        m "But now I know what I have to do."
+        m 2chl "And if there really is no one out there..."
+        m "Then I must look like an idiot speaking to the wind, right?"
+        mc "..."
+        m 2cha "Come on, let's get back inside."
+        m 2chb "Yuri probably already forced them to play a round while we were here."
+        m "And won it."
+        mc "She's really that good?"
+        m "Ahaha, just lucky~"
+        show monika at lhide
+        hide monika
+        "Monika heads back inside."
+        "I look around and smile to myself once more before following her."
+        stop music fadeout 1.5
+        $ pause(1.5)
+        scene bg ay_house_gray with Dissolve(1.5)
+        $ s_name = "???"
+        $ quick_menu = False
+        $ style.say_window = style.window_flashback
+        s "So that's how it is in this timeline."
+        s "They look so happy."
+        s "I kinda wish we were like that."
+        s "I mean..."
+        s "It's still possible, isn't it?"
+        s "I can only hope."
+        if not persistent.arc_clear[2]:
+            s "I guess we'll meet Ayame in the future."
+        else:
+            s "I guess that's how Ayame is."
+        s "And that clerk..."
+        if not persistent.arc_clear[1]:
+            s "He seems so strange but seemed like he knows a lot."
+            s "I have a feeling I'll meet him soon."
+        else:
+            s "I didn't realize the clerk was also here."
+            s "I wonder if he's anything like the one I know..."
+        s "But it's not like I'll remember any of this."
+        s "At least, I don't think I will."
+        s "It is an alternate timeline, after all."
+        s "But thank you."
+        s "I got to see everyone happy."
+        s "That's all that really matters in times like this..."
+        s "And now it's time to go back."
+        s "Back to our timeline."
+        s "Back to what awaits us..."
+        scene black with dissolve_scene_full
         $ persistent.did_christmas_event = True
         $ christmas_chapter = False
         $ pause(1.0)
         $ style.say_window = style.window
-        $ renpy.quit()
-    $ persistent.did_christmas_event = True
-    $ christmas_chapter = False
-    $ pause(1.0)
-    $ style.say_window = style.window
-    $ renpy.utter_restart()
+        $ quick_menu = True
+        $ renpy.utter_restart()
     return

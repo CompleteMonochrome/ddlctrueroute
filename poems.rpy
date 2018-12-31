@@ -2173,7 +2173,7 @@ Here rides
     The once white knight."""
 )
 
-    poem_m_special = Poem(
+    poem_m_christmas = Poem(
     author = "monika",
     title = "Christmas Day",
     text = """\

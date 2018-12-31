@@ -882,7 +882,12 @@ init -1 python:
                 # renpy.store.save_name = chapter_names[chapter]
                 return Show(screen="save_input", message="Enter save name", ok_action=[Hide("save_input"), FileAction(name)])
             elif renpy.current_screen().screen_name[0] == "save":
-                renpy.store.save_name = chapter_names[chapter]
+                if christmas_chapter:
+                    renpy.store.save_name = "Festive Season"
+                elif special_chapter:
+                    renpy.store.save_name = "Special Day"
+                else:
+                    renpy.store.save_name = chapter_names[chapter]
             return FileAction(name)
 
 
@@ -1653,11 +1658,11 @@ init -501 screen arc_choose_1():
             if persistent.arc_clear[0]:
                 imagebutton xsize 450 idle "gui/menu_art_n.png" hover "mod_assets/gui/menu_art_n_hover.png" action Return(2) hovered tt.Action("{color=#cf0f88}Second Chance{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound at custom_start_zoom_3
             else:
-                imagebutton xsize 450 idle "mod_assets/gui/menu_art_n_locked.png" action NullAction() hovered tt.Action("This arc is locked") at custom_start_zoom_3
+                imagebutton xsize 450 idle "mod_assets/gui/menu_art_n_locked.png" action NullAction() hovered tt.Action("This arc is locked") hover_sound gui.hover_sound at custom_start_zoom_3
             if persistent.arc_clear[1]:
                 imagebutton xsize 450 idle "gui/menu_art_s.png" hover "mod_assets/gui/menu_art_s_hover.png" action Return(3) hovered tt.Action("{color=#6ecbfa}Inauguration Day{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound at custom_start_zoom_4
             else:
-                imagebutton xsize 450 idle "mod_assets/gui/menu_art_s_locked.png" action NullAction() hovered tt.Action("This arc is locked") at custom_start_zoom_4
+                imagebutton xsize 450 idle "mod_assets/gui/menu_art_s_locked.png" action NullAction() hovered tt.Action("This arc is locked") hover_sound gui.hover_sound at custom_start_zoom_4
 
     fixed at show_hide_fade_after:
         vbox:
