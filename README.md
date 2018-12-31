@@ -1,6 +1,6 @@
 # Doki Doki True Route
 
-Current Version: 0.9.5y
+Current Version: 0.9.5CHRISTMAS
 
 To install, please find the download links in the reddit thread:
 https://www.reddit.com/r/DDLCMods/comments/84tlpi/wip_doki_doki_true_route/

@@ -176,7 +176,7 @@ label giftexchange_sayori:
     mc "I know."
     "I give Sayori a hug and she returns it."
     mc "Merry Christmas, Sayori."
-    s "Merry Christmas, [player]!"
+    s 1chq "Merry Christmas, [player]!"
     call giftexchange_revertmusic
     return
 
@@ -346,7 +346,7 @@ label giftexchange_monika:
     mc "You've already paid me back by being a good friend."
     mc "Don't worry about it."
     m 1chh "Nonsense."
-    m chb "There's still so much more I need to do."
+    m 1chb "There's still so much more I need to do."
     "Monika smiles thoughtfully."
     mc "Anyway, I'm just glad you could get a break after what you went through."
     mc "Letting her take care of the club for a bit while you needed to think it out was a really smart decision."
@@ -495,7 +495,7 @@ label giftexchange_ayame:
     $ nextscene = "gift_" + christmas_gifts[3] + "_ay"
     call expression nextscene
 
-    ay 1cbb "And now you've learned something personal about me."
+    ay 1chb "And now you've learned something personal about me."
     mc "I guess I have."
     ay "Do you want my gift now?"
     mc "It's definitely going to be better than some rock I gave you."
@@ -788,7 +788,7 @@ label gift_Markov_m:
     $ config.allow_skipping = False
     $ config.skipping = False
     m 1chd "{cps=20}Evigilare...{w=0.3}faciatis...{w=0.3}mali...{w=0.3}dorimienti?{/cps}"
-    m 1cha "I think that's right.{nw}"
+    m 1cha "I think that's right.{w=1.0}{nw}"
     stop music
     stop music_poem
     show monika gcha
@@ -2631,6 +2631,7 @@ label christmas_chapter:
         "Monika heads towards the main door."
         m 2cha "Follow me for a moment."
         scene bg ay_house with wipeleft_scene
+        play music t6 fadeout 2.0
         "Monika takes us outside and closes the door behind her."
         show monika 1cha zorder 2 at t11
         m "Okay, now we're alone."
