@@ -58,4 +58,4 @@ A: It's probably an undefined variable. It might be my fault but I have done upd
 - Some Sprite edits: AskillZ and Miko
 - As required for using a certain sprite set: Artwork by SovietSpartan (https://twitter.com/TsukiZuramaru), originally created for the Doki Doki Literature Club mod "Doki Doki Rewind/Replay", by Chronos (Discord: Chronos#1609)
 - Special Thanks: Chronos, Creativetacos, /r/DDLCMods Discord server, True Route Discord server
-- Massive thanks to truesonic53 for commissioning SoviertSpartan for thid mod!
+- Massive thanks to truesonic53 for commissioning SovietSpartan for thid mod!
