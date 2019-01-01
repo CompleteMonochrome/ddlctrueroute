@@ -53,8 +53,9 @@ A: It's probably an undefined variable. It might be my fault but I have done upd
 
 - Proofreaders: the people of my discord server
 - Background Art: petan, mugenjohncel, きまぐれアフター (Kimagure After), Nuxill, hello hello, ぐったりにゃんこ [3DBG], 「（ｃ）安野譲」 (Anno Yuzuru), すこあ, 佐藤敏
-- Character Art: Monika After Story Team (particularly: Ryuse [for the new Monika leaning sprite], TheAloofPotato, NotSoGiantDad, Daydreamer, Danymations, Yuro Foxclaw, Therationalpi), Reddit users /u/SovietSpartan, /u/singusasongpianoman, /u/Drealengo, /u/NormallyAverage, Discord users Erni_Editions™, Malukah Maker, bman and finally MUGかぶり and wingzofdarkness from lemmasoft forums
+- Character Art: MAS Team (particularly: Ryuse [for the new Monika leaning sprite], TheAloofPotato, NotSoGiantDad, Daydreamer, Danymations, Yuro Foxclaw, Therationalpi), Reddit users /u/SovietSpartan, /u/singusasongpianoman, /u/Drealengo, /u/NormallyAverage, Discord users Erni_Editions™, Malukah Maker, bman and finally MUGかぶり and wingzofdarkness from lemmasoft forums
 - Music: G-RiNe Project, ScubDomino and Reddit users: /u/Zerorurariro and /u/-ShInIgAmIsAmA-
 - Some Sprite edits: AskillZ and Miko
 - As required for using a certain sprite set: Artwork by SovietSpartan (https://twitter.com/TsukiZuramaru), originally created for the Doki Doki Literature Club mod "Doki Doki Rewind/Replay", by Chronos (Discord: Chronos#1609)
-- Special Thanks: truesonic53, Chronos, Creativetacos, /r/DDLCMods Discord server, True Route Discord server
+- Special Thanks: Chronos, Creativetacos, /r/DDLCMods Discord server, True Route Discord server
+- Massive thanks to truesonic53 for commissioning SoviertSpartan for thid mod!

@@ -770,7 +770,7 @@ label gift_Markov_m:
     m 1che "That makes sense."
     m 1chc "The cover is very ominous."
     m "A red eye?"
-    m 2chd "Kind creepy, if you ask me."
+    m 2chd "Kinda creepy, if you ask me."
     mc "You don't like it?"
     m 2chl "I never said that...!"
     m "I'm sure once I read it, I'll really enjoy the story."
@@ -964,7 +964,7 @@ label christmas_chapter:
     "Or would that look like me just being cheap?"
     scene bg anticshop with wipeleft_scene
     play music t17 fadeout 2.0
-    "I wonder around the mall for a bit, not really paying attention to where I'm going."
+    "I wander around the mall for a bit, not really paying attention to where I'm going."
     "I've just been trying to figure out what to get everyone but I'm out of ideas."
     show mysteriousclerk 1chk zorder 2 at t11
     cl "Hey there, little [player_other]."
@@ -1033,7 +1033,7 @@ label christmas_chapter:
     "I just want to get out of here."
     "This guy is seriously getting on my nerves."
     cl 1chf "The girl you were thinking of just before."
-    cl "She has red hair and eyes as blue as a sapphire."
+    cl "She has coral pink hair and eyes as blue as the sky."
     cl "She's clumsy but she has everyone's best interest as heart."
     cl "She's the nicest person you know and she's always looking out for others."
     cl 1chb "She's the main reason you're even out here doing this."
@@ -1307,7 +1307,7 @@ label christmas_chapter:
     cl "I know you need help picking out a gift for her."
     mc "What gives you that idea?"
     cl 1chc "For one, you barely know her."
-    cl "Haven't you only spoked to each other a couple of times?"
+    cl "Haven't you only spoken to each other a couple of times?"
     mc "Well...yeah but--"
     cl 1chf "And two, the only thing you do know about her is that she's super rich."
     cl "Which means..."
@@ -2311,7 +2311,7 @@ label christmas_chapter:
         show monika 4cha zorder 2 at t11
         m "Okay, everyone!"
         m "I hope we all had fun exchanging gifts."
-        m 4chb "I know I enjoyed each and everyone of your gifts."
+        m 4chb "I know I enjoyed each and every one of your gifts."
         m "But what did everyone else think?"
         m "Did you enjoy the presents you got?"
         show sayori 1cha zorder 3 at f21
@@ -2495,7 +2495,7 @@ label christmas_chapter:
         ay 1chh "But not you [player_casual]s."
         ay "You all treat me as equals."
         ay "And I respect you all for it."
-        show nasuki 2chg zorder 3 at f51
+        show natsuki 2chg zorder 3 at f51
         show ayame zorder 2 at t54
         n "Wow."
         n "I wish people would respect me like that."
