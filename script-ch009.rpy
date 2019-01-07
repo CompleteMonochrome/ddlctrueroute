@@ -1450,7 +1450,7 @@ label ch9_end:
         "Did she seriously call me all the way back here just to give me a book?"
         "I suppose it's probably important for the club."
         "I wonder what I missed in the meeting today..."
-        "But there isn't any time to think to think about that."
+        "But there isn't any time to think about that."
         "I suddenly get the urge to just go home and close the door behind me."
         scene bg kitchen
         with wipeleft_scene

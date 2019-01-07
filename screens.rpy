@@ -1633,11 +1633,6 @@ init -501 screen arc_choose_1():
 
     default tt = Tooltip("")
 
-    if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2019, 1, 1) + weekrange))) and persistent.arc_clear[0]:
-        add "menu_bg_gray_insta" at show_hide_fade_bg
-    else:
-        add "menu_bg_insta" at show_hide_fade_bg
-
 
     fixed at show_hide_fade:
         xalign 0.5
@@ -1653,14 +1648,26 @@ init -501 screen arc_choose_1():
             yalign 0.7
             spacing 60
 
-            imagebutton xsize 450 idle "gui/menu_art_m.png" hover "mod_assets/gui/menu_art_m_hover.png" action Return(0) hovered tt.Action("{color=#8ed73a}Festival Day{/color}\n{color=#ff0000}Warning: Your saves will be deleted upon proceeding.{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound at custom_start_zoom_1
-            imagebutton xsize 450 idle "gui/menu_art_y.png" hover "mod_assets/gui/menu_art_y_hover.png" action Return(1) hovered tt.Action("{color=#d88dee}Book of Despair{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound at custom_start_zoom_2
+            imagebutton xsize 450 idle "gui/menu_art_m.png" hover "mod_assets/gui/menu_art_m_hover.png" hovered tt.Action("{color=#8ed73a}Festival Day{/color}\n{color=#ff0000}Warning: Your saves will be deleted upon proceeding.{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True at custom_start_zoom_1:
+                action Show(screen="confirm", message="Are you sure you want to start on Festival Day?\nYour saves will be deleted.",
+                            yes_action=[Hide("confirm"),Return(0)],
+                            no_action=Hide("confirm"))
+            imagebutton xsize 450 idle "gui/menu_art_y.png" hover "mod_assets/gui/menu_art_y_hover.png" hovered tt.Action("{color=#d88dee}Book of Despair{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True at custom_start_zoom_2:
+                action Show(screen="confirm", message="Are you sure you want to start in Yuri's arc?",
+                            yes_action=[Hide("confirm"),Return(1)],
+                            no_action=Hide("confirm"))
             if persistent.arc_clear[0]:
-                imagebutton xsize 450 idle "gui/menu_art_n.png" hover "mod_assets/gui/menu_art_n_hover.png" action Return(2) hovered tt.Action("{color=#cf0f88}Second Chance{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound at custom_start_zoom_3
+                imagebutton xsize 450 idle "gui/menu_art_n.png" hover "mod_assets/gui/menu_art_n_hover.png" hovered tt.Action("{color=#cf0f88}Second Chance{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True at custom_start_zoom_3:
+                    action Show(screen="confirm", message="Are you sure you want to start in Natsuki's arc?",
+                            yes_action=[Hide("confirm"),Return(2)],
+                            no_action=Hide("confirm"))
             else:
                 imagebutton xsize 450 idle "mod_assets/gui/menu_art_n_locked.png" action NullAction() hovered tt.Action("This arc is locked") hover_sound gui.hover_sound at custom_start_zoom_3
             if persistent.arc_clear[1]:
-                imagebutton xsize 450 idle "gui/menu_art_s.png" hover "mod_assets/gui/menu_art_s_hover.png" action Return(3) hovered tt.Action("{color=#6ecbfa}Inauguration Day{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound at custom_start_zoom_4
+                imagebutton xsize 450 idle "gui/menu_art_s.png" hover "mod_assets/gui/menu_art_s_hover.png" hovered tt.Action("{color=#6ecbfa}Inauguration Day{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True at custom_start_zoom_4:
+                    action Show(screen="confirm", message="Are you sure you want to start in Sayori's arc?",
+                            yes_action=[Hide("confirm"),Return(3)],
+                            no_action=Hide("confirm"))
             else:
                 imagebutton xsize 450 idle "mod_assets/gui/menu_art_s_locked.png" action NullAction() hovered tt.Action("This arc is locked") hover_sound gui.hover_sound at custom_start_zoom_4
 
@@ -1670,6 +1677,313 @@ init -501 screen arc_choose_1():
             yalign 0.99
 
             text tt.value:
+                text_align 0.5
+
+init -501 screen customstart_girlchoice(background,labeltext,chibis,excludemyself=True,locked1=False,locked2=False,locked3=False,locked4=False):
+
+    default tt = Tooltip("")
+
+    add background at show_hide_fade_bg_quick
+
+    style_prefix "choice"
+
+    fixed at show_hide_fade_quick:
+        xalign 0.5
+        yalign 0.5
+        
+        label _(labeltext):
+            text_style "game_menu_label_text"
+            xalign 0.5
+            yalign 0.0
+
+        grid 4 1:
+            xalign 0.5
+            if chibis:
+                yalign 0.6
+                spacing 30
+            else:
+                yalign 2.3
+                spacing 60
+
+            if chibis:
+                if locked1:
+                    imagebutton idle im.Grayscale("gui/poemgame/s_sticker_1.png") action NullAction() hovered tt.Action("{color=#6ecbfa}Sayori{/color} (Unavailable)") hover_sound gui.hover_sound focus_mask True xalign 0.5
+                else:
+                    imagebutton idle "gui/poemgame/s_sticker_1.png" hover "gui/poemgame/s_sticker_2.png" selected_idle "gui/poemgame/s_sticker_2.png" selected_hover "gui/poemgame/s_sticker_2.png" action Return(0) hovered tt.Action("{color=#6ecbfa}Sayori{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True xalign 0.5
+                if locked2:
+                    imagebutton idle im.Grayscale("gui/poemgame/m_sticker_1.png") action NullAction() hovered tt.Action("{color=#8ed73a}Monika{/color} (Unavailable)") hover_sound gui.hover_sound focus_mask True xalign 0.5
+                else:
+                    imagebutton idle "gui/poemgame/m_sticker_1.png" hover "gui/poemgame/m_sticker_2.png" selected_idle "gui/poemgame/m_sticker_2.png" selected_hover "gui/poemgame/m_sticker_2.png" action Return(1) hovered tt.Action("{color=#8ed73a}Monika{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True xalign 0.5
+                if locked3:
+                    imagebutton idle im.Grayscale("gui/poemgame/n_sticker_1.png") action NullAction() hovered tt.Action("{color=#cf0f88}Natsuki{/color} (Unavailable)") hover_sound gui.hover_sound focus_mask True xalign 0.5
+                else:
+                    imagebutton idle "gui/poemgame/n_sticker_1.png" hover "gui/poemgame/n_sticker_2.png" selected_idle "gui/poemgame/n_sticker_2.png" selected_hover "gui/poemgame/n_sticker_2.png" action Return(2) hovered tt.Action("{color=#cf0f88}Natsuki{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True xalign 0.5
+                if locked4:
+                    imagebutton idle im.Grayscale("gui/poemgame/y_sticker_1.png") action NullAction() hovered tt.Action("{color=#d88dee}Yuri{/color} (Unavailable)") hover_sound gui.hover_sound focus_mask True xalign 0.5
+                else:
+                    imagebutton idle "gui/poemgame/y_sticker_1.png" hover "gui/poemgame/y_sticker_2.png" selected_idle "gui/poemgame/y_sticker_2.png" selected_hover "gui/poemgame/y_sticker_2.png" action Return(3) hovered tt.Action("{color=#d88dee}Yuri{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True xalign 0.5
+            else:
+                if locked1:
+                    imagebutton xsize 450 idle "mod_assets/gui/menu_art_s_locked.png" action NullAction() hovered tt.Action("{color=#6ecbfa}Sayori{/color} (Unavailable)") hover_sound gui.hover_sound at custom_start_zoom_insta
+                else:
+                    imagebutton xsize 450 idle "gui/menu_art_s.png" hover "mod_assets/gui/menu_art_s_hover.png" action Return(0) hovered tt.Action("{color=#6ecbfa}Sayori{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True at custom_start_zoom_insta
+                if locked2:
+                    imagebutton xsize 450 idle "mod_assets/gui/menu_art_m_locked.png" action NullAction() hovered tt.Action("{color=#8ed73a}Monika{/color} (Unavailable)") hover_sound gui.hover_sound at custom_start_zoom_insta
+                else:
+                    imagebutton xsize 450 idle "gui/menu_art_m.png" hover "mod_assets/gui/menu_art_m_hover.png" action Return(1) hovered tt.Action("{color=#8ed73a}Monika{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True at custom_start_zoom_insta
+                if locked3:
+                    imagebutton xsize 450 idle "mod_assets/gui/menu_art_n_locked.png" action NullAction() hovered tt.Action("{color=#cf0f88}Natsuki{/color} (Unavailable)") hover_sound gui.hover_sound at custom_start_zoom_insta
+                else:
+                    imagebutton xsize 450 idle "gui/menu_art_n.png" hover "mod_assets/gui/menu_art_n_hover.png" action Return(2) hovered tt.Action("{color=#cf0f88}Natsuki{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True at custom_start_zoom_insta
+                if locked4:
+                    imagebutton xsize 450 idle "mod_assets/gui/menu_art_y_locked.png" action NullAction() hovered tt.Action("{color=#d88dee}Yuri{/color} (Unavailable)") hover_sound gui.hover_sound at custom_start_zoom_insta
+                else:
+                    imagebutton xsize 450 idle "gui/menu_art_y.png" hover "mod_assets/gui/menu_art_y_hover.png" action Return(3) hovered tt.Action("{color=#d88dee}Yuri{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True at custom_start_zoom_insta
+        
+        if not excludemyself:
+            hbox:
+                xalign 0.5
+                yalign 0.1
+
+                textbutton _("Myself") action Return(4)
+
+    fixed at show_hide_fade_quick:
+        vbox:
+            xalign 0.5
+            if chibis:
+                yalign 0.99
+            else:
+                if not excludemyself:
+                    yalign 0.16
+                else:
+                    yalign 0.13
+
+            text tt.value:
+                if chibis:
+                    size 40
+                else:
+                    if not excludemyself:
+                        size 45
+                    else:
+                        size 50
+                text_align 0.5
+
+init -501 screen customstart_twobgchoice(labeltext,bg1,text1,bg2,text2,multi,highlight1=False,highlight2=False):
+
+    default tt = Tooltip("")
+
+    default choicea = highlight1
+    default colora = "#f00"
+    default choiceb = highlight2
+    default colorb = "#f00"
+
+    style_prefix "choice"
+
+    fixed at show_hide_fade_quick:
+        yalign 0.5
+                
+        grid 2 1:
+            if multi:
+                imagebutton:
+                    action [ToggleScreenVariable("colora","#0f0","#f00"), ToggleScreenVariable("choicea",True,False), Function(renpy.restart_interaction)]
+                    idle im.Crop(im.Grayscale(bg1), (320, 0, 640, 720))
+                    hover im.Crop(im.MatrixColor(bg1, im.matrix.saturation(0.3)), (320, 0, 640, 720))
+                    selected_idle im.Crop(bg1, (480, 0, 320, 720))
+                    selected_hover im.Crop(im.MatrixColor(bg1, im.matrix.saturation(0.7)), (320, 0, 640, 720))
+                    hovered tt.Action("{color="+colora+"}[text1]{/color}")
+                    selected choicea
+                    hover_sound gui.hover_sound
+                    activate_sound gui.activate_sound
+                imagebutton:
+                    action [ToggleScreenVariable("colorb","#0f0","#f00"), ToggleScreenVariable("choiceb",True,False), Function(renpy.restart_interaction)]
+                    idle im.Crop(im.Grayscale(bg2), (320, 0, 640, 720))
+                    hover im.Crop(im.MatrixColor(bg2, im.matrix.saturation(0.3)), (320, 0, 640, 720))
+                    selected_idle im.Crop(bg2, (320, 0, 640, 720))
+                    selected_hover im.Crop(im.MatrixColor(bg2, im.matrix.saturation(0.7)), (320, 0, 640, 720))
+                    hovered tt.Action("{color="+colorb+"}[text2]{/color}")
+                    selected choiceb
+                    hover_sound gui.hover_sound
+                    activate_sound gui.activate_sound
+            else:
+                imagebutton:
+                    action Return(0)
+                    idle im.Crop(im.Grayscale(bg1), (320, 0, 640, 720))
+                    hover im.Crop(bg1, (320, 0, 640, 720))
+                    hovered tt.Action(text1)
+                    hover_sound gui.hover_sound
+                    activate_sound gui.activate_sound
+                imagebutton:
+                    action Return(1)
+                    idle im.Crop(im.Grayscale(bg2), (320, 0, 640, 720))
+                    hover im.Crop(bg2, (320, 0, 640, 720))
+                    hovered tt.Action(text2)
+                    hover_sound gui.hover_sound
+                    activate_sound gui.activate_sound
+
+        label _(labeltext):
+            text_style "game_menu_label_text"
+            xalign 0.5
+            yalign 0.0
+
+        if multi:
+            hbox:
+                xalign 0.5
+                yalign 0.9
+
+                textbutton _("Done") action Return([choicea,choiceb])
+
+
+    fixed at show_hide_fade_quick:
+        vbox:
+            xalign 0.5
+            yalign 0.99
+
+            text tt.value:
+                size 40
+                text_align 0.5
+
+init -501 screen customstart_fourbgchoice(labeltext,bg1,text1,bg2,text2,bg3,text3,bg4,text4,multi,highlight1=False,highlight2=False,highlight3=False,highlight4=False):
+
+    default tt = Tooltip("")
+
+    default choicea = highlight1
+    default colora = "#f00"
+    default choiceb = highlight2
+    default colorb = "#f00"
+    default choicec = highlight3
+    default colorc = "#f00"
+    default choiced = highlight4
+    default colord = "#f00"
+
+    style_prefix "choice"
+
+    fixed at show_hide_fade_quick:
+        yalign 0.5
+                
+        grid 4 1:
+            if multi:
+                imagebutton:
+                    action [ToggleScreenVariable("colora","#0f0","#f00"), ToggleScreenVariable("choicea",True,False), Function(renpy.restart_interaction)]
+                    idle im.Crop(im.Grayscale(bg1), (480, 0, 320, 720))
+                    hover im.Crop(im.MatrixColor(bg1, im.matrix.saturation(0.3)), (480, 0, 320, 720))
+                    selected_idle im.Crop(bg1, (480, 0, 320, 720))
+                    selected_hover im.Crop(im.MatrixColor(bg1, im.matrix.saturation(0.7)), (480, 0, 320, 720))
+                    hovered tt.Action("{color="+colora+"}[text1]{/color}")
+                    selected choicea
+                    hover_sound gui.hover_sound
+                    activate_sound gui.activate_sound
+                imagebutton:
+                    action [ToggleScreenVariable("colorb","#0f0","#f00"), ToggleScreenVariable("choiceb",True,False), Function(renpy.restart_interaction)]
+                    idle im.Crop(im.Grayscale(bg2), (480, 0, 320, 720))
+                    hover im.Crop(im.MatrixColor(bg2, im.matrix.saturation(0.3)), (480, 0, 320, 720))
+                    selected_idle im.Crop(bg2, (480, 0, 320, 720))
+                    selected_hover im.Crop(im.MatrixColor(bg2, im.matrix.saturation(0.7)), (480, 0, 320, 720))
+                    hovered tt.Action("{color="+colorb+"}[text2]{/color}")
+                    selected choiceb
+                    hover_sound gui.hover_sound
+                    activate_sound gui.activate_sound
+                imagebutton:
+                    action [ToggleScreenVariable("colorc","#0f0","#f00"), ToggleScreenVariable("choicec",True,False), Function(renpy.restart_interaction)]
+                    idle im.Crop(im.Grayscale(bg3), (480, 0, 320, 720))
+                    hover im.Crop(im.MatrixColor(bg3, im.matrix.saturation(0.3)), (480, 0, 320, 720))
+                    selected_idle im.Crop(bg3, (480, 0, 320, 720))
+                    selected_hover im.Crop(im.MatrixColor(bg3, im.matrix.saturation(0.7)), (480, 0, 320, 720))
+                    hovered tt.Action("{color="+colorc+"}[text3]{/color}")
+                    selected choicec
+                    hover_sound gui.hover_sound
+                    activate_sound gui.activate_sound
+                imagebutton:
+                    action [ToggleScreenVariable("colord","#0f0","#f00"), ToggleScreenVariable("choiced",True,False), Function(renpy.restart_interaction)]
+                    idle im.Crop(im.Grayscale(bg4), (480, 0, 320, 720))
+                    hover im.Crop(im.MatrixColor(bg4, im.matrix.saturation(0.3)), (480, 0, 320, 720))
+                    selected_idle im.Crop(bg4, (480, 0, 320, 720))
+                    selected_hover im.Crop(im.MatrixColor(bg4, im.matrix.saturation(0.7)), (480, 0, 320, 720))
+                    hovered tt.Action("{color="+colord+"}[text4]{/color}")
+                    selected choiced
+                    hover_sound gui.hover_sound
+                    activate_sound gui.activate_sound
+            else:
+                imagebutton:
+                    action Return(0)
+                    idle im.Crop(im.Grayscale(bg1), (480, 0, 320, 720))
+                    hover im.Crop(bg1, (480, 0, 320, 720))
+                    hovered tt.Action(text1)
+                    hover_sound gui.hover_sound
+                    activate_sound gui.activate_sound
+                imagebutton:
+                    action Return(1)
+                    idle im.Crop(im.Grayscale(bg2), (480, 0, 320, 720))
+                    hover im.Crop(bg2, (480, 0, 320, 720))
+                    hovered tt.Action(text2)
+                    hover_sound gui.hover_sound
+                    activate_sound gui.activate_sound
+                imagebutton:
+                    action Return(2)
+                    idle im.Crop(im.Grayscale(bg3), (480, 0, 320, 720))
+                    hover im.Crop(bg3, (480, 0, 320, 720))
+                    hovered tt.Action(text3)
+                    hover_sound gui.hover_sound
+                    activate_sound gui.activate_sound
+                imagebutton:
+                    action Return(3)
+                    idle im.Crop(im.Grayscale(bg4), (480, 0, 320, 720))
+                    hover im.Crop(bg4, (480, 0, 320, 720))
+                    hovered tt.Action(text4)
+                    hover_sound gui.hover_sound
+                    activate_sound gui.activate_sound
+
+        label _(labeltext):
+            text_style "game_menu_label_text"
+            xalign 0.5
+            yalign 0.0
+
+        if multi:
+            hbox:
+                xalign 0.5
+                yalign 0.9
+
+                textbutton _("Done") action Return([choicea,choiceb,choicec,choiced])
+
+
+    fixed at show_hide_fade_quick:
+        vbox:
+            xalign 0.5
+            yalign 0.99
+
+            text tt.value:
+                size 40
+                text_align 0.5
+
+init -501 screen customstart_twochoice(background,labeltext,image1,text1,image2,text2):
+
+    default tt = Tooltip("")
+
+    add background at show_hide_fade_bg_quick
+
+    fixed at show_hide_fade_quick:
+        xalign 0.5
+        yalign 0.5
+        
+        label _(labeltext):
+            text_style "game_menu_label_text"
+            xalign 0.5
+            yalign 0.0
+
+        grid 2 1:
+            xalign 0.5
+            yalign 0.6
+            spacing 200
+
+            imagebutton idle image1+"_idle.png" hover image1+"_hover.png" action Return(0) hovered tt.Action(text1) hover_sound gui.hover_sound activate_sound gui.activate_sound xalign 0.5
+            imagebutton idle image2+"_idle.png" hover image2+"_hover.png" action Return(1) hovered tt.Action(text2) hover_sound gui.hover_sound activate_sound gui.activate_sound xalign 0.5
+
+    fixed at show_hide_fade_quick:
+        vbox:
+            xalign 0.5
+            yalign 0.99
+
+            text tt.value:
+                size 40
                 text_align 0.5
 
 
@@ -1783,6 +2097,9 @@ transform -1 notify_appear:
     on hide:
         linear .5 alpha 0.0
 
+transform -1 custom_start_zoom_insta:
+    zoom 0.6
+
 transform -1 custom_start_zoom_1:
     zoom 0.6
     alpha 0
@@ -1814,6 +2131,14 @@ transform -1 show_hide_fade_bg:
         alpha 1.0
         easeout 2.0 alpha .0
 
+transform -1 show_hide_fade_bg_quick:
+    on show:
+        alpha .0
+        easein 1.0 alpha 1.0
+    on hide:
+        alpha 1.0
+        easeout 0.75 alpha .0
+
 transform -1 show_hide_fade:
     on show:
         alpha .0
@@ -1821,6 +2146,14 @@ transform -1 show_hide_fade:
     on hide:
         alpha 1.0
         linear 1.0 alpha .0
+
+transform -1 show_hide_fade_quick:
+    on show:
+        alpha .0
+        linear 0.75 alpha 1.0
+    on hide:
+        alpha 1.0
+        linear 0.5 alpha .0
 
 transform -1 show_hide_fade_after:
     alpha 0

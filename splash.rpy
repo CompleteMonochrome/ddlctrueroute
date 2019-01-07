@@ -64,7 +64,9 @@ image menu_fade:
 
 image menu_art_y:
     subpixel True
-    "gui/menu_art_y.png"
+    ConditionSwitch(
+    "persistent.arc_clear[0]", "mod_assets/gui/menu_art_y_norm.png",
+    "True", "gui/menu_art_y.png")
     xcenter 600
     ycenter 335
     zoom 0.60

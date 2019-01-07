@@ -4070,10 +4070,11 @@ label ch14_end:
         s "I don't know why."
         s 1g "She's not wrong in her assumption..."
         s "But does she remember that much?"
-        s "But there's only one way to solve this, at least for now."
+        s "...There's only one way to solve this, at least for now."
         s "And we both know what that is."
         s 1k "I'm going to have to erase people's memories again."
         s "I'm sorry.{nw}"
+        $ config.allow_skipping = True
     elif sayori_confess and not sayori_dumped and sayori_personality < 3:
         s 1h "I'm trying my best here."
         s "You know I am."
@@ -4384,7 +4385,7 @@ label ch14_exclusive_yuri:
     mc "I didn't mean to put any extra work on you."
     mc "And you paid for it all by yourself?"
     mc "I have to pay you back."
-    show yuri 2pf zorder 3 at f22
+    show yuri 2bf zorder 3 at f22
     y "I should as well."
     y "We didn't intend for you to get involved in our preparations, Sayori."
     y "You have your own to do, after all."
@@ -4905,7 +4906,7 @@ label ch14_exclusive_yuri:
     mc "How about we assign tasks we could do?"
     mc "So that we at least did something today."
     mc "And that way you don't have to bring all of this stuff with you."
-    y 3pf "That could work."
+    y 3bf "That could work."
     "Yuri nods her head."
     y 3ba "Let's do it then."
     y "I'll be sure to only take the necessary materials."

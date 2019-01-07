@@ -7,6 +7,9 @@ init python:
                 renpy.jump("ch15_delete")
 
 label ch15_main:
+    if ch12_markov_agree:
+        $ persistent.markov_agreed = True
+        $ renpy.save_persistent()
     scene black
     show sayori 1a zorder 2 at t11
     play music mend
@@ -1924,7 +1927,7 @@ label ch15_exclusive_yuri:
         show yuri zorder 2 at t22
         ay "Nonsense!"
         ay "I want to thank you all for accepting me as a member!"
-        ay "So many members do you have?"
+        ay "So how many members do you have?"
         ay 1j "I could look at the paper you gave me but I always say it's better to talk it out!"
         show ayame zorder 2 at t21
         mc "Right..."
@@ -5014,7 +5017,7 @@ label ch15_mall_shared:
     y "Natsuki is very passionate about manga."
     y "I'm sure you two can talk a lot about it."
     y 1be "I used to be somewhat opposed to manga."
-    y 1bb "But after being friends with Natsuki, I've alternated my view."
+    y 1bb "But after being friends with Natsuki, I've altered my view."
     y "I still much prefer reading novels, but I wouldn't say no to a good manga now."
     show yuri zorder 2 at t42
     show ayame 1bb zorder 3 at f43

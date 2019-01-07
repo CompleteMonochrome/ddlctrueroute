@@ -1,9 +1,9 @@
 # Doki Doki True Route
 
-Current Version: 0.9.5CHRISTMAS
+Current Version: 0.9.5z
 
 To install, please find the download links in the reddit thread:
-https://www.reddit.com/r/DDLCMods/comments/84tlpi/wip_doki_doki_true_route/
+https://www.reddit.com/r/DDLCMods/comments/a17l5d/doki_doki_true_route/
 
 Here is a link to my discord server if you need help or want to talk about it: https://discord.gg/bd6q3N2
 
@@ -58,4 +58,4 @@ A: It's probably an undefined variable. It might be my fault but I have done upd
 - Some Sprite edits: AskillZ and Miko
 - As required for using a certain sprite set: Artwork by SovietSpartan (https://twitter.com/TsukiZuramaru), originally created for the Doki Doki Literature Club mod "Doki Doki Rewind/Replay", by Chronos (Discord: Chronos#1609)
 - Special Thanks: Chronos, Creativetacos, /r/DDLCMods Discord server, True Route Discord server
-- Massive thanks to truesonic53 for commissioning SovietSpartan for thid mod!
+- Massive thanks to truesonic53 for commissioning SovietSpartan for this mod!
