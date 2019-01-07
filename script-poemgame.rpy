@@ -18,10 +18,6 @@ init python:
 
     full_wordlist = []
     full_wordlist_old = []
-    sayori_wordlist = []
-    natsuki_wordlist = []
-    yuri_wordlist = []
-    monika_wordlist = []
 
     # New Wordlist
     with renpy.file('poemwords_mod.txt') as wordfile:
@@ -31,18 +27,9 @@ init python:
 
             if line == '' or line[0] == '#': continue
 
-
+            # File format: word,sPoint,nPoint,yPoint,mPoint
             x = line.split(',')
-            # currentword = PoemWord(x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4]))
             full_wordlist.append(PoemWord(x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4])))
-            # if currentword.sPoint >= 3:
-            #     sayori_wordlist.append(currentword)
-            # elif currentword.nPoint >= 3:
-            #     natsuki_wordlist.append(currentword)
-            # elif currentword.yPoint >= 3:
-            #     yuri_wordlist.append(currentword)
-            # elif currentword.mPoint >= 3:
-            #     monika_wordlist.append(currentword)
     # Original Wordlist
     with renpy.file('poemwords.txt') as wordfile:
         for line in wordfile:
@@ -61,18 +48,22 @@ init python:
     natsukiTime = renpy.random.random() * 4 + 4
     yuriTime = renpy.random.random() * 4 + 4
     monikaTime = renpy.random.random() * 4 + 4
+    ayameTime = renpy.random.random() * 4 + 4
     sayoriPos = 0
     natsukiPos = 0
     yuriPos = 0
     monikaPos = 0
+    ayamePos = 0
     sayoriOffset = 0
     natsukiOffset = 0
     yuriOffset = 0
     monikaOffset = 0
+    ayameOffset = 0
     sayoriZoom = 1
     natsukiZoom = 1
     yuriZoom = 1
     monikaZoom = 1
+    ayameZoom = 1
 
     def randomPauseSayori(trans, st, at):
         if st > sayoriTime:
@@ -99,6 +90,13 @@ init python:
         if st > monikaTime:
             global monikaTime
             monikaTime = renpy.random.random() * 4 + 4
+            return None
+        return 0
+
+    def randomPauseAyame(trans, st, at):
+        if st > ayameTime:
+            global ayameTime
+            ayameTime = renpy.random.random() * 4 + 4
             return None
         return 0
 
@@ -190,9 +188,31 @@ init python:
         monikaZoom = trans.xzoom
         return 0
 
+    def randomMoveAyame(trans, st, at):
+        global ayamePos
+        global ayameOffset
+        global ayameZoom
+        if st > .16:
+            if ayamePos > 0:
+                ayamePos = renpy.random.randint(-1,0)
+            elif ayamePos < 0:
+                ayamePos = renpy.random.randint(0,1)
+            else:
+                ayamePos = renpy.random.randint(-1,1)
+            if trans.xoffset * ayamePos > 5: ayamePos *= -1
+            return None
+        if ayamePos > 0:
+            trans.xzoom = -1
+        elif ayamePos < 0:
+            trans.xzoom = 1
+        trans.xoffset += .16 * 10 * ayamePos
+        ayameOffset = trans.xoffset
+        ayameZoom = trans.xzoom
+        return 0
 
 
-label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame"):
+
+label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",ayame_include=False):
     if ayame_poem:
         stop music
     else:
@@ -259,6 +279,8 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame"):
         pause 0.5
         stop sound
         hide screen tear
+        if ayame_include:
+            show ay_sticker at sticker_5other
         show s_sticker at sticker_4left
         show n_sticker at sticker_4midleft
         show y_sticker at sticker_4midright
@@ -275,10 +297,6 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame"):
         mPointTotal = 0
         if persistent.playthrough == 0:
             wordlist = list(full_wordlist)
-            # swordlist = list(sayori_wordlist)
-            # nwordlist = list(natsuki_wordlist)
-            # ywordlist = list(yuri_wordlist)
-            # mwordlist = list(monika_wordlist)
         else:
             wordlist = list(full_wordlist_old)
 
@@ -286,18 +304,22 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame"):
         natsukiTime = renpy.random.random() * 4 + 4
         yuriTime = renpy.random.random() * 4 + 4
         monikaTime = renpy.random.random() * 4 + 4
+        ayameTime = renpy.random.random() * 4 + 4
         sayoriPos = renpy.random.randint(-1,1)
         natsukiPos = renpy.random.randint(-1,1)
         yuriPos = renpy.random.randint(-1,1)
         monikaPos = renpy.random.randint(-1,1)
+        ayamePos = renpy.random.randint(-1,1)
         sayoriOffset = 0
         natsukiOffset = 0
         yuriOffset = 0
         monikaOffset = 0
+        ayameOffset = 0
         sayoriZoom = 1
         natsukiZoom = 1
         yuriZoom = 1
         monikaZoom = 1
+        ayameZoom = 1
 
 
 
@@ -344,27 +366,15 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame"):
                     else:
                         if not sInList and i >= 1 and j == 1 and persistent.playthrough == 0:
                             word = random.choice([a for a in wordlist if a.sPoint >= 3])
-                            # wordlist.remove(word)
-                            # swordlist.remove(newword)
-                            # word.word = word.word+" tests"
                             sInList = True
                         elif not nInList and i >= 2 and j == 1 and persistent.playthrough == 0:
                             word = random.choice([a for a in wordlist if a.nPoint >= 3])
-                            # wordlist.remove(word)
-                            # nwordlist.remove(word)
-                            # word.word = word.word+" testn"
                             nInList = True
                         elif not yInList and i >= 3 and j == 1 and persistent.playthrough == 0:
                             word = random.choice([a for a in wordlist if a.yPoint >= 3])
-                            # wordlist.remove(word)
-                            # ywordlist.remove(word)
-                            # word.word = word.word+" testy"
                             yInList = True
                         elif not mInList and i >= 4 and j == 1 and persistent.playthrough == 0:
                             word = random.choice([a for a in wordlist if a.mPoint >= 3])
-                            # wordlist.remove(word)
-                            # mwordlist.remove(word)
-                            # word.word = word.word+" testm"
                             mInList = True
                         else:
                             word = random.choice(wordlist)
@@ -407,6 +417,9 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame"):
                                     renpy.show("mh_sticker hop")
                             else:
                                 renpy.show("m_sticker hop")
+                        # Ayame will randomly jump because she has no words
+                        if renpy.random.randint(0,4) >= 3:
+                            renpy.show("ay_sticker hop")
                     else:
                         if persistent.playthrough == 2 and chapter == 2 and random.randint(0,10) == 0: renpy.show("m_sticker hop")
                         elif t.nPoint > t.yPoint: renpy.show("n_sticker hop")
@@ -609,7 +622,7 @@ image m_sticker:
         repeat
 
 image m_sticker_bw:
-    "mod_assets/gui/poemgame/m_sticker_1.png"
+    im.Grayscale("gui/poemgame/m_sticker_1.png")
     xoffset monikaOffset xzoom monikaZoom
     block:
         function randomPauseMonika
@@ -639,6 +652,17 @@ image mh_sticker g:
             sticker_move_n
         parallel:
             function randomMoveMonika
+        repeat
+
+image ay_sticker:
+    "mod_assets/gui/poemgame/ay_sticker_1.png"
+    xoffset ayameOffset xzoom ayameZoom
+    block:
+        function randomPauseAyame
+        parallel:
+            sticker_move_n
+        parallel:
+            function randomMoveAyame
         repeat
 
 image s_sticker hop:
@@ -684,7 +708,7 @@ image m_sticker hop:
     "m_sticker"
 
 image m_sticker_bw hop:
-    "mod_assets/gui/poemgame/m_sticker_2.png"
+    im.Grayscale("gui/poemgame/m_sticker_2.png")
     xoffset monikaOffset xzoom monikaZoom
     sticker_hop
     xoffset 0 xzoom 1
@@ -703,6 +727,13 @@ image mh_sticker hopg:
     sticker_hop
     xoffset 0 xzoom 1
     "mh_sticker g"
+
+image ay_sticker hop:
+    "mod_assets/gui/poemgame/ay_sticker_2.png"
+    xoffset ayameOffset xzoom ayameZoom
+    sticker_hop
+    xoffset 0 xzoom 1
+    "ay_sticker"
 
 image y_sticker glitch:
     "gui/poemgame/y_sticker_1_broken.png"
@@ -741,6 +772,10 @@ image glitch_sticker:
             repeat
 
 # sticker positions
+# Ayame doesn't like to hang out with everyone else
+transform sticker_5other:
+    xcenter 220 yalign 0.5 subpixel True
+
 # Four Stickers
 transform sticker_4left:
     xcenter 60 yalign 0.9 subpixel True

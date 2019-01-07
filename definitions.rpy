@@ -3204,16 +3204,28 @@ image mysteriousclerk 7xd = im.Composite((960, 960), (0, 0), "mod_assets/images/
 
 # Ayame School
 image ayame 1 = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/a.png")
-image ayame 1a = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/a.png")
-image ayame 1b = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/b.png")
-image ayame 1c = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/c.png")
-image ayame 1d = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/d.png")
-image ayame 1e = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/e.png")
-image ayame 1f = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/f.png")
-image ayame 1g = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/g.png")
-image ayame 1h = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/h.png")
-image ayame 1i = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/i.png")
-image ayame 1j = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/j.png")
+image ayame 1schoola = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/a.png")
+image ayame 1schoolb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/b.png")
+image ayame 1schoolc = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/c.png")
+image ayame 1schoold = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/d.png")
+image ayame 1schoole = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/e.png")
+image ayame 1schoolf = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/f.png")
+image ayame 1schoolg = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/g.png")
+image ayame 1schoolh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/h.png")
+image ayame 1schooli = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/i.png")
+image ayame 1schoolj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/j.png")
+
+# Ayame School Leader
+image ayame 1leadera = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altlr.png", (0, 0), "mod_assets/images/ayame/a.png")
+image ayame 1leaderb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altlr.png", (0, 0), "mod_assets/images/ayame/b.png")
+image ayame 1leaderc = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altlr.png", (0, 0), "mod_assets/images/ayame/c.png")
+image ayame 1leaderd = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altlr.png", (0, 0), "mod_assets/images/ayame/d.png")
+image ayame 1leadere = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altlr.png", (0, 0), "mod_assets/images/ayame/e.png")
+image ayame 1leaderf = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altlr.png", (0, 0), "mod_assets/images/ayame/f.png")
+image ayame 1leaderg = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altlr.png", (0, 0), "mod_assets/images/ayame/g.png")
+image ayame 1leaderh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altlr.png", (0, 0), "mod_assets/images/ayame/h.png")
+image ayame 1leaderi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altlr.png", (0, 0), "mod_assets/images/ayame/i.png")
+image ayame 1leaderj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altlr.png", (0, 0), "mod_assets/images/ayame/j.png")
 
 # Ayame Casual
 image ayame 1ba = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1blr.png", (0, 0), "mod_assets/images/ayame/a.png")
@@ -3226,6 +3238,18 @@ image ayame 1bg = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1blr
 image ayame 1bh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1blr.png", (0, 0), "mod_assets/images/ayame/h.png")
 image ayame 1bi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1blr.png", (0, 0), "mod_assets/images/ayame/i.png")
 image ayame 1bj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1blr.png", (0, 0), "mod_assets/images/ayame/j.png")
+
+# Ayame School Generalised Definitions
+image ayame 1a = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leadera", "True", "ayame 1schoola")
+image ayame 1b = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leaderb", "True", "ayame 1schoolb")
+image ayame 1c = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leaderc", "True", "ayame 1schoolc")
+image ayame 1d = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leaderd", "True", "ayame 1schoold")
+image ayame 1e = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leadere", "True", "ayame 1schoole")
+image ayame 1f = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leaderf", "True", "ayame 1schoolf")
+image ayame 1g = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leaderg", "True", "ayame 1schoolg")
+image ayame 1h = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leaderh", "True", "ayame 1schoolh")
+image ayame 1i = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leaderi", "True", "ayame 1schooli")
+image ayame 1j = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leaderj", "True", "ayame 1schoolj")
 
 # Christmas Event Exclusive
 # Sayori Christmas
@@ -4387,6 +4411,7 @@ default christmas_approval = 0
 default all_sayarc_poems_monika = False
 default monika_outfit = 0
 default sayori_outfit = 0
+default ayame_school_outfit = 0
 # Poem Game Fix
 default sInList = False
 default nInList = False
