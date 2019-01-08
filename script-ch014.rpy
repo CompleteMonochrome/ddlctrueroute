@@ -6331,7 +6331,7 @@ label ch14_exclusive_natsuki:
     n "I'll give you the list of things I'm planning on baking for the day."
     n "So you can make up some designs for each one if you want."
     mc "Alright, I'll try to do some."
-    n 1bc"I'll also be sure to bring these cupcakes tomorrow so we can try the designs."
+    n 1bc "I'll also be sure to bring these cupcakes tomorrow so we can try the designs."
     n "To see if they work and look good."
     mc "That makes sense."
     mc "When were you planning this?"

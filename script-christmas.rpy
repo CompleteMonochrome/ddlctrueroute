@@ -36,7 +36,7 @@ label giftexchange_start:
 
         menu:
             "[menutext]"
-            
+
             "Sayori" if not s_readpoem:
                 $ s_readpoem = True
                 "I wonder what Sayori got me. Hopefully something she knows I like."
@@ -1877,7 +1877,7 @@ label christmas_chapter:
     m "But I know some of you are more eager than others to open your gifts."
     m 3che "Plus, it's not really compulsory to open it tomorrow."
     m "It's more of a tradition."
-    m "A lot of people open they're presents on Christmas day."
+    m "A lot of people open their presents on Christmas day."
     show sayori 1chc zorder 3 at f52
     show monika zorder 2 at t53
     s "I have a question."
@@ -2022,7 +2022,7 @@ label christmas_chapter:
 
         show screen timer_ch_del("os.remove(\"characters_7/natsuki.chr\")","christmas_chapter_deln",_layer="master")
         call updateconsole_parallel ("os.remove(\"characters_7/natsuki.chr\")","natsuki",7)
-        
+
         show natsuki 1chc zorder 3 at f31
         show sayori zorder 2 at t32
         show ayame zorder 2 at t33
