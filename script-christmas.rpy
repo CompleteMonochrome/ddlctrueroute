@@ -864,6 +864,10 @@ label christmas_chapter:
     # Alternate Reality?
     $ chapter = 999
     scene black
+    if from_custom_start:
+        $ from_custom_start = False
+        $ quick_menu = True
+        hide screen tear
     $ s_name = "???"
     $ cl_name = "???"
     $ audio.t11r = "<from 0 to 96.0 loop 0>mod_assets/bgm/11r.ogg"

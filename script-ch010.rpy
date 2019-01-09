@@ -26,7 +26,12 @@ label ch10_main:
             except:
                 pass
     scene black
-    with dissolve_scene_full
+    if from_custom_start:
+        hide screen tear
+        $ from_custom_start = False
+        $ quick_menu = True
+    else:
+        with dissolve_scene_full
     $ pause(1.0)
     play sound "sfx/s_kill_glitch1.ogg"
     $ pause(0.25)

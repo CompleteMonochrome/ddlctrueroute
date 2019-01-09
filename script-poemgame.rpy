@@ -227,7 +227,7 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
     if persistent.playthrough == 3:
         show m_sticker at sticker_mid
     elif ayame_poem:
-        show glitch_sticker at sticker_mid
+        show glitch_sticker at sticker_5other
     else:
         # Sayori, Natsuki and Monika Normal - Set Normal Positions before Glitch shows Monika
         if persistent.playthrough == 0:
@@ -247,6 +247,8 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
             else:
                 show s_sticker at sticker_left
                 show n_sticker at sticker_mid
+            if ayame_include:
+                show ay_sticker at sticker_5other
         else:
             show n_sticker at sticker_mid
         # Yuri Cut
@@ -279,8 +281,6 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
         pause 0.5
         stop sound
         hide screen tear
-        if ayame_include:
-            show ay_sticker at sticker_5other
         show s_sticker at sticker_4left
         show n_sticker at sticker_4midleft
         show y_sticker at sticker_4midright
@@ -418,7 +418,7 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
                             else:
                                 renpy.show("m_sticker hop")
                         # Ayame will randomly jump because she has no words
-                        if renpy.random.randint(0,4) >= 3:
+                        if renpy.random.randint(0,4) >= 3 and ayame_include:
                             renpy.show("ay_sticker hop")
                     else:
                         if persistent.playthrough == 2 and chapter == 2 and random.randint(0,10) == 0: renpy.show("m_sticker hop")
@@ -747,20 +747,84 @@ image y_sticker glitch:
         repeat
 
 image glitch_sticker:
+    "mod_assets/gui/poemgame/ay_sticker_1.png"
+    xoffset ayameOffset xzoom ayameZoom
     parallel:
         choice:
-            "gui/poemgame/s_sticker_1.png"
-            xoffset sayoriOffset xzoom sayoriZoom
+            im.Composite((119, 168), (0,0), "mod_assets/gui/poemgame/ay_sticker_1.png", (0,0), im.MatrixColor("gui/poemgame/s_sticker_1.png", im.matrix.opacity(0.7)))
         choice:
-            "gui/poemgame/n_sticker_1.png"
-            xoffset natsukiOffset xzoom natsukiZoom
+            im.Composite((119, 168), (0,0), "mod_assets/gui/poemgame/ay_sticker_1.png", (0,0), im.MatrixColor("gui/poemgame/n_sticker_1.png", im.matrix.opacity(0.7)))
         choice:
-            "gui/poemgame/y_sticker_1.png"
-            xoffset yuriOffset xzoom yuriZoom
+            im.Composite((119, 168), (0,0), "mod_assets/gui/poemgame/ay_sticker_1.png", (0,0), im.MatrixColor("gui/poemgame/y_sticker_1.png", im.matrix.opacity(0.7)))
         choice:
-            "gui/poemgame/m_sticker_1.png"
-            xoffset monikaOffset xzoom monikaZoom
-        pause 0.09996
+            im.Composite((119, 168), (0,0), "mod_assets/gui/poemgame/ay_sticker_1.png", (0,0), im.MatrixColor("gui/poemgame/m_sticker_1.png", im.matrix.opacity(0.7)))
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        choice:
+            "mod_assets/gui/poemgame/ay_sticker_1.png"
+            pause 0.02225
+        pause 0.07771
         repeat
     parallel:
         block:

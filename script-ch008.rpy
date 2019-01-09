@@ -6,7 +6,12 @@ label ch8_main:
         $ persistent.yuri_killing = 0
         $ renpy.save_persistent()
         scene bg y_bedroom
-        with wipeleft_scene
+        if from_custom_start:
+            hide screen tear
+            $ from_custom_start = False
+            $ quick_menu = True
+        else:
+            with wipeleft_scene
         show yuri 1a zorder 1 at t11
         y "[player]."
         y 1t "I see you didn't move..."
@@ -146,7 +151,12 @@ label ch8_main:
         # Has to read the book
         if needs_to_read:
             scene bg library
-            with dissolve_scene_half
+            if from_custom_start:
+                $ from_custom_start = False
+                $ quick_menu = True
+                hide screen tear
+            else:
+                with dissolve_scene_half
             play music t6
             "It's the day of the play and I haven't even finished the book."
             if ch7_name == "Sayori":
@@ -341,7 +351,12 @@ label ch8_main:
         # Doesn't have to read the book
         else:
             scene bg club_day
-            with dissolve_scene_half
+            if from_custom_start:
+                $ from_custom_start = False
+                $ quick_menu = True
+                hide screen tear
+            else:
+                with dissolve_scene_half
             play music t2
             "It's the day of the play."
             label ch8_club_scene:

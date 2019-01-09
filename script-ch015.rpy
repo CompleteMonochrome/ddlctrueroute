@@ -12,6 +12,12 @@ label ch15_main:
         $ renpy.save_persistent()
     scene black
     show sayori 1a zorder 2 at t11
+    if from_custom_start:
+        hide screen tear
+        $ from_custom_start = False
+        $ quick_menu = True
+    else:
+        with dissolve_scene_full
     play music mend
     s "It's going to be a busy day so I won't take up much of your time."
     s 1d "There's just a couple of things I need to say."
@@ -758,7 +764,7 @@ label ch15_main:
             n 2c "Do you want to turn it at the same time too?"
             n "Or is that too much suspense?"
             mc "I'll just take a look at it now."
-            mc "I really doubt"
+            mc "I really doubt we've drawn the same thing."
             "I turn over Natsuki's piece of paper."
             "It's..."
             "...nothing like my drawing."
@@ -1765,6 +1771,17 @@ label ch15_end:
         s "I'll see you soon, [player]..."
     $ ay_name = "???"
     $ insert_ayame_character()
+    # Check if Ayame gets deleted
+    python:
+        n.display_args["callback"] = ayame_deletecheck
+        mc.display_args["callback"] = ayame_deletecheck
+        m.display_args["callback"] = ayame_deletecheck
+        s.display_args["callback"] = ayame_deletecheck
+        d.display_args["callback"] = ayame_deletecheck
+        narrator.display_args["callback"] = ayame_deletecheck
+        y.display_args["callback"] = ayame_deletecheck
+        mo.display_args["callback"] = ayame_deletecheck
+        cl.display_args["callback"] = ayame_deletecheck
     call expression "ch15_exclusive_" + ch13_scene
     return
 
@@ -3916,6 +3933,8 @@ label ch15_exclusive_sayori_together:
     show sayori zorder 2 at t21
     show mysteriousclerk 2c zorder 3 at f22
     play music t17 fadeout 0.5
+    $ persistent.ch15_sayori_saw_clerk = True
+    $ renpy.save_persistent()
     cl "My my, where are your manners dear?"
     cl "Surely you haven't forgotten how to say the word 'please' since last we met, have you?"
     cl 4b "Ohoho, and it seems we've got company."
@@ -5793,17 +5812,21 @@ label ch15_mall_shared:
 
 label ch15_delete:
     python:
-        persistent.yasuhiro_deleted = True
+        persistent.ayame_deleted = True
         n.display_args["callback"] = None
         mc.display_args["callback"] = None
         m.display_args["callback"] = None
         s.display_args["callback"] = None
         d.display_args["callback"] = None
         narrator.display_args["callback"] = None
+        y.display_args["callback"] = None
+        mo.display_args["callback"] = None
+        cl.display_args["callback"] = None
         _history_list = []
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
+    stop music
     scene black
     $ pause(0.25)
     stop sound
@@ -5819,4 +5842,4 @@ label ch15_delete:
     stop sound
     hide screen tear
     window show(None)
-    jump ch15_bad
+    jump ch16_bad_1

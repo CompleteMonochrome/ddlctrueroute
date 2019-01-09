@@ -251,9 +251,73 @@ image bg notebook-glitch = "bg/notebook-glitch.png"
 image bg notebook-glitch-switch:
     "bg/notebook.png"
     pause 3.16666
-    "bg/notebook-glitch.png"
-    pause 3.16666
-    repeat
+    block:
+        choice:
+            "bg/notebook.png" with Dissolve(0.5)
+        choice:
+            "bg/notebook-glitch.png" with Dissolve(0.1)
+        choice:
+            "bg/notebook.png" with Dissolve(0.5)
+        choice:
+            "bg/notebook-glitch.png" with Dissolve(0.1)
+        choice:
+            "bg/notebook.png" with Dissolve(0.5)
+        choice:
+            "bg/notebook-glitch.png" with Dissolve(0.1)
+        choice:
+            "bg/notebook.png" with Dissolve(0.5)
+        choice:
+            "bg/notebook-glitch.png" with Dissolve(0.1)
+        choice:
+            "bg/notebook.png" with Dissolve(0.5)
+        choice:
+            "bg/notebook-glitch.png" with Dissolve(0.1)
+        choice:
+            "bg/notebook.png" with Dissolve(0.5)
+        choice:
+            "bg/notebook-glitch.png" with Dissolve(0.1)
+        choice:
+            "bg/notebook.png" with Dissolve(0.5)
+        choice:
+            "bg/notebook-glitch.png" with Dissolve(0.1)
+        choice:
+            "bg/notebook.png" with Dissolve(0.5)
+        choice:
+            "bg/notebook-glitch.png" with Dissolve(0.1)
+        choice:
+            "bg/notebook.png" with Dissolve(0.5)
+        choice:
+            "bg/notebook-glitch.png" with Dissolve(0.1)
+        choice:
+            "bg/notebook.png" with Dissolve(0.5)
+        choice:
+            "bg/notebook-glitch.png" with Dissolve(0.1)
+        choice:
+            im.Grayscale("bg/notebook.png") with Dissolve(0.5)
+        choice:
+            im.Grayscale("bg/notebook-glitch.png") with Dissolve(0.1)
+        choice:
+            im.Sepia("bg/notebook.png") with Dissolve(0.5)
+        choice:
+            im.Sepia("bg/notebook-glitch.png") with Dissolve(0.1)
+        choice:
+            im.MatrixColor("bg/notebook.png", im.matrix.desaturate() * im.matrix.tint(1.0, 0.8, 0.8)) with Dissolve(0.5)
+        choice:
+            im.MatrixColor("bg/notebook-glitch.png", im.matrix.desaturate() * im.matrix.tint(1.0, 0.8, 0.8)) with Dissolve(0.1)
+        choice:
+            im.MatrixColor("bg/notebook.png", im.matrix.desaturate() * im.matrix.tint(1.0, 0.5, 0.5)) with Dissolve(0.5)
+        choice:
+            im.MatrixColor("bg/notebook-glitch.png", im.matrix.desaturate() * im.matrix.tint(1.0, 0.5, 0.5)) with Dissolve(0.1)
+        choice:
+            im.MatrixColor("bg/notebook.png", im.matrix.desaturate() * im.matrix.tint(1.0, 0.3, 0.3)) with Dissolve(0.5)
+        choice:
+            im.MatrixColor("bg/notebook-glitch.png", im.matrix.desaturate() * im.matrix.tint(1.0, 0.1, 0.1)) with Dissolve(0.1)
+        choice:
+            im.MatrixColor("bg/notebook.png", im.matrix.desaturate() * im.matrix.tint(1.0, 0.1, 0.1)) with Dissolve(0.5)
+        choice:
+            im.MatrixColor("bg/notebook-glitch.png", im.matrix.desaturate() * im.matrix.tint(1.0, 0.1, 0.1)) with Dissolve(0.1)
+        pause 1.58333
+        repeat
 
 image bg glitch = LiveTile("bg/glitch.jpg")
 
@@ -293,6 +357,7 @@ image bg city_day = "mod_assets/images/bg/city_day.png"
 image bg city_sunset = "mod_assets/images/bg/city_sunset.png"
 image bg portraitshop_day = "mod_assets/images/bg/portraitshop_day.png"
 image bg portraitshop_sunset = "mod_assets/images/bg/portraitshop_sunset.png"
+image bg portraitshop_space = "mod_assets/images/bg/portraitshop_space.png"
 image bg marina_day = "mod_assets/images/bg/marina_day.png"
 image bg marina_sunset = "mod_assets/images/bg/marina_sunset.png"
 image bg marina_fog = "mod_assets/images/bg/marina_fog.png"
@@ -4300,7 +4365,10 @@ default persistent.did_special_event = False
 default persistent.did_christmas_event = False
 default persistent.markov_christmas = False
 default persistent.ch13_nat_date = False
+default persistent.ch15_sayori_saw_clerk = False
 default persistent.ch15_sayori_chance = False
+default persistent.ch16_bad_part = "_1"
+default persistent.ch16_bad_ending_times = 0
 # Local Save
 # Player Gender Nouns
 default player_gender = "boy"
@@ -4316,6 +4384,7 @@ default cPlayer_possessive = "His"
 default player_reflexive = "him"
 default cPlayer_reflexive = "Him"
 # Actual Variables
+default from_custom_start = False
 default visited_sayori_sat = False
 default canload_ch5b = False
 default monika_appeal = [False,False,False]

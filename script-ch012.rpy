@@ -27,7 +27,13 @@ label ch12_main:
     $ persistent.n_playday = [False,False,False,False,False,False]
     $ renpy.save_persistent()
 
-    scene bg club_day with dissolve_scene_half
+    scene bg club_day
+    if from_custom_start:
+        hide screen tear
+        $ from_custom_start = False
+        $ quick_menu = True
+    else:
+        with dissolve_scene_half
     play music t2
     "Sayori told me on the phone this morning that she would meet me in the club."
     "I haven't seen her since yesterday, but it's not like I'm worried for her or anything."

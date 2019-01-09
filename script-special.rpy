@@ -3,6 +3,10 @@ label special_chapter:
     $ monika_type = 1
     $ ch12_markov_agree = True
     scene black
+    if from_custom_start:
+        $ from_custom_start = False
+        $ quick_menu = True
+        hide screen tear
     $ s_name = "???"
     $ audio.t2r = "<from 0 to 38.23 loop 0>mod_assets/bgm/2r.ogg"
     play music t2r

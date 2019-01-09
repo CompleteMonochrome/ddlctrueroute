@@ -1,7 +1,12 @@
 label ch6_main:
     scene black
     show monika 1f zorder 2 at i11
-    with dissolve_scene_full
+    if from_custom_start:
+        hide screen tear
+        $ from_custom_start = False
+        $ quick_menu = True
+    else:
+        with dissolve_scene_full
     play music mend
     m "Um..."
     m "I'm not exactly sure what just happened."

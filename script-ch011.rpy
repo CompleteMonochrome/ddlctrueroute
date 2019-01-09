@@ -25,7 +25,13 @@ label ch11_main:
             except:
                 pass
 
-    scene black with dissolve_scene_full
+    scene black
+    if from_custom_start:
+        hide screen tear
+        $ from_custom_start = False
+        $ quick_menu = True
+    else:
+        with dissolve_scene_full
 
     python:
         # Check if Yasuhiro is Deleted

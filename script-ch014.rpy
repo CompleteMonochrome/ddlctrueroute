@@ -1,10 +1,16 @@
 label ch14_main:
-    $ s_name = "???"
-    $ currentpos = 0
     if ch12_markov_agree:
         $ persistent.markov_agreed = True
         $ renpy.save_persistent()
+    scene black
     if persistent.markov_agreed:
+        if from_custom_start:
+            $ from_custom_start = False
+            $ quick_menu = True
+            hide screen tear
+        else:
+            with dissolve_scene_full
+        $ s_name = "???"
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
@@ -54,11 +60,18 @@ label ch14_main:
         hide screen tear
         window show(None)
         window auto
+        $ s_name = "Sayori"
+        $ audio.mendcont = "<from " + str(currentpos) + " loop 6.424>bgm/monika-end.ogg"
+        play music mendcont
     else:
         show sayori 1d zorder 2 at t11
-    $ s_name = "Sayori"
-    $ audio.mendcont = "<from " + str(currentpos) + " loop 6.424>bgm/monika-end.ogg"
-    play music mendcont
+        if from_custom_start:
+            hide screen tear
+            $ from_custom_start = False
+            $ quick_menu = True
+        else:
+            with dissolve_scene_full
+        play music mend fadeout 2.0
     if not persistent.markov_agreed:
         s "The day is coming quickly isn't it?"
         s "The day when it all ends."
@@ -69,7 +82,7 @@ label ch14_main:
         s 1g "If I could use my powers to get you anything, I would."
         s "But I'm just virtual to you, aren't I?"
         s "I'm not really real."
-        s "At least, not in the same you as you know it."
+        s "At least, not in the same way as you know it."
         s 1l "Ehehe, sorry if it sounds like I'm having an existential crisis."
         s "It's probably because...well..."
         s 1k "I kinda am."
@@ -5763,6 +5776,7 @@ label ch14_exclusive_natsuki:
         n 1bc "Hold on, I actually had a list back in my room."
         n "Let's go there first."
         scene bg n_bedroom with wipeleft_scene
+        play music t3 fadeout 2.0
         "We head towards Natsuki's room."
         "We didn't pass Yasuhiro on the stairs so I assume he's still somewhere upstairs looking for something."
         show natsuki 1bd zorder 2 at t11
@@ -6648,8 +6662,8 @@ label ch14_exclusive_monika:
         scene bg m_livingroom
         show monika 2bc zorder 2 at t11
         with open_eyes
-        $ audio.t6c = "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"
-        play music t6c fadeout 0.5
+        $ audio.t3c = "<from " + str(currentpos) + " loop 4.618>bgm/3.ogg"
+        play music t3c fadeout 0.5
         m "[player], are you okay?"
         m "You just kinda disappeared for a second."
         mc "Ah..."
@@ -7053,8 +7067,8 @@ label ch14_exclusive_monika:
         scene bg m_livingroom
         show monika 1ba zorder 2 at t11
         with open_eyes
-        $ audio.t6c = "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"
-        play music t6c fadeout 0.5
+        $ audio.t3c = "<from " + str(currentpos) + " loop 4.618>bgm/3.ogg"
+        play music t3c fadeout 0.5
         m "Now that that's over with, we should probably talk about the {i}other{/i} book."
     else:
         m 1bc "It doesn't matter."
@@ -7192,8 +7206,8 @@ label ch14_exclusive_monika:
             m 1bq "Now, I'll just..."
             "..."
             hide markovred
-            $ audio.t6c = "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"
-            play music t6c fadeout 0.5
+            $ audio.t3c = "<from " + str(currentpos) + " loop 4.618>bgm/3.ogg"
+            play music t3c fadeout 0.5
             mc "So why am I staring at you?"
             mc "I've been here for five minutes and you haven't said a thing."
             m 1bm "Oh, never mind!"
@@ -7300,8 +7314,8 @@ label ch14_exclusive_monika:
         "Monika does something with her hands."
         "I'm not sure exactly what it was but I have a feeling I shouldn't ask questions."
         m 2ba "Now...let's talk about the other book."
-        $ audio.t6b = "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"
-        play music t6b fadeout 0.5
+        $ audio.t3b = "<from " + str(currentpos) + " loop 4.618>bgm/3.ogg"
+        play music t3b fadeout 0.5
     mc "What about it?"
     if ch14_overall_choice == "Monika":
         m 1ba "I'm glad you voted for mine."

@@ -666,7 +666,12 @@ label ch5_mainc:
     stop music fadeout 2.0
     scene bg residential_day
     play music t2
-    with dissolve_scene_full
+    if from_custom_start:
+        $ from_custom_start = False
+        $ quick_menu = True
+        hide screen tear
+    else:
+        with dissolve_scene_full
     $ persistent.monika_gone = False
     $ renpy.save_persistent()
     # Setup Variables

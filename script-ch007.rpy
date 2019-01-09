@@ -6,7 +6,12 @@ label ch7_main:
         $ did_all_tasks = False
     scene black
     show monika 1e zorder 2 at i11
-    with dissolve_scene_full
+    if from_custom_start:
+        hide screen tear
+        $ from_custom_start = False
+        $ quick_menu = True
+    else:
+        with dissolve_scene_full
     play music mend
     m "It's me again."
     m 1c "I can't control whether I end up here or not..."

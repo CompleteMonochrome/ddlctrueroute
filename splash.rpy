@@ -501,6 +501,8 @@ label splashscreen:
     return
 
 label after_load:
+    if not hasattr(store, 'from_custom_start'):
+        $ from_custom_start = False
     # For some reason we need to set these
     if not hasattr(store, 'player_gender'):
         # If you don't have the gender, you clearly don't have the rest
@@ -638,7 +640,7 @@ label after_load:
     if not hasattr(store, 'mInList'):
         $ mInList = False
 
-    # Because of a change in an update - remove with 0.9.4f
+    # Because of a change in an update - remove with 0.9.4f - LOL nice removing
     if ch14_book_choice == "Player":
         $ ch14_book_choice = player
     if ch14_natyuri_choice[0] == "Player":

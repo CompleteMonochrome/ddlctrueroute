@@ -16,7 +16,12 @@ label ch9_main:
                 pass
 
     scene black
-    with dissolve_scene_full
+    if from_custom_start:
+        hide screen tear
+        $ from_custom_start = False
+        $ quick_menu = True
+    else:
+        with dissolve_scene_full
     play music mend
     show sayori 1d zorder 2 at t11
     s "I suppose I owe you an explanation."

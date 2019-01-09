@@ -40,6 +40,7 @@ label choose_start:
     $ config.allow_skipping = True
     $ sayori_personality = 0
     $ m_show = True
+    $ from_custom_start = True
     if persistent.custom_starts_used > 50:
         s "How have you used this so many times?"
         s "You've definitely experienced doing bad things, haven't you?"
@@ -91,12 +92,10 @@ label choose_start:
                 show screen tear(20, 0.1, 0.1, 0, 40)
                 $ pause(0.25)
                 $ special_chapter = True
-                $ quick_menu = True
                 $ s_name = "Sayori"
                 stop music
                 $ renpy.save_persistent()
                 stop sound
-                hide screen tear
                 jump special_chapter
             "No.":
                 s "Oh, okay."
@@ -120,12 +119,10 @@ label choose_start:
                 show screen tear(20, 0.1, 0.1, 0, 40)
                 $ pause(0.25)
                 $ christmas_chapter = True
-                $ quick_menu = True
                 $ s_name = "Sayori"
                 stop music
                 $ renpy.save_persistent()
                 stop sound
-                hide screen tear
                 jump christmas_chapter
             "No.":
                 s "Oh, okay."
@@ -165,13 +162,11 @@ label choose_start:
         s "Okay..."
         show screen tear(20, 0.1, 0.1, 0, 40)
         $ pause(0.25)
-        $ quick_menu = True
         $ s_name = "Sayori"
         stop music
         $ persistent.custom_starts_used += 1
         $ renpy.save_persistent()
         stop sound
-        hide screen tear
         jump ch5_skip
     elif custom_start_arc_choice == 1:
         s "Yuri's problem, eh?"
@@ -217,11 +212,11 @@ label choose_start:
                 $ chapter = 14
             "Third day of preparations.":
                 $ chapter = 15
-    
+
     # Yuri Arc
     s "Let's get started with Yuri's problem."
 
-    # Chapter 6            
+    # Chapter 6
     call screen customstart_girlchoice("bg club_day","Who did you spend Festival Day with?",False)
     if _return == 0:
         $ ch5_scene = "sayori"
@@ -232,7 +227,7 @@ label choose_start:
     elif _return == 3:
         $ ch5_scene = "yuri"
     $ ch5_name = ch5_scene.capitalize()
-            
+
     s "Okay..."
 
     call screen customstart_girlchoice("bg notebook","Who did you write your first poem for?",True)
@@ -258,13 +253,11 @@ label choose_start:
         s "I guess I'll be seeing you."
         show screen tear(20, 0.1, 0.1, 0, 40)
         $ pause(0.25)
-        $ quick_menu = True
         $ s_name = "Sayori"
         stop music
         $ persistent.custom_starts_used += 1
         $ renpy.save_persistent()
         stop sound
-        hide screen tear
         jump ch6_skip
 
     # Chapter 7
@@ -288,7 +281,7 @@ label choose_start:
         $ newpoemwinner[1] = "yuri"
         $ y_poemappeal[6] = 1
         $ y_appeal += 1
-    
+
     s "Now..."
     menu:
         s "Did you read the book, write a poem or do the impossible?"
@@ -413,7 +406,7 @@ label choose_start:
         $ newpoemwinner[2] = "yuri"
         $ y_poemappeal[8] = 1
         $ y_appeal += 1
-    
+
     s "Moving on..."
 
     if m_appeal < 3 or not did_all_tasks:

@@ -1,7 +1,12 @@
 label ch13_main:
     scene black
     show sayori 1b zorder 2 at t11
-    with dissolve_scene_full
+    if from_custom_start:
+        hide screen tear
+        $ from_custom_start = False
+        $ quick_menu = True
+    else:
+        with dissolve_scene_full
     play music mend fadeout 2.0
     s "I want to say that I don't really know what's going to happen today."
     s 1c "I know I made the day and everything but {i}something{/i} is changing it..."
@@ -7744,7 +7749,7 @@ label ch13_natsuki_outcome3_date:
     "I can't help but smile at their happy family."
     "I'm glad things turned out this way for Natsuki."
     show momsuki 1c zorder 3 at f32
-    mo "You too have fun!"
+    mo "You two have fun!"
     mo "First dates are always the best ones."
     mo "Natsuki, your dad and I will finish the cleaning the house."
     mo "So just enjoy your day, okay?"
@@ -7813,7 +7818,7 @@ label ch13_natsuki_outcomeshared_date:
     mc "I hope it's not gonna cause any problems."
     mc "I wouldn't want to hurt you."
     n 1bq "N-No...of course it isn't."
-    n "But there is problem with doing the portrait idea."
+    n "But there is a problem with doing the portrait idea."
     mc "What would that be?"
     if ch12_outcome == 3:
         n 1bh "My parents aren't just going to let you or me take it away from this house."
@@ -7823,7 +7828,7 @@ label ch13_natsuki_outcomeshared_date:
         n 2bf "Are you telling me to lie to my parents?"
         mc "Not exactly..."
         mc "This is partly for them, isn't it?"
-        mc "If we bring them the portrait but fixed, they'll love it, right?"
+        mc "If we bring them the portrait back fixed, they'll love it, right?"
         mc "It's like a pleasant surprise."
         n 2bb "I guess but..."
     else:
@@ -8313,7 +8318,7 @@ label ch13_natsukidate:
     mc "Well..."
     n 1bm "I'm sure he knows what he's doing, [player]."
     mc "I should be the one reassuring you."
-    mc "But yeah, he's a strange isn't he?"
+    mc "But yeah, he's a strange one, isn't he?"
     cl "I heard that!"
     mc "..."
     mc "See what I mean?"
@@ -8492,7 +8497,7 @@ label ch13_natsukidate:
     mc "Everything on the menu is good."
     n 2ba "Hmm..."
     "Natsuki looks through the menu once more."
-    mc "Their savory desserts area really good."
+    mc "Their savory desserts are really good."
     mc "If you're not looking for something sweet."
     n 2bb "No...I think I need something sweet right now."
     n "I just...don't know what to get."
