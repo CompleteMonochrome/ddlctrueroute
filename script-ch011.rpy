@@ -3,12 +3,7 @@ label ch11_main:
         persistent.yasuhiro_deleted = None
         # Set Callback to None after Yesterday
         mo_name = "???"
-        n.display_args["callback"] = None
-        mc.display_args["callback"] = None
-        m.display_args["callback"] = None
-        s.display_args["callback"] = None
-        d.display_args["callback"] = None
-        narrator.display_args["callback"] = None
+        renpy.hide_screen("timer_10_del",layer="timers")
 
         process_list = []
         currentuser = ""

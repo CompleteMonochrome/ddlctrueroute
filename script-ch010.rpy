@@ -1,13 +1,13 @@
-default persistent.yasuhiro_deleted = None
-default ch10_del_jump = "_nat_house"
+screen timer_10_del():
+    timer 1.0 action Function(yasuhiro_deletecheck) repeat True
 
 init python:
-    if not persistent.yasuhiro_deleted:
-        def yasuhiro_deletecheck(event, interact=True, **kwargs):
-            try:
-                renpy.file("../characters/yasuhiro.chr")
-            except:
-                renpy.jump("ch10_delete")
+    def yasuhiro_deletecheck(event, interact=True, **kwargs):
+        try:
+            renpy.file("../characters/yasuhiro.chr")
+        except:
+            renpy.hide_screen("timer_10_del",layer="timers")
+            renpy.jump("ch10_delete")
 
 label ch10_main:
     python:
@@ -608,12 +608,7 @@ label ch10_nat_house:
     with wipeleft_scene
     $ insert_dadsuki_character()
     $ d_name = "???"
-    $ n.display_args["callback"] = yasuhiro_deletecheck
-    $ mc.display_args["callback"] = yasuhiro_deletecheck
-    $ m.display_args["callback"] = yasuhiro_deletecheck
-    $ s.display_args["callback"] = yasuhiro_deletecheck
-    $ d.display_args["callback"] = yasuhiro_deletecheck
-    $ narrator.display_args["callback"] = yasuhiro_deletecheck
+    show screen timer_10_del(_layer="timers")
     window show
     "I'm outside what I can only assume is Natsuki's house."
     window auto
@@ -2060,12 +2055,6 @@ label ch10_end:
 label ch10_delete:
     python:
         persistent.yasuhiro_deleted = True
-        n.display_args["callback"] = None
-        mc.display_args["callback"] = None
-        m.display_args["callback"] = None
-        s.display_args["callback"] = None
-        d.display_args["callback"] = None
-        narrator.display_args["callback"] = None
         _history_list = []
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)

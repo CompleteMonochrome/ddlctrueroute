@@ -667,9 +667,9 @@ label ch5_mainc:
     scene bg residential_day
     play music t2
     if from_custom_start:
+        hide screen tear
         $ from_custom_start = False
         $ quick_menu = True
-        hide screen tear
     else:
         with dissolve_scene_full
     $ persistent.monika_gone = False

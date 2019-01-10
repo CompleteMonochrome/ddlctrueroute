@@ -594,6 +594,8 @@ label after_load:
         $ ch15poemwinner = "Sayori"
     if not hasattr(store,'cl_name'):
         $ cl_name = "Mysterious Clerk"
+    if not hasattr(store,'cl_revert'):
+        $ cl_revert = cl_name
     if not hasattr(store, 'ch14_sayori_date_choice'):
         $ ch14_sayori_date_choice = False
     if not hasattr(store, 'ch14_m_ask'):

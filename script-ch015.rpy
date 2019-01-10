@@ -1,10 +1,13 @@
+screen timer_15_del():
+    timer 1.0 action Function(ayame_deletecheck) repeat True
+
 init python:
-    if not persistent.ayame_deleted:
-        def ayame_deletecheck(event, interact=True, **kwargs):
-            try:
-                renpy.file("../characters/ayame.chr")
-            except:
-                renpy.jump("ch15_delete")
+    def ayame_deletecheck():
+        try:
+            renpy.file("../characters/ayame.chr")
+        except:
+            renpy.hide_screen("timer_15_del",layer="timers")
+            renpy.jump("ch15_delete")
 
 label ch15_main:
     if ch12_markov_agree:
@@ -1769,19 +1772,27 @@ label ch15_end:
             mc "I doubt it..."
             s 4q "Ehehe~"
         s "I'll see you soon, [player]..."
+    label ch15_repeat_exclusive:
+    if not quick_menu:
+        hide screen tear
+        window show(None)
+        window auto
+        play music t3
+        $ quick_menu = True
     $ ay_name = "???"
     $ insert_ayame_character()
     # Check if Ayame gets deleted
-    python:
-        n.display_args["callback"] = ayame_deletecheck
-        mc.display_args["callback"] = ayame_deletecheck
-        m.display_args["callback"] = ayame_deletecheck
-        s.display_args["callback"] = ayame_deletecheck
-        d.display_args["callback"] = ayame_deletecheck
-        narrator.display_args["callback"] = ayame_deletecheck
-        y.display_args["callback"] = ayame_deletecheck
-        mo.display_args["callback"] = ayame_deletecheck
-        cl.display_args["callback"] = ayame_deletecheck
+    show screen timer_15_del(_layer="timers")
+    # python:
+    #     n.display_args["callback"] = ayame_deletecheck
+    #     mc.display_args["callback"] = ayame_deletecheck
+    #     m.display_args["callback"] = ayame_deletecheck
+    #     s.display_args["callback"] = ayame_deletecheck
+    #     d.display_args["callback"] = ayame_deletecheck
+    #     narrator.display_args["callback"] = ayame_deletecheck
+    #     y.display_args["callback"] = ayame_deletecheck
+    #     mo.display_args["callback"] = ayame_deletecheck
+    #     cl.display_args["callback"] = ayame_deletecheck
     call expression "ch15_exclusive_" + ch13_scene
     return
 
@@ -2186,53 +2197,53 @@ label ch15_exclusive_natsuki:
     "I thought it would have been good to discuss what we were doing on the way to her house."
     "But I suppose this way, I could change into something more comfortable."
     "As I'm about to knock the door to her house, she suddenly steps outside."
-    show natsuki 1ba zorder 2 at t11
+    show natsuki 3be zorder 2 at t11
     n "Ugh, about time."
     "Natsuki opens the door just before my fist reaches it."
     n "What took you so long?"
     mc "I got here as quick as I could."
     mc "Were you waiting for me at the door?"
-    n "What?"
-    n "No, of course not!"
-    n "I just happened to open the door at the same time you got here."
+    n 3bk "What?"
+    n 3bx "No, of course not!"
+    n 3bw "I just happened to open the door at the same time you got here."
     mc "Well, if you say so."
     mc "Anyway, ready to go?"
-    n "I've got everything prepared here already, so yeah."
+    n 1bc "I've got everything prepared here already, so yeah."
     mc "Is that why you left earlier instead of waiting up for me?"
     n "Something like that."
-    n "Look, it doesn't really matter, does it?"
+    n 3be "Look, it doesn't really matter, does it?"
     n "We're here now."
     mc "I guess not."
     mc "What's the quickest way to the mall from here?"
-    n "We could take the train into the city."
+    n 3bc "We could take the train into the city."
     n "But then we'd have to take the bus from there."
     n "Not to mention, public transport at this time is pretty full."
     mc "So what do you suggest?"
-    n "We could always take a car to get there."
+    n 3bl "We could always take a car to get there."
     mc "A car?"
     if ch12_outcome == 3 or ch12_outcome == 1:
         n "I could always get my dad to take us there."
-        n "I'm sure he wouldn't mind."
+        n 1bj "I'm sure he wouldn't mind."
         mc "Are you sure about this?"
         mc "Isn't he a busy guy?"
-        n "He actually offered to do it."
+        n 1bc "He actually offered to do it."
         n "He kept asking me if there was something he could do for me."
         mc "I guess he still feels kinda guilty."
-        n "Probably."
+        n 1bq "Probably."
         n "But he really shouldn't be, I've already forgiven him."
-        n "The point is that he's willing to do it."
-        n "So we might as well take advantage of it, right?"
+        n 1bs "The point is that he's willing to do it."
+        n 1bt "So we might as well take advantage of it, right?"
         mc "...Right."
-        n "What?"
+        n 1bf "What?"
         mc "Nothing."
-        n "Then if that's all, I'll go get him."
+        n 1be "Then if that's all, I'll go get him."
         n "Just wait out here, I'll be right back."
         mc "Sure..."
         show natsuki at thide
         hide natsuki
         "Natsuki heads back inside."
         "I'm left here wondering what sort of stuff we'll need to go to the mall for."
-        "She does have it all planned doesn't she?"
+        "She does have it all planned, doesn't she?"
         "I wouldn't want to waste time when we've got such a busy night ahead of us."
         "I wander around her front yard while waiting for her."
         "Ever since her dad has come back to his senses, it feels like the house is a lot brighter."
@@ -2240,19 +2251,19 @@ label ch15_exclusive_natsuki:
         "Though that's probably to be expected when your tormentor becomes someone you can trust."
         "Even though he was someone she could trust to begin with..."
         show dadsuki 1a zorder 2 at t21
-        show natsuki 1ba zorder 2 at t22
+        show natsuki 1bj zorder 2 at t22
         "Yasuhiro and Natsuki come from the house."
         "Yasuhiro seems to be holding car keys."
         "I guess he agreed to her request."
-        show dadsuki zorder 3 at f21
+        show dadsuki 1c zorder 3 at f21
         d "The two of you better behave yourselves."
         show dadsuki zorder 2 at t21
-        show natsuki zorder 3 at f22
+        show natsuki 2be zorder 3 at f22
         n "Dad, come on."
         n "It's just the mall."
         n "What are we going to do?"
         n "Besides, we still have preparations to do tonight."
-        show dadsuki zorder 3 at f21
+        show dadsuki 1i zorder 3 at f21
         show natsuki zorder 2 at t22
         d "Just take care of her, okay?"
         d "That's all I'm really saying."
@@ -2267,16 +2278,16 @@ label ch15_exclusive_natsuki:
         "It's not a very expensive car."
         "In fact, it looks old and cheap."
         "I'm sure it probably looked decent when Yasuhiro bought it...right?"
-        show dadsuki zorder 3 at f21
+        show dadsuki 1a zorder 3 at f21
         d "The mall, right?"
         d "This shouldn't take too long."
         show dadsuki zorder 2 at t21
         "The three of us get inside."
         "Yasuhiro attempts to turn the ignition but I think the engine is stalling."
-        show dadsuki zorder 3 at f21
+        show dadsuki 1i zorder 3 at f21
         d "Natsuki, can you--"
         show dadsuki zorder 2 at t21
-        show natsuki zorder 3 at f22
+        show natsuki 1bz zorder 3 at f22
         n "On it."
         show natsuki zorder 2 at t22
         "She steps out the car."
@@ -2286,18 +2297,18 @@ label ch15_exclusive_natsuki:
         "The car roars to life."
         "Natsuki gets back into the car and shows me a smug smile."
         "What the hell...?"
-        show dadsuki zorder 3 at f21
+        show dadsuki 1a zorder 3 at f21
         d "Fasten your seatbelts."
         d "Safety first and all that."
         show dadsuki zorder 2 at t21
         "I have a feeling I'm in for a bumpy ride..."
     elif ch12_outcome == 2:
         n "My mom could drive us there..."
-        n "She wouldn't mind if it's for me."
+        n 3bj "She wouldn't mind if it's for me."
         mc "Are you sure about this?"
-        n "I don't suppose you've got another idea?"
+        n 3bb "I don't suppose you've got another idea?"
         mc "Well...no."
-        n "Then it's settled."
+        n 3bc "Then it's settled."
         n "I'll go get her, you can wait here."
         mc "If you say so."
         show natsuki at thide
@@ -2312,18 +2323,18 @@ label ch15_exclusive_natsuki:
         "Ever since her mother came back."
         "I'm not sure if Natsuki feels it too."
         "But now that I'm out here, looking from the outside..."
-        show momsuki 1a zorder 2 at t21
+        show momsuki 1c zorder 2 at t21
         show natsuki 1ba zorder 2 at t22
         "Haruki and Natsuki come from the house."
         "Haruki is holding what seems to be car keys."
         "I wonder which of the cars on the street is hers?"
-        show momsuki zorder 3 at f21
+        show momsuki 1b zorder 3 at f21
         mo "Are you ready to go?"
         show momsuki zorder 2 at t21
-        show natsuki zorder 3 at f22
+        show natsuki 1bz zorder 3 at f22
         n "Let's just hurry!"
-        n "We still need time to finish baking."
-        show momsuki zorder 3 at f21
+        n 1bj "We still need time to finish baking."
+        show momsuki 1c zorder 3 at f21
         show natsuki zorder 2 at t22
         mo "Ahaha, of course."
         mo "Come on, [player]."
@@ -2332,10 +2343,10 @@ label ch15_exclusive_natsuki:
         show momsuki zorder 3 at f21
         mo "No need to be so formal."
         "She places a hand on my shoulders."
-        mo "Just Haruki."
+        mo 1b "Just Haruki."
         mo "Okay?"
         "I nod my head."
-        mo "Okay, then follow me."
+        mo 1c "Okay, then follow me."
         show momsuki zorder 2 at t21
         "Natsuki and I follow Haruki down the street."
         "She must have parked her car around the corner."
@@ -2345,43 +2356,43 @@ label ch15_exclusive_natsuki:
         "I don't think that's Haruki's."
         "Haruki presses a button on her car keys, and the lights on the car suddenly light up."
         mc "No way..."
-        show natsuki zorder 3 at f22
+        show natsuki 2bz zorder 3 at f22
         n "Surprised?"
-        n "I was too."
+        n 2bl "I was too."
         show natsuki zorder 2 at t22
         mc "Is that why you park it around the corner?"
         mc "How did you even afford this...?"
         "Haruki simply smiles at me."
-        show momsuki zorder 3 at f21
+        show momsuki 1b zorder 3 at f21
         mo "Let's just get you two to the mall."
         mo "You're running out of time."
-        mo "And you wouldn't want all those club members to blame you, right?"
+        mo 1c "And you wouldn't want all those club members to blame you, right?"
         show momsuki zorder 2 at t21
         "I step into the car and it's as comfortable as it is luxurious."
         "I guess Haruki is wealthy..."
         "But why live in such a modest neighbourhood then?"
         "I shouldn't be questioning these things..."
     else:
-        n "I'm not sure if you noticed but there's a taxi waiting."
+        n 3bc "I'm not sure if you noticed but there's a taxi waiting."
         n "It's waiting for us."
         mc "You got a taxi?"
         mc "I suppose you're expecting me to pay for it."
-        n "Jeez, why are you even saying that?"
+        n 3be "Jeez, why are you even saying that?"
         mc "I'm just saying."
         n "We're in this together, so you're not going to pay {i}all{/i} of it."
-        n "Besides, you chose to help me, didn't you?"
+        n 3bk "Besides, you chose to help me, didn't you?"
         n "That includes financial stuff too."
         mc "That makes sense."
-        n "Then it's settled."
+        n 1bj "Then it's settled."
         n "Let's get to the taxi."
-        n "I'm pretty sure he's already charging extra because I made him wait here."
+        n 1bc "I'm pretty sure he's already charging extra because I made him wait here."
         mc "How long has he been waiting?"
         n "Too long, now let's go."
         "Natsuki and I approach the taxi waiting near her house."
         "The man inside the taxi sees us approaching and steps outside."
         "He opens the door for the two of us before heading back inside."
         mc "That was nice of him."
-        n "It's a premium taxi."
+        n 1bl "It's a premium taxi."
         n "They're paid to do that."
         mc "Not by our money, right?"
         "I look towards Natsuki but it appears as if she just ignored my question."
@@ -2391,7 +2402,7 @@ label ch15_exclusive_natsuki:
     "We both know that we shouldn't spend a lot of time here."
     "She pulls a piece of paper from her pocket and starts pacing while saying things under her breath."
     mc "Everything okay?"
-    show natsuki 1ba zorder 2 at h11
+    show natsuki 1bp zorder 2 at h11
     n "Ah!"
     "Natsuki drops the paper she was holding."
     "I pick it up and offer it to her."
@@ -2399,12 +2410,12 @@ label ch15_exclusive_natsuki:
     mc "Here."
     "She swipes it from my hands."
     mc "Is that the list of stuff we're getting?"
-    n "Yes...and no."
+    n 1bt "Yes...and no."
     mc "And no?"
     if natsuki_date:
-        n "You'll laugh when I tell you."
+        n 1br "You'll laugh when I tell you."
         mc "Try me."
-        n "No, it's way too embarrassing."
+        n 1bu "No, it's way too embarrassing."
         mc "We've got to build up our trust, don't we?"
         n "..."
         mc "So come on."
@@ -2417,96 +2428,96 @@ label ch15_exclusive_natsuki:
         mc "What are these for?"
         "I give the paper back to Natsuki."
         mc "They're not for tomorrow, are they?"
-        n "No."
-        n "Gosh, this is really embarrassing."
+        n 1bn "No."
+        n 1br "Gosh, this is really embarrassing."
         mc "Just tell me."
         "Natsuki's face turns a bright red."
-        n "My dad and I..."
+        n 1bq "My dad and I..."
         n "...are..."
         mc "Are?"
         n "Ugh..."
         mc "Come on."
-        n "Cosplaying together!"
+        n 1br "Cosplaying together!"
         mc "..."
         "..."
-        n "..."
+        n 1bs "..."
         mc "That's..."
         mc "...good."
         mc "I assume it's...to bond?"
         "Natsuki simply nods her head."
-        n "S-Something like that."
+        n 1bq "S-Something like that."
         mc "Well...okay."
         mc "I won't ask any more questions."
         n "Thank you."
     else:
-        n "That doesn't matter."
+        n 1br "That doesn't matter."
         n "I'll deal with the other stuff myself."
         mc "Are you sure?"
-        n "Yes!"
+        n 1bo "Yes!"
     "Natsuki rips the paper she's holding."
     "She hands a part of it to me and puts the other piece in her pocket."
     mc "What's with all of them being from specific stores?"
-    n "Usually, I wouldn't really care."
+    n 3bc "Usually, I wouldn't really care."
     n "If we were in a supermarket, I'd just get what I can."
     n "But since we're here, I want to get ingredients I know are good."
     mc "You're the chef."
-    n "Exactly."
+    n 3ba "Exactly."
     mc "But aren't some of these stores really far apart?"
     mc "We'll never get all of them done at a reasonable time."
-    n "You think so?"
+    n 3bk "You think so?"
     n "Hmm..."
-    n "What if we split up?"
+    n 3bk "What if we split up?"
     n "I'll grab some of the stuff on one end of the mall and you get the other end."
-    n "You can keep the list, I already have it all in my head."
+    n 3bj "You can keep the list, I already have it all in my head."
     mc "Okay, sounds like a plan."
     mc "Where are we going to meet up after?"
     n "How about somewhere in the middle?"
     n "The food court?"
     mc "Sounds good."
-    n "I also need to pass by some other stores."
+    n 3bd "I also need to pass by some other stores."
     n "So I might be a bit late."
     mc "Is that for the {i}other{/i} stuff on your list?"
-    n "Y-Yeah..."
+    n 3bt "Y-Yeah..."
     if natsuki_date:
         mc "Look, I'm glad you told me."
         mc "I know it's really embarrassing."
         mc "But it makes me really happy to know you trust me with that kinda thing."
-        n "You mean it?"
+        n 1bq "You mean it?"
         mc "Yeah, I do."
         mc "It's not easy."
         mc "To be honest, if I had something like that I probably wouldn't have told you."
-        n "Then why did you force me to say it?"
+        n 1bh "Then why did you force me to say it?"
         mc "Curious, I guess."
         mc "But from now on, there won't be any secrets from me."
         mc "You can ask me whatever you want."
         mc "And if it's something I can tell you, then I will."
         n "In that case..."
     else:
-        n "Um..."
-        n "[player], can I ask you something?"
+        n 1bq "Um..."
+        n 1bh "[player], can I ask you something?"
         mc "Sure..."
-    n "Is Monika seriously starting to creep you out?"
+    n 1bm "Is Monika seriously starting to creep you out?"
     n "I didn't want to say anything in the meeting."
-    n "She could be anywhere, you know."
+    n 1br "She could be anywhere, you know."
     mc "Huh?"
-    n "Have you noticed at all?"
+    n 1bf "Have you noticed at all?"
     mc "Noticed what?"
-    n "She seems so calm and collected."
+    n 1bg "She seems so calm and collected."
     n "Like she's plotting something."
     mc "Plotting something...?"
     mc "Is that a bad thing considering what's happening tomorrow?"
-    n "I don't think you understand what I'm trying to say."
+    n 3be "I don't think you understand what I'm trying to say."
     n "And honestly, I'm not surprised."
     n "I've been doing some looking around in my house."
     n "There's these weird journals that just talk about all these weird things."
     mc "I don't think you should be snooping around, Natsuki."
-    n "That's not the point I'm--"
+    n 3bf "That's not the point I'm--"
     mc "I think we should get to these ingredients."
     mc "We're wasting time here."
-    n "But..."
+    n 1bm "But..."
     mc "We can talk about it later."
     mc "A long, meaningful discussion."
-    n "..."
+    n 1bu "..."
     "Natsuki starts walking towards the mall."
     "I follow behind her."
     call ch15_mall_shared
@@ -5807,6 +5818,14 @@ label ch15_mall_shared:
         m "It's almost like fate."
     "I look at Monika, not quite understanding what she means."
     "The beginning of everything important...?"
+    "What could she possibly mean by that?"
+    "Did everything important start when I joined the club?"
+    "But I was just another member..."
+    "They would have done fine if Sayori never brought me along."
+    n "Right..."
+    n "Well, if we're just gonna stand here and do nothing."
+    n "I might as well say something."
+    m "Go ahead, Natsuki."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
@@ -5842,4 +5861,4 @@ label ch15_delete:
     stop sound
     hide screen tear
     window show(None)
-    jump ch16_bad_1
+    jump ch16_bad

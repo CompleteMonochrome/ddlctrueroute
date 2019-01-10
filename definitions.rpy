@@ -4292,6 +4292,7 @@ default y_name = "Yuri"
 default d_name = "Yasuhiro"
 default mo_name = "Haruki"
 default cl_name = "Mysterious Clerk"
+default cl_revert = cl_name
 default ay_name = "Ayame"
 
 
@@ -4348,6 +4349,7 @@ default persistent.sayori_love = False
 default persistent.ch4_preparations = "Yuri"
 default persistent.dialogue_change = [False,False,False]
 default persistent.ch6_task = [False,False,False]
+default persistent.yasuhiro_deleted = None
 default persistent.ch11_task = [False,False,False]
 default persistent.sayori_reload_yuri = False
 default persistent.sayori_reload_yuri_message = True
@@ -4369,6 +4371,7 @@ default persistent.ch15_sayori_saw_clerk = False
 default persistent.ch15_sayori_chance = False
 default persistent.ch16_bad_part = "_1"
 default persistent.ch16_bad_ending_times = 0
+default persistent.clerk_sayori_bad_ending = False
 # Local Save
 # Player Gender Nouns
 default player_gender = "boy"
@@ -4429,6 +4432,7 @@ default go_nat_house = [False, False]
 default talkabout_natsuki_house = [False, False, False, False]
 default check_whole_house = False
 default check_some_house = False
+default ch10_del_jump = "_nat_house"
 default ch11_yuri_choice = "birdseed"
 default ch11_yuri_store = "pet store"
 default ch11_monika_talked = False
