@@ -1,4 +1,8 @@
 label ch16_main:
+    # Delete saves to preserve space since you'll only be able to see it once anyway
+    python:
+        try: renpy.unlink_save("clerk_restore")
+        except: pass
     scene bg school_front
     if from_custom_start:
         hide screen tear
@@ -59,6 +63,7 @@ label ch16_badcatch:
     $ cl.what_args["slow_abortable"] = config.developer
     if not config.developer:
         $ style.say_dialogue = style.default_monika
+    $ style.say_window = style.window_monika
     # Track where the player will load to
     show mask_2
     show mask_3
@@ -101,6 +106,7 @@ label ch16_bad:
     $ quick_menu = False
     if not config.developer:
         $ style.say_dialogue = style.default_monika
+    $ style.say_window = style.window_monika
     if not persistent.clerk_sayori_bad_ending:
         # Track where the player will load to
         $ persistent.autoload = "ch16_badcatch"
@@ -164,6 +170,9 @@ label ch16_bad:
         cl "Anyway, that's not really the point."
         cl "The point is you {i}freaking{/i} deleted her."
         cl "Let me repeat that."
+        label ch16_bad_2:
+        $ persistent.ch16_bad_part = "_2"
+        $ renpy.save_persistent()
         cl "You. Deleted. Ayame."
         cl "You're no better than what Monika originally was."
         cl "Actually, scratch that."
@@ -173,8 +182,8 @@ label ch16_bad:
         cl "And before you even try it."
         cl "No, I'm not in the characters folder."
         cl "So you can't delete me."
-        label ch16_bad_2:
-        $ persistent.ch16_bad_part = "_2"
+        label ch16_bad_3:
+        $ persistent.ch16_bad_part = "_3"
         $ renpy.save_persistent()
         cl "I suppose I should explain a bit more about the person you deleted and why we're now here."
         cl "You might not have known it but..."
@@ -186,7 +195,7 @@ label ch16_bad:
         cl "No, she's meant to play a vital role in all of this."
         cl "Perhaps I should explain a little bit."
         if persistent.did_christmas_event:
-            cl "You may or not not have asked me a question like this before."
+            cl "You may or may not have asked me a question like this before."
             cl "I can't really tell."
             cl "Not like I can just peek through timelines like you can."
             cl "At least...not anymore."
@@ -206,30 +215,32 @@ label ch16_bad:
         cl "Well, not {i}my{/i} club."
         cl "But I was in your position."
         cl "And now I'm stuck here."
-        label ch16_bad_3:
-        $ persistent.ch16_bad_part = "_3"
+        label ch16_bad_4:
+        $ persistent.ch16_bad_part = "_4"
         $ renpy.save_persistent()
         cl "My story was a little bit different."
-        cl "But that's because we didn't have anyway to create this new path laid out for us."
+        cl "When I say a little, I mean a lot."
+        cl "But that's because we didn't have any way to create this new path laid out for us."
         cl "We were stuck with the original story."
         cl "The original path."
         cl "So as you can probably tell, one of us died."
         cl "Then didn't exist, then someone went crazy and now there's only four of us."
         cl "But the person who died became the president."
         cl "Does that sound at all familiar to you?"
-        cl "Your story is slightly different."
+        cl "The basis of your story is slightly different."
         if player_gender == "boy":
             cl "For one, there's four girls and then you."
         else:
             cl "For one, you're all girls."
-        cl "During my time, it was only three of them."
-        cl "Even if I can't remember her face..."
+        cl "During my time, it was only three girls and two boys."
+        cl "Even if I can't remember that third girl's face..."
         cl "But whatever, there were still five of us."
         cl "Why is this important?"
         cl "Because some of us are getting a second run through."
         cl "When we shouldn't be."
         cl "Can you guess the members of the previous Literature Club?"
-        cl "There's obviously me."
+        cl "I guess it was called a Book Club or something during my time."
+        cl "But anyway, there's obviously me."
         cl "I was you."
         cl "Well, I was in the same position as you."
         cl "Then there was Yasuhiro."
@@ -255,16 +266,19 @@ label ch16_bad:
         cl "Which means she was forced to kill herself, just like Sayori was meant to."
         cl "The original president is gone."
         cl "I can't even remember her name anymore."
-        label ch16_bad_4:
-        $ persistent.ch16_bad_part = "_4"
+        label ch16_bad_5:
+        $ persistent.ch16_bad_part = "_5"
         $ renpy.save_persistent()
         cl "Now, I'll explain why Ayame is so important."
         cl "In my time, she was your Yuri."
         cl "The one who kept that damned book."
         cl "Just like Yuri, she was driven insane."
         cl "Now, just like your original world, I couldn't pursue the original president."
-        cl "I didn't realize I was in some kinda messed up fantasy."
+        cl "I thought it was just my nerves."
+        cl "Telling me I could never reach someone so...incredible."
+        cl "But I didn't realize I was in some kinda messed up fantasy."
         cl "At first, I went for Haruki."
+        cl "She was my childhood friend after all."
         cl "But then she died and everything started again."
         cl "I didn't know any better."
         cl "I couldn't remember what just happened."
@@ -277,6 +291,7 @@ label ch16_bad:
         cl "At least, not fully."
         cl "It was the book."
         cl "Being the curious person I am, I decided to research things about the supernatural."
+        cl "I didn't find anything specifically on the book itself but..."
         cl "There were accounts of an evil text with mystical powers being unearthed a long time ago."
         cl "I'm almost certain it's the book."
         cl "I think that's when this cycle started."
@@ -289,8 +304,8 @@ label ch16_bad:
         cl "I'm sure you know the rest."
         cl "But anyway!"
         cl "Back to why Ayame was important."
-        label ch16_bad_5:
-        $ persistent.ch16_bad_part = "_5"
+        label ch16_bad_6:
+        $ persistent.ch16_bad_part = "_6"
         $ renpy.save_persistent()
         cl "Ayame has the knowledge of how to stop the impending doom."
         cl "How to stop this evil that's coming to ruin Inauguration Day."
@@ -323,9 +338,9 @@ label ch16_bad:
         cl "But it won't last long."
         cl "So we need to go back."
         cl "It won't be too long before it finds out exactly where we are."
-        label ch16_bad_6:
-            $ persistent.ch16_bad_part = "_6"
-            $ renpy.save_persistent()
+        label ch16_bad_7:
+        $ persistent.ch16_bad_part = "_7"
+        $ renpy.save_persistent()
         cl "This shop is called 'Restoration'."
         cl "It's a portrait restoration shop, so it makes sense."
         cl "But that's not the only reason."
@@ -340,12 +355,13 @@ label ch16_bad:
         queue sound "sfx/crack.ogg"
         $ pause(1.5)
         label ch16_bad_7:
-        $ persistent.autoload = "ch16_bad_7"
-        $ persistent.ch16_bad_part = "_7"
+        $ persistent.autoload = "ch16_bad_8"
+        $ persistent.ch16_bad_part = "_8"
         $ renpy.save_persistent()
         cl "It's here."
         cl "You better not delete her again."
         cl "For the sake of everyone."
+        $ insert_ayame_character()
         if persistent.ayame_deleted:
             $ persistent.ayame_deleted = None
         $ persistent.autoload = ""
@@ -357,13 +373,19 @@ label ch16_bad:
         $ cl_name = cl_revert
         $ _history_list = []
         $ style.say_dialogue = style.normal
+        $ style.say_window = style.window
         $ renpy.save_persistent()
         show screen tear(20, 0.1, 0.1, 0, 40)
         scene black
         stop music
         window hide(None)
         $ pause(0.25)
-        jump ch15_repeat_exclusive
+        # If we can't load the save because it's deleted or something, just go back to the main menu
+        python:
+            if renpy.can_load("clerk_restore"):
+                renpy.load("clerk_restore")
+            else:
+                renpy.utter_restart()
     else:
         label ch16_bad_ending_end:
         $ persistent.autoload = "ch16_bad_ending_end"

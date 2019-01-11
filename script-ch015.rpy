@@ -6,8 +6,11 @@ init python:
         try:
             renpy.file("../characters/ayame.chr")
         except:
-            renpy.hide_screen("timer_15_del",layer="timers")
-            renpy.jump("ch15_delete")
+            renpy.save("clerk_restore")
+            # This is here because IDK if it will still do these if you load this save
+            if not renpy.exists("../characters/ayame.chr"):
+                renpy.hide_screen("timer_15_del",layer="timers")
+                renpy.jump("ch15_delete")
 
 label ch15_main:
     if ch12_markov_agree:
@@ -1772,6 +1775,7 @@ label ch15_end:
             mc "I doubt it..."
             s 4q "Ehehe~"
         s "I'll see you soon, [player]..."
+    # Label
     label ch15_repeat_exclusive:
     if not quick_menu:
         hide screen tear
@@ -1783,16 +1787,6 @@ label ch15_end:
     $ insert_ayame_character()
     # Check if Ayame gets deleted
     show screen timer_15_del(_layer="timers")
-    # python:
-    #     n.display_args["callback"] = ayame_deletecheck
-    #     mc.display_args["callback"] = ayame_deletecheck
-    #     m.display_args["callback"] = ayame_deletecheck
-    #     s.display_args["callback"] = ayame_deletecheck
-    #     d.display_args["callback"] = ayame_deletecheck
-    #     narrator.display_args["callback"] = ayame_deletecheck
-    #     y.display_args["callback"] = ayame_deletecheck
-    #     mo.display_args["callback"] = ayame_deletecheck
-    #     cl.display_args["callback"] = ayame_deletecheck
     call expression "ch15_exclusive_" + ch13_scene
     return
 
