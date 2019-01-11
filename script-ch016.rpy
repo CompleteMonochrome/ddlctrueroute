@@ -1,8 +1,4 @@
 label ch16_main:
-    # Delete saves to preserve space since you'll only be able to see it once anyway
-    python:
-        try: renpy.unlink_save("clerk_restore")
-        except: pass
     scene bg school_front
     if from_custom_start:
         hide screen tear
@@ -10,19 +6,12 @@ label ch16_main:
         $ quick_menu = True
     else:
         with dissolve_scene_full
+    # Delete saves to preserve space since you'll only be able to see it once anyway
     python:
         persistent.ayame_deleted = None
         renpy.hide_screen("timer_15_del",layer="timers")
-        # Set Callback to None after Yesterday
-        # n.display_args["callback"] = None
-        # mc.display_args["callback"] = None
-        # m.display_args["callback"] = None
-        # s.display_args["callback"] = None
-        # d.display_args["callback"] = None
-        # narrator.display_args["callback"] = None
-        # y.display_args["callback"] = None
-        # mo.display_args["callback"] = None
-        # cl.display_args["callback"] = None
+        try: renpy.unlink_save("clerk_restore")
+        except: pass
 
     if ch15_s_together:
         "What the hell?"
