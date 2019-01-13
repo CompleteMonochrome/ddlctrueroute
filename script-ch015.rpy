@@ -6339,7 +6339,7 @@ label ch15_mall_shared:
             "Suddenly, my phone vibrates and there's a text message notification."
             m "Sayori?"
             mc "Maybe..."
-            "I open my phone and it looks like there's a text message from Sayori."\
+            "I open my phone and it looks like there's a text message from Sayori."
             m "So she's okay?"
             mc "Yeah, I think she is."
             mc "She just told me to meet her at her house."
@@ -6395,7 +6395,12 @@ label ch15_sayoridate:
     scene bg park_day
     show sayori 1bq zorder 2 at t11
     with open_eyes
+    play music t12s fadeout 2.0
     "What the?"
+    "We're at...the park?"
+    "How did I get here?"
+    "Why is the sun out?"
+    s "So..."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
