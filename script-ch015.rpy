@@ -2178,10 +2178,15 @@ label ch15_exclusive_yuri:
     y "Thanks again, [player]."
     mc "I'll see you then, Yuri."
     call ch15_mall_shared
+    scene bg bedroom
+    show yuri 2ba zorder 2 at t11
+    with wipeleft_scene
     "We decide to go to my house to finish the preparations."
     "Most of the stuff we need to do is my side of the preparations anyway."
     "I feel bad making Yuri help me for this stuff but she doesn't seem to mind."
     "I'm glad I chose her to work with."
+    "She doesn't seem to mind helping me out with all the things that I was assigned."
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch15_exclusive_natsuki:
@@ -2515,7 +2520,10 @@ label ch15_exclusive_natsuki:
     "Natsuki starts walking towards the mall."
     "I follow behind her."
     call ch15_mall_shared
-
+    scene bg mall_sunset
+    show natsuki 2ba zorder 2 at t11
+    with wipeleft_scene
+    n "That was weird."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
@@ -2790,7 +2798,10 @@ label ch15_exclusive_monika:
         "It says to meet her in the food court when I'm done."
         "I guess I should start looking for these things on the list."
     call ch15_mall_shared
+    # Find a night time version of Monika's bedroom
+    scene bg m_bedroom with wipeleft_scene
     "It's getting really late."
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch15_exclusive_monika_together:
@@ -4452,7 +4463,167 @@ label ch15_exclusive_sayori_together:
     show yuri 1bf zorder 3 at f42
     show ayame zorder 2 at t43
     show monika 1bc zorder 2 at t44
-    jump ch15_mall_shared_transfer
+    call ch15_mall_shared_transfer
+    scene bg sayori_bedroom_night with wipeleft_scene
+    "It's getting late but I still have to do my preparations with Sayori."
+    "I'm not sure why, but I let myself into Sayori's house."
+    "I know she's expecting me, somehow."
+    "We haven't talked since before I got to that shop and..."
+    "What happened again?"
+    "I can remember things so vividly but they don't make any sense."
+    "I feel like some of these memories aren't mine either..."
+    "It just makes no sense."
+    show sayori 1ba zorder 2 at t11
+    s "[player]?"
+    s "Is that you?"
+    mc "Sayori?"
+    mc "It's me."
+    s "Thank gosh you're okay!"
+    show sayori at h11
+    "Sayori runs up to me and almost tackles me to the floor in an embrace."
+    mc "Calm down!"
+    s "I'm just so glad you're okay."
+    mc "Why wouldn't I be okay?"
+    s "Are you serious?"
+    s "Do you not remember anything, [player]?"
+    mc "I'm not sure."
+    mc "I have these memories in my head."
+    mc "I don't know if they're mine."
+    s "What do you mean?"
+    mc "There was some pretty crazy stuff happening."
+    s "Let's talk about it then."
+    s "Start from what you remember after we left my house."
+    mc "After we left..."
+    mc "Well, I remember getting in a taxi."
+    mc "And the driver drove like there was no tomorrow."
+    s "..."
+    mc "What's wrong?"
+    s "Just keep going."
+    s "What happened next?"
+    mc "We arrived at that place."
+    mc "The one with that weird looking guy."
+    s "Restoration?"
+    mc "Is that what the shop was called?"
+    mc "Then yeah, we arrived at Restoration."
+    s "Do you remember what we talked about?"
+    s "This is important, [player]."
+    mc "It seems like nonsense."
+    s "What was it?!"
+    mc "We were talking about...memories."
+    mc "Me not being able to keep mine because I wasn't the latest copy."
+    mc "Or something like that."
+    s "Okay, then what happened?"
+    mc "Then I just...arrived at the mall."
+    mc "All of a sudden."
+    mc "But I had no memory of getting there."
+    mc "And I saw...myself."
+    s "You saw yourself?"
+    s "What did you do next?"
+    mc "I just...tapped myself on the shoulder."
+    mc "Then everything became normal."
+    mc "Well, there was this new girl."
+    mc "Ayame."
+    mc "I think I had her memories when she tapped me on the shoulder."
+    mc "But I don't know why."
+    s "So you have her memories?"
+    s "You're positive?"
+    mc "I don't know."
+    mc "I just remember tapping myself on the shoulder."
+    mc "I don't even know if that actually happened."
+    mc "But it felt so real..."
+    s "I see."
+    s "Can you look at me for a second, [player]?"
+    mc "Huh?"
+    s "Just stare into my eyes."
+    mc "This is way too weird."
+    s "Just do it."
+    mc "Okay, okay."
+    show sayori 1bd at face with dissolve
+    "Sayori suddenly gets closer to me."
+    mc "O-Okay..."
+    mc "Are you gonna tell me the point of this?"
+    "Sayori puts a finger on my lips."
+    "Where exactly is this going...?"
+    s "I see."
+    s "[player], can you close your eyes?"
+    mc "You just told me to stare into yours."
+    s "I know."
+    mc "Okay, Sayori."
+    mc "I hope you know what you're doing."
+    scene black with close_eyes
+    play music t10 fadeout 2.0
+    s "I just..."
+    s "I want to enjoy this moment we have."
+    s "Because I don't know what's going to happen tomorrow."
+    s "So...I'm going to make a tomorrow."
+    mc "What...?"
+    s "Do you remember what you promised yesterday?"
+    mc "About...the date?"
+    "There's a short silence."
+    mc "W-What about it?"
+    s "Ehehe..."
+    s "This is so much harder than I thought it would be."
+    s "Why is this so difficult?"
+    mc "Sayori?"
+    mc "W-What are you doing?"
+    s "I just want to be selfish."
+    s "Just for a moment."
+    s "Will you let me be selfish, [player]?"
+    $ stream_list = ["obs32.exe", "obs64.exe", "obs.exe", "xsplit.core.exe", "livehime.exe", "pandatool.exe", "yymixer.exe", "douyutool.exe", "huomaotool.exe"]
+    if not list(set(process_list).intersection(stream_list)):
+        if currentuser != "" and currentuser.lower() != player.lower():
+            s "Will you, [currentuser]?"
+    menu:
+        "Let her be selfish.":
+            mc "Sayo--{nw}"
+            s "Thank you."
+            jump ch15_sayoridate
+        "Focus, Sayori.":
+            pass
+    mc "Sayori, I know how you feel."
+    mc "I've felt this way for a while too."
+    mc "I don't know how important this is to you."
+    mc "But you have to think about this carefully."
+    mc "Once you do this, there's no turning back."
+    mc "You know that, don't you?"
+    s "A-All I want..."
+    s "A-All I wanted was to spend a moment with you."
+    s "I just can't help it?"
+    s "Why am I like this, [player]?"
+    s "I've been so vigilant until now!"
+    s "I've been so careful until now!"
+    s "I've made sure they got the ending they deserved!"
+    s "I've done everything I could for them"
+    s "So why...?"
+    mc "I know."
+    mc "And I'm sorry."
+    mc "Our time is tomorrow, Sayori."
+    mc "We can't get distracted."
+    mc "We need you for tomorrow."
+    mc "I need you."
+    mc "I promise we'll get through this."
+    mc "But I need you to focus, Sayori."
+    mc "Whatever is worrying you, we'll stop it."
+    s "You sound so certain."
+    mc "Why wouldn't I?"
+    mc "I've got you."
+    mc "With you, the impossible doesn't so impossible anymore."
+    s "You really don't know the real extent of it, do you?"
+    mc "I don't care."
+    mc "We'll find a way."
+    mc "All five of us will find a way."
+    mc "And when that's over..."
+    mc "After that...I promise you."
+    mc "We can both be as selfish as we want to be."
+    s "We?"
+    mc "Yes, we."
+    "Sayori tightens her embrace while trying to prevent her tears."
+    "I do my best to comfort her, reassuring her that everything is going to be okay."
+    scene bg sayori_bedroom_night
+    show sayori 1ba zorder 2 at t11
+    with open_eyes
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
+    return
 
 label ch15_exclusive_sayori_alone:
     $ persistent.ch15_sayori_chance = False
@@ -4636,7 +4807,10 @@ label ch15_exclusive_sayori_alone:
     "Maybe Sayori will be back by then."
     "I have nothing to worry about."
     call ch15_mall_shared
+    scene black with wipeleft_scene
     "I'm back from the mall."
+    "Sayori's front door was already open"
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch15_mall_shared:
@@ -5983,6 +6157,7 @@ label ch15_mall_shared:
     mc "Huh?"
     ay "Are you really that dense?"
     ay "How can you not--"
+    ay "You know, I suppose it could be worse."
     y "Ayame...?"
     ay "Oh."
     ay "I don't know what came over me, sorry."
@@ -6004,7 +6179,7 @@ label ch15_mall_shared:
     show natsuki 1ba zorder 2 at t41
     show monika 1ba zorder 2 at t42
     show ayame 1ba zorder 3 at t43
-    show yuri 1ba zorder 2 at t44    
+    show yuri 1ba zorder 2 at t44
     with dissolve_cg
     "Ayame takes a step back, turning away from the sunset."
     show ayame zorder 3 at f43
@@ -6013,22 +6188,220 @@ label ch15_mall_shared:
     ay "Thank you all again."
     "Ayame bows her head."
     ay "It was wonderful spending this time with you."
-    ay "But I've only just realized I'm going to be busy tonight."
+    ay "But I've only just realized I'm going to be extremely busy tonight."
+    ay "More busy than I originally thought I would be."
+    ay "Goodbye, everyone!"
+    ay "It was nice meeting you all."
+    show natsuki zorder 3 at f41
+    show ayame zorder 2 at t43
+    n "It was nice meeting you, Ayame."
+    n "I'm sure we'll get along great!"
+    show natsuki zorder 2 at t41
+    show yuri zorder 3 at f44
+    y "You do seem like a really friendly person."
+    y "I can't wait till you become an official member."
+    show ayame zorder 3 at f43
+    show yuri zorder 2 at t44
+    ay "I'm sure we'll have a blast, you two!"
+    ay "After all of this is over, I'll be glad to have all of you as my friends."
+    show monika zorder 3 at f42
+    show ayame zorder 2 at t43
+    if monika_type == 0:
+        m "The feeling is mutual for all of us."
+        m "Thank you for coming to this, Ayame."
+        m "Hopefully you learned a thing or two about the club."
+    else:
+        m "Ayame, have we...met before?"
+        m "After that whole reflection, you just seem so familiar."
+        m "I'm sure we've met."
+        show monika zorder 2 at t42
+        show ayame zorder 3 at f43
+        ay "I'm sure we have!"
+        ay "We do go to the same school after all."
+        show monika zorder 3 at f42
+        show ayame zorder 2 at t43
+        m "That's not what I..."
+        m "You know what?"
+        m "Never mind, it doesn't matter."
+        m "Hopefully you got what you came here for."
+    show monika zorder 2 at t42
+    show ayame zorder 3 at f43
+    ay "Oh, I definitely did."
+    ay "Anyway, I {i}really{/i} have to get going."
+    show ayame zorder 2 at t43
+    mc "We'll see you tomorrow."
+    show ayame zorder 3 at f43
+    ay "Mhm!"
+    ay "Farewell!"
+    show ayame at thide
+    hide ayame
+    show natsuki zorder 2 at t31
+    show monika zorder 2 at t32
+    show yuri zorder 2 at t33
+    "Ayame gives one last wave back to all of us before running away."
+    "She seemed like she was in a rush."
+    show natsuki zorder 3 at f31
+    n "I like her."
+    n "I think it's good to have someone so different around."
+    show natsuki zorder 2 at t31
+    show yuri zorder 3 at f33
+    y "I think she'll bring some fresh perspective to the club."
+    y "It will be nice to have her."
+    show monika zorder 3 at f32
+    show yuri zorder 2 at t33
+    m "We'll see."
+    show natsuki zorder 3 at f31
+    show monika zorder 2 at t32
+    if ch13_name == "Natsuki":
+        n "[player] and I should go too."
+        n "There's just barely gonna be enough time tonight."
+        n "We'll see you tomorrow."
+        show natsuki zorder 2 at t31
+        mc "Goodbye, everyone!"
+        mc "Good luck on your preparations."
+        show yuri zorder 3 at f33
+        y "The same goes for you."
+        show monika zorder 3 at f32
+        show yuri zorder 2 at t33
+        m "Good luck!"
+        return
+    else:
+        n "I should really get going now too."
+        n "I'll see you three tomorrow."
+        n "I'm gonna have even less time to do my baking now."
+        n "Oh well..."
+    show natsuki at thide
+    hide natsuki
+    show monika zorder 2 at t21
+    show yuri zorder 2 at t22
+    "Natsuki leaves and gives a half-hearted wave without turning back."
+    "She starts to pick up her pace the further she gets from us."
+    show yuri zorder 3 at f22
+    if ch13_name == "Yuri":
+        y "W-We should go now, [player]."
+        y "Before it gets too late."
+        show yuri zorder 2 at t22
+        mc "Yeah, you're right."
+        mc "See you, Monika."
+        show monika zorder 3 at f21
+        show yuri zorder 2 at t22
+        m "Goodbye, you two."
+        m "Best of luck!"
+        return
+    else:
+        y "I-I need to go now as well."
+        y "There's a lot of work to do for one person."
+        y "I'll see the two of you at school."
+    show yuri at thide
+    hide yuri
+    show monika zorder 2 at t11
+    "Yuri walks at a fast pace before turning back and giving one small wave of farewell."
+    if ch13_name == "Sayori":
+        m "So...what are you gonna do now?"
+        m "Are you going to try to call Sayori again?"
+        if ch15_s_together:
+            mc "What?"
+            mc "Why would I need to do that?"
+            m "I don't know."
+            m "I just thought you'd want to know where she was."
+            m "Or do you not really care?"
+            mc "What? I know exactly where she is."
+            m "Y-You do?"
+            m "I wasn't aware you were in contact since that incident at her house."
+            mc "Incident at her house...?"
+            mc "Do you mean the taxi?"
+            mc "Or the doors?"
+            m "Where are you going after this?"
+            mc "I'm going to be going to her house after we're done here."
+            mc "Since I'm helping her."
+            "Monika looks puzzled."
+            m "Never mind."
+            m "I should really get going."
+            if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+                m "I wish the two of you good luck."
+                m "I'm sure you'll be able to help her with whatever she needs."
+            else:
+                m "Hopefully you two finish your work."
+            m "Though at this point, I'm not entirely sure what she could possibly do."
+            m "Unless she came for an early morning visit."
+            mc "I'm sure she'll come up with something."
+            m "Ahaha, we'll see~"
+        else:
+            mc "I guess that would be the best thing to do."
+            "I pull out my phone and dial Sayori's number."
+            mc "Here goes nothing..."
+            "The two of us wait for a response but all it does is go to voice mail."
+            mc "It was worth a shot."
+            m "I'm sure she's fine, [player]."
+            m "She can take care of herself."
+            mc "I know, I just want to know where she is."
+            mc "I just can't help but be worried about her, you know?"
+            "Suddenly, my phone vibrates and there's a text message notification."
+            m "Sayori?"
+            mc "Maybe..."
+            "I open my phone and it looks like there's a text message from Sayori."\
+            m "So she's okay?"
+            mc "Yeah, I think she is."
+            mc "She just told me to meet her at her house."
+            m "That's good news."
+            m "It would be absolutely terrible if she was missing tomorrow."
+            mc "Yeah..."
+            m "Anyway, I really need to go."
+            m "Plenty of work to do, especially for one person."
+            mc "Good luck, Monika."
+        m "Until tomorrow, [player]!"
+        show monika at thide
+        hide monika
+        "Monika smiles then leaves me all by myself."
+        "The sun is almost set."
+        "I could look at it and wait here until there's no light left but it's not really my thing."
+        "Besides, I should really get back too."
+        "I don't want Sayori to have to be alone right now."
+    else:
+        m "I guess we should get going too, right?"
+        m "The sunset is nice and all but we've got work to do tonight."
+        m "And that goes double for me."
+        mc "Double for you?"
+        mc "We're doing this together, aren't we?"
+        m "I've got my own personal things to work on too."
+        m "Like the piano, amongst other things."
+        mc "I suppose that makes sense."
+        "What does she mean by amongst other things...?"
+        "Could there be something else she's working on?"
+        mc "Let's get going then."
+        m "Follow me."
+        m "We'll be at my house in no time."
+    return
+
+label ch15_sayoridate:
+    s "Keep your eyes closed, [player]."
+    s "Until I tell you to open them."
+    "Around me, I can feel things moving."
+    "It sounds like multiple things at once."
+    "What in the world is happening?"
+    "I'm really tempted to open my eyes."
+    mc "What's happening?"
+    s "Just wait."
+    s "I'm almost finished."
+    "A few more seconds pass."
+    "In an instant, it felt like I was in a completely different environment."
+    "It didn't have the warmth of Sayori's room."
+    "I think we're somewhere completely different."
+    "But I didn't move an inch."
+    "I can also...feel sunlight?"
+    "Just where are we?"
+    $ sayori_outfit = 1
+    s "Okay, open your eyes."
+    scene bg park_day
+    show sayori 1bq zorder 2 at t11
+    with open_eyes
+    "What the?"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch15_delete:
     python:
         persistent.ayame_deleted = True
-        n.display_args["callback"] = None
-        mc.display_args["callback"] = None
-        m.display_args["callback"] = None
-        s.display_args["callback"] = None
-        d.display_args["callback"] = None
-        narrator.display_args["callback"] = None
-        y.display_args["callback"] = None
-        mo.display_args["callback"] = None
-        cl.display_args["callback"] = None
         _history_list = []
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)

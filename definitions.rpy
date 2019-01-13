@@ -243,6 +243,7 @@ image bg club_day2:
 image bg closet = "bg/closet.png"
 image bg bedroom = "bg/bedroom.png"
 image bg sayori_bedroom = "bg/sayori_bedroom.png"
+image bg sayori_bedroom_night = "mod_assets/images/bg/sayori_bedroom_night.png"
 image bg house = "bg/house.png"
 image bg kitchen = "bg/kitchen.png"
 
@@ -372,6 +373,18 @@ image bg m_bedroom = "mod_assets/images/bg/m_bedroom.png"
 image bg anticshop = "mod_assets/images/bg/anticshop.png"
 image bg ay_house = "mod_assets/images/bg/ay_house.png"
 image bg ay_livingroom = "mod_assets/images/bg/ay_livingroom.png"
+image bg park_day = "mod_assets/images/bg/park_day.png"
+image bg park_sunset = "mod_assets/images/bg/park_sunset.png"
+image bg park_night = "mod_assets/images/bg/park_night.png"
+image bg lake_day = "mod_assets/images/bg/park_day.png"
+image bg lake_sunset = "mod_assets/images/bg/park_sunset.png"
+image bg lake_night = "mod_assets/images/bg/park_night.png"
+image bg lake_prerain = "mod_assets/images/bg/park_prerain.png"
+image bg lake_rain = "mod_assets/images/bg/park_rain.png"
+image bg lake_clearrain = "mod_assets/images/bg/park_clearrain.png"
+image bg river_day = "mod_assets/images/bg/river_day.png"
+image bg river_sunset = "mod_assets/images/bg/river_sunset.png"
+image bg river_night = "mod_assets/images/bg/river_night.png"
 
 image glitch_color:
     ytile 3
