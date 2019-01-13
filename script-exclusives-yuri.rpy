@@ -592,7 +592,7 @@ label yuri_exclusive_3:
     m "You know where the arts and crafts section is, right?"
     mc "Yeah, I think I do."
     m "Well, have fun with Yuri!"
-    play music t6 fadeout 1
+    play music t6say fadeout 1
     scene bg corridor
     with wipeleft_scene
     "I make my way out the clubroom and see Sayori talking to some people."
@@ -836,7 +836,7 @@ label yuri_exclusive_4:
     y "Quick! Follow me upstairs!"
     scene bg y_bedroom
     with wipeleft_scene
-    play music t6 fadeout 1.0
+    play music t6say fadeout 1.0
     "Yuri practically dragged me up the stairs into her room."
     "Her house has this odd aroma of metal emitting from the walls."
     "The bedroom also seems very familiar."
@@ -908,7 +908,7 @@ label yuri_exclusive_4:
             y 1by3 "All I need is you here."
             if persistent.sayori_reload_yuri_message:
                 $ currentpos = get_pos()
-                $ audio.t6b = "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"
+                $ audio.t6sayb = "<from " + str(currentpos) + " loop 10.893>mod_assets/bgm/6_sayori.ogg"
                 stop music
                 show yuri glitch_sayori zorder 2 at t32
                 $ y_name = "Yuri?"
@@ -972,7 +972,7 @@ label yuri_exclusive_4:
                 $ pause(1.2)
                 $ _history_list = []
                 $ config.allow_skipping = True
-                play music t6b
+                play music t6sayb
                 y 1by2 "W-What?"
                 y "What just happened?"
                 y 1by3 "It doesn't matter."

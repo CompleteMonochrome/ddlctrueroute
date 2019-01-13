@@ -1030,7 +1030,7 @@ label ch12_play:
         with close_eyes
         $ pause(1.0)
     scene bg gym with wipeleft_scene
-    play music t6 fadeout 1.0
+    play music t6say fadeout 1.0
     "I'm the last one to make it to the gym."
     "Everyone is already set up and reading through a piece of paper."
     "I imagine it's a script that Sayori prepared."

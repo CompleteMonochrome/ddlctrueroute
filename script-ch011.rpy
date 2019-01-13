@@ -255,7 +255,7 @@ label ch11_main:
         "Maybe I can go to the arcade or something..."
     scene bg mall_day
     with wipeleft_scene
-    play music t6 fadeout 2.0
+    play music t6say fadeout 2.0
     "I arrive at the mall a few minutes after the first few shops opened up."
     if visited_yuri_hospital:
         "I quickly glance around me, searching for Yuri."
@@ -1008,7 +1008,7 @@ label ch11_end:
     hide dadsuki
     show natsuki zorder 2 at t11
     "Natsuki waits a few moments to make sure Yasuhiro is gone before saying anything."
-    play music t6 fadeout 2.0
+    play music t6say fadeout 2.0
     n 4bo "[player], what the hell are you doing here?!"
     mc "Sayori told me to visit and--"
     n "Do you do everything Sayori tells you to do?!"

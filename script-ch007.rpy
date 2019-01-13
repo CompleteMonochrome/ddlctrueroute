@@ -319,7 +319,7 @@ label ch7_main:
     mc "Yeah, yeah..."
     scene bg library
     with wipeleft_scene
-    play music t6 fadeout 1
+    play music t6say fadeout 1
     "Soon enough it's lunch time."
     "Sayori said I'd find Yuri in the library."
     "I don't really go here much..."

@@ -493,7 +493,7 @@ label ch9_main:
 label ch9_yurihospital:
     $ visited_yuri_hospital = True
     scene bg hospital with wipeleft_scene
-    play music t6 fadeout 1.0
+    play music t6say fadeout 1.0
     "I arrive at the hospital."
     "I let the people at the reception know who I'm visiting."
     "They said that Yuri wasn't expecting any visitors."

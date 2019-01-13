@@ -157,7 +157,7 @@ label ch8_main:
                 hide screen tear
             else:
                 with dissolve_scene_half
-            play music t6
+            play music t6say
             "It's the day of the play and I haven't even finished the book."
             if ch7_name == "Sayori":
                 "I decided to start reading some of it during the day but most of it went right over my head."

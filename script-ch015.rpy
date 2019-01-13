@@ -3002,7 +3002,7 @@ label ch15_exclusive_monika_together:
 label ch15_exclusive_monika_alone:
     $ ch15_m_together = False
     scene bg house with wipeleft_scene
-    play music t6
+    play music t6say
     "I make it home pretty quickly."
     "With the way Monika was moving, I kinda felt inspired to do the same."
     "There's not really much to do tonight."
@@ -3065,7 +3065,7 @@ label ch15_exclusive_sayori:
     scene bg residential_day
     show sayori 1a zorder 2 at t11
     with wipeleft_scene
-    play music t6
+    play music t6say
     "Sayori and I make our way home."
     "She's been really quiet this whole time."
     "That's not like her at all."
@@ -3451,7 +3451,7 @@ label ch15_exclusive_sayori_together:
     scene bg house
     show sayori 2d zorder 2 at t11
     with wipeleft_scene
-    play music t6 fadeout 3.0
+    play music t6say fadeout 3.0
     "We arrive at my house after a brief walk."
     "Sayori is still in tow, still avoiding my gaze."
     "I open the door to my house and step inside."

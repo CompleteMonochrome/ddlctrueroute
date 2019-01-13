@@ -598,7 +598,7 @@ label sayori_exclusive_3:
     hide monika
     "Monika smiles sweetly and walks out the clubroom."
     "I hear Monika and Sayori chat briefly before Monika heads off."
-    play music t6 fadeout 1
+    play music t6say fadeout 1
     scene bg corridor
     with wipeleft_scene
     "I go out the clubroom and see Sayori talking to a dozen or so people."
@@ -850,7 +850,7 @@ label sayori_exclusive_4:
     mc "Yeah, I suppose we are..."
     scene bg bedroom
     with wipeleft_scene
-    play music t6 fadeout 1.0
+    play music t6say fadeout 1.0
     show sayori 1bb zorder 1 at t11
     s "Woooooow..."
     s 1ba "It's been a long time since I've been here."

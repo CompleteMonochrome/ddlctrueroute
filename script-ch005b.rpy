@@ -24,21 +24,6 @@ label ch5_premainb:
     jump ch5_mainbstart
 
 label ch5_mainb:
-    python:
-        process_list = []
-        currentuser = ""
-        if renpy.windows:
-            try:
-                process_list = subprocess.check_output("wmic process get Description", shell=True).lower().replace("\r", "").replace(" ", "").split("\n")
-            except:
-                pass
-            try:
-                for name in ('LOGNAME', 'USER', 'LNAME', 'USERNAME'):
-                    user = os.environ.get(name)
-                    if user:
-                        currentuser = user
-            except:
-                pass
     stop music fadeout 2.0
     scene bg residential_day
     play music t2
@@ -60,7 +45,7 @@ label ch5_mainb:
 
     python:
         renpy.take_screenshot()
-        renpy.save('1-1')
+        renpy.save("1-1")
     "It's the day of the festival."
     "Of all days, I expected this to be the one where I'd be walking to school with Sayori."
     "But Sayori isn't answering her phone."
@@ -639,21 +624,6 @@ label ch5_comeback:
 
 label ch5_mainc:
     # Pregame Setup
-    python:
-        process_list = []
-        currentuser = ""
-        if renpy.windows:
-            try:
-                process_list = subprocess.check_output("wmic process get Description", shell=True).lower().replace("\r", "").replace(" ", "").split("\n")
-            except:
-                pass
-            try:
-                for name in ('LOGNAME', 'USER', 'LNAME', 'USERNAME'):
-                    user = os.environ.get(name)
-                    if user:
-                        currentuser = user
-            except:
-                pass
     $ delete_all_saves()
     $ restore_all_characters()
     $ restore_normal_characters()
@@ -685,9 +655,6 @@ label ch5_mainc:
     else:
         $ sayori_confess = False
 
-    python:
-        renpy.take_screenshot()
-        renpy.save('1-1')
     "It's the day of the festival."
     "I expected to be walking with Sayori to the festival today."
     "Instead, she told me she was already walking with someone else."
@@ -1039,7 +1006,7 @@ label ch5_mainc:
     "In any case, it would probably be best if I don't bother them right now."
     "So instead I'll go spend some time with [ch4_name]."
     if ch4_name == "Natsuki":
-        play music t6 fadeout 1
+        play music t6say fadeout 1
         scene bg closet
         show natsuki 4r zorder 2 at t11
         with wipeleft_scene
@@ -1110,7 +1077,7 @@ label ch5_mainc:
         "She gives me a sad look before picking up the box full of manga."
         "She sets it down on a lower shelf, next to her cupcakes."
     else:
-        play music t6 fadeout 1
+        play music t6say fadeout 1
         show yuri 2a zorder 2 at t11
         mc "Hey, Yuri."
         mc "Do you need any help putting up the decorations?"

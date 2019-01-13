@@ -2147,7 +2147,7 @@ label ch13_exclusive_natsuki:
         mc "Alright, alright..."
         "I follow Natsuki inside."
     scene bg n_bedroom with wipeleft_scene
-    play music t6 fadeout 2.0
+    play music t6say fadeout 2.0
     "I wonder what kind of things we'll be doing."
     "If I know anything about baking, she'll probably want to cook it the day before."
     "That way, the food is as fresh as possible."
@@ -2270,8 +2270,8 @@ label ch13_exclusive_natsuki:
         scene bg n_bedroom
         show natsuki 1bc zorder 2 at i11
         with dissolve_scene_full
-        $ audio.t6c = "<from " + str(currentpos) + " loop 10.893>bgm/6.ogg"
-        play music t6c fadein 0.5
+        $ audio.t6sayc = "<from " + str(currentpos) + " loop 10.893>mod_assets/bgm/6_sayori.ogg"
+        play music t6sayc fadein 0.5
         $ style.say_window = style.window
         n "Monika more so than Sayori?"
         n "What do you mean?"
@@ -2591,7 +2591,7 @@ label ch13_exclusive_natsuki:
                 mc "Of course."
                 mc "I'll go do that..."
                 scene bg n_bedroom with wipeleft_scene
-                play music t6
+                play music t6say
                 show natsuki 1ba zorder 2 at t11
                 n "Five eggs and..."
                 "Natsuki notices me at the door to her room."
@@ -2612,8 +2612,8 @@ label ch13_exclusive_natsuki:
                 $ pause(0.25)
                 stop sound
                 hide screen tear
-                $ audio.t6c = "<from 5.709 loop 10.893>bgm/6.ogg"
-                play music t6c fadeout 0.5
+                $ audio.t6sayc = "<from 5.709 loop 10.893>mod_assets/bgm/6_sayori.ogg"
+                play music t6sayc fadeout 0.5
                 window show(None)
                 "Natsuki puts away the recipe."
                 window auto
@@ -4780,7 +4780,7 @@ label ch13_exclusive_natsuki:
 label ch13_exclusive_yuri:
     scene bg residential_day
     with wipeleft_scene
-    play music t6 fadeout 1.0
+    play music t6say fadeout 1.0
     "Yuri and I make our way to my house."
     if ch4_name == "Yuri":
         "She's been here before, during the first week of the Literature Club."
@@ -4979,7 +4979,7 @@ label ch13_exclusive_yuri:
             scene black
             with close_eyes
             $ pause(4.0)
-            play music t6
+            play music t6say
             scene bg bedroom
             show yuri 3pq at face
             with open_eyes
@@ -6530,7 +6530,7 @@ label ch13_exclusive_monika:
 label ch13_exclusive_sayori:
     scene bg n_house_day
     with wipeleft_scene
-    play music t6 fadeout 1.0
+    play music t6say fadeout 1.0
     "Before long, Sayori and I arrive at Natsuki's house."
     "It really felt like no time passed at all..."
     "It was like as soon as we left the Literature Club, we ended up here."

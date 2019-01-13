@@ -653,7 +653,7 @@ label natsuki_exclusive_3:
     mc "Thanks, I'll get on it."
     m "Have fun [player]!"
     m "Enjoy your time with Natsuki."
-    play music t6 fadeout 1
+    play music t6say fadeout 1
     scene bg corridor
     with wipeleft_scene
     "I make my way out the clubroom and see Sayori talking to some people."
@@ -922,7 +922,7 @@ label natsuki_exclusive_4:
     mc "Oh, right."
     scene bg kitchen
     with wipeleft_scene
-    play music t6 fadeout 1.0
+    play music t6say fadeout 1.0
     show natsuki 1bs zorder 2 at t11
     "As I make my way up the stairs to my room, Natsuki stops at the kitchen."
     "She stands there for a while before I finally decide to say something."

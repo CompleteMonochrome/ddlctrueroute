@@ -172,6 +172,8 @@ define audio.t6b = "<loop 10.893>bgm/6.ogg"
 define audio.t6g = "<loop 10.893>bgm/6g.ogg"
 define audio.t6r = "<to 39.817 loop 0>bgm/6r.ogg"
 define audio.t6s = "<loop 43.572>bgm/6s.ogg"
+# Mod Tracks - 19: Play Time! (Sayori Version)
+define audio.t6say = "<loop 10.893>mod_assets/bgm/6_sayori.ogg"
 define audio.t7 = "<loop 2.291>bgm/7.ogg"
 define audio.t7a = "<loop 4.316 to 12.453>bgm/7.ogg"
 define audio.t7g = "<loop 31.880>bgm/7g.ogg"

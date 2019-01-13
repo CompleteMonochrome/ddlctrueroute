@@ -665,7 +665,7 @@ label ch10_nat_house:
     scene bg n_bedroom
     show natsuki 2bc zorder 2 at t11
     with wipeleft_scene
-    play music t6 fadeout 2.0
+    play music t6say fadeout 2.0
     n "Here we are."
     n "This is my room."
     "Unlike the rest of the house, this room appears to be clean."
