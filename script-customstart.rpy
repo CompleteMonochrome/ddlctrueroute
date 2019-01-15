@@ -493,7 +493,7 @@ label choose_start:
     s "What did you do the first time?"
     call screen customstart_twobgchoice("Did you check closed rooms?",
         "mod_assets/images/bg/n_house_day.png","Checked closed rooms",
-        "mod_assets/images/bg/n_bedroom.png","Stayed in Natsuki's room",False)
+        "mod_assets/images/bg/n_bedroom_day.png","Stayed in Natsuki's room",False)
     if _return == 0:
         $ natsuki_approval += 1
         s "I see."

@@ -1050,7 +1050,7 @@ label ch11_end:
     "Natsuki steps inside for a few seconds and comes out without the manga."
     mc "Where did the manga go?"
     n "I'll explain once we get to my room."
-    scene bg n_bedroom
+    scene bg n_bedroom_day
     show natsuki 2bc zorder 2 at t11
     with wipeleft_scene
     n "That was close..."
@@ -1290,7 +1290,7 @@ label ch11_end:
         mc "You don't have to be sorry for that."
         mc "It's what I like about you..."
         n "..."
-        scene bg n_bedroom
+        scene bg n_bedroom_day
         show natsuki 1bu zorder 2 at t11
         with dissolve_cg
         n "T-Thank you..."

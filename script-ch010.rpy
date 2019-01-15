@@ -662,7 +662,7 @@ label ch10_nat_house:
     "Looking around, I noticed that pretty much every single door in the house was closed."
     "I wonder why that is."
     "Maybe Natsuki lives with her siblings or something."
-    scene bg n_bedroom
+    scene bg n_bedroom_day
     show natsuki 2bc zorder 2 at t11
     with wipeleft_scene
     play music t6say fadeout 2.0
@@ -877,7 +877,7 @@ label ch10_nat_house:
                     "They'll probably clean that up at some point."
             "I make sure everything is left as it was before I entered the room."
             "After I'm certain, I decide to head back to Natsuki's room."
-            scene bg n_bedroom with wipeleft_scene
+            scene bg n_bedroom_day with wipeleft_scene
             "It looks like she's still not back yet."
             "I wonder what's taking her so long..."
             "Still I'm glad I satisfied my own curiosity and that the voice in the back of my head has stopped."

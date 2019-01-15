@@ -4940,7 +4940,7 @@ label ch14_exclusive_yuri:
     return
 
 label ch14_exclusive_natsuki:
-    scene bg n_bedroom
+    scene bg n_bedroom_day
     show natsuki 2bc zorder 2 at i11
     $ pause(0.25)
     stop sound
@@ -5775,7 +5775,7 @@ label ch14_exclusive_natsuki:
             mc "Sure, what were we going to do today?"
         n 1bc "Hold on, I actually had a list back in my room."
         n "Let's go there first."
-        scene bg n_bedroom with wipeleft_scene
+        scene bg n_bedroom_day with wipeleft_scene
         play music t3 fadeout 2.0
         "We head towards Natsuki's room."
         "We didn't pass Yasuhiro on the stairs so I assume he's still somewhere upstairs looking for something."
@@ -6389,7 +6389,7 @@ label ch14_exclusive_natsuki:
     return
 
 label ch14_exclusive_monika:
-    scene bg m_bedroom
+    scene bg m_bedroom_day
     if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
         show monika 1be zorder 2 at i11
     else:
@@ -6809,7 +6809,7 @@ label ch14_exclusive_monika:
         show monika at thide
         hide monika
         $ pause(1.0)
-        scene bg m_bedroom
+        scene bg m_bedroom_day
         show monika 1bb zorder 2 at t11
         with open_eyes
         m "You're falling asleep again, [player]!"

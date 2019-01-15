@@ -2131,7 +2131,9 @@ label ch15_exclusive_yuri:
     mc "I guess so."
     show yuri 3bs
     "Yuri smiles."
-    scene bg mall_interior with wipeleft_scene
+    scene bg mall_interior
+    show yuri 3bs zorder 2 at t11
+    with wipeleft_scene
     mc "So where exactly are we going first?"
     y 2ba "The store right next to the entrance."
     "Yuri points towards a store."
@@ -2181,6 +2183,7 @@ label ch15_exclusive_yuri:
     scene bg bedroom
     show yuri 2ba zorder 2 at t11
     with wipeleft_scene
+    play music t6say fadeout 2.0
     "We decide to go to my house to finish the preparations."
     "Most of the stuff we need to do is my side of the preparations anyway."
     "I feel bad making Yuri help me for this stuff but she doesn't seem to mind."
@@ -2523,6 +2526,7 @@ label ch15_exclusive_natsuki:
     scene bg mall_sunset
     show natsuki 2ba zorder 2 at t11
     with wipeleft_scene
+    play music t6say fadeout 2.0
     n "That was weird."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
@@ -2799,8 +2803,74 @@ label ch15_exclusive_monika:
         "I guess I should start looking for these things on the list."
     call ch15_mall_shared
     # Find a night time version of Monika's bedroom
-    scene bg m_bedroom with wipeleft_scene
-    "It's getting really late."
+    scene bg m_bedroom_night with wipeleft_scene
+    play music t6 fadeout 2.0
+    "We made the trip back to Monika's house in a rush."
+    "She made me carry a sealed bag of things she bought from the mall."
+    "I'm not sure what could possibly be in there considering the list she gave me."
+    "Public transport wasn't really full at this hour and neither were the roads."
+    "It's getting rather late."
+    "I hope that we got everything that we needed to."
+    if ch15_m_together:
+        "Or rather {i}she{/i} got all that she needed to."
+        "Since I didn't really do anything."
+        "What could be so important that she wanted to do it in private?"
+    else:
+        "I didn't really get any of the items."
+        "She didn't seem mad about it before and doesn't seem any different now."
+        "I wonder if she got any of the items herself..."
+    show monika 1ba zorder 2 at t11
+    m "Everything okay here?"
+    m "I haven't had time to clean up, so I apologize."
+    mc "Everything is fine."
+    mc "I'm more worried about you."
+    m "Me?"
+    m "Why would you think that?"
+    mc "You want to do everything alone."
+    mc "By yourself."
+    mc "And it just doesn't feel right."
+    m "I see."
+    m "I know you're concerned."
+    m "But please, don't worry about me."
+    m "Worry about yourself."
+    mc "Why did you even invite me back here?"
+    mc "You're going to be doing everything tonight by yourself, aren't you?"
+    mc "You don't need me here."
+    mc "I'm just a distraction."
+    if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+        m "That's not true."
+        m "You're not a distraction, [player]."
+    else:
+        m "If that's what you think."
+    mc "What am I to you, Monika?"
+    mc "I've been here, with you, but even I don't know the answer."
+    if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+        m "You're..."
+        m "You're really important, [player]."
+        m "I know you can't understand the reasons."
+        m "But please, understand."
+        mc "I can't understand, Monika."
+        mc "I feel like I'm being left in the dark."
+        m "You will understand."
+        m "Tomorrow, [player]."
+        m "Tomorrow, I'll explain everything."
+        mc "I can't wait until tomorrow."
+        m "I know."
+        m "I'm sorry."
+        m "I can't even think straight."
+        mc "What do you want me to do then?"
+        
+        mc "Okay, Monika."
+        mc "I'll try to do right by you."
+    else:
+        m "I don't have time for this."
+        m "Go home and go finish reading that book."
+        m "It's crucial for my plans."
+        m "You'll do that, won't you?"
+        m "After all, you chose to help me."
+        m "And for tomorrow, I'll need all the help I can get."
+        m "Soon, you will understand what exactly that implies."
+        m "So go."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
@@ -4465,6 +4535,7 @@ label ch15_exclusive_sayori_together:
     show monika 1bc zorder 2 at t44
     call ch15_mall_shared_transfer
     scene bg sayori_bedroom_night with wipeleft_scene
+    play music t6say fadeout 2.0
     "It's getting late but I still have to do my preparations with Sayori."
     "I'm not sure why, but I let myself into Sayori's house."
     "I know she's expecting me, somehow."
@@ -4593,7 +4664,7 @@ label ch15_exclusive_sayori_together:
     s "I've been so vigilant until now!"
     s "I've been so careful until now!"
     s "I've made sure they got the ending they deserved!"
-    s "I've done everything I could for them"
+    s "I've done everything I could for them."
     s "So why...?"
     mc "I know."
     mc "And I'm sorry."
@@ -4808,6 +4879,7 @@ label ch15_exclusive_sayori_alone:
     "I have nothing to worry about."
     call ch15_mall_shared
     scene black with wipeleft_scene
+    play music t6say fadeout 2.0
     "I'm back from the mall."
     "Sayori's front door was already open"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))

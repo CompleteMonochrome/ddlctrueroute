@@ -2146,7 +2146,7 @@ label ch13_exclusive_natsuki:
         n 1br "Well?"
         mc "Alright, alright..."
         "I follow Natsuki inside."
-    scene bg n_bedroom with wipeleft_scene
+    scene bg n_bedroom_day with wipeleft_scene
     play music t6say fadeout 2.0
     "I wonder what kind of things we'll be doing."
     "If I know anything about baking, she'll probably want to cook it the day before."
@@ -2267,7 +2267,7 @@ label ch13_exclusive_natsuki:
         "But I think visiting her helped a lot."
         "Monika more so than Sayori."
         stop music fadeout 1.0
-        scene bg n_bedroom
+        scene bg n_bedroom_day
         show natsuki 1bc zorder 2 at i11
         with dissolve_scene_full
         $ audio.t6sayc = "<from " + str(currentpos) + " loop 10.893>mod_assets/bgm/6_sayori.ogg"
@@ -2590,7 +2590,7 @@ label ch13_exclusive_natsuki:
             if persistent.markov_agreed:
                 mc "Of course."
                 mc "I'll go do that..."
-                scene bg n_bedroom with wipeleft_scene
+                scene bg n_bedroom_day with wipeleft_scene
                 play music t6say
                 show natsuki 1ba zorder 2 at t11
                 n "Five eggs and..."
@@ -2607,7 +2607,7 @@ label ch13_exclusive_natsuki:
                 show screen tear(20, 0.1, 0.1, 0, 40)
                 window hide(None)
                 play sound "sfx/s_kill_glitch1.ogg"
-                scene bg n_bedroom
+                scene bg n_bedroom_day
                 show natsuki 1bk zorder 2 at i11
                 $ pause(0.25)
                 stop sound
@@ -3119,7 +3119,7 @@ label ch13_exclusive_natsuki:
         n "So we can choose there."
         show natsuki zorder 2 at t21
         mc "Alright, lead the way."
-        scene bg n_bedroom
+        scene bg n_bedroom_day
         show natsuki 1ba zorder 2 at t11
         with wipeleft_scene
         "We go back to Natsuki's room and go to her desk."
@@ -3379,7 +3379,7 @@ label ch13_exclusive_natsuki:
         mc "I almost forgot, thanks for reminding me."
         "Natsuki simply rolls her eyes at me."
         mc "I won't be a minute."
-        scene bg n_bedroom with wipeleft_scene
+        scene bg n_bedroom_day with wipeleft_scene
         "I got my books from Natsuki's room."
         "They were exactly where I left them."
         "It's still kinda hard to believe she has such a large collection of books."
@@ -3797,7 +3797,7 @@ label ch13_exclusive_natsuki:
             n 1bc "I have a bunch on my desk upstairs."
             n "You can choose from there."
             mc "Lead the way."
-            scene bg n_bedroom
+            scene bg n_bedroom_day
             show natsuki 1ba zorder 2 at t11
             with wipeleft_scene
             "Going back to Natsuki's room, her desk has a pile of books on it."
@@ -4539,7 +4539,7 @@ label ch13_exclusive_natsuki:
         n "It's better that I found out about it with you."
         mc "I guess so."
         n "Anyway, let's go."
-        scene bg n_bedroom
+        scene bg n_bedroom_day
         show natsuki 1ba zorder 2 at t11
         with wipeleft_scene
         "We go to Natsuki's room where there is a pile of books on the desk."
@@ -5422,7 +5422,7 @@ label ch13_exclusive_monika:
         "That was a pretty sudden mood shift from Monika."
         "Did I say something to cause that?"
         "I hope not, otherwise working together is going to be incredibly awkward."
-        scene bg m_bedroom with wipeleft_scene
+        scene bg m_bedroom_day with wipeleft_scene
         "We go straight up the stairs into Monika's bedroom."
         "Her bedroom isn't big but it's actually a lot more spacious than it looks."
         "There are bits and pieces lying everywhere."
@@ -5586,7 +5586,7 @@ label ch13_exclusive_monika:
         "I didn't realize she was sensitive about her property."
         "It was just a comment, I didn't mean any offense."
         "I just hope she doesn't hold a grudge or this whole night is going to be incredibly awkward."
-        scene bg m_bedroom with wipeleft_scene
+        scene bg m_bedroom_day with wipeleft_scene
         "We go straight up the stairs into Monika's bedroom."
         "Her bedroom isn't big but it's actually a lot more spacious than it looks."
         "There are bits and pieces lying everywhere."
@@ -5870,7 +5870,7 @@ label ch13_exclusive_monika:
         "If I had known she would have taken offense to something like that I never would have thought about it in the first place."
         "Well, it's too late for that now..."
         "The only thing I can do is hope this doesn't ruin the preparations tonight."
-        scene bg m_bedroom with wipeleft_scene
+        scene bg m_bedroom_day with wipeleft_scene
         "We go straight up the stairs into Monika's bedroom."
         "Her bedroom isn't big but it's actually a lot more spacious than it looks."
         "There are bits and pieces lying everywhere."
@@ -9243,7 +9243,7 @@ label ch13_natsukidate:
     n "I have a lot of books."
     n "I'm sure you can find something you like."
     n "Let's go."
-    scene bg n_bedroom
+    scene bg n_bedroom_day
     show natsuki 1ba zorder 2 at t11
     with wipeleft_scene
     n "It feels good to be home."
