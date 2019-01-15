@@ -4225,7 +4225,7 @@ image mysteriousclerk 7chvd = im.Composite((960, 960), (0, 0), "mod_assets/image
 image mysteriousclerk 7chwd = im.Composite((960, 960), (0, 0), "mod_assets/images/mysteriousclerk/2r.png", (0, 0), "mod_assets/images/mysteriousclerk/4l.png", (0, 0), "mod_assets/images/mysteriousclerk/a2.png", (0, 0), "mod_assets/images/mysteriousclerk/db.png", (0, 0), "mod_assets/images/mysteriousclerk/hats/santahat.png")
 image mysteriousclerk 7chxd = im.Composite((960, 960), (0, 0), "mod_assets/images/mysteriousclerk/2r.png", (0, 0), "mod_assets/images/mysteriousclerk/4l.png", (0, 0), "mod_assets/images/mysteriousclerk/aB.png", (0, 0), "mod_assets/images/mysteriousclerk/db.png", (0, 0), "mod_assets/images/mysteriousclerk/hats/santahat.png")
 
-# Ayame Christmas - Pretty Sure hat is not aligned anymore
+# Ayame Christmas
 image ayame 1cha = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/1br.png", (0, 0), "mod_assets/images/ayame/a.png", (0, 0), "mod_assets/images/ayame/hats/elfhat.png")
 image ayame 1chb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/1br.png", (0, 0), "mod_assets/images/ayame/b.png", (0, 0), "mod_assets/images/ayame/hats/elfhat.png")
 image ayame 1chc = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/1br.png", (0, 0), "mod_assets/images/ayame/c.png", (0, 0), "mod_assets/images/ayame/hats/elfhat.png")
