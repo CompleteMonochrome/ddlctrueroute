@@ -2,7 +2,7 @@ screen timer_10_del():
     timer 1.0 action Function(yasuhiro_deletecheck) repeat True
 
 init python:
-    def yasuhiro_deletecheck(event, interact=True, **kwargs):
+    def yasuhiro_deletecheck():
         try:
             renpy.file("../characters/yasuhiro.chr")
         except:

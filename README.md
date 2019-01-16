@@ -52,7 +52,7 @@ A: It's probably an undefined variable. It might be my fault but I have done upd
 **Credits:**
 
 - Proofreaders: the people of my discord server
-- Background Art: petan, mugenjohncel, きまぐれアフター (Kimagure After), Nuxill, hello hello, ぐったりにゃんこ [3DBG], 「（ｃ）安野譲」 (Anno Yuzuru), すこあ, 佐藤敏, PatTraX#7767, Alex [ORG]#9077
+- Background Art: petan, mugenjohncel, きまぐれアフター (Kimagure After), Nuxill, hello hello, ぐったりにゃんこ [3DBG], 「（ｃ）安野譲」 (Anno Yuzuru), すこあ, 佐藤敏, PatTraX#7767, Alex [ORG]#9077, SovietSpartan
 - Character Art: Akiko Osaka, MAS Team (particularly Ryuse), Reddit users /u/SovietSpartan, /u/singusasongpianoman, /u/Drealengo, /u/NormallyAverage, Discord users Erni_Editions™, Malukah Maker, bman and finally MUGかぶり and wingzofdarkness from lemmasoft forums
 - Music: G-RiNe Project, ScubDomino and Reddit users: /u/Zerorurariro and /u/-ShInIgAmIsAmA-
 - Some Sprite edits: AskillZ and Miko

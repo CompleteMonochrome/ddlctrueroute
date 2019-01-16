@@ -247,6 +247,7 @@ image bg bedroom = "bg/bedroom.png"
 image bg sayori_bedroom = "bg/sayori_bedroom.png"
 image bg sayori_bedroom_night = "mod_assets/images/bg/sayori_bedroom_night.png"
 image bg house = "bg/house.png"
+image bg house_night = "mod_assets/images/bg/house_night.png"
 image bg kitchen = "bg/kitchen.png"
 
 image bg notebook = "bg/notebook.png"
