@@ -2318,7 +2318,6 @@ label ch15_exclusive_yuri:
         "I didn't really fully understand the story."
         "Sayori's script and what I did understand should be enough for the play tomorrow."
     "Anyway, we're as ready as we could be for tomorrow."
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch15_exclusive_natsuki:
@@ -2501,7 +2500,7 @@ label ch15_exclusive_natsuki:
         show momsuki zorder 2 at t21
         "I step into the car and it's as comfortable as it is luxurious."
         "I guess Haruki is wealthy..."
-        "But why live in such a modest neighbourhood then?"
+        "But why live in such a modest neighborhood then?"
         "I shouldn't be questioning these things..."
     else:
         n 3bc "I'm not sure if you noticed but there's a taxi waiting."
@@ -2677,8 +2676,8 @@ label ch15_exclusive_natsuki:
         n "Well, I didn't wanna keep him waiting."
         n "So, let's go!"
     elif ch12_outcome == 2:
-        n "My mom had to do something in the city."
-        n "Something about a shop or something."
+        n "My mom had some business in the city."
+        n "She wanted to go visit a shop or something."
         mc "So she stuck around?"
         mc "Is that why you were in such a rush to get out?"
         n "Yeah. Now come on, let's go!"
@@ -2820,7 +2819,6 @@ label ch15_exclusive_natsuki:
     else:
         "I didn't really fully understand the story."
         "Sayori's script and what I did understand should be enough for the play tomorrow."
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch15_exclusive_monika:
@@ -3296,6 +3294,11 @@ label ch15_exclusive_monika:
         "She seemed so much happier for some reason."
         "But at the same time, I couldn't help but get a feeling of sadness from her."
         "She played all of the songs perfectly, so I have no doubt she'll be great tomorrow."
+        "Despite being meant to be simple, they actually sound like pretty complicated pieces."
+        "I'm no piano expert so I could be completely wrong."
+        "Maybe I didn't do my job properly and actually made it harder for her."
+        "However, she seemed to play it just fine."
+        "Maybe she's just gotten really good at the piano..."
         "But I'm still wondering why she's being so secretive."
         "And what is happening for her tomorrow."
         "I know it's not really any of my business."
@@ -3381,7 +3384,6 @@ label ch15_exclusive_monika:
         else:
             "I missed details but it wasn't my priority anyway."
             "Besides, Sayori's script will cover everything I've missed."
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 
 label ch15_exclusive_monika_together:
@@ -3849,7 +3851,7 @@ label ch15_exclusive_sayori:
     "Is this going to fix her issues?"
     "I take a look at what I'm going to give to Sayori."
     "As I do, a car drives past me incredibly fast."
-    "The sound of the tyres screeching the road almost make me drop what I'm holding."
+    "The sound of the tires screeching the road almost make me drop what I'm holding."
     "Okay, that was too close."
     "I should keep it in my bag, where it belongs."
     scene bg sayori_bedroom with wipeleft_scene
@@ -5156,10 +5158,12 @@ label ch15_exclusive_sayori_together:
             s "Will you, [currentuser]?"
     menu:
         "Let her be selfish.":
+            $ ch15_s_date_choice = True
             mc "Sayo--{nw}"
             s "Thank you."
             jump ch15_sayoridate
         "Focus, Sayori.":
+            $ ch15_s_date_choice = False
             pass
     mc "Sayori, I know how you feel."
     mc "I've felt this way for a while too."
@@ -5494,7 +5498,69 @@ label ch15_exclusive_sayori_alone:
     s "For..."
     "Sayori stands up."
     s "...this."
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
+    mc "What are you doing?"
+    mc "Sayori, we really need{nw}"
+    $ _history_list = []
+    scene bg bedroom
+    mc "Sayori, we really need{fast}...to talk."
+    mc "Huh?"
+    "Wasn't I just in Sayori's room?"
+    "How the hell did I get here?"
+    "Maybe I really am going crazy."
+    "Suddenly my phone begins ringing."
+    "It's from Sayori."
+    mc "Hello?"
+    s "[player], how are you?!"
+    mc "I think I'm going crazy."
+    mc "I swear I was just at your house a second ago."
+    s "My house?"
+    s "I don't remember you stopping by."
+    s "Anyway, I'm sorry for leaving you alone today."
+    s "I hope you at least had fun at the mall."
+    mc "You know about that?"
+    s "Of course I do."
+    s "Monika told me she was bringing you there."
+    s "I'm really sorry I wasn't here."
+    mc "I think I need some rest."
+    mc "This whole situation is way too bizarre."
+    s "That would probably be a good idea."
+    mc "And I still have to finish the book tonight."
+    s "Ah..."
+    "Sayori sounds like she's sifting through paper for a moment."
+    s "You don't need to finish all of it."
+    s "After all, I've got the script almost completely done."
+    mc "I've barely done anything as it is."
+    mc "I can at least finish the book."
+    s "Just do what you can, [player]."
+    s "It doesn't matter how much or how little that is."
+    mc "I'll try."
+    "I hear Sayori sigh quietly through the phone."
+    s "So I heard you met someone new."
+    s "Ayame, right?"
+    mc "That's right."
+    s "What do you think of her?"
+    mc "I don't know."
+    mc "She seems nice enough, I guess."
+    mc "A little eccentric."
+    s "Oh, okay."
+    s "Anyway, I really have to go."
+    s "Got a script to write, you know."
+    s "I'll see you tomorrow, [player]."
+    mc "See you, Sayori."
+    "Sayori hangs up."
+    "Maybe all this stress is getting to me."
+    "Even though I'm doing the least out of absolutely everyone."
+    "I should finish this book for tomorrow."
+    "It's the least I can do."
+    if ch14_overall_choice == player:
+        "I'm not really worried about it."
+        "After all, it's my book we chose."
+        "I already know what happens."
+    else:
+        "I know I'm going to miss out on some details."
+        "But I think I have all the important parts covered."
+        "And Sayori's script should be enough to get me through it."
+    "Hopefully, we have a decent rehearsal for tomorrow..."
     return
 
 label ch15_mall_shared:
@@ -6822,7 +6888,8 @@ label ch15_mall_shared:
     mc "But anyway..."
     mc "Things started being different in my second week."
     mc "Doing the plays was something I never saw myself doing when I joined."
-    mc "We still wrote poems, but we would start reading books to then perform."
+    mc "We still wrote poems, but we would also be reading books."
+    mc "After reading, we'd perform them in some kinda play."
     mc "And I guess, it was kinda fun."
     mc "But I couldn't help but think there was some ulterior purpose behind them."
     mc "It was just a feeling I got."
@@ -7091,6 +7158,112 @@ label ch15_sayoridate:
     "How did I get here?"
     "Why is the sun out?"
     s "So..."
+    s "What do you think?"
+    mc "S-Sayori..."
+    mc "Where are we?"
+    s "We're at the park."
+    s "Can't you tell?"
+    mc "Okay...how did we get here?"
+    mc "It was the middle of the night a minute ago."
+    s "I told you, I'd make tomorrow."
+    "I notice Sayori's outfit."
+    "She's wearing something...nice."
+    "Something you'd wear on a date."
+    mc "And when did you change your clothes?!"
+    "I notice what I'm wearing too."
+    "I don't remember having {i}this{/i} outfit in my wardrobe."
+    mc "More importantly, when did {i}I{/i} change my clothes?!"
+    s "I really don't know the limits of what I can say."
+    s "You already know so much than you should."
+    s "And the game hasn't broken yet."
+    mc "...?"
+    s "Do you..."
+    s "I mean...do {i}you{/i}...care about me that way?"
+    s "You've done everything you could up until this point, right?"
+    s "To try to be with me."
+    s "..."
+    menu:
+        s "...Right?"
+        "Yes.":
+            s "I knew it."
+            s "Everything you've done until now..."
+        "No.":
+            s "Y-You haven't?"
+            s "But your actions say otherwise."
+            s "Even choosing this."
+    s "I just want to spend this time with you."
+    s "This alternate version of tomorrow."
+    s "Because of what's coming..."
+    s "Even at this point, I don't know what's really going to happen."
+    s "Or if this is even going to last."
+    s "But in the likely case tomorrow doesn't work out..."
+    s "I want to be here."
+    s "With you."
+    s "And I don't mean [player_reflexive]."
+    s "I mean {i}you{/i}."
+    s "You're the one that's been doing this."
+    s "The one that's made my job as president so much easier."
+    s "You could have done the opposite."
+    s "You could have made me resent you."
+    s "Instead, you've done the opposite."
+    s "You know, it's funny."
+    s "At first, I thought it was just my programming."
+    s "That I was meant to fall in love with you."
+    s "So I..."
+    s "I removed that part of myself."
+    s "And I still felt these feelings."
+    s "After that, I didn't know if they were just forever part of me..."
+    s "Or if I actually, genuinely felt like this."
+    s "I wanted to experiment."
+    s "And what did I find out...?"
+    s "I found out that I didn't love [player]."
+    s "At least, not anymore."
+    s "I loved{nw}"
+    show bg park_glitch
+    hide bg park_day
+    s "Wait..."
+    s "What's happening?"
+    s "Why is this happening?"
+    s "Am I not allowed to be selfish?!"
+    s "Is this what the game is telling me?"
+    s "I just wanted a break."
+    s "I just wanted..."
+    s "I can't have what I want, can't I?"
+    s "This power..."
+    s "It's been so helpful."
+    s "I've been able to help my friends with it."
+    s "But..."
+    s "It's like a curse."
+    s "I mean, look at what's happening."
+    s "The game doesn't know if it's day or night."
+    s "It's trying to delete this day I've created."
+    s "All because I wanted to spend some time with you."
+    s "I can't do what I want with this power."
+    s "If I did, we wouldn't have gotten this far."
+    s "I'm sorry."
+    menu:
+        s "This was really stupid of me."
+        "Yes.":
+            s "It doesn't really matter what you say."
+            s "I already know I'm full of stupid decisions."
+            s "Sigh..."
+        "No.":
+            s "It doesn't really matter what you say."
+            s "Though, I guess I appreciate it."
+            s "Even though it's a really minor thing."
+    s "Why am I even doing this?"
+    s "Is it because I'm scared of tomorrow?"
+    s "Because I know I'm going to fail?"
+    s "I don't know the answer myself."
+    s "I just hope I've done enough."
+    s "I suppose it's time to end this false day."
+    s "I've already put in the next day."
+    s "Do I know what it says?"
+    s "Of course not."
+    s "Because it's full of decisions you have to make."
+    s "Everything that you've done up until now will be counted."
+    s "And it's going to affect how tomorrow plays out."
+    s "I just hope that you're satisfied with your choices."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
     return
 

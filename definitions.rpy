@@ -381,6 +381,42 @@ image bg ay_livingroom = "mod_assets/images/bg/ay_livingroom.png"
 image bg park_day = "mod_assets/images/bg/park_day.png"
 image bg park_sunset = "mod_assets/images/bg/park_sunset.png"
 image bg park_night = "mod_assets/images/bg/park_night.png"
+image bg park_glitch:
+    "mod_assets/images/bg/park_night.png"
+    0.3
+    parallel:
+        choice:
+            "mod_assets/images/bg/park_day.png" with Dissolve(0.1)
+        choice:
+            "mod_assets/images/bg/park_sunset.png" with Dissolve(0.1)
+        choice:
+            "mod_assets/images/bg/park_night.png" with Dissolve(0.1)
+        0.3
+        repeat
+    parallel:
+        yoffset 720
+        linear 0.5 yoffset 0
+        repeat
+    parallel:
+        choice:
+            xoffset 0
+        choice:
+            xoffset 10
+        choice:
+            xoffset 20
+        choice:
+            xoffset 35
+        choice:
+            xoffset -10
+        choice:
+            xoffset -20
+        choice:
+            xoffset -30
+        0.01
+        repeat
+    parallel:
+        alpha 0.7
+        linear 0.45 alpha 0
 image bg lake_day = "mod_assets/images/bg/park_day.png"
 image bg lake_sunset = "mod_assets/images/bg/park_sunset.png"
 image bg lake_night = "mod_assets/images/bg/park_night.png"
@@ -4559,6 +4595,7 @@ default ch15poemwinner = "Sayori"
 default ch15_m_together = False
 default ch15_s_together = False
 default ch15_s_questions = [False,False,False,False,False,False,False,False,False]
+default ch15_s_date_choice = False
 default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","???","???","???","???","???"]
 default special_chapter = False
 default christmas_chapter = False

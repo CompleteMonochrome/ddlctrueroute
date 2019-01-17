@@ -13,12 +13,33 @@ label ch16_main:
         try: renpy.unlink_save("clerk_restore")
         except: pass
 
-    if ch15_s_together:
-        "What the hell?"
-        "I've got these...memories flooding into my head."
-        "What...?"
-        "These aren't my memories."
-        "They can't be."
+    "Today is the day."
+    $ ay_pers_chance = renpy.random.randint(1,20)
+    if ch15_s_together and ay_pers_chance == 20:
+        "I'm up early because there's some setup we need to do.{nw}"
+        $ _history_list.pop()
+        show screen tear(20, 0.1, 0.1, 0, 40)
+        window hide(None)
+        play sound "sfx/s_kill_glitch1.ogg"
+        scene bg gym
+        $ pause(0.25)
+        stop sound
+        hide screen tear
+        window show(None)
+        "I'm up early because there's some setup I need to do.{fast}"
+        window auto
+        "If I want to make a good impression as the newest member of the Literature Club..."
+        "Then I should help set up."
+        "There's also {i}that{/i} other issue."
+        "I sure hope I can get through it."
+        "It would have been a huge waste of time and effort if I went through all of this..."
+        "Only to fail in the end."
+    else:
+        "I'm up early because there's some setup we need to do."
+        "I think Sayori wanted me to get to school to get some supplies."
+        "She sent me a text early this morning."
+        "I was pretty lucky to have woken up at that moment."
+        "Or I wouldn't have been on my way already."
     return
 
 label ch16_play_normal:
