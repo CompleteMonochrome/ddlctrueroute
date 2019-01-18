@@ -18,6 +18,18 @@ init python:
 
     full_wordlist = []
     full_wordlist_old = []
+    storylist_1 = []
+    storylist_2 = []
+    storylist_3 = []
+    storylist_4 = []
+    storylist_5 = []
+    storylist_6 = []
+
+    sticker_fade = 1.0
+    m_sticker_fade = 1.0
+    mo_sticker_fade = 1.0
+    d_sticker_fade = 1.0
+    ay_sticker_fade = 1.0
 
     # New Wordlist
     with renpy.file('poemwords_mod.txt') as wordfile:
@@ -41,6 +53,67 @@ init python:
             # File format: word,sPoint,nPoint,yPoint
             x = line.split(',')
             full_wordlist_old.append(PoemWord(x[0], float(x[1]), float(x[2]), float(x[3])))
+    # Story Wordlists
+    with renpy.file('poemwords_leangood.txt') as wordfile:
+        for line in wordfile:
+            # Ignore lines beginning with '#' and empty lines
+            line = line.strip()
+
+            if line == '' or line[0] == '#': continue
+
+            # File format: word,sPoint,nPoint,yPoint
+            x = line.split(',')
+            storylist_1.append(PoemWord(x[0], float(0), float(0), float(0), float(0)))
+    with renpy.file('poemwords_leanbad.txt') as wordfile:
+        for line in wordfile:
+            # Ignore lines beginning with '#' and empty lines
+            line = line.strip()
+
+            if line == '' or line[0] == '#': continue
+
+            # File format: word,sPoint,nPoint,yPoint
+            x = line.split(',')
+            storylist_2.append(PoemWord(x[0], float(0), float(0), float(0), float(0)))
+    with renpy.file('poemwords_neutral.txt') as wordfile:
+        for line in wordfile:
+            # Ignore lines beginning with '#' and empty lines
+            line = line.strip()
+
+            if line == '' or line[0] == '#': continue
+
+            # File format: word,sPoint,nPoint,yPoint
+            x = line.split(',')
+            storylist_3.append(PoemWord(x[0], float(0), float(0), float(0), float(0)))
+    with renpy.file('poemwords_stogether.txt') as wordfile:
+        for line in wordfile:
+            # Ignore lines beginning with '#' and empty lines
+            line = line.strip()
+
+            if line == '' or line[0] == '#': continue
+
+            # File format: word,sPoint,nPoint,yPoint
+            x = line.split(',')
+            storylist_4.append(PoemWord(x[0], float(0), float(0), float(0), float(0)))
+    with renpy.file('poemwords_mgood.txt') as wordfile:
+        for line in wordfile:
+            # Ignore lines beginning with '#' and empty lines
+            line = line.strip()
+
+            if line == '' or line[0] == '#': continue
+
+            # File format: word,sPoint,nPoint,yPoint
+            x = line.split(',')
+            storylist_5.append(PoemWord(x[0], float(0), float(0), float(0), float(0)))
+    with renpy.file('poemwords_mbad.txt') as wordfile:
+        for line in wordfile:
+            # Ignore lines beginning with '#' and empty lines
+            line = line.strip()
+
+            if line == '' or line[0] == '#': continue
+
+            # File format: word,sPoint,nPoint,yPoint
+            x = line.split(',')
+            storylist_6.append(PoemWord(x[0], float(0), float(0), float(0), float(0)))
 
 
     seen_eyes_this_chapter = False
@@ -48,24 +121,33 @@ init python:
     natsukiTime = renpy.random.random() * 4 + 4
     yuriTime = renpy.random.random() * 4 + 4
     monikaTime = renpy.random.random() * 4 + 4
+    harukiTime = renpy.random.random() * 4 + 4
+    yasuhiroTime = renpy.random.random() * 4 + 4
     ayameTime = renpy.random.random() * 4 + 4
     sayoriPos = 0
     natsukiPos = 0
     yuriPos = 0
     monikaPos = 0
+    harukiPos = 0
+    yasuhiroPos = 0
     ayamePos = 0
     sayoriOffset = 0
     natsukiOffset = 0
     yuriOffset = 0
     monikaOffset = 0
+    harukiOffset = 0
+    yasuhiroOffset = 0
     ayameOffset = 0
     sayoriZoom = 1
     natsukiZoom = 1
     yuriZoom = 1
     monikaZoom = 1
+    harukiZoom = 1
+    yasuhiroZoom = 1
     ayameZoom = 1
 
     def randomPauseSayori(trans, st, at):
+        trans.alpha = sticker_fade
         if st > sayoriTime:
             global sayoriTime
             sayoriTime = renpy.random.random() * 4 + 4
@@ -73,6 +155,7 @@ init python:
         return 0
 
     def randomPauseNatsuki(trans, st, at):
+        trans.alpha = sticker_fade
         if st > natsukiTime:
             global natsukiTime
             natsukiTime = renpy.random.random() * 4 + 4
@@ -80,6 +163,7 @@ init python:
         return 0
 
     def randomPauseYuri(trans, st, at):
+        trans.alpha = sticker_fade
         if st > yuriTime:
             global yuriTime
             yuriTime = renpy.random.random() * 4 + 4
@@ -87,13 +171,31 @@ init python:
         return 0
 
     def randomPauseMonika(trans, st, at):
+        trans.alpha = m_sticker_fade
         if st > monikaTime:
             global monikaTime
             monikaTime = renpy.random.random() * 4 + 4
             return None
         return 0
 
+    def randomPauseHaruki(trans, st, at):
+        trans.alpha = mo_sticker_fade
+        if st > harukiTime:
+            global harukiTime
+            harukiTime = renpy.random.random() * 4 + 4
+            return None
+        return 0
+
+    def randomPauseYasuhiro(trans, st, at):
+        trans.alpha = d_sticker_fade
+        if st > yasuhiroTime:
+            global yasuhiroTime
+            yasuhiroTime = renpy.random.random() * 4 + 4
+            return None
+        return 0
+
     def randomPauseAyame(trans, st, at):
+        trans.alpha = ay_sticker_fade
         if st > ayameTime:
             global ayameTime
             ayameTime = renpy.random.random() * 4 + 4
@@ -188,6 +290,50 @@ init python:
         monikaZoom = trans.xzoom
         return 0
 
+    def randomMoveHaruki(trans, st, at):
+        global harukiPos
+        global harukiOffset
+        global harukiZoom
+        if st > .16:
+            if harukiPos > 0:
+                harukiPos = renpy.random.randint(-1,0)
+            elif harukiPos < 0:
+                harukiPos = renpy.random.randint(0,1)
+            else:
+                harukiPos = renpy.random.randint(-1,1)
+            if trans.xoffset * harukiPos > 5: harukiPos *= -1
+            return None
+        if harukiPos > 0:
+            trans.xzoom = -1
+        elif harukiPos < 0:
+            trans.xzoom = 1
+        trans.xoffset += .16 * 10 * harukiPos
+        harukiOffset = trans.xoffset
+        harukiZoom = trans.xzoom
+        return 0
+
+    def randomMoveYasuhiro(trans, st, at):
+        global yasuhiroPos
+        global yasuhiroOffset
+        global yasuhiroZoom
+        if st > .16:
+            if yasuhiroPos > 0:
+                yasuhiroPos = renpy.random.randint(-1,0)
+            elif yasuhiroPos < 0:
+                yasuhiroPos = renpy.random.randint(0,1)
+            else:
+                yasuhiroPos = renpy.random.randint(-1,1)
+            if trans.xoffset * yasuhiroPos > 5: yasuhiroPos *= -1
+            return None
+        if yasuhiroPos > 0:
+            trans.xzoom = -1
+        elif yasuhiroPos < 0:
+            trans.xzoom = 1
+        trans.xoffset += .16 * 10 * yasuhiroPos
+        yasuhiroOffset = trans.xoffset
+        yasuhiroZoom = trans.xzoom
+        return 0
+
     def randomMoveAyame(trans, st, at):
         global ayamePos
         global ayameOffset
@@ -212,7 +358,14 @@ init python:
 
 
 
-label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",ayame_include=False):
+label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",ayame_include=False,poem_ending=0):
+    # Sticker fade for end poems
+    $ sticker_fade = 1.0
+    $ m_sticker_fade = 1.0
+    $ mo_sticker_fade = 1.0
+    $ d_sticker_fade = 1.0
+    $ ay_sticker_fade = 1.0
+
     if ayame_poem:
         stop music
     else:
@@ -221,6 +374,8 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
         scene bg notebook-glitch
     elif ayame_poem:
         scene bg notebook-glitch-switch
+    elif poem_ending == 4:
+        scene bg notebook-original
     else:
         scene bg notebook
     show screen quick_menu
@@ -228,6 +383,10 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
         show m_sticker at sticker_mid
     elif ayame_poem:
         show glitch_sticker at sticker_5other
+    elif poem_ending == 4:
+        show mo_sticker at sticker_left
+        show d_sticker at sticker_mid
+        show ay_sticker at sticker_right
     else:
         # Sayori, Natsuki and Monika Normal - Set Normal Positions before Glitch shows Monika
         if persistent.playthrough == 0:
@@ -295,7 +454,19 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
         nPointTotal = 0
         yPointTotal = 0
         mPointTotal = 0
-        if persistent.playthrough == 0:
+        if poem_ending == 1:
+            wordlist = list(storylist_1)
+        elif poem_ending == 2:
+            wordlist = list(storylist_2)
+        elif poem_ending == 3:
+            wordlist = list(storylist_3)
+        elif poem_ending == 4:
+            wordlist = list(storylist_4)
+        elif poem_ending == 5:
+            wordlist = list(storylist_5)
+        elif poem_ending == 6:
+            wordlist = list(storylist_6)
+        elif persistent.playthrough == 0:
             wordlist = list(full_wordlist)
         else:
             wordlist = list(full_wordlist_old)
@@ -322,12 +493,13 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
         ayameZoom = 1
 
 
-
-
+        # This is for the ending poem minigames
+        wordcount = 0
 
         while True:
             # Need to replace the s, Dan why did you even use s
             wordmix = ""
+            leftword = True
             ystart = 160
             if persistent.playthrough == 2 and chapter == 2:
                 pstring = ""
@@ -341,6 +513,7 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
             yInList = False
             mInList = False
             for j in range(2):
+                local_wordcount = wordcount
                 if j == 0: x = 440
                 else: x = 680
                 ui.vbox()
@@ -361,6 +534,12 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
                             elif random.randint(0, 4) == 0:
                                 wordmix[k] = random.choice(nonunicode)
                         word = PoemWord("".join(wordmix), 0, 0, 0, 0, False)
+                    elif poem_ending > 0:
+                        if j == 0:
+                            word = wordlist[local_wordcount]
+                        else:
+                            word = wordlist[local_wordcount+1]
+                        local_wordcount += 2
                     elif persistent.playthrough == 2 and not poemgame_glitch and chapter >= 1 and progress < numWords and random.randint(0, 400) == 0:
                         word = PoemWord(glitchtext(80), 0, 0, 0, 0, True)
                     else:
@@ -401,6 +580,23 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
                 elif persistent.playthrough != 3:
                     renpy.play(gui.activate_sound)
                     if persistent.playthrough == 0:
+                        if poem_ending > 0:
+                            # Sticker fade amounts
+                            if poem_ending == 6:
+                                sticker_fade = 1.0 - (float(wordcount)/100.0)
+                            elif poem_ending == 5:
+                                sticker_fade = 1.0 - (float(wordcount)/300.0)
+                            elif poem_ending == 4:
+                                if ch12_outcome == 2 or ch12_outcome == 0:
+                                    d_sticker_fade = 1.0 - (float(wordcount)/150.0)
+                                if ch12_outcome == 1 or ch12_outcome == 0:
+                                    mo_sticker_fade = 1.0 - (float(wordcount)/150.0)
+                            elif poem_ending == 3:
+                                sticker_fade = 1.0 - (float(wordcount)/190.0)
+                                m_sticker_fade = 1.0 - (float(wordcount)/190.0)
+                            elif poem_ending == 2:
+                                sticker_fade = 1.0 - (float(wordcount)/90.0)
+                                m_sticker_fade = 1.0 - (float(wordcount)/180.0)
                         if t.sPoint >= 3:
                             renpy.show("s_sticker hop")
                         if t.nPoint >= 3:
@@ -442,6 +638,8 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
             progress += 1
             if progress > numWords:
                 break
+
+            wordcount+=10
 
         if not ayame_poem:
             if persistent.playthrough == 0:
@@ -652,6 +850,28 @@ image mh_sticker g:
             sticker_move_n
         parallel:
             function randomMoveMonika
+        repeat
+
+image mo_sticker:
+    "mod_assets/gui/poemgame/mo_sticker_1.png"
+    xoffset harukiOffset xzoom harukiZoom
+    block:
+        function randomPauseHaruki
+        parallel:
+            sticker_move_n
+        parallel:
+            function randomMoveHaruki
+        repeat
+
+image d_sticker:
+    "mod_assets/gui/poemgame/d_sticker_1.png"
+    xoffset yasuhiroOffset xzoom yasuhiroZoom
+    block:
+        function randomPauseYasuhiro
+        parallel:
+            sticker_move_n
+        parallel:
+            function randomMoveYasuhiro
         repeat
 
 image ay_sticker:
@@ -878,4 +1098,3 @@ transform sticker_hop:
     easeout_quad .18 yoffset 0
     easein_quad .18 yoffset -80
     easeout_quad .18 yoffset 0
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

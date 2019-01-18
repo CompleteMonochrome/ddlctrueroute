@@ -40,6 +40,7 @@ label ch16_main:
         "She sent me a text early this morning."
         "I was pretty lucky to have woken up at that moment."
         "Or I wouldn't have been on my way already."
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu())
     return
 
 label ch16_play_normal:
@@ -374,7 +375,7 @@ label ch16_bad:
         queue sound "sfx/crack.ogg"
         queue sound "sfx/crack.ogg"
         $ pause(1.5)
-        label ch16_bad_7:
+        label ch16_bad_8:
         $ persistent.autoload = "ch16_bad_8"
         $ persistent.ch16_bad_part = "_8"
         $ renpy.save_persistent()

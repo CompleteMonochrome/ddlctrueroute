@@ -216,6 +216,12 @@ define audio.closet_close = "sfx/closet-close.ogg"
 define audio.page_turn = "sfx/pageflip.ogg"
 define audio.fall = "sfx/fall.ogg"
 
+# Classical Piece - Spring Vivaldi
+define audio.mupbeat = "mod_assets/bgm/mupbeat.ogg"
+# Classical Piece - Canon
+define audio.mharmonic = "mod_assets/bgm/mharmonic.ogg"
+# Classical Piece - Moonlight Sonata
+define audio.mmelancholy = "mod_assets/bgm/mmelancholy.ogg"
 
 image black = "#000000"
 image dark = "#000000e4"
@@ -252,6 +258,7 @@ image bg kitchen = "bg/kitchen.png"
 
 image bg notebook = "bg/notebook.png"
 image bg notebook-glitch = "bg/notebook-glitch.png"
+image bg notebook-original = "mod_assets/images/bg/notebook_original.png"
 image bg notebook-glitch-switch:
     "bg/notebook.png"
     pause 3.16666
@@ -395,7 +402,7 @@ image bg park_glitch:
         repeat
     parallel:
         yoffset 720
-        linear 0.5 yoffset 0
+        linear 0.5 yoffset -300
         repeat
     parallel:
         choice:
@@ -415,8 +422,10 @@ image bg park_glitch:
         0.01
         repeat
     parallel:
-        alpha 0.7
-        linear 0.45 alpha 0
+        alpha 1.0
+        linear 2.0 alpha 0
+        linear 2.0 alpha 1.0
+        repeat
 image bg lake_day = "mod_assets/images/bg/park_day.png"
 image bg lake_sunset = "mod_assets/images/bg/park_sunset.png"
 image bg lake_night = "mod_assets/images/bg/park_night.png"
@@ -4596,6 +4605,7 @@ default ch15_m_together = False
 default ch15_s_together = False
 default ch15_s_questions = [False,False,False,False,False,False,False,False,False]
 default ch15_s_date_choice = False
+default ch16_poem_ending = 3
 default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","???","???","???","???","???"]
 default special_chapter = False
 default christmas_chapter = False

@@ -221,6 +221,21 @@ label start:
         call poemresponse_start_new
         call ch15_end
 
+        # Choose which poem ending
+        if ch15_s_together:
+            $ ch16_poem_ending = 4
+        elif monika_type == 0:
+            $ ch16_poem_ending = 5
+        elif monika_type == 1 and ch12_markov_agree:
+            $ ch16_poem_ending = 6
+        elif persistent.markov_agreed or ch12_markov_agree:
+            $ ch16_poem_ending = 2
+        elif natsuki_approval >= 3 and yuri_approval >= 3:
+            $ ch16_poem_ending = 1
+        else:
+            $ ch16_poem_ending = 3
+        call poem(poem_ending=ch16_poem_ending)
+
         label ch16_skip:
         $ chapter = 16
         call ch16_main
