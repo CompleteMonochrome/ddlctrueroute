@@ -32,6 +32,17 @@ init python:
     "Don't forget to backup Monika's character file."
     ]
     splash_monika_last = "Goodbye, I will love you forever."
+    splash_messages_cast = [
+    "The die is cast.\nThere is no escaping our agreement.",
+    "There's no escaping now.\nEverything is in motion.",
+    "There is no turning back from this.\nThe deal has already been made.",
+    "No matter what you do,\nYou cannot escape this.",
+    "Our fates are locked.\nThere is no escape.",
+    "The wheel of fate is set in motion.\nNow we need only await the day.",
+    "This world is forever cursed.\nNone will escape my wrath.",
+    "This vicious cycle continues,\nAnd now you are a witness.",
+    "Back them up if you must.\nIt will make no difference."
+    ]
 
 image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign=0.5)
 
@@ -476,6 +487,7 @@ label splashscreen:
     show white
     $ persistent.ghost_menu = False
     $ splash_message = splash_message_default
+    $ splash_message_cast = renpy.random.choice(splash_messages_cast)
     if persistent.playthrough == 0 and persistent.monika_change and not persistent.monika_gone:
         if persistent.markov_agreed:
             $ config.main_menu_music = audio.t1c
@@ -494,7 +506,15 @@ label splashscreen:
     elif persistent.playthrough == 2 and renpy.random.randint(0, 3) == 0:
         $ splash_message = renpy.random.choice(splash_messages)
     show splash_warning "[splash_message]" with Dissolve(max(0, 4.0 - (datetime.datetime.now() - starttime).total_seconds()), alpha=True)
-    $ pause(6.0 - (datetime.datetime.now() - starttime).total_seconds())
+    if persistent.playthrough == 0 and persistent.markov_agreed:
+        $ pause(4.640 - (datetime.datetime.now() - starttime).total_seconds())
+        show bg glitch
+        $ pause(5.041 - (datetime.datetime.now() - starttime).total_seconds())
+        hide bg glitch
+        show splash_warning "{color=#f21237}[splash_message_cast]{/color}"
+        $ pause(6.0 - (datetime.datetime.now() - starttime).total_seconds())
+    else:
+        $ pause(6.0 - (datetime.datetime.now() - starttime).total_seconds())
     hide splash_warning with Dissolve(max(0, 6.5 - (datetime.datetime.now() - starttime).total_seconds()), alpha=True)
     $ pause(6.5 - (datetime.datetime.now() - starttime).total_seconds())
     $ config.allow_skipping = True
@@ -615,6 +635,8 @@ label after_load:
         $ ch15_s_questions = [False,False,False,False,False,False,False,False,False]
     if not hasattr(store,'ch15_s_date_choice'):
         $ ch15_s_date_choice = False
+    if not hasattr(store,'ch15_s_kiss_choice'):
+        $ ch15_s_kiss_choice = False
     if not hasattr(store,'ch16_poem_ending'):
         $ ch16_poem_ending = 3
     if not hasattr(store, 'chapter_names'):

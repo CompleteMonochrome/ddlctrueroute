@@ -654,6 +654,8 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
                     poemwinner[chapter] = pointlist[3]
                     if poemwinner[0] and poemwinner[1] and poemwinner[2] == "monika":
                         monika_appeal[2] = True
+                elif chapter == 15:
+                    pass
                 elif chapter >= 12:
                     sayarcpoemwinner[chapter-12] = pointlist[3]
                 elif chapter == 11:
@@ -669,6 +671,8 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
 
             if chapter < 5:
                 exec(poemwinner[chapter][0] + "_appeal += 1")
+            elif chapter == 15:
+                pass
             elif chapter >= 12:
                 exec(sayarcpoemwinner[chapter-12][0] + "_appealS += 1")
             elif chapter == 11:
@@ -679,7 +683,9 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
                 exec(newpoemwinner[chapter-5][0] + "_appeal += 1")
 
 
-            if chapter >= 11:
+            if chapter == 15:
+                pass
+            elif chapter >= 11:
                 if sPointTotal < POEM_DISLIKE_THRESHOLD: s_poemappeal2[chapter-11] = -1
                 elif sPointTotal > POEM_LIKE_THRESHOLD: s_poemappeal2[chapter-11] = 1
                 if nPointTotal < POEM_DISLIKE_THRESHOLD: n_poemappeal2[chapter-11] = -1
@@ -700,6 +706,8 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
 
             if chapter < 5:
                 exec(poemwinner[chapter][0] + "_poemappeal[chapter] = 1")
+            elif chapter == 15:
+                pass
             elif chapter >= 12:
                 exec(sayarcpoemwinner[chapter-12][0] + "_poemappeal2[chapter-12] = 1")
             elif chapter == 11:

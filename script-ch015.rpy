@@ -5163,6 +5163,9 @@ label ch15_exclusive_sayori_together:
     mc "But you have to think about this carefully."
     mc "Once you do this, there's no turning back."
     mc "You know that, don't you?"
+    scene bg sayori_bedroom_night
+    show sayori 1ba zorder 2 at t11
+    with open_eyes
     s "A-All I want..."
     s "A-All I wanted was to spend a moment with you."
     s "I just can't help it?"
@@ -5196,10 +5199,116 @@ label ch15_exclusive_sayori_together:
     mc "Yes, we."
     "Sayori tightens her embrace while trying to prevent her tears."
     "I do my best to comfort her, reassuring her that everything is going to be okay."
-    scene bg sayori_bedroom_night
-    show sayori 1ba zorder 2 at t11
-    with open_eyes
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu())
+    s "I-I was really tempted to do something stupid, you know."
+    s "I just wanted...!"
+    mc "It's okay."
+    mc "Really."
+    s "I don't know what I'm thinking, [player]."
+    s "My head is just full of these thoughts."
+    s "It's like a million voices speaking at the same time."
+    s "And I can't hear any of them."
+    s "I don't know how to stop it."
+    s "I don't know how I can focus."
+    mc "I..."
+    s "[player], maybe it's best if you leave."
+    s "I don't want you to have to see me like this."
+    s "I'm a mess."
+    s "I..."
+    menu:
+        "Follow your heart.":
+            $ ch15_s_kiss_choice = True
+            mc "Sayori..."
+            show sayori at face with dissolve
+            s "[player]...?"
+            "Here goes nothing."
+            scene black with close_eyes
+            stop music fadeout 2.0
+            "I close my eyes as I lean in closer to Sayori."
+            "I don't know what I expected but..."
+            "I meet her lips with mine."
+            "Suddenly, it feels like time is frozen."
+            "We're locked in this intimate moment togther."
+            "The whole world around me feels so insignificant."
+            "Like nothing else matters except..."
+            "...this girl I'm with."
+            "This girl that I've known since we were little."
+            "This girl that I've been best friends with as long as I can remember."
+            "This girl that I've...fallen in love with."
+            "I've never felt like this before."
+            "This feeling of..."
+            "Words can't even describe it."
+            "But sharing this moment with Sayori."
+            "No matter how short or long it is."
+            "It somehow feels right."
+            "But these moments can't last forever."
+            "Just as quickly as time froze, it speeds up again as our lips part."
+            scene bg sayori_bedroom_night
+            show sayori 1ba zorder 2 at face
+            with open_eyes
+            "I'm back in reality."
+            s "W-What was that...?"
+            show sayori at t11
+            "She takes a step backwards."
+            "She looks unsure of herself."
+            mc "I don't know."
+            mc "I just thought..."
+            s "[player]!"
+            s "I..."
+            mc "Sayori, I'm sorry, I never should have--"
+            "Sayori suddenly starts crying."
+            mc "Sayori..."
+            s "I'm so confused!"
+            s "I..."
+            s "I don't...understand myself anymore."
+            "I shouldn't have done that."
+            "Was I wrong for doing this?"
+            "I just wanted to help her."
+            "But looking back on it...was I really helping her?"
+            s "Can you just...go?"
+            "She looks in pain as he says that."
+            "What have I done?"
+            mc "Sayori..."
+            s "I need time alone."
+            s "I'm sorry."
+            "I try to approach her but she turns her back."
+            s "Please...just go."
+            mc "Have I done something wrong?"
+            s "I'm not mad at you."
+            s "If anything, I'm mad at myself."
+            s "I just...need to think."
+            s "Please."
+        "Leave.":
+            $ ch15_s_kiss_choice = False
+            mc "Okay, Sayori."
+            mc "I really hope you can manage here."
+            mc "You really seem intent on being alone."
+            s "It's not like I want to be."
+            s "It just turns out that way."
+            s "Nobody else can understand me."
+            s "And the only person that could..."
+            s "...well, I don't know."
+            "Sayori slumps into her bed."
+            "I try to sit next to her but she signals me away."
+            s "Just...go."
+            s "Okay?"
+    mc "Alright, Sayori."
+    mc "I'll be sure to get the book done."
+    mc "It's the very least I can do."
+    mc "When I've left you here, by yourself to deal with..."
+    mc "...I don't even know."
+    mc "Some partner I am, right?"
+    s "I-It's fine."
+    s "I can manage."
+    s "I'll get the script done, so don't worry."
+    s "Even if you can't--"
+    mc "I will."
+    "Sayori smiles faintly."
+    s "Thank you."
+    s "For everything, [player]."
+    s "Good luck."
+    "Sayori looks like she's shaking for a second."
+    s "And..."
+    s "...goodbye."
     return
 
 label ch15_exclusive_sayori_alone:
@@ -5451,6 +5560,7 @@ label ch15_exclusive_sayori_alone:
     s "I wasn't doing anything like that tonight."
     s "It was too late."
     s "I just made the arrangements at school for tomorrow."
+    s "And the script, did you forget about that?"
     mc "...I guess that makes sense."
     mc "But where were you today?"
     mc "I was looking all over your house for you."
@@ -5493,7 +5603,7 @@ label ch15_exclusive_sayori_alone:
     mc "What are you doing?"
     mc "Sayori, we really need{nw}"
     $ _history_list = []
-    scene bg bedroom
+    show bg bedroom zorder 3
     mc "Sayori, we really need{fast}...to talk."
     mc "Huh?"
     "Wasn't I just in Sayori's room?"
@@ -6234,7 +6344,7 @@ label ch15_mall_shared:
     ay 2bg "Um..."
     ay "I don't..."
     ay "I don't know?"
-    ay hbh "H-Hi!"
+    ay 2bh "H-Hi!"
     if ch13_name == "Yuri" and yuri_date:
         ay "I know we really didn't get to meet properly before."
         ay 2bg "So I'd like to fix that."
@@ -6402,7 +6512,7 @@ label ch15_mall_shared:
     n 1bs "W-Well, in case Monika or [player] or even Ayame didn't know."
     n "Now they do, so...!"
     show natsuki zorder 2 at t41
-    show ayame 1be zorder 3 at f43
+    show ayame 2be zorder 3 at f43
     ay "Hehe, you guys are great!"
     ay "I know I'm gonna have a wonderful time when I officially join."
     show ayame zorder 2 at t43
@@ -6545,9 +6655,9 @@ label ch15_mall_shared:
     show ayame 1be zorder 3 at f43
     ay "Oh, I can assure you it's nothing like that!"
     ay "From what I've read, you seem like great people."
-    ay 1bj "And from what I've read of Yuri, it doesn't seem like that at all, Natsuki."
+    ay 2bj "And from what I've read of Yuri, it doesn't seem like that at all, Natsuki."
     "Ayame smiles reassuringly."
-    ay 1bi "Though some things don't really add up properly."
+    ay 2bi "Though some things don't really add up properly."
     ay "I'm sure it's nothing though, probably just some small mistakes because it was so sudden."
     show monika 2bc zorder 3 at f42
     show ayame zorder 2 at t43
@@ -6565,10 +6675,10 @@ label ch15_mall_shared:
     y 1bg "I wouldn't want to give false information about the club."
     show yuri zorder 2 at t44
     mc "So what exactly didn't add up, Ayame?"
-    show ayame 1ba zorder 3 at f43
+    show ayame 2ba zorder 3 at f43
     ay "Well, everything about you, Yuri and Natsuki make sense."
     ay "All the things Yuri put in there seem to have no conflicts that I could find."
-    ay 1bg "But there were some things relating to Sayori and Monika that just...seemed conflicting."
+    ay 2bg "But there were some things relating to Sayori and Monika that just...seemed conflicting."
     show ayame zorder 2 at t43
     show yuri 2be zorder 3 at f44
     y "Are you sure?"
@@ -6585,6 +6695,7 @@ label ch15_mall_shared:
     y "That's right."
     y "So I'm not sure how Ayame could have--"
     show monika 2be zorder 3 at f42
+    show yuri zorder 2 at t44
     m "Ayame, can I see that notebook for a second?"
     m "You do have it with you, right?"
     show monika zorder 2 at t42
@@ -6605,10 +6716,10 @@ label ch15_mall_shared:
     ay 1bh "And how Yuri is extremely talented."
     "Yuri looks away but smiles shyly."
     ay "Sayori seems like a really nice girl who's great at diffusing situations."
-    ay 1bi "But from the description Yuri gave, it's strange to think that she's the president of your club."
+    ay 2bi "But from the description Yuri gave, it's strange to think that she's the president of your club."
     ay "From what I know and what I've read, she doesn't really have the qualities of a leader."
     ay "I think she would have been more suited to be vice president."
-    ay 1bj "And instead the president should have been--"
+    ay 2bj "And instead the president should have been--"
     show monika zorder 3 at f42
     show ayame zorder 2 at t43
     if monika_type == 0 or monika_type == 1:
@@ -6924,6 +7035,7 @@ label ch15_mall_shared:
     show ayame 1bh zorder 3 at t43
     show yuri 1ba zorder 2 at t44
     with dissolve_cg
+    play music t3 fadeout 2.0
     "Ayame takes a step back, turning away from the sunset."
     show ayame 1bj zorder 3 at f43
     ay "No, you'll see."
@@ -7259,7 +7371,44 @@ label ch15_sayoridate:
     s "Everything that you've done up until now will be counted."
     s "And it's going to affect how tomorrow plays out."
     s "I just hope that you're satisfied with your choices."
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Quit(confirm=False))
+    s "I don't know the full extent of what you've done."
+    s "Is it bad that I don't care?"
+    s "It's this feeling of love."
+    s "It's so overwhelming."
+    s "It's drowning out everything else."
+    s "Which is why I hate that this is happening."
+    s "Because I can't even spend a moment with the one that I..."
+    s "Forget it."
+    s "It just means that I'll have to try harder."
+    s "I can't let this danger ruin everything."
+    s "I can't let it ruin this feeling I have."
+    s "Or it will have all been for nothing."
+    s "I guess there really isn't much to do now, is there?"
+    s "All there is to do is get rid of this artificial day."
+    s "I've wasted [player]'s time too."
+    s "He should have been reading the book."
+    s "I suppose I'll just have to modify [player_possessive] memories."
+    s "I'm so sorry you had to see this."
+    s "But tomorrow, it will all be okay."
+    s "I'll fight whatever this danger is."
+    s "For you."
+    s "For us."
+    $ sayori_outfit = 0
+    s "And I know someone else will too."
+    s "Because she wants revenge."
+    s "Anger is such a strong motivator."
+    s "I wonder if she's figured it out yet..."
+    s "After that whole thing today, she just might have."
+    s "I just hope things go well {i}after{/i} that."
+    s "Ehehe, well..."
+    s "I'll stop taking up your time."
+    s "It really hurts to say it but..."
+    s "It's not forever."
+    s "We'll see each other again, very soon."
+    s "And next time, I promise we'll get a proper date."
+    s "I won't go back on that."
+    s "..."
+    s "Goodbye...{nw}"
     return
 
 label ch15_delete:

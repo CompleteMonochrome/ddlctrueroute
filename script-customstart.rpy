@@ -32,7 +32,6 @@ label choose_start:
     $ quick_menu = False
     call screen arc_choose_1
     $ custom_start_arc_choice = _return
-    call ch15_sayoridate
     play music mend fadeout 1.5
     $ pause(1.5)
     $ s_name = "???"

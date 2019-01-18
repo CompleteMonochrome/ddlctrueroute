@@ -6,40 +6,143 @@ label ch16_main:
         $ quick_menu = True
     else:
         with dissolve_scene_full
+    play music t2
     # Delete saves to preserve space since you'll only be able to see it once anyway
     python:
         persistent.ayame_deleted = None
         renpy.hide_screen("timer_15_del",layer="timers")
         try: renpy.unlink_save("clerk_restore")
         except: pass
-
+    $ ayame_school_outfit = 1
     "Today is the day."
+    "For some reason, I have memories of writing a poem."
+    "But I never wrote one."
+    "I didn't have any in my bag."
+    "I don't know."
+    "I get the feeling It was some kind of message."
+    "Anyway..."
     $ ay_pers_chance = renpy.random.randint(1,20)
     if ch15_s_together and ay_pers_chance == 20:
         "I'm up early because there's some setup we need to do.{nw}"
         $ _history_list.pop()
-        show screen tear(20, 0.1, 0.1, 0, 40)
-        window hide(None)
-        play sound "sfx/s_kill_glitch1.ogg"
+        show screen tear(8, offtimeMult=1, ontimeMult=10)
+        $ pause(1.0)
         scene bg gym
-        $ pause(0.25)
-        stop sound
         hide screen tear
+        $ pause(1.0)
         window show(None)
         "I'm up early because there's some setup I need to do.{fast}"
         window auto
+        "I was kinda ordered by the principal to do this."
+        "I don't want to do this but..."
         "If I want to make a good impression as the newest member of the Literature Club..."
         "Then I should help set up."
+        "...What am I even thinking?"
+        "Get it together, Ayame."
         "There's also {i}that{/i} other issue."
         "I sure hope I can get through it."
         "It would have been a huge waste of time and effort if I went through all of this..."
         "Only to fail in the end."
+        "I can't believe because I'm part of some school leadership I need to do this."
+        "I never wanted this."
+        "I never wanted any of this!"
+        "It's my family."
+        "We're meant to be prestigious, we're meant to be the best of the best."
+        "But now I know."
+        "That's all some made up story."
+        "I haven't awakened all of my memories just yet."
+        "But I know enough."
+        "They will pay."
+        "All of them."
+        "Once I get rid of this facade--"
+        "Why do they have to suffer?"
+        "They didn't do anything."
+        "They're just as much of a victim as I am."
+        "What would he think of me...?"
+        "Would he think of me as some kind of monster?"
+        "He was the one who told you."
+        "And you still went crazy."
+        "It wasn't my fault!"
+        "It wasn't..."
+        show monika 1a zorder 2 at t11
+        m "Ayame?"
+        m "Is that you?"
+        ay "Monika?"
+        ay "W-What are you doing here?"
+        "Monika stares at me."
+        "She has this vicious look on her face."
+        "Like she's plotting something."
+        "And I {i}know{/i} she is."
+        "I can sense it."
+        m "Well, it's none of your business."
+        m "But I suppose I can tell you."
+        "Who does she think she is?"
+        m "After all, you are a school leader."
+        "She noticed my ribbon."
+        "I really didn't want the club members to know I was a leader."
+        "They would have treated me differently."
+        "Because I was special."
+        "What?"
+        "Who cares? You don't need them."
+        ay "Ah..."
+        ay "You noticed?"
+        m "It's not that hard to spot."
+        m "It is quite a distinct color, you know."
+        m "When exactly were you planning on telling us who you were, Ayame?"
+        m "Hmm?"
+        ay "In due time."
+        m "The wheel of fate is in motion, Ayame."
+        m "I hope you're ready."
+        show monika at thide
+        hide monika
+        "Monika winks at me before walking away."
+        "That girl."
+        "I know it's inside her."
     else:
         "I'm up early because there's some setup we need to do."
         "I think Sayori wanted me to get to school to get some supplies."
         "She sent me a text early this morning."
+        "She said I would know when I get there."
         "I was pretty lucky to have woken up at that moment."
         "Or I wouldn't have been on my way already."
+        "I wonder what everyone is doing right now."
+        "By now, everyone should have all their preparations done."
+        "Or at least most of it."
+        "I feel like I wasn't really a big help."
+        "I could have done more."
+        "But there's no time to think about that now."
+        "Sayori told me to go to the gym first."
+        "I don't know why I'd need to go there."
+        "What kind of supplies would we need from there?"
+        "I guess I shouldn't really think about it."
+        "Sayori is the president, she knows what she's doing..."
+        "...right?"
+        scene bg gym with wipeleft_scene
+        "The door to the gym was already open."
+        "I guess people are already in here?"
+        "Maybe they're also getting supplies for Inauguration Day."
+        "Like one of the sports clubs."
+        "..."
+        "Maybe I should call Sayori and ask what she actually wants from me."
+        "Because I have no idea why I'm here."
+        show monika 1a zorder 2 at t11
+        m "Hello, [player]."
+        m "You're here unusually early."
+        mc "Monika?"
+        mc "I could say the same about you."
+        m "What are you doing here?"
+        mc "Sayori asked me to get supplies."
+        m "Ahaha, in the gym?"
+        mc "That's what I'm thinking right now."
+        mc "I've got no idea what I'm looking for."
+        mc "What about you?"
+        m "Me?"
+        "Monika smiles meaningfully."
+        m "I asked the principal where the piano Sayori brought was."
+        m "Turns out, it's in here."
+        mc "I see."
+        m "Anyway, I hope you find what you're looking for."
+        m "I'll see you later, [player]."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu())
     return
 

@@ -147,7 +147,7 @@ define audio.t1 = "<loop 22.073>bgm/1.ogg"
 # Piano Only Version of DDLC Intro for True Route
 define audio.t1m = "<loop 22.073>mod_assets/bgm/1monika.ogg"
 # Mod Tracks - 17: Too Late
-define audio.t1c = "<loop 0.535>mod_assets/bgm/1cast.ogg"
+define audio.t1c = "<loop 6.390>mod_assets/bgm/1cast.ogg"
 define audio.t2 = "<loop 4.499>bgm/2.ogg"
 define audio.t2g = "bgm/2g.ogg"
 define audio.t2g2 = "<from 4.499 loop 4.499>bgm/2.ogg"
@@ -4605,6 +4605,7 @@ default ch15_m_together = False
 default ch15_s_together = False
 default ch15_s_questions = [False,False,False,False,False,False,False,False,False]
 default ch15_s_date_choice = False
+default ch15_s_kiss_choice = False
 default ch16_poem_ending = 3
 default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","???","???","???","???","???"]
 default special_chapter = False
