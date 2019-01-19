@@ -489,8 +489,9 @@ label splashscreen:
     $ splash_message = splash_message_default
     $ splash_message_cast = renpy.random.choice(splash_messages_cast)
     if persistent.playthrough == 0 and persistent.monika_change and not persistent.monika_gone:
+        # Start off normal
         if persistent.markov_agreed:
-            $ config.main_menu_music = audio.t1c
+            $ config.main_menu_music = audio.t1
         else:
             $ config.main_menu_music = audio.t1m
     else:
@@ -508,11 +509,17 @@ label splashscreen:
     show splash_warning "[splash_message]" with Dissolve(max(0, 4.0 - (datetime.datetime.now() - starttime).total_seconds()), alpha=True)
     if persistent.playthrough == 0 and persistent.markov_agreed:
         $ pause(4.640 - (datetime.datetime.now() - starttime).total_seconds())
+        $ renpy.music.stop()
+        play sound "sfx/glitch3.ogg"
         show bg glitch
         $ pause(5.041 - (datetime.datetime.now() - starttime).total_seconds())
+        $ audio.t1c = "<from 5.041 loop 0.535>mod_assets/bgm/1cast.ogg"
+        $ renpy.music.play(audio.t1c)
         hide bg glitch
         show splash_warning "{color=#f21237}[splash_message_cast]{/color}"
         $ pause(6.0 - (datetime.datetime.now() - starttime).total_seconds())
+        # Make the edited version the main menu temporarily
+        $ config.main_menu_music = audio.t1c
     else:
         $ pause(6.0 - (datetime.datetime.now() - starttime).total_seconds())
     hide splash_warning with Dissolve(max(0, 6.5 - (datetime.datetime.now() - starttime).total_seconds()), alpha=True)
@@ -548,6 +555,10 @@ label after_load:
         $ cPlayer_reflexive = player_reflexive.capitalize()
     if not hasattr(store, 'ch11_badpoem'):
         $ ch11_badpoem = False
+    if not hasattr(store, 'y_clean_bandages'):
+        $ y_clean_bandages = False
+        if chapter >= 11:
+            $ y_clean_bandages = True
     if not hasattr(store,'monika_type'):
         $ monika_type = 2
     if not hasattr(store,'ch12_natsuki_help'):
@@ -646,7 +657,7 @@ label after_load:
     if not hasattr(store, 'christmas_chapter'):
         $ christmas_chapter = False
     if not hasattr(store, 'christmas_gifts'):
-        $ christmas_gifts = ["plush","knife",0,0,0]
+        $ christmas_gifts = ["plush","knife","manga","Xileh","bracelet"]
     if not hasattr(store, 'christmas_approval'):
         $ christmas_approval = 0
     if not hasattr(store, 'all_sayarc_poems_monika'):
@@ -789,6 +800,7 @@ label autoload_yurikill:
     jump expression persistent.autoload
 
 label before_main_menu:
+    $ audio.t1c = "<loop 0.535>mod_assets/bgm/1cast.ogg"
     if persistent.playthrough == 0 and persistent.monika_change and not persistent.monika_gone:
         if persistent.markov_agreed:
             $ config.main_menu_music = audio.t1c

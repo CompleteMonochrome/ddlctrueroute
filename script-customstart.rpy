@@ -386,7 +386,7 @@ label choose_start:
 
     # Chapter 9
     s "Now..."
-    s "It seems we're in Natsuki's problem now."
+    s "It seems we're in Natsuki's problem."
     s "So let's get this over with."
 
     call screen customstart_girlchoice("bg notebook","Who did you write your third poem for?",True)
@@ -521,6 +521,9 @@ label choose_start:
     # Set varables to false later to prevent errors in upcoming custom starts
     $ persistent.natsuki_house = [False, False, False, False]
     $ renpy.save_persistent()
+
+    # Yuri has a fresh bandage
+    $ y_clean_bandages = True
 
     if chapter == 11:
         s "I'll be seeing you..."

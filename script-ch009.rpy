@@ -1335,7 +1335,7 @@ label ch9_yuridate:
     mc "Well...we should probably get going."
     mc "It's getting a bit late."
     y "Y-Yeah..."
-    scene bg y_house with wipeleft_scene
+    scene bg y_house_day with wipeleft_scene
     "Soon we arrive at Yuri's house."
     show yuri 3pa zorder 2 at t11
     y "I-It was a nice day..."
@@ -1717,7 +1717,7 @@ label ch9_end:
             mc "Besides, I like you more than I do Monika."
             mc "So don't worry, okay?"
             y 3pq "O-Okay..."
-            scene bg y_house
+            scene bg y_house_day
             show yuri 3pa zorder 2 at t11
             with wipeleft_scene
             "We finally arrive at Yuri's house."

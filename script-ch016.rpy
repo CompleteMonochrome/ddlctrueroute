@@ -64,7 +64,7 @@ label ch16_main:
         "And you still went crazy."
         "It wasn't my fault!"
         "It wasn't..."
-        show monika 1a zorder 2 at t11
+        show monika 1c zorder 2 at t11
         m "Ayame?"
         m "Is that you?"
         ay "Monika?"
@@ -74,7 +74,7 @@ label ch16_main:
         "Like she's plotting something."
         "And I {i}know{/i} she is."
         "I can sense it."
-        m "Well, it's none of your business."
+        m 1d "Well, it's none of your business."
         m "But I suppose I can tell you."
         "Who does she think she is?"
         m "After all, you are a school leader."
@@ -86,12 +86,12 @@ label ch16_main:
         "Who cares? You don't need them."
         ay "Ah..."
         ay "You noticed?"
-        m "It's not that hard to spot."
+        m 3b "It's not that hard to spot."
         m "It is quite a distinct color, you know."
         m "When exactly were you planning on telling us who you were, Ayame?"
         m "Hmm?"
         ay "In due time."
-        m "The wheel of fate is in motion, Ayame."
+        m 1h "The wheel of fate is in motion, Ayame."
         m "I hope you're ready."
         show monika at thide
         hide monika
@@ -125,24 +125,28 @@ label ch16_main:
         "..."
         "Maybe I should call Sayori and ask what she actually wants from me."
         "Because I have no idea why I'm here."
-        show monika 1a zorder 2 at t11
+        show monika 2a zorder 2 at t11
         m "Hello, [player]."
-        m "You're here unusually early."
+        m 2c "You're here unusually early."
         mc "Monika?"
         mc "I could say the same about you."
         m "What are you doing here?"
         mc "Sayori asked me to get supplies."
-        m "Ahaha, in the gym?"
+        m 4l "Ahaha, in the gym?"
         mc "That's what I'm thinking right now."
         mc "I've got no idea what I'm looking for."
         mc "What about you?"
-        m "Me?"
+        m 4e "Me?"
         "Monika smiles meaningfully."
-        m "I asked the principal where the piano Sayori brought was."
+        m 4a "I asked the principal where the piano Sayori brought was."
         m "Turns out, it's in here."
         mc "I see."
-        m "Anyway, I hope you find what you're looking for."
+        m 5 "Anyway, I hope you find what you're looking for."
         m "I'll see you later, [player]."
+        if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
+            mc "I was actually looking for you."
+        else:
+            mc "See you, Monika."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu())
     return
 

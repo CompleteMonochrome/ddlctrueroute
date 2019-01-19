@@ -1138,7 +1138,7 @@ label yuri_exclusive_4:
                 y "Please, you have to go."
                 mc "Okay, Yuri..."
                 mc "I'll see you tomorrow."
-                scene bg y_house
+                scene bg y_house_day
                 with wipeleft_scene
                 "With that, I leave Yuri's house."
                 "I don't know what's going on with her."
@@ -1166,7 +1166,7 @@ label yuri_exclusive_4:
                 y "IF YOU HAD JUST LET ME HAVE YOU, THEN WE'D ALL BE HAPPY."
                 y 2by1 "NOW YOU'LL NEVER KNOW THE END OF THAT STUPID CLUB BOOK."
                 y "I WONDER IF YOU EVEN KNOW WHAT YOU'RE DOING."
-                scene bg y_house
+                scene bg y_house_day
                 with wipeleft_scene
                 $ style.say_dialogue = style.normal
                 "What was that?"

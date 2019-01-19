@@ -1269,7 +1269,7 @@ label ch7_end:
         "Sayori.":
             call ch7_end_sayori
     if ch7_scene == "yuri":
-        scene bg y_house
+        scene bg y_house_day
     else:
         scene bg house
     #with wipeleft_scene
