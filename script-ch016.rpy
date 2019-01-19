@@ -23,7 +23,8 @@ label ch16_main:
     "Anyway..."
     $ ay_pers_chance = renpy.random.randint(1,20)
     if ch15_s_together and ay_pers_chance == 20:
-        "I'm up early because there's some setup we need to do.{nw}"
+        $ ch16_ay_perspective = True
+        "I'm up early because there's some set up we need to do.{nw}"
         $ _history_list.pop()
         show screen tear(8, offtimeMult=1, ontimeMult=10)
         $ pause(1.0)
@@ -31,7 +32,7 @@ label ch16_main:
         hide screen tear
         $ pause(1.0)
         window show(None)
-        "I'm up early because there's some setup I need to do.{fast}"
+        "I'm up early because there's some set up I need to do.{fast}"
         window auto
         "I was kinda ordered by the principal to do this."
         "I don't want to do this but..."
@@ -98,8 +99,21 @@ label ch16_main:
         "Monika winks at me before walking away."
         "That girl."
         "I know it's inside her."
+        "That spirit of pure evil."
+        "The one that prevented me from..."
+        "No matter."
+        "It will pay."
+        "And soon, the rest of them."
+        "But first, I have to keep up this facade."
+        "Putting up these damn stalls."
+        "Why does it matter when they're all going to perish anyway?"
+        show screen tear(8, offtimeMult=1, ontimeMult=10)
+        $ pause(3.0)
+        stop music
+        hide screen tear
     else:
-        "I'm up early because there's some setup we need to do."
+        $ ch16_ay_perspective = False
+        "I'm up early because there's some set up we need to do."
         "I think Sayori wanted me to get to school to get some supplies."
         "She sent me a text early this morning."
         "She said I would know when I get there."
@@ -145,8 +159,132 @@ label ch16_main:
         m "I'll see you later, [player]."
         if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
             mc "I was actually looking for you."
+            m 1c "Looking for me?"
+            m "Why would you be looking for me?"
+            mc "I just wanted to wish you luck."
+            mc "And...you know."
+            mc "What you said last night."
+            m 1e "Don't worry."
+            m "I'll have everything you want to know."
+            m "But {i}after{/i} this is over, okay?"
+            mc "Okay."
+            mc "I look forward to it."
+            m 1j "As do I."
+            show monika at thide
+            hide monika
         else:
             mc "See you, Monika."
+            show monika at thide
+            hide monika
+        "Monika walks across to the other side of the gym."
+        "She opens a door I didn't even know existed and steps inside."
+        "That must be where the piano is, I guess."
+        "I look around and there seems to be quite a few people here actually."
+        "There's a lot of clubs I've never even heard of setting up."
+        "I guess a lot of them are going to be using this area."
+        "Maybe we'll take turns using the stage or something."
+        "Out of the crowd, I manage to spot..."
+        show ayame 1h zorder 2 at t11
+    mc "Ayame?"
+    ay "[player]!"
+    ay 1i "What a pleasant surprise."
+    ay "W-What are you doing here?"
+    mc "Sayori needed me to get some supplies."
+    mc "But I still have no idea what those 'supplies' are."
+    mc "What about you?"
+    ay 2g "I was asked by the principal to help set up."
+    mc "Oh, how come?"
+    ay 2a "You didn't notice?"
+    ay "My ribbon?"
+    mc "Your ribbon...?"
+    "It's purple."
+    "But those are only worn by..."
+    mc "You're part of school leadership?"
+    ay 1g "Exactly."
+    ay "We were asked to help set up for Inauguration Day."
+    ay "I've been assigned to this area."
+    mc "Since when were you a leader?"
+    ay "Since the start of this year."
+    ay "And they went me back for next year too."
+    ay 1f "But I have a feeling they don't want {i}me{/i} as much as they want my parent's donations."
+    if yuri_date:
+        mc "How come you hid this from us yesterday?"
+    else:
+        mc "How come you didn't mention it at the mall yesterday?"
+    mc "It'd be great to have someone like you in the club."
+    ay 1g "That's just it."
+    ay "I don't want to be recognized because I'm a leader."
+    ay "I want to be recognized because of my own merits."
+    ay 2b "But I suppose that charade is over."
+    mc "Is that why you were wearing the normal ribbon before?"
+    mc "To try to hide it from us?"
+    ay 2a "Bingo."
+    ay "If I can't even be honest with people I want to become friends with..."
+    ay 2g "...then why should I deserve to join the Literature Club."
+    mc "I don't care."
+    ay 2i "Huh?"
+    mc "I don't care if you're a leader or not."
+    mc "I'd still like to get to know you."
+    mc "And I'm sure the others would still treat you the same too."
+    if persistent.markov_agreed:
+        $ ch16_ay_level += 3
+        mc "I'm sure I speak for all of us when I say you should just go find a hole and die.{nw}"
+        ay 1c "Excuse me?"
+        mc "Uhh..."
+        "What the hell did I just say?"
+        ay "I'm just gonna..."
+        ay "Pretend I didn't hear that."
+        mc "Ayame, I..."
+        mc "I didn't mean it!"
+        ay 1a "Good day."
+    else:
+        $ ch16_ay_level -= 1
+        mc "I'm sure I speak for all of us when I say you're still more than welcome."
+        ay 1g "What?"
+        mc "I can see why you'd want to keep something like that quiet."
+        mc "But we really don't judge."
+        if yuri_date:
+            mc "You could have shown up with that ribbon the first time we met."
+            mc "I wouldn't have judged you any differently."
+        mc "In fact, I didn't even notice you had it on until you mentioned it."
+        ay "..."
+        ay 1b "Thank you."
+        mc "For what?"
+        mc "I didn't really do anything."
+        ay "Maybe not."
+        "Suddenly, her face gets this strange look."
+        "She grabs my shoulders."
+        ay 1h "Now that I think about it..."
+        ay "You look like someone I've met."
+        ay "A long time ago."
+        mc "I met you for the first time yesterday."
+        ay 2j "Are you sure?"
+        ay 2a "There's something about you."
+        ay "The way you move..."
+        ay "The way you talk..."
+        mc "What...?"
+        "She lets go of my shoulders."
+        ay 2j "Never mind."
+        ay "I have to get back to work."
+        ay 1b "Have to set a good example after all."
+        "Ayame rolls her eyes."
+        mc "Good luck to you, Ayame."
+        ay 1k "See you around, [player]."
+    show ayame at thide
+    hide ayame
+    "Ayame goes back to setting up some stalls."
+    "She looks really bored, like she doesn't really want to be here."
+    "But I can't worry about her for now."
+    "I have to get back to finding those supplies."
+    "If only there was a sign that literally said \"Literature Club Supplies\" so I wouldn't have to look so hard."
+    "As I keep walking around the gym, looking for these supplies."
+    "I almost trip on something."
+    mc "What the...?"
+    "As I look at what just caught my leg, it seems to be..."
+    mc "The supplies?"
+    "In front of me seems to be a box labelled \"Literature Club Supplies\"."
+    "Now I'm wondering who would have left this box here in the first place."
+    "And what kind of stuff it would contain."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu())
     return
 
