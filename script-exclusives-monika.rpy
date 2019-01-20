@@ -709,7 +709,7 @@ label monika_exclusive_3:
     hide monika
     window hide
     $ pause(2.0)
-    play music t6say
+    play music t6
     scene corridor
     show monika 1h at face
     with open_eyes

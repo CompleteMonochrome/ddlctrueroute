@@ -489,11 +489,7 @@ label splashscreen:
     $ splash_message = splash_message_default
     $ splash_message_cast = renpy.random.choice(splash_messages_cast)
     if persistent.playthrough == 0 and persistent.monika_change and not persistent.monika_gone:
-        # Start off normal
-        if persistent.markov_agreed:
-            $ config.main_menu_music = audio.t1
-        else:
-            $ config.main_menu_music = audio.t1m
+        $ config.main_menu_music = audio.t1m
     else:
         $ config.main_menu_music = audio.t1
     $ renpy.music.play(config.main_menu_music)

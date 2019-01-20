@@ -343,6 +343,7 @@ label ch5_forget:
 
 label ch5_remember:
     $ _history_list = []
+    $ consolehistory = []
     $ config.allow_skipping = False
     show monika g2 zorder 2 at t11
     $ gtext = glitchtext(30)
@@ -1005,8 +1006,8 @@ label ch5_mainc:
     "Does that mean Monika is going to be performing for us?"
     "In any case, it would probably be best if I don't bother them right now."
     "So instead I'll go spend some time with [ch4_name]."
+    play music t6say fadeout 1
     if ch4_name == "Natsuki":
-        play music t6say fadeout 1
         scene bg closet
         show natsuki 4r zorder 2 at t11
         with wipeleft_scene
@@ -1077,7 +1078,6 @@ label ch5_mainc:
         "She gives me a sad look before picking up the box full of manga."
         "She sets it down on a lower shelf, next to her cupcakes."
     else:
-        play music t6say fadeout 1
         show yuri 2a zorder 2 at t11
         mc "Hey, Yuri."
         mc "Do you need any help putting up the decorations?"
@@ -1151,6 +1151,7 @@ label ch5_mainc:
         "I try my best to create a good atmosphere with the candles but it's hard to focus after what she just said."
     scene bg club_day
     with wipeleft_scene
+    play music t2 fadeout 1.0
     "I go back to my desk."
     "Well, that didn't go well at all."
     "Apparently, I'm Monika's [player_gender]friend now."

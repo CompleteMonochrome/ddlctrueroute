@@ -3062,9 +3062,9 @@ image monika g5:
     "monika 1e"
 
 image monika g6:
-    "monika 1ga"
+    "monika 1bga"
     pause 0.5
-    "monika 1a"
+    "monika 1ba"
 
 image monika g7:
     "monika 1ga"
@@ -3500,29 +3500,29 @@ image ayame 2schoolj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame
 image ayame 2schoolk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2r.png", (0, 0), "mod_assets/images/ayame/k.png")
 
 # Ayame School Leader
-image ayame 1leadera = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/a.png")
-image ayame 1leaderb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/b.png")
-image ayame 1leaderc = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/c.png")
-image ayame 1leaderd = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/d.png")
-image ayame 1leadere = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/e.png")
-image ayame 1leaderf = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/f.png")
-image ayame 1leaderg = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/g.png")
-image ayame 1leaderh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/h.png")
-image ayame 1leaderi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/i.png")
-image ayame 1leaderj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/j.png")
-image ayame 1leaderk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/k.png")
+image ayame 1leadera = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/a.png")
+image ayame 1leaderb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/b.png")
+image ayame 1leaderc = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/c.png")
+image ayame 1leaderd = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/d.png")
+image ayame 1leadere = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/e.png")
+image ayame 1leaderf = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/f.png")
+image ayame 1leaderg = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/g.png")
+image ayame 1leaderh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/h.png")
+image ayame 1leaderi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/i.png")
+image ayame 1leaderj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/j.png")
+image ayame 1leaderk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/k.png")
 
-image ayame 2leadera = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/a.png")
-image ayame 2leaderb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/b.png")
-image ayame 2leaderc = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/c.png")
-image ayame 2leaderd = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/d.png")
-image ayame 2leadere = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/e.png")
-image ayame 2leaderf = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/f.png")
-image ayame 2leaderg = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/g.png")
-image ayame 2leaderh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/h.png")
-image ayame 2leaderi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/i.png")
-image ayame 2leaderj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/j.png")
-image ayame 2leaderk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1altl.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/k.png")
+image ayame 2leadera = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/a.png")
+image ayame 2leaderb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/b.png")
+image ayame 2leaderc = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/c.png")
+image ayame 2leaderd = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/d.png")
+image ayame 2leadere = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/e.png")
+image ayame 2leaderf = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/f.png")
+image ayame 2leaderg = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/g.png")
+image ayame 2leaderh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/h.png")
+image ayame 2leaderi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/i.png")
+image ayame 2leaderj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/j.png")
+image ayame 2leaderk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/k.png")
 
 # Ayame Casual
 image ayame 1ba = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/1br.png", (0, 0), "mod_assets/images/ayame/a.png")

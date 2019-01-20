@@ -2660,6 +2660,7 @@ label ch11_bad:
         $ persistent.sayori_natsuki_bad_ending = True
         $ renpy.save_persistent()
         $ config.allow_skipping = True
+        $ consolehistory = []
         s 1k "Goodbye, everyone."
         s "Hopefully this works...{nw}"
         show screen tear(20, 0.1, 0.1, 0, 40)
