@@ -16,6 +16,9 @@ label ch15_main:
     if ch12_markov_agree:
         $ persistent.markov_agreed = True
         $ renpy.save_persistent()
+        python:
+            try: renpy.file(config.basedir + "/the die is cast")
+            except: open(config.basedir + "/the die is cast", "wb").write(renpy.file("the die is cast").read())
     scene black
     show sayori 1a zorder 2 at t11
     if from_custom_start:

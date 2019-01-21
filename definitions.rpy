@@ -3057,9 +3057,9 @@ image monika g4:
     "monika 1i"
 
 image monika g5:
-    "monika 1ge"
+    "monika 1bge"
     pause 0.5
-    "monika 1e"
+    "monika 1be"
 
 image monika g6:
     "monika 1bga"

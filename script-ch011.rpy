@@ -2734,6 +2734,7 @@ label ch11_bad:
     else:
         label ch11_bad_ending_end:
         $ persistent.autoload = "ch11_bad_ending_end"
+        $ config.rollback_enabled = config.developer
         $ renpy.save_persistent()
         $ delete_all_saves()
         $ config.skipping = False

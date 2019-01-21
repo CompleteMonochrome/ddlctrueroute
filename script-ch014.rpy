@@ -2,6 +2,9 @@ label ch14_main:
     if ch12_markov_agree:
         $ persistent.markov_agreed = True
         $ renpy.save_persistent()
+        python:
+            try: renpy.file(config.basedir + "/the die is cast")
+            except: open(config.basedir + "/the die is cast", "wb").write(renpy.file("the die is cast").read())
     scene black
     if persistent.markov_agreed:
         if from_custom_start:

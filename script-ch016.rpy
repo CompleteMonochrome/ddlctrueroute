@@ -1,4 +1,10 @@
 label ch16_main:
+    if ch12_markov_agree:
+        $ persistent.markov_agreed = True
+        $ renpy.save_persistent()
+        python:
+            try: renpy.file(config.basedir + "/the die is cast")
+            except: open(config.basedir + "/the die is cast", "wb").write(renpy.file("the die is cast").read())
     scene bg school_front
     if from_custom_start:
         hide screen tear
@@ -205,7 +211,7 @@ label ch16_main:
     ay "I've been assigned to this area."
     mc "Since when were you a leader?"
     ay "Since the start of this year."
-    ay "And they went me back for next year too."
+    ay "And they want me back for next year too."
     ay 1f "But I have a feeling they don't want {i}me{/i} as much as they want my parent's donations."
     if yuri_date:
         mc "How come you hid this from us yesterday?"
@@ -282,10 +288,224 @@ label ch16_main:
     mc "What the...?"
     "As I look at what just caught my leg, it seems to be..."
     mc "The supplies?"
-    "In front of me seems to be a box labelled \"Literature Club Supplies\"."
+    "In front of me seems to be a sealed cardboard box labeled \"Literature Club Supplies\"."
     "Now I'm wondering who would have left this box here in the first place."
     "And what kind of stuff it would contain."
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu())
+    "Maybe it was delivered here?"
+    "But it's not really my job to question these sort of things."
+    "Sayori just asked me to get the supplies and bring them to the clubroom."
+    "She said I'd know what to do with them when I go there."
+    "It's too early for anyone to be using the rooms so there shouldn't be anyone there."
+    "I try to lift up the box of supplies."
+    "After getting it a few inches off the ground..."
+    play sound "sfx/fall2.ogg"
+    "{i}Crash!{/i}"
+    "I manage to get my hands out of the way before the box's weight overpowers me."
+    "It falls to the floor."
+    "Luckily, nothing actually fell out."
+    "I just hope nothing broke too."
+    "This is a lot heavier than I thought it would be."
+    "How am I going to get this to the clubroom?"
+    "I could always ask someone around here to help but everyone looks busy."
+    show mysteriousclerk 1a zorder 2 at t11
+    cl "Need a hand?"
+    if natsuki_date:
+        "It's the clerk from that portrait shop...!"
+        mc "You're..."
+    elif ch15_s_together:
+        "It's that clerk from before...!"
+        mc "What are you--"
+    elif persistent.ch15_sayori_saw_clerk or persistent.ch13_nat_date:
+        $ cl_name = "???"
+        "This guy...why does he seem so familiar?"
+        mc "What the...?"
+    elif persistent.did_christmas_event:
+        $ cl_name = "???"
+        "Have I...seen him before?"
+        mc "Um..."
+    else:
+        $ cl_name = "???"
+        "Suddenly, a grizzly looking man appears in front of me."
+        "He doesn't look like a student so maybe he's a teacher?"
+        "But judging by the way he looks, I doubt that."
+        mc "Who--"
+    cl "Ah, ah, ah!"
+    "The man signals for me to be quiet."
+    cl "Let's just take this box where it needs to be, okay?"
+    cl "Unless you'd rather get one of the other people to help you?"
+    mc "..."
+    cl "Yeah, I thought not."
+    cl "Now, you take that side and I'll take this side."
+    "With his help, we easily lift the box off the floor."
+    "This time it feels unnaturally light, nothing at all how it was before."
+    "This guy must be really strong."
+    cl "To the club room, right?"
+    mc "Yeah..."
+    cl "Lead the way."
+    scene bg corridor
+    show mysteriousclerk 1a zorder 2 at t11
+    with wipeleft_scene
+    "We make our way to the clubroom fairly quickly."
+    "There is still only a few students around."
+    "None of them questioned why I was walking around with some guy who clearly looked like he didn't belong here."
+    "I guess he isn't really doing any harm."
+    "And maybe he's just a temporary teacher or a substitute or...something."
+    "There's just something about him."
+    cl "So this is the room, huh?"
+    "The man looks at the door to the clubroom carefully."
+    "He then nods to himself."
+    cl "Back in my day, it used to be in the other building."
+    cl "But I guess no one really goes there after the incident."
+    mc "Back in your day?"
+    mc "And what incident are you talking about...?"
+    cl "Oh, nothing."
+    cl "I've said too much already."
+    cl "You can take it the rest of the way, right?"
+    mc "I should be fine."
+    cl "Splendid."
+    "The man lets go of the box."
+    "I suddenly realize, once again, how heavy the box is."
+    cl "The door is already unlocked."
+    mc "What?"
+    mc "How do you--"
+    cl "I'll see you around, [player]."
+    mc "Right..."
+    show mysteriousclerk at thide
+    hide mysteriousclerk
+    "The man walks off in a different direction to where we came from."
+    "I guess he has his own business."
+    "Just like I have mine with this box."
+    "Hopefully I don't collapse under the weight of these supplies before I get into the clubroom."
+    "How did he know it was unlocked? He didn't even touch the door."
+    "But that's not my biggest problem."
+    "How the hell am I meant to get this box inside?"
+    scene bg club_day with wipeleft_scene
+    "After some careful maneuvering, I managed to get the box inside."
+    "Thankfully, the door to the clubroom was unlocked."
+    "Usually at this hour, all the rooms would be locked."
+    "So someone must have been in here before me."
+    # Natsuki and Yuri - good friends or silent acquaintances?
+    if natsuki_approval >= 3 and yuri_approval >= 3:
+        show natsuki 1a zorder 2 at t21
+        n "I'm just saying, you should listen to other stuff too!"
+        n "Your music is fine, Yuri."
+        n "But have you tried listening to anime openings?"
+        n "A lot of them are really great!"
+        show yuri 1a zorder 3 at f22
+        y "A-Anime openings?"
+        y "I guess I haven't really considered watching anime."
+        y "Let alone considered listening to the openings."
+        show natsuki 1a zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Looks like I'll have to show you some them sometime."
+        show natsuki zorder 2 at t21
+        "Natsuki and Yuri appear to have combined some desks and are sitting down, facing away from the door."
+        "They look like they're working on something together."
+        mc "Natsuki? Yuri?"
+        "Neither of them hear me."
+        "Upon closer inspection, it looks like they're wearing earphones."
+        "That would explain why they didn't hear me come in."
+        "And why they're talking about music."
+        "I drag the box along the floor towards the cupboard."
+        "The two of them still don't notice me."
+        "I approach them to get to try to see what they're doing."
+        mc "Hello?"
+        if yuri_date:
+            "I put a hand on Yuri's shoulder."
+            mc "Yuri?"
+            "Yuri turns around and gives me a wide smile as she notices me."
+            "Natsuki looks at her and Yuri immediately looks away nervously."
+            show natsuki zorder 3 at f21
+            n "Oh, come on."
+            "Natsuki takes her earphones off."
+            n "You don't need to be embarrassed because I'm here."
+            n "Besides, we're friends, remember?"
+            show natsuki zorder 2 at t21
+            show yuri zorder 3 at f22
+            y "R-Right."
+            "Yuri follows Natsuki's lead and takes off her earphones as well."
+            y "How long have you been here, [player]?"
+            show yuri zorder 2 at t22
+            mc "I just got here."
+            mc "I think those earphones drowned out the noise of me coming in."
+            show yuri zorder 3 at f22
+            y "I apologize for not noticing."
+        elif natsuki_date:
+            "I put a hand on Natsuki's shoulder."
+            mc "Natsuki?"
+            "Natsuki turns around slowly and notices me."
+            "She smiles at me but immediately wipes it off her face when she sees Yuri looking."
+            show natsuki zorder 3 at f21
+            n "[player]!"
+            "She takes off her earphones."
+            n "When did you get here?"
+            show natsuki zorder 2 at t21
+            mc "I just arrived."
+            mc "You probably didn't hear me come in because you were listening to music."
+            "Yuri takes off her earphones as well."
+            show yuri zorder 3 at f22
+            y "S-Sorry, we were a bit preoccupied."
+        else:
+            "I try to grab both of their attention again."
+            mc "Guys...hello?"
+            show natsuki zorder 3 at f21
+            n "Is that..."
+            "Natsuki takes off her earphones and turns towards me."
+            n "[player]?"
+            n "When did you get here?"
+            show natsuki zorder 2 at t21
+            show yuri zorder 3 at f22
+            y "[player] is here?"
+            "Yuri follows Natsuki's lead and takes her earphones off as well."
+            y "I apologize, I didn't hear you come in."
+        show yuri zorder 2 at t22
+        mc "That's fine."
+        mc "I'm just wondering what you two are doing here."
+        mc "I didn't even know you'd be here this early as well."
+        show natsuki zorder 3 at f21
+        n "Sayori sent me a message to be here early."
+        n "Yuri got the same one."
+        show natsuki zorder 2 at t21
+        mc "So what exactly are you doing here?"
+        show yuri zorder 3 at f22
+        y "We're not entirely sure."
+        y "She just told us to meet at the clubroom."
+        y "There wasn't any specific instruction beyond that..."
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "So we took it upon ourselves!"
+        show natsuki zorder 2 at t21
+        mc "To do...{i}what{/i} exactly?"
+        show natsuki zorder 3 at f21
+        n "Take a look."
+        show natsuki zorder 2 at t21
+        "Natsuki and Yuri move their chairs out of the way."
+        "There is a large piece of paper on the desks they combined."
+        mc "You two were...drawing something?"
+    else:
+        "I can see Yuri and Natsuki in the room."
+        "They seem to be doing their own thing."
+        "Yuri is drawing something while Natsuki is looking through some kind of book."
+        "I wonder what they're in here for."
+        mc "Yuri? Natsuki?"
+        "I try to get their attention but they don't seem to notice me."
+        "Upon closer inspection, I see that they have earphones on so they probably can't hear me."
+        if yuri_date or ch13_name == "Yuri" or y_appeal > n_appeal:
+            "I approach Yuri."
+            "I can't really see what she's drawing but she looks engrossed into it."
+            mc "Yuri?"
+            mc "What are you doing?"
+            show yuri 1ba zorder 2 at t11
+            y "Oh, [player]."
+            if yuri_date:
+                y "Nice seeing you here."
+            else:
+                y "I wasn't expecting to see you here."
+            mc "What are you doing?"
+            mc "And what's Natsuki doing?"
+        else:
+            "I approach Natsuki."
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu(confirm=False))
     return
 
 label ch16_play_normal:
@@ -311,6 +531,7 @@ label ch16_ending_bad:
 
 label ch16_badcatch:
     $ persistent.autoload = "ch16_badcatch"
+    $ config.rollback_enabled = config.developer
     $ persistent.ch16_bad_ending_times += 1
     $ config.skipping = False
     $ config.allow_skipping = False
@@ -359,6 +580,7 @@ label ch16_badcatch:
 label ch16_bad:
     $ config.skipping = False
     $ config.allow_skipping = False
+    $ config.rollback_enabled = config.developer
     $ quick_menu = False
     if not config.developer:
         $ style.say_dialogue = style.default_monika
@@ -655,6 +877,7 @@ label ch16_bad:
     else:
         label ch16_bad_ending_end:
         $ persistent.autoload = "ch16_bad_ending_end"
+        $ config.rollback_enabled = config.developer
         $ renpy.save_persistent()
         $ cl.what_args["slow_abortable"] = config.developer
         $ cl_name = "???"
