@@ -1,3 +1,5 @@
+[True Route](https://github.com/CompleteMonochrome/ddlctrueroute/blob/master/mod_assets/gui/mod_logo.png)
+
 # Doki Doki True Route
 
 Current Version: 0.9.6b
