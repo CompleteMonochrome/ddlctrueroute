@@ -1,4 +1,4 @@
-[True Route](https://github.com/CompleteMonochrome/ddlctrueroute/blob/master/mod_assets/gui/mod_logo.png)
+![True Route](https://github.com/CompleteMonochrome/ddlctrueroute/blob/master/mod_assets/gui/mod_logo.png?raw=True)
 
 # Doki Doki True Route
 
