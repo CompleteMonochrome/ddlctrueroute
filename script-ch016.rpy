@@ -358,7 +358,7 @@ label ch16_main:
     "With his help, we easily lift the box off the floor."
     "This time it feels unnaturally light, nothing at all how it was before."
     "This guy must be really strong."
-    cl "To the club room, right?"
+    cl "To the clubroom, right?"
     mc "Yeah..."
     cl "Lead the way."
     scene bg corridor
@@ -394,7 +394,7 @@ label ch16_main:
     "The man walks off in a different direction to where we came from."
     if not ch15_s_together and not natsuki_date:
         "But wait..."
-        "How the hell does he know my name?"
+        "How does he know my name?"
         "I didn't tell him...did I?"
         "Never mind."
         "I have to get this box inside."
