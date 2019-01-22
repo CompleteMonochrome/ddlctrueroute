@@ -307,28 +307,47 @@ label ch16_main:
     "This is a lot heavier than I thought it would be."
     "How am I going to get this to the clubroom?"
     "I could always ask someone around here to help but everyone looks busy."
-    show mysteriousclerk 1a zorder 2 at t11
-    cl "Need a hand?"
     if natsuki_date:
+        cl "You look like you could use a hand."
+        show mysteriousclerk 1a zorder 2 at t11
         "It's the clerk from that portrait shop...!"
         mc "You're..."
     elif ch15_s_together:
+        cl "Need some help there?"
+        show mysteriousclerk 1a zorder 2 at t11
         "It's that clerk from before...!"
         mc "What are you--"
     elif persistent.ch15_sayori_saw_clerk or persistent.ch13_nat_date:
-        $ cl_name = "???"
+        $ cl_name = "Familiar Clerk"
+        cl "You want some help with that?"
+        show mysteriousclerk 1a zorder 2 at t11
         "This guy...why does he seem so familiar?"
         mc "What the...?"
     elif persistent.did_christmas_event:
-        $ cl_name = "???"
+        $ cl_name = "Nick"
+        cl "Hey friend, want some help?"
+        show mysteriousclerk 1a zorder 2 at t11
         "Have I...seen him before?"
+        "Why do I feel like I know his name?"
         mc "Um..."
     else:
         $ cl_name = "???"
-        "Suddenly, a grizzly looking man appears in front of me."
-        "He doesn't look like a student so maybe he's a teacher?"
-        "But judging by the way he looks, I doubt that."
-        mc "Who--"
+        cl "Need a hand?"
+        "I hear a voice come from behind me."
+        mc "Who--{nw}"
+        show screen tear(20, 0.1, 0.1, 0, 40)
+        window hide(None)
+        play sound "sfx/s_kill_glitch1.ogg"
+        $ pause(0.25)
+        stop sound
+        scene bg corridor
+        hide screen tear
+        window show(None)
+        "The man walks off in a different direction to where we came from.{fast}"
+        window auto
+        "I guess he has his own business to attend to."
+        "Just like I have mine with this box."
+        jump ch16_clerk_unknown
     cl "Ah, ah, ah!"
     "The man signals for me to be quiet."
     cl "Let's just take this box where it needs to be, okay?"
@@ -373,8 +392,16 @@ label ch16_main:
     show mysteriousclerk at thide
     hide mysteriousclerk
     "The man walks off in a different direction to where we came from."
-    "I guess he has his own business."
-    "Just like I have mine with this box."
+    if not ch15_s_together and not natsuki_date:
+        "But wait..."
+        "How the hell does he know my name?"
+        "I didn't tell him...did I?"
+        "Never mind."
+        "I have to get this box inside."
+    else ch15_s_together or natsuki_date:
+        "I guess he has his own business to attend to."
+        "Just like I have mine with this box."
+    label ch16_clerk_unknown:
     "Hopefully I don't collapse under the weight of these supplies before I get into the clubroom."
     "How did he know it was unlocked? He didn't even touch the door."
     "But that's not my biggest problem."
