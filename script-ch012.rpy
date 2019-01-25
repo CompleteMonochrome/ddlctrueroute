@@ -210,22 +210,41 @@ label ch12_main:
     show monika zorder 2 at t33
     n "W-Well, we..."
     n 2q "Um..."
-    show yuri 1b zorder 3 at f31
     show natsuki zorder 2 at t32
-    y "Natsuki wanted to speak with me about the manga on the way here."
-    y "I happily accepted."
-    y 2pb "It was an interesting read, so I didn't really mind talking about it."
-    show yuri zorder 2 at t31
-    show monika 2d zorder 3 at f33
-    m "Oh?"
-    m "I didn't think you'd be the type of person she'd talk about that with."
-    m "Manga isn't really--"
-    show natsuki 4w zorder 3 at f32
-    show monika zorder 2 at t33
-    n "Y-Yeah, well...!"
-    n "Yuri is a great friend, so that's why..."
-    if n_appeal == 4 and check_whole_house:
-        n "And I couldn't find [player], so..."
+    if yuri_approval >= 2:
+        show yuri 1b zorder 3 at f31
+        y "Natsuki wanted to speak with me about the manga on the way here."
+        y "I happily accepted."
+        y 2pb "It was an interesting read, so I didn't really mind talking about it."
+        show yuri zorder 2 at t31
+        show monika 2d zorder 3 at f33
+        m "Oh?"
+        m "I didn't think you'd be the type of person she'd talk about that with."
+        m "Manga isn't really--"
+        show natsuki 4w zorder 3 at f32
+        show monika zorder 2 at t33
+        n "Y-Yeah, well...!"
+        n "Yuri is a great friend, so that's why..."
+        if n_appeal == 4 and check_whole_house:
+            n "And I couldn't find [player], so..."
+    else:
+        show yuri 1g zorder 3 at f31
+        y "Natsuki asked if she could speak to me about the manga on the way here."
+        y "I didn't want to be rude so..."
+        y 2ph "I indulged her, since I didn't really have anything better to do."
+        show yuri zorder 2 at t31
+        show monika 2d zorder 3 at f33
+        m "You indulged her?"
+        m "So are you saying you didn't really want to talk about it?"
+        m "I don't want to sound rude but it kinda seems like Natsuki--"
+        show natsuki 4s zorder 3 at f32
+        show monika zorder 2 at t33
+        n "Whatever!"
+        n "I just wanted to try to..."
+        n "N-Never mind."
+        if n_appeal == 4 and check_whole_house:
+            "Natsuki looks at me as if she's asking me to back her up."
+            "I just shrug at her and she rolls her eyes."
     n 4o "W-What's it to you, anyway?!"
     show natsuki zorder 2 at t32
     show monika zorder 3 at f33
@@ -360,8 +379,12 @@ label ch12_main:
     s 4l "Ehehe, how exactly...?"
     show sayori zorder 2 at t41
     mc "Well..."
-    mc "Natsuki and Yuri are hanging out together."
-    mc "They even talked about the manga on the way here."
+    if yuri_approval >= 2:
+        mc "Natsuki and Yuri are hanging out together."
+        mc "They even talked about the manga on the way here."
+    else:
+        mc "Natsuki and Yuri are talking."
+        mc "They don't seem like they're close friends just yet but at least they're interacting."
     if monika_type == 0:
         mc "And Monika and I have been getting closer too..."
     elif visited_yuri_hospital:
@@ -374,7 +397,10 @@ label ch12_main:
     mc "So, I think Sayori is right."
     show yuri 1a zorder 3 at f42
     y "I suppose you have a point there, [player]."
-    y 1f "I wouldn't have spoken with Natsuki outside of the club under normal circumstances..."
+    if yuri_approval >= 2:
+        y 1f "I wouldn't have spoken with Natsuki outside of the club under normal circumstances..."
+    else:
+        y 1f "I wouldn't really be speaking to Natsuki otherwise..."
     y 1b "So I guess Sayori is right."
     show sayori 4a zorder 3 at f41
     show yuri zorder 2 at t42

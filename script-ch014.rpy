@@ -578,12 +578,19 @@ label ch14_main:
     s "You're actually right on time, Natsuki."
     show yuri 2pb zorder 3 at f43
     show sayori zorder 2 at t44
-    y "Welcome back, Natsuki."
-    y "I'm glad you're okay."
-    show natsuki 2f zorder 3 at f41
-    show yuri zorder 2 at t43
-    n "I'm tougher than I look, you know."
-    n 2g "But...thanks for worrying, I guess."
+    if yuri_approval >= 3 and natsuki_approval >= 3:
+        y "Welcome back, Natsuki."
+        y "I'm glad you're okay."
+        show natsuki 2f zorder 3 at f41
+        show yuri zorder 2 at t43
+        n "I'm tougher than I look, you know."
+        n 2g "But...thanks for worrying, I guess."
+    else:
+        y "I see you're back, Natsuki."
+        show natsuki 2f zorder 3 at f41
+        show yuri zorder 2 at t43
+        n "Yeah, well..."
+        n 2g "It wasn't for you or anything."
     show natsuki zorder 2 at t41
     if monika_type == 0:
         show monika zorder 3 at f42
@@ -776,13 +783,20 @@ label ch14_main:
     y "S-Sorry for saying anything..."
     show natsuki 2l zorder 3 at f41
     show yuri zorder 2 at t43
-    n "I think it's good you're speaking your mind!"
-    n "It's a lot better than you being quiet, that's for sure."
-    show natsuki zorder 2 at t41
-    show yuri 4pa zorder 3 at f43
-    y "..."
-    y "Thank you, Natsuki."
-    y "But I'm still not making any sense to you, am I?"
+    if yuri_approval >= 3 and natsuki_approval >= 3:
+        n "I think it's good you're speaking your mind!"
+        n "It's a lot better than you being quiet, that's for sure."
+        show natsuki zorder 2 at t41
+        show yuri 4pa zorder 3 at f43
+        y "..."
+        y "Thank you, Natsuki."
+        y "But I'm still not making any sense, am I?"
+    else:
+        n "Just say it already, Yuri."
+        show yuri 4pg zorder 3 at f43
+        y "..."
+        y "Well, that's what I'm trying to do."
+        y "I'm not really making any sense, am I?"
     show natsuki 2k zorder 3 at f41
     show yuri zorder 2 at t43
     n "Actually, I think I understand, at least a little bit."
@@ -799,7 +813,10 @@ label ch14_main:
     y "That's a relief."
     show natsuki 4j zorder 3 at f41
     show yuri zorder 2 at t43
-    n "If you are, then I am too."
+    if yuri_approval >= 3 and natsuki_approval >= 3:
+        n "If you are, then I am too."
+    else:
+        n "I hope I'm not going crazy too."
     n "What about you three?"
     show natsuki zorder 2 at t41
     mc "I haven't noticed anything."
@@ -823,8 +840,12 @@ label ch14_main:
     y "Maybe we're just different from everyone else..."
     show natsuki 2e zorder 3 at f41
     show yuri zorder 2 at t43
-    n "Now wait a second, Yuri!"
-    n "It can't be a coincidence that both of us are feeling this way."
+    if yuri_approval >= 3 and natsuki_approval >= 3:
+        n "Now wait a second, Yuri!"
+        n "It can't be a coincidence that both of us are feeling this way."
+    else:
+        n "You can't just say that, Yuri."
+        n "I can speak for myself."
     n 2c "Besides, we haven't even got an answer from Sayori yet!"
     show natsuki zorder 2 at t41
     show sayori 2l zorder 3 at f44

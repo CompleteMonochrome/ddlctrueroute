@@ -754,7 +754,7 @@ label ch16_main:
     show yuri zorder 3 at f22
     y "R-Right, sorry."
     "Yuri starts cleanly slicing through the tape on the box with the knife."
-    "For a wodden knife, it seems incredibly sharp."
+    "For a wooden knife, it seems incredibly sharp."
     "It's probably sharper than most knives I have in my house."
     y "Shall we take a look?"
     show yuri zorder 2 at t22
@@ -865,6 +865,218 @@ label ch16_main:
         "The book."
         "The book."
         "The book."
+        "The..."
+        "What?"
+    mc "Looks like there's another copy of the book in here."
+    mc "In case one of us forgot to bring it."
+    show yuri zorder 3 at f22
+    y "Not me, I have mine right here."
+    show natsuki zorder 3 at f21
+    show yuri zorder 2 at t22
+    n "Mine is here too."
+    show natsuki zorder 2 at t21
+    mc "Well, I know mine is..."
+    "Did I forget to bring my book?"
+    if persistent.markov_agreed:
+        "Of course not."
+        "The important book is always with me."
+        "But that other one..."
+    mc "I guess I forgot to bring mine."
+    "I take the book from the box and put the costumes back in."
+    show yuri zorder 3 at f22
+    y "Not like it matters much anyway."
+    y "We have the script, so there's not really a need to look over our books."
+    show natsuki zorder 3 at f21
+    show yuri zorder 2 at t22
+    n "You know what I think matters?"
+    if natsuki_approval >= 3 and yuri_approval >= 3:
+        $ ch16_ay_level -= 1
+        n "Monika."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Okay...what about her?"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Wait, really?"
+        n "You're gonna listen to me?"
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Of course...?"
+        y "Is there a reason I wouldn't listen to you?"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Well, no...but..."
+        n "Okay, how about [player]?"
+        show natsuki zorder 2 at t21
+        mc "Sure, we can talk about her."
+        mc "I'm not really sure what this is about."
+        mc "But there's nothing better to do."
+        mc "Besides, I think it would be better if we all did the script together anyway."
+        show yuri zorder 3 at f22
+        y "The script...?"
+        "Yuri looks at her copy of the script."
+        y "Oh, right!"
+        y "That must have been why Sayori wanted us here."
+        y "Because you were going to bring this and the other supplies."
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "That does make sense actually."
+        n "But why was she so secretive about it...?"
+        n "Anyway!"
+        n "Back to the topic at hand."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "What specifically about Monika is so important?"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "The way she's been acting."
+        n "You've noticed it too, haven't you?"
+        "Yuri is silent but softly nods her head."
+        n "And [player]."
+        if natsuki_date or ch13_name == "Natsuki":
+            n "Every time I bring her up, you go crazy."
+            n "Or defend her."
+            n "Or something like that."
+            n "So let me ask again."
+        else:
+            n "What about you?"
+        n "Have you noticed anything weird?"
+        show natsuki zorder 2 at t21
+        mc "I...can't say."
+        show natsuki zorder 3 at f21
+        n "Yeah, I thought so."
+        n "Maybe Yuri and I talking will--"
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Sorry for interrupting, Natsuki."
+        y "But something about what [player] said is bothering me..."
+        "Yuri turns towards me."
+        y "You can't or...you won't?"
+        y "There's a difference."
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Why does it matter?"
+        n "If [player_personal] doesn't wanna talk, [player_personal] doesn't have to."
+        h "It doesn't make a difference anyway."
+        show natsuki zorder 2 at t21
+        mc "I..."
+        if monika_type == 0:
+            mc "I won't."
+            mc "She's done nothing wrong."
+            "Right...?"
+            mc "But if you insist, then I guess we can talk."
+        else:
+            mc "I...can...."
+            "I'm trying to speak but I can't for some reason."
+            "I can't speak."
+            "My mind is telling me to defend Monika."
+            "What the hell?"
+            "But I just want to talk about her."
+            "There's nothing wrong this conversation so far."
+            "So why can't I say that?"
+            mc "I mean, {i}we{/i} can."
+            mc "We can talk about Monika."
+            mc "And no, I haven't noticed anything."
+        show natsuki zorder 3 at f21
+        n "Right."
+        if natsuki_date:
+            n "Do you remember at all what we talked about yesterday?"
+            n "When we got back from the mall?"
+            mc "I..."
+            mc "Some of it."
+            n "Perfect."
+        n "We've wasted enough time."
+        n "Yuri."
+        n "List down all the things you've noticed about Monika."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "All of them?"
+        y "I don't know where to start."
+        show yuri zorder 2 at t22
+        mc "Is this really a good idea?"
+        show yuri zorder 3 at f22
+        y "Let's see..."
+        y "She's been incredibly secretive lately."
+        y "She seems to have this obsession with [player]."
+        show yuri zorder 2 at t22
+        mc "Wait a sec--"
+        show yuri zorder 3 at f22
+        if monika_type == 0:
+            y "She seems like she's holding a lot in."
+            y "Like she's trying to do everything by herself."
+        else:
+            y "She seems like she's planning something today."
+            y "And for some reason I don't have a very good feeling about it."
+        y "Sorry to interrupt you, [player]."
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "I've noticed all of those things too."
+        n "I don't really know if I should show you this but..."
+        "Natsuki pulls out a book secured by a strap from her bag."
+        n "I found a journal in my home."
+        n "While I was poking around after that whole incident in the gym."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "What's that got to do with Monika?"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "It's not got to do with Monika specifically."
+        n "But the story in this journal sounds really familiar."
+        n "Except it's all written in the perspective of someone like Sayori."
+        show natsuki zorder 2 at t21
+        mc "Someone like Sayori?"
+        mc "What do you mean by that?"
+        mc "And Why was that journal even in your house?"
+        show natsuki zorder 3 at f21
+        n "I don't know why it was in my house."
+        n "I just found it and didn't tell anyone until now."
+        n "But that's not important."
+        n "This journal describes the story of the vice president of a club."
+        n "It has her emotions, her intentions, her thoughts and her actions up until her death."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "If it was in the perspective of Sayori, wouldn't it be the president's perspective?"
+        y "Unless..."
+        "Yuri suddenly grips her head."
+        y "O-Ow..."
+    else:
+        n "Mon--"
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "No."
+        "Yuri walks back towards her spot."
+        y "And quite frankly, I don't care what you think matters."
+        y "We have something more important to do."
+        y "So, if you don't mind..."
+        y "I'm going to take a look at this script."
+        if ch13_name == "Yuri" or yuri_date:
+            y "If you want, you can join me, [player]."
+            y "Otherwise, I'd like to be alone."
+        show yuri zorder 2 at t22
+        mc "Yuri..."
+        "That was kinda harsh of her."
+        mc "Natsuki, what did you want to talk about?"
+        "Natsuki looks equally as shocked as I do."
+        show natsuki zorder 3 at f21
+        n "Forget it."
+        n "It's not that important anyway."
+        n "Yuri has the right idea."
+        n "After all, this is what we came here for."
+        show natsuki zorder 2 at t21
+        mc "I guess so..."
+        "Natsuki moves back to where she was sitting before."
+        if yuri_date or (ch13_name == "Yuri" and not natsuki_date):
+            "I head towards where Yuri is sitting and sit next to her."
+            "Might as well take a look at this script while we can."
+        elif natsuki_date or (ch13_name == "Natsuki" and not yuri_date):
+            "Natsuki and I go back to where she was sitting."
+            "I move a desk and chair closer towards her and sit down."
+        else:
+            "I guess I should be here too."
+            "After all, I need to read the script too."
+            "I guess I should find my own space since the other two don't look like they want to be bothered."
+    scene bg class_day with wipeleft_scene
+
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu(confirm=False))
     return
 
