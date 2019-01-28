@@ -149,6 +149,7 @@ define audio.t1m = "<loop 22.073>mod_assets/bgm/1monika.ogg"
 # Mod Tracks - 17: Too Late
 define audio.t1c = "<loop 0.535>mod_assets/bgm/1cast.ogg"
 define audio.t2 = "<loop 4.499>bgm/2.ogg"
+define audio.t2f = "<loop 4.499>mod_assets/bgm/2f.ogg"
 define audio.t2g = "bgm/2g.ogg"
 define audio.t2g2 = "<from 4.499 loop 4.499>bgm/2.ogg"
 define audio.t2g3 = "<loop 4.492>bgm/2g2.ogg"
@@ -4448,6 +4449,7 @@ image bg bedroom_gray = im.Grayscale("bg/bedroom.png")
 image bg m_livingroom_gray = im.Grayscale("mod_assets/images/bg/m_livingroom.png")
 image bg mall_day_gray = im.Grayscale("mod_assets/images/bg/mall_day.png")
 image bg n_house_day_gray = im.Grayscale("mod_assets/images/bg/n_house_day.png")
+image bg n_hitroom_gray = im.Grayscale("mod_assets/images/bg/n_hitroom.png")
 image bg ay_house_gray = im.Grayscale("mod_assets/images/bg/ay_house.png")
 image bg ay_livingroom_gray = im.Grayscale("mod_assets/images/bg/ay_livingroom.png")
 image bg random_gray:
@@ -4496,7 +4498,9 @@ image sayori 4bl_gray = im.Grayscale("mod_assets/images/sayori/preset/4bl.png")
 image sayori 4by_gray = im.Grayscale("mod_assets/images/sayori/preset/4by.png")
 image natsuki 1q_gray = im.Grayscale("mod_assets/images/natsuki/preset/1q.png")
 image natsuki 5g_gray = im.Grayscale("mod_assets/images/natsuki/preset/5g.png")
+image natsuki 2bg_gray = im.Grayscale("mod_assets/images/natsuki/preset/2bg.png")
 image natsuki 2bj_gray = im.Grayscale("mod_assets/images/natsuki/preset/2bj.png")
+image natsuki 2bq_gray = im.Grayscale("mod_assets/images/natsuki/preset/2bg.png")
 image yuri 3w_gray = im.Grayscale("mod_assets/images/yuri/preset/3w.png")
 image yuri 4c_gray = im.Grayscale("mod_assets/images/yuri/preset/4c.png")
 image yuri 2bq_gray = im.Grayscale("mod_assets/images/yuri/preset/2bq.png")

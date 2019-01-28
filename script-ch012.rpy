@@ -383,8 +383,8 @@ label ch12_main:
         mc "Natsuki and Yuri are hanging out together."
         mc "They even talked about the manga on the way here."
     else:
-        mc "Natsuki and Yuri are talking."
-        mc "They don't seem like they're close friends just yet but at least they're interacting."
+        mc "Natsuki and Yuri are becoming closer friends...I think."
+        mc "They're not quite there just yet but at least they're interacting."
     if monika_type == 0:
         mc "And Monika and I have been getting closer too..."
     elif visited_yuri_hospital:

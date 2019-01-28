@@ -2324,7 +2324,7 @@ label ch13_exclusive_natsuki:
         "The events in the last few weeks have been pretty...exciting."
         "Wishing for something normal isn't so bad."
         # Check if player can go on date with Natsuki
-        if n_appeal >= 4 and n_appealS >= 1:
+        if n_appeal >= 4 and n_appealS >= 1 and ((sayori_dumped and sayori_confess) or not sayori_confess):
             "But that does present a problem."
             "It's pretty obvious that I like her at this point."
             "I've written every single poem ever since the start of the second week for her."
