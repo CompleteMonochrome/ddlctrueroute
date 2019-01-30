@@ -372,6 +372,7 @@ image bg city_sunset = "mod_assets/images/bg/city_sunset.png"
 image bg portraitshop_day = "mod_assets/images/bg/portraitshop_day.png"
 image bg portraitshop_sunset = "mod_assets/images/bg/portraitshop_sunset.png"
 image bg portraitshop_space = "mod_assets/images/bg/portraitshop_space.png"
+image bg portraitshop_space = "mod_assets/images/bg/portraitshop_school.png"
 image bg marina_day = "mod_assets/images/bg/marina_day.png"
 image bg marina_sunset = "mod_assets/images/bg/marina_sunset.png"
 image bg marina_fog = "mod_assets/images/bg/marina_fog.png"
@@ -3111,6 +3112,9 @@ image dadsuki 1n = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1
 image dadsuki 1o = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1o.png")
 image dadsuki 1p = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1p.png")
 
+# Young Dadsuki
+image dadsuki 1younga = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/young_yasuhiro.png")
+
 # Momsuki
 image momsuki 1 = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/a.png")
 image momsuki 1a = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/a.png")
@@ -3122,6 +3126,12 @@ image momsuki 1f = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1
 image momsuki 1g = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/g.png")
 image momsuki 1h = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/h.png")
 image momsuki 1i = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/i.png")
+
+# Young Momsuki
+image momsuki 1younga = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/young_haruki.png")
+
+# Young Mysterious Person - Just Use Sayori As Base
+image sayori 1younga = im.Composite((960, 960), (0, 0), "mod_assets/images/misc/young_pres.png")
 
 # Mysterious Clerk
 image mysteriousclerk 1a = im.Composite((960, 960), (0, 0), "mod_assets/images/mysteriousclerk/1l.png", (0, 0), "mod_assets/images/mysteriousclerk/1r.png", (0, 0), "mod_assets/images/mysteriousclerk/a.png")

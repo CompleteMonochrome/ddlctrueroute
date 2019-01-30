@@ -1094,6 +1094,8 @@ label ch16_main:
             mc "I felt so much more...free in there."
             $ currentpos = get_pos()
             $ audio.t2fb = "<from " + str(currentpos) + " loop 4.499>mod_assets/bgm/2f.ogg"
+            scene white with dissolve_cg
+            play sound "mod_assets/sfx/swoosh.ogg"
             scene bg n_hitroom_gray
             show natsuki 2bq_gray zorder 2 at t11
             with dissolve_scene_full
@@ -1115,6 +1117,7 @@ label ch16_main:
             n "As in the president of the{nw}"
             $ currentpos = get_pos()
             $ audio.t2c = "<from " + str(currentpos) + " loop 4.499>bgm/2.ogg"
+            scene white with dissolve_cg
             scene bg club_day
             show natsuki 2e zorder 2 at f21
             show yuri 3q zorder 2 at t22
@@ -1134,10 +1137,10 @@ label ch16_main:
             show natsuki zorder 2 at t21
             show yuri zorder 3 at f22
             y "I suppose that's one way to interpret it."
-            y "But none of us know anyone in executive office, do we?"
+            y "But none of us knows anyone in executive office, do we?"
             show natsuki zorder 3 at f21
             show yuri zorder 2 at t22
-            n "That's just it Yuri."
+            n "That's just it, Yuri."
             n "What if it in a more general sense?"
             n "As in the president of--"
             show natsuki zorder 2 at t21
@@ -1172,6 +1175,56 @@ label ch16_main:
         show sayori zorder 3 at f32
         s "What are you guys talking in secret for?"
         s "Come on, we have work to do!"
+        s "How far did you all get through it anyway?"
+        show sayori zorder 2 at t32
+        show yuri zorder 3 at f33
+        y "W-Well, we..."
+        y "We didn't really get to start reading the script."
+        show sayori zorder 3 at f32
+        show yuri zorder 2 at t33
+        s "You didn't?"
+        s "But you guys have been here a while, haven't you?"
+        s "So how come you haven't done anything yet?"
+        show sayori zorder 2 at t32
+        mc "We were discussing other things."
+        mc "It still kinda relates to the play."
+        show natsuki zorder 3 at f31
+        n "Trust me, you don't want to know."
+        "Natsuki nudges my arm."
+        n "Right, you two?"
+        show natsuki zorder 2 at t31
+        show yuri zorder 3 at f33
+        y "R-Right..."
+        y "The details are...gruesome."
+        show sayori zorder 3 at f32
+        show yuri zorder 2 at t33
+        s "O...kay..."
+        s "Sure, if you don't want me to know I won't ask."
+        "Sayori picks up the box I struggled to get inside the classroom."
+        s "Anyway, we really need to get to it."
+        s "Come on, you three. Follow me."
+        show sayori at thide
+        hide sayori
+        show natsuki zorder 2 at t21
+        show yuri zorder 2 at t22
+        "Sayori beckons for the three of us to follow her out."
+        show natsuki zorder 3 at f21
+        n "Some timing she's got."
+        n "It's all starting to make sense."
+        n "For now, just play along with it."
+        n "And don't tell her anything, okay?"
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "I don't like plotting against my friends, Natsuki..."
+        y "But I need to know whatever this truth is."
+        y "So I'll continue this charade for a little longer."
+        show yuri zorder 2 at t22
+        mc "I'm like an accomplice now, aren't I?"
+        mc "I guess the sooner we figure this out, the sooner I can tell her everything."
+        mc "So let's go."
+        show natsuki zorder 3 at f21
+        n "Right."
+        n "After you."
     else:
         n "Mon--"
         show natsuki zorder 2 at t21
@@ -1215,7 +1268,7 @@ label ch16_main:
             "Yuri turns the pages on her script until she notices a page with lines from her character."
             "I do the same and we say the lines out loud and in character to the best of our ability."
             "For lines involving other characters, we just skip over them."
-            "It seems like we're doing a good job but I don't know if the audience will feel the same."
+            "It seems like we're doing a good job but I don't know if the audience is going to feel the same."
             "I notice Natsuki looking at us and as she notices me, she turns back to her script."
             "Yuri taps me on the shoulder and points me back to the script."
             y "Stay focused."
@@ -1256,7 +1309,7 @@ label ch16_main:
             "Natsuki flicks through the first pages of the script then stops once she notices a page with her character."
             "She starts speaking as if she was the character from the script and I follow her lead."
             "Without speaking, we both decide to skip lines said by other characters."
-            "I feel like we're doing a pretty good job but I don't know if the audience will feel the same."
+            "I feel like we're doing a pretty good job but I don't know if the audience is going to feel the same."
             "I can see Yuri reacting to the noise we're making."
             "We make eye contact and immediately she skittishly goes back to reading her own script."
             n "What are you doing?"
@@ -1264,7 +1317,7 @@ label ch16_main:
             mc "What's the deal with the two of you anyway?"
             n "There is no deal."
             n "I just don't wanna talk to her."
-            n "It's like everytime I do have to, I just feel terrible."
+            n "It's like every time I do have to, I just feel terrible."
             n "I wouldn't say that to her face though."
             n "I'm not {i}that{/i} mean."
             mc "Did something happen between you two?"
@@ -1335,8 +1388,205 @@ label ch16_main:
         show yuri zorder 2 at t33
         s "Just making sure you're all ready."
         s "I can see you've all got the script already."
-    scene bg class_day with wipeleft_scene
-
+        s "How far did you all get?"
+        show sayori zorder 2 at t32
+        mc "We're around halfway done reading the script."
+        mc "It shouldn't take too long to finish it off."
+        mc "Are you sure we can do this without multiple rehearsals though?"
+        show sayori zorder 3 at f32
+        s "That's partly why I'm here right now."
+        s "So come on, you three."
+        s "Follow me."
+        show sayori at thide
+        hide sayori
+        show natsuki zorder 2 at t21
+        show yuri zorder 2 at t22
+        "Sayori exits the clubroom and beckons for us to follow her."
+        mc "I guess we should follow her, right?"
+        mc "I wonder where she's gonna take us."
+        show natsuki zorder 3 at f21
+        n "Hopefully not far."
+        n "There's still the script to deal with."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "I suppose we'll just have to find out what she has in store for us."
+        y "I don't have a good feeling about this."
+    scene bg portraitshop_school with wipeleft_scene
+    if ch13_name == "Natsuki":
+        "Sayori takes us to the place I went to with Natsuki to do some preparations at school."
+        "There doesn't seem to be anywhere here right now either."
+        "But that's probably because it's too early."
+    else:
+        "Sayori leads us to a part of the school I've never been to before."
+        "I think it's where the people in their senior year go."
+        "There's no one here and usually I'd find that eery but it is pretty early so it makes sense no one is here yet."
+    "She took us into one of the classrooms."
+    "I don't know much about the design of this area of the school."
+    "But..."
+    if natsuki_date or ch15_s_together:
+        "It feels...oddly familiar somehow."
+    else:
+        "There's something about this room that just feels...different."
+    show sayori 1a zorder 3 at t11
+    s "Alright, everybody!"
+    s "We're here!"
+    show natsuki 1a zorder 3 at f31
+    n "Where is exactly is 'here'?"
+    n "You just picked a random classroom and opened it."
+    n "And what are we even doing here?"
+    show natsuki zorder 2 at t31
+    show yuri zorder 3 at f33
+    y "I don't like this place."
+    y "But if we have to be here, then so be it."
+    show sayori zorder 3 at f32
+    show yuri zorder 2 at t33
+    s "Oh, come on."
+    s "What's so about this place?"
+    if ch16_ay_perspective:
+        s "It's perfectly fine.{nw}"
+        $ _history_list.pop()
+        show screen tear(8, offtimeMult=1, ontimeMult=10)
+        $ pause(1.0)
+        scene bg portraitshop_school
+        hide screen tear
+        $ pause(1.0)
+        window show(None)
+        $ s_name = "???"
+        $ d_name = "???"
+        $ mo_name = "???"
+        show sayori 1younga zorder 2 at i11
+        s "It's perfectly fine.{fast}"
+        window auto
+        show momsuki 1younga zorder 3 at f31
+        mo "It's not the biggest space..."
+        mo "But it is kinda cosy, isn't it?"
+        mo "I think I'll like it here."
+        show momsuki zorder 2 at t31
+        show dadsuki 1younga zorder 3 at f33
+        d "I can't believe you guys talked me into this."
+        d "I mean, she doesn't even like the same stuff I do."
+        "He points towards me."
+        d "I mean how is this even going to work?"
+        show sayori zorder 3 at f32
+        show dadsuki zorder 2 at t33
+        s "Oh, calm down."
+        s "It's a book club."
+        s "And we need four people to start it."
+        s "So can the two of you please just get along?"
+        show sayori zorder 2 at t32
+        show dadsuki zorder 3 at f33
+        d "Fine."
+        d "But only because you need me to start the club."
+        show momsuki zorder 3 at f31
+        show dadsuki zorder 2 at t33
+        mo "Ahaha, you're kinda cute when you try to act tough."
+        show momsuki zorder 2 at t31
+        show dadsuki zorder 3 at f33
+        d "Y-You think so?"
+        d "I-I mean...!"
+        d "Shut up!"
+        show sayori zorder 3 at f32
+        show dadsuki zorder 2 at t33
+        s "Well, what about you?"
+        s "Are you up for this?"
+        s "There's no turning back after this."
+        show momsuki zorder 3 at f31
+        show sayori zorder 2 at t32
+        mo "Yeah, it's all up to you."
+        mo "You don't have to like each other but you can at the very least tolerate each other."
+        mo "Maybe even become friends, over time."
+        mo "You can do that..."
+        mo "Right...Ayame?{nw}"
+        show screen tear(8, offtimeMult=1, ontimeMult=10)
+        $ pause(1.0)
+        scene bg portraitshop_school
+        hide screen tear
+        $ pause(1.0)
+        window show(None)
+        $ s_name = "Sayori"
+        $ d_name = "Yasuhiro"
+        $ mo_name = "Haruki"
+        show natsuki 1a zorder 2 at i31
+        show sayori 1a zorder 2 at i32
+        show yuri 1a zorder 2 at i33
+        "What was that...?"
+        window auto
+        "That weren't my memories."
+        "I didn't recognize any of those people."
+        "But that room."
+        "It's...the same as this one?"
+        "What does this all mean...?"
+        show sayori zorder 3 at f32
+        s "Hellooooooo?"
+        s "[player]?"
+        show sayori zorder 2 at t32
+        mc "W-What?"
+        show natsuki zorder 3 at f31
+        n "Uhh...are you okay?"
+        n "Because you don't look like you're okay."
+        show natsuki zorder 2 at t31
+        mc "I think I'm okay..."
+        mc "Why? What happened?"
+        show natsuki zorder 2 at t31
+        show yuri zorder 3 at f33
+        y "You just kinda stood there."
+        y "You wouldn't respond to anything we said."
+        y "You wouldn't even blink."
+        show yuri zorder 2 at t33
+        mc "Well, I'm fine now."
+        mc "I just had a weird thought."
+        mc "Sorry for worrying you guys."
+        show sayori zorder 3 at f32
+        s "Well, if you have any more of those..."
+        s "Let me know, okay?"
+    else:
+        s "It's perfectly fine."
+    s "Anyway, the reason I brought you all here is because I need you all to give me some DNA."
+    show natsuki zorder 3 at f31
+    show sayori zorder 2 at t32
+    n "DNA?!"
+    n "What do you need that for?"
+    show natsuki zorder 2 at t31
+    show sayori zorder 3 at f32
+    s "Just a piece of hair or something."
+    s "The...principal said it's for all participants."
+    s "So if you have any complaints, then go to him."
+    show sayori zorder 2 at t32
+    show yuri zorder 3 at f33
+    y "Okay, here."
+    "Yuri pulls out a knife from her pocket and cuts a small piece of her hair."
+    y "This is enough, right?"
+    show sayori zorder 3 at f32
+    show yuri zorder 2 at t33
+    s "Well, I wasn't expecting that."
+    "Sayori takes the pieces of hair from Yuri."
+    s "Thanks, Yuri!"
+    s "Now how about the two of you?"
+    show natsuki zorder 3 at f31
+    show sayori zorder 2 at t32
+    n "I really don't see what this has to do with anything."
+    n "But okay, fine."
+    if yuri_approval >= 3 and natsui_approval >= 3:
+        show natsuki zorder 2 at t31
+        show yuri zorder 3 at f33
+        y "Do you want me to cut your hair off for you?"
+        y "I already have the knife out after all."
+        show natsuki zorder 3 at f31
+        show yuri zorder 2 at t33
+        n "Um...sure."
+        n "Just cut this part off."
+        "Natsuki points to a point in her hair that isn't really noticeable."
+        "Yuri obliges and cuts it off."
+        n "Why do you even need this?"
+    else:
+        "Natsuki looks into her bag and pulls out a pair of scissors."
+        "She stares at them for a couple of seconds before taking a deep breath and cutting off a piece of her hair."
+        n "I hope you're satisfied."
+    show natsuki zorder 2 at t31
+    "Natsuki hands the piece of hair to Sayori."
+    show sayori zorder 3 at f32
+    s "Thank you."
+    s "Now, [player]."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu(confirm=False))
     return
 

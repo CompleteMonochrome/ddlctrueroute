@@ -6172,6 +6172,8 @@ label ch15_mall_shared:
     m 4be "Don't you remember what she said a few days after [player] joined?"
     $ currentpos = get_pos()
     $ audio.t3fb = "<from " + str(currentpos) + " loop 4.618>mod_assets/bgm/3f.ogg"
+    scene white with dissolve_cg
+    play sound "mod_assets/sfx/swoosh.ogg"
     scene bg club_day_gray
     show sayori 1g_gray zorder 2 at t41
     show natsuki 5g_gray zorder 2 at t42
@@ -6194,6 +6196,7 @@ label ch15_mall_shared:
     s "And having fun!"
     $ currentpos = get_pos()
     $ audio.t3c = "<from " + str(currentpos) + " loop 4.618>bgm/3.ogg"
+    scene white with dissolve_cg
     scene bg mall_interior
     show natsuki 2be zorder 2 at t31
     show yuri 3bq zorder 2 at t32
