@@ -1,6 +1,6 @@
 define persistent.demo = False
 define persistent.steam = ("steamapps" in config.basedir.lower())
-define config.developer = False
+define config.developer = True
 
 python early:
     import singleton
@@ -372,7 +372,7 @@ image bg city_sunset = "mod_assets/images/bg/city_sunset.png"
 image bg portraitshop_day = "mod_assets/images/bg/portraitshop_day.png"
 image bg portraitshop_sunset = "mod_assets/images/bg/portraitshop_sunset.png"
 image bg portraitshop_space = "mod_assets/images/bg/portraitshop_space.png"
-image bg portraitshop_space = "mod_assets/images/bg/portraitshop_school.png"
+image bg portraitshop_school = "mod_assets/images/bg/portraitshop_school.png"
 image bg marina_day = "mod_assets/images/bg/marina_day.png"
 image bg marina_sunset = "mod_assets/images/bg/marina_sunset.png"
 image bg marina_fog = "mod_assets/images/bg/marina_fog.png"
@@ -3126,6 +3126,16 @@ image momsuki 1f = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1
 image momsuki 1g = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/g.png")
 image momsuki 1h = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/h.png")
 image momsuki 1i = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/i.png")
+
+image momsuki 2a = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/2lr.png", (0, 0), "mod_assets/images/momsuki/a.png")
+image momsuki 2b = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/2lr.png", (0, 0), "mod_assets/images/momsuki/b.png")
+image momsuki 2c = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/2lr.png", (0, 0), "mod_assets/images/momsuki/c.png")
+image momsuki 2d = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/2lr.png", (0, 0), "mod_assets/images/momsuki/d.png")
+image momsuki 2e = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/2lr.png", (0, 0), "mod_assets/images/momsuki/e.png")
+image momsuki 2f = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/2lr.png", (0, 0), "mod_assets/images/momsuki/f.png")
+image momsuki 2g = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/2lr.png", (0, 0), "mod_assets/images/momsuki/g.png")
+image momsuki 2h = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/2lr.png", (0, 0), "mod_assets/images/momsuki/h.png")
+image momsuki 2i = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/2lr.png", (0, 0), "mod_assets/images/momsuki/i.png")
 
 # Young Momsuki
 image momsuki 1younga = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/young_haruki.png")

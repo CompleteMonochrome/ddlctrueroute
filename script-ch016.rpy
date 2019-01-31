@@ -1141,8 +1141,9 @@ label ch16_main:
             show natsuki zorder 3 at f21
             show yuri zorder 2 at t22
             n "That's just it, Yuri."
-            n "What if it in a more general sense?"
-            n "As in the president of--"
+            n "What if it was meant in a more general sense?"
+            n "Something more relatable to us..."
+            n "...like the president of--"
             show natsuki zorder 2 at t21
         show natsuki zorder 2 at t31
         show sayori zorder 3 at f32
@@ -1438,28 +1439,28 @@ label ch16_main:
     show yuri zorder 3 at f33
     y "I don't like this place."
     y "But if we have to be here, then so be it."
-    show sayori zorder 3 at f32
+    show sayori 2d zorder 3 at f32
     show yuri zorder 2 at t33
     s "Oh, come on."
-    s "What's so about this place?"
+    s "What's so bad about this place?"
     if ch16_ay_perspective:
         s "It's perfectly fine.{nw}"
         $ _history_list.pop()
-        show screen tear(8, offtimeMult=1, ontimeMult=10)
+        show screen tear(20, 3, 2, 0, 70)
         $ pause(1.0)
         scene bg portraitshop_school
+        show sayori 1younga zorder 2 at i11
         hide screen tear
         $ pause(1.0)
         window show(None)
         $ s_name = "???"
         $ d_name = "???"
         $ mo_name = "???"
-        show sayori 1younga zorder 2 at i11
         s "It's perfectly fine.{fast}"
         window auto
         show momsuki 1younga zorder 3 at f31
         mo "It's not the biggest space..."
-        mo "But it is kinda cosy, isn't it?"
+        mo "But it is kinda cozy, isn't it?"
         mo "I think I'll like it here."
         show momsuki zorder 2 at t31
         show dadsuki 1younga zorder 3 at f33
@@ -1490,26 +1491,28 @@ label ch16_main:
         s "Well, what about you?"
         s "Are you up for this?"
         s "There's no turning back after this."
+        s "Once you join, you're stuck with us."
         show momsuki zorder 3 at f31
         show sayori zorder 2 at t32
         mo "Yeah, it's all up to you."
         mo "You don't have to like each other but you can at the very least tolerate each other."
         mo "Maybe even become friends, over time."
-        mo "You can do that..."
-        mo "Right...Ayame?{nw}"
-        show screen tear(8, offtimeMult=1, ontimeMult=10)
+        mo "You can do that, I know you can."
+        mo "Right..."
+        mo "...Ayame?{nw}"
+        show screen tear(20, 3, 2, 0, 70)
         $ pause(1.0)
         scene bg portraitshop_school
+        show natsuki 1a zorder 2 at i31
+        show sayori 1a zorder 2 at i32
+        show yuri 1a zorder 2 at i33
         hide screen tear
         $ pause(1.0)
         window show(None)
         $ s_name = "Sayori"
         $ d_name = "Yasuhiro"
         $ mo_name = "Haruki"
-        show natsuki 1a zorder 2 at i31
-        show sayori 1a zorder 2 at i32
-        show yuri 1a zorder 2 at i33
-        "What was that...?"
+        "What was that...?{fast}"
         window auto
         "That weren't my memories."
         "I didn't recognize any of those people."
@@ -1566,7 +1569,7 @@ label ch16_main:
     show sayori zorder 2 at t32
     n "I really don't see what this has to do with anything."
     n "But okay, fine."
-    if yuri_approval >= 3 and natsui_approval >= 3:
+    if yuri_approval >= 3 and natsuki_approval >= 3:
         show natsuki zorder 2 at t31
         show yuri zorder 3 at f33
         y "Do you want me to cut your hair off for you?"
@@ -1587,6 +1590,102 @@ label ch16_main:
     show sayori zorder 3 at f32
     s "Thank you."
     s "Now, [player]."
+    s "It's your turn."
+    show sayori zorder 2 at t32
+    mc "I still don't know why the principal would need this."
+    mc "But you know best, Sayori."
+    mc "So I'll do it."
+    show yuri zorder 3 at f33
+    y "D-Do you want me to cut it off for you?"
+    y "It won't take a moment, I promise."
+    show yuri zorder 2 at t33
+    mc "Oh...alright."
+    "Yuri moves up to me and takes out the knife she used to cut her own hair."
+    "Does she just carry knives for every occasion?"
+    mc "Just find a spot that doesn't look too obvious."
+    show yuri zorder 3 at f33
+    y "It's only a single piece of hair."
+    y "I'm sure no one will notice."
+    "I feel my hair being cut by the knife Yuri has."
+    y "There, all done."
+    show yuri zorder 2 at t33
+    "She offers me the piece of hair she cut."
+    mc "Thanks, Yuri."
+    "I give the piece of hair to Sayori."
+    if ch15_s_together:
+        "As I give it to her, I hear her whisper something."
+        show sayori zorder 3 at f32
+        s "I'll explain everything."
+        s "Just be patient, [player]."
+    else:
+        show sayori zorder 3 at f32
+        s "You three are all done!"
+        s "I just need to find Monika."
+    show natsuki zorder 3 at f31
+    show sayori zorder 2 at t32
+    n "Okay, now why are we here?"
+    n "This room isn't any better than the clubroom."
+    n "And quite frankly..."
+    n "It gives me a bad feeling."
+    show natsuki zorder 2 at t31
+    show sayori zorder 3 at f32
+    s "This room is where we're going to be rehearsing."
+    s "So I thought I'd familiarize you all."
+    show sayori zorder 2 at t32
+    show yuri zorder 3 at f33
+    y "But why this room?"
+    y "It's just as spacious as the clubroom..."
+    y "N-Not that I really mind."
+    show sayori zorder 3 at f32
+    show yuri zorder 2 at t33
+    s "W-Well..."
+    "Sayori begins to mutter."
+    s "You see..."
+    s "No one really passes through here right now."
+    s "It's mostly empty."
+    s "So that way, no one can see us rehearsing."
+    s "I know some of you might be embarrassed so..."
+    show sayori zorder 2 at t32
+    show yuri zorder 3 at f33
+    y "That's rather thoughtful of you."
+    y "Though you should have just told us to meet here in the first place."
+    show natsuki zorder 3 at f31
+    show sayori zorder 2 at t32
+    n "Yeah, way to waste our time."
+    n "But whatever, I guess that's a good enough reason."
+    show natsuki zorder 2 at t31
+    show sayori zorder 3 at f32
+    s "I didn't realize how much time has passed."
+    s "I guess we should have walked faster to get here."
+    s "School is almost starting, so maybe we should all go get ready."
+    s "Meet here for the club meeting."
+    s "I'll be sure to let "
+    show sayori zorder 2 at t32
+    mc "Good idea."
+    if natsuki_date:
+        mc "Let's go, Natsuki."
+    elif yuri_date:
+        mc "Shall we go, Yuri?"
+    elif ch15_s_together:
+        show sayori zorder 3 at f32
+        s "The two of you can go."
+        s "I need to talk to [player]."
+        s "In private."
+    elif ch13_name == "Sayori" or (sayori_confess and not sayori_dumped):
+        mc "Do you want to go together, Sayori?"
+        show sayori zorder 3 at f32
+        s "Actually...I was gonna stay here."
+        s "Just go without me."
+        s "I'll see you later anyway."
+        show sayori zorder 2 at t32
+        mc "If you say so..."
+        "I wonder what has her so preoccupied."
+    else:
+        mc "Guess I'll go by myself then."
+        mc "I'll see you all later."
+        show natsuki zorder 3 at f21
+        n "You guys better remember."
+    scene bg school_front with wipeleft_scene
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu(confirm=False))
     return
 

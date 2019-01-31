@@ -2243,6 +2243,7 @@ label ch15_exclusive_yuri:
     y 2bf "It will go away when we perform."
     y "At least, I hope it will."
     y 2bq "We haven't even rehearsed yet, so at this point I have to have confidence in that idea."
+    y "Besides, I trust in what Sayori said."
     mc "Interesting take on things."
     mc "Is it working out for you?"
     y 3ba "I suppose so."
