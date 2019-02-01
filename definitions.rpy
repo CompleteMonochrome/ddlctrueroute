@@ -1,6 +1,6 @@
 define persistent.demo = False
 define persistent.steam = ("steamapps" in config.basedir.lower())
-define config.developer = True
+define config.developer = False
 
 python early:
     import singleton
@@ -373,6 +373,19 @@ image bg portraitshop_day = "mod_assets/images/bg/portraitshop_day.png"
 image bg portraitshop_sunset = "mod_assets/images/bg/portraitshop_sunset.png"
 image bg portraitshop_space = "mod_assets/images/bg/portraitshop_space.png"
 image bg portraitshop_school = "mod_assets/images/bg/portraitshop_school.png"
+image bg portraitshop_empty = "mod_assets/images/bg/portraitshop_empty.png"
+image bg portraitshop_transition_shop:
+    "mod_assets/images/bg/portraitshop_school.png"
+    1.0
+    "mod_assets/images/bg/portraitshop_empty.png" with Dissolve(0.75)
+    1.75
+    "mod_assets/images/bg/portraitshop_day.png" with Dissolve(0.75)
+image bg portraitshop_transition_school:
+    "mod_assets/images/bg/portraitshop_day.png"
+    1.0
+    "mod_assets/images/bg/portraitshop_empty.png" with Dissolve(0.75)
+    1.75
+    "mod_assets/images/bg/portraitshop_school.png" with Dissolve(0.75)
 image bg marina_day = "mod_assets/images/bg/marina_day.png"
 image bg marina_sunset = "mod_assets/images/bg/marina_sunset.png"
 image bg marina_fog = "mod_assets/images/bg/marina_fog.png"
@@ -3113,7 +3126,11 @@ image dadsuki 1o = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1
 image dadsuki 1p = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/1p.png")
 
 # Young Dadsuki
-image dadsuki 1younga = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/young_yasuhiro.png")
+image dadsuki 1younga = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/young_yasuhiro_1.png")
+image dadsuki 2younga = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/young_yasuhiro_2.png")
+image dadsuki 3younga = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/young_yasuhiro_3.png")
+image dadsuki 4younga = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/young_yasuhiro_4.png")
+image dadsuki 5younga = im.Composite((960, 960), (0, 0), "mod_assets/images/dadsuki/young_yasuhiro_5.png")
 
 # Momsuki
 image momsuki 1 = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/1lr.png", (0, 0), "mod_assets/images/momsuki/a.png")
@@ -3138,10 +3155,20 @@ image momsuki 2h = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/2
 image momsuki 2i = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/2lr.png", (0, 0), "mod_assets/images/momsuki/i.png")
 
 # Young Momsuki
-image momsuki 1younga = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/young_haruki.png")
+image momsuki 1younga = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/young_haruki_1.png")
+image momsuki 2younga = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/young_haruki_2.png")
+image momsuki 3younga = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/young_haruki_3.png")
+image momsuki 4younga = im.Composite((960, 960), (0, 0), "mod_assets/images/momsuki/young_haruki_4.png")
 
 # Young Mysterious Person - Just Use Sayori As Base
-image sayori 1younga = im.Composite((960, 960), (0, 0), "mod_assets/images/misc/young_pres.png")
+image sayori 1younga = im.Composite((960, 960), (0, 0), "mod_assets/images/misc/young_pres_1.png")
+image sayori 2younga = im.Composite((960, 960), (0, 0), "mod_assets/images/misc/young_pres_2.png")
+image sayori 3younga = im.Composite((960, 960), (0, 0), "mod_assets/images/misc/young_pres_3.png")
+image sayori 4younga = im.Composite((960, 960), (0, 0), "mod_assets/images/misc/young_pres_4.png")
+image sayori 5younga = im.Composite((960, 960), (0, 0), "mod_assets/images/misc/young_pres_5.png")
+image sayori 6younga = im.Composite((960, 960), (0, 0), "mod_assets/images/misc/young_pres_6.png")
+image sayori 7younga = im.Composite((960, 960), (0, 0), "mod_assets/images/misc/young_pres_7.png")
+image sayori 8younga = im.Composite((960, 960), (0, 0), "mod_assets/images/misc/young_pres_8.png")
 
 # Mysterious Clerk
 image mysteriousclerk 1a = im.Composite((960, 960), (0, 0), "mod_assets/images/mysteriousclerk/1l.png", (0, 0), "mod_assets/images/mysteriousclerk/1r.png", (0, 0), "mod_assets/images/mysteriousclerk/a.png")
@@ -4777,7 +4804,8 @@ default ch15_s_kiss_choice = False
 default ch16_poem_ending = 3
 default ch16_ay_perspective = False
 default ch16_ay_level = 10
-default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","???","???","???","???","???"]
+default ch16_cl_realname = False
+default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","Inauguration Day","???","???","???","???"]
 default special_chapter = False
 default christmas_chapter = False
 default christmas_gifts = ["plush","knife","manga","Xileh","bracelet"]

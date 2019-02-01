@@ -650,8 +650,10 @@ label after_load:
         $ ch16_ay_perspective = False
     if not hasattr(store,'ch16_ay_level'):
         $ ch16_ay_level = 10
+    if not hasattr(store,'ch16_cl_realname'):
+        $ ch16_cl_realname = False
     if not hasattr(store, 'chapter_names'):
-        $ chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","???","???","???","???","???"]
+        $ chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","Inauguration Day","???","???","???","???"]
     if not hasattr(store, 'special_chapter'):
         $ special_chapter = False
     if not hasattr(store, 'christmas_chapter'):
