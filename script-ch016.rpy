@@ -25,7 +25,7 @@ label ch16_main:
     "But I never wrote one."
     "I didn't have any in my bag."
     "I don't know."
-    "I get the feeling It was some kind of message."
+    "I get the feeling it was some kind of message."
     "Anyway..."
     $ ay_pers_chance = renpy.random.randint(1,20)
     if ch15_s_together and ay_pers_chance == 20:
@@ -172,14 +172,23 @@ label ch16_main:
             m 1c "Looking for me?"
             m "Why would you be looking for me?"
             mc "I just wanted to wish you luck."
-            mc "And...you know."
-            mc "What you said last night."
-            m 1e "Don't worry."
-            m "I'll have everything you want to know."
-            m "But {i}after{/i} this is over, okay?"
-            mc "Okay."
-            mc "I look forward to it."
-            m 1j "As do I."
+            if ch13_name == "Monika":
+                mc "And...you know."
+                mc "What you said last night."
+                m 1e "Don't worry."
+                m "I'll have everything you want to know."
+                m "But {i}after{/i} this is over, okay?"
+                mc "Okay."
+                mc "I look forward to it."
+                m 1j "As do I."
+            else:
+                m 2b "Thanks, [player]~"
+                m "That means a lot!"
+                mc "Knowing you, you probably won't need it."
+                m 2e "Ahaha, maybe..."
+                m "Anyway, I have to go."
+                m 1j "See you later."
+                mc "Goodbye, Monika."
             show monika at thide
             hide monika
         else:
@@ -1494,7 +1503,7 @@ label ch16_main:
     s "Alright, everybody!"
     s "We're here!"
     show natsuki 1c zorder 3 at f31
-    n "Where is exactly is 'here'?"
+    n "Where exactly is 'here'?"
     n "You just picked a random classroom in {i}that{/i} building and opened it."
     n 2e "And what are we even doing here?"
     show natsuki zorder 2 at t31
@@ -1607,7 +1616,7 @@ label ch16_main:
         s "Let me know, okay?"
     else:
         s 2l "It's perfectly fine."
-    s 1a "Anyway, the reason I brought you all here is to orient you all with the classroom,"
+    s 1a "Anyway, the reason I brought you all here is to orient you all with the classroom."
     s "And because I need you all to give me some DNA."
     show natsuki 2o zorder 3 at hf31
     show sayori zorder 2 at t32
@@ -1720,7 +1729,7 @@ label ch16_main:
     y "That's rather thoughtful of you."
     y "Though you should have just told us to meet here in the first place."
     show natsuki 2g zorder 3 at f31
-    show sayori zorder 2 at t32
+    show yuri zorder 2 at t33
     n "Yeah, way to waste our time."
     n "But whatever, I guess that's a good enough reason."
     show natsuki zorder 2 at t31
@@ -1872,17 +1881,17 @@ label ch16_main:
         mc "I guess he did help me at the gym but I doubt he was here just to help me do some heavy lifting."
         mc "But his helpfulness is more to do with yesterday, isn't it?"
         mc "And this memories thing..."
-        show mysteriousclerk 4e zorder 2 at t22
+        show mysteriousclerk 4b zorder 3 at f22
         cl "Ding, ding!"
         cl "You're right about that."
-        "The stares at me intently then man sighs."
+        "The man stares at me intently then sighs."
         cl 2c "I quite liked being mysterious."
         cl "But I guess if we're being fully truthful here..."
         cl 2d "Then I should introduce myself properly."
         cl "Especially if we're gonna trust each other."
         show sayori 1c zorder 3 at f21
         show mysteriousclerk zorder 2 at t22
-        s "You're gonna tell [player_possessive]?"
+        s "You're gonna tell [player_reflexive]?"
         s "I didn't think you would."
         show sayori zorder 2 at t21
         show mysteriousclerk 5f zorder 3 at f22
@@ -1924,7 +1933,314 @@ label ch16_main:
         "But how the hell did it get here?"
         cl 1i "Pretty cool, huh?"
         cl "It wouldn't be possible without Sayori here."
-        call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu(confirm=False))
+        show mysteriousclerk zorder 2 at t22
+        mc "So somehow because of Sayori..."
+        mc "You moved your shop over here?"
+        mc "How do those two things even relate?"
+        show mysteriousclerk zorder 3 at f22
+        cl "What?"
+        cl "Isn't it obvious?"
+        cl "Here let me make it simple for you."
+        cl "Sayori is the president, right?"
+        show mysteriousclerk zorder 2 at t22
+        mc "The president of the Literature Club."
+        show mysteriousclerk zorder 3 at f22
+        cl "Right."
+        cl "And for some reason, whoever the president is can start manipulating this world."
+        cl "Don't ask me why."
+        cl "It's just one of the rules of this world."
+        cl "There is no logical explanation."
+        show mysteriousclerk zorder 2 at t22
+        mc "Is this a recent thing?"
+        mc "Wasn't the Literature Club only formed recently?"
+        mc "And why does being the president of some school club grant you that kind of power?"
+        show sayori zorder 3 at f21
+        s "It's true that the four of us formed the club only a little while ago."
+        s "But it looks like this power existed before that."
+        s "It seems to go through a cycle that's destined to repeat itself."
+        show sayori zorder 2 at t21
+        show mysteriousclerk zorder 3 at f22
+        cl "That's right."
+        cl "And I was in the previous cycle."
+        cl "In this very same place."
+        cl "We didn't have a Literature Club exactly."
+        cl "It was called a Book Club for us."
+        cl "And our president...doesn't exist."
+        cl "At least, not anymore."
+        if persistent.clerk_sayori_bad_ending:
+            cl "But you already knew that."
+            cl "Didn't you?"
+        cl "Anyway, my shop and this room..."
+        cl "They resemble each other a lot."
+        cl "I guess I got sentimental when I made it."
+        cl "But because of that, we can easily blend it with the world when we need to."
+        cl "So it all works out, right?"
+        show mysteriousclerk zorder 2 at t22
+        mc "This is all so confusing..."
+        mc "All of this cycle stuff and this power for being president of a club."
+        mc "Sayori, how come you didn't tell me any of this sooner?"
+        show sayori zorder 3 at f21
+        s "I'm sorry, I really should have."
+        s "But even if I wanted to, I couldn't."
+        s "I didn't even know what this world really was until he explained it."
+        s "Even now, it's still sort of a mystery to me."
+        s "Not even everything I can do could really prepare me for today."
+        show sayori zorder 2 at t21
+        mc "But why didn't you tell me?"
+        mc "I only wanted to help you."
+        mc "To prevent those rainclouds from making you do something terrible ever again."
+        show sayori zorder 3 at f21
+        s "I couldn't tell you because I thought the world would break."
+        s "That everything would just disappear and all of this effort would have been for nothing."
+        s "But something has changed now."
+        show sayori zorder 2 at t21
+        show mysteriousclerk zorder 3 at f22
+        cl "I think it's got to do with Ayame."
+        cl "Your mind is now linked with hers somewhat."
+        cl "Which I think is why you're now able to retain your memories with the world exploding."
+        cl "Like it would if you knew this information without that link."
+        show mysteriousclerk zorder 2 at t22
+        mc "This Ayame person..."
+        mc "You seem to know a lot about her."
+        mc "You even knew she would be at the mall and placed my memories inside her."
+        mc "How?"
+        show mysteriousclerk zorder 3 at f22
+        cl "The thing is, she isn't even meant to be here anymore."
+        cl "Or if she was, she's meant to be around the same age as me."
+        cl "Because she was in the club at the same time as me."
+        cl "I don't know why she's still the same age but I have a suspicion."
+        cl "What's important is that [player]'s mind is linked with hers."
+        cl "Which means you have access to her memories."
+        show sayori zorder 3 at f21
+        show mysteriousclerk zorder 2 at t22
+        s "Since she was an old member, she might know something useful."
+        s "In fact, you said you stored some information in her, didn't you?"
+        s "And we need to find out what that is exactly."
+        show sayori zorder 2 at t21
+        show mysteriousclerk zorder 3 at f22
+        cl "That's correct."
+        show mysteriousclerk zorder 2 at t22
+        mc "Since you put the information inside her, shouldn't you know what it is?"
+        show mysteriousclerk zorder 3 at f22
+        cl "No, I don't."
+        cl "I put that information inside her as my final desperate act."
+        cl "I don't know why..."
+        cl "But I can hardly remember the times outside the club I spent researching it."
+        cl "Perhaps it's a side effect of being in your world."
+        show mysteriousclerk zorder 2 at t22
+        mc "Okay, so then how can I access her memories?"
+        mc "I don't think I can do it at will."
+        if ch16_ay_perspective:
+            mc "But just this morning--"
+        show mysteriousclerk zorder 3 at f22
+        cl "It's not that simple."
+        cl "But luckily for you, that's why this room is here."
+        cl "Think of it as a sort of transmitter among other things."
+        cl "This room can send and receive all sorts of data, which is how we were able to send your memories to Ayame yesterday."
+        cl "The thing is, she could now possibly access {i}your{/i} memories."
+        cl "It's a two way street."
+        show mysteriousclerk zorder 2 at t22
+        mc "And that's bad?"
+        show sayori zorder 3 at f21
+        s "It's terrible!"
+        s "I scanned through some of the memories you got from her earlier..."
+        s "There wasn't anything on whatever it is that's making today seem so sinister."
+        s "But I did find out that she's...got tendencies. Things that wouldn't be good at all if she could act on them."
+        s "Or at least, she would have tendencies if she wasn't under the influence of this timeline."
+        s "It's only a matter of time before she figures out who she {i}was{/i}."
+        s "You knowing this information and her having access to your mind doesn't help either."
+        show sayori zorder 2 at t21
+        mc "But why is her remembering so bad?"
+        mc "You're the president, aren't you?"
+        mc "You can manipulate this world."
+        show mysteriousclerk zorder 3 at f22
+        cl "Hmm...I guess I wasn't entirely accurate when I said that."
+        cl "The current president can manipulate things in the current world, that's true."
+        cl "If Sayori passed on the presidency to someone else, they would be able to do the same thing."
+        cl "But the important thing to note is that it's the current world."
+        cl "The president can't modify things from previous worlds."
+        cl "So we can't simply make Ayame forget."
+        cl "I know because Sayori tried it on me when we first met."
+        show mysteriousclerk zorder 2 at t22
+        mc "So what's the problem then?"
+        show mysteriousclerk zorder 3 at f22
+        cl "Well, my hypothesis is that the presidency never goes away."
+        cl "As soon as a new club starts, there's a new president with equal powers over {i}that{/i} world."
+        cl "Which is a problem because we don't know who the president is from my time."
+        cl "After the first president disappeared, it was passed onto someone else."
+        cl "But that someone else ended the world to stop the suffering."
+        cl "Because she did that, she technically gave up her presidency."
+        show mysteriousclerk zorder 2 at t22
+        mc "Disappeared?"
+        mc "What happened to her?"
+        show mysteriousclerk zorder 3 at f22
+        cl "It doesn't matter."
+        mc "It's not important."
+        cl "What matters is we protect this world."
+        cl "As I was saying, I'm not the current president of the Book Club."
+        cl "I'm pretty sure the other two people I can think of aren't the president either."
+        cl "And that leaves--"
+        show mysteriousclerk zorder 2 at t22
+        mc "Ayame is the president?!"
+        "Thoughts start racing in my head, but then I realize something about what the man said..."
+        mc "What does that mean for us?"
+        mc "Like you said, she can only manipulate things from her world."
+        mc "She shouldn't be able to do anything...right?"
+        show sayori zorder 3 at f21
+        s "We don't know that for certain."
+        s "Especially since she's linked up with your memories."
+        s "Her world could be our world now through that link."
+        s "Or worse, she could bring her old world to this one."
+        s "And who knows what would happen then?"
+        s "All I know is that if she remembers and we're not prepared, it's not gonna be good."
+        show sayori zorder 2 at t21
+        show mysteriousclerk zorder 3 at f22
+        cl "It explains why she has stayed young."
+        cl "She probably subconsciously willed it, along with her rich family and status."
+        show mysteriousclerk zorder 2 at t22
+        mc "Have you considered that maybe Ayame is what's making the day feel so sinister?"
+        mc "It kinda sounds like she's a threat, doesn't it?"
+        show mysteriousclerk zorder 3 at f22
+        cl "You sure do ask a lot of questions, don't you?"
+        cl "But I guess it's benefitting more than one person."
+        "He doesn't look at Sayori when he says that."
+        "Rather, he stares more intently on me."
+        cl "Well, go on then."
+        cl "It's gonna worry him, but you said we were gonna be truthful, right?"
+        show mysteriousclerk zorder 2 at t22
+        "Sayori sighs."
+        "She looks at me, reaches my eyes then turns away."
+        "After a few moments, she takes a deep breath and turns back to face me."
+        show sayori zorder 3 at f21
+        s "She isn't the main problem, [player]."
+        s "There's something bigger."
+        s "I can feel it."
+        show sayori zorder 2 at t21
+        mc "What could be worse than that?"
+        show sayori zorder 3 at f21
+        s "I don't know."
+        s "I've gone past my limits of seeing into the future."
+        s "It almost broke this world."
+        s "As it happens, skipping important events to see the future without the previous outcome isn't good."
+        if cl_name == "Bradley":
+            "Bradley lets out a small chuckle."
+        else:
+            "The man lets out a small chuckle."
+        s "But what I {i}felt{/i}..."
+        s "It was beyond anything I've ever felt."
+        s "And we don't know {i}anything{/i} about it."
+        show sayori zorder 2 at t21
+        mc "But if you've seen that far into the future..."
+        mc "That means we can stop Ayame, right?"
+        show sayori zorder 3 at f21
+        s "It's not certain."
+        s "It only means there's a possibility."
+        s "I must have tried a million times to see beyond that outcome."
+        s "I'm not even sure if I'm mentally stable right now."
+        s "I can't even remember if she was even fully stopped when the real danger came."
+        s "But that's besides the point."
+        show sayori zorder 2 at t21
+        mc "I'm sorry you had to go through that, Sayori."
+        mc "No one should have to."
+        show sayori zorder 2 at t21
+        show mysteriousclerk zorder 3 at f22
+        cl "Now is not time to get sentimental."
+        cl "We just finished explaining everything you need to know."
+        cl "So now we have work to do."
+        show mysteriousclerk zorder 2 at t22
+        mc "I get it."
+        mc "What do you need me to do?"
+        show mysteriousclerk zorder 3 at f22
+        cl "Like we said earlier, I stored information inside her."
+        cl "And to do that, you're gonna need to be in close contact with her."
+        show mysteriousclerk zorder 2 at t22
+        mc "But won't that mean she might get my memories of this encounter?"
+        mc "This seems too risky."
+        show sayori zorder 3 at f21
+        s "It's our only shot."
+        s "Otherwise that other threat is going to ruin everything."
+        s "There's no other way."
+        s "I would know..."
+        show sayori zorder 2 at t21
+        show mysteriousclerk zorder 3 at f22
+        cl "We need you to access those memories, {i}without{/i} alerting her."
+        cl "You're our only shot at a happy ending."
+        cl "I hope you'll do a better job than I did."
+        show mysteriousclerk zorder 2 at t22
+        mc "How?"
+        mc "How do I do it?"
+        show sayori zorder 3 at f21
+        show mysteriousclerk zorder 2 at t22
+        s "You need to ask her questions."
+        s "If you ask the right ones, you'll be able to remember her memories before she can."
+        s "If you ask the wrong ones...you'll both remember her memories."
+        s "And you know what will happen if she remembers too much."
+        show sayori zorder 2 at t21
+        show mysteriousclerk zorder 3 at f22
+        cl "She has a free slot in her timetable after lunch."
+        cl "That would be the best time to talk to her."
+        show mysteriousclerk zorder 2 at t22
+        "I'm about to say that I have a math class then..."
+        "But I think joking about something this serious is probably not a good idea."
+        "Especially with the current stakes."
+        mc "How is it you know all this?"
+        show mysteriousclerk zorder 3 at f22
+        cl "Like I said, I'm the equivalent of you from my world."
+        "The man shrugs."
+        cl "I can do certain things."
+        show mysteriousclerk zorder 2 at t22
+        mc "But you said it yourself, you're not the president."
+        mc "So how--"
+        show mysteriousclerk zorder 3 at f22
+        cl "The equivalent of {i}you{/i}."
+        cl "Maybe that will help you understand."
+        cl "Anyway, I should go before someone realizes I'm not a teacher."
+        cl "Before I do..."
+        "He snaps his fingers."
+        hide bg portraitshop_transition_shop
+        show bg portraitshop_transition_school zorder 0
+        $ pause(3.5)
+        "The room turns back to normal."
+        "Like it was when we first came in here."
+        cl "Good luck."
+        show mysteriousclerk at thide
+        hide mysteriousclerk
+        show sayori at t11
+        "Sayori stares at him as he leaves the classroom."
+        "She picks up the box of supplies and points towards the classroom's closet."
+        s "Can you...?"
+        "I open the door for her."
+        s "Super helpful...right?"
+        mc "Yeah...he's certainly something."
+        "Sayori puts the supplies in the closet and shuts the door."
+        s "We should get to class, [player]."
+        s "Don't wanna be late and all."
+        mc "I think at this rate, we're already late."
+        s "Ehehe, probably~"
+        "Sayori smiles."
+        s "This is probably gonna be the last time I have before I do my best to prevent disaster."
+        mc "Sayori, the disaster preventer."
+        mc "Sounds good to me."
+        s "Ahaha..."
+        s "I can already tell it's going to be a long day."
+        s "So before it ends, I want to do something."
+        s "In the case none of it works out."
+        mc "What is it?"
+        s "I want you to meet me at lunch."
+        s "I'll explain more there."
+        mc "But--"
+        s "See you then~"
+        show sayori at thide
+        hide sayori
+        "Sayori grabs her bag and skips out of the room before I can finish my sentence."
+        "The school bell rings indicating the start of class."
+        "I guess I'm gonna be late..."
+        "I just hope I'm able to do what they ask of me."
+        "Because all of this seems to be resting on my shoulders."
+        if persistent.markov_agreed:
+            "And I'll make sure it goes my way."
+        else:
+            "And I'm the one who has to make things right."
     elif ch13_name == "Sayori" or (sayori_confess and not sayori_dumped):
         mc "Do you want to go together, Sayori?"
         show sayori 1b zorder 3 at f32
@@ -2032,6 +2348,18 @@ label ch16_main:
     "All around the school, I've noticed posters for Inauguration Day."
     "There's been some from clubs I've never heard of."
     "They could be interesting to check out."
+    if yuri_date:
+        "I'm going to meet up with Yuri first."
+    elif natsuki_date:
+        "I was going to try to find Natsuki at lunch."
+    elif ch15_s_together:
+        "Sayori said she wanted to see me at lunch."
+        "I wonder what for?"
+        call ch16_sayoridate
+    elif monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+        "I don't know why but I have a feeling Monika wants to see me."
+    else:
+        "I'm just sitting by myself."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu(confirm=False))
     return
 

@@ -387,7 +387,7 @@ label ch12_main:
         mc "They're not quite there just yet but at least they're interacting."
     if monika_type == 0:
         mc "And Monika and I have been getting closer too..."
-    elif visited_yuri_hospital:
+    elif yuri_date:
         mc "And Yuri and I have been getting closer too..."
     elif n_appeal >= 3 and check_whole_house:
         mc "And Natsuki and I, even if it was for only a little bit..."
@@ -618,7 +618,7 @@ label ch12_main:
                 show sayori zorder 2 at t21
                 show monika zorder 2 at t22
                 "Yuri quickly leaves the room."
-                if visited_yuri_hospital:
+                if yuri_date:
                     "She shows me a disapproving frown."
                 else:
                     "She gives me a cold look."
@@ -835,7 +835,7 @@ label ch12_play:
     show yuri zorder 2 at t22
     "Natsuki exits the room and starts chasing after Sayori."
     show yuri zorder 3 at f22
-    if visited_yuri_hospital:
+    if yuri_date:
         y 3pa "We should probably go too, [player]."
         show yuri zorder 2 at t22
         mc "Right, let's go."
@@ -3106,7 +3106,7 @@ label ch12_harukiplace:
     mc "She's going to be okay, I just know it."
     y "I'm getting that feeling too..."
     y 2pf "Anyway..."
-    if visited_yuri_hospital:
+    if yuri_date:
         y 3pb "Ready to walk home, [player]?"
         mc "Yeah, let's go."
     else:
@@ -4123,7 +4123,7 @@ label ch12_harukinoplace:
     mc "Not just this part of it...the whole day felt really weird."
     y 2pg "You've got that right..."
     y 2pf "Anyway..."
-    if visited_yuri_hospital:
+    if yuri_date:
         y 3pb "Ready to walk home, [player]?"
         mc "Yeah, let's go."
     else:
@@ -4136,7 +4136,7 @@ label ch12_end:
     $ renpy.save_persistent()
     scene bg residential_day with wipeleft_scene
     play music t2 fadeout 2.0
-    if visited_yuri_hospital:
+    if yuri_date:
         "After walking Yuri to her house, I head home."
     else:
         "I walk home slowly, still not quite believing what just happened."

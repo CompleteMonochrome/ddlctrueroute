@@ -298,7 +298,7 @@ label ch13_main:
     "I think I'm the last one to get to the Literature Club today."
     window auto
     "I guess I shouldn't have spent so much time wandering the school yard."
-    if visited_yuri_hospital:
+    if yuri_date:
         show yuri 3pq zorder 2 at t11
         y "Ah, [player]."
         "Yuri appears in front of me."
@@ -395,19 +395,19 @@ label ch13_main:
     scene bg club_day
     with wipeleft_scene
     show sayori 1b zorder 2 at i32
-    if visited_yuri_hospital:
+    if yuri_date:
         show monika 1a zorder 2 at i31
     else:
         show yuri 1a zorder 2 at i33
     show sayori 1c zorder 2 at f32
-    if visited_yuri_hospital:
+    if yuri_date:
         s "[player], where have you been?"
         s "Yuri even went out to look for you because you took so long..."
     else:
         s "What took the two of you so long?"
         s "We've been waiting here for ages."
     show sayori zorder 2 at t32
-    if visited_yuri_hospital:
+    if yuri_date:
         show yuri 2pq zorder 3 at f33
         y "S-Sayori, it's fine."
         y "It wasn't a big deal, really."
@@ -1041,7 +1041,7 @@ label ch13_end:
     s 2q "Ehehe, not like you have to though."
     s "You should choose whoever you think needs the most help."
     show sayori zorder 2 at t32
-    if visited_yuri_hospital:
+    if yuri_date:
         "I would like to spend more time with Yuri..."
         "So it would be the right choice to help her with the preparations."
         mc "I already know who I'm going to help."
@@ -1484,7 +1484,7 @@ label ch13_end:
         y "Okay..."
         y "I guess I'll be going now."
         y "I'll have my book list prepared by then."
-        if visited_yuri_hospital:
+        if yuri_date:
             y 2pa "I'll send you a message or something, [player]..."
             show yuri zorder 2 at t31
             mc "Sure."
@@ -1630,7 +1630,7 @@ label ch13_end_natsuki:
     s "It didn't sound like nothing."
     show yuri zorder 3 at f31
     show sayori zorder 2 at t32
-    if visited_yuri_hospital:
+    if yuri_date:
         y 3ps "Well, it's not a big deal."
         y "I just wanted to spend the preparation time with [player]."
         y "I understand [player_personal] can make [player_possessive] own decisions..."
@@ -1662,7 +1662,7 @@ label ch13_end_yuri:
     mc "And Yuri won't be able to create the perfect atmosphere without some help."
     mc "So I think it's just the logical thing to do."
     show yuri zorder 3 at f31
-    if visited_yuri_hospital:
+    if yuri_date:
         y 3pf "A-Are you sure about this, [player]?"
         y "Just because we're dating doesn't mean you have to--"
     else:
@@ -1729,7 +1729,7 @@ label ch13_end_monika:
     s "And with [player] helping her, then it's definitely gonna be great!"
     show yuri zorder 3 at f31
     show sayori zorder 2 at t32
-    if visited_yuri_hospital:
+    if yuri_date:
         y 3pf "Ah, I thought Monika would need the most help out of all of us."
         y "But it is your decision after all, [player]."
         y 3ps "I trust you know what you're doing."
@@ -1774,7 +1774,7 @@ label ch13_end_sayori:
     show sayori zorder 2 at t32
     mc "I did and I want to help you."
     show yuri zorder 3 at f31
-    if visited_yuri_hospital:
+    if yuri_date:
         y 3pa "I suppose it's only fair."
         y "I did assess that Sayori had the most work to do."
         y "Besides...[player] and I can always talk in our own time."
@@ -4820,7 +4820,7 @@ label ch13_exclusive_yuri:
     "Yuri seems worried for some reason."
     mc "Is everything okay?"
     show yuri 2po zorder 2 at t11
-    if visited_yuri_hospital:
+    if yuri_date:
         y "I just feel a little strange being here."
         y "Like it's wrong, somehow."
         mc "What do you mean?"
@@ -4839,7 +4839,7 @@ label ch13_exclusive_yuri:
         y "Like this could have happened before and led to something terrible."
     mc "Yuri, I honestly have no idea what you're talking about."
     mc "Though I do feel kinda strange."
-    if visited_yuri_hospital:
+    if yuri_date:
         mc "But it's no big deal."
         y "You can say it, [player]."
     else:
@@ -4950,7 +4950,7 @@ label ch13_exclusive_yuri:
         y "[player], what are you saying?"
         mc "Nothing is wrong, Yuri."
         mc "We should just discuss something else."
-        if visited_yuri_hospital:
+        if yuri_date:
             mc "How about talking about the preparations we were going to--"
             y 2pn "[player], there's something incredibly wrong with you."
             y "I don't know what it is but since we're together, I can't just ignore it."
@@ -5064,7 +5064,7 @@ label ch13_exclusive_yuri:
     y "Well...they're among the most popular horror books."
     y 4pa "I even selected these in particular partly because of that."
     mc "You selected these in particular...? For what reason?"
-    if visited_yuri_hospital:
+    if yuri_date:
         y "I thought I could introduce you to more horror books."
         y "Since we're spending so much time together and I spend a lot of my own time reading..."
         y 4pb "Maybe we could read horror books together...?"
@@ -5218,7 +5218,7 @@ label ch13_exclusive_yuri:
     mc "Now you're getting it."
     mc "You seem to be quite excited about this."
     y 3pf "I'd like to show everyone what I can do and with you here..."
-    if visited_yuri_hospital:
+    if yuri_date:
         y 3pq "W-Well, it's nice, you know?"
         y "Spending time with you while doing something I'm interested in..."
         y 3ps "What more could I ask for?"
@@ -5272,7 +5272,7 @@ label ch13_exclusive_yuri:
     mc "I'll walk you out."
     scene bg house with wipeleft_scene
     "After a strange afternoon, Yuri is about to leave."
-    if visited_yuri_hospital:
+    if yuri_date:
         "Even if it wasn't the most intimate time ever, I'm glad I got to spend it with Yuri."
     else:
         "I'm glad I chose Yuri to help. It seemed like she had a lot to think about in terms of the atmosphere."
@@ -5280,7 +5280,7 @@ label ch13_exclusive_yuri:
     show yuri 3pa zorder 2 at t11
     y "I suppose this is where we part ways, [player]."
     mc "Yeah..."
-    if visited_yuri_hospital:
+    if yuri_date:
         y 3pb "It was nice spending this time with you, [player]."
         y "I'm not really sure if you chose me because we're together or because you really thought I needed your help..."
         y "But regardless, I want to thank you."

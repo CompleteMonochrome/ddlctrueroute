@@ -569,6 +569,8 @@ init -501 screen main_menu() tag menu:
     else:
         if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2019, 1, 1) + weekrange))) and persistent.arc_clear[0]:
             add "menu_bg_gray"
+        elif persistent.markov_agreed:
+            add "menu_bg_evil"
         else:
             add "menu_bg"
         add "menu_art_y"
@@ -610,7 +612,10 @@ init -501 screen main_menu() tag menu:
             if not persistent.arc_clear[0]:
                 add "menu_art_m"
             else:
-                add "menu_art_m_evil"
+                if persistent.markov_agreed:
+                    add "menu_art_m_evil_early"
+                else:
+                    add "menu_art_m_evil"
         add "menu_fade"
 
     key "K_ESCAPE" action Quit(confirm=False)
@@ -1637,7 +1642,7 @@ init -501 screen arc_choose_1():
     fixed at show_hide_fade:
         xalign 0.5
         yalign 0.5
-        
+
         label _("Choose an arc to begin"):
             text_style "game_menu_label_text"
             xalign 0.5
@@ -1690,7 +1695,7 @@ init -501 screen customstart_girlchoice(background,labeltext,chibis,excludemysel
     fixed at show_hide_fade_quick:
         xalign 0.5
         yalign 0.5
-        
+
         label _(labeltext):
             text_style "game_menu_label_text"
             xalign 0.5
@@ -1739,7 +1744,7 @@ init -501 screen customstart_girlchoice(background,labeltext,chibis,excludemysel
                     imagebutton xsize 450 idle "mod_assets/gui/menu_art_y_locked.png" action NullAction() hovered tt.Action("{color=#d88dee}Yuri{/color} (Unavailable)") hover_sound gui.hover_sound at custom_start_zoom_insta
                 else:
                     imagebutton xsize 450 idle "gui/menu_art_y.png" hover "mod_assets/gui/menu_art_y_hover.png" action Return(3) hovered tt.Action("{color=#d88dee}Yuri{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True at custom_start_zoom_insta
-        
+
         if not excludemyself:
             hbox:
                 xalign 0.5
@@ -1781,7 +1786,7 @@ init -501 screen customstart_twobgchoice(labeltext,bg1,text1,bg2,text2,multi,hig
 
     fixed at show_hide_fade_quick:
         yalign 0.5
-                
+
         grid 2 1:
             if multi:
                 imagebutton:
@@ -1859,7 +1864,7 @@ init -501 screen customstart_fourbgchoice(labeltext,bg1,text1,bg2,text2,bg3,text
 
     fixed at show_hide_fade_quick:
         yalign 0.5
-                
+
         grid 4 1:
             if multi:
                 imagebutton:
@@ -1963,7 +1968,7 @@ init -501 screen customstart_twochoice(background,labeltext,image1,text1,image2,
     fixed at show_hide_fade_quick:
         xalign 0.5
         yalign 0.5
-        
+
         label _(labeltext):
             text_style "game_menu_label_text"
             xalign 0.5

@@ -56,6 +56,18 @@ image menu_bg_gray:
     im.Grayscale("gui/menu_bg.png")
     menu_bg_move
 
+image menu_bg_evil:
+    parallel:
+        topleft
+    parallel:
+        "gui/menu_bg.png"
+        13.2
+        im.MatrixColor("gui/menu_bg.png", im.matrix.desaturate() * im.matrix.tint(1.0,0.7,0.7))
+        0.9
+        "gui/menu_bg.png"
+    parallel:
+        menu_bg_move
+
 image menu_bg_insta:
     "gui/menu_bg.png"
     menu_bg_move_insta
@@ -185,6 +197,34 @@ image menu_art_m_evil:
     30.0
     "mod_assets/gui/menu_art_m_evil.png"
     0.3
+    "gui/menu_art_m.png"
+
+image menu_art_m_evil_early:
+    subpixel True
+    "gui/menu_art_m.png"
+    xcenter 1000
+    ycenter 640
+    zoom 1.00
+    menu_art_move(1.00, 1000, 1.00)
+    10.0
+    "mod_assets/gui/menu_art_m_evil.png"
+    0.07
+    "gui/menu_art_m.png"
+    0.03
+    "mod_assets/gui/menu_art_m_evil.png"
+    0.07
+    "gui/menu_art_m.png"
+    0.03
+    "mod_assets/gui/menu_art_m_evil.png"
+    0.07
+    "gui/menu_art_m.png"
+    0.03
+    "mod_assets/gui/menu_art_m_evil.png"
+    0.07
+    "gui/menu_art_m.png"
+    0.03
+    "mod_assets/gui/menu_art_m_evil.png"
+    0.5
     "gui/menu_art_m.png"
 
 image menu_nav:
