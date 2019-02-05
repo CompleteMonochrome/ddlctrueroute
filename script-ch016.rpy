@@ -1022,7 +1022,7 @@ label ch16_main:
             mc "And no, I haven't noticed anything."
         show natsuki 4i zorder 3 at f21
         n "Right."
-        if natsuki_date:
+        if natsuki_date or (ch13_name == "Natsuki" and monika_type == 0):
             n 2c "Do you remember at all what we talked about yesterday?"
             n "When we got back from the mall?"
             mc "I..."
@@ -1135,7 +1135,7 @@ label ch16_main:
         show natsuki 2k zorder 3 at f21
         n "Good enough."
         n "Now, I found this really interesting part in this journal."
-        if (natsuki_date or monika_type == 0) and ch13_name == "Natsuki":
+        if natsuki_date or (monika_type == 0 and ch13_name == "Natsuki"):
             n "I'm not sure if you remember."
             n 2h "But I told you about it yesterday, [player]."
             n "When we were in the room."
@@ -2071,11 +2071,11 @@ label ch16_main:
         cl "But that someone else ended the world to stop the suffering."
         cl "Because she did that, she technically gave up her presidency."
         show mysteriousclerk zorder 2 at t22
-        mc "Disappeared?"
+        mc "Wait...the first president disappeared?"
         mc "What happened to her?"
         show mysteriousclerk zorder 3 at f22
         cl "It doesn't matter."
-        mc "It's not important."
+        cl "It's not important."
         cl "What matters is we protect this world."
         cl "As I was saying, I'm not the current president of the Book Club."
         cl "I'm pretty sure the other two people I can think of aren't the president either."
@@ -2348,16 +2348,159 @@ label ch16_main:
     "All around the school, I've noticed posters for Inauguration Day."
     "There's been some from clubs I've never heard of."
     "They could be interesting to check out."
-    if yuri_date:
+    if yuri_approval >= 3 and natsuki_approval >= 3:
+        "Natsuki told me to meet her at lunch though."
+        "I think she wanted to continue the conversation we were having with Yuri this morning."
+        "I don't really get the point of it."
+        "But I don't really have anything better to do."
+        "I think they're just waiting for me."
+        "They said they wanted to go to this secluded spot."
+        show natsuki 1a zorder 3 at f21
+        n "Good! You're here."
+        n "I was starting to think you were gonna ditch us."
+        n "Yuri, are you sure no one goes here?"
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "I've been here several times."
+        y "On occasion, a teacher would approach me but no students really go here."
+        show natsuki zorder 3 at f21
+        n "Good enough."
+        n "We won't be here long anyway."
+        show natsuki zorder 2 at t21
+        mc "About the journal again, right?"
+        if natsuki_date or (ch13_name == "Natsuki" and monika_type == 0):
+            mc "Is it really a good idea to talk about it outside the room?"
+            mc "I felt so much more like myself in there."
+        else:
+            mc "Is this really a good idea?"
+        show natsuki zorder 3 at f21
+        n "Honestly?"
+        n "I don't know."
+        n "But what choice do we have?"
+        show natsuki zorder 2 at t21
+        mc "Well, we don't {i}have{/i} to talk about this, do we?"
+        mc "Why does it matter?"
+        show natsuki zorder 3 at f21
+        n "You know why."
+        n "If this whole thing was for nothing."
+        n "Then what have we been doing?"
+        # Monika interrupt
+        if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+            n "What--"
+            show natsuki zorder 2 at t31
+            show monika zorder 3 at f32
+            show yuri zorder 2 at t33
+            if monika_type == 0:
+                m "Hey everyone!"
+                m "Sorry to interrupt this conversation you're having."
+            else:
+                m "What are you three doing here?"
+                m "Trying to hide something from me?"
+            show natsuki zorder 3 at f31
+            n "Monika?!"
+            n "W-What are you doing here?"
+            show natsuki zorder 2 at t31
+            show yuri zorder 3 at f33
+            y "How did you find us?"
+            show monika zorder 3 at f32
+            show yuri zorder 2 at t33
+            m "Find you?"
+            m "Was this meant to be a secret hiding spot or something?"
+            m "Anyway, I just saw [player_reflexive] walk this way and followed him."
+            if monika_type == 0:
+                m "Is it okay if I talk to him?"
+            else:
+                m "I need to speak with him."
+            show natsuki zorder 3 at f31
+            n "I don't know."
+            n "We were kind of in the middle of something."
+            n "But that's up to him."
+            show natsuki zorder 2 at t31
+            "Something is telling me I should go with Monika."
+            "I get the feeling whatever she has to say is probably more important..."
+            mc "Sorry, you two."
+            mc "I'll come back if I have time but I'll go with Monika for now."
+            show natsuki zorder 3 at f31
+            n "Forget it."
+            "I can see the visible disappointment in Natsuki's face."
+            n "Yuri and I will talk about it."
+            n "You don't need to come back."
+            n "We won't be here long anyway."
+            show natsuki zorder 2 at t31
+            show yuri zorder 3 at f33
+            y "Goodbye, [player]."
+            y "It's unfortunate things had to be this way."
+            show yuri zorder 2 at t33
+            mc "But--"
+            show monika zorder 3 at f32
+            show yuri zorder 2 at t33
+            m "Come on, let's go."
+            m "I have something to say."
+            show monika zorder 2 at t32
+            "Natsuki and Yuri stare as Monika and I walk away."
+            "I really didn't want to just leave them but..."
+            "Monika needs to tell me something."
+            scene bg school_front
+            show monika 1a zorder 2 at t11
+            with wipeleft
+            jump ch16_m_interrupt
+        else:
+            n "What was the point of it all?"
+            n "I just..."
+            n "...I want to understand, you know?"
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Now that I've had time to think about it..."
+        y "I really want to know."
+        y "It's all I could think about all day."
+        y "I've been obsessing over it."
+    elif yuri_date:
         "I'm going to meet up with Yuri first."
+        "It might be our last chance to hang out after today."
+        "..."
+        "Wait...what am I saying?"
+        "Why would it be our last chance?"
+        "It's just another day."
+        "There is the play, but it's not like if we do terribly it's going to separate us."
+        "I'm at the place she said we'd be meeting at."
+        "It's just a secluded spot in the school."
+        "You can barely hear the noise from the rest of the school yard."
+        "I can actually hear myself breathing."
+        show yuri 1a zorder 2 at t11
     elif natsuki_date:
         "I was going to try to find Natsuki at lunch."
+        "I don't know why but I feel like I should really cherish this time with her."
+        "Maybe it's got to do with what she said yesterday."
+        "There was a lot in that journal."
     elif ch15_s_together:
         "Sayori said she wanted to see me at lunch."
         "I wonder what for?"
+        "I don't think she needs me for any preparations."
+        "And the thing with Ayame isn't till after lunch."
+        "So what could she possibly want to talk about?"
+        "As I'm about to take a seat, I see a girl running towards me from the distance."
+        "She's waving her arms in the air like she's totally oblivious to any attention she might draw to herself."
+        "Sayori is coming...and I'm getting this strange feeling coming as she approaches."
+        show sayori zorder 3 at t11
+        s "I'm glad I found you, [player]."
+        if ch15_s_date_choice:
+            s "I want to fix what happened yesterday."
+            s "By skipping the boundaries of today."
+        else:
+            s "I want to..."
+            s "Pay you back for what you did yesterday."
+        mc "Yesterday?"
+        mc "You mean at your house?"
         call ch16_sayoridate
     elif monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
         "I don't know why but I have a feeling Monika wants to see me."
+        "It's like I'm being followed or something."
+        "But it just feels...wrong."
+        "Like the thing that's following me doesn't have good intentions."
+        "I decide to go to a populated area."
+        "I don't know if it's just me being superstitious or not..."
+        "But better safe than sorry."
+        label ch16_m_interrupt:
     else:
         "I'm just sitting by myself."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu(confirm=False))

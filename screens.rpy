@@ -612,7 +612,7 @@ init -501 screen main_menu() tag menu:
             if not persistent.arc_clear[0]:
                 add "menu_art_m"
             else:
-                if persistent.markov_agreed:
+                if persistent.markov_agreed and not (((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2019, 1, 1) + weekrange))) and persistent.arc_clear[0]):
                     add "menu_art_m_evil_early"
                 else:
                     add "menu_art_m_evil"
