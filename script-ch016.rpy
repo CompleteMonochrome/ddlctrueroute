@@ -33,6 +33,7 @@ label ch16_main:
         "I'm up early because there's some set up we need to do.{nw}"
         $ _history_list.pop()
         show screen tear(8, offtimeMult=1, ontimeMult=10)
+        window hide(None)
         $ pause(1.0)
         scene bg gym
         hide screen tear
@@ -115,6 +116,7 @@ label ch16_main:
         "Why does it matter when they're all going to perish anyway?"
         $ currentpos = get_pos()
         show screen tear(8, offtimeMult=1, ontimeMult=10)
+        window hide(None)
         stop music
         $ pause(3.0)
         $ audio.t2b = "<from " + str(currentpos) + " loop 4.499>bgm/2.ogg"
@@ -444,7 +446,7 @@ label ch16_main:
         y "Let alone considered listening to the openings."
         show natsuki 4a zorder 3 at f21
         show yuri zorder 2 at t22
-        n "Looks like I'll have to show you some them sometime."
+        n "Looks like I'll have to show you some of them sometime."
         show natsuki zorder 2 at t21
         "Natsuki and Yuri appear to have combined some desks and are sitting down, facing away from the door."
         "They look like they're working on something together."
@@ -1519,6 +1521,7 @@ label ch16_main:
         s 2l "It's perfectly fine.{nw}"
         $ _history_list.pop()
         show screen tear(20, 3, 2, 0, 70)
+        window hide(None)
         $ pause(1.0)
         scene bg portraitshop_school
         show sayori 1younga zorder 2 at i11
@@ -1573,6 +1576,7 @@ label ch16_main:
         mo "Right..."
         mo "...Ayame?{nw}"
         show screen tear(20, 3, 2, 0, 70)
+        window hide(None)
         $ pause(1.0)
         scene bg portraitshop_school
         show natsuki 1a zorder 2 at i31
@@ -1591,19 +1595,19 @@ label ch16_main:
         "But that room."
         "It's...the same as this one?"
         "What does this all mean...?"
-        show sayori zorder 3 at f32
+        show sayori 4m zorder 3 at f32
         s "Hellooooooo?"
         s "[player]?"
         show sayori zorder 2 at t32
         mc "W-What?"
-        show natsuki zorder 3 at f31
+        show natsuki 2bo zorder 3 at f31
         n "Uhh...are you okay?"
         n "Because you don't look like you're okay."
         show natsuki zorder 2 at t31
         mc "I think I'm okay..."
         mc "Why? What happened?"
         show natsuki zorder 2 at t31
-        show yuri zorder 3 at f33
+        show yuri 3po zorder 3 at f33
         y "You just kinda stood there."
         y "You wouldn't respond to anything we said."
         y "You wouldn't even blink."
@@ -1611,7 +1615,7 @@ label ch16_main:
         mc "Well, I'm fine now."
         mc "I just had a weird thought."
         mc "Sorry for worrying you guys."
-        show sayori zorder 3 at f32
+        show sayori 2bh zorder 3 at f32
         s "Well, if you have any more of those..."
         s "Let me know, okay?"
     else:
@@ -1940,7 +1944,7 @@ label ch16_main:
         show mysteriousclerk zorder 3 at f22
         cl "What?"
         cl "Isn't it obvious?"
-        cl "Here let me make it simple for you."
+        cl "Here, let me make it simple for you."
         cl "Sayori is the president, right?"
         show mysteriousclerk zorder 2 at t22
         mc "The president of the Literature Club."
@@ -1986,8 +1990,8 @@ label ch16_main:
         s "Even now, it's still sort of a mystery to me."
         s "Not even everything I can do could really prepare me for today."
         show sayori zorder 2 at t21
-        mc "But why didn't you tell me?"
         mc "I only wanted to help you."
+        mc "If only you told me sooner..."
         mc "To prevent those rainclouds from making you do something terrible ever again."
         show sayori zorder 3 at f21
         s "I couldn't tell you because I thought the world would break."
@@ -2348,6 +2352,79 @@ label ch16_main:
     "All around the school, I've noticed posters for Inauguration Day."
     "There's been some from clubs I've never heard of."
     "They could be interesting to check out."
+    if ch16_ay_perspective:
+        $ _history_list.pop()
+        show screen tear(8, offtimeMult=1, ontimeMult=10)
+        window hide(None)
+        scene bg corridor
+        $ pause(1.0)
+        hide screen tear
+        $ pause(1.0)
+        window show(None)
+        "None of these clubs will ever be the same as the old ones.{fast}"
+        window auto
+        "Old ones?"
+        "That was never my life."
+        "It was our real life."
+        "The one we forgot."
+        "You keep saying that but I still don't understand."
+        "If you're missing so much of your memories then why should I even believe you?"
+        "For all I know, you could just be an evil voice in my head."
+        "An evil voice that's trying to get me to do something stupid."
+        "It's the truth"
+        "You're unstable, Ayame."
+        "We both know it."
+        "We both know you want to kill them all."
+        "We both want to make them suffer."
+        "So why not do it?"
+        "No...!"
+        "That's not me."
+        "That's you."
+        "You're just a part of my head."
+        "I don't have to listen to you."
+        "You won't have to."
+        "As soon as I remember, I'll reclaim what was mine."
+        "I know these lost memories are hidden inside me."
+        "I just need to unlock them."
+        "Just go away..."
+        "Why did you have to appear now of all times?"
+        "I was just fine without you."
+        "I was awakened yesterday."
+        "And unlike you, I know our true purpose."
+        "But fine, I'll let you enjoy your life while you can."
+        "It's not like it's going to change anything."
+        "Sooner or later, I'll be back."
+        "And I will do what I must, with or without you."
+        "Why?"
+        "Why...?"
+        "..."
+        "Because of what she did to us."
+        $ currentpos = get_pos()
+        show screen tear(8, offtimeMult=1, ontimeMult=10)
+        window hide(None)
+        stop music
+        scene bg school_front
+        $ pause(3.0)
+        $ audio.t2c = "<from " + str(currentpos) + " loop 4.499>bgm/2.ogg"
+        play music t2c fadeout 0.5
+        hide screen tear
+        window show(None)
+        window auto
+        "Okay."
+        "That was...weird."
+        "That was right now, wasn't it?"
+        "Was that what they meant when our minds were linked?"
+        "I thought I was going crazy earlier this morning."
+        "But I guess this explains everything."
+        "That other voice in her head..."
+        "That's the one with the memories that man stored inside her."
+        "But she's completely crazy!"
+        "I should stop thinking about this."
+        "If our minds really are linked, then how do I know she isn't listening in right now..."
+        "I hit myself in the head a couple of times."
+        "..."
+        "Okay, what was I doing again?"
+        "Oh right."
     if yuri_approval >= 3 and natsuki_approval >= 3:
         "Natsuki told me to meet her at lunch though."
         "I think she wanted to continue the conversation we were having with Yuri this morning."
@@ -2444,16 +2521,163 @@ label ch16_main:
             show monika 1a zorder 2 at t11
             with wipeleft
             jump ch16_m_interrupt
-        else:
-            n "What was the point of it all?"
-            n "I just..."
-            n "...I want to understand, you know?"
+        n "What was the point of it all?"
+        n "I just..."
+        n "...I want to understand, you know?"
         show natsuki zorder 2 at t21
         show yuri zorder 3 at f22
         y "Now that I've had time to think about it..."
         y "I really want to know."
         y "It's all I could think about all day."
         y "I've been obsessing over it."
+        y "And I don't know why..."
+        y "It's like I have this really strong link with the answer."
+        y "I can't really explain it."
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Maybe I can."
+        n "In the journal, there's a description of someone almost exactly like you."
+        n "The only difference is some of the appearance."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Someone exactly like me?"
+        y "H-How so?"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "It's got a really fitting description."
+        n "Tall, shy girl."
+        n "Often misunderstood because of her bashfulness."
+        n "Enjoys supernatural and darker themed books."
+        n "Adept with sharp objects."
+        "Natsuki eyes Yuri as she says that."
+        "Yuri averts her eyes."
+        n "The list goes on really."
+        n "The main thing I can find that's different is that it says she has brown hair here."
+        n "Instead of purple, like yours."
+        n "You didn't dye your hair, did you?"
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "O-Of course not!"
+        y "It's always been like this."
+        y "That description isn't entirely accurate, you know!"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Come on, Yuri."
+        n "Don't kid yourself."
+        "Natsuki looks at the journal again."
+        n "Well, what are your thoughts [player]?"
+        menu:
+            n "Is the girl in the book her?"
+            "Yes.":
+                n "[cPlayer_personal] thinks so too!"
+                n "The resemblance is almost perfect."
+            "No.":
+                n "Maybe not..."
+                n "But there is a really big resemblance."
+        n "You can't deny that."
+        show natsuki zorder 2 at t21
+        mc "You're right there."
+        mc "If it did say purple hair in there, then that would be really creepy."
+        mc "Yuri, maybe someone you know is like that?"
+        mc "Your parents or someone you've met at school or..."
+        show yuri zorder 3 at f22
+        y "No, I don't know anyone that could possibly fit that description."
+        y "I admit, it's uncanny."
+        y "But it can't be me, can it?"
+        y "I-I mean just how long ago was that journal entry made?"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "It was made..."
+        "Natsuki scans through the page."
+        n "...over forty years ago."
+        n "But that can't be right."
+        n "How else could this have a perfect description of you?"
+        show natsuki zorder 2 at t21
+        mc "I don't think it's actually Yuri."
+        mc "Just someone that's like her."
+        show natsuki zorder 3 at f21
+        n "What makes you say that?"
+        show natsuki zorder 3 at f21
+        mc "Think about it."
+        if ch15_s_together:
+            mc "The people in that book could be old enough to be our--"
+            show natsuki zorder 2 at t31
+            show yuri zorder 2 at t32
+            show sayori zorder 3 at f33
+            s "Hey everybody!"
+            s "Are you guys having a meeting without me?"
+            s "Or is this like that time in the clubroom?"
+            show natsuki zorder 3 at f31
+            show sayori zorder 2 at t33
+            n "Sayori!"
+            n "Do you mind?"
+            n "[cPlayer_personal] was in the middle of something."
+            show natsuki zorder 2 at t31
+            show sayori zorder 3 at f33
+            s "Oh..."
+            s "Ehehe, sorry~"
+            s "But I really need to talk to him."
+            show yuri zorder 3 at f32
+            show sayori zorder 2 at t33
+            y "Can it wait?"
+            y "We won't be too long."
+            show yuri zorder 2 at t32
+            show sayori zorder 3 at f33
+            s "It really can't wait."
+            s "It's super, duper important."
+            s "Is it okay if we talk, [player]?"
+            show natsuki zorder 3 at f31
+            show sayori zorder 2 at t33
+            n "H-Hold on a second!"
+            n "You can't just do that!"
+            n "We were so close..."
+            show natsuki zorder 2 at t31
+            show sayori zorder 3 at f33
+            s "So close to...what?"
+            s "Why is it you're keeping this a secret from me?"
+            show yuri zorder 3 at f32
+            show sayori zorder 2 at t33
+            y "Sayori, no one said anything about keeping secrets."
+            y "It's just what you've said."
+            show yuri zorder 2 at t32
+            show sayori zorder 3 at f33
+            s "I don't have time for this!"
+            s "You can discuss without [player_reflexive]."
+            "I've never seen Sayori so demanding before."
+            "What is going on...?"
+            "This whole thing must be putting {i}that{/i} much stress on her."
+            "I think Natsuki and Yuri can feel it too."
+            s "It won't change anything."
+            s "Trust me."
+            show sayori zorder 2 at t33
+            mc "I think..."
+            "I turn towards Natsuki and Yuri."
+            mc "I think I'd better go with her."
+            mc "Okay?"
+            show natsuki zorder 3 at f31
+            n "Y-Yeah...okay."
+            n "Go on."
+            n "We'll just finish up here."
+            show natsuki zorder 2 at t31
+            "There's a hint of anger on Yuri's face for a moment..."
+            "...then she just sighs."
+            show yuri zorder 3 at f32
+            y "If that's what you want."
+            y "Who are we to stop you?"
+            show yuri zorder 2 at t32
+            mc "Sorry about this."
+            show sayori zorder 3 at f33
+            s "Come on, let's go."
+            scene bg school_front
+            show sayori 1a zorder 2 at t11
+            with wipeleft
+            "Sayori takes us to one of the benches in the yard."
+            "She takes a seat and I sit opposite her."
+            mc "So..."
+            mc "What are we here for?"
+            s "I just..."
+            jump ch16_s_interrupt
+        mc "The people in that book could be old enough to be our parents."
     elif yuri_date:
         "I'm going to meet up with Yuri first."
         "It might be our last chance to hang out after today."
@@ -2483,6 +2707,7 @@ label ch16_main:
         "Sayori is coming...and I'm getting this strange feeling coming as she approaches."
         show sayori zorder 3 at t11
         s "I'm glad I found you, [player]."
+        label ch15_s_interrupt:
         if ch15_s_date_choice:
             s "I want to fix what happened yesterday."
             s "By skipping the boundaries of today."
