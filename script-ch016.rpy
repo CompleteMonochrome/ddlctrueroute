@@ -55,6 +55,7 @@ label ch16_main:
         "I never wanted this."
         "I never wanted any of this!"
         "It's my family."
+        $ style.say_dialogue = style.edited
         "We're meant to be prestigious, we're meant to be the best of the best."
         "But now I know."
         "That's all some made up story."
@@ -63,13 +64,16 @@ label ch16_main:
         "They will pay."
         "All of them."
         "Once I get rid of this facade--"
+        $ style.say_dialogue = style.normal
         "Why do they have to suffer?"
         "They didn't do anything."
         "They're just as much of a victim as I am."
         "What would he think of me...?"
         "Would he think of me as some kind of monster?"
+        $ style.say_dialogue = style.edited
         "He was the one who told you."
         "And you still went crazy."
+        $ style.say_dialogue = style.normal
         "It wasn't my fault!"
         "It wasn't..."
         show monika 1c zorder 2 at t11
@@ -2365,23 +2369,28 @@ label ch16_main:
         window auto
         "Old ones?"
         "That was never my life."
+        $ style.say_dialogue = style.edited
         "It was our real life."
         "The one we forgot."
+        $ style.say_dialogue = style.normal
         "You keep saying that but I still don't understand."
         "If you're missing so much of your memories then why should I even believe you?"
         "For all I know, you could just be an evil voice in my head."
         "An evil voice that's trying to get me to do something stupid."
-        "It's the truth"
+        $ style.say_dialogue = style.edited
+        "It's the truth."
         "You're unstable, Ayame."
         "We both know it."
         "We both know you want to kill them all."
         "We both want to make them suffer."
         "So why not do it?"
+        $ style.say_dialogue = style.normal
         "No...!"
         "That's not me."
         "That's you."
         "You're just a part of my head."
         "I don't have to listen to you."
+        $ style.say_dialogue = style.edited
         "You won't have to."
         "As soon as I remember, I'll reclaim what was mine."
         "I know these lost memories are hidden inside me."
@@ -2395,6 +2404,7 @@ label ch16_main:
         "It's not like it's going to change anything."
         "Sooner or later, I'll be back."
         "And I will do what I must, with or without you."
+        $ style.say_dialogue = style.normal
         "Why?"
         "Why...?"
         "..."
@@ -2537,6 +2547,7 @@ label ch16_main:
         show yuri zorder 2 at t22
         n "Maybe I can."
         n "In the journal, there's a description of someone almost exactly like you."
+        n "Some of the details are faded like the name but it can't be a coincidence."
         n "The only difference is some of the appearance."
         show natsuki zorder 2 at t21
         show yuri zorder 3 at f22
@@ -2597,7 +2608,7 @@ label ch16_main:
         mc "Just someone that's like her."
         show natsuki zorder 3 at f21
         n "What makes you say that?"
-        show natsuki zorder 3 at f21
+        show natsuki zorder 2 at t21
         mc "Think about it."
         if ch15_s_together:
             mc "The people in that book could be old enough to be our--"
@@ -2678,6 +2689,263 @@ label ch16_main:
             s "I just..."
             jump ch16_s_interrupt
         mc "The people in that book could be old enough to be our parents."
+        mc "But that wouldn't really make any sense."
+        show natsuki zorder 3 at f21
+        n "Our parents...?"
+        n "Do we {i}know{/i} anyone like the people in the book?"
+        n "If they really were our parents, then we'd have to go back to their time."
+        n "To see how they would act."
+        n "But it's not like we really have the power to do that."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "That's a shame."
+        y "I really would have liked to solve this mystery."
+        y "There must be something more we can do."
+        "Yuri frowns."
+        y "What about the descriptions?"
+        y "Maybe there's something in there?"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "The journal is old so some of it is faded out."
+        n "It just so happens that the descriptions are pretty much unreadable except the one that matches yours."
+        n "So..."
+        n "...I guess we're all out of options."
+        n "There's nothing more in this journal we can really talk about."
+        n "I thought maybe with Yuri here we could try to figure something out."
+        n "But I guess not..."
+        n "...unless you're secretly hiding something, [player]?"
+        show natsuki zorder 2 at t21
+        mc "Me?"
+        mc "What would I know?"
+        show natsuki zorder 3 at f21
+        n "Why don't you tell us more about Monika?"
+        n "You talked to her a lot in the first week you were here."
+        n "Maybe we can learn something new."
+        show natsuki zorder 2 at t21
+        mc "What would telling you about Monika tell us?"
+        mc "I really doubt it's going to change anything..."
+        show yuri zorder 3 at f22
+        y "We shouldn't force it out of [player_reflexive], Natsuki."
+        y "Maybe you can look over the journal entries again and find something..."
+        y "Or maybe there's more."
+        y "I mean, there has to be {i}something{/i}."
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "That's just it!"
+        n "There {i}is{/i} more."
+        n "I just can't look at it."
+        n "The journal won't let me."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "What?"
+        y "Give it to me, Natsuki."
+        "Natsuki gives the journal to Yuri."
+        "Yuri tries to look through the journal."
+        "She flips through the first couple of pages without any trouble."
+        y "What's wrong with it?"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Keep reading."
+        n "You'll see eventually."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Okay..."
+        "Yuri keeps turning through the pages."
+        "Until she just stops."
+        y "I..."
+        y "...can't turn the page."
+        y "What is this?"
+        show yuri zorder 2 at t22
+        "Yuri tries to turn the page again but can't."
+        "She looks like she's actively struggling against the book."
+        "Natsuki takes the book back from her."
+        show natsuki zorder 3 at f21
+        n "That's interesting."
+        n "You can only seem to see up to there in the journal.."
+        n "But I can..."
+        "Natsuki opens the journal and manages to get past where Yuri got stuck."
+        "But after a certain point, she starts struggling too."
+        n "See what I mean?"
+        n "I'm not usually one to believe in the supernatural but..."
+        n "This journal is cursed or something."
+        n "Which is why I want to find out the truth."
+        show natsuki zorder 2 at t21
+        mc "I don't get it."
+        mc "It's just a book, isn't it?"
+        mc "You're just messing with me."
+        show natsuki zorder 3 at f21
+        n "We're not!"
+        n "Here."
+        "Natsuki offers me the journal."
+        n "But if I could only get this far..."
+        n "Then I doubt you could get any further."
+        n "But who knows?"
+        show natsuki zorder 2 at t21
+        "I take the journal from Natsuki."
+        "She looks at me suspiciously as I look at the first couple of pages."
+        show natsuki zorder 3 at f21
+        n "You can open it at least."
+        n "I doubt you can get far."
+        show natsuki zorder 2 at t21
+        mc "How come?"
+        "I close the journal."
+        mc "Seems like just a normal journal to me."
+        show natsuki zorder 3 at f21
+        n "It took me a while before I could even read to where I'm up to right now."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "It took you a while?"
+        y "Are you saying that as time went on, you could read more of the book?"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Not exactly."
+        n "It's more like..."
+        "Natsuki scratches her head."
+        n "It's hard to explain."
+        n "But it's like the more I thought about the world..."
+        n "The more I could read into it."
+        n "I actually found the journal a while ago."
+        n "And I couldn't even open it."
+        n "I didn't want to tell anyone because I'd sound crazy."
+        n "But recently, with all the weird stuff going on..."
+        n "I could actually open it."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "The more you questioned the world..."
+        y "Maybe that's the key."
+        y "But we don't really have anything to go on."
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Yeah."
+        n "Anyway, go on [player]."
+        n "See just how far you can get."
+        show natsuki zorder 2 at t21
+        mc "There's nothing special about this."
+        mc "You guys are just messing with me."
+        mc "Look."
+        "I quickly flick through the whole book."
+        "I don't really look at any of the details but I manage to go through all of it."
+        mc "See?"
+        mc "I knew you guys were just playing around."
+        show natsuki zorder 3 at f21
+        n "W-What?"
+        n "How can you possibly look through the whole thing?"
+        n "This doesn't make any sense..."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Maybe [player_reflexive]'s thought about this world a lot?"
+        y "Or maybe [player_reflexive] is special somehow."
+        show yuri zorder 2 at t22
+        mc "I don't think I have."
+        mc "But in the case you guys aren't just messing with me, I'll play along."
+        show natsuki zorder 3 at f21
+        n "Go to the part after her death."
+        n "It's where I couldn't read past."
+        show natsuki zorder 2 at t21
+        mc "If it's a journal, why would there be parts after her death?"
+        mc "That just doesn't make any sense."
+        show yuri zorder 3 at f22
+        y "That's what we're here to find out."
+        y "Stop wasting time."
+        y "Just tell us what it says."
+        show yuri zorder 2 at t22
+        mc "Alright, alright..."
+        "I look through the journal."
+        "Natsuki looks at the pages and stops me when I reach the right page."
+        mc "Let's see here..."
+        mc "It's dark. It's so empty. And it hurts. The whole world I once knew is gone."
+        mc "Where are my friends? Where am I? Why won't this pain go away?"
+        mc "What did I do to deserve this? I just want to go home."
+        mc "Please."
+        mc "I thought I would have been happy."
+        mc "Is this the price for confessing?"
+        mc "Is the world out to get me?"
+        mc "Is this the price of love?"
+        mc "Why--"
+        show natsuki zorder 3 at f21
+        n "Okay!"
+        n "You can stop."
+        show natsuki zorder 2 at t21
+        mc "What's wrong?"
+        show natsuki zorder 3 at f21
+        n "It's hard to listen to."
+        n "Clearly whoever wrote this is in pain."
+        n "At this part anyway..."
+        show yuri zorder 3 at f22
+        y "While that did sound rather...horrific."
+        y "How could it have been written if she was dead?"
+        y "The previous entry was detailing her means of suicide, right?"
+        show yuri zorder 2 at t22
+        mc "Yeah, that's right."
+        "I turn the page back."
+        mc "The rope is ready, the noose is set."
+        mc "It's time to hang myself."
+        mc "I have to do this, everyone will be happier without me."
+        mc "I deserve to die. This world doesn't need me."
+        mc "They'll all be happier."
+        mc "No one is going to cry for me."
+        mc "And I deserve it."
+        "I turn back to where I was in the journal."
+        mc "I can only assume she died afterwards."
+        mc "Which doesn't explain the next couple of journal entries."
+        show yuri zorder 3 at f22
+        y "Precisely."
+        y "I'm wonder how those next entries came about."
+        y "Maybe it's a different person?"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "You think some person would write in someone else's journal?"
+        n "After they committed suicide?"
+        n "There's no way someone would do that."
+        show natsuki zorder 2 at t21
+        mc "I'm not sure, but the handwriting seems similar."
+        mc "The letters look the same between these two pages."
+        mc "So I think it is somehow the same person."
+        show yuri zorder 3 at f22
+        y "Maybe they didn't go through with it?"
+        y "Maybe there was second thoughts and they were still alive."
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Wait a second, what's the date on the entry?"
+        show natsuki zorder 2 at t21
+        mc "Why is that important?"
+        show natsuki zorder 3 at f21
+        n "Just tell me!"
+        show natsuki zorder 2 at t21
+        mc "Okay..."
+        mc "It's dated..."
+        "I look at the entry's date."
+        "The date looks wrong."
+        "I look at the last entry and it's after the next entry's date."
+        mc "...almost a week before the last entry."
+        mc "What...?"
+        show natsuki zorder 3 at f21
+        n "It's all starting to make sense now!"
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "It is?"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "No. I was lying."
+        n "I thought if I said that I'd have an epiphany or something."
+        n "Try looking through the next few pages, [player]."
+        n "Maybe we'll learn something."
+        show natsuki zorder 2 at t21
+        "Epiphany...?"
+        "Something about that word..."
+        "Normally it wouldn't mean anything."
+        "But when I'm near this book it..."
+        show natsuki zorder 3 at f21
+        n "Hello?"
+        n "World to [player]!"
+        show natsuki zorder 2 at t21
+        mc "Huh? What is it?"
+        show natsuki zorder 3 at f21
+        n "Are you there?"
+        n "Turn to the next page!"
+        show natsuki zorder 2 at t21
+        mc "Right, sorry."
+        mc "I was just thinking about something you said."
     elif yuri_date:
         "I'm going to meet up with Yuri first."
         "It might be our last chance to hang out after today."
