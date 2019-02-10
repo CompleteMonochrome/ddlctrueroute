@@ -1780,6 +1780,7 @@ label ch15_end:
         s "I'll see you soon, [player]..."
     $ ay_name = "???"
     $ insert_ayame_character()
+    $ ch15_ay_seen = True
     # Check if Ayame gets deleted
     show screen timer_15_del(_layer="timers")
     call expression "ch15_exclusive_" + ch13_scene

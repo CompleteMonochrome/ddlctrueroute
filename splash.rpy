@@ -589,6 +589,8 @@ label after_load:
         $ cPlayer_personal = player_personal.capitalize()
         $ cPlayer_possessive = player_possessive.capitalize()
         $ cPlayer_reflexive = player_reflexive.capitalize()
+    if not hasattr(store, 'ch10_d_seen'):
+        $ ch10_d_seen = False
     if not hasattr(store, 'ch11_badpoem'):
         $ ch11_badpoem = False
     if not hasattr(store, 'y_clean_bandages'):
@@ -674,6 +676,8 @@ label after_load:
     if not hasattr(store,'ay'):
         init:
             $ ay = DynamicCharacter('ay_name', image='ayame', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+    if not hasattr(store,'ch15_ay_seen'):
+        $ ch15_ay_seen = False
     if not hasattr(store,'ch15_m_together'):
         $ ch15_m_together = False
     if not hasattr(store,'ch15_s_together'):
@@ -692,6 +696,10 @@ label after_load:
         $ ch16_ay_level = 10
     if not hasattr(store,'ch16_cl_realname'):
         $ ch16_cl_realname = False
+    if not hasattr(store,'ch16_ny_stayed'):
+        $ ch16_ny_stayed = False
+    if not hasattr(store,'ch16_ny_clue'):
+        $ ch16_ny_clue = "none"
     if not hasattr(store, 'chapter_names'):
         $ chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","Inauguration Day","???","???","???","???"]
     if not hasattr(store, 'special_chapter'):
@@ -721,13 +729,18 @@ label after_load:
     if not hasattr(store, 'mInList'):
         $ mInList = False
 
-    # Because of a change in an update - remove with 0.9.4f - LOL nice removing
-    if ch14_book_choice == "Player":
-        $ ch14_book_choice = player
-    if ch14_natyuri_choice[0] == "Player":
-        $ ch14_natyuri_choice[0] = player
-    if ch14_natyuri_choice[1] == "Player":
-        $ ch14_natyuri_choice[1] = player
+    # Warn player if Yasuhiro not in folder and they load a save when he's meant to be in it
+    if chapter >= 10 and ch10_d_seen and not renpy.exists("../characters/yasuhiro.chr"):
+        call screen confirm("Warning:\nYasuhiro should exist in this save but doesn't.\nWould you like to insert his character file?", Return(True), Return(False))
+        if _return:
+            $ insert_dadsuki_character()
+
+    # Warn player if Ayame is not in the folder and they load a save when she's meant to be in it
+    if chapter >= 15 and ch15_ay_seen and not renpy.exists("../characters/ayame.chr"):
+        call screen confirm("Warning:\nAyame should exist in this save but doesn't.\nWould you like to insert her character file?", Return(True), Return(False))
+        if _return:
+            $ insert_ayame_character()
+
 
     # Normal Stuff
     if persistent.playthrough == 0:

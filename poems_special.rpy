@@ -19,6 +19,11 @@ image poem_end = ConditionSwitch(
 image poem_newend = "mod_assets/images/poem_special/poem_end_monika.png"
 image poem_newendb = "mod_assets/images/poem_special/poem_end_monikabad.png"
 
+image corrupt_journal_page1 = "mod_assets/images/poem_special/corrupt_journal_page1.png"
+image corrupt_journal_page2 = "mod_assets/images/poem_special/corrupt_journal_page2.png"
+image corrupt_journal_page3 = "mod_assets/images/poem_special/corrupt_journal_page3.png"
+image corrupt_journal_page4 = "mod_assets/images/poem_special/corrupt_journal_page4.png"
+
 label poem_special_1:
     $ quick_menu = False
     play sound page_turn
@@ -99,4 +104,33 @@ label poem_special_11:
     $ pause()
     $ quick_menu = True
     return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
+
+# May not need this
+label corrupt_journal_page_1:
+    $ quick_menu = False
+    play sound page_turn
+    show corrupt_journal_page1 with Dissolve(1.0)
+    $ pause()
+    $ quick_menu = True
+    return
+label corrupt_journal_page_2:
+    $ quick_menu = False
+    play sound page_turn
+    show corrupt_journal_page2 with Dissolve(1.0)
+    $ pause()
+    $ quick_menu = True
+    return
+label corrupt_journal_page_3:
+    $ quick_menu = False
+    play sound page_turn
+    show corrupt_journal_page3 with Dissolve(1.0)
+    $ pause()
+    $ quick_menu = True
+    return
+label corrupt_journal_page_4:
+    $ quick_menu = False
+    play sound page_turn
+    show corrupt_journal_page4 with Dissolve(1.0)
+    $ pause()
+    $ quick_menu = True
+    return

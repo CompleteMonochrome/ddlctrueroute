@@ -603,6 +603,7 @@ label ch10_main:
     jump ch10_nat_house
 
 label ch10_nat_house:
+    $ ch10_d_seen = True
     $ ch10_del_jump = "_nat_house"
     scene bg n_house_day
     with wipeleft_scene

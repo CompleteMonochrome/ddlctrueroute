@@ -1261,7 +1261,7 @@ label christmas_chapter:
     mc "I don't know if she'll like this."
     cl 4chk "Why not?"
     cl "It's really quite sweet."
-    cl 4cha "I mean that literally, like trying smelling it."
+    cl 4cha "I mean that literally, like try smelling it."
     "The book does somehow give an aroma of freshly baked cupcakes."
     cl "The story is..."
     cl 4chb "Well, that's spoilers."

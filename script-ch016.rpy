@@ -2453,7 +2453,167 @@ label ch16_main:
         show natsuki zorder 3 at f21
         n "Good enough."
         n "We won't be here long anyway."
-        show natsuki zorder 2 at t21
+        if yuri_date:
+            show natsuki zorder 2 at t21
+            show yuri zorder 3 at f22
+            y "Before we go on..."
+            y "I want to make sure [player] is committed to this."
+            y "I just have a bad feeling about today."
+            y "Like this is the last time we'll really get together."
+            show natsuki zorder 3 at f21
+            show yuri zorder 2 at t22
+            n "If you'd rather spend your time together."
+            n "I get it."
+            n "This is important but I can see why you'd want to spend this moment with each other."
+            n "But if you're doing this, you have to be committed."
+            show natsuki zorder 2 at t21
+            show yuri zorder 3 at f22
+            y "I'll admit, I am rather curious about this."
+            y "But if you want to spend this time with just the two of us..."
+            y "I understand too..."
+            y "If we uncover something we shouldn't..."
+            y "Then this could very well be our last time together."
+            show natsuki zorder 3 at f21
+            show yuri zorder 2 at t22
+            n "Okay, I wouldn't go that far."
+            n "There's definitely gonna be more times you can hang out in the future."
+            n "But there is something about today that's really special."
+            n "I can't quite figure it out."
+            show natsuki zorder 2 at t21
+            show yuri zorder 3 at f22
+            y "Regardless, we don't have to talk about this."
+            y "I'm leaving it up to you, [player]."
+            menu:
+                y "Shall we stay?"
+                "Yes.":
+                    $ ch16_ny_stayed = True
+                    y "I see."
+                    y "If that's your decision, then that must mean you're committed to this."
+                    y "I suppose that's that, Natsuki."
+                    show natsuki zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    n "I'm glad I could count on you two."
+                    n "Now let's go back to what we were talking about."
+                    show natsuki zorder 2 at t21
+                "No.":
+                    $ ch16_ny_stayed = False
+                    y "Okay."
+                    y "I understand."
+                    y "Natsuki--"
+                    show natsuki zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    n "It's alright."
+                    n "You two spend your time together."
+                    n "Enjoy it, okay?"
+                    n "Make sure you say what you have to say."
+                    show natsuki zorder 2 at t21
+                    mc "What do you mean by that?"
+                    "Natsuki simply smiles at me."
+                    show natsuki zorder 3 at f21
+                    n "I'll leave you two here..."
+                    n "After all, it is Yuri's spot."
+                    n "Maybe I can figure out something on my own."
+                    show natsuki zorder 2 at t21
+                    show yuri zorder 3 at f22
+                    y "Goodbye, Natsuki."
+                    y "And good luck."
+                    show natsuki zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    n "Yeah, you too."
+                    show natsuki at lhide
+                    hide natsuki
+                    show yuri zorder 2 at t11
+                    "Natsuki waves goodbye before leaving."
+                    "It looked like she was heading in the direction of the library."
+                    "It's probably another quiet spot so it makes sense."
+                    y "Shall we get going as well?"
+                    mc "What did you have in mind?"
+                    jump ch16_y_cancel
+        elif natsuki_date:
+            n "But before we go on..."
+            n "I want to tell you something, [player]."
+            show natsuki zorder 2 at t21
+            mc "What is it?"
+            show natsuki zorder 3 at f21
+            n "I don't know why..."
+            n "But there's something about this day."
+            n "Something terrible."
+            n "It almost makes me want to spend it differently."
+            show natsuki zorder 2 at t21
+            show yuri zorder 3 at f22
+            y "I think I understand, Natsuki."
+            y "I'm getting that feeling too."
+            y "If you two would rather be together than discussing this..."
+            y "I won't stop you."
+            y "Love is greater than curiosity, after all."
+            show natsuki zorder 3 at f21
+            show yuri zorder 2 at t22
+            n "I-It's not love...!"
+            n "I-It's...!"
+            "Natsuki's face turns a bright red."
+            n "W-Well, whatever...!"
+            n "It's your decision, [player]."
+            n "If you want to spend this time together instead of talking about this..."
+            n "Then just say so."
+            n "But if you do want to talk about this, you have to be committed."
+            menu:
+                n "So are we staying?"
+                "Yes.":
+                    $ ch16_ny_stayed = True
+                    n "Okay, great."
+                    n "I didn't mean for that to sound like a relief or anything."
+                    n "I just respect your decision."
+                    show natsuki zorder 2 at t21
+                    show yuri zorder 3 at f22
+                    y "Now that that's settled, can we get back to the topic at hand?"
+                    show yuri zorder 2 at t22
+                "No.":
+                    $ ch16_ny_stayed = False
+                    n "If that's what you want."
+                    n "We can go."
+                    n "I really don't blame you for choosing that."
+                    n "Even if it does seem kinda selfish."
+                    n "Because I feel the same."
+                    show natsuki zorder 2 at t21
+                    show yuri zorder 3 at f22
+                    y "So that's how it is?"
+                    y "Okay then..."
+                    show natsuki zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    n "Yuri, I'm sorry."
+                    n "I'm interested too."
+                    n "But today is just--"
+                    show natsuki zorder 2 at t21
+                    show yuri zorder 3 at f22
+                    y "It's fine."
+                    y "You two have your fun."
+                    y "But if I may, can I borrow the journal?"
+                    y "Maybe I can try to find something out myself."
+                    show natsuki zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    n "Um...sure."
+                    "Natsuki gives the journal to Yuri."
+                    n "You might not be able to read all of it."
+                    show natsuki zorder 2 at t21
+                    show yuri zorder 3 at f22
+                    y "I'm a fast reader."
+                    y "I'm sure I'll manage."
+                    y "Goodbye, you two."
+                    show natsuki zorder  3 at f21
+                    n "That's not what I meant."
+                    n "But good luck, Yuri."
+                    n "We'll see you later!"
+                    show yuri at thide
+                    hide yuri
+                    show natsuki zorder 2 at t11
+                    mc "Bye, Yuri!"
+                    "She's already engrossed in the journal when I say that so I get no response."
+                    n "There's a couple of things we could do."
+                    mc "What did you have in mind?"
+                    jump ch16_n_cancel
+        else:
+            $ ch16_ny_stayed = True
+            show natsuki zorder 2 at t21
         mc "About the journal again, right?"
         if natsuki_date or (ch13_name == "Natsuki" and monika_type == 0):
             mc "Is it really a good idea to talk about it outside the room?"
@@ -2834,7 +2994,7 @@ label ch16_main:
         show natsuki zorder 2 at t21
         show yuri zorder 3 at f22
         y "Maybe [player_reflexive]'s thought about this world a lot?"
-        y "Or maybe [player_reflexive] is special somehow."
+        y "Or maybe [player_personal] is special somehow."
         show yuri zorder 2 at t22
         mc "I don't think I have."
         mc "But in the case you guys aren't just messing with me, I'll play along."
@@ -2946,6 +3106,230 @@ label ch16_main:
         show natsuki zorder 2 at t21
         mc "Right, sorry."
         mc "I was just thinking about something you said."
+        show natsuki zorder 3 at f21
+        n "Just hurry up."
+        show natsuki zorder 2 at t21
+        mc "Right, next page."
+        "I turn to the next page of the journal."
+        "The writing on it seems familiar."
+        "It's just...none of it is readable."
+        "It's just scrawls and scribbles all around the page."
+        "I can't make out any of the letters."
+        "I turn to the next page and it's the same."
+        "In fact, the next dozen pages are just the same thing."
+        "It looks like the first four pages are just repeated over and over."
+        show yuri zorder 3 at f22
+        y "What's wrong?"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Yeah, aren't you gonna read it to us?"
+        show natsuki zorder 2 at t21
+        mc "I would, but it's actually unreadable."
+        mc "The next couple of pages look like a bunch of scribbles."
+        mc "It doesn't {i}say{/i} anything."
+        show natsuki zorder 3 at f21
+        n "What?"
+        "Natsuki looks as if she wants to see the page."
+        "She takes a step towards me then immediately turns back."
+        n "Okay."
+        n "Okay..."
+        n "What do the scribbles look like?"
+        n "Can you make out any shapes?"
+        show natsuki zorder 2 at t21
+        mc "I don't think I can."
+        mc "Why is that important?"
+        show natsuki zorder 3 at f21
+        if not ch13_cleaneye and ch13_name == "Natsuki" and ch12_outcome == 0:
+            n "Do you remember a couple of days ago?"
+            n "When we found that...writing in the room."
+            n "Is it at all similar to that?"
+            show natsuki zorder 2 at t21
+            mc "Actually, now that you mention it..."
+            mc "The writing {i}is{/i} really similar."
+            mc "There are some parts here which look like the previous entries but most of it is just unreadable."
+            mc "Those unreadable parts look a lot like the writing from the room."
+            mc "But what does that mean?"
+            show natsuki zorder 3 at f21
+            n "It means it could be linked."
+            n "Or that there could be some kind of pattern."
+        else:
+            n "Maybe we can find some kind of pattern."
+        n "Or some message encoded in the journal."
+        n "Anything, really."
+        n "But it's really difficult, since you're the one that has to do it."
+        n "Yuri and I can't look at it."
+        n "So it's all up to you."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Take a close look at the pages, [player]."
+        y "You have to see something."
+        y "Some kind of symbol."
+        y "A pattern or a loose resemblance to something we know."
+        y "That's the only thing that could help solve this mystery."
+        show yuri zorder 2 at t22
+        mc "Alright, alright."
+        mc "I'll take a closer look."
+        # show screen where you can easily switch between 4 journal entries
+        # show page 1-4
+        # try to find a pattern idk
+        show natsuki zorder 3 at f21
+        n "Well?"
+        n "You saw something, right?"
+        show natsuki zorder 2 at t21
+        mc "I-I guess so?"
+        mc "Let me think..."
+        menu:
+            "I saw..."
+            "A book.":
+                $ ch16_ny_clue = "book"
+            "A tie.":
+                $ ch16_ny_clue = "tie"
+            "An eye.":
+                $ ch16_ny_clue = "eye"
+                mc "It was pretty distinct."
+                mc "I feel like I've definitely seen it before."
+                mc "But I'm not sure where from."
+                show yuri zorder 3 at f22
+                y "An eye?"
+                y "Was it a specific color?"
+                show yuri zorder 2 at t22
+                mc "Actually, now that you mention it..."
+                mc "It was the only thing on the pages that was colored."
+                mc "It had a red iris."
+                mc "That's really the only thing that stuck out."
+                show natsuki zorder 3 at f21
+                show yuri zorder 2 at t22
+                n "A red iris?"
+                n "Hold on a second, didn't you have a book like that, Yuri?"
+                n "I remember you bringing it when [player] joined."
+                n "I don't know if you ever got to show it to him but..."
+                show natsuki zorder 2 at t21
+                show yuri zorder 3 at f22
+                y "W-Wait, you knew about that?"
+                y "I didn't realize you paid such attention to me."
+                show natsuki zorder 3 at f21
+                show yuri zorder 2 at t22
+                n "I pay attention to a lot of things."
+                n "But that's besides the point."
+                n "Where is that book now, Yuri?"
+                show natsuki zorder 2 at t21
+                show yuri zorder 3 at f22
+                y "I don't have it anymore."
+                show natsuki zorder 3 at f21
+                show yuri zorder 2 at t22
+                n "What?"
+                n "Where is it now?"
+                show natsuki zorder 2 at t21
+                show yuri zorder 3 at f22
+                y "It's gone."
+                y "Someone stole it from me."
+                show natsuki zorder 3 at f21
+                show yuri zorder 2 at t22
+                n "Stole it from you?!"
+                n "Why didn't you tell anyone?"
+                show natsuki zorder 2 at t21
+                show yuri zorder 3 at f22
+                y "It wasn't really a big deal."
+                y "I'm standing here after all."
+                y "Besides, I didn't really wanna bother you all with such a trivial event."
+                show yuri zorder 2 at t22
+                mc "Getting robbed isn't trivial, Yuri..."
+                mc "Were you hurt?"
+                mc "Did they take anything else from you?"
+                show yuri zorder 3 at f22
+                y "It wasn't really a big deal."
+                y "And no they didn't take anything else from me."
+                y "It happened while I was sleeping."
+                y "I left my book on my table and when I woke up, it was gone."
+                show natsuki zorder 3 at f21
+                show yuri zorder 2 at t22
+                n "Maybe you just forgot where you put it?"
+                n "It could still--"
+                show natsuki zorder 2 at t21
+                show yuri zorder 3 at f22
+                y "I don't have it, Natsuki."
+                y "I would know."
+                show natsuki zorder 3 at f21
+                show yuri zorder 2 at t22
+                n "Okay..."
+                n "Well, what do we do now...?"
+                show natsuki zorder 2 at t21
+                if ch13_name == "Monika" and monika_type != 0:
+                    "Do I tell them about the copy I have?"
+                    "Monika gave me a copy to--"
+                    "No."
+                    "Of course I shouldn't."
+                    "What am I thinking?"
+                    "These two can suffer too."
+                    "It will be just her left."
+                    "Just Monika."
+                elif persistent.markov_agreed:
+                    "I don't know anything about this book they're talking about."
+                    "At least, I don't think I do."
+                    "But if I did, I have a feeling I shouldn't tell them anyway."
+                    "There's just a voice in the back of my head saying that."
+                else:
+                    "What book are they talking about...?"
+                return
+            "A pen.":
+                $ ch16_ny_clue = "pen"
+            "A person.":
+                $ ch16_ny_clue = "person"
+            "A ribbon.":
+                $ ch16_ny_clue = "ribbon"
+        show natsuki zorder 3 at f21
+        n "You think you saw a [ch16_ny_clue]?"
+        n "..."
+        n "That's way too general."
+        n "I can't think of anything..."
+        n "Are you sure you saw that in all of the pages?"
+        show natsuki zorder 2 at t21
+        mc "I'm sure..."
+        "At least, I think I am."
+        show natsuki zorder 3 at f21
+        n "Well, okay."
+        n "If that's really what you saw, then I'm stumped."
+        show natsuki zorder 2 at t21
+        "I try to go through the whole journal again."
+        "But I just stop when I reach a certain point."
+        "I want to keep reading through it, but I can't."
+        "This didn't happen before..."
+        "I went through the whole journal with no problem last time."
+        mc "Huh..."
+        mc "That's weird."
+        show yuri zorder 3 at f22
+        y "What's wrong, [player]?"
+        show yuri zorder 2 at t22
+        mc "I can't go past this page in the book."
+        "The page I'm stuck on is a page with more random scribbles."
+        "But I have a feeling the next page is completely different."
+        "I just know it."
+        "Maybe there's something there...if only I could turn the page."
+        show natsuki zorder 3 at f21
+        n "You actually lost the ability to read some of it?"
+        n "That's not good."
+        n "Now we're right back where we started."
+        n "Except now we have something [player] saw in it that could mean anything."
+        "Natsuki sighs."
+        n "I think this is kinda hopeless."
+        n "We can't even crack this code."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "We're so close."
+        y "I know it."
+        y "But now we have nothing to go on..."
+        y "It's a real shame you lost that ability, [player]."
+        y "I wonder what could have happened in a few minutes to suddenly lose it."
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Now do you believe us?"
+        n "This journal is cursed."
+        show natsuki zorder 2 at t21
+        mc "I wouldn't have believed you if it didn't happen to me."
+        mc "The feeling was so weird..."
+        mc "It was like I couldn't control my arms."
+        mc "Like they just refused to move."
+        mc "It felt so surreal."
     elif yuri_date:
         "I'm going to meet up with Yuri first."
         "It might be our last chance to hang out after today."
@@ -2959,11 +3343,13 @@ label ch16_main:
         "You can barely hear the noise from the rest of the school yard."
         "I can actually hear myself breathing."
         show yuri 1a zorder 2 at t11
+        label ch16_y_cancel:
     elif natsuki_date:
         "I was going to try to find Natsuki at lunch."
         "I don't know why but I feel like I should really cherish this time with her."
         "Maybe it's got to do with what she said yesterday."
         "There was a lot in that journal."
+        label ch16_n_cancel:
     elif ch15_s_together:
         "Sayori said she wanted to see me at lunch."
         "I wonder what for?"
@@ -2984,6 +3370,39 @@ label ch16_main:
             s "Pay you back for what you did yesterday."
         mc "Yesterday?"
         mc "You mean at your house?"
+        s "Yesterday, I was stupid."
+        s "I shouldn't have tried to do something out of order."
+        s "I shouldn't have even thought about it."
+        s "I'm such a hopeless romantic."
+        s "I'm looking for a happy ending that doesn't exist."
+        s "So instead I made one for myself..."
+        s "How stupid can I be, right?"
+        mc "Don't say that about yourself, [player]."
+        mc "You're the only one that could have gotten the club this far."
+        mc "Give yourself some credit."
+        mc "And there's no point looking down on yourself, especially now."
+        mc "You'll need all the positivity you can get."
+        s "You really think so, [player]?"
+        s "You think I can just create positivity out of thin air like that?"
+        mc "I don't know what you're capable of."
+        mc "At least, not the full extent of it."
+        mc "But I hope there's at least some way I can cheer you up."
+        s "That's it then."
+        s "I'll pay you back and cheer myself up at the same time."
+        mc "What are you thinking?"
+        if ch15_s_date_choice:
+            s "I need to concentrate."
+            s "It didn't turn out very well last time."
+        else:
+            s "I'm thinking..."
+            s "...of a nice place."
+        mc "What...?"
+        mc "Sayo{nw}"
+        $ _history_list.pop()
+        stop music
+        show screen tear(20, 0.1, 0.1, 0, 40)
+        window hide(None)
+        play sound "sfx/s_kill_glitch1.ogg"
         call ch16_sayoridate
     elif monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
         "I don't know why but I have a feeling Monika wants to see me."
@@ -3009,6 +3428,43 @@ label ch16_end:
     return
 
 label ch16_sayoridate:
+    $ sayori_outfit = 1
+    scene bg park_day
+    $ pause(0.25)
+    stop sound
+    hide screen tear
+    play music t12s
+    window show(None)
+    mc "Sayo{fast}ri, what..."
+    window auto
+    if ch15_s_date_choice:
+        "I've been here before."
+        "Haven't I?"
+    "It's the park that I went to with Sayori when we were younger."
+    "Sayori is nowhere in sight."
+    "Is this part of her power?"
+    "But what is the point of this?"
+    "Why bring us here...?"
+    "I feel a tap on my shoulder."
+    show sayori 1ba zorder 2 at t11
+    s "Good afternoon, [player]."
+    mc "Sayori..."
+    mc "You look incredible."
+    s "Ehehe~"
+    s "You don't look terrible yourself, you know."
+    "I look down at what I'm wearing."
+    "It's an outfit I've never worn or seen before."
+    "I don't think I even own it."
+    "Did Sayori do this to me?"
+    s "It's a beautiful day, isn't it?"
+    mc "Yeah..."
+    s "You wanna sit down?"
+    mc "Um..."
+    mc "Y-yeah, sure..."
+    "Sayori and I sit down on a nearby park bench."
+    s "Remember when we used to go here after school when we were younger?"
+    s "We'd play until our legs gave up."
+    mc "That was a long time ago."
     return
 
 label ch16_ending_good:
