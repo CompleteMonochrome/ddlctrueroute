@@ -3169,9 +3169,25 @@ label ch16_main:
         show yuri zorder 2 at t22
         mc "Alright, alright."
         mc "I'll take a closer look."
-        # show screen where you can easily switch between 4 journal entries
-        # show page 1-4
-        # try to find a pattern idk
+        label ch16_ny_journal:
+        call showjournal(journal_corrupt, ["natsuki 1a",t21,"yuri 2a",t22])
+        mc "Okay, I've finished looking."
+        show natsuki zorder 3 at f21
+        n "That didn't take long."
+        n "Maybe you missed something..."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Perhaps it might be worth taking a another look."
+        y "Just to be sure."
+        show yuri zorder 2 at t22
+        menu:
+            "Should I take another look?"
+            "Yes.":
+                mc "Okay, I'll look again."
+                jump ch16_ny_journal
+            "No.":
+                pass
+        "I close the journal."
         show natsuki zorder 3 at f21
         n "Well?"
         n "You saw something, right?"
@@ -3179,7 +3195,7 @@ label ch16_main:
         mc "I-I guess so?"
         mc "Let me think..."
         menu:
-            "I saw..."
+            mc "I saw..."
             "A book.":
                 $ ch16_ny_clue = "book"
             "A tie.":

@@ -7,6 +7,11 @@ init python:
             self.yuri_2 = yuri_2
             self.yuri_3 = yuri_3
 
+    class Journal:
+        def __init__(self, author="", entries=[]):
+            self.author = author
+            self.entries = entries
+
     poem_y1 = Poem(
     author = "yuri",
     title = "Ghost Under the Light",
@@ -2221,6 +2226,11 @@ To pay my debt
 On Christmas Day."""
     )
 
+    journal_corrupt = Journal(
+    author="???",
+    entries=["corrupt_journal_page1","corrupt_journal_page2","corrupt_journal_page3","corrupt_journal_page4"]
+    )
+
 image paper = "images/bg/poem.jpg"
 image paper_glitch = LiveComposite((1280, 720), (0, 0), "paper_glitch1", (0, 0), "paper_glitch2")
 image paper_glitch1 = "images/bg/poem-glitch1.png"
@@ -2268,6 +2278,74 @@ screen poem(currentpoem, paper="paper"):
             text "[currentpoem.title]\n\n[currentpoem.text]" style "monika_text"
         null height 100
     vbar value YScrollValue(viewport="vp") style "poem_vbar"
+
+
+
+screen journal(currentjournal, paper="paper", images=True):
+
+    default currentpage = 0
+    default journaltext = ""
+
+    style_prefix "choice"
+
+    if images:
+        vbox at journal_fade:
+            xalign 0.5
+            yalign 0.5
+            add currentjournal.entries[currentpage]
+    else:
+        fixed at journal_fade:
+            style_prefix "poem"
+            vbox:
+                add paper
+            viewport id "vp":
+                child_size (710, None)
+                mousewheel True
+                draggable True
+                has vbox
+                null height 40
+                $ journaltext = currentjournal.entries[currentpage]
+                if currentjournal.author == "???":
+                    text "[journaltext]" style "yuri_text_2"
+                elif currentjournal.author == "yuri":
+                    text "[journaltext]" style "yuri_text"
+                elif currentjournal.author == "sayori":
+                    text "[journaltext]" style "sayori_text"
+                elif currentjournal.author == "natsuki":
+                    text "[journaltext]" style "natsuki_text"
+                elif currentjournal.author == "monika":
+                    text "[journaltext]" style "monika_text"
+                null height 100
+            vbar value YScrollValue(viewport="vp") style "poem_vbar"
+
+    fixed at journal_fade:
+        hbox:
+            xalign 0.5
+            ypos 705
+            yanchor 0.5
+
+            spacing 175
+            textbutton "Previous":
+                action [SetScreenVariable("currentpage",currentpage-1), SensitiveIf(currentpage>0), Function(renpy.restart_interaction)]
+                text_size 15
+                text_insensitive_color "#A9A9A9"
+                activate_sound "sfx/pageflip.ogg"
+                xalign 0.2
+                xsize 125
+            textbutton "Finish":
+                action Return(0)
+                text_size 15
+                text_color "#00FF00"
+                text_hover_color "#228B22"
+                xalign 0.5
+                xsize 200
+            textbutton "Next":
+                action [SetScreenVariable("currentpage",currentpage+1), SensitiveIf(currentpage<len(currentjournal.entries)-1), Function(renpy.restart_interaction)]
+                text_size 15
+                text_insensitive_color "#A9A9A9"
+                activate_sound "sfx/pageflip.ogg"
+                xalign 0.8
+                xsize 125
 
 
 
@@ -2369,4 +2447,44 @@ label showpoem(poem=None, music=True, track=None, revert_music=True, img=None, w
         stop music_poem fadeout 2.0
         $ renpy.music.play(audio.t5c, fadein=2.0)
     return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
+
+label showjournal(journal=None, chars=None, paper=None, images=True):
+    $ numchars = len(chars)/2
+    $ hidechars = []
+    if chars:
+        python:
+            for x in range(numchars):
+                hidechars.append(chars[x*2].split(' ',1)[0])
+    if journal == None:
+        return
+    play sound page_turn
+    window hide
+    $ renpy.game.preferences.afm_enable = False
+    python:
+        for x in hidechars:
+            renpy.show(x, at_list=[journal_hide])
+    if not images:
+        if paper:
+            call screen journal(journal, paper=paper, images=False)
+        else:
+            call screen journal(journal, images=False)
+    else:
+        call screen journal(journal, images=True)
+    if chars:
+        python:
+            for x in range(numchars):
+                renpy.show(chars[x*2], at_list=[chars[x*2+1]])
+    window auto
+    return
+
+transform journal_fade:
+    on show:
+        alpha 0
+        linear 1 alpha 1.0
+    on hide:
+        alpha 1.0
+        linear .5 alpha 0
+
+transform journal_hide:
+    alpha 1.0
+    linear 1.0 alpha 0
