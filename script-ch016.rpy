@@ -1604,7 +1604,7 @@ label ch16_main:
         s "[player]?"
         show sayori zorder 2 at t32
         mc "W-What?"
-        show natsuki 2bo zorder 3 at f31
+        show natsuki 2o zorder 3 at f31
         n "Uhh...are you okay?"
         n "Because you don't look like you're okay."
         show natsuki zorder 2 at t31
@@ -1619,7 +1619,7 @@ label ch16_main:
         mc "Well, I'm fine now."
         mc "I just had a weird thought."
         mc "Sorry for worrying you guys."
-        show sayori 2bh zorder 3 at f32
+        show sayori 2h zorder 3 at f32
         s "Well, if you have any more of those..."
         s "Let me know, okay?"
     else:
@@ -1759,7 +1759,7 @@ label ch16_main:
         show natsuki zorder 2 at t31
         show sayori 1q zorder 3 at f32
         s "See you at the rehearsal, Natsuki!"
-        show sayori zorder 2 at t31
+        show sayori zorder 2 at t32
         show yuri 3pf zorder 3 at f33
         y "See you then."
         show natsuki zorder 2 at t31
@@ -2881,11 +2881,19 @@ label ch16_main:
         n "Why don't you tell us more about Monika?"
         n "You talked to her a lot in the first week you were here."
         n "Maybe we can learn something new."
+        n "That is..."
+        n "...if you can."
+        n "You didn't really say anything about her in the clubroom."
         show natsuki zorder 2 at t21
         mc "What would telling you about Monika tell us?"
         mc "I really doubt it's going to change anything..."
         show yuri zorder 3 at f22
         y "We shouldn't force it out of [player_reflexive], Natsuki."
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Fine!"
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
         y "Maybe you can look over the journal entries again and find something..."
         y "Or maybe there's more."
         y "I mean, there has to be {i}something{/i}."
@@ -3286,6 +3294,141 @@ label ch16_main:
                     "There's just a voice in the back of my head saying that."
                 else:
                     "What book are they talking about...?"
+                show yuri zorder 3 at f22
+                y "Maybe we can simply locate another copy."
+                y "There may be one in the library."
+                y "Or at some bookstore."
+                show natsuki zorder 3 at f21
+                show yuri zorder 2 at t22
+                n "I doubt it's in the library."
+                n "Someone would have picked it up and reported it by now."
+                n "A bookstore could work but we don't really have the time."
+                show natsuki zorder 2 at t21
+                mc "So what do you suggest?"
+                show natsuki zorder 3 at f21
+                n "With what we know, maybe it's best we just keep going on with our days."
+                n "We don't know what could happen next."
+                n "And we don't know just how much looking into this could affect us."
+                show natsuki zorder 2 at t21
+                show yuri zorder 3 at f22
+                y "It's true that we don't have much to work off."
+                y "Maybe it would be a good idea to just see how today goes."
+                y "Then later we can act when the dots connect."
+                show natsuki zorder 3 at f21
+                show yuri zorder 2 at t22
+                n "In the meantime, you can try to read as much of the journal as you can."
+                n "You're the only one of us who can."
+                n "Then you can tell us more when it's time to rehearse."
+                n "Maybe by then we'll have something we can act on."
+                show natsuki zorder 2 at t21
+                show yuri zorder 3 at f22
+                y "Why can't we just look through the journal now?"
+                y "Maybe there's more beyond those repeated scribbles."
+                show natsuki zorder 3 at f21
+                show yuri zorder 2 at t22
+                n "Maybe there is."
+                n "But now I have an idea and I have to act on it."
+                show natsuki zorder 2 at t21
+                mc "What is it?"
+                show natsuki zorder 3 at f21
+                n "I can't tell you."
+                n "You might not be able to read the journal beyond a certain point if I tell you."
+                n "It's better if we keep the factors the same."
+                n "Besides, we shouldn't stick around here too long."
+                n "People might get suspicious."
+                show natsuki zorder 2 at t21
+                show yuri zorder 3 at f22
+                y "Isn't that a little paranoid?"
+                show natsuki zorder at f21
+                show yuri zorder 2 at t22
+                n "With cursed books and this weird feeling I'm getting today..."
+                n "I think I have the right to be paranoid."
+                show natsuki zorder 2 at t21
+                show yuri zorder 3 at f22
+                y "I suppose that's true."
+                y "Good luck, Natsuki."
+                show natsuki zorder 3 at f21
+                n "Good luck to the two of you as well."
+                n "Now, if you'll excuse me."
+                show natsuki at thide
+                hide natsuki
+                show yuri zorder 2 at t11
+                y "I wonder what she's doing."
+                mc "I don't know if what she's doing can help at this point."
+                mc "But it must be important if she cut this little meeting we had short."
+                y "I'm sure she has her reasons."
+                y "Can you look beyond those scribbles?"
+                mc "In the journal?"
+                mc "I can give it a shot."
+                y "Just relay the information to us when you can."
+                y "I'm going to try to look for a certain book."
+                mc "The one you were talking about before?"
+                y "Yes, that's right."
+                y "There's a chance I may have left in my locker or somewhere in school."
+                y "If I did, then perhaps it will help solve this mystery we have."
+                y "A-Anyway, I'll leave you to it."
+                y "Hopefully you can find something out as well."
+                mc "I never thought I'd be spending my lunch time reading a book."
+                mc "I guess the club has really gotten to me."
+                y "Ahaha, it looks like it has."
+                y "I'll see you later, [player]."
+                if yuri_date:
+                    y "It's a shame we didn't get to spend more of this time together."
+                    y "I don't know if I should be saying this..."
+                    y "But the three of us investigating whatever this is a lot more fun."
+                else:
+                    y "This whole investigating thing is a lot more fun than spending lunch alone."
+                mc "I'm sure it is."
+                mc "I'll see you at rehearsals."
+                show yuri at thide
+                hide yuri
+                "Yuri waves a final goodbye before heading towards the locker area."
+                "I should do what I can as well."
+                "I'll make sure the right people get the right information."
+                "Now, to look at this journal."
+                "I still don't know if they were serious about not being able to turn the page."
+                "I'm able to do it fine, and beyond the point that Natsuki could."
+                "I flip through more of the repeated entries with the scribbles all over them."
+                "It goes on for a while, I almost think that the rest of the journal is just the same four scribbles."
+                "Eventually though, I reach a certain page in the journal."
+                "It has the fourth scribble I saw but for some reason it's harder to turn the page."
+                "It actually takes me effort to flip it to the next page."
+                "Like there's someone grabbing my arm and actively stopping me."
+                "Eventually, I get to the next page and that force is gone."
+                "Is that what the two of them were talking about?"
+                "Maybe it's just the wind..."
+                "This journal entry is dated the same date as the very first entry."
+                "Except..."
+                "From what I can tell, the perspective is kinda different."
+                "I flip between the start of the journal and the current page."
+                "The force that was there before isn't there as I look between the pages so it's easy."
+                "As I suspected, the entries are basically the same but the perspective is slightly different."
+                "Earlier in the journal, it talked about being someone else's book club."
+                "The name, for some reason, is blurred out."
+                "It looks like it's been erased and rewritten too many times so I can't tell what it says."
+                "In the part of the journal I'm reading, it's written as if it was their club."
+                "Like the person who wrote the journal entry now owned the club."
+                "It seems like it's the same person, judging by the handwriting."
+                "But what does this all mean?"
+                "Why is the date between the first entry and this one the same?"
+                "Why was there dozens of pages of the same four scribbles...?"
+                "Why am I the only one who is able to read this far?"
+                "There's so many questions I'm wondering the answer to."
+                "This whole mystery sure has a lot more to it than I thought."
+                if persistent.markov_agreed:
+                    "I'll need to relay this information."
+                    "But not to those two."
+                    "She needs to know."
+                else:
+                    "I'll have to tell them when I can."
+                    "I doubt they'll have answers for me..."
+                    "...but maybe we can start acting."
+                "As I look to read the next page, the siren indicating the end of lunch rings."
+                "I close the journal, making sure to mark the page with my finger."
+                "I open the journal, to the page I was just reading to make sure I can still open it easily."
+                "It seems fine, so I close it and put it away."
+                "I have more time to read the next entries later..."
+                "There's still a bunch of time before rehearsals anyway."
                 return
             "A pen.":
                 $ ch16_ny_clue = "pen"
@@ -3346,6 +3489,200 @@ label ch16_main:
         mc "It was like I couldn't control my arms."
         mc "Like they just refused to move."
         mc "It felt so surreal."
+        show yuri zorder 3 at f22
+        y "That is the same sensation I felt."
+        y "Like there was some invisible force preventing you from looking at the next page, right?"
+        show yuri zorder 2 at t22
+        mc "That's exactly it!"
+        show natsuki zorder 3 at f21
+        n "That's great you figured that out and all."
+        n "But now we have nothing."
+        n "Our only lead was the journal and all we got from it was a [ch16_ny_clue]."
+        n "I'm still wondering what the hell it could possibly mean."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "I'm at a loss as well."
+        y "I'm not saying you looked at it wrong, [player]."
+        y "But maybe there was something else."
+        show yuri zorder 2 at t22
+        mc "It's what I saw."
+        mc "If you want to look at it yourself, be my guest."
+        "I offer the journal with the page open to Yuri."
+        "Instead of taking it from me, she flings the book to the ground."
+        mc "Yuri?"
+        show yuri zorder 3 at f22
+        y "I-I'm sorry."
+        y "I don't know what came over me."
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Don't bother, it's the journal's curse or whatever."
+        n "It won't let you cheat it like that either."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "How do you know that?"
+        y "Have you tried it yourself?"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Actually, yeah."
+        n "Yesterday, I tried using something to hold a page down."
+        n "It was a page I couldn't read."
+        n "As soon as I tried to look at it, I immediately closed it."
+        n "It's like I wasn't in control of myself."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "This book is a lot more complicated than I thought."
+        y "I wonder what other tricks it has up it's sleeves."
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Well, it doesn't really matter."
+        n "We've pretty much done all we could with it."
+        n "[player] can't read past a certain point."
+        n "And the parts [player_personal] can read don't really help."
+        "Natsuki sits down on the floor."
+        n "I give up."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Natsuki, you can't do that."
+        y "You--"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Why not?"
+        n "We don't exactly have anything to work with."
+        n "And no offense to you, [player], but you haven't really been that helpful."
+        show natsuki zorder 2 at t21
+        mc "I'm sorry."
+        mc "I'm doing my best here."
+        show yuri zorder 3 at f22
+        y "Natsuki, you--"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Yeah, well..."
+        n "It's not good enough."
+        n "We're stuck again and now I don't know what to do."
+        n "It's as if all this effort has been for nothing."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Natsuki--"
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "Let's just accept what's coming."
+        "Natsuki gets up and brushes off the dirt from her dress."
+        n "It's not like we can do anything about it."
+        n "Time to--"
+        play sound "sfx/slap.ogg"
+        show white zorder 4:
+            alpha 0.6
+            linear 0.25 alpha 0.0
+        show natsuki 22a zorder 3 at hf22
+        "{i}Pwap!{/i}"
+        hide white
+        "Yuri slaps Natsuki in the face."
+        "It's just a moment of silence as Natsuki stands there, not believing what happened."
+        "I'm still not sure if that actually happened myself."
+        n "Y-Yuri--"
+        show yuri zorder 3 at f21
+        show natsuki zorder 2 at t22
+        y "You started this little investigation."
+        y "You want to solve this mystery as much as the rest of us."
+        y "You're the one that knows the most about this."
+        "Yuri stares into Natsuki's eyes."
+        y "So you can't give up."
+        y "You have to think of something."
+        y "All of this, it hasn't been for nothing."
+        y "There's just a clue we're missing."
+        y "I know it."
+        y "Please, Natsuki..."
+        y "As your friend, I'm telling you to keep going."
+        y "To see this through to the end."
+        y "Whether or not that end leads to anything..."
+        y "It's up to us..."
+        "Yuri steps back."
+        y "...isn't it?"
+        show yuri zorder 2 at t21
+        "A few seconds pass."
+        "I'm not sure if Yuri's whole speech just then did anything."
+        "Natsuki still hasn't moved her head."
+        "Eventually she opens her mouth to speak."
+        show natsuki zorder 3 at f22
+        n "You're right."
+        "She shakes her head."
+        n "Thanks for slapping some sense into me, Yuri."
+        n "Literally."
+        n "It is up to us."
+        n "We're the only ones that know about this."
+        n "If our world is in danger, we could be the only ones who could stop it."
+        n "Yuri, I don't want to give up."
+        n "And I think I know what we can do."
+        show natsuki zorder 2 at t21
+        show yuri zorder 3 at f21
+        y "What is it?"
+        show yuri zorder 2 at t22
+        "Natsuki looks at me."
+        "She looks at the journal on the floor then back at me again."
+        show natsuki zorder 3 at f21
+        n "It doesn't involve [player]."
+        n "I'm sorry."
+        "She picks up the journal and offers it to me."
+        n "Take this."
+        show natsuki zorder 2 at t21
+        mc "And do what?"
+        show natsuki zorder 3 at f21
+        n "Try to make sense of it."
+        n "You can read further than I can."
+        n "Maybe that means something."
+        show natsuki zorder 2 at t21
+        mc "Well, what are you gonna do then?"
+        mc "Why can't I be part of it?"
+        show natsuki zorder 3 at f21
+        n "We just saw that in a matter of minutes, you lost the ability to fully read the journal."
+        n "This plan I have could make it worse."
+        n "So I don't want to change things while they're still working."
+        show natsuki zorder 2 at t21
+        mc "But--"
+        show yuri zorder 3 at f22
+        y "She's right, [player]."
+        y "The more factors we keep the same, the better chance we have of deciphering that journal."
+        y "Maybe you'll regain the ability to read more of it."
+        show yuri zorder 2 at t22
+        mc "And what if I don't?"
+        show natsuki zorder 3 at f21
+        n "Then that's the end of the journal's usefulness."
+        n "Look, [player]."
+        n "I don't want to exclude you from this."
+        n "But my plan an important part of my plan is that you aren't involved."
+        show natsuki zorder 2 at t21
+        mc "Alright..."
+        "I take the journal from Natsuki."
+        mc "I get it."
+        mc "I'll see what I can do."
+        show yuri zorder 3 at f22
+        y "Thank you for understanding."
+        y "I hope you can find something new in that journal."
+        y "Good luck."
+        show natsuki zorder 3 at f21
+        show yuri zorder 2 at t22
+        n "I'm sure he'll find something."
+        n "Yuri, follow me."
+        n "We have things to talk about."
+        n "We'll see you later, [player]."
+        show natsuki zorder 2 at t21
+        mc "See you at rehearsals."
+        mc "Hopefully you can do whatever it is you're planning."
+        show yuri at thide
+        show natsuki at thide
+        hide yuri
+        hide natsuki
+        "Natsuki and Yuri rush off."
+        "I don't know where they're heading or what she has planned..."
+        "But it seems urgent."
+        "Yuri slapping Natsuki seems to have ignited a new determination inside her."
+        "Maybe we'll solve this mystery after all."
+        "In the meantime, I have to figure out what this journal means."
+        "Maybe looking at old entries will give new information."
+        "There's just one thing."
+        "Why is this story so similar to ours?"
+        "There has to be a reason for that..."
+        "...doesn't there?"
     elif yuri_date:
         "I'm going to meet up with Yuri first."
         "It might be our last chance to hang out after today."
@@ -3377,7 +3714,7 @@ label ch16_main:
         "Sayori is coming...and I'm getting this strange feeling coming as she approaches."
         show sayori zorder 3 at t11
         s "I'm glad I found you, [player]."
-        label ch15_s_interrupt:
+        label ch16_s_interrupt:
         if ch15_s_date_choice:
             s "I want to fix what happened yesterday."
             s "By skipping the boundaries of today."
