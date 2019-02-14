@@ -8,8 +8,9 @@ init python:
             self.yuri_3 = yuri_3
 
     class Journal:
-        def __init__(self, author="", entries=[]):
+        def __init__(self, author="", images=False, entries=[]):
             self.author = author
+            self.images = images
             self.entries = entries
 
     poem_y1 = Poem(
@@ -2228,6 +2229,7 @@ On Christmas Day."""
 
     journal_corrupt = Journal(
     author="???",
+    images=True,
     entries=["corrupt_journal_page1","corrupt_journal_page2","corrupt_journal_page3","corrupt_journal_page4"]
     )
 
@@ -2281,14 +2283,14 @@ screen poem(currentpoem, paper="paper"):
 
 
 
-screen journal(currentjournal, paper="paper", images=True):
+screen journal(currentjournal, paper="paper"):
 
     default currentpage = 0
     default journaltext = ""
 
     style_prefix "choice"
 
-    if images:
+    if currentjournal.images:
         vbox at journal_fade:
             xalign 0.5
             yalign 0.5
@@ -2448,7 +2450,7 @@ label showpoem(poem=None, music=True, track=None, revert_music=True, img=None, w
         $ renpy.music.play(audio.t5c, fadein=2.0)
     return
 
-label showjournal(journal=None, chars=None, paper=None, images=True):
+label showjournal(journal=None, chars=None, paper=None):
     $ numchars = len(chars)/2
     $ hidechars = []
     if chars:
@@ -2463,13 +2465,10 @@ label showjournal(journal=None, chars=None, paper=None, images=True):
     python:
         for x in hidechars:
             renpy.show(x, at_list=[journal_hide])
-    if not images:
-        if paper:
-            call screen journal(journal, paper=paper, images=False)
-        else:
-            call screen journal(journal, images=False)
+    if paper:
+        call screen journal(journal, paper=paper)
     else:
-        call screen journal(journal, images=True)
+        call screen journal(journal)
     if chars:
         python:
             for x in range(numchars):
