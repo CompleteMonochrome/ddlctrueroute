@@ -126,6 +126,23 @@ init python:
             delete_character_alternate("ayame",timeline)
             try: open(basedir+"ayame.chr", "wb").write(renpy.file("ayame.chr").read())
             except: pass
+    def check_mod(name):
+        import os
+        # Check which OS then which game mod to check
+        if renpy.macintosh:
+            rv = "~/Library/RenPy/" + name + "/persistent"
+            return (os.path.expanduser(rv)).replace("\\","/")
+
+        elif renpy.windows:
+            if 'APPDATA' in os.environ:
+                return (os.environ['APPDATA'] + "/RenPy/" + name + "/persistent").replace("\\","/")
+            else:
+                rv = "~/RenPy/" + name + "/persistent"
+                return (os.path.expanduser(rv)).replace("\\","/")
+
+        else:
+            rv = "~/.renpy/" + name + "/persistent"
+            return (os.path.expanduser(rv)).replace("\\","/")
     def pause(time=None):
         global _windows_hidden
         if not time:
