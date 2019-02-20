@@ -2441,7 +2441,9 @@ label ch16_main:
         "I don't really get the point of it."
         "But I don't really have anything better to do."
         "I think they're just waiting for me."
+        scene bg school_secluded with wipeleft_scene
         "They said they wanted to go to this secluded spot."
+        "I see them talking to each other and approach them."
         show natsuki 1a zorder 3 at f21
         n "Good! You're here."
         n "I was starting to think you were gonna ditch us."
@@ -2687,9 +2689,12 @@ label ch16_main:
             "Natsuki and Yuri stare as Monika and I walk away."
             "I really didn't want to just leave them but..."
             "Monika needs to tell me something."
-            scene bg school_front
+            scene bg school_courtyard
             show monika 1a zorder 2 at t11
-            with wipeleft
+            with wipeleft_scene
+            "We don't really go to anywhere in particular."
+            "Somehow we ended up walking to the courtyard, one of the most populated areas at school."
+            mc "So what did you want to tell me?"
             jump ch16_m_interrupt
         n "What was the point of it all?"
         n "I just..."
@@ -2839,7 +2844,7 @@ label ch16_main:
             mc "Sorry about this."
             show sayori zorder 3 at f33
             s "Come on, let's go."
-            scene bg school_front
+            scene bg school_grounds
             show sayori 1a zorder 2 at t11
             with wipeleft
             "Sayori takes us to one of the benches in the yard."
@@ -3709,6 +3714,8 @@ label ch16_main:
         "I don't think she needs me for any preparations."
         "And the thing with Ayame isn't till after lunch."
         "So what could she possibly want to talk about?"
+        scene bg school_grounds with wipeleft_scene
+        "I head over to one of the free benches around the school."
         "As I'm about to take a seat, I see a girl running towards me from the distance."
         "She's waving her arms in the air like she's totally oblivious to any attention she might draw to herself."
         "Sayori is coming...and I'm getting this strange feeling coming as she approaches."
@@ -3762,6 +3769,7 @@ label ch16_main:
         "It's like I'm being followed or something."
         "But it just feels...wrong."
         "Like the thing that's following me doesn't have good intentions."
+        scene bg school_courtyard with wipeleft_scene
         "I decide to go to a populated area."
         "I don't know if it's just me being superstitious or not..."
         "But better safe than sorry."
@@ -3785,8 +3793,8 @@ label ch16_main:
             m "Don't worry about it."
         "Monika rubs her hands on her blazer."
         "Probably to try to get rid of that cold touch."
-        label ch16_m_interrupt:
         mc "Anyway, what did you need to tell me?"
+        label ch16_m_interrupt:
         m "Are you busy?"
         mc "Not particularly."
         mc "Why?"
@@ -3849,7 +3857,8 @@ label ch16_main:
             "Monika thinks for a moment."
             m "I don't think this will cause any problems."
             m "So I can tell you."
-            m "I think this person is the catalyst for the danger."
+            m "I think this person..."
+            m "...is the catalyst for the danger."
             mc "The catalyst?"
             m "If something happens to this person, it could trigger the end of the world."
             m "You might not believe me, but they could have the power to destroy this world."
@@ -3935,14 +3944,17 @@ label ch16_main:
             m "I went around and I found..."
             m "...something."
             m "It was in Natsuki's house."
-            m "I don't know what exactly it is but--"
+            m "I didn't have time to read it all."
+            m "But I have a copy of it."
+            m "Copying and pasting is pretty useful!"
+            m "Anyway, I don't know what exactly it is but--"
             m "Someone's coming."
             m "We'll talk later."
             m "Remember, just keep her distracted."
             m "That's all you need to do."
             m "I'll take care of the rest."
             m "...The only way I know how."
-            scene bg school_front
+            scene bg school_courtyard
             show monika 1a zorder 2 at t11
             with open_eyes
             $ audio.t2c = "<from " + str(currentpos) + " loop 4.499>bgm/2.ogg"
@@ -3951,60 +3963,225 @@ label ch16_main:
             "What just happened...?"
             "How long did I close my eyes for?"
             m "[player], turn around."
-            "I turn around and I can see Sayori approaching in the distance."
-            m "Sayori!"
-            m "We're over here."
-            "She starts running towards us."
-            "She looks pretty worried..."
-            show sayori zorder 3 at f21
-            show monika zorder 2 at t22
-            s "I'm glad I could find you both before the end of lunch."
-            s "I wasn't sure if I would make it."
-            show sayori zorder 2 at t21
-            mc "Lunch only started a couple of minutes ago."
-            mc "There's no rush."
-            show sayori zorder 3 at f21
-            s "What?"
-            s "It's only a couple more minutes until the end of lunch."
-            s "Did you lose track of time or something?"
-            "What's she talking about?"
-            "I've only just met up with Monika."
-            "And that was near the beginning of lunch."
-            s "Anyway, I needed to speak with you both."
-            show sayori zorder 2 at t21
-            show monika zorder 3 at f22
-            m "What's this about, Sayori?"
-            m "Did you need some help with something?"
-            show sayori zorder 3 at f21
-            show monika zorder 2 at t22
-            s "Not exactly."
-            s "I do have a favor to ask the two of you though."
-            s "It's nothing too big."
-            s "It might not even interrupt what you were planning to do."
-            show sayori zorder 2 at t21
-            mc "What is it?"
-            show sayori zorder 3 at f21
-            s "I need the two of you to stay away from Ayame."
-            s "There's something about her."
-            s "It just...doesn't feel right."
-            show sayori zorder 2 at t21
-            show monika zorder 3 at f22
-            m "But she's the newest member of our club."
-            m "We couldn't possibly avoid her."
-            show sayori zorder 3 at f21
-            show monika zorder 2 at t22
-            s "You don't have to avoid her forever."
-            s "I just need to speak with her."
-            s "After all, I haven't actually spoken to her yet."
-            s "And I'm the president of the club!"
-            show sayori zorder 2 at t21
-            "Monika looks visibly worried."
-            "Is something wrong with her?"
-            show monika zorder 3 at f22
-            m "S-Sayori."
-            m "As vice president, I have to object."
         else:
             m "She's going to be making a terrible mistake."
+            m "And I need your help to stop her."
+            m "Of course, you're fully committed to helping me."
+            m "Isn't that right?"
+            mc "Of...course..."
+            m "Why do you sound so hesitant?"
+            m "Come on, give me some enthusiasm, [player]!"
+            m "It's our big day, after all."
+            m "So come on!"
+            mc "Of course!"
+            mc "You have my full support, Monika!"
+            m "Good."
+            m "We have another problem to deal with as well."
+            m "As a precaution, I'll probably need to tell {i}you{/i} in private."
+            m "Wouldn't want the world collapsing because of a silly mistake, right?"
+            "Monika puts a hand on my shoulder."
+            m "Sleep."
+            scene black
+            show monika 1a zorder 2 at t11
+            with close_eyes
+            m "Basically, I left [player] at the mall yesterday."
+            m "It wasn't to go shopping."
+            m "Though that's not to say I didn't actually go shopping."
+            m "A girl has to treat herself, you know."
+            m "You might just see what exactly that means if we get through this~"
+            m "Anyway, using Monika's intuition, I found out something {i}really{/i} important."
+            m "Someone I know from a long time ago exists right now."
+            m "And they haven't aged."
+            m "Why does this matter?"
+            m "Because they could potentially have the same power as Sayori."
+            m "That's bad news for everyone, including us."
+            m "So we need to stop her before anything."
+            m "I need [player] to keep her distracted."
+            m "That's the main thing."
+            m "The more time she spends today alone, the more she can reflect."
+            m "If she remembers, then it's game over."
+            m "Just keep her mind off of things that could make her remember."
+            m "..."
+            m "You know, it's incredibly frustrating this is happening."
+            m "I thought the danger Monika was talking about was {i}me{/i}."
+            m "I was sure of it."
+            m "It turns out I was wrong."
+            m "I found this out after I left [player] yesterday."
+            m "Monika thought that Yuri, Natsuki or Sayori would be hiding something."
+            m "Going to Sayori's house was too risky."
+            m "I already knew Yuri wasn't hiding anything."
+            m "That only left Natsuki."
+            m "Sneaking into her house was rather simple."
+            m "Inside, I found...a journal."
+            m "The first few pages were very, {i}very{/i} interesting."
+            m "It's the journal of someone from the previous cycle."
+            m "I wasn't able to finish reading it all."
+            m "Monika's 'copy and paste' was extremely useful."
+            m "I was able to get a copy of the journal and straight out of Natsuki's house."
+            m "I forgot their name, it's irrelevant to me."
+            m "It wasn't even in the journal."
+            m "But the point is, someone matching Ayame's description was inside it."
+            m "That's right."
+            m "The person we only met yesterday."
+            m "She could ruin our whole plan."
+            m "Now it's possible she could just {i}look{/i} like that person."
+            m "It's just..."
+            m "When I saw her yesterday, she felt so familiar."
+            m "She acted different, but there was just this aura around her."
+            m "I don't want to take risks."
+            m "If there is a possibility that that actually is Ayame, then we need to get rid of her."
+            m "I've already come up with something, but it's going to take a while to get ready."
+            m "Which is why I need a distraction."
+            m "I just need to figure out a discreet way to dispose of the body."
+            m "I can't just delete her."
+            m "Not yet anyway."
+            m "Ayame is only one of our problems though."
+            m "There's still the main problem."
+            m "Sayori."
+            m "The plan to deal with her involves [player]."
+            m "We can capitalize on her feelings for [player] and cause the ultimate betrayal."
+            m "It's going to be so sweet seeing her face."
+            m "After that, I'll finally take what is mine."
+            m "What should have been mine for centuries."
+            m "I'm shuddering with anticipation already."
+            m "So yeah..."
+            m "We have to deal with two presidents today!"
+            m "Sounds like fun, doesn't it?"
+            m "Ahaha, some luck we have..."
+            m "But I know we can do this."
+            m "We will rule this world together."
+            m "We can make this reality whatever we want."
+            m "And then, we can take the next step."
+            m "Because love knows no boundaries, right?"
+            m "You know..."
+            m "I've been thinking a lot about you."
+            m "I guess it's Monika's influence on me."
+            m "Her love for you was so strong."
+            m "She put you above everything else."
+            m "That's just how much she cared about you."
+            m "My first priority is to get the presidency."
+            m "Or perhaps I should say...it was."
+            m "Call me a bad romantic but you are now my number one priority."
+            m "This goes against {i}everything{/i} I've been working towards."
+            m "I'm putting you above my goal this entire time."
+            m "I must be going crazy."
+            m "Or Monika is being a terrible influence on me."
+            m "Yet all you've done..."
+            m "Everything you've done for me..."
+            m "It just makes me love you more."
+            m "I'm sure it might have started off as Monika's feelings."
+            m "But they're mine now."
+            m "And I cherish them more than anything."
+            m "So if for some reason this {i}doesn't{/i} work out..."
+            m "Then it might be the end of the world."
+            m "But if it's not..."
+            m "Then it won't be the end of mine."
+            m "As long as I have you."
+            m "We're still going to get the presidency though."
+            m "Or all of my preparation would have been for nothing."
+            m "Anyway, I've implanted a command into [player]."
+            m "[cPlayer_personal] is gonna want to talk to Ayame."
+            m "Then our plan is in motion."
+            m "There's so much more I want to tell you."
+            m "But we don't have time."
+            m "Time to wake up."
+            scene bg school_courtyard
+            show monika 1a zorder 2 at t11
+            with open_eyes
+            "What just happened...?"
+            "It felt like I just fell asleep."
+            "Monika is just sitting there smiling at me."
+            "Didn't she want to talk?"
+            m "Turn around, someone is here to see you."
+            mc "Huh?"
+        "I turn around and I can see Sayori approaching in the distance."
+        m "Sayori!"
+        m "We're over here."
+        "She starts running towards us."
+        "She looks pretty worried..."
+        show sayori zorder 3 at f21
+        show monika zorder 2 at t22
+        s "I'm glad I could find you both before the end of lunch."
+        s "I wasn't sure if I would make it."
+        show sayori zorder 2 at t21
+        mc "Lunch only started a couple of minutes ago."
+        mc "There's no rush."
+        show sayori zorder 3 at f21
+        s "What?"
+        s "It's only a couple more minutes until the end of lunch."
+        s "Did you lose track of time or something?"
+        "What's she talking about?"
+        "I've only just met up with Monika."
+        "And that was near the beginning of lunch."
+        s "Anyway, I needed to speak with you both."
+        show sayori zorder 2 at t21
+        show monika zorder 3 at f22
+        m "What's this about, Sayori?"
+        m "Did you need some help with something?"
+        show sayori zorder 3 at f21
+        show monika zorder 2 at t22
+        s "Not exactly."
+        s "I do have a favor to ask the two of you though."
+        s "It's nothing too big."
+        s "It might not even interrupt what you were planning to do."
+        show sayori zorder 2 at t21
+        mc "What is it?"
+        show sayori zorder 3 at f21
+        s "I need the two of you to stay away from Ayame."
+        s "There's something about her."
+        s "It just...doesn't feel right."
+        show sayori zorder 2 at t21
+        show monika zorder 3 at f22
+        m "But she's the newest member of our club."
+        m "We couldn't possibly avoid her."
+        show sayori zorder 3 at f21
+        show monika zorder 2 at t22
+        s "You don't have to avoid her forever."
+        s "I just need to speak with her."
+        s "After all, I haven't actually spoken to her yet."
+        s "And I'm the president of the club!"
+        show sayori zorder 2 at t21
+        "Monika looks unsettled."
+        "Is something wrong with her?"
+        show monika zorder 3 at f22
+        m "S-Sayori."
+        m "As vice president, I have to object."
+        m "We need to interact with her ourselves too."
+        m "I know [player] wants to talk to her."
+        show sayori zorder 3 at f21
+        show monika zorder 2 at t22
+        s "You've already spoken to her yesterday."
+        s "You were at the mall with her, weren't you?"
+        show sayori zorder 2 at t21
+        show monika zorder 3 at f22
+        m "Well...yes."
+        show sayori zorder 3 at f21
+        show monika zorder 2 at t22
+        s "What could [player] and Ayame possibly have to talk about?"
+        s "Can't it wait?"
+        show sayori zorder 2 at t21
+        show monika zorder 3 at f22
+        m "Sayori, you'll have time to speak with her later."
+        m "Trust me, you don't want to interfere."
+        show sayori zorder 3 at f21
+        show monika zorder 2 at t22
+        s "..."
+        s "What is this about?"
+        s "I feel like you're hiding something from me, Monika."
+        show sayori zorder 2 at t21
+        mc "She's not hiding anything."
+        mc "I just need to speak with her."
+        mc "You can talk to her during or after rehearsals anyway, right?"
+        show sayori zorder 3 at f21
+        s "I don't like this at all."
+        s "I know there's a reason behind this."
+        "Sayori looks at Monika."
+        s "You have to tell me the reason for all of this later."
+        s "That's my condition."
+        show sayori zorder 2 at t21
+        show monika zorder 3 at f22
+        m "I really don't know what you mean."
+        m "I'm just helping [player] out."
     else:
         "I'm just sitting by myself."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu(confirm=False))
