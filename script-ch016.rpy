@@ -2610,6 +2610,11 @@ label ch16_main:
                     show natsuki zorder 2 at t11
                     mc "Bye, Yuri!"
                     "She's already engrossed in the journal when I say that so I get no response."
+                    n "Come on, let's not bother her."
+                    mc "Right."
+                    scene bg school_front
+                    show natsuki 1a zorder 2 at t11
+                    with wipeleft_scene
                     n "There's a couple of things we could do."
                     mc "What did you have in mind?"
                     jump ch16_n_cancel
@@ -3701,13 +3706,362 @@ label ch16_main:
         "You can barely hear the noise from the rest of the school yard."
         "I can actually hear myself breathing."
         show yuri 1a zorder 2 at t11
+        y "Sorry to keep you waiting."
+        y "I was a little preoccupied in class."
+        mc "Not a problem at all."
+        mc "So what did you have in mind?"
         label ch16_y_cancel:
+        y "Well...this was a rather spontaneous decision."
+        y "So I hope you'll forgive me."
+        y "I know we could be doing better things."
+        mc "As long as it's with you, I don't mind doing anything."
     elif natsuki_date:
         "I was going to try to find Natsuki at lunch."
         "I don't know why but I feel like I should really cherish this time with her."
         "Maybe it's got to do with what she said yesterday."
         "There was a lot in that journal."
+        "I somehow doubt we're going to be talking about that much."
+        "Today just feels like a last chance."
+        "I don't even know what that means..."
+        "I'll speak to Natsuki about it when I get the chance."
+        "For now, I'm just going around school looking for her."
+        show natsuki 1a zorder 2 at t11
+        n "There you are."
+        mc "Hey, Natsuki."
+        n "Come on, let's go."
+        n "I have a couple of things we can do."
+        mc "What did you have in mind?"
         label ch16_n_cancel:
+        n "We're at school so we're kinda limited."
+        n "I did hear a rumor though."
+        mc "What was it?"
+        n "Because some of the clubs are going to be selling food for Inauguration Day, they've opened up the kitchen."
+        n "I was thinking of going there, maybe do some baking and just look at what everyone's making."
+        mc "That's a great idea."
+        n "The problem is, I think it's restricted for clubs that got permission only."
+        mc "Oh..."
+        n "But we don't care about that."
+        n "Do we?"
+        mc "Uhh..."
+        n "The plan is to sneak in there and pretend we're part of the cooking club."
+        mc "I don't know."
+        mc "It seems kinda dishonest."
+        n "Oh come on."
+        n "What's the worst that could happen?"
+        n "Besides, it might be the last time you could ever do something like this."
+        n "And it's just for fun."
+        n "Who's really going to care that we're there?"
+        mc "Alright."
+        mc "But this is all based on a rumor, isn't it?"
+        mc "Where did you even hear it from?"
+        n "I heard about it in class."
+        n "Someone was talking about it and I overheard."
+        n "What's the big deal anyway?"
+        n "If it isn't actually happening, then we can just do something else."
+        mc "If that's what you want to do."
+        mc "Then lead the way."
+        n "Right this way."
+        scene bg school_hallway
+        show natsuki 1a zorder 2 at t11
+        with wipeleft_scene
+        "Natsuki and I make our way towards the kitchen area of school."
+        "It's the same area where the food and hospitality subjects are done."
+        "There's quite a bit of activity around the area."
+        "But there doesn't seem to be anyone in the actual kitchens."
+        "Everyone is just gathered outside."
+        n "I wonder what's the deal here."
+        mc "There doesn't seem to be anyone actually cooking."
+        "Natsuki approaches one of the students waiting outside the rooms."
+        n "Excuse me."
+        "She doesn't seem to be able to get their attention."
+        n "Um...hello?"
+        n "I'm talking to you!"
+        "She taps the student on the shoulder and that gets their attention."
+        n "Why isn't anybody in the kitchens?"
+        n "I thought we were allowed to cook at lunch."
+        "Student" "\"Are you one of the clubs allowed in there?\""
+        n "Yeah, we're part of the...cooking club."
+        "Student" "\"Oh, I didn't think they were participating.\""
+        n "Y-Yeah...it was kind of last minute."
+        "Student" "\"Anyway, one of the members of the student council kicked us out.\""
+        "Student" "\"Something to do with safety or something.\""
+        "Student" "\"Some of us are trying to talk to her now.\""
+        n "Where is she?"
+        "Student" "\"I don't think you'll have any luck.\""
+        "Student" "\"She's pretty stubborn about it.\""
+        "Student" "\"Which sucks because we needed to cook something up for our club.\""
+        n "Just tell me where she is."
+        n "I have a way with people."
+        "The student looks at her then notices me."
+        "I just shrug."
+        "Student" "\"She's over there by the door.\""
+        "The student points to a door surrounded by a crowd of students."
+        "Student" "\"I'm telling you though, there's no point.\""
+        n "We'll see."
+        n "Thanks."
+        "Natsuki turns back towards me."
+        mc "So what are you gonna do?"
+        n "I'm gonna give her a piece of my mind."
+        n "She can't just do this to us."
+        "We weren't supposed to be here in the first place..."
+        n "Come on, let's go."
+        n "I might need backup."
+        mc "Backup for what...?"
+        "Natsuki ignores my question and approaches the crowd of students."
+        "She basically shoves people out of her way until she reaches the person blocking the door."
+        n "Excuse me, what gives you the right to--"
+        show natsuki zorder 2 at t21
+        show ayame 1a zorder 3 at f22
+        ay "Natsuki?"
+        "The person blocking the door is none other than Ayame."
+        "I guess she's finished with her business from this morning."
+        ay "What are you doing here?"
+        "The way she asked that question sounded like she already knew the answer."
+        ay "I don't recall the Literature Club being part of this."
+        show natsuki zorder 3 at f21
+        show ayame zorder 2 at t22
+        n "A-Ayame..."
+        n "We..."
+        show natsuki zorder 2 at t21
+        "Natsuki looks at me for help."
+        "I guess I gotta say something."
+        mc "We're here to protest against this injustice!"
+        mc "You can't just deny all these people, who have been planning so hard, the chance to cook for their clubs!"
+        mc "Imagine how damaging it could be to their reputation and on a day like this!"
+        show natsuki zorder 3 at f21
+        n "What...?"
+        show natsuki zorder 2 at t21
+        "I may have taken my acting a bit too far."
+        "But I'm going to be doing more embarrassing things for the play."
+        "So I might as well get used to it."
+        show ayame zorder 3 at f22
+        ay "Look, [player]."
+        ay "It's not my decision."
+        ay "I'm just here to tell everyone that we can't use the kitchens."
+        show natsuki zorder 3 at f21
+        show ayame zorder 2 at t22
+        n "Whos decision was it then?"
+        show natsuki zorder 2 at t21
+        show ayame zorder 3 at f22
+        ay "It was the principal's."
+        ay "So that means there nothing I can do about it."
+        ay "It was a last minute decision, even though it was promised that you'd get access if you applied."
+        "Ayame whispers so that only Natsuki and I can hear her."
+        ay "I don't know the reason myself."
+        ay "I'm just guessing it's for safety but in reality...well..."
+        "She raises her voice again so the whole crowd can hear."
+        ay "I'm really sorry, everyone!"
+        ay "Please spend your lunchtime elsewhere!"
+        show ayame zorder 2 at t22
+        "The crowd of students is getting visibly angrier."
+        "They're calling Ayame names and directing their anger towards her."
+        "It doesn't seem right."
+        menu:
+            "Maybe I should say something."
+            "Calm the crowd.":
+                $ ch16_ay_level -= 1
+                mc "This isn't fair."
+                show ayame zorder 3 at f22
+                ay "I'm sorry, but there's nothing I can do."
+                ay "I'd let you in if it was an option."
+                show ayame zorder 2 at t22
+                mc "I know."
+                mc "You're just not that kind of person."
+                "I turn towards the crowd."
+                mc "She's not the one responsible for this."
+                show ayame zorder 3 at f22
+                ay "[player]..."
+                show ayame zorder 2 at t22
+                mc "She's just doing what she's told."
+                mc "It isn't up to her whether you're allowed in or not."
+                mc "If you want to blame anyone, blame the principal."
+                show natsuki zorder 3 at f21
+                n "[cPlayer_personal]'s right."
+                n "We can't blame Ayame for this."
+                n "I know it sucks but you can't seriously think it's her fault."
+                n "Imagine you were put in the same position."
+                n "It'd feel terrible, wouldn't it?"
+                n "So you can't seriously hate someone for doing their job, can you?"
+                show natsuki zorder 2 at t21
+                "The crowd subsides a bit."
+                "They're still angry but at the very least they're not directing it at Ayame."
+                "Ayame breathes a sigh of relief."
+                show ayame zorder 3 at f22
+                ay "Thanks, guys."
+                ay "It really sucks having to do the principal's dirty work."
+                show natsuki zorder 3 at f21
+                show ayame zorder 2 at t22
+                n "We've got your back, Ayame."
+                n "After all, you're part of our club now."
+                n "We have to look out for each other."
+                show natsuki zorder 2 at t21
+                show ayame zorder 3 at f22
+                ay "That...means a lot."
+                ay "Thanks, you two."
+            "Join the crowd.":
+                $ ch16_ay_level += 2
+                mc "You're meant to represent the students."
+                mc "You're supposed to be our voice!"
+                mc "How could you do this?"
+                show ayame zorder 3 at f22
+                ay "It's...not my choice."
+                ay "I'm sorry."
+                show ayame zorder 2 at t22
+                mc "Then let us in!"
+                show ayame zorder 3 at f22
+                ay "You know I can't do that."
+                show ayame zorder 2 at t22
+                mc "You're just a--"
+                show natsuki zorder 3 at f21
+                n "[player]!"
+                n "What the hell is wrong with you?"
+                show natsuki zorder 2 at t21
+                mc "I'm trying to get us inside."
+                mc "That's what you wanted, right?"
+                show natsuki zorder 3 at f21
+                n "But can't you see it's not her fault?"
+                n "If you want to blame anyone, blame the principal."
+                "Natsuki turns to the crowd."
+                n "Are you listening to me?"
+                n "Ayame isn't to blame."
+                n "She's just doing what the principal told her to."
+                n "Who knows what could happen to her if she disobeyed?"
+                show natsuki zorder 2 at t21
+                "The crowd subsides a bit."
+                "They're still angry but at the very least they're not directing it at Ayame."
+                "Ayame breathes a sigh of relief."
+                show ayame zorder 3 at f22
+                ay "Thanks, Natsuki."
+                ay "The crowd was really getting to me..."
+                ay "I guess that's what they call peer pressure."
+                show natsuki zorder 3 at f21
+                show ayame zorder 2 at t22
+                n "I've got your back, Ayame."
+                n "I thought [player] would too..."
+                n "I guess [player_personal] just misunderstood."
+                show natsuki zorder 2 at t21
+                mc "I'm sorry."
+                show ayame zorder 3 at f22
+                ay "What's said is said."
+            "Say nothing.":
+                $ ch16_ay_level += 1
+                "Natsuki nudges me."
+                show natsuki zorder 3 at f21
+                n "Aren't you going to say something?"
+                show natsuki zorder 2 at t21
+                mc "What am I supposed to say?"
+                show natsuki zorder 3 at f21
+                n "I can't believe you sometimes."
+                "Natsuki turns towards the crowd."
+                n "Listen up everyone!"
+                n "It's not Ayame's fault."
+                n "She isn't the one responsible for keeping you locked out."
+                n "What she is doing is what she was told to do."
+                n "By the {i}principal{/i}!"
+                n "So if you want anyone to blame, blame the principal!"
+                n "Not her!"
+                show natsuki zorder 2 at t21
+                show ayame zorder 3 at f22
+                ay "Natsuki..."
+                show natsuki zorder 3 at f21
+                show ayame zorder 2 at t22
+                n "I mean, come on."
+                n "You can't seriously hate someone for doing their job."
+                n "What if you were in her position?"
+                n "Just think about it before you start calling her names again."
+                show natsuki zorder 2 at t21
+                "The crowd subsides a bit."
+                "They're still angry but at the very least they're not directing it at Ayame."
+                "Ayame breathes a sigh of relief."
+                show ayame zorder 3 at f22
+                ay "Thanks, Natsuki."
+                ay "The crowd was really getting to me..."
+                ay "I guess that's what they call peer pressure."
+                show natsuki zorder 3 at f21
+                show ayame zorder 2 at t22
+                n "I've got your back, Ayame."
+                n "I thought [player] would too..."
+                n "But at least [player_personal] join the rest of the crowd."
+                show natsuki zorder 2 at t21
+                mc "I'm sorry."
+                mc "I should have said something."
+                show ayame zorder 3 at f22
+                ay "It's fine."
+            ay "But I still can't give you guys access."
+            ay "Like I said, I'm not allowed."
+            ay "I have to uphold the values of the school, after all."
+            "Ayame rolls her eyes."
+            ay "But..."
+            show natsuki zorder 3 at f21
+            n "But?"
+            show natsuki zorder 2 at t21
+            show ayame zorder 3 at f22
+            ay "If an incident were to occur that required my attention."
+            ay "Then I might not be here to stop people getting in."
+            ay "And I might just 'accidentally' drop the keys to the kitchen, you know?"
+            ay "But as it stands, I can't do anything."
+            show natsuki zorder 3 at f21
+            n "Then we have to do the right thing by everyone."
+            "Natsuki steps back from the crowd surrounding Ayame and I follow after her."
+            n "[player], are you thinking what I'm thinking?"
+            show natsuki zorder 2 at t21
+            mc "No?"
+            mc "What are you--"
+            "Suddenly, Natsuki punches me in the face."
+            "She put a lot more force into that than I would have expected."
+            "I think I could feel my teeth loosen a little."
+            mc "What the hell was that for?"
+            show natsuki zorder 3 at f21
+            n "Help!"
+            n "Someone is injured!"
+            n "We need help!"
+            show natsuki zorder 2 at t21
+            "Ayame definitely saw what happened."
+            "She lets out a faint smile before approaching the two of us."
+            show ayame zorder 3 at f22
+            ay "Oh no! That looks serious."
+            ay "What happened here?"
+            show natsuki zorder 3 at f21
+            show ayame zorder 2 at t22
+            n "Quick, we have to take [player_reflexive] to the nurse's office."
+            n "You can help with that, right school rep?"
+            show natsuki zorder 2 at t21
+            show ayame zorder 3 at f22
+            ay "Of course."
+            "Ayame looks at the crowd."
+            ay "Please do not use these keys to get in."
+            "She shows everyone the keys and drops them to the floor."
+            ay "When I get back here, you all better not be in the kitchen."
+            "She turns back towards us."
+            ay "Let's go."
+            show ayame zorder 2 at t22
+            mc "I'm so confused..."
+            "I grab my jaw."
+            mc "Why did you do that?"
+            show natsuki zorder 3 at f21
+            n "We'll talk later."
+            n "Right now, we gotta get you to the nurse."
+            show natsuki zorder 2 at t21
+            "We begin to walk away."
+            "One of the people in the crowd picks up the keys."
+            "As we turn the corner, I could hear the door to the kitchens opening."
+            "I guess they're inside."
+            scene bg school_nurse
+            show natsuki 1a zorder 2 at t21
+            show ayame 1a zorder 2 at t22
+            with wipeleft_scene
+            "The nurse didn't really do anything to my face."
+            "She said it would just heal and I was just making a big deal out of it."
+            "She let me stay on the bed but only until the end of lunch."
+            show ayame zorder 3 at f22
+            ay "I didn't expect that."
+            ay "That was a genius plan, Natsuki."
+            show natsuki zorder 3 at f21
+            show ayame zorder 2 at t22
+            n "What are you talking about?"
+            n "I just really wanted to hit [player] in the face."
+            show natsuki zorder 2 at t21
+            mc "Can someone please explain to me what's going on?"
     elif ch15_s_together:
         "Sayori said she wanted to see me at lunch."
         "I wonder what for?"
