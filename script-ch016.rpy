@@ -3701,6 +3701,7 @@ label ch16_main:
         "Why would it be our last chance?"
         "It's just another day."
         "There is the play, but it's not like if we do terribly it's going to separate us."
+        scene bg school_secluded with wipeleft_scene
         "I'm at the place she said we'd be meeting at."
         "It's just a secluded spot in the school."
         "You can barely hear the noise from the rest of the school yard."
@@ -3715,6 +3716,367 @@ label ch16_main:
         y "So I hope you'll forgive me."
         y "I know we could be doing better things."
         mc "As long as it's with you, I don't mind doing anything."
+        mc "Within reason."
+        y "Within reason..."
+        y "Well...that removes half of the things I was going to say."
+        mc "W-What?"
+        mc "What kind of things were you even thinking of?"
+        y "T-That was a joke."
+        y "I apologize if it wasn't funny."
+        mc "Oh, I didn't even realize."
+        mc "It was just a surprise coming from you, that's all."
+        y "Anyway, I actually wanted to go back to my locker."
+        mc "What are we doing there?"
+        y "It's a surprise."
+        y "Come on, I think you'll like it."
+        y "I've been keeping it safe all this time."
+        mc "Alright..."
+        "Why do I have a bad feeling about this?"
+        scene bg school_lockers
+        show yuri 1a zorder 2 at t11
+        with wipeleft_scene
+        "Yuri and I make our way to the area where her locker is."
+        "There are plenty of areas in the school where lockers are stored."
+        "Now that she took me here, I realize I'm not actually that far from her locker."
+        y "Okay, I'll go get it."
+        mc "What is {i}it{/i}?"
+        y "You'll see in just a moment."
+        "Yuri starts to walk towards her locker when suddenly a voice tells her to stop."
+        show ayame 1a zorder 3 at f21
+        show yuri zorder 2 at t21
+        ay "Hold it, Yuri!"
+        ay "It's not safe here."
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "A-Ayame?"
+        "Yuri stops where she is and turns around to meet Ayame's gaze."
+        y "What are you doing here?"
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "I could be asking you the same question."
+        ay "Didn't you get the memo?"
+        show ayame zorder 2 at t21
+        mc "What was the memo?"
+        show ayame zorder 3 at f21
+        ay "You seriously don't know?"
+        ay "Somebody here was just murdered!"
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "W-What?!"
+        show yuri zorder 2 at t22
+        mc "You're kidding, right?"
+        show ayame zorder 3 at f21
+        ay "Yeah, I am."
+        ay "Nobody was murdered."
+        ay "...Yet."
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Ayame you nearly scared me half to death."
+        y "I thought I was in real danger for a moment."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "Hehe, sorry to frighten you, Yuri."
+        ay "But seriously, you two aren't allowed here."
+        show ayame zorder 2 at t21
+        "Yuri approaches Ayame."
+        "As Yuri gets closer, a curious look appears on her face."
+        show yuri zorder 3 at f22
+        y "Y-You're a school leader?"
+        show yuri zorder 2 at t22
+        "Ayame looks down and sees her purple ribbon."
+        show ayame zorder 3 at f21
+        ay "Ah, I see you've noticed."
+        ay "It doesn't matter."
+        ay "You would have figured it out one way or another."
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "I'm just surprised."
+        y "It's just..."
+        y "Well..."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "What is it, Yuri?"
+        show ayame zorder 2 at t21
+        mc "Take your time if you need to."
+        show yuri zorder 3 at f22
+        y "I guess just seeing you with that ribbon..."
+        y "It awakened something in my subconscious."
+        y "One of my subconscious desires, I suppose."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "And what would that be...?"
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "To be a school leader."
+        y "So that I can be recognized."
+        y "So that I can be a role model for others."
+        y "And..."
+        y "...so that I'm not judged for who I am."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "I see..."
+        "Ayame scans the locker area."
+        ay "Well, it seems safe for now."
+        ay "Let's move somewhere more safe."
+        ay "I'll explain why on the way."
+        scene bg school_secluded
+        show ayame 1a zorder 2 at t21
+        show yuri 1a zorder 2 at t22
+        with wipeleft_scene
+        "The three of us walk back to Yuri's spot."
+        "The strange thing is, we were following Ayame."
+        "She must know about this area as well."
+        "Ayame explained that there was some strange noises coming from the locker area a few hours ago."
+        "At least, that's what some students told her."
+        "Since she's the school leader, she informed the principal about it."
+        "I guess when you're that important at school, you can just go straight to the highest office."
+        "The principal told her to make sure no student enters until the grounds staff can confirm what it is."
+        "She only told the principal before the start of lunch so the ground staff haven't actually done anything yet."
+        show ayame zorder 3 at f21
+        ay "So that's why you can't go there."
+        ay "Even if it's nothing, we'd rather be safe than sorry."
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "I didn't hear any noises coming from there."
+        y "And I visited my locker a lot today."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "I guess you were one of the lucky ones."
+        show ayame zorder 2 at t21
+        mc "I'm kinda curious about this noise."
+        mc "What did it even sound like?"
+        show ayame zorder 3 at f21
+        ay "I wasn't there, so I don't know for sure."
+        ay "But the students all said to me it was the most horrifying sound they've ever heard."
+        ay "It was described as some form of screeching."
+        ay "And it was combined with that sound that happens when you rub two pieces of foam together."
+        ay "I don't know if that's accurate, but that's just what I was told."
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Oh..."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "What's wrong?"
+        ay "Do you know something about the noise, Yuri?"
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "I...think I do."
+        y "You see, it was meant to be a surprise for [player]."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "What?"
+        show ayame zorder 2 at t21
+        mc "Your surprise for me involved screeching?"
+        mc "I'm not sure what to say."
+        show yuri zorder 3 at f22
+        y "N-No, it's not like that!"
+        y "I ordered something online that I picked up at the mall yesterday."
+        y "It had nothing to do with our preparations."
+        y "It was just...a gift for you."
+        y "I wasn't sure when to give it to you."
+        y "But since we had a moment alone, I thought it would be the perfect time."
+        show yuri zorder 2 at t22
+        mc "What kind of gift was it?"
+        show yuri zorder 3 at f22
+        y "It was meant to be some kind of doll."
+        y "And it resembles you...a lot."
+        show yuri zorder 2 at t22
+        mc "You paid someone to make a doll?"
+        mc "Of me?"
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "I'm kind of curious now."
+        ay "Did you take pictures of [player_reflexive] as a reference?"
+        ay "I-I mean, it's none of my business what you do."
+        ay "But if that's the source of the noise..."
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "I..."
+        y "I did."
+        y "The doll is special in that it can move on it's own and emit sound."
+        y "I put it into a foam box to keep it safe and I suppose it somehow activated on it's own and started moving."
+        y "That's probably where the foam rubbing together sound came from."
+        show yuri zorder 2 at t22
+        mc "Well, what about the screeching?"
+        mc "Did you record me screeching at some point...?"
+        show yuri zorder 3 at f22
+        y "N-No...!"
+        y "Nothing like that."
+        y "I must have placed batteries that were low on charge into it."
+        y "The sound must have become distorted and interpreted as some sort of screeching..."
+        y "I'm sorry, [player]."
+        y "I should have told you about the whole doll thing..."
+        show yuri zorder 2 at t22
+        "This whole doll thing is creepy."
+        "But it's exactly a thing Yuri would do."
+        "That's just how she is."
+        menu:
+            "So what should I say?"
+            "Accept her.":
+                $ ch16_ay_level -= 1
+                mc "You know what?"
+                mc "That's just like you, Yuri."
+                show yuri zorder 3 at f22
+                y "Huh?"
+                show yuri zorder 2 at t22
+                mc "Doing things like this."
+                mc "Going over the top for someone like me."
+                mc "Maybe it is a little creepy, but it was meant to be a gift."
+                mc "So it's wrong to see that as a negative."
+                mc "It's just something only you would do."
+                mc "And I appreciate you a lot for it."
+                show ayame zorder 3 at f21
+                ay "I'm glad you can accept her for who she is, [player]."
+                ay "Seeing that's her personality and embracing it despite it's flaws can be difficult."
+                ay "When it comes to my turn to join the club, I hope you'll do the same."
+                show ayame zorder 2 at t21
+                mc "Of course, Ayame."
+                mc "So yeah, Yuri..."
+                mc "Don't worry about it."
+                mc "I really do love the surprise you thought about giving me."
+                show yuri zorder 3 at f22
+                y "W-Well, thanks I suppose."
+                y "But now the surprise is ruined."
+                y "And people are worried about approaching their locker now..."
+            "Scold her.":
+                $ ch16_ay_level += 2
+                mc "Yuri, there are such things as boundaries."
+                mc "I know we're dating but isn't this a little too far?"
+                show yuri zorder 3 at f22
+                y "..."
+                show yuri zorder 2 at t22
+                mc "Taking pictures of me..."
+                mc "Recording me..."
+                mc "And all without me noticing."
+                mc "I don't hate you or anything."
+                mc "So please don't take this the wrong way."
+                mc "But you have to realize there are some things you shouldn't do."
+                show ayame zorder 3 at f21
+                ay "So that's how it is, huh?"
+                ay "She shows you {i}her{/i} way of showing affection and you just scold her for it?"
+                ay "I thought your relationship was built on more solid foundations than that."
+                ay "That you had accepted her, knowing something like this could happen."
+                ay "I...I'm sorry."
+                ay "I know it's none of my business, it's just..."
+                ay "Well, is this the kind of reception I'm going to get when I join?"
+                ay "Am I going to get scolded for revealing my true self too...?"
+                show ayame zorder 2 at t21
+                mc "T-That's not what I intended."
+                mc "Of course I still accept Yuri."
+                mc "I accept her fully."
+                mc "I just meant that--"
+                show yuri zorder 3 at f22
+                y "It's okay, [player]."
+                y "I understand."
+                y "It's my fault anyway..."
+                y "Now people can't even access their lockers because of me."
+            "Say nothing.":
+                $ ch16_ay_level += 1
+                "I don't know what to say."
+                "I might just make her feel worse."
+                "And I don't want that at all."
+                "This whole thing is new to me."
+                "And I'm sure most people don't buy their [player_gender]friend a doll that resembles them after only a few weeks."
+                show ayame zorder 3 at f21
+                ay "You aren't gonna say anything?"
+                ay "Really?"
+                ay "Look at her, [player]."
+                show ayame zorder 2 at t21
+                show yuri zorder 3 at f22
+                y "A-Ayame, you don't need to--"
+                show ayame zorder 3 at f21
+                show yuri zorder 2 at t22
+                ay "She did something so special for you."
+                ay "She gave you a gift, as a way of displaying her affection for you."
+                ay "You aren't even going to respond to that?"
+                ay "Do you even accept Yuri for who she is...?"
+                show ayame zorder 2 at t21
+                show yuri zorder 3 at f22
+                y "A-Ayame, please..."
+                y "You don't need to say those kind of things..."
+                show yuri zorder 2 at t22
+                mc "Of course, I accept Yuri."
+                mc "I accept her with all I have."
+                mc "I'm just...speechless at all of this."
+                mc "I don't know if what I'll say is going to make things better or worse."
+                show ayame zorder 3 at f21
+                ay "You should still say something."
+                ay "Staying silent isn't going to solve problems."
+                ay "Sometimes it can even make them worse."
+                ay "But...I suppose I can understand your reasoning."
+                show ayame zorder 2 at t21
+                mc "I'm sorry, Yuri."
+                mc "I really should have said something."
+                show yuri zorder 3 at f22
+                y "I-It's fine..."
+                y "What isn't is that I've blocked access to the lockers."
+        y "I've accidentally scared everyone away..."
+        "Yuri sighs."
+        y "I didn't mean to worry anyone..."
+        y "Uuu...this is all my fault."
+        "Yuri turns towards Ayame."
+        y "After you tell them it was me, I'm never going to be a school leader."
+        y "I just woke up a subconscious desire and already it's falling to pieces..."
+        show yuri zorder 2 at s22
+        "Yuri gets on the ground and covers her face."
+        "Ayame looks at me and I just shrug at her."
+        "She sighs and gets down to the ground next to Yuri."
+        show ayame zorder 3 at f21
+        ay "You know..."
+        ay "Being a leader really isn't that great."
+        ay "Sure you're recognized but being perfect isn't fun at all."
+        ay "And even if you are perfect, people will still judge you."
+        ay "It's just human nature."
+        ay "In fact, because you're a leader, {i}everyone{/i} will judge you."
+        ay "You make one misstep and everyone is going to remember it."
+        "Ayame signals for me to join the two of them."
+        "I sit on the other side of Yuri."
+        ay "I used to think I wanted this too."
+        ay "To be recognized."
+        ay "To be a role model."
+        ay "To not be judged."
+        ay "But reality struck pretty hard."
+        ay "I only got a third of what I wanted."
+        ay "And not in a good way."
+        show ayame zorder 2 at t21
+        "Ayame stares over at me."
+        "I think she wants me to say something."
+        mc "There's more things to life than this, Yuri."
+        mc "If it was just a subconscious desire, then it must not be important."
+        mc "After all, you would have consciously wanted it if you really wanted to be a leader."
+        mc "Besides, you don't need any of those things."
+        mc "Do you know why?"
+        mc "Because you already have them."
+        mc "You're recognized by the four of us at the Literature Club."
+        mc "You're a role model when it comes to decorations and handwriting."
+        mc "And we don't judge you at all."
+        mc "We accept you for who you are."
+        "I can see Yuri's head move up slightly."
+        "I think we're getting to her."
+        show yuri zorder 3 at f22
+        y "I suppose..."
+        y "...you're right."
+        y "Though there's still a problem..."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "I'll tell you what."
+        ay "I won't pin the blame on you."
+        ay "I'll just neglect to mention what you've told me now."
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "But why?"
+        y "It's your responsibility to..."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "Yuri, when I look at you."
+        ay "I see myself."
+        ay "I used to be just like you."
+        ay "A shy, outspoken girl."
+        ay "If something like this happened to me, I don't know what I would have done."
+        ay "I probably would have imploded of the embarrassment."
+        ay "In fact, if I placed myself into your shoes..."
+        "Ayame's voice suddenly trails off."
+        "She just sits there, not moving or saying a word."
     elif natsuki_date:
         "I was going to try to find Natsuki at lunch."
         "I don't know why but I feel like I should really cherish this time with her."
@@ -3822,6 +4184,7 @@ label ch16_main:
         show ayame zorder 2 at t22
         n "A-Ayame..."
         n "We..."
+        n "{i}(She's a school leader...?!){/i}"
         show natsuki zorder 2 at t21
         "Natsuki looks at me for help."
         "I guess I gotta say something."
@@ -3844,7 +4207,7 @@ label ch16_main:
         show natsuki zorder 2 at t21
         show ayame zorder 3 at f22
         ay "It was the principal's."
-        ay "So that means there nothing I can do about it."
+        ay "So that means there's nothing I can do about it."
         ay "It was a last minute decision, even though it was promised that you'd get access if you applied."
         "Ayame whispers so that only Natsuki and I can hear her."
         ay "I don't know the reason myself."
@@ -4291,7 +4654,7 @@ label ch16_main:
             m "Meaning she could delete this world in an instant if she wanted."
             m "The thing is, I don't think she knows she has it."
             m "Maybe she has amnesia or something..."
-            m "You're probably wonder how I learned about all of this."
+            m "You're probably wondering how I learned about all of this."
             m "The truth is, at the mall yesterday, I left [player] all by [player_reflexive]self."
             m "I went looking for evidence."
             m "Maybe one of us was hiding something."
@@ -4989,7 +5352,7 @@ label ch16_sayoridate:
     s "Exactly!"
     s "I don't want to pick any of the flowers."
     s "I'm sure the ghost, if it exists, would be really sad if I did that."
-    s "Knowing all the hard work its put into it."
+    s "Knowing all the hard work it's put into it."
     mc "Does this flowerbed even exist?"
     mc "Have you seen it yourself?"
     s "Nope!"
