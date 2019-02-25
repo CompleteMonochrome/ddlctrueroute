@@ -1522,21 +1522,38 @@ label ch16_main:
     s "Oh, come on."
     s "What's so bad about this place?"
     if ch16_ay_perspective:
-        s 2l "It's perfectly fine.{nw}"
-        $ _history_list.pop()
-        show screen tear(20, 3, 2, 0, 70)
-        window hide(None)
-        $ pause(1.0)
+        s 2l "It's perfectly fine."
+        "Suddenly, I get this overwhelming wave of drowsiness."
+        "I don't know what it is or where it came from."
+        "But it's making me want to close my eyes..."
+        "Just for a second..."
+        "No one will notice."
+        "It'll be just like a blink..."
+        scene black with close_eyes
+        "Now I just have to open them..."
+        show layer master:
+            truecenter
+            zoom 1.0
+            easein 2.0 zoom 2.0
+            2.0
+            easeout 2.0 zoom 1.0
+            yalign 0.5
+        play sound "mod_assets/sfx/timewarp.ogg"
+        scene greystream with sunshine
+        "I have to try with all I have to force my eyes open."
         scene bg portraitshop_school
         show sayori 1younga zorder 2 at i11
-        hide screen tear
-        $ pause(1.0)
-        window show(None)
+        with open_eyes
         $ s_name = "???"
         $ d_name = "???"
         $ mo_name = "???"
-        s "It's perfectly fine.{fast}"
-        window auto
+        $ _history_list = []
+        ay "What...?"
+        "That isn't my voice."
+        "Where am I?"
+        s "Like I was saying..."
+        s "It's perfectly fine."
+        s "The room, I mean."
         show momsuki 1younga zorder 3 at f31
         mo "It's not the biggest space..."
         mo 3younga "But it is kinda cozy, isn't it?"
@@ -1594,7 +1611,8 @@ label ch16_main:
         $ mo_name = "Haruki"
         "What was that...?{fast}"
         window auto
-        "That weren't my memories."
+        "It felt like a memory."
+        "But that wasn't my memory."
         "I didn't recognize any of those people."
         "But that room."
         "It's...the same as this one?"
@@ -4021,6 +4039,7 @@ label ch16_main:
         "Yuri gets on the ground and covers her face."
         "Ayame looks at me and I just shrug at her."
         "She sighs and gets down to the ground next to Yuri."
+        show ayame zorder 2 at s21
         show ayame zorder 3 at f21
         ay "You know..."
         ay "Being a leader really isn't that great."
@@ -4038,7 +4057,7 @@ label ch16_main:
         ay "But reality struck pretty hard."
         ay "I only got a third of what I wanted."
         ay "And not in a good way."
-        show ayame zorder 2 at t21
+        show ayame zorder 2 at s21
         "Ayame stares over at me."
         "I think she wants me to say something."
         mc "There's more things to life than this, Yuri."
@@ -4058,16 +4077,16 @@ label ch16_main:
         y "...you're right."
         y "Though there's still a problem..."
         show ayame zorder 3 at f21
-        show yuri zorder 2 at t22
+        show yuri zorder 2 at s22
         ay "I'll tell you what."
         ay "I won't pin the blame on you."
         ay "I'll just neglect to mention what you've told me now."
-        show ayame zorder 2 at t21
+        show ayame zorder 2 at s21
         show yuri zorder 3 at f22
         y "But why?"
         y "It's your responsibility to..."
         show ayame zorder 3 at f21
-        show yuri zorder 2 at t22
+        show yuri zorder 2 at s22
         ay "Yuri, when I look at you."
         ay "I see myself."
         ay "I used to be just like you."
@@ -4901,6 +4920,148 @@ label ch16_main:
         m "I'm just helping [player] out."
     else:
         "I'm just sitting by myself."
+        "Normally, I'd be with someone else but everyone seems to be busy today and didn't want to be bothered."
+        "No one really let me in on their plans."
+        "So I guess I'm pretty much alone until the start of the rehearsals."
+        "I've already eaten my lunch so I'm just burning time."
+        "I overheard some people in class talking about clubs taking over some rooms during lunch to work on their preparations."
+        "I might go visit them."
+        "I don't exactly have anything better to do."
+        "All the preparations for the club that I have to do are already done."
+        "The rest of it is going to be during the rehearsals."
+        "One person I heard said they were doing cooking at the school kitchens."
+        "I might be able to get some food off of there."
+        "Or at the very least see what kind of stuff they're making in preparation for the festival.{nw}"
+        $ _history_list.pop()
+        "Or at the very least see what kind of stuff they're making in preparation for{fast} Inauguration Day."
+        "If they're trying to attract members, they're probably making their best tasting meals."
+        "Someone else said there was some arts and crafts going on in the art rooms."
+        "I heard they activated the three dimensional printers too."
+        "I wonder what kind of stuff they'll showcase."
+        "Both of those are options."
+        "There's also something else."
+        "I'm not sure if I actually heard it or if I just imagined someone saying it..."
+        "But apparently there's something going on near the classroom we were going to do our rehearsal at."
+        "I'm not exactly sure what that something is but it might be worth checking out."
+        "In any case, I don't want to stand around here doing nothing."
+        "Any of those three options is better than that."
+        menu:
+            "Where should I go?"
+            "Kitchen.":
+                "I guess free food sounds pretty irresistible."
+                "If I don't get anything, I can look at what they're making and admire it."
+                "...Even if I can't eat it myself."
+                "I might be able to join in on the cooking too."
+                "Though I doubt there's actually going to be any space."
+                scene bg school_hallway with wipeleft_scene
+                "I make my way to the school kitchens."
+                "There doesn't seem to be much activity outside the rooms but as I get closer I can see people desperately working inside."
+                "I wonder if I could get in."
+                "I don't really know anyone inside."
+                "And if I say that I'm part of a club, an actual member of that club could call me out."
+                "I'll just step inside then figure out the rest from there."
+                "As I move my hand towards the handle I hear a voice coming from behind me."
+                "Where did it come from all of a sudden?"
+                "Just a second ago there was no one here."
+                ay "Hold it."
+                "That voice sounds familiar..."
+                ay "You aren't meant to be here."
+                show ayame 1a zorder 2 at t11
+                ay "Are you, [player]?"
+                mc "Ayame?"
+                mc "W-What are you doing here?"
+                ay "I could be asking the same question."
+                ay "Last I checked, the Literature Club wasn't on the list of clubs allowed to be in there."
+                mc "There was a list?"
+                mc "I didn't know that."
+                ay "And you wouldn't have unless your club signed up for it."
+                ay "So move along."
+                ay "I'm on duty here."
+                mc "For what?"
+            "Arts and crafts.":
+                "Free food sounds nice but I'm curious to see what kind of things would be on display."
+                "Maybe I'll even get some kind of souvenir."
+                "I'm more curious to see what kind of clubs will be there though."
+                "There might even be some pieces of artwork I can admire."
+                "Though I'm not usually the type to do that."
+                "I guess I'll see when I get there."
+                scene bg corridor with wipeleft_scene
+                "I'm on my way to the art room."
+                "As I get closer and closer to it, I start to notice more pieces of art just outside the area."
+                "Some of them were simple drawings or paintings."
+                "Some of them were sculptures."
+                "When I get to the area outside the rooms, I notice the corridor is basically empty."
+                "Everyone is already inside the rooms frantically working on their art."
+                "I can see people working with clay, others making small touches to paintings."
+                "I think I even saw a sculpture of some kind of animal in there."
+                "Maybe I could join in and try to attempt a sculpture of my own in the little time I have."
+                "I'm not sure if there's teacher supervision or not."
+                "I could just pretend I'm from another club."
+                "But even if I pretend I'm part of a certain club, someone else might call my bluff."
+                "As I reach for the door handle, a hand grabs my shoulder."
+                "Which wouldn't be weird but I swear there wasn't anyone here just a second ago..."
+                ay "You aren't meant to be here."
+                "I know that voice."
+                show ayame 1a zorder 2 at t11
+                ay "Only clubs that signed up for it are allowed inside, [player]."
+                mc "H-Huh?"
+                mc "What are you doing here, Ayame?"
+                ay "I'm the one who should be asking you that."
+                ay "I don't think the Literature Club was part of the list of clubs authorized to use this area."
+                mc "I didn't even know there was a list."
+                ay "There's no reason you should."
+                ay "Your club didn't sign up for it, after all."
+                ay "Anyway, you should get out of here."
+                ay "I've been assigned here."
+                mc "Assigned for what?"
+            "Rehearsal room.":
+                "Something is drawing me towards the rehearsal room."
+                "I don't know if following this feeling is a good idea but..."
+                "Here goes nothing."
+                scene bg school_stairway with wipeleft_scene
+                "This area of the school is completely empty."
+                "What exactly could be happening here?"
+                "Was it just my imagination?"
+                "There must be more to it than this..."
+                "I look around some more and still see nobody here."
+                "There must be {i}someone{/i} around."
+                "It's not exactly the best building in school but I would have thought there would be people in here."
+                "As I'm about to leave the building, I hear footsteps coming from the distance."
+                "I also hear two voices...they seem to be arguing?"
+                "There seems to be a male voice and a female voice."
+                "They both seem oddly familiar, the female voice more so than the male one."
+                "They seem to be on the floor above me but they're talking loud enough for me to hear."
+                "I have a feeling they're not here for club things."
+                "I don't know why but it just seems like a good idea if I stay out of sight."
+                $ ay_name = "Female Voice"
+                $ cl_name = "Male Voice"
+                cl "Young lady, come back here."
+                cl "You can't just walk away from me."
+                ay "Oh?"
+                ay "Then what am I doing right now?"
+                cl "Can you please just stop for a moment?"
+                cl "Let me explain."
+            "Stand around and do nothing.":
+                "For some reason I don't really feel like going to any of those things."
+                "Maybe I'm not that interested in them after all."
+                "Or maybe I'd really just rather stand around and do nothing."
+                "I guess I'll just do that until the end of lunch."
+                "I may as well find somewhere to sit."
+                scene bg school_grounds with wipeleft_scene
+                "I go to the usual place I sit at during school breaks."
+                "For some reason, nobody really sits at this one bench."
+                "It's pretty quiet around this area, though I can still hear people talking in the background."
+                "I guess I'll just sit here until lunch is over."
+                "I'm only just realizing why I'm alone right now."
+                "I wasn't close enough with anyone."
+                "I should have tried harder."
+                "I should have listened and took the hints they were giving me."
+                "Maybe then lunchtime would be different."
+                "But that didn't happen."
+                "It's not like I can just go back and fix my mistakes."
+                "I let out a loud sigh."
+                "I guess I'm just meant to be alone."
+
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu(confirm=False))
     return
 

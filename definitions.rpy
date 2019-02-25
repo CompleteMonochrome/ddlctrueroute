@@ -352,6 +352,13 @@ image bg glitch = LiveTile("bg/glitch.jpg")
 
 image markovred = "#f21237"
 image monikared = "#e03638"
+image greystream:
+    "#000000"
+    "#ffffff" with Dissolve(1.5)
+    1.5
+    "#57474d" with Dissolve(1)
+    1.0
+    "#000000" with Dissolve(1.5)
 image bg gym = "mod_assets/images/bg/gym.png"
 image bg rooftop = "mod_assets/images/bg/rooftop.png"
 image bg library = "mod_assets/images/bg/library.png"
@@ -415,6 +422,7 @@ image bg school_secluded = "mod_assets/images/bg/school_secluded.png"
 image bg school_grounds = "mod_assets/images/bg/school_grounds.png"
 image bg school_courtyard = "mod_assets/images/bg/school_courtyard.png"
 image bg school_nurse = "mod_assets/images/bg/school_nurse.png"
+image bg school_lockers = "mod_assets/images/bg/school_lockers.png"
 image bg m_house = "mod_assets/images/bg/m_house.png"
 image bg m_livingroom = "mod_assets/images/bg/m_livingroom.png"
 image bg m_bedroom_day = "mod_assets/images/bg/m_bedroom_day.png"

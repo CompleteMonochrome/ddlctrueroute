@@ -2278,6 +2278,8 @@ screen poem(currentpoem, paper="paper"):
             text "[currentpoem.title]\n\n[currentpoem.text]" style "natsuki_text"
         elif currentpoem.author == "monika":
             text "[currentpoem.title]\n\n[currentpoem.text]" style "monika_text"
+        elif currentpoem.author == "ayame":
+            text "[currentpoem.title]\n\n[currentpoem.text]" style "yuri_text_2"
         null height 100
     vbar value YScrollValue(viewport="vp") style "poem_vbar"
 
