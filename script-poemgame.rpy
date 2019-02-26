@@ -422,7 +422,11 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
         # Monika Glitch
         if persistent.playthrough == 2 and chapter == 2:
             show m_sticker at sticker_m_glitch
-    if transition:
+    if from_custom_start:
+        hide screen tear
+        $ from_custom_start = False
+        $ quick_menu = True
+    elif transition:
         with dissolve_scene_full
     if persistent.playthrough == 3:
         play music ghostmenu

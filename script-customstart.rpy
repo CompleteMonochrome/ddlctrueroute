@@ -212,6 +212,8 @@ label choose_start:
                 $ chapter = 14
             "Third day of preparations.":
                 $ chapter = 15
+            "Inauguration Day.":
+                $ chapter = 16
 
     # Yuri Arc
     s "Let's get started with Yuri's problem."
@@ -305,7 +307,6 @@ label choose_start:
         $ persistent.custom_starts_used += 1
         $ renpy.save_persistent()
         stop sound
-        hide screen tear
         jump ch7_skip
 
     # Chapter 8
@@ -368,7 +369,6 @@ label choose_start:
         $ persistent.custom_starts_used += 1
         $ renpy.save_persistent()
         stop sound
-        hide screen tear
         jump ch8_redirect
 
     # Natsuki Arc
@@ -432,7 +432,6 @@ label choose_start:
         $ persistent.custom_starts_used += 1
         $ renpy.save_persistent()
         stop sound
-        hide screen tear
         jump ch9_skip
 
     # Chapter 10
@@ -483,7 +482,6 @@ label choose_start:
         $ persistent.custom_starts_used += 1
         $ renpy.save_persistent()
         stop sound
-        hide screen tear
         jump ch10_skip
 
     # Chapter 11
@@ -536,7 +534,6 @@ label choose_start:
         $ persistent.custom_starts_used += 1
         $ renpy.save_persistent()
         stop sound
-        hide screen tear
         jump ch11_skip
 
     # Chapter 12
@@ -604,7 +601,6 @@ label choose_start:
         $ persistent.custom_starts_used += 1
         $ renpy.save_persistent()
         stop sound
-        hide screen tear
         jump ch12_skip
 
     # Sayori Arc
@@ -744,7 +740,6 @@ label choose_start:
         $ persistent.custom_starts_used += 1
         $ renpy.save_persistent()
         stop sound
-        hide screen tear
         jump ch13_skip
 
     # Chapter 14
@@ -868,7 +863,6 @@ label choose_start:
         $ persistent.custom_starts_used += 1
         $ renpy.save_persistent()
         stop sound
-        hide screen tear
         jump ch14_skip
 
     # Chapter 15
@@ -1016,5 +1010,58 @@ label choose_start:
         $ persistent.custom_starts_used += 1
         $ renpy.save_persistent()
         stop sound
-        hide screen tear
         jump ch15_skip
+
+    # Chapter 16
+    $ ch15_ay_seen = True
+
+    s "So this is it, huh?"
+    s "After everything, we're finally here."
+    s "We're at the beginning of the end..."
+    s "But that's not a bad thing!"
+    s "The end of something is the beginning of another."
+    s "So don't be sad that you're approaching the end."
+    s "It just means you get to experience something new."
+    s "Anyway..."
+
+    if ch13_name == "Natsuki":
+        if monika_type == 0 or natsuki_date:
+            $ natsuki_approval += 1
+        else:
+            if natsuki_approval > 0:
+                $ natsuki_approval -= 1
+    elif ch13_name == "Yuri":
+    elif ch13_name == "Monika":
+        if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
+            s "Seeing as you chose to be with Monika..."
+            s "Did you go to the mall together?"
+            s "Or by yourselves?"
+            menu:
+                "We went to the mall..."
+                "Together.":
+                    $ ch15_m_together = True
+                "By ourselves.":
+                    $ ch15_m_together = False
+            s "Okay."
+    elif ch13_name == "Sayori":
+        $ ch15_s_together = False
+        if ch14_sayori_date_choice and sayori_personality == 0:
+            s "You were with Sayori, right?"
+            s "Up until now, you've tried to please her."
+            s "But..."
+            s "If you really cared, you would experience it yourself."
+            s "I don't know your true intentions."
+            s "So if you really want to be together...then prove it."
+
+    if chapter == 16:
+        s "That's it, isn't it?"
+        s "Now all that's left is to see what consequences your actions have done..."
+        show screen tear(20, 0.1, 0.1, 0, 40)
+        $ pause(0.25)
+        $ s_name = "Sayori"
+        $ quick_menu = True
+        stop music
+        $ persistent.custom_starts_used += 1
+        $ renpy.save_persistent()
+        stop sound
+        jump ch16_skip

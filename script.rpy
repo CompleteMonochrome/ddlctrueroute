@@ -221,6 +221,8 @@ label start:
         call poemresponse_start_new
         call ch15_end
 
+        # Chapter 16 skip is here to see the poem
+        label ch16_skip:
         # Choose which poem ending
         if ch15_s_together:
             $ ch16_poem_ending = 4
@@ -236,7 +238,6 @@ label start:
             $ ch16_poem_ending = 3
         call poem(poem_ending=ch16_poem_ending)
 
-        label ch16_skip:
         $ chapter = 16
         call ch16_main
         call ch16_end
