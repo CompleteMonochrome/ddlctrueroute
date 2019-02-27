@@ -5709,6 +5709,166 @@ label ch16_sayoridate:
             s "Someone even made a little wooden bridge."
             s "So let's go."
             mc "Lead the way."
+            scene bg river_day
+            show sayori 1ba zorder 2 at t11
+            with wipeleft_scene
+            "Sayori and I make our way around the lake."
+            "There's a part where the lake converges and turns into a small river."
+            "The current is flowing slowly so there's really no danger at all."
+            "Like she said, there's a small bridge connecting both sides of it."
+            "It looks pretty sturdy too."
+            "I was expecting something that was barely being held together."
+            "Maybe people {i}do{/i} do this a lot."
+            "Especially if the bridge is this well made."
+            s "Shall we?"
+            "Sayori steps on the bridge and offers me her hand."
+            "I take it and she pulls me next to her on the bridge."
+            s "It's so peaceful here, isn't it?"
+            s "You can hear the birds singing and the river flowing."
+            mc "It's a tranquil environment."
+            mc "Especially since no one really goes here."
+            s "That's right."
+            show sayori 1ba zorder 2 at s11
+            "Sayori sits down on the bridge."
+            "I sit down next to her."
+            s "Before we cross."
+            s "I just want to take this moment to take it all in."
+            s "Who knows what awaits us on the other side?"
+            mc "Are you scared?"
+            s "Scared?"
+            s "Ahaha~"
+            s "I'm excited if anything."
+            s "Those flowerbeds have a reputation and I want to see them."
+            s "But if we just skip past all of nature's beauty that we can see now."
+            s "Then how can we truly appreciate the flowers?"
+            mc "I guess..."
+            mc "I'm not really one to do this kinda thing."
+            mc "But I wanna try."
+            s "Ehehe, I don't wanna force you to do anything you don't want to."
+            mc "No, the choice was made."
+            mc "If this is what we're doing then I should try."
+            mc "I just need...guidance."
+            s "I can't do that."
+            s "It just naturally."
+            s "Just breathe in the atmosphere."
+            "Sayori takes a deep breath then exhales."
+            s "Just like that."
+            "I take a deep breath."
+            "I can feel the fresh air enter my lungs."
+            "I can feel the sun on my face and the wind on my back."
+            "I can hear the gentle current the water below us is carrying."
+            "And the warmth of Sayori's presence next to me."
+            s "If you wanna take in the rest of the sights, we can do that."
+            s "There's no {i}real{/i} rush."
+            s "But I'm going to need to change a couple of things for that to happen."
+            "I exhale my breath and as I do, the world seems to be moving slower."
+            "The current of water seems to stop and the leaves on the trees stop fluttering."
+            s "Don't move around too much."
+            s "I'm not sure how long I can hold this."
+            mc "Did you freeze time or something?"
+            s "I guess that's the best way to put it."
+            s "Normally, while the world is in this state I can do what I want."
+            s "I would literally have all the time in the world."
+            s "And it would be like nothing happened at all..."
+            s "Only I would experience this moment of frozen time."
+            s "But I've shared it with you."
+            s "It's a bit harder but I'll manage."
+            mc "You don't need to do that for me."
+            s "But I want to."
+            s "After all, it wouldn't be a date if we didn't both enjoy ourselves."
+            s "And I don't want to make this any worse for you either."
+            s "It's better to let you in on it, rather than keep you in the dark."
+            s "After all, you're helping to make this possible."
+            mc "..."
+            if ch16_ay_perspective:
+                show screen tear(8, offtimeMult=1, ontimeMult=10)
+                window hide(None)
+                scene bg school_grounds
+                $ pause(1.0)
+                hide screen tear
+                $ pause(1.0)
+                window show(None)
+                "It's happening again.{fast}"
+                window auto
+                $ style.say_dialogue = style.edited
+                "And yet you're not affected."
+                "Once again."
+                "Why do you think that is, hmm?"
+                $ style.say_dialogue = style.normal
+                "Where is [player_personal]?"
+                "[cPlayer_personal] was just here..."
+                "Dammit."
+                $ style.say_dialogue = style.edited
+                "Why are you even chasing after [player_reflexive]?"
+                "It's not like [player_personal] loves you."
+                "Or ever will."
+                $ style.say_dialogue = style.normal
+                "It's not about that."
+                "I just feel this resonance towards [player_reflexive]."
+                "I need to know what it is."
+                $ style.say_dialogue = style.edited
+                "You don't want to find out the source of these time stops?"
+                "Seeing everyone frozen like this doesn't bother you?"
+                "AT ALL?"
+                $ style.say_dialogue = style.normal
+                "I don't know the reason why it's happening."
+                "It's happened before and fixed itself."
+                "There's no reason I should be concerned."
+                $ style.say_dialogue = style.edited
+                "Ayame, your logic is flawless."
+                "The world is completely stopped."
+                "You aren't worried at all simply because it fixed itself."
+                "Think critically for a moment."
+                "Don't you think there's a reason only {i}you{/i} can move during these?"
+                $ style.say_dialogue = style.normal
+                "Why are you bothering me?"
+                "I didn't ask for your opinion."
+                "So just shut up!"
+                "Shut up!"
+                "Shut up!"
+                $ style.say_dialogue = style.edited
+                "I'm just trying to help you."
+                "After all, we're one and the same."
+                "All I'm saying is..."
+                "Maybe you can do something about this stopped time."
+                $ style.say_dialogue = style.normal
+                "I can't."
+                "There's no reason I should be able to."
+                "I can't just will things to happen!"
+                "I take a seat down on the bench."
+                "I guess I'll just wait this out."
+                "Suddenly, a ball rolls out to my feet."
+                "It was frozen before..."
+                "Does that mean...?"
+                "Student" "\"Hey, can you kick that back to us?\""
+                "I oblige and kick the ball back to the group of students playing on the field."
+                "Did I do this?"
+                "What..."
+                "...the..."
+                "...hell?{nw}"
+                show screen tear(20, 3, 2, 0, 70)
+                window hide(None)
+                $ pause(1.0)
+                scene bg river_day
+                show sayori 1ba zorder 2 at s11
+                hide screen tear
+                $ pause(1.0)
+                window show(None)
+                "Was that...right now?{fast}"
+                window auto
+            s "What's wrong?"
+            mc "Um..."
+            s "Oh..."
+            s "I guess I {i}couldn't{/i} manage."
+            s "That's weird but not unexpected."
+            "It seems the river is flowing normally again."
+            "I guess time is back to normal?"
+            s "Well, we should get moving then."
+            show sayori at t11
+            "Sayori gets up and begins walking to the other side."
+            if ch16_ay_perspective:
+                "Did Sayori make time move again or..."
+                "...was it someone else?"
         "Let's do something else.":
             mc "I don't think going to a haunted flowerbed is a good idea."
             mc "Maybe we can do something else."
@@ -5722,6 +5882,170 @@ label ch16_sayoridate:
             "There's actually a lush forest area that surrounds the lake."
             "There's a small river cutting off half of the forest area."
             "I assume that's where the flowerbed is."
+            "I can spot a small wooden bridge but Sayori seems to ignore it."
+            "Where is she taking us?"
+            "We move down the river a little bit, the further down we got the more abandoned equipment we see."
+            "I can only guess that's from the company that tried to mine out the area."
+            "After walking for a couple of minutes, she comes to a stop in front of some sort of large machine."
+            s "Do you know what this is?"
+            mc "I don't know what it's called."
+            mc "But it takes stuff and moves it somewhere else, right?"
+            s "I think it's called an excavator."
+            s "I don't know why, but the company left it here."
+            s "Along with all this other abandoned equipment."
+            mc "Strange that they just left it here."
+            mc "I would have thought they'd have taken all their stuff back."
+            s "Maybe they planned to use it again at some point."
+            s "Who really knows?"
+            "Sayori begins to climb on the excavator."
+            mc "W-What are you doing?"
+            s "What's it look like?"
+            s "Come on, you'll be fine."
+            mc "It's not me I'm worried about."
+            mc "Falling from there could seriously hurt you."
+            s "Falling from where?"
+            "Sayori climbs onto the arm part of the excavator."
+            s "From here?"
+            mc "Are you just teasing me?"
+            s "Just get up here."
+            s "I promise nothing bad will happen."
+            mc "I'm not exactly the best climber."
+            s "Here."
+            "Sayori offers me her hand."
+            "I take it and she pulls me up with ease."
+            "I guess that's how she handled the box so easily..."
+            show sayori at s11
+            "We both take a seat on the arm of the excavator."
+            "It's positioned so that it's probably in the most sturdy position it could be."
+            s "Times like this, I'd say to take in the beauty of nature."
+            s "But right now..."
+            "Sayori extends out her arms as if to showcase where we are sitting."
+            s "We're surrounded by machinery."
+            s "Tools left by a greedy company."
+            s "So it might be kind of hard to appreciate it, you know?"
+            mc "I wouldn't really know anything about that."
+            mc "I'm not exactly a nature person."
+            s "Just take a deep breath and concentrate."
+            s "You'll be able to take everything in that way."
+            s "Give it a try now."
+            mc "If you say so."
+            "I take in a deep breath."
+            "The air is fresh but there's something about it."
+            "Some kind of metal aspect about it I can't really determine."
+            "I can feel the wind on my back."
+            "I can feel the cold steel that I'm sitting on."
+            "And the warmth of Sayori's presence next to me."
+            s "Taking it all in, [player]?"
+            mc "I guess so."
+            mc "Like I said, I'm not really good at this."
+            mc "But I wanna try to be."
+            s "Ehehe, well you don't have to force yourself."
+            s "Besides, there are more fun things we can do."
+            mc "Like what?"
+            s "Well...do you think this thing still works?"
+            mc "You can't be serious."
+            "She hops off the arm and approaches the door to the driver's seat."
+            "She's serious."
+            "I get off the arm and gracefully tumble on the ground."
+            mc "Do you even know how to use this thing?"
+            s "I've got no idea!"
+            mc "This is a terrible idea!"
+            mc "How are you even going to turn it on?"
+            mc "I doubt they left the keys in there."
+            s "I'll make my own."
+            mc "What?!"
+            "Before I can even approach the driver's seat, the excavator roars to life."
+            mc "Sayori..."
+            s "Come on in."
+            "The excavator is only suited for one person at a time."
+            "She squeezes a bit so that I can fit in too."
+            mc "What are you planning?"
+            s "This clearing seems like a good place to just mess around, doesn't it?"
+            s "There's plenty of space and we aren't really going to ruin the scenery."
+            mc "I suppose."
+            s "Now, let's see how this goes."
+            "Sayori steps on one of the pedals and the machine grinds forward."
+            s "See, I'm an expert already?"
+            mc "Just be careful."
+            mc "This might have been abandoned for a reason, you know."
+            "Sayori pulls on one of the levers and the arm changes position."
+            s "I have another idea."
+            mc "Don't tell me--"
+            s "You drive for a minute."
+            "She forces herself out of the driver's compartment and climbs onto the arm."
+            "How can she climb so well in a dress?"
+            "She stands on it proudly before turning around and seeing my face."
+            "She laughs."
+            s "Your face is priceless, [player]!"
+            s "You just look so worried and clueless."
+            s "Come on, I bet you can't shake me off."
+            "She's having way too much fun here."
+            "It's almost infectious."
+            mc "Oh yeah?"
+            mc "How about this?"
+            if ch15_ay_perspective:
+                show screen tear(8, offtimeMult=1, ontimeMult=10)
+                window hide(None)
+                scene bg school_grounds
+                $ pause(1.0)
+                hide screen tear
+                $ pause(1.0)
+                window show(None)
+                "Where is [player_personal]?{fast}"
+                window auto
+                "[cPlayer_personal] should be right here."
+                $ style.say_dialogue = style.edited
+                "Stop this."
+                "Your effort and time are wasted looking for [player_reflexive]."
+                $ style.say_dialogue = style.normal
+                "I know [player_personal]'s around here."
+                "I just know it."
+                $ style.say_dialogue = style.edited
+                "Are you sure?"
+                "You and I both know [player_personal]'s no longer here."
+                "You just don't want to admit it."
+                $ style.say_dialogue = style.normal
+                "..."
+                $ style.say_dialogue = style.edited
+                "Why are you so curious about this [player_gender]?"
+                "Why are you vying for their attention so much?"
+                "Have you developed feelings of love overnight?"
+                "Pathetic."
+                $ style.say_dialogue = style.normal
+                "I don't need to take that from you."
+                "I'm the one in control here."
+                "I can simply ignore you and pretend you don't exist."
+                $ style.say_dialogue = style.edited
+                "And yet, here you are."
+                "Arguing with yourself in your own head."
+                "We're one and the same, you know that."
+                "And this false pretense of love is--"
+                $ style.say_dialogue = style.normal
+                "It's not love."
+                "It's something else."
+                "Something I need to take to [player_reflexive] about."
+                "I feel this resonance towards [player]."
+                "I don't know why."
+                $ style.say_dialogue = style.edited
+                "Whatever your reason..."
+                "[cPlayer_personal]'s no longer at school."
+                "You know I'm not lying."
+                $ style.say_dialogue = style.normal
+                "I need to find [player_reflexive].{nw}"
+                show screen tear(20, 3, 2, 0, 70)
+                window hide(None)
+                $ pause(1.0)
+                scene bg river_day
+                show sayori 1ba zorder 2 at s11
+                hide screen tear
+                $ pause(1.0)
+                window show(None)
+                "My hands are already on the lever Sayori pulled earlier.{fast}"
+                window auto
+            "I pull the lever and the arm changes position again."
+            s "Whoa!"
+            "Sayori shakes a little bit before finding her balance again."
+            s "You're gonna have to try harder than that."
     return
 
 label ch16_ending_good:
