@@ -1,3 +1,6 @@
+screen timer_16_menu_skip(jumploc):
+    timer 0.5 action Jump(jumploc) repeat True
+
 label ch16_main:
     if ch12_markov_agree:
         $ persistent.markov_agreed = True
@@ -344,6 +347,8 @@ label ch16_main:
         $ cl_name = "???"
         cl "You want some help with that?"
         show mysteriousclerk 2e zorder 2 at t11
+        if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+            "The man in front of me puts a hand on my shoulder and quickly removes it."
         "This guy...why does he seem so familiar?"
         $ cl_name = "Familiar Clerk"
         mc "What the...?"
@@ -351,6 +356,8 @@ label ch16_main:
         $ cl_name = "???"
         cl "Hey friend, want some help?"
         show mysteriousclerk 2e zorder 2 at t11
+        if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+            "The man puts a hand on my shoulder and immediately removes it."
         "Have I...seen him before?"
         "Why do I feel like I know his name?"
         "Nick...was it?"
@@ -360,6 +367,8 @@ label ch16_main:
         $ cl_name = "???"
         cl "Need a hand?"
         "I hear a voice come from behind me."
+        if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+            "A hand grabs my shoulder at the same time."
         mc "Who--{nw}"
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
@@ -4912,12 +4921,193 @@ label ch16_main:
         s "I don't like this at all."
         s "I know there's a reason behind this."
         "Sayori looks at Monika."
-        s "You have to tell me the reason for all of this later."
+        s "You have to tell me that reason."
+        s "Not right now if you don't want to but sometime later today."
         s "That's my condition."
         show sayori zorder 2 at t21
         show monika zorder 3 at f22
         m "I really don't know what you mean."
         m "I'm just helping [player] out."
+        show sayori zorder 3 at f21
+        show monika zorder 2 at t22
+        s "Oh come {i}on{/i}, Monika."
+        s "Please don't lie to me."
+        s "I really don't have the time for this right now."
+        show sayori zorder 2 at t21
+        mc "What's going on?"
+        show sayori zorder 3 at f21
+        s "Nothing is going on."
+        s "Nothing you need to worry yourself about anyway."
+        show sayori zorder 2 at t21
+        mc "It sounds pretty serious."
+        mc "Besides, I was planning on speaking to her."
+        mc "So it sounds like I do need to involve myself."
+        show monika zorder 3 at f22
+        m "Look, Sayori."
+        m "Perhaps it's better if your first experience with her would be during rehearsals."
+        m "That's when she's free, right?"
+        show sayori zorder 3 at f21
+        show monika zorder 2 at t22
+        s "I don't know why you have to keep me in the dark."
+        s "I thought we were working together on this, Monika."
+        s "But I know you must have your reasons."
+        s "I just don't know what those reasons are."
+        show sayori zorder 2 at t21
+        show monika zorder 3 at f22
+        m "This has nothing to do with that."
+        m "I'm really just trying to help get [player] more involved with our newest member."
+        m "But if it satisfies you, then I can talk to you about it later."
+        m "All I ask is that you don't talk to her before rehearsals, okay?"
+        show sayori zorder 3 at f21
+        show monika zorder 2 at t22
+        s "And you're okay with this, [player]?"
+        s "If she's forcing you to do this..."
+        s "You can tell me."
+        # Show a yes/no at first then force a no after 0.5 seconds
+        show screen timer_16_menu_skip("ch16_m_forcechoice_1",_layer="timers")
+        menu:
+            s "Is she?"
+            "Yes.":
+                hide screen timer_16_menu_skip
+                show screen tear(8, offtimeMult=1, ontimeMult=10)
+                $ pause(0.5)
+                hide screen tear
+            "No.":
+                jump ch16_m_afterchoice
+        label ch16_m_forcechoice_1:
+        $ _history_list.pop()
+        hide screen timer_16_menu_skip
+        menu:
+            s "Is she?"
+            "No":
+                pass
+        label ch16_m_afterforce_1:
+        s "Alright...fine."
+        "The way she said that sounded almost suspicious."
+        s "I've trusted you until now, Monika."
+        if ch14_m_tellsayori:
+            s "You even told me all you knew about {i}that thing{/i}."
+            s "But..."
+        s "I still don't like this."
+        s "There's something about the way you're saying things."
+        s "Like you're clearly trying to avoid speaking in a certain way."
+        show sayori zorder 2 at t21
+        show monika zorder 3 at f22
+        m "I-I don't know what you mean."
+        show sayori zorder 3 at f21
+        show monika zorder 2 at t22
+        s "But if you aren't forcing [player_reflexive]."
+        s "Then I'll assume I know what you're doing."
+        s "I won't talk to Ayame until rehearsals."
+        show sayori zorder 2 at t21
+        show monika zorder 3 at f22
+        m "Thank you, Sayori."
+        m "I'm sure [player] appreciates it."
+        m "Right?"
+        show monika zorder 2 at t22
+        mc "Yeah, definitely."
+        mc "Thanks, Sayori."
+        show sayori at lhide
+        hide sayori
+        show monika zorder 2 at t11
+        "Sayori gives a dismissive wave before rushing away."
+        "Maybe she's in a bad mood."
+        "I can understand why."
+        "Today is a pretty important day for the club."
+        "The stress must be getting to her."
+        m "Sigh..."
+        if monika_type == 0:
+            m "I hate to do this to her."
+            m "But it's necessary."
+            mc "I'm a little confused why you lied to her."
+            mc "I went along with it because it was your idea."
+            mc "I don't know if that was the right thing to do."
+            m "The reasons behind it are very complex, [player]."
+            m "I can't explain it to you now."
+            m "But you'll understand, in time."
+            mc "If you say so."
+            mc "I just don't feel right lying to Sayori like that."
+            m "Well, you didn't really lie to her."
+            m "How do you think I feel?"
+        else:
+            m "I'm glad she's gone."
+            m "She's so annoying to deal with."
+            m "Feigning friendship is just not for me."
+            m "No matter how used to it I am."
+        m "Anyway!"
+        m "There's another reason I'm here."
+        m "You already have the important part."
+        m "So this next part isn't really necessary."
+        m "But despite that, I'd like to talk about it."
+        mc "Talk about what?"
+        m "Do you remember when you were at the gym this morning?"
+        mc "Of course."
+        mc "You were there."
+        mc "And so was Ayame..."
+        m "Well, do you remember anyone else that stood out?"
+        mc "Not...really..."
+        mc "Should I have been paying attention?"
+        m "There was a suspicious looking guy there this morning."
+        m "I swear I saw you talking to him."
+        mc "Was he a student?"
+        m "No, he looked more like a teacher."
+        m "Except there was something about his outfit."
+        m "It looked pretty unkempt."
+        m "Not to mention he looked shady as well."
+        mc "How did you even see him?"
+        mc "Weren't you practicing piano?"
+        m "I saw him when I was walking in."
+        m "I was getting some sheet music from my bag and I saw you talking to someone."
+        m "He looked familiar and then it clicked."
+        m "Seeing him talk to you aroused some suspicion."
+        mc "How come?"
+        m "I saw the two of you walk out of the gym together."
+        m "Carrying a box of some sort?"
+        mc "We did?"
+        mc "I thought I carried it myself."
+        "That would explain why I thought there was two of us in the corridor..."
+        m "No, you looked like you were struggling."
+        m "He helped you."
+        m "You really don't remember that?"
+        mc "I can't say I do."
+        m "This is exactly why I wanted to talk about him."
+        m "Could he be another threat?"
+        m "It's hard to know for sure."
+        mc "Maybe he just wanted to help."
+        mc "Some people are like that."
+        m "Some people also have ulterior motives."
+        m "Him coming out of nowhere and on a day like this..."
+        m "That's suspicious, to say the least."
+        mc "I don't want to assume the worst of people."
+        mc "Especially since he apparently helped me carry that box."
+        mc "Maybe he helped {i}because{/i} it was a day like this."
+        m "Think more critically, [player]."
+        m "What could he gain from showing himself like that?"
+        m "He doesn't want you to remember him, clearly."
+        m "Otherwise you'd have remembered his face."
+        mc "He made me forget his face?"
+        mc "Is that some kind of trick?"
+        m "I don't know."
+        m "Maybe it is."
+        m "Do you {i}feel{/i} any different?"
+        mc "I don't think so."
+        m "Give me your hand."
+        mc "O-Okay..."
+        "I extend out my hand."
+        "Monika holds it in both hands and looks at me intently."
+        m "Okay, there doesn't--"
+        "Monika suddenly freezes."
+        "It's like she's lost in her own world or something."
+        mc "Monika?"
+        mc "What's wrong?"
+        "I try my best to get her attention."
+        "Nothing works."
+        "After a few seconds, she comes back to her senses."
+        m "That was a clever trick."
+        mc "Did something happen?"
+        m "You could say that."
+        m "Do you remember him making physical contact with you at all?"
+        mc "I don't...remember."
     else:
         "I'm just sitting by myself."
         "Normally, I'd be with someone else but everyone seems to be busy today and didn't want to be bothered."
@@ -5983,7 +6173,7 @@ label ch16_sayoridate:
             "It's almost infectious."
             mc "Oh yeah?"
             mc "How about this?"
-            if ch15_ay_perspective:
+            if ch16_ay_perspective:
                 show screen tear(8, offtimeMult=1, ontimeMult=10)
                 window hide(None)
                 scene bg school_grounds
@@ -6045,7 +6235,7 @@ label ch16_sayoridate:
             "I pull the lever and the arm changes position again."
             s "Whoa!"
             "Sayori shakes a little bit before finding her balance again."
-            s "You're gonna have to try harder than that."
+            s "You're gonna have to try harder than that!"
     return
 
 label ch16_ending_good:
