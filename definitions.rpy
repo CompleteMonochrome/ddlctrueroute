@@ -3563,6 +3563,9 @@ image ayame 1schoolh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame
 image ayame 1schooli = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1r.png", (0, 0), "mod_assets/images/ayame/i.png")
 image ayame 1schoolj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1r.png", (0, 0), "mod_assets/images/ayame/j.png")
 image ayame 1schoolk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1r.png", (0, 0), "mod_assets/images/ayame/k.png")
+image ayame 1schooll = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1r.png", (0, 0), "mod_assets/images/ayame/l.png")
+image ayame 1schoolm = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1r.png", (0, 0), "mod_assets/images/ayame/m.png")
+image ayame 1schooln = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1r.png", (0, 0), "mod_assets/images/ayame/n.png")
 
 image ayame 2schoola = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2r.png", (0, 0), "mod_assets/images/ayame/a.png")
 image ayame 2schoolb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2r.png", (0, 0), "mod_assets/images/ayame/b.png")
@@ -3575,6 +3578,9 @@ image ayame 2schoolh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame
 image ayame 2schooli = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2r.png", (0, 0), "mod_assets/images/ayame/i.png")
 image ayame 2schoolj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2r.png", (0, 0), "mod_assets/images/ayame/j.png")
 image ayame 2schoolk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2r.png", (0, 0), "mod_assets/images/ayame/k.png")
+image ayame 2schooll = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2r.png", (0, 0), "mod_assets/images/ayame/l.png")
+image ayame 2schoolm = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2r.png", (0, 0), "mod_assets/images/ayame/m.png")
+image ayame 2schooln = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2r.png", (0, 0), "mod_assets/images/ayame/n.png")
 
 # Ayame School Leader
 image ayame 1leadera = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/a.png")
@@ -3588,6 +3594,9 @@ image ayame 1leaderh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame
 image ayame 1leaderi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/i.png")
 image ayame 1leaderj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/j.png")
 image ayame 1leaderk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/k.png")
+image ayame 1leaderl = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/l.png")
+image ayame 1leaderm = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/m.png")
+image ayame 1leadern = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/1altr.png", (0, 0), "mod_assets/images/ayame/n.png")
 
 image ayame 2leadera = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/a.png")
 image ayame 2leaderb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/b.png")
@@ -3600,6 +3609,9 @@ image ayame 2leaderh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame
 image ayame 2leaderi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/i.png")
 image ayame 2leaderj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/j.png")
 image ayame 2leaderk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/k.png")
+image ayame 2leaderl = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/l.png")
+image ayame 2leaderm = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/m.png")
+image ayame 2leadern = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1l.png", (0, 0), "mod_assets/images/ayame/2altr.png", (0, 0), "mod_assets/images/ayame/n.png")
 
 # Ayame Casual
 image ayame 1ba = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/1br.png", (0, 0), "mod_assets/images/ayame/a.png")
@@ -3613,6 +3625,9 @@ image ayame 1bh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.
 image ayame 1bi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/1br.png", (0, 0), "mod_assets/images/ayame/i.png")
 image ayame 1bj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/1br.png", (0, 0), "mod_assets/images/ayame/j.png")
 image ayame 1bk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/1br.png", (0, 0), "mod_assets/images/ayame/k.png")
+image ayame 1bl = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/1br.png", (0, 0), "mod_assets/images/ayame/l.png")
+image ayame 1bm = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/1br.png", (0, 0), "mod_assets/images/ayame/m.png")
+image ayame 1bn = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/1br.png", (0, 0), "mod_assets/images/ayame/n.png")
 
 image ayame 2ba = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/2br.png", (0, 0), "mod_assets/images/ayame/a.png")
 image ayame 2bb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/2br.png", (0, 0), "mod_assets/images/ayame/b.png")
@@ -3625,6 +3640,9 @@ image ayame 2bh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.
 image ayame 2bi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/2br.png", (0, 0), "mod_assets/images/ayame/i.png")
 image ayame 2bj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/2br.png", (0, 0), "mod_assets/images/ayame/j.png")
 image ayame 2bk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/2br.png", (0, 0), "mod_assets/images/ayame/k.png")
+image ayame 2bl = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/2br.png", (0, 0), "mod_assets/images/ayame/l.png")
+image ayame 2bm = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/2br.png", (0, 0), "mod_assets/images/ayame/m.png")
+image ayame 2bn = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1bl.png", (0, 0), "mod_assets/images/ayame/2br.png", (0, 0), "mod_assets/images/ayame/n.png")
 
 # Ayame School Generalised Definitions
 image ayame 1a = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leadera", "True", "ayame 1schoola")
@@ -3638,6 +3656,9 @@ image ayame 1h = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leaderh", "
 image ayame 1i = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leaderi", "True", "ayame 1schooli")
 image ayame 1j = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leaderj", "True", "ayame 1schoolj")
 image ayame 1k = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leaderk", "True", "ayame 1schoolk")
+image ayame 1l = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leaderl", "True", "ayame 1schooll")
+image ayame 1m = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leaderm", "True", "ayame 1schoolm")
+image ayame 1n = ConditionSwitch("ayame_school_outfit == 1", "ayame 1leadern", "True", "ayame 1schooln")
 
 image ayame 2a = ConditionSwitch("ayame_school_outfit == 1", "ayame 2leadera", "True", "ayame 2schoola")
 image ayame 2b = ConditionSwitch("ayame_school_outfit == 1", "ayame 2leaderb", "True", "ayame 2schoolb")
@@ -3650,6 +3671,9 @@ image ayame 2h = ConditionSwitch("ayame_school_outfit == 1", "ayame 2leaderh", "
 image ayame 2i = ConditionSwitch("ayame_school_outfit == 1", "ayame 2leaderi", "True", "ayame 2schooli")
 image ayame 2j = ConditionSwitch("ayame_school_outfit == 1", "ayame 2leaderj", "True", "ayame 2schoolj")
 image ayame 2k = ConditionSwitch("ayame_school_outfit == 1", "ayame 2leaderk", "True", "ayame 2schoolk")
+image ayame 2l = ConditionSwitch("ayame_school_outfit == 1", "ayame 2leaderl", "True", "ayame 2schooll")
+image ayame 2m = ConditionSwitch("ayame_school_outfit == 1", "ayame 2leaderm", "True", "ayame 2schoolm")
+image ayame 2n = ConditionSwitch("ayame_school_outfit == 1", "ayame 2leadern", "True", "ayame 2schooln")
 
 # Christmas Event Exclusive
 # Sayori Christmas

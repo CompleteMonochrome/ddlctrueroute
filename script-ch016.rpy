@@ -2481,82 +2481,85 @@ label ch16_main:
         scene bg school_secluded with wipeleft_scene
         "They said they wanted to go to this secluded spot."
         "I see them talking to each other and approach them."
-        show natsuki 1a zorder 3 at f21
+        show natsuki 1b zorder 2 at t21
         n "Good! You're here."
         n "I was starting to think you were gonna ditch us."
-        n "Yuri, are you sure no one goes here?"
-        show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        n 1c "Yuri, are you sure no one goes here?"
+        show yuri 3ph zorder 3 at f22
         y "I've been here several times."
         y "On occasion, a teacher would approach me but no students really go here."
-        show natsuki zorder 3 at f21
-        n "Good enough."
+        y "I think they know I want to be alone..."
+        show natsuki 1q zorder 3 at f21
+        n "Right..."
+        n "That's good enough, I guess."
         n "We won't be here long anyway."
         if yuri_date:
             show natsuki zorder 2 at t21
-            show yuri zorder 3 at f22
+            show yuri 3pv zorder 3 at f22
             y "Before we go on..."
             y "I want to make sure [player] is committed to this."
             y "I just have a bad feeling about today."
             y "Like this is the last time we'll really get together."
-            show natsuki zorder 3 at f21
+            show natsuki 1m zorder 3 at f21
             show yuri zorder 2 at t22
-            n "If you'd rather spend your time together."
+            n "Oh..."
+            n 1r "If you'd rather spend your time together."
             n "I get it."
             n "This is important but I can see why you'd want to spend this moment with each other."
             n "But if you're doing this, you have to be committed."
             show natsuki zorder 2 at t21
-            show yuri zorder 3 at f22
+            show yuri 2pu zorder 3 at f22
             y "I'll admit, I am rather curious about this."
             y "But if you want to spend this time with just the two of us..."
-            y "I understand too..."
-            y "If we uncover something we shouldn't..."
+            y 2ps "I'll understand too."
+            y 2pv "If we uncover something we shouldn't..."
             y "Then this could very well be our last time together."
-            show natsuki zorder 3 at f21
+            show natsuki 2e zorder 3 at f21
             show yuri zorder 2 at t22
             n "Okay, I wouldn't go that far."
             n "There's definitely gonna be more times you can hang out in the future."
             n "But there is something about today that's really special."
-            n "I can't quite figure it out."
+            n 2g "I can't quite figure it out."
             show natsuki zorder 2 at t21
-            show yuri zorder 3 at f22
+            show yuri 3pe zorder 3 at f22
             y "Regardless, we don't have to talk about this."
             y "I'm leaving it up to you, [player]."
             menu:
                 y "Shall we stay?"
                 "Yes.":
                     $ ch16_ny_stayed = True
-                    y "I see."
+                    y 3pf "I see."
                     y "If that's your decision, then that must mean you're committed to this."
                     y "I suppose that's that, Natsuki."
-                    show natsuki zorder 3 at f21
+                    show natsuki 2a zorder 3 at f21
                     show yuri zorder 2 at t22
                     n "I'm glad I could count on you two."
-                    n "Now let's go back to what we were talking about."
+                    n 2b "Now let's go back to what we were talking about."
                     show natsuki zorder 2 at t21
                 "No.":
                     $ ch16_ny_stayed = False
-                    y "Okay."
+                    y 3pe "Okay."
                     y "I understand."
-                    y "Natsuki--"
-                    show natsuki zorder 3 at f21
+                    y 3pg "Natsuki--"
+                    show natsuki 2j zorder 3 at f21
                     show yuri zorder 2 at t22
                     n "It's alright."
                     n "You two spend your time together."
-                    n "Enjoy it, okay?"
+                    n 2s "Enjoy it, okay?"
                     n "Make sure you say what you have to say."
                     show natsuki zorder 2 at t21
                     mc "What do you mean by that?"
+                    show natsuki 2a
                     "Natsuki simply smiles at me."
-                    show natsuki zorder 3 at f21
+                    show natsuki 2c zorder 3 at f21
                     n "I'll leave you two here..."
                     n "After all, it is Yuri's spot."
                     n "Maybe I can figure out something on my own."
                     show natsuki zorder 2 at t21
-                    show yuri zorder 3 at f22
+                    show yuri 2pa zorder 3 at f22
                     y "Goodbye, Natsuki."
                     y "And good luck."
-                    show natsuki zorder 3 at f21
+                    show natsuki 2d zorder 3 at f21
                     show yuri zorder 2 at t22
                     n "Yeah, you too."
                     show natsuki at lhide
@@ -2565,92 +2568,92 @@ label ch16_main:
                     "Natsuki waves goodbye before leaving."
                     "It looked like she was heading in the direction of the library."
                     "It's probably another quiet spot so it makes sense."
-                    y "Shall we get going as well?"
+                    y 3pf "Shall we get going as well?"
                     mc "What did you have in mind?"
                     jump ch16_y_cancel
         elif natsuki_date:
-            n "But before we go on..."
+            n 2s "But before we go on..."
             n "I want to tell you something, [player]."
             show natsuki zorder 2 at t21
             mc "What is it?"
-            show natsuki zorder 3 at f21
+            show natsuki 2g zorder 3 at f21
             n "I don't know why..."
             n "But there's something about this day."
-            n "Something terrible."
+            n 2h "Something terrible."
             n "It almost makes me want to spend it differently."
             show natsuki zorder 2 at t21
-            show yuri zorder 3 at f22
+            show yuri 3ph zorder 3 at f22
             y "I think I understand, Natsuki."
             y "I'm getting that feeling too."
-            y "If you two would rather be together than discussing this..."
+            y 2pe "If you two would rather be together than discussing this..."
             y "I won't stop you."
             y "Love is greater than curiosity, after all."
-            show natsuki zorder 3 at f21
+            show natsuki 2o zorder 3 at f21
             show yuri zorder 2 at t22
             n "I-It's not love...!"
             n "I-It's...!"
             "Natsuki's face turns a bright red."
-            n "W-Well, whatever...!"
-            n "It's your decision, [player]."
+            n 2p "W-Well, whatever...!"
+            n 2q "It's your decision, [player]."
             n "If you want to spend this time together instead of talking about this..."
             n "Then just say so."
-            n "But if you do want to talk about this, you have to be committed."
+            n 2s "But if you do want to talk about this, you have to be committed."
             menu:
                 n "So are we staying?"
                 "Yes.":
                     $ ch16_ny_stayed = True
-                    n "Okay, great."
+                    n 2s "Okay, great."
                     n "I didn't mean for that to sound like a relief or anything."
-                    n "I just respect your decision."
+                    n 1c "I just respect your decision."
                     show natsuki zorder 2 at t21
-                    show yuri zorder 3 at f22
+                    show yuri 3pb zorder 3 at f22
                     y "Now that that's settled, can we get back to the topic at hand?"
                     show yuri zorder 2 at t22
                 "No.":
                     $ ch16_ny_stayed = False
-                    n "If that's what you want."
+                    n 2q "If that's what you want."
                     n "We can go."
                     n "I really don't blame you for choosing that."
-                    n "Even if it does seem kinda selfish."
+                    n 1s "Even if it does seem kinda selfish."
                     n "Because I feel the same."
                     show natsuki zorder 2 at t21
-                    show yuri zorder 3 at f22
+                    show yuri 2pu zorder 3 at f22
                     y "So that's how it is?"
                     y "Okay then..."
-                    show natsuki zorder 3 at f21
+                    show natsuki 1r zorder 3 at f21
                     show yuri zorder 2 at t22
                     n "Yuri, I'm sorry."
                     n "I'm interested too."
-                    n "But today is just--"
+                    n 1n "But today is just--"
                     show natsuki zorder 2 at t21
-                    show yuri zorder 3 at f22
+                    show yuri 2ps  zorder 3 at f22
                     y "It's fine."
                     y "You two have your fun."
                     y "But if I may, can I borrow the journal?"
                     y "Maybe I can try to find something out myself."
-                    show natsuki zorder 3 at f21
+                    show natsuki 1k zorder 3 at f21
                     show yuri zorder 2 at t22
                     n "Um...sure."
                     "Natsuki gives the journal to Yuri."
-                    n "You might not be able to read all of it."
+                    n 2m "You might not be able to read all of it."
                     show natsuki zorder 2 at t21
-                    show yuri zorder 3 at f22
+                    show yuri 1a zorder 3 at f22
                     y "I'm a fast reader."
                     y "I'm sure I'll manage."
-                    y "Goodbye, you two."
-                    show natsuki zorder 3 at f21
+                    y 1b "Goodbye, you two."
+                    show natsuki 1q zorder 3 at f21
                     n "That's not what I meant."
                     n "But good luck, Yuri."
-                    n "We'll see you later!"
+                    n 2d "We'll see you later!"
                     show yuri at thide
                     hide yuri
                     show natsuki zorder 2 at t11
                     mc "Bye, Yuri!"
                     "She's already engrossed in the journal when I say that so I get no response."
-                    n "Come on, let's not bother her."
+                    n 2c "Come on, let's not bother her."
                     mc "Right."
                     scene bg school_front
-                    show natsuki 1a zorder 2 at t11
+                    show natsuki 2g zorder 2 at t11
                     with wipeleft_scene
                     n "There's a couple of things we could do."
                     mc "What did you have in mind?"
@@ -2664,66 +2667,66 @@ label ch16_main:
             mc "I felt so much more like myself in there."
         else:
             mc "Is this really a good idea?"
-        show natsuki zorder 3 at f21
+        show natsuki 1s zorder 3 at f21
         n "Honestly?"
         n "I don't know."
-        n "But what choice do we have?"
+        n 2r "But what choice do we have?"
         show natsuki zorder 2 at t21
         mc "Well, we don't {i}have{/i} to talk about this, do we?"
         mc "Why does it matter?"
-        show natsuki zorder 3 at f21
+        show natsuki 2g zorder 3 at f21
         n "You know why."
         n "If this whole thing was for nothing."
-        n "Then what have we been doing?"
+        n 2m "Then what have we been doing?"
         # Monika interrupt
         if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
-            n "What--"
+            n 1q "What--"
             show natsuki zorder 2 at t31
-            show monika zorder 3 at f32
+            show monika 2j zorder 3 at f32
             show yuri zorder 2 at t33
             if monika_type == 0:
-                m "Hey everyone!"
+                m "Hey, everyone!"
                 m "Sorry to interrupt this conversation you're having."
             else:
                 m "What are you three doing here?"
-                m "Trying to hide something from me?"
-            show natsuki zorder 3 at f31
+                m 2e "Trying to hide something from me?"
+            show natsuki 1o zorder 3 at f31
             n "Monika?!"
             n "W-What are you doing here?"
             show natsuki zorder 2 at t31
-            show yuri zorder 3 at f33
+            show yuri 2pq zorder 3 at f33
             y "How did you find us?"
-            show monika zorder 3 at f32
+            show monika 2c zorder 3 at f32
             show yuri zorder 2 at t33
             m "Find you?"
-            m "Was this meant to be a secret hiding spot or something?"
-            m "Anyway, I just saw [player_reflexive] walk this way and followed him."
+            m 2d "Was this meant to be a secret hiding spot or something?"
+            m 2a "Anyway, I just saw [player_reflexive] walk this way and followed him."
             if monika_type == 0:
                 m "Is it okay if I talk to him?"
             else:
                 m "I need to speak with him."
-            show natsuki zorder 3 at f31
+            show natsuki 2g zorder 3 at f31
             n "I don't know."
             n "We were kind of in the middle of something."
-            n "But that's up to him."
+            n 2s "But that's up to him."
             show natsuki zorder 2 at t31
             "Something is telling me I should go with Monika."
             "I get the feeling whatever she has to say is probably more important..."
             mc "Sorry, you two."
             mc "I'll come back if I have time but I'll go with Monika for now."
-            show natsuki zorder 3 at f31
+            show natsuki 4w zorder 3 at f31
             n "Forget it."
             "I can see the visible disappointment in Natsuki's face."
             n "Yuri and I will talk about it."
             n "You don't need to come back."
             n "We won't be here long anyway."
             show natsuki zorder 2 at t31
-            show yuri zorder 3 at f33
+            show yuri 3pv zorder 3 at f33
             y "Goodbye, [player]."
             y "It's unfortunate things had to be this way."
             show yuri zorder 2 at t33
             mc "But--"
-            show monika zorder 3 at f32
+            show monika 4e zorder 3 at f32
             show yuri zorder 2 at t33
             m "Come on, let's go."
             m "I have something to say."
@@ -2732,65 +2735,66 @@ label ch16_main:
             "I really didn't want to just leave them but..."
             "Monika needs to tell me something."
             scene bg school_courtyard
-            show monika 1a zorder 2 at t11
+            show monika 2b zorder 2 at t11
             with wipeleft_scene
             "We don't really go to anywhere in particular."
             "Somehow we ended up walking to the courtyard, one of the most populated areas at school."
             mc "So what did you want to tell me?"
             jump ch16_m_interrupt
         n "What was the point of it all?"
-        n "I just..."
-        n "...I want to understand, you know?"
+        n 2q "I just..."
+        n 2s "...I want to understand, you know?"
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 2ph zorder 3 at f22
         y "Now that I've had time to think about it..."
         y "I really want to know."
         y "It's all I could think about all day."
         y "I've been obsessing over it."
-        y "And I don't know why..."
+        y 2pt "And I don't know why..."
         y "It's like I have this really strong link with the answer."
         y "I can't really explain it."
-        show natsuki zorder 3 at f21
+        show natsuki 2c zorder 3 at f21
         show yuri zorder 2 at t22
         n "Maybe I can."
         n "In the journal, there's a description of someone almost exactly like you."
         n "Some of the details are faded like the name but it can't be a coincidence."
-        n "The only difference is some of the appearance."
+        n 2b "The only difference is some of the appearance."
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 3po zorder 3 at f22
         y "Someone exactly like me?"
         y "H-How so?"
-        show natsuki zorder 3 at f21
+        show natsuki 2g zorder 3 at f21
         show yuri zorder 2 at t22
         n "It's got a really fitting description."
         n "Tall, shy girl."
         n "Often misunderstood because of her bashfulness."
-        n "Enjoys supernatural and darker themed books."
+        n 2k "Enjoys supernatural and darker themed books."
         n "Adept with sharp objects."
+        show natsuki 2g
         "Natsuki eyes Yuri as she says that."
         "Yuri averts her eyes."
-        n "The list goes on really."
+        n 2c "The list goes on really."
         n "The main thing I can find that's different is that it says she has brown hair here."
         n "Instead of purple, like yours."
         n "You didn't dye your hair, did you?"
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 3pq zorder 3 at f22
         y "O-Of course not!"
         y "It's always been like this."
         y "That description isn't entirely accurate, you know!"
-        show natsuki zorder 3 at f21
+        show natsuki 2e zorder 3 at f21
         show yuri zorder 2 at t22
         n "Come on, Yuri."
         n "Don't kid yourself."
         "Natsuki looks at the journal again."
-        n "Well, what are your thoughts [player]?"
+        n 2b "Well, what are your thoughts [player]?"
         menu:
             n "Is the girl in the book her?"
             "Yes.":
-                n "[cPlayer_personal] thinks so too!"
+                n 2c "[cPlayer_personal] thinks so too!"
                 n "The resemblance is almost perfect."
             "No.":
-                n "Maybe not..."
+                n 2c "Maybe not..."
                 n "But there is a really big resemblance."
         n "You can't deny that."
         show natsuki zorder 2 at t21
@@ -2798,22 +2802,22 @@ label ch16_main:
         mc "If it did say purple hair in there, then that would be really creepy."
         mc "Yuri, maybe someone you know is like that?"
         mc "Your parents or someone you've met at school or..."
-        show yuri zorder 3 at f22
+        show yuri 3pg zorder 3 at f22
         y "No, I don't know anyone that could possibly fit that description."
         y "I admit, it's uncanny."
-        y "But it can't be me, can it?"
+        y 3pt "But it can't be me, can it?"
         y "I-I mean just how long ago was that journal entry made?"
-        show natsuki zorder 3 at f21
+        show natsuki 1k zorder 3 at f21
         show yuri zorder 2 at t22
         n "It was made..."
         "Natsuki scans through the page."
         n "...over forty years ago."
-        n "But that can't be right."
+        n 1m "But that can't be right."
         n "How else could this have a perfect description of you?"
         show natsuki zorder 2 at t21
         mc "I don't think it's actually Yuri."
         mc "Just someone that's like her."
-        show natsuki zorder 3 at f21
+        show natsuki 1c zorder 3 at f21
         n "What makes you say that?"
         show natsuki zorder 2 at t21
         mc "Think about it."
@@ -2821,73 +2825,73 @@ label ch16_main:
             mc "The people in that book could be old enough to be our--"
             show natsuki zorder 2 at t31
             show yuri zorder 2 at t32
-            show sayori zorder 3 at f33
-            s "Hey everybody!"
+            show sayori 4a zorder 3 at f33
+            s "Hi, everybody!"
             s "Are you guys having a meeting without me?"
-            s "Or is this like that time in the clubroom?"
-            show natsuki zorder 3 at f31
+            s 4d "Or is this like that time in the clubroom?"
+            show natsuki 1o zorder 3 at f31
             show sayori zorder 2 at t33
             n "Sayori!"
             n "Do you mind?"
             n "[cPlayer_personal] was in the middle of something."
             show natsuki zorder 2 at t31
-            show sayori zorder 3 at f33
+            show sayori 4m zorder 3 at f33
             s "Oh..."
-            s "Ehehe, sorry~"
+            s 5a "Ehehe, sorry~"
             s "But I really need to talk to him."
-            show yuri zorder 3 at f32
+            show yuri 3pe zorder 3 at f32
             show sayori zorder 2 at t33
             y "Can it wait?"
             y "We won't be too long."
             show yuri zorder 2 at t32
-            show sayori zorder 3 at f33
+            show sayori 5b zorder 3 at f33
             s "It really can't wait."
             s "It's super, duper important."
-            s "Is it okay if we talk, [player]?"
-            show natsuki zorder 3 at f31
+            s 5a "Is it okay if we talk, [player]?"
+            show natsuki 2e zorder 3 at f31
             show sayori zorder 2 at t33
             n "H-Hold on a second!"
             n "You can't just do that!"
             n "We were so close..."
             show natsuki zorder 2 at t31
-            show sayori zorder 3 at f33
+            show sayori 2c zorder 3 at f33
             s "So close to...what?"
             s "Why is it you're keeping this a secret from me?"
-            show yuri zorder 3 at f32
+            show yuri 1h zorder 3 at f32
             show sayori zorder 2 at t33
             y "Sayori, no one said anything about keeping secrets."
             y "It's just what you've said."
             show yuri zorder 2 at t32
-            show sayori zorder 3 at f33
+            show sayori 2h zorder 3 at f33
             s "I don't have time for this!"
             s "You can discuss without [player_reflexive]."
             "I've never seen Sayori so demanding before."
             "What is going on...?"
             "This whole thing must be putting {i}that{/i} much stress on her."
             "I think Natsuki and Yuri can feel it too."
-            s "It won't change anything."
+            s 2i "It won't change anything."
             s "Trust me."
             show sayori zorder 2 at t33
             mc "I think..."
             "I turn towards Natsuki and Yuri."
             mc "I think I'd better go with her."
             mc "Okay?"
-            show natsuki zorder 3 at f31
+            show natsuki 1q zorder 3 at f31
             n "Y-Yeah...okay."
             n "Go on."
             n "We'll just finish up here."
             show natsuki zorder 2 at t31
             "There's a hint of anger on Yuri's face for a moment..."
             "...then she just sighs."
-            show yuri zorder 3 at f32
+            show yuri 1v zorder 3 at f32
             y "If that's what you want."
             y "Who are we to stop you?"
             show yuri zorder 2 at t32
             mc "Sorry about this."
-            show sayori zorder 3 at f33
+            show sayori 1f zorder 3 at f33
             s "Come on, let's go."
             scene bg school_grounds
-            show sayori 1a zorder 2 at t11
+            show sayori 1d zorder 2 at t11
             with wipeleft
             "Sayori takes us to one of the benches in the yard."
             "She takes a seat and I sit opposite her."
@@ -2897,143 +2901,143 @@ label ch16_main:
             jump ch16_s_interrupt
         mc "The people in that book could be old enough to be our parents."
         mc "But that wouldn't really make any sense."
-        show natsuki zorder 3 at f21
+        show natsuki 2h zorder 3 at f21
         n "Our parents...?"
         n "Do we {i}know{/i} anyone like the people in the book?"
-        n "If they really were our parents, then we'd have to go back to their time."
+        n 2g "If they really were our parents, then we'd have to go back to their time."
         n "To see how they would act."
         n "But it's not like we really have the power to do that."
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 1k zorder 3 at f22
         y "That's a shame."
         y "I really would have liked to solve this mystery."
-        y "There must be something more we can do."
+        y 1v "There must be something more we can do."
         "Yuri frowns."
-        y "What about the descriptions?"
+        y 1e "What about the descriptions?"
         y "Maybe there's something in there?"
-        show natsuki zorder 3 at f21
+        show natsuki 2r zorder 3 at f21
         show yuri zorder 2 at t22
         n "The journal is old so some of it is faded out."
         n "It just so happens that the descriptions are pretty much unreadable except the one that matches yours."
         n "So..."
-        n "...I guess we're all out of options."
+        n 2s "...I guess we're all out of options."
         n "There's nothing more in this journal we can really talk about."
-        n "I thought maybe with Yuri here we could try to figure something out."
+        n 2n "I thought maybe with Yuri here we could try to figure something out."
         n "But I guess not..."
-        n "...unless you're secretly hiding something, [player]?"
+        n 2q "...unless you're secretly hiding something, [player]?"
         show natsuki zorder 2 at t21
         mc "Me?"
         mc "What would I know?"
-        show natsuki zorder 3 at f21
+        show natsuki 1b zorder 3 at f21
         n "Why don't you tell us more about Monika?"
         n "You talked to her a lot in the first week you were here."
-        n "Maybe we can learn something new."
+        n 1c "Maybe we can learn something new."
         n "That is..."
         n "...if you can."
         n "You didn't really say anything about her in the clubroom."
         show natsuki zorder 2 at t21
         mc "What would telling you about Monika tell us?"
         mc "I really doubt it's going to change anything..."
-        show yuri zorder 3 at f22
+        show yuri 2pg zorder 3 at f22
         y "We shouldn't force it out of [player_reflexive], Natsuki."
-        show natsuki zorder 3 at f21
+        show natsuki 4i zorder 3 at f21
         show yuri zorder 2 at t22
         n "Fine!"
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 2pr zorder 3 at f22
         y "Maybe you can look over the journal entries again and find something..."
         y "Or maybe there's more."
         y "I mean, there has to be {i}something{/i}."
-        show natsuki zorder 3 at f21
+        show natsuki 4r zorder 3 at f21
         show yuri zorder 2 at t22
         n "That's just it!"
         n "There {i}is{/i} more."
         n "I just can't look at it."
-        n "The journal won't let me."
+        n 4g "The journal won't let me."
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 3pf zorder 3 at f22
         y "What?"
         y "Give it to me, Natsuki."
         "Natsuki gives the journal to Yuri."
         "Yuri tries to look through the journal."
         "She flips through the first couple of pages without any trouble."
-        y "What's wrong with it?"
-        show natsuki zorder 3 at f21
+        y 3pe "What's wrong with it?"
+        show natsuki 2b zorder 3 at f21
         show yuri zorder 2 at t22
         n "Keep reading."
         n "You'll see eventually."
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 2pg zorder 3 at f22
         y "Okay..."
         "Yuri keeps turning through the pages."
         "Until she just stops."
-        y "I..."
+        y 2pq "I..."
         y "...can't turn the page."
         y "What is this?"
-        show yuri zorder 2 at t22
+        show yuri 2po zorder 2 at t22
         "Yuri tries to turn the page again but can't."
         "She looks like she's actively struggling against the book."
         "Natsuki takes the book back from her."
-        show natsuki zorder 3 at f21
+        show natsuki 2k zorder 3 at f21
         n "That's interesting."
         n "You can only seem to see up to there in the journal.."
-        n "But I can..."
+        n 2c "But I can..."
         "Natsuki opens the journal and manages to get past where Yuri got stuck."
         "But after a certain point, she starts struggling too."
         n "See what I mean?"
-        n "I'm not usually one to believe in the supernatural but..."
+        n 2g "I'm not usually one to believe in the supernatural but..."
         n "This journal is cursed or something."
         n "Which is why I want to find out the truth."
         show natsuki zorder 2 at t21
         mc "I don't get it."
         mc "It's just a book, isn't it?"
         mc "You're just messing with me."
-        show natsuki zorder 3 at f21
+        show natsuki 2e zorder 3 at f21
         n "We're not!"
         n "Here."
         "Natsuki offers me the journal."
-        n "But if I could only get this far..."
+        n 2b "But if I could only get this far..."
         n "Then I doubt you could get any further."
         n "But who knows?"
         show natsuki zorder 2 at t21
         "I take the journal from Natsuki."
         "She looks at me suspiciously as I look at the first couple of pages."
-        show natsuki zorder 3 at f21
+        show natsuki 2k zorder 3 at f21
         n "You can open it at least."
         n "I doubt you can get far."
         show natsuki zorder 2 at t21
         mc "How come?"
         "I close the journal."
         mc "Seems like just a normal journal to me."
-        show natsuki zorder 3 at f21
+        show natsuki 1q zorder 3 at f21
         n "It took me a while before I could even read to where I'm up to right now."
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 1g zorder 3 at f22
         y "It took you a while?"
         y "Are you saying that as time went on, you could read more of the book?"
-        show natsuki zorder 3 at f21
+        show natsuki 1k zorder 3 at f21
         show yuri zorder 2 at t22
         n "Not exactly."
         n "It's more like..."
         "Natsuki scratches her head."
-        n "It's hard to explain."
+        n 1m "It's hard to explain."
         n "But it's like the more I thought about the world..."
         n "The more I could read into it."
         n "I actually found the journal a while ago."
         n "And I couldn't even open it."
-        n "I didn't want to tell anyone because I'd sound crazy."
+        n 1s "I didn't want to tell anyone because I'd sound crazy."
         n "But recently, with all the weird stuff going on..."
         n "I could actually open it."
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 1h zorder 3 at f22
         y "The more you questioned the world..."
         y "Maybe that's the key."
         y "But we don't really have anything to go on."
-        show natsuki zorder 3 at f21
+        show natsuki 1q zorder 3 at f21
         show yuri zorder 2 at t22
         n "Yeah."
         n "Anyway, go on [player]."
-        n "See just how far you can get."
+        n 1k "See just how far you can get."
         show natsuki zorder 2 at t21
         mc "There's nothing special about this."
         mc "You guys are just messing with me."
@@ -3042,27 +3046,27 @@ label ch16_main:
         "I don't really look at any of the details but I manage to go through all of it."
         mc "See?"
         mc "I knew you guys were just playing around."
-        show natsuki zorder 3 at f21
+        show natsuki 3o zorder 3 at f21
         n "W-What?"
         n "How can you possibly look through the whole thing?"
         n "This doesn't make any sense..."
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 2pq zorder 3 at f22
         y "Maybe [player_reflexive]'s thought about this world a lot?"
         y "Or maybe [player_personal] is special somehow."
         show yuri zorder 2 at t22
         mc "I don't think I have."
         mc "But in the case you guys aren't just messing with me, I'll play along."
-        show natsuki zorder 3 at f21
+        show natsuki 3g zorder 3 at f21
         n "Go to the part after her death."
         n "It's where I couldn't read past."
         show natsuki zorder 2 at t21
         mc "If it's a journal, why would there be parts after her death?"
         mc "That just doesn't make any sense."
-        show yuri zorder 3 at f22
+        show yuri 2pf zorder 3 at f22
         y "That's what we're here to find out."
         y "Stop wasting time."
-        y "Just tell us what it says."
+        y 2pr "Just tell us what it says."
         show yuri zorder 2 at t22
         mc "Alright, alright..."
         "I look through the journal."
@@ -3077,16 +3081,16 @@ label ch16_main:
         mc "Is the world out to get me?"
         mc "Is this the price of love?"
         mc "Why--"
-        show natsuki zorder 3 at f21
+        show natsuki 3o zorder 3 at f21
         n "Okay!"
         n "You can stop."
         show natsuki zorder 2 at t21
         mc "What's wrong?"
-        show natsuki zorder 3 at f21
+        show natsuki 1q zorder 3 at f21
         n "It's hard to listen to."
         n "Clearly whoever wrote this is in pain."
         n "At this part anyway..."
-        show yuri zorder 3 at f22
+        show yuri 3pt zorder 3 at f22
         y "While that did sound rather...horrific."
         y "How could it have been written if she was dead?"
         y "The previous entry was detailing her means of suicide, right?"
@@ -3103,28 +3107,29 @@ label ch16_main:
         "I turn back to where I was in the journal."
         mc "I can only assume she died afterwards."
         mc "Which doesn't explain the next couple of journal entries."
-        show yuri zorder 3 at f22
+        show yuri 3ps zorder 3 at f22
         y "Precisely."
         y "I'm wonder how those next entries came about."
         y "Maybe it's a different person?"
-        show natsuki zorder 3 at f21
+        show natsuki 1s zorder 3 at f21
         show yuri zorder 2 at t22
         n "You think some person would write in someone else's journal?"
         n "After they committed suicide?"
-        n "There's no way someone would do that."
+        n 1m "There's no way someone would do that."
+        n "Only someone completely messed up in the head would do that."
         show natsuki zorder 2 at t21
         mc "I'm not sure, but the handwriting seems similar."
         mc "The letters look the same between these two pages."
         mc "So I think it is somehow the same person."
-        show yuri zorder 3 at f22
+        show yuri 3pe zorder 3 at f22
         y "Maybe they didn't go through with it?"
         y "Maybe there was second thoughts and they were still alive."
-        show natsuki zorder 3 at f21
+        show natsuki 1c zorder 3 at f21
         show yuri zorder 2 at t22
         n "Wait a second, what's the date on the entry?"
         show natsuki zorder 2 at t21
         mc "Why is that important?"
-        show natsuki zorder 3 at f21
+        show natsuki 1g zorder 3 at f21
         n "Just tell me!"
         show natsuki zorder 2 at t21
         mc "Okay..."
@@ -3134,34 +3139,34 @@ label ch16_main:
         "I look at the last entry and it's after the next entry's date."
         mc "...almost a week before the last entry."
         mc "What...?"
-        show natsuki zorder 3 at f21
+        show natsuki 2b zorder 3 at f21
         n "It's all starting to make sense now!"
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 2bf zorder 3 at f22
         y "It is?"
-        show natsuki zorder 3 at f21
+        show natsuki 2g zorder 3 at f21
         show yuri zorder 2 at t22
         n "No. I was lying."
         n "I thought if I said that I'd have an epiphany or something."
-        n "Try looking through the next few pages, [player]."
+        n 2c "Try looking through the next few pages, [player]."
         n "Maybe we'll learn something."
         show natsuki zorder 2 at t21
         "Epiphany...?"
         "Something about that word..."
         "Normally it wouldn't mean anything."
         "But when I'm near this book it..."
-        show natsuki zorder 3 at f21
+        show natsuki 2e zorder 3 at f21
         n "Hello?"
         n "World to [player]!"
         show natsuki zorder 2 at t21
         mc "Huh? What is it?"
-        show natsuki zorder 3 at f21
+        show natsuki 2f zorder 3 at f21
         n "Are you there?"
         n "Turn to the next page!"
         show natsuki zorder 2 at t21
         mc "Right, sorry."
         mc "I was just thinking about something you said."
-        show natsuki zorder 3 at f21
+        show natsuki 2g zorder 3 at f21
         n "Just hurry up."
         show natsuki zorder 2 at t21
         mc "Right, next page."
@@ -3173,7 +3178,7 @@ label ch16_main:
         "I turn to the next page and it's the same."
         "In fact, the next dozen pages are just the same thing."
         "It looks like the first four pages are just repeated over and over."
-        show yuri zorder 3 at f22
+        show yuri 1pe zorder 3 at f22
         y "What's wrong?"
         show natsuki zorder 3 at f21
         show yuri zorder 2 at t22
@@ -3182,18 +3187,18 @@ label ch16_main:
         mc "I would, but it's actually unreadable."
         mc "The next couple of pages look like a bunch of scribbles."
         mc "It doesn't {i}say{/i} anything."
-        show natsuki zorder 3 at f21
+        show natsuki 2h zorder 3 at f21
         n "What?"
         "Natsuki looks as if she wants to see the page."
         "She takes a step towards me then immediately turns back."
         n "Okay."
-        n "Okay..."
+        n 2i "Okay..."
         n "What do the scribbles look like?"
         n "Can you make out any shapes?"
         show natsuki zorder 2 at t21
         mc "I don't think I can."
         mc "Why is that important?"
-        show natsuki zorder 3 at f21
+        show natsuki 2b zorder 3 at f21
         if not ch13_cleaneye and ch13_name == "Natsuki" and ch12_outcome == 0:
             n "Do you remember a couple of days ago?"
             n "When we found that...writing in the room."
@@ -3204,21 +3209,21 @@ label ch16_main:
             mc "There are some parts here which look like the previous entries but most of it is just unreadable."
             mc "Those unreadable parts look a lot like the writing from the room."
             mc "But what does that mean?"
-            show natsuki zorder 3 at f21
+            show natsuki 2c zorder 3 at f21
             n "It means it could be linked."
             n "Or that there could be some kind of pattern."
         else:
             n "Maybe we can find some kind of pattern."
         n "Or some message encoded in the journal."
         n "Anything, really."
-        n "But it's really difficult, since you're the one that has to do it."
+        n 2g "But it's really difficult, since you're the one that has to do it."
         n "Yuri and I can't look at it."
         n "So it's all up to you."
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 2ph zorder 3 at f22
         y "Take a close look at the pages, [player]."
         y "You have to see something."
-        y "Some kind of symbol."
+        y 2ps "Some kind of symbol."
         y "A pattern or a loose resemblance to something we know."
         y "That's the only thing that could help solve this mystery."
         show yuri zorder 2 at t22
@@ -3227,11 +3232,11 @@ label ch16_main:
         label ch16_ny_journal:
         call showjournal(journal_corrupt, ["natsuki 1a",t21,"yuri 2a",t22])
         mc "Okay, I've finished looking."
-        show natsuki zorder 3 at f21
+        show natsuki 1h zorder 3 at f21
         n "That didn't take long."
         n "Maybe you missed something..."
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 1e zorder 3 at f22
         y "Perhaps it might be worth taking a another look."
         y "Just to be sure."
         show yuri zorder 2 at t22
@@ -3243,7 +3248,7 @@ label ch16_main:
             "No.":
                 pass
         "I close the journal."
-        show natsuki zorder 3 at f21
+        show natsuki 1c zorder 3 at f21
         n "Well?"
         n "You saw something, right?"
         show natsuki zorder 2 at t21
@@ -3260,7 +3265,7 @@ label ch16_main:
                 mc "It was pretty distinct."
                 mc "I feel like I've definitely seen it before."
                 mc "But I'm not sure where from."
-                show yuri zorder 3 at f22
+                show yuri 2pe zorder 3 at f22
                 y "An eye?"
                 y "Was it a specific color?"
                 show yuri zorder 2 at t22
@@ -3268,38 +3273,38 @@ label ch16_main:
                 mc "It was the only thing on the pages that was colored."
                 mc "It had a red iris."
                 mc "That's really the only thing that stuck out."
-                show natsuki zorder 3 at f21
+                show natsuki 1b zorder 3 at f21
                 show yuri zorder 2 at t22
                 n "A red iris?"
                 n "Hold on a second, didn't you have a book like that, Yuri?"
-                n "I remember you bringing it when [player] joined."
+                n 1c "I remember you bringing it when [player] joined."
                 n "I don't know if you ever got to show it to him but..."
                 show natsuki zorder 2 at t21
-                show yuri zorder 3 at f22
+                show yuri 2po zorder 3 at f22
                 y "W-Wait, you knew about that?"
                 y "I didn't realize you paid such attention to me."
-                show natsuki zorder 3 at f21
+                show natsuki 1b zorder 3 at f21
                 show yuri zorder 2 at t22
                 n "I pay attention to a lot of things."
-                n "But that's besides the point."
+                n 1e "But that's besides the point."
                 n "Where is that book now, Yuri?"
                 show natsuki zorder 2 at t21
-                show yuri zorder 3 at f22
+                show yuri 1g zorder 3 at f22
                 y "I don't have it anymore."
                 show natsuki zorder 3 at f21
                 show yuri zorder 2 at t22
                 n "What?"
-                n "Where is it now?"
+                n 1b "Where is it now?"
                 show natsuki zorder 2 at t21
-                show yuri zorder 3 at f22
+                show yuri 2pf zorder 3 at f22
                 y "It's gone."
                 y "Someone stole it from me."
-                show natsuki zorder 3 at f21
+                show natsuki 2o zorder 3 at f21
                 show yuri zorder 2 at t22
                 n "Stole it from you?!"
                 n "Why didn't you tell anyone?"
                 show natsuki zorder 2 at t21
-                show yuri zorder 3 at f22
+                show yuri 2pq zorder 3 at f22
                 y "It wasn't really a big deal."
                 y "I'm standing here after all."
                 y "Besides, I didn't really wanna bother you all with such a trivial event."
@@ -3307,20 +3312,20 @@ label ch16_main:
                 mc "Getting robbed isn't trivial, Yuri..."
                 mc "Were you hurt?"
                 mc "Did they take anything else from you?"
-                show yuri zorder 3 at f22
-                y "It wasn't really a big deal."
+                show yuri 2pv zorder 3 at f22
+                y "The only thing that happened was that book being stolen."
                 y "And no they didn't take anything else from me."
-                y "It happened while I was sleeping."
+                y 2pw "It happened while I was sleeping."
                 y "I left my book on my table and when I woke up, it was gone."
-                show natsuki zorder 3 at f21
+                show natsuki 2m zorder 3 at f21
                 show yuri zorder 2 at t22
                 n "Maybe you just forgot where you put it?"
                 n "It could still--"
-                show natsuki zorder 2 at t21
+                show natsuki 3pv zorder 2 at t21
                 show yuri zorder 3 at f22
                 y "I don't have it, Natsuki."
                 y "I would know."
-                show natsuki zorder 3 at f21
+                show natsuki 1g zorder 3 at f21
                 show yuri zorder 2 at t22
                 n "Okay..."
                 n "Well, what do we do now...?"
@@ -3341,90 +3346,90 @@ label ch16_main:
                     "There's just a voice in the back of my head saying that."
                 else:
                     "What book are they talking about...?"
-                show yuri zorder 3 at f22
+                show yuri 3pf zorder 3 at f22
                 y "Maybe we can simply locate another copy."
                 y "There may be one in the library."
                 y "Or at some bookstore."
-                show natsuki zorder 3 at f21
+                show natsuki 2c zorder 3 at f21
                 show yuri zorder 2 at t22
                 n "I doubt it's in the library."
-                n "Someone would have picked it up and reported it by now."
                 n "A bookstore could work but we don't really have the time."
+                n "I doubt either of those would have it though since they went through the trouble of stealing from Yuri directly."
                 show natsuki zorder 2 at t21
                 mc "So what do you suggest?"
-                show natsuki zorder 3 at f21
+                show natsuki 1b zorder 3 at f21
                 n "With what we know, maybe it's best we just keep going on with our days."
                 n "We don't know what could happen next."
                 n "And we don't know just how much looking into this could affect us."
                 show natsuki zorder 2 at t21
-                show yuri zorder 3 at f22
+                show yuri 3pg zorder 3 at f22
                 y "It's true that we don't have much to work off."
                 y "Maybe it would be a good idea to just see how today goes."
                 y "Then later we can act when the dots connect."
-                show natsuki zorder 3 at f21
+                show natsuki 1a zorder 3 at f21
                 show yuri zorder 2 at t22
                 n "In the meantime, you can try to read as much of the journal as you can."
                 n "You're the only one of us who can."
-                n "Then you can tell us more when it's time to rehearse."
+                n 1d "Then you can tell us more when it's time to rehearse."
                 n "Maybe by then we'll have something we can act on."
                 show natsuki zorder 2 at t21
-                show yuri zorder 3 at f22
+                show yuri 2pe zorder 3 at f22
                 y "Why can't we just look through the journal now?"
                 y "Maybe there's more beyond those repeated scribbles."
-                show natsuki zorder 3 at f21
+                show natsuki 1j zorder 3 at f21
                 show yuri zorder 2 at t22
                 n "Maybe there is."
                 n "But now I have an idea and I have to act on it."
                 show natsuki zorder 2 at t21
                 mc "What is it?"
-                show natsuki zorder 3 at f21
+                show natsuki 1g zorder 3 at f21
                 n "I can't tell you."
                 n "You might not be able to read the journal beyond a certain point if I tell you."
-                n "It's better if we keep the factors the same."
+                n 1c "It's better if we keep the factors the same."
                 n "Besides, we shouldn't stick around here too long."
-                n "People might get suspicious."
+                n 1q "People might get suspicious."
                 show natsuki zorder 2 at t21
-                show yuri zorder 3 at f22
+                show yuri 2pg zorder 3 at f22
                 y "Isn't that a little paranoid?"
-                show natsuki zorder 3 at f21
+                show natsuki 1q zorder 3 at f21
                 show yuri zorder 2 at t22
                 n "With cursed books and this weird feeling I'm getting today..."
                 n "I think I have the right to be paranoid."
                 show natsuki zorder 2 at t21
-                show yuri zorder 3 at f22
+                show yuri 2pq zorder 3 at f22
                 y "I suppose that's true."
                 y "Good luck, Natsuki."
-                show natsuki zorder 3 at f21
+                show natsuki 2a zorder 3 at f21
                 n "Good luck to the two of you as well."
                 n "Now, if you'll excuse me."
                 show natsuki at thide
                 hide natsuki
-                show yuri zorder 2 at t11
+                show yuri 2pg zorder 2 at t11
                 y "I wonder what she's doing."
                 mc "I don't know if what she's doing can help at this point."
                 mc "But it must be important if she cut this little meeting we had short."
-                y "I'm sure she has her reasons."
+                y 2pf "I'm sure she has her reasons."
                 y "Can you look beyond those scribbles?"
                 mc "In the journal?"
                 mc "I can give it a shot."
-                y "Just relay the information to us when you can."
+                y 2pa "Just relay the information to us when you can."
                 y "I'm going to try to look for a certain book."
                 mc "The one you were talking about before?"
-                y "Yes, that's right."
+                y 2pb "Yes, that's right."
                 y "There's a chance I may have left in my locker or somewhere in school."
                 y "If I did, then perhaps it will help solve this mystery we have."
-                y "A-Anyway, I'll leave you to it."
+                y 2pi "A-Anyway, I'll leave you to it."
                 y "Hopefully you can find something out as well."
                 mc "I never thought I'd be spending my lunch time reading a book."
                 mc "I guess the club has really gotten to me."
-                y "Ahaha, it looks like it has."
-                y "I'll see you later, [player]."
+                y 3pc "Ahaha, it looks like it has."
+                y 3pb "I'll see you later, [player]."
                 if yuri_date:
-                    y "It's a shame we didn't get to spend more of this time together."
+                    y 3ps "It's a shame we didn't get to spend more of this time together."
                     y "I don't know if I should be saying this..."
                     y "But the three of us investigating whatever this is a lot more fun."
                 else:
-                    y "This whole investigating thing is a lot more fun than spending lunch alone."
+                    y 3ps "This whole investigating thing is a lot more fun than spending lunch alone."
                 mc "I'm sure it is."
                 mc "I'll see you at rehearsals."
                 show yuri at thide
@@ -3483,16 +3488,16 @@ label ch16_main:
                 $ ch16_ny_clue = "person"
             "A ribbon.":
                 $ ch16_ny_clue = "ribbon"
-        show natsuki zorder 3 at f21
+        show natsuki 2c zorder 3 at f21
         n "You think you saw a [ch16_ny_clue]?"
         n "..."
-        n "That's way too general."
+        n 2g "That's way too general."
         n "I can't think of anything..."
         n "Are you sure you saw that in all of the pages?"
         show natsuki zorder 2 at t21
         mc "I'm sure..."
         "At least, I think I am."
-        show natsuki zorder 3 at f21
+        show natsuki 2q zorder 3 at f21
         n "Well, okay."
         n "If that's really what you saw, then I'm stumped."
         show natsuki zorder 2 at t21
@@ -3503,7 +3508,7 @@ label ch16_main:
         "I went through the whole journal with no problem last time."
         mc "Huh..."
         mc "That's weird."
-        show yuri zorder 3 at f22
+        show yuri 3pf zorder 3 at f22
         y "What's wrong, [player]?"
         show yuri zorder 2 at t22
         mc "I can't go past this page in the book."
@@ -3511,22 +3516,22 @@ label ch16_main:
         "But I have a feeling the next page is completely different."
         "I just know it."
         "Maybe there's something there...if only I could turn the page."
-        show natsuki zorder 3 at f21
+        show natsuki 2k zorder 3 at f21
         n "You actually lost the ability to read some of it?"
-        n "That's not good."
+        n 2q "That's not good."
         n "Now we're right back where we started."
         n "Except now we have something [player] saw in it that could mean anything."
         "Natsuki sighs."
-        n "I think this is kinda hopeless."
+        n 2s "I'm starting to think this is hopeless."
         n "We can't even crack this code."
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 3ps zorder 3 at f22
         y "We're so close."
         y "I know it."
         y "But now we have nothing to go on..."
-        y "It's a real shame you lost that ability, [player]."
+        y 3pt "It's a real shame you lost that ability, [player]."
         y "I wonder what could have happened in a few minutes to suddenly lose it."
-        show natsuki zorder 3 at f21
+        show natsuki 2g zorder 3 at f21
         show yuri zorder 2 at t22
         n "Now do you believe us?"
         n "This journal is cursed."
@@ -3536,18 +3541,18 @@ label ch16_main:
         mc "It was like I couldn't control my arms."
         mc "Like they just refused to move."
         mc "It felt so surreal."
-        show yuri zorder 3 at f22
+        show yuri 2ph zorder 3 at f22
         y "That is the same sensation I felt."
         y "Like there was some invisible force preventing you from looking at the next page, right?"
         show yuri zorder 2 at t22
         mc "That's exactly it!"
-        show natsuki zorder 3 at f21
+        show natsuki 2e zorder 3 at f21
         n "That's great you figured that out and all."
         n "But now we have nothing."
         n "Our only lead was the journal and all we got from it was a [ch16_ny_clue]."
-        n "I'm still wondering what the hell it could possibly mean."
+        n 2f "I'm still wondering what the hell it could possibly mean."
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 2pg zorder 3 at f22
         y "I'm at a loss as well."
         y "I'm not saying you looked at it wrong, [player]."
         y "But maybe there was something else."
@@ -3557,41 +3562,42 @@ label ch16_main:
         "I offer the journal with the page open to Yuri."
         "Instead of taking it from me, she flings the book to the ground."
         mc "Yuri?"
-        show yuri zorder 3 at f22
+        show yuri 2pn zorder 3 at f22
         y "I-I'm sorry."
-        y "I don't know what came over me."
-        show natsuki zorder 3 at f21
+        y 2po "I don't know what came over me."
+        show natsuki 5x zorder 3 at f21
         show yuri zorder 2 at t22
         n "Don't bother, it's the journal's curse or whatever."
         n "It won't let you cheat it like that either."
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 2pt zorder 3 at f22
         y "How do you know that?"
         y "Have you tried it yourself?"
-        show natsuki zorder 3 at f21
+        show natsuki 5r zorder 3 at f21
         show yuri zorder 2 at t22
         n "Actually, yeah."
         n "Yesterday, I tried using something to hold a page down."
         n "It was a page I couldn't read."
-        n "As soon as I tried to look at it, I immediately closed it."
+        n 5s "As soon as I tried to look at it, I immediately closed it."
         n "It's like I wasn't in control of myself."
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 2pv zorder 3 at f22
         y "This book is a lot more complicated than I thought."
         y "I wonder what other tricks it has up it's sleeves."
-        show natsuki zorder 3 at f21
+        show natsuki 5q zorder 3 at f21
         show yuri zorder 2 at t22
         n "Well, it doesn't really matter."
         n "We've pretty much done all we could with it."
         n "[player] can't read past a certain point."
-        n "And the parts [player_personal] can read don't really help."
+        n 4r "And the parts [player_personal] can read don't really help."
+        show natsuki 1r
         "Natsuki sits down on the floor."
-        n "I give up."
-        show natsuki zorder 2 at t21
+        n 1u "I give up."
+        show natsuki 1t zorder 2 at t21
         show yuri zorder 3 at f22
         y "Natsuki, you can't do that."
         y "You--"
-        show natsuki zorder 3 at f21
+        show natsuki 1s zorder 3 at f21
         show yuri zorder 2 at t22
         n "Why not?"
         n "We don't exactly have anything to work with."
@@ -3599,23 +3605,23 @@ label ch16_main:
         show natsuki zorder 2 at t21
         mc "I'm sorry."
         mc "I'm doing my best here."
-        show yuri zorder 3 at f22
+        show yuri 2pt zorder 3 at f22
         y "Natsuki, you--"
-        show natsuki zorder 3 at f21
+        show natsuki 1i zorder 3 at f21
         show yuri zorder 2 at t22
         n "Yeah, well..."
         n "It's not good enough."
-        n "We're stuck again and now I don't know what to do."
+        n 1h "We're stuck again and now I don't know what to do."
         n "It's as if all this effort has been for nothing."
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 2pr zorder 3 at f22
         y "Natsuki--"
-        show natsuki zorder 3 at f21
+        show natsuki 1s zorder 3 at f21
         show yuri zorder 2 at t22
         n "Let's just accept what's coming."
         "Natsuki gets up and brushes off the dirt from her dress."
         n "It's not like we can do anything about it."
-        n "Time to--"
+        n 2u "Time to--"
         play sound "sfx/slap.ogg"
         show white zorder 4:
             alpha 0.6
@@ -3626,92 +3632,92 @@ label ch16_main:
         "Yuri slaps Natsuki in the face."
         "It's just a moment of silence as Natsuki stands there, not believing what happened."
         "I'm still not sure if that actually happened myself."
-        n "Y-Yuri--"
-        show yuri zorder 3 at f21
+        n 22c "Y-Yuri--"
+        show yuri 3pr zorder 3 at f21
         show natsuki zorder 2 at t22
         y "You started this little investigation."
         y "You want to solve this mystery as much as the rest of us."
         y "You're the one that knows the most about this."
         "Yuri stares into Natsuki's eyes."
-        y "So you can't give up."
+        y 3pt "So you can't give up."
         y "You have to think of something."
         y "All of this, it hasn't been for nothing."
         y "There's just a clue we're missing."
         y "I know it."
         y "Please, Natsuki..."
-        y "As your friend, I'm telling you to keep going."
+        y 3ps "As your friend, I'm telling you to keep going."
         y "To see this through to the end."
         y "Whether or not that end leads to anything..."
-        y "It's up to us..."
+        y 3pt "It's up to us..."
         "Yuri steps back."
-        y "...isn't it?"
+        y 3pu "...isn't it?"
         show yuri zorder 2 at t21
         "A few seconds pass."
         "I'm not sure if Yuri's whole speech just then did anything."
         "Natsuki still hasn't moved her head."
         "Eventually she opens her mouth to speak."
-        show natsuki zorder 3 at f22
+        show natsuki 12a zorder 3 at f22
         n "You're right."
         "She shakes her head."
-        n "Thanks for slapping some sense into me, Yuri."
+        n 1q "Thanks for slapping some sense into me, Yuri."
         n "Literally."
         n "It is up to us."
-        n "We're the only ones that know about this."
+        n 1r "We're the only ones that know about this."
         n "If our world is in danger, we could be the only ones who could stop it."
-        n "Yuri, I don't want to give up."
+        n 2m "Yuri, I don't want to give up."
         n "And I think I know what we can do."
         show natsuki zorder 2 at t21
-        show yuri zorder 3 at f21
+        show yuri 2pf zorder 3 at f21
         y "What is it?"
         show yuri zorder 2 at t22
         "Natsuki looks at me."
         "She looks at the journal on the floor then back at me again."
-        show natsuki zorder 3 at f21
+        show natsuki 2q zorder 3 at f21
         n "It doesn't involve [player]."
         n "I'm sorry."
         "She picks up the journal and offers it to me."
-        n "Take this."
+        n 2m "Take this."
         show natsuki zorder 2 at t21
         mc "And do what?"
-        show natsuki zorder 3 at f21
+        show natsuki 2h zorder 3 at f21
         n "Try to make sense of it."
         n "You can read further than I can."
         n "Maybe that means something."
         show natsuki zorder 2 at t21
         mc "Well, what are you gonna do then?"
         mc "Why can't I be part of it?"
-        show natsuki zorder 3 at f21
+        show natsuki 2b zorder 3 at f21
         n "We just saw that in a matter of minutes, you lost the ability to fully read the journal."
         n "This plan I have could make it worse."
-        n "So I don't want to change things while they're still working."
+        n 2k "So I don't want to change things while they're still working."
         show natsuki zorder 2 at t21
         mc "But--"
-        show yuri zorder 3 at f22
+        show yuri 2pe zorder 3 at f22
         y "She's right, [player]."
         y "The more factors we keep the same, the better chance we have of deciphering that journal."
         y "Maybe you'll regain the ability to read more of it."
         show yuri zorder 2 at t22
         mc "And what if I don't?"
-        show natsuki zorder 3 at f21
+        show natsuki 1g zorder 3 at f21
         n "Then that's the end of the journal's usefulness."
         n "Look, [player]."
         n "I don't want to exclude you from this."
-        n "But my plan an important part of my plan is that you aren't involved."
+        n 1q "But an important part of my new plan is that you aren't involved."
         show natsuki zorder 2 at t21
         mc "Alright..."
         "I take the journal from Natsuki."
         mc "I get it."
         mc "I'll see what I can do."
-        show yuri zorder 3 at f22
+        show yuri 2pa zorder 3 at f22
         y "Thank you for understanding."
         y "I hope you can find something new in that journal."
         y "Good luck."
-        show natsuki zorder 3 at f21
+        show natsuki 2c zorder 3 at f21
         show yuri zorder 2 at t22
-        n "I'm sure he'll find something."
+        n "I'm sure [player_personal]'ll find something."
         n "Yuri, follow me."
         n "We have things to talk about."
-        n "We'll see you later, [player]."
+        n 2a "We'll see you later, [player]."
         show natsuki zorder 2 at t21
         mc "See you at rehearsals."
         mc "Hopefully you can do whatever it is you're planning."
@@ -3745,32 +3751,32 @@ label ch16_main:
         "I can actually hear myself breathing."
         show yuri 1a zorder 2 at t11
         y "Sorry to keep you waiting."
-        y "I was a little preoccupied in class."
+        y 1b "I was a little preoccupied in class."
         mc "Not a problem at all."
         mc "So what did you have in mind?"
         label ch16_y_cancel:
-        y "Well...this was a rather spontaneous decision."
+        y 3pg "Well...this was a rather spontaneous decision."
         y "So I hope you'll forgive me."
         y "I know we could be doing better things."
         mc "As long as it's with you, I don't mind doing anything."
         mc "Within reason."
-        y "Within reason..."
+        y 3ph "Within reason..."
         y "Well...that removes half of the things I was going to say."
         mc "W-What?"
         mc "What kind of things were you even thinking of?"
-        y "T-That was a joke."
+        y 2pq "T-That was a joke."
         y "I apologize if it wasn't funny."
         mc "Oh, I didn't even realize."
         mc "It was just a surprise coming from you, that's all."
-        y "Anyway, I actually wanted to go back to my locker."
+        y 2pa "Anyway, I actually wanted to go back to my locker."
         mc "What are we doing there?"
         y "It's a surprise."
-        y "Come on, I think you'll like it."
+        y 2pb "Come on, I think you'll like it."
         y "I've been keeping it safe all this time."
         mc "Alright..."
         "Why do I have a bad feeling about this?"
         scene bg school_lockers
-        show yuri 1a zorder 2 at t11
+        show yuri 1c zorder 2 at t11
         with wipeleft_scene
         "Yuri and I make our way to the area where her locker is."
         "There are plenty of areas in the school where lockers are stored."
@@ -3784,81 +3790,81 @@ label ch16_main:
         ay "Hold it, Yuri!"
         ay "It's not safe here."
         show ayame zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 3pf zorder 3 at f22
         y "A-Ayame?"
         "Yuri stops where she is and turns around to meet Ayame's gaze."
         y "What are you doing here?"
-        show ayame zorder 3 at f21
+        show ayame 2h zorder 3 at f21
         show yuri zorder 2 at t22
         ay "I could be asking you the same question."
         ay "Didn't you get the memo?"
         show ayame zorder 2 at t21
         mc "What was the memo?"
-        show ayame zorder 3 at f21
+        show ayame 2i zorder 3 at f21
         ay "You seriously don't know?"
         ay "Somebody here was just murdered!"
         show ayame zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 3pn zorder 3 at f22
         y "W-What?!"
         show yuri zorder 2 at t22
         mc "You're kidding, right?"
-        show ayame zorder 3 at f21
+        show ayame 2e zorder 3 at f21
         ay "Yeah, I am."
         ay "Nobody was murdered."
-        ay "...Yet."
-        show ayame zorder 2 at t21
-        show yuri zorder 3 at f22
+        ay 2f "...Yet."
+        show ayame 2h zorder 2 at t21
+        show yuri 2pq zorder 3 at f22
         y "Ayame you nearly scared me half to death."
         y "I thought I was in real danger for a moment."
-        show ayame zorder 3 at f21
+        show ayame 2j zorder 3 at f21
         show yuri zorder 2 at t22
         ay "Hehe, sorry to frighten you, Yuri."
         ay "But seriously, you two aren't allowed here."
         show ayame zorder 2 at t21
         "Yuri approaches Ayame."
         "As Yuri gets closer, a curious look appears on her face."
-        show yuri zorder 3 at f22
+        show yuri 2pe zorder 3 at f22
         y "Y-You're a school leader?"
         show yuri zorder 2 at t22
         "Ayame looks down and sees her purple ribbon."
-        show ayame zorder 3 at f21
+        show ayame 1b zorder 3 at f21
         ay "Ah, I see you've noticed."
         ay "It doesn't matter."
-        ay "You would have figured it out one way or another."
+        ay "You would have found out about it one way or another."
         show ayame zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 2pf zorder 3 at f22
         y "I'm just surprised."
         y "It's just..."
-        y "Well..."
-        show ayame zorder 3 at f21
+        y 2ph "Well..."
+        show ayame 1g zorder 3 at f21
         show yuri zorder 2 at t22
         ay "What is it, Yuri?"
         show ayame zorder 2 at t21
         mc "Take your time if you need to."
-        show yuri zorder 3 at f22
+        show yuri 2pg zorder 3 at f22
         y "I guess just seeing you with that ribbon..."
-        y "It awakened something in my subconscious."
+        y "It just suddenly awakened something in my subconscious."
         y "One of my subconscious desires, I suppose."
-        show ayame zorder 3 at f21
+        show ayame 1i zorder 3 at f21
         show yuri zorder 2 at t22
         ay "And what would that be...?"
         show ayame zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 3pk zorder 3 at f22
         y "To be a school leader."
         y "So that I can be recognized."
         y "So that I can be a role model for others."
         y "And..."
-        y "...so that I'm not judged for who I am."
-        show ayame zorder 3 at f21
+        y 3po "...so that I'm not judged for who I am."
+        show ayame 2a zorder 3 at f21
         show yuri zorder 2 at t22
         ay "I see..."
         "Ayame scans the locker area."
         ay "Well, it seems safe for now."
         ay "Let's move somewhere more safe."
-        ay "I'll explain why on the way."
+        ay 2g "I'll explain why on the way."
         scene bg school_secluded
-        show ayame 1a zorder 2 at t21
-        show yuri 1a zorder 2 at t22
+        show ayame 1g zorder 2 at t21
+        show yuri 1g zorder 2 at t22
         with wipeleft_scene
         "The three of us walk back to Yuri's spot."
         "The strange thing is, we were following Ayame."
@@ -3869,82 +3875,83 @@ label ch16_main:
         "I guess when you're that important at school, you can just go straight to the highest office."
         "The principal told her to make sure no student enters until the grounds staff can confirm what it is."
         "She only told the principal before the start of lunch so the ground staff haven't actually done anything yet."
-        show ayame zorder 3 at f21
+        show ayame 2g zorder 3 at f21
         ay "So that's why you can't go there."
-        ay "Even if it's nothing, we'd rather be safe than sorry."
+        ay "There could be some kind of animal in there and so we need grounds staff to remove it."
+        ay "But even if it's nothing, we'd rather be safe than sorry."
         show ayame zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 2ph zorder 3 at f22
         y "I didn't hear any noises coming from there."
         y "And I visited my locker a lot today."
-        show ayame zorder 3 at f21
+        show ayame 2h zorder 3 at f21
         show yuri zorder 2 at t22
         ay "I guess you were one of the lucky ones."
         show ayame zorder 2 at t21
         mc "I'm kinda curious about this noise."
         mc "What did it even sound like?"
-        show ayame zorder 3 at f21
+        show ayame 2a zorder 3 at f21
         ay "I wasn't there, so I don't know for sure."
-        ay "But the students all said to me it was the most horrifying sound they've ever heard."
+        ay 2i "But the students all said to me it was the most horrifying sound they've ever heard."
         ay "It was described as some form of screeching."
         ay "And it was combined with that sound that happens when you rub two pieces of foam together."
-        ay "I don't know if that's accurate, but that's just what I was told."
+        ay 2g "I don't know if that's accurate, but that's just what I was told."
         show ayame zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 4pc zorder 3 at f22
         y "Oh..."
-        show ayame zorder 3 at f21
+        show ayame 1g zorder 3 at f21
         show yuri zorder 2 at t22
         ay "What's wrong?"
         ay "Do you know something about the noise, Yuri?"
         show ayame zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri  zorder 3 at f22
         y "I...think I do."
         y "You see, it was meant to be a surprise for [player]."
-        show ayame zorder 3 at f21
+        show ayame 1i zorder 3 at f21
         show yuri zorder 2 at t22
         ay "What?"
         show ayame zorder 2 at t21
         mc "Your surprise for me involved screeching?"
         mc "I'm not sure what to say."
-        show yuri zorder 3 at f22
+        show yuri 4pd zorder 3 at f22
         y "N-No, it's not like that!"
         y "I ordered something online that I picked up at the mall yesterday."
         y "It had nothing to do with our preparations."
-        y "It was just...a gift for you."
+        y 4pc "It was just...a gift for you."
         y "I wasn't sure when to give it to you."
         y "But since we had a moment alone, I thought it would be the perfect time."
         show yuri zorder 2 at t22
         mc "What kind of gift was it?"
-        show yuri zorder 3 at f22
+        show yuri 4pb zorder 3 at f22
         y "It was meant to be some kind of doll."
         y "And it resembles you...a lot."
         show yuri zorder 2 at t22
         mc "You paid someone to make a doll?"
         mc "Of me?"
-        show ayame zorder 3 at f21
+        show ayame 1c zorder 3 at f21
         show yuri zorder 2 at t22
         ay "I'm kind of curious now."
         ay "Did you take pictures of [player_reflexive] as a reference?"
-        ay "I-I mean, it's none of my business what you do."
+        ay 1a "I-I mean, it's none of my business what you do."
         ay "But if that's the source of the noise..."
         show ayame zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 4pa zorder 3 at f22
         y "I..."
         y "I did."
         y "The doll is special in that it can move on it's own and emit sound."
-        y "I put it into a foam box to keep it safe and I suppose it somehow activated on it's own and started moving."
+        y 4pb "I put it into a foam box to keep it safe and I suppose it somehow activated on it's own and started moving."
         y "That's probably where the foam rubbing together sound came from."
         show yuri zorder 2 at t22
         mc "Well, what about the screeching?"
         mc "Did you record me screeching at some point...?"
-        show yuri zorder 3 at f22
+        show yuri 3pp zorder 3 at f22
         y "N-No...!"
         y "Nothing like that."
         y "I must have placed batteries that were low on charge into it."
-        y "The sound must have become distorted and interpreted as some sort of screeching..."
+        y 3po "The sound must have become distorted and interpreted as some sort of screeching..."
         y "I'm sorry, [player]."
         y "I should have told you about the whole doll thing..."
         show yuri zorder 2 at t22
-        "This whole doll thing is creepy."
+        "This whole doll thing is kinda creepy."
         "But it's exactly a thing Yuri would do."
         "That's just how she is."
         menu:
@@ -3953,7 +3960,7 @@ label ch16_main:
                 $ ch16_ay_level -= 1
                 mc "You know what?"
                 mc "That's just like you, Yuri."
-                show yuri zorder 3 at f22
+                show yuri 3pt zorder 3 at f22
                 y "Huh?"
                 show yuri zorder 2 at t22
                 mc "Doing things like this."
@@ -3962,7 +3969,7 @@ label ch16_main:
                 mc "So it's wrong to see that as a negative."
                 mc "It's just something only you would do."
                 mc "And I appreciate you a lot for it."
-                show ayame zorder 3 at f21
+                show ayame 2h zorder 3 at f21
                 ay "I'm glad you can accept her for who she is, [player]."
                 ay "Seeing that's her personality and embracing it despite it's flaws can be difficult."
                 ay "When it comes to my turn to join the club, I hope you'll do the same."
@@ -3971,7 +3978,7 @@ label ch16_main:
                 mc "So yeah, Yuri..."
                 mc "Don't worry about it."
                 mc "I really do love the surprise you thought about giving me."
-                show yuri zorder 3 at f22
+                show yuri 2pv zorder 3 at f22
                 y "W-Well, thanks I suppose."
                 y "But now the surprise is ruined."
                 y "And people are worried about approaching their locker now..."
@@ -3979,8 +3986,8 @@ label ch16_main:
                 $ ch16_ay_level += 2
                 mc "Yuri, there are such things as boundaries."
                 mc "I know we're dating but isn't this a little too far?"
-                show yuri zorder 3 at f22
-                y "..."
+                show yuri 2pw zorder 3 at f22
+                y "I know..."
                 show yuri zorder 2 at t22
                 mc "Taking pictures of me..."
                 mc "Recording me..."
@@ -3988,21 +3995,21 @@ label ch16_main:
                 mc "I don't hate you or anything."
                 mc "So please don't take this the wrong way."
                 mc "But you have to realize there are some things you shouldn't do."
-                show ayame zorder 3 at f21
+                show ayame 1f zorder 3 at f21
                 ay "So that's how it is, huh?"
                 ay "She shows you {i}her{/i} way of showing affection and you just scold her for it?"
                 ay "I thought your relationship was built on more solid foundations than that."
-                ay "That you had accepted her, knowing something like this could happen."
+                ay 1g "That you had accepted her, knowing something like this could happen."
                 ay "I...I'm sorry."
                 ay "I know it's none of my business, it's just..."
-                ay "Well, is this the kind of reception I'm going to get when I join?"
+                ay 1a "Well, is this the kind of reception I'm going to get when I join?"
                 ay "Am I going to get scolded for revealing my true self too...?"
                 show ayame zorder 2 at t21
                 mc "T-That's not what I intended."
                 mc "Of course I still accept Yuri."
                 mc "I accept her fully."
                 mc "I just meant that--"
-                show yuri zorder 3 at f22
+                show yuri 2pv zorder 3 at f22
                 y "It's okay, [player]."
                 y "I understand."
                 y "It's my fault anyway..."
@@ -4014,21 +4021,21 @@ label ch16_main:
                 "And I don't want that at all."
                 "This whole thing is new to me."
                 "And I'm sure most people don't buy their [player_gender]friend a doll that resembles them after only a few weeks."
-                show ayame zorder 3 at f21
+                show ayame 1f zorder 3 at f21
                 ay "You aren't gonna say anything?"
                 ay "Really?"
-                ay "Look at her, [player]."
+                ay 1a "Look at her, [player]."
                 show ayame zorder 2 at t21
-                show yuri zorder 3 at f22
+                show yuri 3po zorder 3 at f22
                 y "A-Ayame, you don't need to--"
-                show ayame zorder 3 at f21
+                show ayame 2a zorder 3 at f21
                 show yuri zorder 2 at t22
                 ay "She did something so special for you."
                 ay "She gave you a gift, as a way of displaying her affection for you."
-                ay "You aren't even going to respond to that?"
+                ay 2f "You aren't even going to respond to that?"
                 ay "Do you even accept Yuri for who she is...?"
                 show ayame zorder 2 at t21
-                show yuri zorder 3 at f22
+                show yuri 3pn zorder 3 at f22
                 y "A-Ayame, please..."
                 y "You don't need to say those kind of things..."
                 show yuri zorder 2 at t22
@@ -4036,7 +4043,7 @@ label ch16_main:
                 mc "I accept her with all I have."
                 mc "I'm just...speechless at all of this."
                 mc "I don't know if what I'll say is going to make things better or worse."
-                show ayame zorder 3 at f21
+                show ayame 2g zorder 3 at f21
                 ay "You should still say something."
                 ay "Staying silent isn't going to solve problems."
                 ay "Sometimes it can even make them worse."
@@ -4044,36 +4051,37 @@ label ch16_main:
                 show ayame zorder 2 at t21
                 mc "I'm sorry, Yuri."
                 mc "I really should have said something."
-                show yuri zorder 3 at f22
+                show yuri 2pv zorder 3 at f22
                 y "I-It's fine..."
                 y "What isn't is that I've blocked access to the lockers."
         y "I've accidentally scared everyone away..."
         "Yuri sighs."
         y "I didn't mean to worry anyone..."
-        y "Uuu...this is all my fault."
+        y 3po "Uuu...this is all my fault."
+        show yuri 3pn
         "Yuri turns towards Ayame."
         y "After you tell them it was me, I'm never going to be a school leader."
-        y "I just woke up a subconscious desire and already it's falling to pieces..."
+        y 3pv "I just woke up a subconscious desire and already it's falling to pieces..."
         show yuri zorder 2 at s22
         "Yuri gets on the ground and covers her face."
         "Ayame looks at me and I just shrug at her."
         "She sighs and gets down to the ground next to Yuri."
         show ayame zorder 2 at s21
-        show ayame zorder 3 at f21
+        show ayame 1h zorder 3 at f21
         ay "You know..."
         ay "Being a leader really isn't that great."
         ay "Sure you're recognized but being perfect isn't fun at all."
-        ay "And even if you are perfect, people will still judge you."
+        ay 1j "And even if you are perfect, people will still judge you."
         ay "It's just human nature."
         ay "In fact, because you're a leader, {i}everyone{/i} will judge you."
-        ay "You make one misstep and everyone is going to remember it."
+        ay 1g "You make one misstep and everyone is going to remember it."
         "Ayame signals for me to join the two of them."
         "I sit on the other side of Yuri."
-        ay "I used to think I wanted this too."
+        ay 1a "I used to think I wanted this too."
         ay "To be recognized."
         ay "To be a role model."
         ay "To not be judged."
-        ay "But reality struck pretty hard."
+        ay 1b "But reality struck pretty hard."
         ay "I only got a third of what I wanted."
         ay "And not in a good way."
         show ayame zorder 2 at s21
@@ -4091,28 +4099,29 @@ label ch16_main:
         mc "We accept you for who you are."
         "I can see Yuri's head move up slightly."
         "I think we're getting to her."
-        show yuri zorder 3 at f22
+        show yuri 3pu zorder 3 at f22
         y "I suppose..."
         y "...you're right."
-        y "Though there's still a problem..."
-        show ayame zorder 3 at f21
+        y 3pt "Though there's still a problem..."
+        show ayame 2h zorder 3 at f21
         show yuri zorder 2 at s22
         ay "I'll tell you what."
         ay "I won't pin the blame on you."
         ay "I'll just neglect to mention what you've told me now."
+        ay 2d "After all, it was just an accident."
         show ayame zorder 2 at s21
-        show yuri zorder 3 at f22
+        show yuri 3po zorder 3 at f22
         y "But why?"
         y "It's your responsibility to..."
-        show ayame zorder 3 at f21
+        show ayame 2b zorder 3 at f21
         show yuri zorder 2 at s22
         ay "Yuri, when I look at you."
         ay "I see myself."
         ay "I used to be just like you."
         ay "A shy, outspoken girl."
-        ay "If something like this happened to me, I don't know what I would have done."
+        ay 2g "If something like this happened to me, I don't know what I would have done."
         ay "I probably would have imploded of the embarrassment."
-        ay "In fact, if I placed myself into your shoes..."
+        ay 2h "In fact, if I placed myself into your shoes..."
         "Ayame's voice suddenly trails off."
         "She just sits there, not moving or saying a word."
     elif natsuki_date:
@@ -4125,133 +4134,133 @@ label ch16_main:
         "I don't even know what that means..."
         "I'll speak to Natsuki about it when I get the chance."
         "For now, I'm just going around school looking for her."
-        show natsuki 1a zorder 2 at t11
+        show natsuki 2c zorder 2 at t11
         n "There you are."
         mc "Hey, Natsuki."
-        n "Come on, let's go."
+        n 2d "Come on, let's go."
         n "I have a couple of things we can do."
         mc "What did you have in mind?"
         label ch16_n_cancel:
-        n "We're at school so we're kinda limited."
+        n 4b "We're at school so we're kinda limited."
         n "I did hear a rumor though."
         mc "What was it?"
         n "Because some of the clubs are going to be selling food for Inauguration Day, they've opened up the kitchen."
-        n "I was thinking of going there, maybe do some baking and just look at what everyone's making."
+        n 4a "I was thinking of going there, maybe do some baking and just look at what everyone's making."
         mc "That's a great idea."
-        n "The problem is, I think it's restricted for clubs that got permission only."
+        n 3e "The problem is, I think it's restricted for clubs that got permission only."
         mc "Oh..."
-        n "But we don't care about that."
+        n 3j "But we don't care about that."
         n "Do we?"
         mc "Uhh..."
-        n "The plan is to sneak in there and pretend we're part of the cooking club."
+        n 3b "The plan is to sneak in there and pretend we're part of the cooking club."
         mc "I don't know."
         mc "It seems kinda dishonest."
-        n "Oh come on."
+        n 1e "Oh, come on."
         n "What's the worst that could happen?"
-        n "Besides, it might be the last time you could ever do something like this."
+        n 1h "Besides, it might be the last time you could ever do something like this."
         n "And it's just for fun."
-        n "Who's really going to care that we're there?"
+        n 1k "Who's really going to care that we're there?"
         mc "Alright."
         mc "But this is all based on a rumor, isn't it?"
         mc "Where did you even hear it from?"
-        n "I heard about it in class."
+        n 1c "I heard about it in class."
         n "Someone was talking about it and I overheard."
-        n "What's the big deal anyway?"
+        n 1e "What's the big deal anyway?"
         n "If it isn't actually happening, then we can just do something else."
         mc "If that's what you want to do."
         mc "Then lead the way."
-        n "Right this way."
+        n 2d "Right, follow me."
         scene bg school_hallway
-        show natsuki 1a zorder 2 at t11
+        show natsuki 1j zorder 2 at t11
         with wipeleft_scene
         "Natsuki and I make our way towards the kitchen area of school."
         "It's the same area where the food and hospitality subjects are done."
         "There's quite a bit of activity around the area."
         "But there doesn't seem to be anyone in the actual kitchens."
         "Everyone is just gathered outside."
-        n "I wonder what's the deal here."
+        n 1c "I wonder what's the deal here."
         mc "There doesn't seem to be anyone actually cooking."
         "Natsuki approaches one of the students waiting outside the rooms."
-        n "Excuse me."
+        n 2c "Excuse me."
         "She doesn't seem to be able to get their attention."
-        n "Um...hello?"
+        n 2f "Um...hello?"
         n "I'm talking to you!"
         "She taps the student on the shoulder and that gets their attention."
-        n "Why isn't anybody in the kitchens?"
+        n 2g "Why isn't anybody in the kitchens?"
         n "I thought we were allowed to cook at lunch."
         "Student" "\"Are you one of the clubs allowed in there?\""
-        n "Yeah, we're part of the...cooking club."
+        n 2h "Yeah, we're part of the...cooking club."
         "Student" "\"Oh, I didn't think they were participating.\""
-        n "Y-Yeah...it was kind of last minute."
+        n 1s "Y-Yeah...it was kind of last minute."
         "Student" "\"Anyway, one of the members of the student council kicked us out.\""
         "Student" "\"Something to do with safety or something.\""
         "Student" "\"Some of us are trying to talk to her now.\""
-        n "Where is she?"
+        n 1k "Where is she?"
         "Student" "\"I don't think you'll have any luck.\""
         "Student" "\"She's pretty stubborn about it.\""
         "Student" "\"Which sucks because we needed to cook something up for our club.\""
-        n "Just tell me where she is."
+        n 1g "Just tell me where she is."
         n "I have a way with people."
         "The student looks at her then notices me."
         "I just shrug."
         "Student" "\"She's over there by the door.\""
         "The student points to a door surrounded by a crowd of students."
         "Student" "\"I'm telling you though, there's no point.\""
-        n "We'll see."
-        n "Thanks."
+        n 1c "We'll see."
+        n 1a "Thanks."
         "Natsuki turns back towards me."
         mc "So what are you gonna do?"
-        n "I'm gonna give her a piece of my mind."
+        n 2b "I'm gonna give her a piece of my mind."
         n "She can't just do this to us."
         "We weren't supposed to be here in the first place..."
-        n "Come on, let's go."
+        n 2e "Come on, let's go."
         n "I might need backup."
         mc "Backup for what...?"
         "Natsuki ignores my question and approaches the crowd of students."
         "She basically shoves people out of her way until she reaches the person blocking the door."
         n "Excuse me, what gives you the right to--"
-        show natsuki zorder 2 at t21
-        show ayame 1a zorder 3 at f22
+        show natsuki 1o zorder 2 at t21
+        show ayame 2i zorder 3 at f22
         ay "Natsuki?"
         "The person blocking the door is none other than Ayame."
         "I guess she's finished with her business from this morning."
         ay "What are you doing here?"
         "The way she asked that question sounded like she already knew the answer."
-        ay "I don't recall the Literature Club being part of this."
-        show natsuki zorder 3 at f21
+        ay 2a "I don't recall the Literature Club being part of this."
+        show natsuki 1q zorder 3 at f21
         show ayame zorder 2 at t22
         n "A-Ayame..."
         n "We..."
-        n "{i}(She's a school leader...?!){/i}"
+        n 1r "{i}(She's a school leader...?!){/i}"
         show natsuki zorder 2 at t21
         "Natsuki looks at me for help."
         "I guess I gotta say something."
         mc "We're here to protest against this injustice!"
         mc "You can't just deny all these people, who have been planning so hard, the chance to cook for their clubs!"
         mc "Imagine how damaging it could be to their reputation and on a day like this!"
-        show natsuki zorder 3 at f21
+        show natsuki 1m zorder 3 at f21
         n "What...?"
         show natsuki zorder 2 at t21
         "I may have taken my acting a bit too far."
         "But I'm going to be doing more embarrassing things for the play."
         "So I might as well get used to it."
-        show ayame zorder 3 at f22
+        show ayame 2g zorder 3 at f22
         ay "Look, [player]."
         ay "It's not my decision."
         ay "I'm just here to tell everyone that we can't use the kitchens."
-        show natsuki zorder 3 at f21
+        show natsuki 1i zorder 3 at f21
         show ayame zorder 2 at t22
-        n "Whos decision was it then?"
+        n "Who's decision was it then?"
         show natsuki zorder 2 at t21
-        show ayame zorder 3 at f22
+        show ayame 1g zorder 3 at f22
         ay "It was the principal's."
         ay "So that means there's nothing I can do about it."
         ay "It was a last minute decision, even though it was promised that you'd get access if you applied."
         "Ayame whispers so that only Natsuki and I can hear her."
-        ay "I don't know the reason myself."
+        ay 1a "I don't know the reason myself."
         ay "I'm just guessing it's for safety but in reality...well..."
         "She raises her voice again so the whole crowd can hear."
-        ay "I'm really sorry, everyone!"
+        ay 2g "I'm really sorry, everyone!"
         ay "Please spend your lunchtime elsewhere!"
         show ayame zorder 2 at t22
         "The crowd of students is getting visibly angrier."
@@ -4270,35 +4279,35 @@ label ch16_main:
                 mc "You're just not that kind of person."
                 "I turn towards the crowd."
                 mc "She's not the one responsible for this."
-                show ayame zorder 3 at f22
+                show ayame 2a zorder 3 at f22
                 ay "[player]..."
                 show ayame zorder 2 at t22
                 mc "She's just doing what she's told."
                 mc "It isn't up to her whether you're allowed in or not."
                 mc "If you want to blame anyone, blame the principal."
-                show natsuki zorder 3 at f21
+                show natsuki 4e zorder 3 at f21
                 n "[cPlayer_personal]'s right."
                 n "We can't blame Ayame for this."
                 n "I know it sucks but you can't seriously think it's her fault."
-                n "Imagine you were put in the same position."
+                n 4g "Imagine you were put in the same position."
                 n "It'd feel terrible, wouldn't it?"
-                n "So you can't seriously hate someone for doing their job, can you?"
+                n 4i "So you can't seriously hate someone for doing their job, can you?"
                 show natsuki zorder 2 at t21
                 "The crowd subsides a bit."
                 "They're still angry but at the very least they're not directing it at Ayame."
                 "Ayame breathes a sigh of relief."
-                show ayame zorder 3 at f22
+                show ayame 2b zorder 3 at f22
                 ay "Thanks, guys."
                 ay "It really sucks having to do the principal's dirty work."
-                show natsuki zorder 3 at f21
+                show natsuki 4a zorder 3 at f21
                 show ayame zorder 2 at t22
                 n "We've got your back, Ayame."
-                n "After all, you're part of our club now."
+                n 4b "After all, you're part of our club now."
                 n "We have to look out for each other."
                 show natsuki zorder 2 at t21
-                show ayame zorder 3 at f22
+                show ayame 2g zorder 3 at f22
                 ay "That...means a lot."
-                ay "Thanks, you two."
+                ay 2h "Thanks, you two."
             "Join the crowd.":
                 $ ch16_ay_level += 2
                 mc "You're meant to represent the students."
@@ -4309,102 +4318,102 @@ label ch16_main:
                 ay "I'm sorry."
                 show ayame zorder 2 at t22
                 mc "Then let us in!"
-                show ayame zorder 3 at f22
+                show ayame 2a zorder 3 at f22
                 ay "You know I can't do that."
                 show ayame zorder 2 at t22
                 mc "You're just a--"
-                show natsuki zorder 3 at f21
+                show natsuki 4o zorder 3 at hf21
                 n "[player]!"
                 n "What the hell is wrong with you?"
                 show natsuki zorder 2 at t21
                 mc "I'm trying to get us inside."
                 mc "That's what you wanted, right?"
-                show natsuki zorder 3 at f21
+                show natsuki 4q zorder 3 at f21
                 n "But can't you see it's not her fault?"
                 n "If you want to blame anyone, blame the principal."
                 "Natsuki turns to the crowd."
-                n "Are you listening to me?"
+                n 4e "Are you listening to me?"
                 n "Ayame isn't to blame."
                 n "She's just doing what the principal told her to."
-                n "Who knows what could happen to her if she disobeyed?"
+                n 4g "Who knows what could happen to her if she disobeyed?"
                 show natsuki zorder 2 at t21
                 "The crowd subsides a bit."
                 "They're still angry but at the very least they're not directing it at Ayame."
                 "Ayame breathes a sigh of relief."
-                show ayame zorder 3 at f22
+                show ayame 2g zorder 3 at f22
                 ay "Thanks, Natsuki."
                 ay "The crowd was really getting to me..."
                 ay "I guess that's what they call peer pressure."
-                show natsuki zorder 3 at f21
+                show natsuki 2c zorder 3 at f21
                 show ayame zorder 2 at t22
                 n "I've got your back, Ayame."
                 n "I thought [player] would too..."
                 n "I guess [player_personal] just misunderstood."
                 show natsuki zorder 2 at t21
                 mc "I'm sorry."
-                show ayame zorder 3 at f22
+                show ayame 1h zorder 3 at f22
                 ay "What's said is said."
             "Say nothing.":
                 $ ch16_ay_level += 1
                 "Natsuki nudges me."
-                show natsuki zorder 3 at f21
+                show natsuki 2g zorder 3 at f21
                 n "Aren't you going to say something?"
                 show natsuki zorder 2 at t21
                 mc "What am I supposed to say?"
-                show natsuki zorder 3 at f21
+                show natsuki 4f zorder 3 at f21
                 n "I can't believe you sometimes."
                 "Natsuki turns towards the crowd."
-                n "Listen up everyone!"
+                n 4b "Listen up everyone!"
                 n "It's not Ayame's fault."
                 n "She isn't the one responsible for keeping you locked out."
                 n "What she is doing is what she was told to do."
-                n "By the {i}principal{/i}!"
+                n 4e "By the {i}principal{/i}!"
                 n "So if you want anyone to blame, blame the principal!"
                 n "Not her!"
                 show natsuki zorder 2 at t21
-                show ayame zorder 3 at f22
+                show ayame 1g zorder 3 at f22
                 ay "Natsuki..."
-                show natsuki zorder 3 at f21
+                show natsuki 4b zorder 3 at f21
                 show ayame zorder 2 at t22
                 n "I mean, come on."
                 n "You can't seriously hate someone for doing their job."
                 n "What if you were in her position?"
-                n "Just think about it before you start calling her names again."
+                n 4g "Just think about it before you start calling her names again."
                 show natsuki zorder 2 at t21
                 "The crowd subsides a bit."
                 "They're still angry but at the very least they're not directing it at Ayame."
                 "Ayame breathes a sigh of relief."
-                show ayame zorder 3 at f22
+                show ayame 1b zorder 3 at f22
                 ay "Thanks, Natsuki."
                 ay "The crowd was really getting to me..."
                 ay "I guess that's what they call peer pressure."
-                show natsuki zorder 3 at f21
+                show natsuki 2a zorder 3 at f21
                 show ayame zorder 2 at t22
                 n "I've got your back, Ayame."
-                n "I thought [player] would too..."
+                n 2q "I thought [player] would too..."
                 n "But at least [player_personal] join the rest of the crowd."
                 show natsuki zorder 2 at t21
                 mc "I'm sorry."
                 mc "I should have said something."
-                show ayame zorder 3 at f22
+                show ayame 1h zorder 3 at f22
                 ay "It's fine."
             ay "But I still can't give you guys access."
-            ay "Like I said, I'm not allowed."
+            ay 1g "Like I said, I'm not allowed."
             ay "I have to uphold the values of the school, after all."
             "Ayame rolls her eyes."
-            ay "But..."
-            show natsuki zorder 3 at f21
+            ay 1b "But..."
+            show natsuki 2c zorder 3 at f21
             n "But?"
             show natsuki zorder 2 at t21
-            show ayame zorder 3 at f22
+            show ayame 2b zorder 3 at f22
             ay "If an incident were to occur that required my attention."
             ay "Then I might not be here to stop people getting in."
             ay "And I might just 'accidentally' drop the keys to the kitchen, you know?"
-            ay "But as it stands, I can't do anything."
-            show natsuki zorder 3 at f21
+            ay 2g "But as it stands, I can't do anything."
+            show natsuki 2g zorder 3 at f21
             n "Then we have to do the right thing by everyone."
             "Natsuki steps back from the crowd surrounding Ayame and I follow after her."
-            n "[player], are you thinking what I'm thinking?"
+            n 2c "[player], are you thinking what I'm thinking?"
             show natsuki zorder 2 at t21
             mc "No?"
             mc "What are you--"
@@ -4412,34 +4421,34 @@ label ch16_main:
             "She put a lot more force into that than I would have expected."
             "I think I could feel my teeth loosen a little."
             mc "What the hell was that for?"
-            show natsuki zorder 3 at f21
+            show natsuki 1o zorder 3 at f21
             n "Help!"
             n "Someone is injured!"
-            n "We need help!"
+            n 1p "We need help!"
             show natsuki zorder 2 at t21
             "Ayame definitely saw what happened."
             "She lets out a faint smile before approaching the two of us."
-            show ayame zorder 3 at f22
+            show ayame 1i zorder 3 at f22
             ay "Oh no! That looks serious."
             ay "What happened here?"
-            show natsuki zorder 3 at f21
+            show natsuki 1h zorder 3 at f21
             show ayame zorder 2 at t22
             n "Quick, we have to take [player_reflexive] to the nurse's office."
-            n "You can help with that, right school rep?"
+            n "You can help with that, right, school rep?"
             show natsuki zorder 2 at t21
-            show ayame zorder 3 at f22
+            show ayame 2j zorder 3 at f22
             ay "Of course."
             "Ayame looks at the crowd."
-            ay "Please do not use these keys to get in."
+            ay 2b "Please do not use these keys to get in."
             "She shows everyone the keys and drops them to the floor."
             ay "When I get back here, you all better not be in the kitchen."
             "She turns back towards us."
-            ay "Let's go."
+            ay 2d "Let's go."
             show ayame zorder 2 at t22
             mc "I'm so confused..."
             "I grab my jaw."
             mc "Why did you do that?"
-            show natsuki zorder 3 at f21
+            show natsuki 1b zorder 3 at f21
             n "We'll talk later."
             n "Right now, we gotta get you to the nurse."
             show natsuki zorder 2 at t21
@@ -4448,16 +4457,16 @@ label ch16_main:
             "As we turn the corner, I could hear the door to the kitchens opening."
             "I guess they're inside."
             scene bg school_nurse
-            show natsuki 1a zorder 2 at t21
-            show ayame 1a zorder 2 at t22
+            show natsuki 1d zorder 2 at t21
+            show ayame 1d zorder 2 at t22
             with wipeleft_scene
             "The nurse didn't really do anything to my face."
             "She said it would just heal and I was just making a big deal out of it."
             "She let me stay on the bed but only until the end of lunch."
             show ayame zorder 3 at f22
             ay "I didn't expect that."
-            ay "That was a genius plan, Natsuki."
-            show natsuki zorder 3 at f21
+            ay 2e "That was a genius plan, Natsuki."
+            show natsuki 2y zorder 3 at f21
             show ayame zorder 2 at t22
             n "What are you talking about?"
             n "I just really wanted to hit [player] in the face."
@@ -4474,7 +4483,7 @@ label ch16_main:
         "As I'm about to take a seat, I see a girl running towards me from the distance."
         "She's waving her arms in the air like she's totally oblivious to any attention she might draw to herself."
         "Sayori is coming...and I'm getting this strange feeling coming as she approaches."
-        show sayori zorder 3 at t11
+        show sayori 1d zorder 3 at t11
         s "I'm glad I found you, [player]."
         label ch16_s_interrupt:
         if ch15_s_date_choice:
@@ -4485,10 +4494,10 @@ label ch16_main:
             s "Pay you back for what you did yesterday."
         mc "Yesterday?"
         mc "You mean at your house?"
-        s "Yesterday, I was stupid."
+        s 2h "Yesterday, I was stupid."
         s "I shouldn't have tried to do something out of order."
         s "I shouldn't have even thought about it."
-        s "I'm such a hopeless romantic."
+        s 2l "I'm such a hopeless romantic."
         s "I'm looking for a happy ending that doesn't exist."
         s "So instead I made one for myself..."
         s "How stupid can I be, right?"
@@ -4497,19 +4506,19 @@ label ch16_main:
         mc "Give yourself some credit."
         mc "And there's no point looking down on yourself, especially now."
         mc "You'll need all the positivity you can get."
-        s "You really think so, [player]?"
+        s 2g "You really think so, [player]?"
         s "You think I can just create positivity out of thin air like that?"
         mc "I don't know what you're capable of."
         mc "At least, not the full extent of it."
         mc "But I hope there's at least some way I can cheer you up."
-        s "That's it then."
+        s 2d "That's it then."
         s "I'll pay you back and cheer myself up at the same time."
         mc "What are you thinking?"
         if ch15_s_date_choice:
-            s "I need to concentrate."
+            s 4b "I need to concentrate."
             s "It didn't turn out very well last time."
         else:
-            s "I'm thinking..."
+            s 4a "I'm thinking..."
             s "...of a nice place."
         mc "What...?"
         mc "Sayo{nw}"
@@ -5483,37 +5492,37 @@ label ch16_sayoridate:
     "But what is the point of this?"
     "Why bring us here...?"
     "I feel a tap on my shoulder."
-    show sayori 1ba zorder 2 at t11
+    show sayori 1bq zorder 2 at t11
     s "Good afternoon, [player]."
     mc "Sayori..."
     mc "You look incredible."
-    s "Ehehe~"
+    s 1br "Ehehe~"
     s "You don't look terrible yourself, you know."
     "I look down at what I'm wearing."
     "It's an outfit I've never worn or seen before."
     "I don't think I even own it."
     "Did Sayori do this to me?"
-    s "It's a beautiful day, isn't it?"
+    s 1bd "It's a beautiful day, isn't it?"
     mc "Yeah..."
     s "You wanna sit down?"
     mc "Um..."
     mc "Y-Yeah, sure..."
-    "Sayori and I sit down on a nearby park bench."
-    s "Remember when we used to go here after school when we were younger?"
-    s "We'd play until our legs gave up."
+    "Sayori and I walk around looking for somewhere to sit."
+    s 2bc "Remember when we used to go here after school when we were younger?"
+    s 2bd "We'd play until our legs gave up."
     mc "That was a long time ago."
-    s "I don't know about you, [player]."
-    s "But I bondly remember those times."
+    s 2bc "I don't know about you, [player]."
+    s 1bl "But I bondly remember those times."
     mc "Bondly? Is that even a word?"
     mc "You mean {i}fondly{/i}, right?"
-    s "Oh...yeah, probably."
-    s "Those words are kinda similar, aren't they?"
+    s 1bm "Oh...yeah, probably."
+    s 1bl "Those words are kinda similar, aren't they?"
     mc "In what way?"
-    s "Well, I feel a bond towards {i}you{/i}."
-    s "And I suppose because of that, I'm fond of you."
+    s 1bb "Well, I feel a bond towards {i}you{/i}."
+    s 1bd "And I suppose because of that, I'm fond of you."
     s "But anyway..."
-    s "Why don't we sit down somewhere?"
-    s "I'm pretty sure there's a set of swings in here."
+    s 2ba "I'm pretty sure there's a set of swings in here."
+    s "It's better than sitting on a bench."
     mc "R-Right."
     "Sayori walks into the park and I follow behind her."
     "There's something...graceful about the way she's walking."
@@ -5521,51 +5530,57 @@ label ch16_sayoridate:
     "Once we get into the park, she notices the set of swings and starts running toward it."
     "She gets on one of the swings and I choose the one next to her."
     "I'm still not entirely sure what this is about."
-    s "Remember when we used to swing on these?"
+    s 4bq "Remember when we used to swing on these?"
     "Sayori begins swinging, I follow her lead."
     mc "You were always scared of going over the top."
     mc "Even though it was impossible."
-    s "Hey, you were scared too!"
+    s 5bb "Hey, you were scared too!"
     mc "Ahaha, that's true."
-    s "We were more innocent back then."
+    mc "I can't believe we were that gullible."
+    mc "You still are."
+    s 5ba "H-Hey!"
+    "Sayori and I share a laugh."
+    s 4bk "We were more innocent back then."
     s "Don't you think?"
     mc "Innocent?"
     mc "What do you mean?"
-    s "Never mind."
+    s 4bl "Never mind."
     s "Let's not ruin the moment."
-    s "Let's just enjoy ourselves, okay?"
+    s 4bq "Let's just enjoy ourselves, okay?"
     mc "Okay."
     mc "What's this about anyway?"
     mc "Why did you bring us here?"
-    s "Isn't it obvious?"
+    s 2bd "Isn't it obvious?"
     mc "Um..."
     "Sayori shows a friendly smile."
-    s "Are you..."
+    s 2bc "Are you..."
     mc "Am I what?"
-    s "How do I put this bluntly...?"
+    s 2bl "How do I put this bluntly...?"
     s "That dense?"
-    s "Take a look around you, [player]."
+    s 1bd "Take a look around you, [player]."
     "I take a look at my surroundings."
     "We're in a nice park, in the middle of the day."
     "We're both wearing nice clothes and Sayori is acting kinda different."
     "This is..."
     mc "A date?!"
+    show sayori 1bq
     "Sayori simply smiles at me."
     mc "But why?"
     mc "I thought we were holding off on it."
     mc "Until after."
-    s "You know what's coming."
+    s 1bk "You know what's coming."
     s "I don't know if I'll be able to stop it."
     s "Even with everything you've done."
     mc "So this is..."
     mc "..some sort of escape?"
-    s "Ehehe, kind of..."
+    s 1bl "Ehehe, kind of..."
     s "It's still lunchtime."
     s "Everyone else is still at school."
-    s "Time is just passing by slower for us."
+    s 1bc "Time is just passing by slower for us."
     mc "You did that?"
-    s "Yeah..."
+    s 1bk "Yeah..."
     s "I realize it's kinda irresponsible."
+    s "I could be doing more to prepare..."
     s "But I just..."
     "Sayori's voice trails off."
     "It seems she doesn't really have an excuse."
@@ -5577,54 +5592,54 @@ label ch16_sayoridate:
             $ ch16_s_date_personality = True
             mc "I get it."
             mc "It's the burden of your responsibility, isn't it?"
-            s "Hah..."
+            s 2bt "Hah..."
             s "You really understand, don't you?"
             mc "I try."
             s "No, you don't."
             s "It's not really you talking."
             s "But I think I understand."
             mc "What do you mean?"
-            s "N-Nothing."
+            s 2by "N-Nothing."
         "Be who you are.":
             $ ch16_s_date_personality = False
             mc "I don't really get it."
         "Stay quiet.":
             $ ch16_s_date_personality = False
     "Sayori sighs."
-    s "You know, I can still hear your thoughts."
+    s 1bk "You know, I can still hear your thoughts."
     s "Sometimes, I only hear whispers."
     s "The important bits."
-    s "Other times..."
+    s 1bh "Other times..."
     "Sayori puts her feet on the ground to slow her swinging."
-    s "...when I'm feeling down..."
+    s 1bk "...when I'm feeling down..."
     s "I actively listen to what you're thinking."
     s "I don't know why but it just makes me feel better."
     s "Knowing that you're out there doing things..."
-    s "It's like I'm there with you."
+    s 3bj "It's like I'm there with you."
     mc "That's..."
-    s "Pretty creepy, right?"
+    s 3bl "Pretty creepy, right?"
     s "I know."
     s "I guess it's kind of an invasion of privacy."
-    s "But I promise I didn't listen in any time something weird was happening!"
+    s 3bm "But I promise I didn't listen in any time something weird was happening!"
     s "Just things like you writing your poems or studying."
     s "That's why sometimes I know what you're thinking before you even say it."
-    s "I'm sorry."
+    s 3bk "I'm sorry."
     mc "It's okay."
     mc "I'm not sure what I'd do with the kind of power you have."
     mc "I guess I can't really blame you for doing something like that."
     mc "After all, you're looking out for us."
     mc "I'm sure we wouldn't have made it this far without you."
-    s "I haven't done it lately."
+    s 1bc "I haven't done it lately."
     s "Until now, that is."
     s "I've just been too busy."
-    s "With...you know."
-    s "But it's kinda weird knowing what your date is thinking."
+    s 1be "With...you know."
+    s 1bd "But it's kinda weird knowing what your date is thinking."
     s "So..."
     s "I'll turn it off."
-    s "Permanently."
+    s 1bf "Permanently."
     mc "What?"
     mc "Why permanently?"
-    s "It's just better that way."
+    s 1bd "It's just better that way."
     s "Besides, it will make things later a lot easier."
     if ch16_s_date_personality:
         "There's obviously something that's bothering her."
@@ -5633,19 +5648,19 @@ label ch16_sayoridate:
     else:
         "A lot easier later...?"
         "What could she mean by that?"
-    s "You know, there's someone out there."
+    s 1bh "You know, there's someone out there."
     mc "Out where?"
     s "I feel really guilty for bringing you here."
     s "When I don't really feel that way about you."
     mc "I'm not sure I understand."
     s "There's been someone helping me this whole time."
     s "Someone that helped all of us get this far."
-    s "Without [player_reflexive], I wouldn't be sitting here."
+    s 1bj "Without [player_reflexive], I wouldn't be sitting here."
     s "And neither would you."
-    s "I suppose in another reality [player_personal] would have gone for someone else."
+    s 1bf "I suppose in another reality [player_personal] would have gone for someone else."
     s "Maybe I'm not even [player_possessive] first choice..."
-    s "But I don't care."
-    s "You're here with me."
+    s 1bg "But I don't care."
+    s 1bd "You're here with me."
     s "And because of that {i}you're{/i} with me."
     if ch16_s_date_personality:
         "I guess it all makes sense."
@@ -5653,18 +5668,18 @@ label ch16_sayoridate:
         "Sayori is happy."
         "But what do I have to do with all of this?"
     mc "What's this person got to do with me?"
-    s "Think of yourself as an avatar."
+    s 2bb "Think of yourself as an avatar."
     s "An extension of that person."
     s "Through you, they can see this world."
     s "They can experience it, just like you and me."
-    s "Though I suppose it would be a lot different."
+    s 2bc "Though I suppose it would be a lot different."
     s "[cPlayer_personal]'s probably looking at us through a screen."
     s "But you get it, right?"
     mc "What's the point of telling me this?"
-    s "Because, [player]."
-    s "I don't love you."
+    s 2bh "Because, [player]."
+    s 2bk "I don't love you."
     s "I love [player_reflexive]."
-    "Sayori completely stops swinging."
+    "Sayori stops swinging completely."
     if ch16_s_date_personality:
         "I see."
         "So Sayori doesn't love me."
@@ -5694,7 +5709,7 @@ label ch16_sayoridate:
         "...right?"
     mc "Okay."
     mc "Okay..."
-    s "You're taking this a lot better than I thought."
+    s 4be "You're taking this a lot better than I thought."
     s "I thought maybe I'd have to use my abilities on you."
     mc "I get it, Sayori."
     mc "I'm hurt but I get it."
@@ -5702,11 +5717,11 @@ label ch16_sayoridate:
     mc "I'm an extension of this person."
     mc "Which means I have to be here for [player_reflexive] to be with you."
     mc "That's right, isn't it?"
-    s "Yeah..."
+    s 4bh "Yeah..."
     mc "I have this feeling of..."
     mc "...I guess {i}anger{/i} towards [player_reflexive]."
     mc "Because [player_personal]'s taken you away from me."
-    s "..."
+    s 4bk "..."
     mc "But..."
     mc "Out of all my feelings..."
     mc "I want you to be happy."
@@ -5714,14 +5729,14 @@ label ch16_sayoridate:
     mc "So..."
     mc "I'll let the two of you be happy."
     mc "Together."
-    s "[player]..."
+    s 3bh "[player]..."
     s "I...I don't know what to say."
     mc "You don't have to say anything."
     if ch16_s_date_personality:
         mc "But just tell me."
-        s "What?"
+        s 3bc "What?"
         mc "Was [player_personal] always a part of my life...?"
-        s "[cPlayer_personal] wasn't always a part of your life."
+        s 1bd "[cPlayer_personal] wasn't always a part of your life."
         s "[cPlayer_personal] became a part of you just a couple of weeks ago."
         mc "When I joined the club."
         "Sayori nods."
@@ -5729,25 +5744,26 @@ label ch16_sayoridate:
         mc "Did you ever love {i}me{/i}?"
         mc "As who I was?"
         mc "Before this other person came?"
-        s "I..."
+        s 1bh "I..."
         s "I don't know."
         s "Those thoughts of having this uncontrollable affection towards you..."
         s "They might have been part of this world's conditioning."
         s "I removed them because it just made sense, right?"
-        s "If I really loved {i}you{/i}, then I would fall in love with you all over again."
+        s 1bj "If I really loved {i}you{/i}, then I would fall in love with you all over again."
         s "But..."
         mc "Alright."
         mc "You don't need to explain yourself to me anymore."
         if ch15_s_kiss_choice:
-            s "Let me just say..."
+            s 1bk "Let me just say..."
             mc "What?"
             s "Yesterday."
-            s "When you...kissed me."
+            s 1bj "When you...kissed me."
             mc "It wasn't my choice to make."
             mc "I know that now."
-            s "Maybe not..."
+            s 1bh "Maybe not..."
             s "But I could feel your own passion."
             s "It..."
+            show sayori 1bk
             "Sayori looks away."
             s "Never mind."
         mc "Sayori, I just want you to be happy."
@@ -5760,23 +5776,23 @@ label ch16_sayoridate:
         mc "But even so, they're ingrained into me."
         mc "So I do want you to be happy."
     mc "More than anything."
-    s "Thank you."
+    s 1bd "Thank you."
     s "I suppose we should probably get started then."
     s "There's so much to do and so little time to do it."
     mc "You have a plan?"
     mc "I guess I shouldn't really be surprised."
     mc "You've gotten your life in order lately."
-    s "It's always good to have a plan."
+    s 1ba "It's always good to have a plan."
     s "Especially when we have such a limited time window."
     s "But not for this."
     s "I want to have fun even if this whole thing doesn't really work out."
-    s "So it's not really planned."
+    s 2bl "So it's not really planned."
     s "It's more like..."
     s "I have places I want to go."
     s "But we don't have to go there."
     mc "That sounds kinda like a plan."
     mc "Not a good one but...you know."
-    s "You don't need to be a meanie."
+    s 5bc "You don't need to be a meanie."
     s "The date has only just begun."
     mc "Ah, sorry."
     mc "I didn't mean to."
@@ -5786,11 +5802,11 @@ label ch16_sayoridate:
     "I wonder just how long we actually have."
     "It's lunchtime at school now so we would have just under an hour if it lasted that long."
     "Maybe she'll use some of her powers to make time go slower or something."
-    s "This was the first place."
+    s 4bc "This was the first place."
     s "It's just so peaceful at this hour."
     s "We can just admire the atmosphere."
     mc "We haven't really been able to do that, have we?"
-    s "No, we haven't."
+    s 4bk "No, we haven't."
     s "I don't know about you but I've been really busy."
     s "There's rarely a moment I have time to spare."
     s "Not to mention all of the things I've been doing for you guys."
@@ -5799,44 +5815,44 @@ label ch16_sayoridate:
     mc "I've just been lazy to go out."
     mc "I don't really have an excuse."
     mc "It is nice out here though..."
-    s "Yeah..."
+    s 1bd "Yeah..."
     "Sayori gets up from the swing."
     s "Come on."
     s "We'll come back later."
     mc "Where are we going?"
-    s "You'll see."
+    s 1bq "You'll see."
     s "It's not far from here."
     "Sayori begins walking and I walk alongside her."
     "After a few minutes, she stops suddenly."
     mc "What is it?"
-    s "I just realized it's actually a lot further than I thought."
+    s 1bo "I just realized it's actually a lot further than I thought."
     mc "Okay, so what now?"
-    s "We can always take a shortcut."
+    s 1br "We can always take a shortcut."
     mc "A...shortcut?"
     s "Only I can really use it."
     s "But I can bring people along."
     mc "What kind of shortcut is that?"
-    s "Ready?"
+    s 1bq "Ready?"
     mc "For{nw}"
     $ _history_list.pop()
     scene bg lake_day
-    show sayori 1ba zorder 2 at t11
+    show sayori 1bq zorder 2 at t11
     mc "For{fast} what?"
     "Before I can even finish what I'm saying..."
     "We're suddenly at some kind of lake."
     "I don't think I've ever been here before."
     "You really are special to her."
     mc "What is this place?"
-    s "It's a lake I found."
+    s 2ba "It's a lake I found."
     s "It's actually in a restricted area."
     s "It's even got a fence around it."
     mc "How come?"
-    s "Because people aren't really allowed to be here."
+    s 2bl "Because people aren't really allowed to be here."
     mc "What?!"
-    s "Relax."
+    s 2bd "Relax."
     s "Nobody uses this place."
-    s "It's meant to be a place where fossil fuels were mined."
-    s "But there was so much protesting that the company was basically kicked out."
+    s 2bb "It's meant to be a place where fossil fuels were mined."
+    s 2bc "But there was so much protesting that the company was basically kicked out."
     s "They still own the place but I guess they don't want anyone to enjoy it either."
     s "That was a couple of decades ago..."
     s "They still haven't let people use it."
@@ -5844,7 +5860,7 @@ label ch16_sayoridate:
     mc "Can't you do anything about it?"
     mc "This place is amazing."
     mc "It would be a shame if no one else could enjoy it."
-    s "I could."
+    s 1bd "I could."
     s "And I guess that would be the right thing to do."
     s "But think about the implications, [player]."
     s "Think about what would happen if I started doing that."
@@ -5856,60 +5872,61 @@ label ch16_sayoridate:
         mc "The power would eventually corrupt you."
         mc "Since you would decide what's good and what's not."
         mc "You'd effectively be the ruler of the world."
-        s "W-Wow, I didn't expect that kinda answer from you."
+        s 1bm "W-Wow, I didn't expect that kinda answer from you."
         s "I was just gonna say that this wouldn't be my secret spot anymore."
         s "Now that I think about it, you're right."
-        s "I guess I could become corrupt with that kinda power."
-        s "Who's to say I'm not already though...?"
+        s 1bn "I guess I could become corrupt..."
+        s 1bk "Who's to say I'm not already though...?"
     else:
         "I can't really think of a reason why doing a good deed would be bad."
         mc "What would happen?"
         s "Well..."
-        s "You know what, it's not important."
+        s 1bk "You know what, it's not important."
     "Sayori stares at the lake."
     "There's a gentle breeze flowing yet the water is still."
     "This place feels quite serene."
     "I can see why she chose this place."
     mc "How did you find it anyway?"
-    s "Someone told me about it."
+    s 1bc "Someone told me about it."
     s "I thought I'd check it out."
     "Who could that somebody be?"
     "It might be someone we both know..."
-    s "We're not the first ones to sneak in here."
+    s 1ba "We're not the first ones to sneak in here."
     s "I think lots of people do."
     s "Not like it's under watch or anything."
     mc "It's a shame it's not more easily accessed."
-    s "Yeah..."
+    s 1bo "Yeah..."
     s "There's actually a rumor going around about this place."
     s "From people who've snuck in."
     mc "What is it?"
-    s "They say at night, there's a red ghost that travels around the forest."
+    s 1bm "They say at night, there's a red ghost that travels around the forest."
     s "It tends to the flowerbed just across the lake, which is why it's in pristine condition."
     s "No one knows if the ghost could actually hurt anyone or not."
-    s "But people have said they've heard it crying when they've been close."
+    s 2bm "But people have said they've heard it crying when they've been close."
     mc "Ghosts?"
     mc "That's a little superstitious, don't you think?"
     s "Maybe."
-    s "That's just what I've heard."
+    s 2bl "That's just what I've heard."
     s "For all we know, it could just be a groundskeeper wearing red clothing."
+    s "Even if it was real, it wouldn't be the weirdest thing I'd have seen if it was true."
     mc "Who only works at night."
-    s "It could just be made up."
+    s 4bd "It could just be made up."
     s "But because of that rumor, people say this place is haunted."
     mc "What do you think?"
     s "As long as we're here during the day, it shouldn't matter."
     s "After all, this ghost has only been seen at night."
-    s "Which is why..."
+    s 4ba "Which is why..."
     mc "You want to go to the flowerbed?"
-    s "Exactly!"
+    s 4bq "Exactly!"
     s "I don't want to pick any of the flowers."
     s "I'm sure the ghost, if it exists, would be really sad if I did that."
-    s "Knowing all the hard work it's put into it."
+    s 4bd "Knowing all the hard work it's put into it."
     mc "Does this flowerbed even exist?"
     mc "Have you seen it yourself?"
-    s "Nope!"
+    s 2bc "Nope!"
     s "I've never actually been to the other side of the lake."
     s "So it'll be my first time."
-    s "And it'll be with you."
+    s 2bq "And it'll be with you."
     "Sayori shows me a warm smile."
     menu:
         s "What do you say?"
@@ -5917,15 +5934,15 @@ label ch16_sayoridate:
             $ ch16_s_date_activities += 1
             mc "I guess we'll check the flowerbeds."
             mc "Or at least look for them."
-            s "I'm glad you've made that choice."
+            s 2bd "I'm glad you made that choice."
             s "I'm excited to see just what kind of flowers are even here."
             mc "Has anyone crossed the lake before?"
-            s "Plenty of people."
-            s "Someone even made a little wooden bridge."
+            s 2b "Plenty of people."
+            s 2bc "Someone even made a little wooden bridge."
             s "So let's go."
             mc "Lead the way."
             scene bg river_day
-            show sayori 1ba zorder 2 at t11
+            show sayori 1bb zorder 2 at t11
             with wipeleft_scene
             "Sayori and I make our way around the lake."
             "There's a part where the lake converges and turns into a small river."
@@ -5935,10 +5952,10 @@ label ch16_sayoridate:
             "I was expecting something that was barely being held together."
             "Maybe people {i}do{/i} do this a lot."
             "Especially if the bridge is this well made."
-            s "Shall we?"
+            s 1ba "Shall we?"
             "Sayori steps on the bridge and offers me her hand."
             "I take it and she pulls me next to her on the bridge."
-            s "It's so peaceful here, isn't it?"
+            s 1bd "It's so peaceful here, isn't it?"
             s "You can hear the birds singing and the river flowing."
             mc "It's a tranquil environment."
             mc "Especially since no one really goes here."
@@ -5946,50 +5963,50 @@ label ch16_sayoridate:
             show sayori 1ba zorder 2 at s11
             "Sayori sits down on the bridge."
             "I sit down next to her."
-            s "Before we cross."
+            s 1bq "Before we get to the other side..."
             s "I just want to take this moment to take it all in."
             s "Who knows what awaits us on the other side?"
             mc "Are you scared?"
-            s "Scared?"
+            s 1bl "Scared?"
             s "Ahaha~"
-            s "I'm excited if anything."
+            s 4bq "I'm excited, if anything."
             s "Those flowerbeds have a reputation and I want to see them."
-            s "But if we just skip past all of nature's beauty that we can see now."
-            s "Then how can we truly appreciate the flowers?"
+            s "But if we just skip past all of nature's beauty that we can see now..."
+            s 4br "Then how can we truly appreciate the flowers?"
             mc "I guess..."
             mc "I'm not really one to do this kinda thing."
             mc "But I wanna try."
-            s "Ehehe, I don't wanna force you to do anything you don't want to."
+            s 4bd "Ehehe, I don't wanna force you to do anything you don't want to."
             mc "No, the choice was made."
             mc "If this is what we're doing then I should try."
             mc "I just need...guidance."
             s "I can't do that."
-            s "It just naturally."
+            s 2bd "Doing something like this...it just happens, naturally."
             s "Just breathe in the atmosphere."
             "Sayori takes a deep breath then exhales."
-            s "Just like that."
+            s 1bd "Just like that."
             "I take a deep breath."
             "I can feel the fresh air enter my lungs."
             "I can feel the sun on my face and the wind on my back."
             "I can hear the gentle current the water below us is carrying."
             "And the warmth of Sayori's presence next to me."
-            s "If you wanna take in the rest of the sights, we can do that."
+            s 1ba "If you wanna take in the rest of the sights, we can do that."
             s "There's no {i}real{/i} rush."
             s "But I'm going to need to change a couple of things for that to happen."
             "I exhale my breath and as I do, the world seems to be moving slower."
             "The current of water seems to stop and the leaves on the trees stop fluttering."
-            s "Don't move around too much."
+            s 1bl "Don't move around too much."
             s "I'm not sure how long I can hold this."
             mc "Did you freeze time or something?"
-            s "I guess that's the best way to put it."
+            s 1bd "I guess that's the best way to put it."
             s "Normally, while the world is in this state I can do what I want."
             s "I would literally have all the time in the world."
-            s "And it would be like nothing happened at all..."
+            s 1bc "And it would be like nothing happened at all..."
             s "Only I would experience this moment of frozen time."
-            s "But I've shared it with you."
-            s "It's a bit harder but I'll manage."
+            s 1bq "But I've shared it with you."
+            s 1bl "It's a bit harder but I'll manage."
             mc "You don't need to do that for me."
-            s "But I want to."
+            s 1bd "But I want to."
             s "After all, it wouldn't be a date if we didn't both enjoy ourselves."
             s "And I don't want to make this any worse for you either."
             s "It's better to let you in on it, rather than keep you in the dark."
@@ -6065,20 +6082,22 @@ label ch16_sayoridate:
                 window hide(None)
                 $ pause(1.0)
                 scene bg river_day
-                show sayori 1ba zorder 2 at s11
+                show sayori 1bd zorder 2 at s11
                 hide screen tear
                 $ pause(1.0)
                 window show(None)
                 "Was that...right now?{fast}"
                 window auto
-            s "What's wrong?"
+            s 1bo "What's wrong?"
             mc "Um..."
-            s "Oh..."
-            s "I guess I {i}couldn't{/i} manage."
+            "I can feel the world around me moving again."
+            "It's slow but it seems time isn't completely stoppped."
+            s 1bn "Oh..."
+            s 2bl "I guess I {i}couldn't{/i} manage."
             s "That's weird but not unexpected."
             "It seems the river is flowing normally again."
             "I guess time is back to normal?"
-            s "Well, we should get moving then."
+            s 2bd "Well, we should get moving then."
             show sayori at t11
             "Sayori gets up and begins walking to the other side."
             if ch16_ay_perspective:
@@ -6087,9 +6106,9 @@ label ch16_sayoridate:
         "Let's do something else.":
             mc "I don't think going to a haunted flowerbed is a good idea."
             mc "Maybe we can do something else."
-            s "That's you've decided, is it?"
+            s 1bb "That's you've decided, is it?"
             s "I see."
-            s "Well, we can always walk around the place."
+            s 1bc "Well, we can always walk around the place."
             s "I'm sure It's got lots of hidden wonders."
             s "Shall we?"
             mc "Let's go."
@@ -6102,45 +6121,46 @@ label ch16_sayoridate:
             "We move down the river a little bit, the further down we got the more abandoned equipment we see."
             "I can only guess that's from the company that tried to mine out the area."
             "After walking for a couple of minutes, she comes to a stop in front of some sort of large machine."
-            s "Do you know what this is?"
+            s 1ba "Do you know what this is?"
             mc "I don't know what it's called."
             mc "But it takes stuff and moves it somewhere else, right?"
             s "I think it's called an excavator."
             s "I don't know why, but the company left it here."
-            s "Along with all this other abandoned equipment."
+            s 1bb "Along with all this other abandoned equipment."
             mc "Strange that they just left it here."
             mc "I would have thought they'd have taken all their stuff back."
-            s "Maybe they planned to use it again at some point."
+            s 2bd "Maybe they planned to use it again at some point."
             s "Who really knows?"
             "Sayori begins to climb on the excavator."
             mc "W-What are you doing?"
-            s "What's it look like?"
+            s 2bq "What does it look like?"
             s "Come on, you'll be fine."
             mc "It's not me I'm worried about."
             mc "Falling from there could seriously hurt you."
-            s "Falling from where?"
+            s 2br "Falling from where?"
             "Sayori climbs onto the arm part of the excavator."
-            s "From here?"
+            s 2ba "From here?"
             mc "Are you just teasing me?"
-            s "Just get up here."
+            s 4bq "Just get up here."
             s "I promise nothing bad will happen."
             mc "I'm not exactly the best climber."
-            s "Here."
+            s 3ba "Here."
             "Sayori offers me her hand."
             "I take it and she pulls me up with ease."
             "I guess that's how she handled the box so easily..."
             show sayori at s11
             "We both take a seat on the arm of the excavator."
             "It's positioned so that it's probably in the most sturdy position it could be."
-            s "Times like this, I'd say to take in the beauty of nature."
+            s 3bd "At times like this, I'd say to take in the beauty of nature."
             s "But right now..."
+            show sayori 4bd
             "Sayori extends out her arms as if to showcase where we are sitting."
             s "We're surrounded by machinery."
-            s "Tools left by a greedy company."
+            s 4bh "Tools left by a once greedy company."
             s "So it might be kind of hard to appreciate it, you know?"
             mc "I wouldn't really know anything about that."
             mc "I'm not exactly a nature person."
-            s "Just take a deep breath and concentrate."
+            s 1ba "Just take a deep breath and concentrate."
             s "You'll be able to take everything in that way."
             s "Give it a try now."
             mc "If you say so."
@@ -6150,50 +6170,50 @@ label ch16_sayoridate:
             "I can feel the wind on my back."
             "I can feel the cold steel that I'm sitting on."
             "And the warmth of Sayori's presence next to me."
-            s "Taking it all in, [player]?"
+            s 1bd "Taking it all in, [player]?"
             mc "I guess so."
             mc "Like I said, I'm not really good at this."
             mc "But I wanna try to be."
-            s "Ehehe, well you don't have to force yourself."
+            s 1bq "Ehehe, well you don't have to force yourself."
             s "Besides, there are more fun things we can do."
             mc "Like what?"
-            s "Well...do you think this thing still works?"
+            s 1bl "Well...do you think this thing still works?"
             mc "You can't be serious."
             "She hops off the arm and approaches the door to the driver's seat."
             "She's serious."
             "I get off the arm and gracefully tumble on the ground."
             mc "Do you even know how to use this thing?"
-            s "I've got no idea!"
+            s 1bn "I've got no idea!"
             mc "This is a terrible idea!"
             mc "How are you even going to turn it on?"
             mc "I doubt they left the keys in there."
-            s "I'll make my own."
+            s 1bd "I'll make my own."
             mc "What?!"
             "Before I can even approach the driver's seat, the excavator roars to life."
             mc "Sayori..."
-            s "Come on in."
+            s 2bq "Come on in."
             "The excavator is only suited for one person at a time."
             "She squeezes a bit so that I can fit in too."
             mc "What are you planning?"
-            s "This clearing seems like a good place to just mess around, doesn't it?"
+            s 2ba "This clearing seems like a good place to just mess around, doesn't it?"
             s "There's plenty of space and we aren't really going to ruin the scenery."
             mc "I suppose."
             s "Now, let's see how this goes."
             "Sayori steps on one of the pedals and the machine grinds forward."
-            s "See, I'm an expert already?"
+            s 2bq "See, I'm an expert already?"
             mc "Just be careful."
             mc "This might have been abandoned for a reason, you know."
             "Sayori pulls on one of the levers and the arm changes position."
-            s "I have another idea."
+            s 4bo "I have another idea."
             mc "Don't tell me--"
-            s "You drive for a minute."
+            s 4bc "You drive for a minute."
             "She forces herself out of the driver's compartment and climbs onto the arm."
             "How can she climb so well in a dress?"
             "She stands on it proudly before turning around and seeing my face."
             "She laughs."
-            s "Your face is priceless, [player]!"
+            s 4bq "Your face is priceless, [player]!"
             s "You just look so worried and clueless."
-            s "Come on, I bet you can't shake me off."
+            s 3br "Come on, I bet you can't shake me off."
             "She's having way too much fun here."
             "It's almost infectious."
             mc "Oh yeah?"
@@ -6251,16 +6271,16 @@ label ch16_sayoridate:
                 window hide(None)
                 $ pause(1.0)
                 scene bg river_day
-                show sayori 1ba zorder 2 at s11
+                show sayori 3br zorder 2 at s11
                 hide screen tear
                 $ pause(1.0)
                 window show(None)
                 "My hands are already on the lever Sayori pulled earlier.{fast}"
                 window auto
             "I pull the lever and the arm changes position again."
-            s "Whoa!"
+            s 3bm "Whoa!"
             "Sayori shakes a little bit before finding her balance again."
-            s "You're gonna have to try harder than that!"
+            s 3bq "You're gonna have to try harder than that!"
     return
 
 label ch16_ending_good:
