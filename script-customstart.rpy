@@ -1030,7 +1030,6 @@ label choose_start:
         else:
             if natsuki_approval > 0:
                 $ natsuki_approval -= 1
-    elif ch13_name == "Yuri":
     elif ch13_name == "Monika":
         if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
             s "Seeing as you chose to be with Monika..."

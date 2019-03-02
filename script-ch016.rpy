@@ -4397,81 +4397,81 @@ label ch16_main:
                 mc "I should have said something."
                 show ayame 1h zorder 3 at f22
                 ay "It's fine."
-            ay "But I still can't give you guys access."
-            ay 1g "Like I said, I'm not allowed."
-            ay "I have to uphold the values of the school, after all."
-            "Ayame rolls her eyes."
-            ay 1b "But..."
-            show natsuki 2c zorder 3 at f21
-            n "But?"
-            show natsuki zorder 2 at t21
-            show ayame 2b zorder 3 at f22
-            ay "If an incident were to occur that required my attention."
-            ay "Then I might not be here to stop people getting in."
-            ay "And I might just 'accidentally' drop the keys to the kitchen, you know?"
-            ay 2g "But as it stands, I can't do anything."
-            show natsuki 2g zorder 3 at f21
-            n "Then we have to do the right thing by everyone."
-            "Natsuki steps back from the crowd surrounding Ayame and I follow after her."
-            n 2c "[player], are you thinking what I'm thinking?"
-            show natsuki zorder 2 at t21
-            mc "No?"
-            mc "What are you--"
-            "Suddenly, Natsuki punches me in the face."
-            "She put a lot more force into that than I would have expected."
-            "I think I could feel my teeth loosen a little."
-            mc "What the hell was that for?"
-            show natsuki 1o zorder 3 at f21
-            n "Help!"
-            n "Someone is injured!"
-            n 1p "We need help!"
-            show natsuki zorder 2 at t21
-            "Ayame definitely saw what happened."
-            "She lets out a faint smile before approaching the two of us."
-            show ayame 1i zorder 3 at f22
-            ay "Oh no! That looks serious."
-            ay "What happened here?"
-            show natsuki 1h zorder 3 at f21
-            show ayame zorder 2 at t22
-            n "Quick, we have to take [player_reflexive] to the nurse's office."
-            n "You can help with that, right, school rep?"
-            show natsuki zorder 2 at t21
-            show ayame 2j zorder 3 at f22
-            ay "Of course."
-            "Ayame looks at the crowd."
-            ay 2b "Please do not use these keys to get in."
-            "She shows everyone the keys and drops them to the floor."
-            ay "When I get back here, you all better not be in the kitchen."
-            "She turns back towards us."
-            ay 2d "Let's go."
-            show ayame zorder 2 at t22
-            mc "I'm so confused..."
-            "I grab my jaw."
-            mc "Why did you do that?"
-            show natsuki 1b zorder 3 at f21
-            n "We'll talk later."
-            n "Right now, we gotta get you to the nurse."
-            show natsuki zorder 2 at t21
-            "We begin to walk away."
-            "One of the people in the crowd picks up the keys."
-            "As we turn the corner, I could hear the door to the kitchens opening."
-            "I guess they're inside."
-            scene bg school_nurse
-            show natsuki 1d zorder 2 at t21
-            show ayame 1d zorder 2 at t22
-            with wipeleft_scene
-            "The nurse didn't really do anything to my face."
-            "She said it would just heal and I was just making a big deal out of it."
-            "She let me stay on the bed but only until the end of lunch."
-            show ayame zorder 3 at f22
-            ay "I didn't expect that."
-            ay 2e "That was a genius plan, Natsuki."
-            show natsuki 2y zorder 3 at f21
-            show ayame zorder 2 at t22
-            n "What are you talking about?"
-            n "I just really wanted to hit [player] in the face."
-            show natsuki zorder 2 at t21
-            mc "Can someone please explain to me what's going on?"
+        ay "But I still can't give you guys access."
+        ay 1g "Like I said, I'm not allowed."
+        ay "I have to uphold the values of the school, after all."
+        "Ayame rolls her eyes."
+        ay 1b "But..."
+        show natsuki 2c zorder 3 at f21
+        n "But?"
+        show natsuki zorder 2 at t21
+        show ayame 2b zorder 3 at f22
+        ay "If an incident were to occur that required my attention."
+        ay "Then I might not be here to stop people getting in."
+        ay "And I might just 'accidentally' drop the keys to the kitchen, you know?"
+        ay 2g "But as it stands, I can't do anything."
+        show natsuki 2g zorder 3 at f21
+        n "Then we have to do the right thing by everyone."
+        "Natsuki steps back from the crowd surrounding Ayame and I follow after her."
+        n 2c "[player], are you thinking what I'm thinking?"
+        show natsuki zorder 2 at t21
+        mc "No?"
+        mc "What are you--"
+        "Suddenly, Natsuki punches me in the face."
+        "She put a lot more force into that than I would have expected."
+        "I think I could feel my teeth loosen a little."
+        mc "What the hell was that for?"
+        show natsuki 1o zorder 3 at f21
+        n "Help!"
+        n "Someone is injured!"
+        n 1p "We need help!"
+        show natsuki zorder 2 at t21
+        "Ayame definitely saw what happened."
+        "She lets out a faint smile before approaching the two of us."
+        show ayame 1i zorder 3 at f22
+        ay "Oh no! That looks serious."
+        ay "What happened here?"
+        show natsuki 1h zorder 3 at f21
+        show ayame zorder 2 at t22
+        n "Quick, we have to take [player_reflexive] to the nurse's office."
+        n "You can help with that, right, school rep?"
+        show natsuki zorder 2 at t21
+        show ayame 2j zorder 3 at f22
+        ay "Of course."
+        "Ayame looks at the crowd."
+        ay 2b "Please do not use these keys to get in."
+        "She shows everyone the keys and drops them to the floor."
+        ay "When I get back here, you all better not be in the kitchen."
+        "She turns back towards us."
+        ay 2d "Let's go."
+        show ayame zorder 2 at t22
+        mc "I'm so confused..."
+        "I grab my jaw."
+        mc "Why did you do that?"
+        show natsuki 1b zorder 3 at f21
+        n "We'll talk later."
+        n "Right now, we gotta get you to the nurse."
+        show natsuki zorder 2 at t21
+        "We begin to walk away."
+        "One of the people in the crowd picks up the keys."
+        "As we turn the corner, I could hear the door to the kitchens opening."
+        "I guess they're inside."
+        scene bg school_nurse
+        show natsuki 1d zorder 2 at t21
+        show ayame 1d zorder 2 at t22
+        with wipeleft_scene
+        "The nurse didn't really do anything to my face."
+        "She said it would just heal and I was just making a big deal out of it."
+        "She let me stay on the bed but only until the end of lunch."
+        show ayame zorder 3 at f22
+        ay "I didn't expect that."
+        ay 2e "That was a genius plan, Natsuki."
+        show natsuki 2y zorder 3 at f21
+        show ayame zorder 2 at t22
+        n "What are you talking about?"
+        n "I just really wanted to hit [player] in the face."
+        show natsuki zorder 2 at t21
+        mc "Can someone please explain to me what's going on?"
     elif ch15_s_together:
         "Sayori said she wanted to see me at lunch."
         "I wonder what for?"
