@@ -3142,7 +3142,7 @@ label ch16_main:
         show natsuki 2b zorder 3 at f21
         n "It's all starting to make sense now!"
         show natsuki zorder 2 at t21
-        show yuri 2bf zorder 3 at f22
+        show yuri 2pf zorder 3 at f22
         y "It is?"
         show natsuki 2g zorder 3 at f21
         show yuri zorder 2 at t22
@@ -3178,7 +3178,7 @@ label ch16_main:
         "I turn to the next page and it's the same."
         "In fact, the next dozen pages are just the same thing."
         "It looks like the first four pages are just repeated over and over."
-        show yuri 1pe zorder 3 at f22
+        show yuri 1e zorder 3 at f22
         y "What's wrong?"
         show natsuki zorder 3 at f21
         show yuri zorder 2 at t22
@@ -3321,8 +3321,8 @@ label ch16_main:
                 show yuri zorder 2 at t22
                 n "Maybe you just forgot where you put it?"
                 n "It could still--"
-                show natsuki 3pv zorder 2 at t21
-                show yuri zorder 3 at f22
+                show natsuki zorder 2 at t21
+                show yuri 3pv zorder 3 at f22
                 y "I don't have it, Natsuki."
                 y "I would know."
                 show natsuki 1g zorder 3 at f21
@@ -4642,7 +4642,7 @@ label ch16_main:
             m "I want to know that you want to help so I don't feel completely awful."
             mc "You know I want to help."
             mc "I just don't know how I can."
-            m 1f "I don't know the all of the details."
+            m 1f "I don't know all of the details."
             m "But I do know she won't harm you."
             mc "How can you be so sure?"
             m 1e "I just know."
