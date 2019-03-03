@@ -1053,6 +1053,8 @@ label choose_start:
             s "So if you really want to be together...then prove it."
 
     if chapter == 16:
+        # Set to 15 to prevent error after poem game message
+        $ chapter = 15
         s "That's it, isn't it?"
         s "Now all that's left is to see what consequences your actions have done..."
         show screen tear(20, 0.1, 0.1, 0, 40)

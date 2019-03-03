@@ -4996,20 +4996,22 @@ label ch16_main:
         s "And you're okay with this, [player]?"
         s "If she's forcing you to do this..."
         s 1d "You can tell me."
+        $ quick_menu = False
         # Show a yes/no at first then force a no after 0.5 seconds
         show screen timer_16_menu_skip("ch16_m_forcechoice_1",_layer="timers")
         menu:
             s "Is she?"
             "Yes.":
-                hide screen timer_16_menu_skip
+                $ renpy.hide_screen("timer_16_menu_skip",layer="timers")
                 show screen tear(8, offtimeMult=1, ontimeMult=10)
                 $ pause(0.5)
                 hide screen tear
             "No.":
                 jump ch16_m_afterchoice
         label ch16_m_forcechoice_1:
+        $ quick_menu = True
         $ _history_list.pop()
-        hide screen timer_16_menu_skip
+        $ renpy.hide_screen("timer_16_menu_skip",layer="timers")
         menu:
             s "Is she?"
             "No":
@@ -5937,7 +5939,7 @@ label ch16_sayoridate:
             s 2bd "I'm glad you made that choice."
             s "I'm excited to see just what kind of flowers are even here."
             mc "Has anyone crossed the lake before?"
-            s 2b "Plenty of people."
+            s 2bb "Plenty of people."
             s 2bc "Someone even made a little wooden bridge."
             s "So let's go."
             mc "Lead the way."
@@ -6013,8 +6015,10 @@ label ch16_sayoridate:
             s "After all, you're helping to make this possible."
             mc "..."
             if ch16_ay_perspective:
+                $ currentpos = get_pos()
                 show screen tear(8, offtimeMult=1, ontimeMult=10)
                 window hide(None)
+                stop music
                 scene bg school_grounds
                 $ pause(1.0)
                 hide screen tear
@@ -6085,13 +6089,15 @@ label ch16_sayoridate:
                 show sayori 1bd zorder 2 at s11
                 hide screen tear
                 $ pause(1.0)
+                $ audio.t12sb = "<from " + str(currentpos) + " loop 1.300>mod_assets/bgm/12_sayori.ogg"
+                play music t12sb
                 window show(None)
                 "Was that...right now?{fast}"
                 window auto
             s 1bo "What's wrong?"
             mc "Um..."
             "I can feel the world around me moving again."
-            "It's slow but it seems time isn't completely stoppped."
+            "It's slow but it seems time isn't completely stopped."
             s 1bn "Oh..."
             s 2bl "I guess I {i}couldn't{/i} manage."
             s "That's weird but not unexpected."
@@ -6219,8 +6225,10 @@ label ch16_sayoridate:
             mc "Oh yeah?"
             mc "How about this?"
             if ch16_ay_perspective:
+                $ currentpos = get_pos()
                 show screen tear(8, offtimeMult=1, ontimeMult=10)
                 window hide(None)
+                stop music
                 scene bg school_grounds
                 $ pause(1.0)
                 hide screen tear
@@ -6274,6 +6282,8 @@ label ch16_sayoridate:
                 show sayori 3br zorder 2 at s11
                 hide screen tear
                 $ pause(1.0)
+                $ audio.t12sb = "<from " + str(currentpos) + " loop 1.300>mod_assets/bgm/12_sayori.ogg"
+                play music t12sb
                 window show(None)
                 "My hands are already on the lever Sayori pulled earlier.{fast}"
                 window auto

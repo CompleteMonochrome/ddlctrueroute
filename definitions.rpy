@@ -471,12 +471,12 @@ image bg park_glitch:
         linear 2.0 alpha 0
         linear 2.0 alpha 1.0
         repeat
-image bg lake_day = "mod_assets/images/bg/park_day.png"
-image bg lake_sunset = "mod_assets/images/bg/park_sunset.png"
-image bg lake_night = "mod_assets/images/bg/park_night.png"
-image bg lake_prerain = "mod_assets/images/bg/park_prerain.png"
-image bg lake_rain = "mod_assets/images/bg/park_rain.png"
-image bg lake_clearrain = "mod_assets/images/bg/park_clearrain.png"
+image bg lake_day = "mod_assets/images/bg/lake_day.png"
+image bg lake_sunset = "mod_assets/images/bg/lake_sunset.png"
+image bg lake_night = "mod_assets/images/bg/lake_night.png"
+image bg lake_prerain = "mod_assets/images/bg/lake_prerain.png"
+image bg lake_rain = "mod_assets/images/bg/lake_rain.png"
+image bg lake_clearrain = "mod_assets/images/bg/lake_clearrain.png"
 image bg river_day = "mod_assets/images/bg/river_day.png"
 image bg river_sunset = "mod_assets/images/bg/river_sunset.png"
 image bg river_night = "mod_assets/images/bg/river_night.png"
