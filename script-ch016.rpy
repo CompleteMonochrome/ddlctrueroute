@@ -343,6 +343,24 @@ label ch16_main:
         "It's that clerk from before...!"
         $ cl_name = "Mysterious Clerk"
         mc "What are you--"
+    elif monika_type == 0 or (ch12_markov_agree and monika_type == 1):
+        $ cl_name = "???"
+        cl "Well, well."
+        "A voice suddenly calls out from behind me."
+        "I can feel a hand suddenly reach my shoulder too."
+        mc "Who--{nw}"
+        show screen tear(20, 0.1, 0.1, 0, 40)
+        window hide(None)
+        play sound "sfx/s_kill_glitch1.ogg"
+        $ pause(0.25)
+        stop sound
+        scene bg corridor
+        hide screen tear
+        window show(None)
+        "I make it to the clubroom with the box."
+        window auto
+        "I can't believe how hard it was to get here."
+        jump ch16_clerk_unknown
     elif persistent.ch15_sayori_saw_clerk or persistent.ch13_nat_date:
         $ cl_name = "???"
         cl "You want some help with that?"
@@ -367,8 +385,6 @@ label ch16_main:
         $ cl_name = "???"
         cl "Need a hand?"
         "I hear a voice come from behind me."
-        if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
-            "A hand grabs my shoulder at the same time."
         mc "Who--{nw}"
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
@@ -2487,7 +2503,8 @@ label ch16_main:
         n 1c "Yuri, are you sure no one goes here?"
         show yuri 3ph zorder 3 at f22
         y "I've been here several times."
-        y "On occasion, a teacher would approach me but no students really go here."
+        y "On occasion, a teacher would approach me."
+        y "However, students don't really tend to go here."
         y "I think they know I want to be alone..."
         show natsuki 1q zorder 3 at f21
         n "Right..."
@@ -4472,6 +4489,117 @@ label ch16_main:
         n "I just really wanted to hit [player] in the face."
         show natsuki zorder 2 at t21
         mc "Can someone please explain to me what's going on?"
+        mc "All I can figure out is Natsuki punched me in the face..."
+        mc "...out of seemingly nowhere!"
+        show ayame zorder 3 at f22
+        ay "Put the pieces together."
+        ay "Students wanted to enter the room, right?"
+        ay "But I couldn't let them as long as I was there."
+        show ayame zorder 2 at t22
+        mc "So Natsuki punched me?"
+        show natsuki zorder 3 at f21
+        n "So we could give Ayame an excuse to leave."
+        n "That's also why she put the keys on the floor."
+        n "Sorry I punched you, but it was to help everyone."
+        n "And it was the only thing that came to mind...at the time."
+        show natsuki zorder 2 at t21
+        mc "Okay...but did you have to do it so hard?"
+        mc "It still kinda hurts a little."
+        show natsuki zorder 3 at f21
+        n "Oh, toughen up."
+        n "It'll be fine."
+        n "It's not like you got a concussion or something."
+        show ayame zorder 3 at f21
+        show natsuki zorder 2 at t22
+        ay "I really want to thank you both."
+        ay "I don't know how much longer I could have lasted out there."
+        ay "Everyone was starting to look like they were about to snap."
+        show ayame zorder 2 at t21
+        show natsuki zorder 3 at f22
+        n "If you need help like that again, you can count on us."
+        n "We won't let you down."
+        show ayame zorder 3 at f21
+        show natsuki zorder 2 at t22
+        ay "T-Thank you, Natsuki."
+        show ayame zorder 2 at t21
+        show natsuki zorder 3 at f22
+        n "One thing though."
+        n "Why didn't you tell us?"
+        "Natsuki points at Ayame's ribbon."
+        n "Why keep it all a secret?"
+        show ayame zorder 3 at f21
+        show natsuki zorder 2 at t22
+        ay "This?"
+        "Ayame puts the ribbon between her fingers."
+        ay "Whenever I have this on, I don't feel like 'me'."
+        ay "I feel like I'm a different person."
+        ay "People treat me differently."
+        ay "I didn't want that with you guys."
+        ay "I wanted you all to be who you were around me rather than changing who you are around me."
+        ay "That's why I didn't tell you."
+        ay "I'm sorry I deceived you."
+        show ayame zorder 2 at t21
+        show natsuki zorder 3 at f22
+        n "Not at all."
+        n "I understand why you did it."
+        n "And I don't care whether you're a leader or whatever."
+        n "It's just kinda cool having someone like you in the club."
+        show ayame zorder 3 at f21
+        show natsuki zorder 2 at t22
+        ay "I'm surprised you only now just figured it out."
+        ay "[player] saw for [player_reflexive]self what I really was this morning."
+        ay "I would have thought [player_personal]'d spread the word."
+        show ayame zorder 2 at t21
+        mc "Why would I?"
+        mc "It's not like you being a leader would have changed anything."
+        mc "We would have still treated you just like anyone else."
+        show natsuki zorder 3 at f22
+        n "[cPlayer_personal]'s right!"
+        n "So what if you're a leader?"
+        n "You aren't getting any special treatment from us!"
+        show ayame zorder 3 at f21
+        show natsuki zorder 2 at t22
+        ay "Ahaha...that's good to know."
+        ay "Thanks, you guys."
+        ay "I wouldn't have it any other way."
+        ay "I knew joining couldn't have been a mistake."
+        "Ayame stands up and approaches the door."
+        ay "Well..."
+        ay "I should go back, shouldn't I?"
+        ay "I wouldn't to have failed my duty."
+        ay "But I think I left my keys somewhere..."
+        show ayame zorder 2 at t21
+        "Natsuki smiles."
+        show natsuki zorder 3 at f22
+        n "You know, that sounds pretty bad."
+        n "You should try walking slowly to find them on the way back."
+        n "Maybe you'll find them that way."
+        show ayame zorder 3 at f21
+        show natsuki zorder 2 at t22
+        ay "That sounds like a good idea."
+        ay "I might just do that."
+        ay "Goodbye, you two."
+        ay "I know you wanted to spend some quality time together."
+        ay "So I'll let you have it."
+        ay "After all, I'll see all of you later today."
+        ay "With gifts."
+        show ayame at lhide
+        hide ayame
+        show natsuki zorder 2 at t11
+        "Ayame winks as she closes the door behind her."
+        n "You knew, huh?"
+        mc "I only found out this morning."
+        mc "Are you upset?"
+        n "That you didn't tell me?"
+        n "No way."
+        n "That kind of thing doesn't bother me at all."
+        n "I'm just surprised I didn't know she was a school leader."
+        n "I mean, how could we have not known that?"
+        n "That's a pretty big deal, isn't it?"
+        mc "I have no idea."
+        mc "I'm not even sure who the other school leaders are."
+        mc "I guess I never really bothered knowing who they were since it never affected me."
+        mc "And I was never going to be a leader."
     elif ch15_s_together:
         "Sayori said she wanted to see me at lunch."
         "I wonder what for?"
@@ -4575,7 +4703,30 @@ label ch16_main:
             m "I've been debating all of last night about this."
             mc "About...what?"
             m 1p "You know how I left you at the mall yesterday?"
-            mc "Yeah...?"
+            if ch15_m_together:
+                m "For seemingly no reason."
+                m "I even told you that those items were completely ridiculous."
+                mc "Yeah...?"
+                mc "Why are you bringing this up now?"
+                m "You're not upset about it, are you?"
+                mc "To be honest, it did feel like you just left me."
+                mc "I thought we could have done things together."
+                mc "Even if it wasn't really shopping."
+                m "It's just..."
+                m "You couldn't be involved with this one."
+                m "For reasons beyond my control."
+                m "Please understand."
+                mc "I know you have your reasons."
+                mc "So I can't really blame you."
+                mc "At the very least, you told me the truth."
+                mc "So thank you."
+                m "I'm glad you're so forgiving."
+                m "Anyway, the reason I left you..."
+            else:
+                mc "After you went to the restrooms and disappeared?"
+                mc "It was seemingly out of nowhere."
+                m "I know, and I'm sorry."
+                m "But there was a reason for that."
             m 1q "It's all been to try to help Sayori."
             m "I don't know what I can do."
             m "But I hope it's enough."
@@ -5006,6 +5157,22 @@ label ch16_main:
                 show screen tear(8, offtimeMult=1, ontimeMult=10)
                 $ pause(0.5)
                 hide screen tear
+                # zoom in on Monika's face here will probably need to change truecenter to something
+                show layer master:
+                    truecenter
+                    zoom 1.0
+                    easein 2.0 zoom 2.0
+                    2.0
+                    easeout 2.0 zoom 1.0
+                    yalign 0.5
+                m "What do you think you're doing?"
+                m "Are you trying to jeopardize our plan?"
+                m "You can't do this."
+                m "I know you probably just chose the wrong thing by accident..."
+                m "...right?"
+                show screen tear(8, offtimeMult=1, ontimeMult=10)
+                $ pause(0.5)
+                hide screen tear
             "No.":
                 jump ch16_m_afterchoice
         label ch16_m_forcechoice_1:
@@ -5141,8 +5308,128 @@ label ch16_main:
         m 2l "That was a clever trick."
         mc "Did something happen?"
         m 2a "You could say that."
-        m "Do you remember him making physical contact with you at all?"
+        m 2c "Do you remember him making physical contact with you at all?"
         mc "I don't...remember."
+        m "Unsurprising."
+        m "Maybe I need to find out more about this person."
+        mc "But why?"
+        mc "Even if he does have ulterior motives, what do you think he would do?"
+        m "Aside from wiping your memories?"
+        m "[player], this man clearly has some sort of power."
+        m "Don't you think it's a little coincidental he'd show up on a day like this?"
+        m "Where almost everything is on the line?"
+        mc "I don't know."
+        mc "I have a feeling he's not really a threat."
+        m "We can't rely on that feeling."
+        m "It's better to be safe than sorry, isn't it?"
+        mc "I suppose."
+        mc "Maybe you could ask some other people about him."
+        mc "Maybe they've seen him before."
+        m "If there's one person who knows about him, it's Sayori."
+        mc "Why would Sayori know about him...?"
+        m "It may not be obvious to you, but Sayori knows a lot of things."
+        m "Things you cannot begin to comprehend."
+        m "And things that I've only begun to understand."
+        "I don't really understand what she's talking about."
+        "But she seems sincere about it."
+        mc "If this person is a threat..."
+        mc "Could he be that danger you were talking about?"
+        mc "Or at least...part of it?"
+        m "Like I said, I'll need to learn more about him."
+        m "If the extent of his abilities is only wiping your memory, then it might not be terrible."
+        m "That said, being able to manipulate memories like that could be dangerous on the right hands."
+        m "If he does have other abilities that go beyond that, then we may need to take him seriously."
+        m "It's possible he's just been playing it safe until now."
+        mc "If you say so."
+        "The siren signaling the end of lunch rings."
+        "Has it really been that long already?"
+        m "I guess that's that."
+        m "You know what you have to do, don't you?"
+        mc "Not really."
+        mc "I was going to go to the library before my next--"
+        m "Perfect."
+        m "It seems that part is going as intended at least."
+        mc "Okay, well I'll see you at rehearsals, Monika."
+        m "Before you go..."
+        mc "What is it?"
+        m "Something that might help you with your conversation."
+        m "Animam amisit, inveniet requiem."
+        mc "What...?"
+        mc "Those words don't make any sense."
+        m "Repeat what I just said."
+        mc "Animam amisit, inveniet requiem."
+        mc "Like that?"
+        m "Like that."
+        mc "What's the point?"
+        m "Just remember it."
+        m "It could be useful."
+        m "So don't let it get removed from your memory, no matter what."
+        m "Got that?"
+        mc "Sure, whatever you say."
+        m "Goodbye!"
+        show monika at thide
+        hide monika
+        "Monika happily waves goodbye before leaving."
+        "What do those words mean?"
+        "She just said them then left."
+        "They must be important, right?"
+        "Animam."
+        "Amisit."
+        "Inveniet."
+        "Requiem."
+        "Four words, I think."
+        "It sounds like a different language."
+        "If it is...I wonder what it means?"
+        "And why it could be useful."
+        "I should make my way to the library now."
+        "Something tells me something is waiting for me there."
+        "As I begin to make my way to my locker, I'm stopped at a corner in a corridor."
+        "An arm is blocking my way."
+        "For some reason, the hand seems familiar."
+        $ cl_name = "???"
+        cl "Don't look, if you know what's good for you."
+        "A male voice comes from around the corner."
+        mc "What?"
+        "He's around the corner but I can't look around to see him because of his arm."
+        "I try to push his arm away but it won't budge."
+        "Who is this guy?"
+        cl "Just listen for a minute."
+        cl "Then you can pass through."
+        mc "Who are you?"
+        cl "Those words she told you."
+        cl "Please. Don't use them."
+        mc "..."
+        cl "She didn't choose to be like that."
+        cl "She was left like that because of the transition to this world."
+        "What is this guy talking about?"
+        cl "I can still save her from herself."
+        cl "I just need time."
+        cl "You can trust me."
+        cl "Otherwise I'd just have removed this encounter from memory again."
+        "Remove from my memory?"
+        "Is this who Monika was talking about?"
+        cl "I want you to give her a chance."
+        cl "Though I realize, I may not really have a choice."
+        cl "I can't force you to do that."
+        cl "I don't have the ability to do so and my judgment right now is questionable."
+        cl "All I'm asking you to do it not to say those words."
+        cl "You've got to find another way."
+        mc "What the hell are you talking about?"
+        mc "I don't understand anything you're saying."
+        cl "You will, soon enough."
+        cl "Just...look for another way."
+        "I can see the arm blocking my way trembling slightly."
+        cl "She doesn't deserve to lose that part of herself."
+        cl "She deserves better..."
+        "The man pulls his arm back."
+        "I immediately try to look around the corner but..."
+        "There's no one there."
+        "Was I imagining that?"
+        "What could he possibly mean by \"the transition to this world\"?"
+        "And is that the same person from earlier today...?"
+        "I clear my mind from those thoughts."
+        "They're for another time."
+        "Right now, I really have to get to the library."
     else:
         "I'm just sitting by myself."
         "Normally, I'd be with someone else but everyone seems to be busy today and didn't want to be bothered."
@@ -5463,7 +5750,8 @@ label ch16_main:
                 ay "Even a little bit."
                 ay 2a "This is precisely why I didn't want to reveal I was a leader to you all."
                 mc "Because we'd judge you?"
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=MainMenu(confirm=False))
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
+    $ renpy.utter_restart()
     return
 
 label ch16_play_normal:
