@@ -1566,6 +1566,7 @@ label ch16_main:
         play sound "mod_assets/sfx/timewarp.ogg"
         scene greystream with sunshine
         "I have to try with all I have to force my eyes open."
+        show layer master
         scene bg portraitshop_school
         show sayori 1younga zorder 2 at i11
         with open_eyes
@@ -5271,23 +5272,17 @@ label ch16_main:
                 show screen tear(8, offtimeMult=1, ontimeMult=10)
                 $ pause(0.5)
                 hide screen tear
-                # zoom in on Monika's face here will probably need to change truecenter to something
-                #
-                #
-                #
-                # lots of spaces to remember to change this
                 show layer master:
                     truecenter
-                    zoom 1.0
-                    easein 2.0 zoom 2.0
-                    2.0
-                    easeout 2.0 zoom 1.0
-                    yalign 0.5
+                    zoom 2.75
+                    yalign 0.15
+                    xalign 0.80
                 m "What do you think you're doing?"
                 m "Are you trying to jeopardize our plan?"
                 m "You can't do this."
                 m "I know you probably just chose the wrong thing by accident..."
                 m "...right?"
+                m "I {i}really{/i} hope Sayori didn't notice I did this."
                 show screen tear(8, offtimeMult=1, ontimeMult=10)
                 $ pause(0.5)
                 show layer master
@@ -6032,7 +6027,7 @@ label ch16_main:
             ay "That's right, isn't it?"
             mc "I-I don't remember the smell but it definitely wasn't lavender."
             mc "Maybe it was Jasmine?"
-            mc "The pont is, she wrote about that in her notes?!"
+            mc "The point is, she wrote about that in her notes?!"
         else:
             mc "Natsuki and I went to my house."
             mc "We baked some cupcakes for Monday."
@@ -6118,7 +6113,92 @@ label ch16_main:
         ay "I think we're just about done here anyway."
         ay "What you've told me matches what I saw from Yuri's notes."
         ay "I just feel like it shouldn't."
-        
+        ay "This is all so confusing."
+        mc "Yeah..."
+        "If she's confused then I bet she can't imagine how I feel."
+        "I don't know why she's worrying about details that shouldn't matter to her."
+        "She wasn't even part of the club when this happened."
+        "So why is it so important to her?"
+        ay "Well, I guess that's all I really wanted to talk about."
+        ay "Though now I have more questions than what I started with."
+        mc "I'm sorry I wasn't really able to help."
+        mc "If there's anything more I can do..."
+        ay "No, that's okay."
+        ay "I get the feeling that I have to figure out the rest of this myself."
+        ay "And then, I'll have to make my own decision."
+        mc "Your own decision for what?"
+        ay "Never mind."
+        ay "Thank you for your time, [player]."
+        ay "I'm sure I'll have everything figured out soon."
+        mc "No problem...?"
+        ay "It looks like it's approaching the end of lunch."
+        ay "Perhaps you should get going."
+        mc "Time has really passed by that quickly?"
+        mc "It feels like we've only been here a few moments."
+        ay "You know what they say."
+        ay "Time flies when you're subconsciously wishing it does."
+        mc "I don't think I've ever heard that saying."
+        mc "But does that mean you wanted lunch to be over sooner?"
+        ay "I don't exactly have anything better to do."
+        ay "I'd rather get to my next scheduled activity rather than standing around during lunch."
+        ay "The faster time passes, the sooner I get to get to your club."
+        ay "I think you'll all like the gifts I got for you all."
+        mc "Why did you even do that for us?"
+        mc "We haven't done anything for you."
+        mc "If anything, we should have been the one getting you a gift."
+        ay "Let's just say my family has a disposable income."
+        ay "Besides, it's really not much to be excited about."
+        ay "But you'll see when the time comes."
+        mc "Maybe we can repay you with some of the desserts that Natsuki made."
+        mc "I'm sure she wouldn't mind."
+        ay "No, that's not necessary."
+        ay "You really don't have to do anything."
+        ay "I'm happy to just be a part of the club."
+        ay "To be honest, I thought it was a pretty exclusive club since there was only five members."
+        mc "That's just because no one really has a passion for literature."
+        mc "I didn't even have a passion for literature."
+        mc "Do you have a passion for it?"
+        ay "I'm interested in literature, somewhat."
+        ay "To say I have a passion for it might be a stretch."
+        mc "So why...?"
+        ay "Why?"
+        ay "I suppose I didn't really tell you the full story yesterday."
+        ay "It's true that it's going to be the end of my school life soon."
+        ay "So I really, really wanted to do something with my school life including joining a club."
+        ay "But...none of the clubs really connected with me."
+        ay "I got a lot of invites to join other clubs."
+        ay "Some were even personal invitations from the presidents themselves."
+        ay "But I didn't feel inclined or interested at all."
+        ay "I would just politely say I'd consider it."
+        ay "But in actual fact, I'd already declined."
+        ay "Then I saw something about a Literature Club."
+        ay "Or rather, I heard Yuri talking about it."
+        ay "I knew I just had to ask her about it."
+        mc "Was Yuri the reason you joined?"
+        ay "Not really..."
+        ay "I don't know why, but I just felt {i}something{/i}."
+        ay "It was like..."
+        ay "...something new but also familiar."
+        mc "New but familiar, eh?"
+        mc "That doesn't really make sense."
+        ay "Ahaha, I suppose it doesn't."
+        ay "That might happen a lot."
+        ay "I might say things you or the others can't really understand."
+        ay "That's just part of my charm, I guess."
+        "Ayame shows me a wide smile."
+        mc "You seem like a pretty complicated person, Ayame."
+        mc "You've got this sense of mystery around you."
+        ay "I think I'll take that as a compliment."
+        mc "I'm just saying that I'm kind of excited at the opportunity to try to understand you more."
+        ay "The feeling is mutual, [player]."
+        mc "Then let's try to be good friends."
+        ay "You've got a deal. I'm holding you to that."
+        "Ayame winks at me."
+        ay "Anyway, that's enough for now."
+        ay "You and I both have our own things to do."
+        ay "I'll see you around, [player]."
+        ay "I can't wait to be an official member!"
+        mc "See you, Ayame."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
