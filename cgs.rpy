@@ -170,6 +170,17 @@ image n_cg3_exp2:
 image n_cg4_bg:
     "mod_assets/images/cg/n_cg4_bg.png"
 
+image n_cg5_base:
+    "mod_assets/images/cg/n_cg5_base.png"
+image n_cg5_exp1:
+    "mod_assets/images/cg/n_cg5_exp1.png"
+image n_cg5_exp2:
+    "mod_assets/images/cg/n_cg5_exp2.png"
+image n_cg5_exp3:
+    "mod_assets/images/cg/n_cg5_exp3.png"
+image n_cg5_exp4:
+    "mod_assets/images/cg/n_cg5_exp4.png"
+
 image y_cg1_base:
     "images/cg/y_cg1_base.png"
 image y_cg1_exp1:
