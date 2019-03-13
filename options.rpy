@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "0.9.6d"
+define config.version = "0.9.6e"
 
 
 ## Text that is placed on the game's about screen. To insert a blank line
@@ -154,7 +154,7 @@ define config.allow_skipping = True
 define config.has_autosave = False
 define config.autosave_on_quit = False
 define config.autosave_slots = 0
-define config.layers = [ 'timers', 'master', 'transient', 'screens', 'overlay', 'front' ]
+define config.layers = [ 'timers', 'master', 'transient', 'screens', 'achievements', 'overlay', 'front' ]
 define config.image_cache_size = 64
 define config.predict_statements = 50
 define config.rollback_enabled = True
