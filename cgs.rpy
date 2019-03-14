@@ -201,6 +201,9 @@ image y_cg4_base:
 image y_cg5_base:
     "mod_assets/images/cg/y_cg5_base.png"
 
+image y_cg6_base:
+    "mod_assets/images/cg/y_cg6_base.png"
+
 image s_cg1:
     "images/cg/s_cg1.png"
 

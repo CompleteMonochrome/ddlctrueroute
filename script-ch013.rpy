@@ -8732,44 +8732,63 @@ label ch13_natsukidate:
     mc "You're cute when you're like that, you know."
     n 1bo "...!"
     n "W-Whatever!"
-    "Natsuki takes a fork and takes a slice of the thing in front of her."
+    "Natsuki reaches out in front of her, carefully looking at all the food."
+    "She passes over the number fifteen she ordered and instead picks up one of the cupcakes."
+    "Natsuki picks up the cupcake in front of her."
     "She puts it into her mouth and starts chewing."
-    show natsuki 1bk
+    scene n_cg5_base
+    show n_cg5_exp1
+    show n_cg5_exp4
+    with dissolve_cg
     "The expression on her face says it all."
     "She loves it."
     n "[player], this is..."
     n 1bd "Incredible!"
     n "The flavors, they're...!"
+    hide n_cg5_exp4
+    show n_cg5_exp3 at cgfade
     n "I can't even begin to describe it."
     mc "It's pretty good, isn't it?"
     "I take one of the cupcakes and bite down on it."
     "The explosion of flavor in my mouth is unlike anything I know."
     "I should really go to this place more often."
-    n 2bd "I almost want to try to recreate the flavor coming from this."
+    hide n_cg5_exp1
+    show n_cg5_exp2 at cgfade
+    n "I almost want to try to recreate the flavor coming from this."
     n "It's just unbelievably good!"
+    hide n_cg5_exp2
+    hide n_cg5_exp3
     n "Why have I never heard of this place until now?"
     mc "It's pretty hidden."
     mc "I'm pretty lucky to have found it myself."
-    n 2ba "You don't say..."
-    "Natsuki takes another piece of her dessert."
+    show n_cg5_exp3 at cgfade
+    n "You don't say..."
+    hide n_cg5_exp3
+    show n_cg5_exp4 at cgfade
+    "Natsuki takes another bite of the cupcake."
     mc "What is that anyway?"
+    "I point at the other dish she ordered."
     mc "It looks pretty good."
-    n 2bc "It's number fifteen, like I said."
+    n "Ish a wumberr fifteeh, like I shed."
+    "Despite her mouth being full, I can understand what she's saying."
     mc "But what is number fifteen?"
     mc "You're just saying a number."
-    n 2bk "That's what it's called."
+    hide n_cg5_exp4
+    n "That's what it's called."
     n "You should know more than me."
-    "I take a bite from another cupcake."
-    mc "You should really try this."
-    mc "Maybe you'll get some inspiration from it."
-    "I offer a cupcake to Natsuki."
-    n 1bc "No, thanks."
+    "I take another bite from the cupcake."
+    mc "These are actually so good."
+    mc "Maybe you can get some inspiration from it."
+    n "No, thanks."
     mc "Eh?"
-    mc "I thought you would have wanted one."
-    n 1bq "I don't want it to affect the way I make mine."
+    mc "I thought you would have."
+    show n_cg5_exp3 at cgfade
+    n "I don't want it to affect the way I make mine."
     n "I know it's going to taste amazing."
     n "And I know I'll never be able to replicate it."
-    n 1bs "It'll just make me feel like my cupcakes aren't enough."
+    n "It'll just make me feel like my cupcakes aren't enough."
+    hide n_cg5_exp3
+    show n_cg5_exp2 at cgfade
     n "So I'm not going to eat any."
     mc "..."
     mc "I guess that makes sense."
@@ -8777,41 +8796,55 @@ label ch13_natsukidate:
     mc "I have to say..."
     n "...?"
     mc "Your cupcakes are still better though."
-    n 1bo "W-What?"
+    n "W-What?"
     mc "The cupcakes you brought in for me on the first day."
     mc "It beats these cupcakes any day."
-    "I put down the third and final cupcake I have."
-    n 1bq "You're just saying that."
+    "I put down the cupcake I'm holding."
+    hide n_cg5_exp2
+    n "You're just saying that."
     mc "Am I?"
-    n 1bs "Yeah, you are."
+    n "Yeah, you are."
     n "I don't need your pity, [player]."
     mc "You said you're good at telling lies, right?"
     mc "So..."
+    scene black with dissolve_cg
     "I grab Natsuki's hand."
     mc "Tell me, am I lying?"
-    show natsuki 1bn
     "She looks at my face."
-    n 1bm "...No."
+    n "...No."
     mc "Your cupcakes will always be the best to me, Natsuki."
     mc "Because they're made by you."
     mc "That's all there is to it."
-    n 1bq "This is going to go on, isn't it?"
+    n "This is going to go on, isn't it?"
     mc "What is?"
     n "You talking like that."
     mc "I guess it is."
     n "..."
-    n 1bt "I can live with that."
+    n "I can live with that."
+    scene n_cg5_base
+    show n_cg5_exp3
+    with dissolve_cg
     "Natsuki smiles."
-    n 1bd "We should probably finish our food."
+    n "We should probably finish our food."
     n "It's been a while since we dropped off the portrait."
     mc "Yeah, you're right."
+    mc "Good luck with that number fifteen."
+    n "Oh, don't worry about me."
+    hide n_cg5_exp3
+    show n_cg5_exp4 at cgfade
     "I take the ice cream and start eating it."
     "It's nothing too special, it tastes like normal chocolate ice cream."
     "What's special about it is the actual cone."
     "The cone is made from some kind of dark chocolate but still has that familiar waffle cone taste."
     "It's basically just a really sweet ice cream."
-    "Meanwhile, Natsuki finished off her number fifteen."
+    "Meanwhile, Natsuki started eating her number fifteen."
+    show n_cg5_exp1 at cgfade
+    "Before I can even get through my ice cream, she was already halfway through what looked like a pretty big dessert."
+    "Soon after, she finishes her number fifteen."
     "Whatever that is exactly..."
+    scene bg city_day
+    show natsuki 1bd zorder 2 at t11
+    with dissolve_cg
     mc "I guess that's it."
     mc "Shall we head back?"
     "Natsuki stands up."
