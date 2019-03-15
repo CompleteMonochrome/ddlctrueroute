@@ -523,6 +523,23 @@ label splashscreen:
         pause
         $ renpy.quit()
 
+    # Unlock Achievements
+    if persistent.monika_change and not persistent.monika_gone:
+        $ persistent.achievements_dict["*True Route*"]["achieved"] = True
+    if persistent.custom_starts_used >= 1:
+        $ persistent.achievements_dict["*Custom Start*"]["achieved"] = True
+    if persistent.arc_clear[0]:
+        $ persistent.achievements_dict["*Book of Despair*"]["achieved"] = True
+    if persistent.arc_clear[1]:
+        $ persistent.achievements_dict["*A Second Chance*"]["achieved"] = True
+    if persistent.did_special_event:
+        $ persistent.achievements_dict["*What Will It Take?*"]["achieved"] = True
+    if persistent.did_christmas_event:
+        $ persistent.achievements_dict["*It's Christmas!*"]["achieved"] = True
+    if persistent.yuri_date:
+        $ persistent.achievements_dict["*Sweet, Sweet Love*"]["achieved"] = True
+    if persistent.markov_agreed:
+        $ persistent.achievements_dict["*The Die Is Cast*"]["achieved"] = True
 
     show white
     $ persistent.ghost_menu = False

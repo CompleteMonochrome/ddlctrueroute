@@ -1176,6 +1176,9 @@ label ch9_yuridate:
     y "I just don't want you to feel like you're missing out."
     mc "It was my idea, after all."
     mc "Don't worry about me."
+    "Yuri takes a sip from the soup."
+    "Her face immediately lights up."
+    "I guess it was pretty good."
     $ _history_list.pop()
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)

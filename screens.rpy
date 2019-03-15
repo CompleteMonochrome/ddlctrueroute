@@ -490,12 +490,13 @@ init -501 screen navigation():
                         false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
                     if persistent.playthrough == 0 and persistent.monika_change and not persistent.monika_gone:
                         textbutton _("Custom Start") action If(persistent.playername,
-                        true=Show(screen="confirm", message="Are you sure you want to use Custom Start?\nYou may find different outcomes if you\nchoose differently from your previous choices.",
-                            yes_action=If(persistent.prompt_info,
-                                true=Function(HideConfirmThenName),
-                                false=Start("choose_start")),
-                            no_action=Hide("confirm")),
-                        false=Function(HideConfirmThenName)) text_outlines customstartoutlines text_hover_outlines customstarthover_outlines text_insensitive_outlines customstartinsensitive_outlines
+                            true=Show(screen="confirm", message="Are you sure you want to use Custom Start?\nYou may find different outcomes if you\nchoose differently from your previous choices.",
+                                yes_action=If(persistent.prompt_info,
+                                    true=Function(HideConfirmThenName),
+                                    false=Start("choose_start")),
+                                no_action=Hide("confirm")),
+                            false=Function(HideConfirmThenName)) text_outlines customstartoutlines text_hover_outlines customstarthover_outlines text_insensitive_outlines customstartinsensitive_outlines
+                        textbutton _("Achievements") action [ShowMenu("achievements"), SensitiveIf(renpy.get_screen("achievements") == None)]
 
             else:
 
@@ -1991,6 +1992,82 @@ init -501 screen customstart_twochoice(background,labeltext,image1,text1,image2,
                 size 40
                 text_align 0.5
 
+
+init -501 screen achievements tag menu:
+
+        default achname = Tooltip("")
+        default achdesc = Tooltip("")
+        default gridx = 6
+        default gridy = 6
+        default imageshow = None
+        default colored = False
+
+        use game_menu("{size=24}Achievements{/size}","viewport"):
+
+            fixed:
+                yalign 0.2
+                yfit True
+                order_reverse True
+
+                button:
+                    style "page_label"
+
+                    xalign 0.5
+
+                grid gridx gridy:
+
+                    xalign 0.5
+                    yalign 0
+                    ypos 50
+
+                    spacing 30
+
+                    $ slot = 0
+
+                    for ach in persistent.achievements_dict:
+
+                        imagebutton:
+                            xsize 100
+                            ysize 100
+                            xalign 0.5
+                            yalign 0.5
+
+                            action NullAction()
+                            hovered [achname.Action(persistent.achievements_dict[ach]["title"]), achdesc.Action(persistent.achievements_dict[ach]["text"]), SetScreenVariable("imageshow",persistent.achievements_dict[ach]["icon"]), SetScreenVariable("colored",persistent.achievements_dict[ach]["achieved"]), Function(renpy.restart_interaction)]
+                            unhovered [SetScreenVariable("imageshow",None), SetScreenVariable("colored",False), Function(renpy.restart_interaction)]
+                            hover_sound gui.hover_sound
+
+                            insensitive im.MatrixColor("mod_assets/gui/achievements/achmenulocked.png", im.matrix.saturation(0))
+                            idle im.MatrixColor(persistent.achievements_dict[ach]["icon"], im.matrix.saturation(0))
+                            hover im.MatrixColor(persistent.achievements_dict[ach]["icon"], im.matrix.saturation(0.2))
+                            selected_idle im.MatrixColor(persistent.achievements_dict[ach]["icon"], im.matrix.saturation(0.7))
+                            selected_hover persistent.achievements_dict[ach]["icon"]
+                            selected persistent.achievements_dict[ach]["achieved"]
+                            sensitive (persistent.achievements_dict[ach]["achieved"] or (persistent.achievements_dict[ach]["achieved"] and persistent.achievements_dict[ach]["hidden"]) or (not persistent.achievements_dict[ach]["achieved"] and not persistent.achievements_dict[ach]["hidden"]))
+
+                    # Fill the rest with empty buttons
+                    for i in range(0, 5):
+                        $ slot += 1
+                        button:
+                            xsize 100
+                            ysize 100
+                            xalign 0.5
+                            yalign 0.5
+
+                            action NullAction()
+
+        fixed:
+            add (None if imageshow == None else im.Scale(imageshow, 115, 115) if colored else im.Scale(im.MatrixColor(imageshow, im.matrix.saturation(0)), 115, 115)) xpos 490 yalign 0.01
+            text achname.value:
+                text_align 0.0
+                size 30
+                xpos 627
+                yalign 0.04
+            text achdesc.value:
+                text_align 0.0
+                size 24
+                xpos 627
+                yalign 0.10
 
 init -1 style confirm_frame is gui_frame
 init -1 style confirm_prompt is gui_prompt

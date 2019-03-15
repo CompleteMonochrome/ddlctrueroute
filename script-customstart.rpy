@@ -41,6 +41,7 @@ label choose_start:
     $ sayori_personality = 0
     $ m_show = True
     $ from_custom_start = True
+    $ get_achievement("*Custom Start*")
     if persistent.custom_starts_used > 50:
         s "How have you used this so many times?"
         s "You've definitely experienced doing bad things, haven't you?"

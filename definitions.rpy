@@ -1,6 +1,6 @@
 define persistent.demo = False
 define persistent.steam = ("steamapps" in config.basedir.lower())
-define config.developer = False
+define config.developer = True
 
 python early:
     import singleton
@@ -4741,11 +4741,13 @@ default persistent.markov_agreed = False
 default persistent.did_special_event = False
 default persistent.did_christmas_event = False
 default persistent.markov_christmas = False
+default persistent.ch9_yuri_date = False
 default persistent.ch13_nat_date = False
 default persistent.ch15_sayori_saw_clerk = False
 default persistent.ch15_sayori_chance = False
 default persistent.ch16_bad_part = "_1"
 default persistent.ch16_bad_ending_times = 0
+default persistent.ch16_say_date = False
 default persistent.clerk_sayori_bad_ending = False
 # Local Save
 # Player Gender Nouns

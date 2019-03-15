@@ -8732,10 +8732,10 @@ label ch13_natsukidate:
     mc "You're cute when you're like that, you know."
     n 1bo "...!"
     n "W-Whatever!"
+    show natsuki 1bc
     "Natsuki reaches out in front of her, carefully looking at all the food."
-    "She passes over the number fifteen she ordered and instead picks up one of the cupcakes."
-    "Natsuki picks up the cupcake in front of her."
-    "She puts it into her mouth and starts chewing."
+    "She passes over the number fifteen she ordered and instead directs her attention to the cupcakes."
+    "She picks one up and bites into it."
     scene n_cg5_base
     show n_cg5_exp1
     show n_cg5_exp4
@@ -8743,13 +8743,13 @@ label ch13_natsukidate:
     "The expression on her face says it all."
     "She loves it."
     n "[player], this is..."
-    n 1bd "Incredible!"
+    n "Incredible!"
     n "The flavors, they're...!"
     hide n_cg5_exp4
     show n_cg5_exp3 at cgfade
     n "I can't even begin to describe it."
     mc "It's pretty good, isn't it?"
-    "I take one of the cupcakes and bite down on it."
+    "I also take one of the cupcakes and bite down on it."
     "The explosion of flavor in my mouth is unlike anything I know."
     "I should really go to this place more often."
     hide n_cg5_exp1
@@ -8845,6 +8845,7 @@ label ch13_natsukidate:
     scene bg city_day
     show natsuki 1bd zorder 2 at t11
     with dissolve_cg
+    $ get_achievement("*Sweet, Sweet Love*")
     mc "I guess that's it."
     mc "Shall we head back?"
     "Natsuki stands up."
