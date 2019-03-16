@@ -6,8 +6,6 @@ init python:
 label ch12_main:
     if (y_appeal >= 1 or y_appealS >= 1) and (m_appeal >= 1 or m_appealS >= 1) and (s_appeal >= 1 or s_appealS >= 1) and (n_appeal >= 1 or n_appealS >= 1):
         $ get_achievement("*Playboy*")
-    if ch11_did_all_tasks:
-        $ get_achievement("*Strawberries*")
     # Setup Call for currentuser
     python:
         process_list = []
@@ -37,6 +35,8 @@ label ch12_main:
         $ from_custom_start = False
         $ quick_menu = True
     else:
+        if ch11_did_all_tasks:
+            $ get_achievement("*Strawberries*")
         with dissolve_scene_half
     play music t2
     "Sayori told me on the phone this morning that she would meet me in the club."
