@@ -215,13 +215,6 @@ init python:
                             "achieved": False,
                             "hidden": True
                             }
-        persistent.achievements_dict["*Illusion of Choice*"] = {"type": 0,
-                            "title": "Illusion of Choice",
-                            "text": "Try an option that leads to the same result.",
-                            "icon": "mod_assets/gui/achievements/achillusion.png",
-                            "achieved": False,
-                            "hidden": False
-                            }
         persistent.achievements_dict["*When Will It End?!*"] = {"type": 0,
                             "title": "When Will It End?!",
                             "text": "Get through Yuri's play choosing the play along option.",
@@ -334,10 +327,10 @@ init python:
                             "achieved": False,
                             "hidden": False
                             }
-        persistent.achievements_dict["*Sadist*"] = {"type": 0,
-                            "title": "Sadist*",
-                            "text": "Continue to do the wrong thing after a rewind.",
-                            "icon": "mod_assets/gui/achievements/achsadist.png",
+        persistent.achievements_dict["*Illusion of Choice*"] = {"type": 0,
+                            "title": "Illusion of Choice",
+                            "text": "Try an option that leads to the same result.",
+                            "icon": "mod_assets/gui/achievements/achillusion.png",
                             "achieved": False,
                             "hidden": True
                             }
@@ -347,6 +340,13 @@ init python:
                             "icon": "mod_assets/gui/achievements/achfastestman.png",
                             "achieved": False,
                             "hidden": False
+                            }
+        persistent.achievements_dict["*Sadist*"] = {"type": 0,
+                            "title": "Sadist*",
+                            "text": "Continue to do the wrong thing after a rewind.",
+                            "icon": "mod_assets/gui/achievements/achsadist.png",
+                            "achieved": False,
+                            "hidden": True
                             }
         persistent.achievements_dict["*Playboy*"] = {"type": 0,
                             "title": "Playboy",

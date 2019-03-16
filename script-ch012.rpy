@@ -1443,6 +1443,7 @@ label ch12_play:
         menu:
             m "So, what will it be?"
             "The easy solution." if not persistent.n_playday[1]:
+                $ get_achievement("*Easy Modo?!*")
                 $ persistent.n_playday[1] = True
                 $ renpy.save_persistent()
                 $ ch12_natsuki_reluctance += 1
