@@ -229,6 +229,13 @@ init python:
                             "achieved": False,
                             "hidden": False
                             }
+        persistent.achievements_dict["*Maybe More Than A Friend*"] = {"type": 0,
+                            "title": "Maybe More Than A Friend",
+                            "text": "Read \"A Past Life\" by Sayori.",
+                            "icon": "mod_assets/gui/achievements/achmorethanfriends.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
         persistent.achievements_dict["*Easy Modo?!*"] = {"type": 0,
                             "title": "Easy Modo?!",
                             "text": "Accept Monika's help during Natsuki's play.",
@@ -306,6 +313,13 @@ init python:
                             "achieved": False,
                             "hidden": False
                             }
+        persistent.achievements_dict["*True Friendship*"] = {"type": 0,
+                            "title": "True Friendship",
+                            "text": "Make Yuri and Natsuki befriend each other.",
+                            "icon": "mod_assets/gui/achievements/achtruefriends.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
         persistent.achievements_dict["*The Die Is Cast*"] = {"type": 0,
                             "title": "The Die Is Cast",
                             "text": "Cast the die.",
@@ -350,7 +364,7 @@ init python:
                             }
         persistent.achievements_dict["*Playboy*"] = {"type": 0,
                             "title": "Playboy",
-                            "text": "Write for each girl at least once in a single playthrough.",
+                            "text": "Write for each girl at least once without going on a date.",
                             "icon": "mod_assets/gui/achievements/achplayboy.png",
                             "achieved": False,
                             "hidden": False

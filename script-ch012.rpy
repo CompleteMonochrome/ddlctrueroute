@@ -4,7 +4,7 @@ init python:
             renpy.jump("ch12_harukiplace")
 
 label ch12_main:
-    if (y_appeal >= 1 or y_appealS >= 1) and (m_appeal >= 1 or m_appealS >= 1) and (s_appeal >= 1 or s_appealS >= 1) and (n_appeal >= 1 or n_appealS >= 1):
+    if (y_appeal >= 1 or y_appealS >= 1) and (m_appeal >= 1 or m_appealS >= 1) and (s_appeal >= 1 or s_appealS >= 1) and (n_appeal >= 1 or n_appealS >= 1) and not yuri_date and not natsuki_date and not ch15_s_together:
         $ get_achievement("*Playboy*")
     # Setup Call for currentuser
     python:
