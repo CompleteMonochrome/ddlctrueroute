@@ -215,6 +215,41 @@ init python:
                             "achieved": False,
                             "hidden": True
                             }
+        persistent.achievements_dict["*Illusion of Choice*"] = {"type": 0,
+                            "title": "Illusion of Choice",
+                            "text": "Try an option that leads to the same result.",
+                            "icon": "mod_assets/gui/achievements/achillusion.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
+        persistent.achievements_dict["*When Will It End?!*"] = {"type": 0,
+                            "title": "When Will It End?!",
+                            "text": "Get through Yuri's play choosing the play along option.",
+                            "icon": "mod_assets/gui/achievements/achwhenwillitend.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
+        persistent.achievements_dict["*Detective*"] = {"type": 0,
+                            "title": "Detective",
+                            "text": "Explore all the rooms in Natsuki's house.",
+                            "icon": "mod_assets/gui/achievements/achdetective.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
+        persistent.achievements_dict["*Easy Modo?!*"] = {"type": 0,
+                            "title": "Easy Modo?!",
+                            "text": "Accept Monika's help during Natsuki's play.",
+                            "icon": "mod_assets/gui/achievements/acheasymodo.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
+        persistent.achievements_dict["*Back From The Dead*"] = {"type": 0,
+                            "title": "Back From The Dead",
+                            "text": "Create Haruki.chr during Natsuki's play.",
+                            "icon": "mod_assets/gui/achievements/achbackfromdead.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
         persistent.achievements_dict["*A Father's Redemption*"] = {"type": 0,
                             "title": "A Father's Redemption",
                             "text": "Make Yasuhiro regret his past actions.",
@@ -233,13 +268,6 @@ init python:
                             "title": "Together Once More",
                             "text": "Bring Natsuki's whole family back together.",
                             "icon": "mod_assets/gui/achievements/achtogetheroncemore.png",
-                            "achieved": False,
-                            "hidden": False
-                            }
-        persistent.achievements_dict["*Strawberries*"] = {"type": 0,
-                            "title": "Strawberries",
-                            "text": "Use strawberries to do the impossible.",
-                            "icon": "mod_assets/gui/achievements/achstrawberries.png",
                             "achieved": False,
                             "hidden": False
                             }
@@ -271,19 +299,19 @@ init python:
                             "achieved": False,
                             "hidden": True
                             }
-        persistent.achievements_dict["*Loneliness Is Bliss*"] = {"type": 0,
-                            "title": "Loneliness Is Bliss",
-                            "text": "Make it to Inauguration Day alone.",
-                            "icon": "mod_assets/gui/achievements/achblank.png",
-                            "achieved": False,
-                            "hidden": False
-                            }
         persistent.achievements_dict["*Let Your Hair Down*"] = {"type": 0,
                             "title": "Let Your Hair Down",
                             "text": "Make Monika wear her hair down.",
                             "icon": "mod_assets/gui/achievements/achdownmonika.png",
                             "achieved": False,
                             "hidden": True
+                            }
+        persistent.achievements_dict["*Loneliness Is Bliss*"] = {"type": 0,
+                            "title": "Loneliness Is Bliss",
+                            "text": "Make it to Inauguration Day alone.",
+                            "icon": "mod_assets/gui/achievements/achblank.png",
+                            "achieved": False,
+                            "hidden": False
                             }
         persistent.achievements_dict["*The Die Is Cast*"] = {"type": 0,
                             "title": "The Die Is Cast",
@@ -292,6 +320,13 @@ init python:
                             "achieved": False,
                             "hidden": True
                             }
+        persistent.achievements_dict["*Strawberries*"] = {"type": 0,
+                            "title": "Strawberries",
+                            "text": "Use strawberries to do the impossible.",
+                            "icon": "mod_assets/gui/achievements/achstrawberries.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
         persistent.achievements_dict["*Just Do It*"] = {"type": 0,
                             "title": "Just Do It",
                             "text": "Be forced to select an option.",
@@ -299,17 +334,24 @@ init python:
                             "achieved": False,
                             "hidden": False
                             }
+        persistent.achievements_dict["*Sadist*"] = {"type": 0,
+                            "title": "Sadist*",
+                            "text": "Continue to do the wrong thing after a rewind.",
+                            "icon": "mod_assets/gui/achievements/achsadist.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
         persistent.achievements_dict["*Fastest Man Alive*"] = {"type": 0,
                             "title": "Fastest Man Alive",
                             "text": "Make a choice that quickly disappears.",
                             "icon": "mod_assets/gui/achievements/achfastestman.png",
                             "achieved": False,
-                            "hidden": True
+                            "hidden": False
                             }
-        persistent.achievements_dict["*Back From The Dead*"] = {"type": 0,
-                            "title": "Back From The Dead",
-                            "text": "Create Haruki.chr.",
-                            "icon": "mod_assets/gui/achievements/achbackfromdead.png",
+        persistent.achievements_dict["*Playboy*"] = {"type": 0,
+                            "title": "Playboy",
+                            "text": "Write for each girl at least once in a single playthrough.",
+                            "icon": "mod_assets/gui/achievements/achplayboy.png",
                             "achieved": False,
                             "hidden": False
                             }
@@ -317,6 +359,41 @@ init python:
                             "title": "Another Perspective",
                             "text": "Unlock another perspective on Inauguration Day.",
                             "icon": "mod_assets/gui/achievements/achnewperspective.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
+        persistent.achievements_dict["*Can You Hear Me?*"] = {"type": 0,
+                            "title": "Can You Hear Me?",
+                            "text": "Listen to all 3 pieces Monika composed.",
+                            "icon": "mod_assets/gui/achievements/achcanyouhearme.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*Good Guy Clerk*"] = {"type": 0,
+                            "title": "Good Guy Clerk",
+                            "text": "Encounter the Mysterious Clerk.",
+                            "icon": "mod_assets/gui/achievements/achgoodguyclerk.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*Who Are You?*"] = {"type": 0,
+                            "title": "Who Are You?",
+                            "text": "Enter a poem game with completely new people.",
+                            "icon": "mod_assets/gui/achievements/achwhoareyou.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*Dark Side*"] = {"type": 0,
+                            "title": "Dark Side",
+                            "text": "Achieve the evil Monika ending.",
+                            "icon": "mod_assets/gui/achievements/achdarkside.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*Is This The Right Mod?*"] = {"type": 0,
+                            "title": "Is This The Right Mod?",
+                            "text": "Play Monika After Story.",
+                            "icon": "mod_assets/gui/achievements/achmas.png",
                             "achieved": False,
                             "hidden": True
                             }

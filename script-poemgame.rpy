@@ -384,6 +384,7 @@ label poem(transition=True,totalWords=20,ayame_poem=False,ayame_word="Ayame",aya
     elif ayame_poem:
         show glitch_sticker at sticker_5other
     elif poem_ending == 4:
+        $ get_achievement("*Who Are You?*")
         show mo_sticker at sticker_left
         show d_sticker at sticker_mid
         show ay_sticker at sticker_right

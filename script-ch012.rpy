@@ -4,6 +4,10 @@ init python:
             renpy.jump("ch12_harukiplace")
 
 label ch12_main:
+    if (y_appeal >= 1 or y_appealS >= 1) and (m_appeal >= 1 or m_appealS >= 1) and (s_appeal >= 1 or s_appealS >= 1) and (n_appeal >= 1 or n_appealS >= 1):
+        $ get_achievement("*Playboy*")
+    if ch11_did_all_tasks:
+        $ get_achievement("*Strawberries*")
     # Setup Call for currentuser
     python:
         process_list = []
@@ -43,6 +47,7 @@ label ch12_main:
     "It feels almost unnatural."
     "But it isn't long as Monika arrives."
     if m_appeal >= 4 and ch11_monika_talked and ch11_monika_dinner and ch11_did_all_tasks:
+        $ get_achievement("*True Monika, Again*")
         $ monika_type = 0
         show monika 1e zorder 2 at t11
         m "Hi [player]..."
@@ -2028,6 +2033,7 @@ label ch12_play:
     return
 
 label ch12_harukiplace:
+    $ get_achievement("*Back From The Dead*")
     python:
         persistent.n_playday[4] = True
         s.display_args["callback"] = None
@@ -2710,6 +2716,7 @@ label ch12_harukiplace:
             "Sayori exits the gym, almost skipping."
             "She seems way too happy about this whole thing."
             $ ch12_outcome = 3
+            $ get_achievement("*Together Once More*")
         else:
             $ natsuki_approval += 1
             show dadsuki 1h zorder 3 at hf43
@@ -2985,6 +2992,7 @@ label ch12_harukiplace:
             hide sayori
             show yuri zorder 2 at t11
             "Sayori looks around for a couple of seconds before heading into the gym's storage shed."
+            $ get_achievement("*A Mother's Love*")
             $ ch12_outcome = 2
     else:
         mo 1i "Let go of me."
@@ -3804,6 +3812,7 @@ label ch12_harukinoplace:
         show yuri zorder 2 at t11
         "Sayori grabs her bag and leaves the gym."
         "She stops once she steps outside and says something to who I can only assume is Natsuki before waving goodbye."
+        $ get_achievement("*A Father's Redemption*")
         $ ch12_outcome = 1
     else:
         if natsuki_approval > 0:
@@ -4345,4 +4354,5 @@ label ch12_end:
     # Set variables for Sayori's arc!!!
     $ persistent.arc_clear[1] = True
     $ renpy.save_persistent()
+    $ get_achievement("*A Second Chance*")
     return

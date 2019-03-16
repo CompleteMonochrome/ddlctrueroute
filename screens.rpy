@@ -1998,7 +1998,7 @@ init -501 screen achievements tag menu:
         default achname = Tooltip("")
         default achdesc = Tooltip("")
         default gridx = 6
-        default gridy = 6
+        default gridy = 7
         default imageshow = None
         default colored = False
 
@@ -2046,15 +2046,15 @@ init -501 screen achievements tag menu:
                             sensitive (persistent.achievements_dict[ach]["achieved"] or (persistent.achievements_dict[ach]["achieved"] and persistent.achievements_dict[ach]["hidden"]) or (not persistent.achievements_dict[ach]["achieved"] and not persistent.achievements_dict[ach]["hidden"]))
 
                     # Fill the rest with empty buttons
-                    for i in range(0, 5):
-                        $ slot += 1
-                        button:
-                            xsize 100
-                            ysize 100
-                            xalign 0.5
-                            yalign 0.5
-
-                            action NullAction()
+                    # for i in range(0, 5):
+                    #     $ slot += 1
+                    #     button:
+                    #         xsize 100
+                    #         ysize 100
+                    #         xalign 0.5
+                    #         yalign 0.5
+                    #
+                    #         action NullAction()
 
         fixed:
             add (None if imageshow == None else im.Scale(imageshow, 115, 115) if colored else im.Scale(im.MatrixColor(imageshow, im.matrix.saturation(0)), 115, 115)) xpos 490 yalign 0.01

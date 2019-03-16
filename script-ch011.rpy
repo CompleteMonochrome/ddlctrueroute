@@ -2407,6 +2407,7 @@ label ch11_dinner:
 
 label ch11_bad:
     if not persistent.sayori_natsuki_bad_ending:
+        $ get_achievement("*Who's Natsuki?*")
         play music mendglitch fadeout 2.0
         if natsuki_approval > 0:
             $ natsuki_approval -= 1

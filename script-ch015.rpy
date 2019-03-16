@@ -13,12 +13,15 @@ init python:
                 renpy.jump("ch15_delete")
 
 label ch15_main:
+    if (y_appeal >= 1 or y_appealS >= 1) and (m_appeal >= 1 or m_appealS >= 1) and (s_appeal >= 1 or s_appealS >= 1) and (n_appeal >= 1 or n_appealS >= 1):
+        $ get_achievement("*Playboy*")
     if ch12_markov_agree:
         $ persistent.markov_agreed = True
         $ renpy.save_persistent()
         python:
             try: renpy.file(config.basedir + "/the die is cast")
             except: open(config.basedir + "/the die is cast", "wb").write(renpy.file("the die is cast").read())
+        $ get_achievement("*The Die Is Cast*")
     scene black
     show sayori 1a zorder 2 at t11
     if from_custom_start:
@@ -4002,6 +4005,7 @@ label ch15_exclusive_sayori_together:
     "Sayori sighs."
     s "Okay, [player]."
     s "You win."
+    $ get_achievement("*True Sayori*")
     s "You can come with me."
     mc "Really? That's great."
     mc "Thank you for this, Sayori."
@@ -4559,6 +4563,7 @@ label ch15_exclusive_sayori_together:
     play music t17 fadeout 0.5
     $ persistent.ch15_sayori_saw_clerk = True
     $ renpy.save_persistent()
+    $ get_achievement("*Good Guy Clerk*")
     cl "My my, where are your manners dear?"
     cl "Surely you haven't forgotten how to say the word 'please' since last we met, have you?"
     cl 4b "Ohoho, and it seems we've got company."
@@ -4901,6 +4906,7 @@ label ch15_exclusive_sayori_together:
     cl "Then it's worse than I thought."
     cl "But we can still do this, we just--"
     call poem(False,10,True)
+    $ get_achievement("*The Truth*")
     scene bg mall_sunset with open_eyes
     play music t3g fadein 0.5
     queue music t3g2

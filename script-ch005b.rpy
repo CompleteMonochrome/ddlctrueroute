@@ -656,6 +656,7 @@ label ch5_mainc:
     else:
         $ sayori_confess = False
 
+    $ get_achievement("*True Route*")
     "It's the day of the festival."
     "I expected to be walking with Sayori to the festival today."
     "Instead, she told me she was already walking with someone else."

@@ -1,4 +1,6 @@
 label ch13_main:
+    if y_appeal >= 1 and m_appeal >= 1 and s_appeal >= 1 and n_appeal >= 1:
+        $ get_achievement("*Playboy*")
     scene black
     show sayori 1b zorder 2 at t11
     if from_custom_start:
@@ -295,6 +297,7 @@ label ch13_main:
         python:
             try: renpy.file(config.basedir + "/the die is cast")
             except: open(config.basedir + "/the die is cast", "wb").write(renpy.file("the die is cast").read())
+        $ get_achievement("*The Die Is Cast*")
     "I think I'm the last one to get to the Literature Club today."
     window auto
     "I guess I shouldn't have spent so much time wandering the school yard."
@@ -349,6 +352,7 @@ label ch13_main:
         m 4b "Anyway, we should get inside."
         m "We've kept the others waiting for long enough."
     elif ch12_markov_agree and monika_type == 1:
+        $ get_achievement("*Let Your Hair Down*")
         show monika 1a zorder 2 at t11
         m "Hi [player]~"
         "It's Monika, but..."
@@ -5481,6 +5485,7 @@ label ch13_exclusive_monika:
         menu:
             "Should I listen to some of it now?"
             "Yes.":
+                $ persistent.ch13_mon_tracks[0] = True
                 m 1a "Alright...here goes nothing."
                 "Monika moves towards her keyboard, takes a seat and repositions the sheet music."
                 m "I call this piece \"Your Reality\" and I hope you like it~"
@@ -5488,6 +5493,8 @@ label ch13_exclusive_monika:
                 play music "<to 9.0>bgm/credits.ogg" noloop
                 $ pause(9.0)
                 play music t6 fadeout 2.0
+                if persistent.ch13_mon_tracks[0] and persistent.ch13_mon_tracks[1] and persistent.ch13_mon_tracks[2]:
+                    $ get_achievement("*Can You Hear Me?*")
                 "Monika smiles and stands from where she was sitting."
                 m 2e "So...what do you think?"
                 m "It was just a preview but..."
@@ -5641,6 +5648,7 @@ label ch13_exclusive_monika:
         menu:
             m "But I'd like to give you the choice~"
             "Yes.":
+                $ persistent.ch13_mon_tracks[1] = True
                 m 1b "Well...here goes nothing."
                 "Monika approaches her keyboard and takes a deep breath."
                 "She turns it on before looking at me and smiling."
@@ -5649,6 +5657,8 @@ label ch13_exclusive_monika:
                 play music "<to 9.0>mod_assets/bgm/15.ogg" noloop
                 $ pause(9.0)
                 play music t6 fadeout 2.0
+                if persistent.ch13_mon_tracks[0] and persistent.ch13_mon_tracks[1] and persistent.ch13_mon_tracks[2]:
+                    $ get_achievement("*Can You Hear Me?*")
                 m "So...what did {i}you{/i} think?"
                 mc "That was amazing, Monika."
                 mc "I'm sure once you finish practicing it, everybody will love it."
@@ -5917,6 +5927,7 @@ label ch13_exclusive_monika:
         menu:
             m "Do you want to hear a little bit of it?"
             "Yes.":
+                $ persistent.ch13_mon_tracks[2] = True
                 m 1b "Well...here goes nothing."
                 "Monika approaches her keyboard and takes a deep breath."
                 "She turns it on before looking at me and smiling."
@@ -5924,6 +5935,8 @@ label ch13_exclusive_monika:
                 play music "<to 9.0>mod_assets/bgm/16.ogg" noloop
                 $ pause(9.0)
                 play music t2 fadeout 2.0
+                if persistent.ch13_mon_tracks[0] and persistent.ch13_mon_tracks[1] and persistent.ch13_mon_tracks[2]:
+                    $ get_achievement("*Can You Hear Me?*")
                 m 1a "What do you think?"
                 m "It's only a short bit but I hope you liked it."
                 mc "That was amazing, Monika."
@@ -5941,6 +5954,7 @@ label ch13_exclusive_monika:
             m 2b "I particularly like this one."
             m "So thanks for making it easier for me."
         else:
+            $ get_achievement("*Illusion of Choice*")
             m 2d "This one was quite difficult to find."
             m "I even had to refurbish it a little bit."
         "She pulls a red book from the pile. The cover is plain, just a simple eye on it."
@@ -8182,6 +8196,7 @@ label ch13_natsukidate:
     show natsuki zorder 2 at t21
     show mysteriousclerk 2a zorder 3 at f22
     play music t17 fadeout 2.0
+    $ get_achievement("*Good Guy Clerk*")
     cl "Sorry for the mess, but there was an art class just before!"
     "Suddenly, a loosely kept man appears in front of us."
     "He seems like the type of person who would keep a messy room..."

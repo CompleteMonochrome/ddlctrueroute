@@ -1,4 +1,6 @@
 label ch8_main:
+    if (y_appeal >= 1 or y_appealS >= 1) and (m_appeal >= 1 or m_appealS >= 1) and (s_appeal >= 1 or s_appealS >= 1) and (n_appeal >= 1 or n_appealS >= 1):
+        $ get_achievement("*Playboy*")
     $ persistent.autoload = ""
     $ renpy.save_persistent()
     $ quick_menu = True
@@ -79,6 +81,7 @@ label ch8_main:
             s "Do you know what she did?"
             s "She went completely crazy..."
             s "As soon as she entered the club she..."
+            $ get_achievement("*Genocide*")
             $ gtext = glitchtext(10)
             s "[gtext] was in the way and..."
             s "..."
@@ -125,6 +128,7 @@ label ch8_main:
                     renpy.save('1-1')
                 jump ch7_redo
             else:
+                $ get_achievement("*Sadist*")
                 s "I hope you realize that."
                 s "There's no chance for Yuri to be truly happy anymore."
                 s "I'll have to..."
@@ -1374,6 +1378,8 @@ label ch8_main:
     return
 
 label ch8_end:
+    if playalong:
+        $ get_achievement("*When Will It End?!*")
     scene bg corridor
     show natsuki 1g zorder 2 at i31
     show sayori 1a zorder 2 at i32
@@ -1907,6 +1913,7 @@ label ch8_end:
         mc "And I still don't understand why you want me to."
         m 1g "[player]..."
         if m_appeal == 2 and did_all_tasks:
+            $ get_achievement("*True Monika*")
             m "You have to get rid of it."
             m 1f "I can't help you with that..."
             m 1i "That...{i}thing{/i}..."
@@ -2032,4 +2039,5 @@ label ch8_end:
         "I shouldn't think about it too much, I need to get home."
     $ persistent.arc_clear[0] = True
     $ renpy.save_persistent()
+    $ get_achievement("*Book of Despair*")
     return

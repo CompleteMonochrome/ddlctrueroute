@@ -971,6 +971,7 @@ label christmas_chapter:
     "I wander around the mall for a bit, not really paying attention to where I'm going."
     "I've just been trying to figure out what to get everyone but I'm out of ideas."
     show mysteriousclerk 1chk zorder 2 at t11
+    $ get_achievement("*Good Guy Clerk*")
     cl "Hey there, little [player_other]."
     cl "Watch where you're going."
     "A strange looking man appears in front of me."
@@ -2306,6 +2307,7 @@ label christmas_chapter:
         $ persistent.did_christmas_event = True
         $ persistent.markov_christmas = True
         $ christmas_chapter = False
+        $ get_achievement("*It's Christmas!*")
         $ style.say_window = style.window
         window show(None)
         window auto
@@ -2710,6 +2712,7 @@ label christmas_chapter:
         scene black with dissolve_scene_full
         $ persistent.did_christmas_event = True
         $ christmas_chapter = False
+        $ get_achievement("*It's Christmas!*")
         $ pause(1.0)
         $ style.say_window = style.window
         $ quick_menu = True

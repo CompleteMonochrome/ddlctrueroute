@@ -4712,6 +4712,7 @@ default y_exclusivewatched = False
 
 # Mod Variables
 # Persistent
+default persistent.got_sadist = False
 default persistent.name_saves = False
 default persistent.prompt_info = False
 default persistent.custom_starts_used = 0
@@ -4743,6 +4744,7 @@ default persistent.did_christmas_event = False
 default persistent.markov_christmas = False
 default persistent.ch9_yuri_date = False
 default persistent.ch13_nat_date = False
+default persistent.ch13_mon_tracks = [False,False,False]
 default persistent.ch15_sayori_saw_clerk = False
 default persistent.ch15_sayori_chance = False
 default persistent.ch16_bad_part = "_1"

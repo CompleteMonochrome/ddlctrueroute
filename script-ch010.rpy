@@ -1156,6 +1156,7 @@ label ch10_nat_house:
     with close_eyes
 
     if persistent.natsuki_house[0] and persistent.natsuki_house[1] and persistent.natsuki_house[2] and persistent.natsuki_house[3]:
+        $ get_achievement("*Detective*")
         $ check_whole_house = True
         $ check_some_house = True
     if persistent.natsuki_house[0]:

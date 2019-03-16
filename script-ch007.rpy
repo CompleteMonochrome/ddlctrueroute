@@ -1,4 +1,6 @@
 label ch7_main:
+    if (y_appeal >= 1 or y_appealS >= 1) and (m_appeal >= 1 or m_appealS >= 1) and (s_appeal >= 1 or s_appealS >= 1) and (n_appeal >= 1 or n_appealS >= 1):
+        $ get_achievement("*Playboy*")
     # Setup Variable for Replay
     if persistent.ch6_task[2]:
         $ did_all_tasks = True

@@ -142,6 +142,7 @@ label start:
         # Here because of jump usage in ch6_end
         label ch6_after:
         if persistent.ch6_task[2]:
+            $ get_achievement("*Strawberries*")
             call poem
         elif read_book and not persistent.ch6_task[2]:
             call poem(True,10)

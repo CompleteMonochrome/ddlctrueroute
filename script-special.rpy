@@ -639,6 +639,7 @@ label special_chapter:
     scene black with dissolve_scene_full
     $ persistent.did_special_event = True
     $ special_chapter = False
+    $ get_achievement("*What Will It Take?*")
     $ pause(1.0)
     $ style.say_window = style.window
     $ renpy.utter_restart()

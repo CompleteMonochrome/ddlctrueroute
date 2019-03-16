@@ -1,4 +1,6 @@
 label ch9_main:
+    if (y_appeal >= 1 or y_appealS >= 1) and (m_appeal >= 1 or m_appealS >= 1) and (s_appeal >= 1 or s_appealS >= 1) and (n_appeal >= 1 or n_appealS >= 1):
+        $ get_achievement("*Playboy*")
     python:
         process_list = []
         currentuser = ""
@@ -1188,6 +1190,7 @@ label ch9_yuridate:
     stop sound
     hide screen tear
     window show(None)
+    $ get_achievement("*The Bashful Lady*")
     "We're already finished eating our meal.{fast}"
     window auto
     "I head to the counter to pay the bill."

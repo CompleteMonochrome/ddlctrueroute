@@ -5,6 +5,7 @@ label ch14_main:
         python:
             try: renpy.file(config.basedir + "/the die is cast")
             except: open(config.basedir + "/the die is cast", "wb").write(renpy.file("the die is cast").read())
+        $ get_achievement("*The Die Is Cast*")
     scene black
     if persistent.markov_agreed:
         if from_custom_start:

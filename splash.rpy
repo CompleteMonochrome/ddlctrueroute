@@ -374,6 +374,8 @@ label splashscreen:
                     python:
                         delete_character("ûüýþ")
                         delete_all_saves()
+                        if persistent.achievements_dict["*Sadist*"]["achieved"]:
+                            renpy.save('sadisttracker')
                         renpy.loadsave.location.unlink_persistent()
                         renpy.persistent.should_save_persistent = False
                         renpy.utter_restart()
@@ -540,6 +542,11 @@ label splashscreen:
         $ persistent.achievements_dict["*Sweet, Sweet Love*"]["achieved"] = True
     if persistent.markov_agreed:
         $ persistent.achievements_dict["*The Die Is Cast*"]["achieved"] = True
+    if renpy.exists(check_mod("Monika After Story")) and persistent.monika_change and not persistent.monika_gone:
+        $ get_achievement("*Is This The Right Mod?*")
+    if renpy.can_load("sadisttracker"):
+        $ renpy.unlink_save("sadisttracker")
+        $ persistent.achievements_dict["*Sadist*"]["achieved"] = True
 
     show white
     $ persistent.ghost_menu = False

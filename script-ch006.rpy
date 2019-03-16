@@ -1,4 +1,6 @@
 label ch6_main:
+    if (y_appeal >= 1 or y_appealS >= 1) and (m_appeal >= 1 or m_appealS >= 1) and (s_appeal >= 1 or s_appealS >= 1) and (n_appeal >= 1 or n_appealS >= 1):
+        $ get_achievement("*Playboy*")
     scene black
     show monika 1f zorder 2 at i11
     if from_custom_start:
@@ -873,6 +875,7 @@ label ch6_end:
                     s "{cps=*3}You really like making this difficult for us, don't you?{/cps}{nw}"
                     s "{cps=*3}Are you going to keep trying?{/cps}{nw}"
                     $ del _history_list[-12:]
+                    $ get_achievement("*Just Do It*")
                 else:
                     s 1bf "No again?"
                     s "It's not going to work."

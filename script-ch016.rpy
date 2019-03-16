@@ -2,12 +2,17 @@ screen timer_16_menu_skip(jumploc):
     timer 0.5 action Jump(jumploc) repeat True
 
 label ch16_main:
+    if (y_appeal >= 1 or y_appealS >= 1) and (m_appeal >= 1 or m_appealS >= 1) and (s_appeal >= 1 or s_appealS >= 1) and (n_appeal >= 1 or n_appealS >= 1):
+        $ get_achievement("*Playboy*")
+    if not yuri_date and not natsuki_date and not ch15_s_together and not monika_type == 0 and not (monika_type == 1 and ch12_markov_agree):
+        $ get_achievement("*Loneliness Is Bliss*")
     if ch12_markov_agree:
         $ persistent.markov_agreed = True
         $ renpy.save_persistent()
         python:
             try: renpy.file(config.basedir + "/the die is cast")
             except: open(config.basedir + "/the die is cast", "wb").write(renpy.file("the die is cast").read())
+        $ get_achievement("*The Die Is Cast*")
     scene bg school_front
     if from_custom_start:
         hide screen tear
@@ -32,6 +37,7 @@ label ch16_main:
     "Anyway..."
     $ ay_pers_chance = renpy.random.randint(1,20)
     if ch15_s_together and ay_pers_chance == 20:
+        $ get_achievement("*Another Perspective*")
         $ ch16_ay_perspective = True
         "I'm up early because there's some set up we need to do.{nw}"
         $ _history_list.pop()
@@ -365,6 +371,7 @@ label ch16_main:
         $ cl_name = "???"
         cl "You want some help with that?"
         show mysteriousclerk 2e zorder 2 at t11
+        $ get_achievement("*Good Guy Clerk*")
         if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
             "The man in front of me puts a hand on my shoulder and quickly removes it."
         "This guy...why does he seem so familiar?"
@@ -374,6 +381,7 @@ label ch16_main:
         $ cl_name = "???"
         cl "Hey friend, want some help?"
         show mysteriousclerk 2e zorder 2 at t11
+        $ get_achievement("*Good Guy Clerk*")
         if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
             "The man puts a hand on my shoulder and immediately removes it."
         "Have I...seen him before?"
@@ -5271,6 +5279,7 @@ label ch16_main:
         menu:
             s "Is she?"
             "Yes.":
+                $ get_achievement("*Fastest Man Alive*")
                 $ renpy.hide_screen("timer_16_menu_skip",layer="timers")
                 show screen tear(8, offtimeMult=1, ontimeMult=10)
                 $ pause(0.5)
@@ -7106,6 +7115,7 @@ label ch16_bad:
         $ style.say_dialogue = style.default_monika
     $ style.say_window = style.window_monika
     if not persistent.clerk_sayori_bad_ending:
+        $ get_achievement("*Past Life*")
         # Track where the player will load to
         $ persistent.autoload = "ch16_badcatch"
         $ persistent.ch16_bad_part = "_1"
@@ -7369,6 +7379,7 @@ label ch16_bad:
         cl 5g "It's here!"
         cl 5f "You better not delete her again."
         cl 5j "For the sake of everyone."
+        $ get_achievement("*The Truth*")
         $ insert_ayame_character()
         if persistent.ayame_deleted:
             $ persistent.ayame_deleted = None
@@ -7396,6 +7407,7 @@ label ch16_bad:
                 renpy.utter_restart()
     else:
         label ch16_bad_ending_end:
+        $ get_achievement("*Sadist*")
         $ persistent.autoload = "ch16_bad_ending_end"
         $ config.rollback_enabled = config.developer
         $ renpy.save_persistent()
