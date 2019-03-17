@@ -3079,7 +3079,7 @@ label ch16_main:
         n "This doesn't make any sense..."
         show natsuki zorder 2 at t21
         show yuri 2pq zorder 3 at f22
-        y "Maybe [player_reflexive]'s thought about this world a lot?"
+        y "Maybe [player_personal]'s thought about this world a lot?"
         y "Or maybe [player_personal] is special somehow."
         show yuri zorder 2 at t22
         mc "I don't think I have."
@@ -3136,7 +3136,7 @@ label ch16_main:
         mc "Which doesn't explain the next couple of journal entries."
         show yuri 3ps zorder 3 at f22
         y "Precisely."
-        y "I'm wonder how those next entries came about."
+        y "I'm wonder how those entries came about."
         y "Maybe it's a different person?"
         show natsuki 1s zorder 3 at f21
         show yuri zorder 2 at t22

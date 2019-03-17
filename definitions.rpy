@@ -112,7 +112,8 @@ init python:
             delete_character_alternate("mc",timeline)
             try:
                 mcfile = open(basedir+"mc.chr", "wb")
-                print(currentuser,file=mcfile)
+                mcfile.write(currentuser)
+                mcfile.close()
             except: pass
         if dadsuki:
             delete_character_alternate("yasuhiro",timeline)
@@ -143,6 +144,41 @@ init python:
         else:
             rv = "~/.renpy/" + name + "/persistent"
             return (os.path.expanduser(rv)).replace("\\","/")
+    def check_character(name,altfile=False):
+        import hashlib
+        # Try to check if the file is there, if not just return False
+        try: calchash = hashlib.md5(open(config.basedir+"/characters/"+name+".chr",'rb').read()).hexdigest()
+        except: return False
+        # Each name has a unique hash
+        if name == "monika":
+            if altfile and calchash == "bd28ad8e0837fe2533e9bf534a213e6c":
+                return True
+            elif calchash == "c146fd53abe24670bababc1d4e3b12af" or calchash == "bd28ad8e0837fe2533e9bf534a213e6c":
+                return True
+        elif name == "sayori" and calchash == "df457e064e21dcf8f29b52185fa1e023":
+            return True
+        elif name == "yuri":
+            if altfile and calchash == "d2040b94e62284a63e64eb04aeb9dc3b":
+                return True
+            elif calchash == "764e5c883a853505b7649e190b836f6e" or calchash == "d2040b94e62284a63e64eb04aeb9dc3b":
+                return True
+        elif name == "natsuki":
+            if altfile and calchash == "6fcb5a761ebf4315b2512f6e92f063c1":
+                return True
+            elif calchash == "92be63a12aadac797ef226d7becafe4d" or calchash == "6fcb5a761ebf4315b2512f6e92f063c1":
+                return True
+        elif name == "yasuhiro" and calchash == "c024d47f4dcce4ee91c744812c74d77b":
+            return True
+        elif name == "haruki":
+            if altfile and calchash == "83affa699f069fa22e0582304fb294dd":
+                return True
+            elif calchash == "83affa699f069fa22e0582304fb294dd" or calchash == "50cf3a8483cf15dd73f88aef3630ca9f":
+                return True
+        elif name == "ayame" and calchash == "d3baf9cacce94cf87f3e43981133f3ec":
+            return True
+        elif name == "ûüýþ" and calchash == "51684160ef69f77ef4d91285b3acd5e0":
+            return True
+        return False
     def pause(time=None):
         global _windows_hidden
         if not time:

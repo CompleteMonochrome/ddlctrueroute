@@ -697,8 +697,20 @@ label choose_start:
         menu:
             s "Did you...accept it?"
             "Yes.":
-                $ ch12_markov_agree = True
-                s "Great."
+                if not persistent.markov_agreed:
+                    s "Are you positive?"
+                    s "Once you make this decision, you can {i}never{/i} take it back."
+                    menu:
+                        s "You accepted the offer?"
+                        "Yes.":
+                            $ ch12_markov_agree = True
+                            s "Great."
+                        "No.":
+                            $ ch12_markov_agree = False
+                            s "Disappointing but not unexpected."
+                else:
+                    $ ch12_markov_agree = True
+                    s "Great."
             "No.":
                 $ ch12_markov_agree = False
                 s "Disappointing but not unexpected."

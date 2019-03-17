@@ -1210,7 +1210,7 @@ label ch9_yuridate:
     "Yuri sees me struggling and lets out a small smile."
     y "That's more than enough, thank you."
     scene bg cafe
-    show yuri 1i
+    show yuri 1i zorder 2 at t11
     with dissolve_cg
     $ get_achievement("*The Bashful Lady*")
     "Yuri and I now have a portion of each other's meal."

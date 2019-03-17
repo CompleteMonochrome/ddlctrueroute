@@ -280,8 +280,10 @@ label ch5_consolemessagefail:
 
 label ch5_consolemessagesuccess:
     call updateconsole ("renpy.file(\"characters/monika.chr\")", "monika.chr found.")
-    jump ch5_remember
-    return
+    if check_character("monika"):
+        jump ch5_remember
+    else:
+        jump ch5_rememberbad
 
 label ch5_rememberwaitloop:
     "..."
@@ -295,7 +297,6 @@ label ch5_rememberwaitloop:
                 chances -= 1
                 renpy.jump("ch5_consolemessagefail")
     jump ch5_consolemessagesuccess
-    return
 
 label ch5_forget:
     play music t3 fadeout 0.5
@@ -377,6 +378,29 @@ label ch5_remember:
             call ch5_comeback
     return
 
+label ch5_rememberbad:
+    $ _history_list = []
+    $ consolehistory = []
+    $ config.allow_skipping = False
+    show monika g2 zorder 2 at t11
+    $ gtext = glitchtext(30)
+    m "[gtext]"
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    $ pause(0.25)
+    stop sound
+    hide screen tear
+    window auto
+    scene black with dissolve_cg
+    show monika g2 zorder 2 at i11
+    stop music
+    call screen confirm("Warning: Invalid file detected 'monika.chr'.\nWould you like to proceed?", Return(True), Return(False))
+    if _return:
+        call screen dialog("Attempting to proceed...", ok_action=Return())
+        $ pause (2.0)
+        call screen dialog("An unexpected error has occurred.\nThe game will now exit.", ok_action=Return())
+    $ delete_character("monika")
+    $ renpy.quit()
 
 label ch5_loveyou:
     m 1o "That's [player], isn't it?"
@@ -644,6 +668,11 @@ label ch5_mainc:
     else:
         with dissolve_scene_full
     $ persistent.monika_gone = False
+    # Reset Bad Endings and Arc Clear
+    $ persistent.sayori_yuri_bad_ending = False
+    $ persistent.sayori_natsuki_bad_ending = False
+    $ persistent.clerk_sayori_bad_ending = False
+    $ persistent.arc_clear = [False,False,False,False,False]
     $ renpy.save_persistent()
     # Setup Variables
     $ chapter = 5
