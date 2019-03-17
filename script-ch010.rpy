@@ -6,6 +6,7 @@ init python:
         try:
             renpy.file("../characters/yasuhiro.chr")
         except:
+            renpy.hide_screen("menu")
             renpy.hide_screen("timer_10_del",layer="timers")
             renpy.jump("ch10_delete")
 

@@ -2407,7 +2407,6 @@ label ch11_dinner:
 
 label ch11_bad:
     if not persistent.sayori_natsuki_bad_ending:
-        $ get_achievement("*Who's Natsuki?*")
         play music mendglitch fadeout 2.0
         if natsuki_approval > 0:
             $ natsuki_approval -= 1
@@ -2579,7 +2578,6 @@ label ch11_bad:
         mc "Sayori, what's going on...?"
         s 1bk "You still want to see what happens, don't you?"
         s "It's why you haven't loaded a save yet.{nw}"
-        $ _history_list.pop()
         show screen tear(20, 0.1, 0.1, 0, 40)
         window hide(None)
         play sound "sfx/s_kill_glitch1.ogg"
@@ -2589,6 +2587,7 @@ label ch11_bad:
         window show(None)
         s "It's why you haven't loaded a save yet.{fast}"
         window auto
+        $ _history_list.pop()
         s 1bh "You just don't care."
         s "You're only here because of your own curiosity and not because you care about us."
         s "I'm going to remember this..."
@@ -2672,6 +2671,7 @@ label ch11_bad:
         show sayori 1k zorder 2 at i11
         hide screen tear
         $ _history_list = []
+        $ get_achievement("*Who's Natsuki?*")
         s 1k "Ow..."
         s "Are we good?"
         s 1j "I hope so..."

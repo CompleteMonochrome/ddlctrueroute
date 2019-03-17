@@ -472,6 +472,7 @@ label ch16_main:
     "So someone must have been in here before me."
     # Natsuki and Yuri - good friends or silent acquaintances?
     if natsuki_approval >= 3 and yuri_approval >= 3:
+        $ get_achievement("*True Friendship*")
         show natsuki 2q zorder 2 at t21
         n "I'm just saying, you should listen to other stuff too!"
         n 2l "Your music is fine, Yuri."
@@ -7115,7 +7116,7 @@ label ch16_bad:
         $ style.say_dialogue = style.default_monika
     $ style.say_window = style.window_monika
     if not persistent.clerk_sayori_bad_ending:
-        $ get_achievement("*Past Life*")
+        $ get_achievement("*Good Guy Clerk*")
         # Track where the player will load to
         $ persistent.autoload = "ch16_badcatch"
         $ persistent.ch16_bad_part = "_1"
@@ -7323,6 +7324,7 @@ label ch16_bad:
         cl 4f "But anyway!"
         cl "Back to why Ayame was important."
         label ch16_bad_6:
+        $ get_achievement("*The Truth*")
         $ persistent.ch16_bad_part = "_6"
         $ renpy.save_persistent()
         cl 5b "Ayame has the knowledge of how to stop the impending doom."
@@ -7357,6 +7359,7 @@ label ch16_bad:
         cl 2i "Our real plan is to go back."
         cl "It won't be too long before it finds out exactly where we are."
         label ch16_bad_7:
+        $ get_achievement("*Past Life*")
         $ persistent.ch16_bad_part = "_7"
         $ renpy.save_persistent()
         cl 5e "This shop is called 'Restoration'."
@@ -7379,7 +7382,6 @@ label ch16_bad:
         cl 5g "It's here!"
         cl 5f "You better not delete her again."
         cl 5j "For the sake of everyone."
-        $ get_achievement("*The Truth*")
         $ insert_ayame_character()
         if persistent.ayame_deleted:
             $ persistent.ayame_deleted = None

@@ -542,11 +542,37 @@ label splashscreen:
         $ persistent.achievements_dict["*Sweet, Sweet Love*"]["achieved"] = True
     if persistent.markov_agreed:
         $ persistent.achievements_dict["*The Die Is Cast*"]["achieved"] = True
+    if persistent.sayori_yuri_bad_ending:
+        $ persistent.achievements_dict["*Genocide*"]["achieved"] = True
+    if persistent.sayori_natsuki_bad_ending:
+        $ persistent.achievements_dict["*Who's Natsuki?*"]["achieved"] = True
+    if persistent.clerk_sayori_bad_ending:
+        $ persistent.achievements_dict["*Good Guy Clerk*"]["achieved"] = True
+        $ persistent.achievements_dict["*The Truth*"]["achieved"] = True
+        $ persistent.achievements_dict["*Past Life*"]["achieved"] = True
     if renpy.exists(check_mod("Monika After Story")) and persistent.monika_change and not persistent.monika_gone:
         $ get_achievement("*Is This The Right Mod?*")
+    # Unlock Sadist
     if renpy.can_load("sadisttracker"):
         $ renpy.unlink_save("sadisttracker")
         $ persistent.achievements_dict["*Sadist*"]["achieved"] = True
+    if persistent.achievements_dict["*Playboy*"]["text"] == "Write for each girl at least once in a single playthrough.":
+        $ persistent.achievements_dict["*Sadist*"]["title"] = "Sadist"
+        $ persistent.achievements_dict["*Playboy*"]["text"] = "Write for each girl at least once without going on a date."
+        $ persistent.achievements_dict["*Maybe More Than A Friend*"] = {"type": 0,
+                            "title": "Maybe More Than A Friend",
+                            "text": "Read \"A Past Life\" by Sayori.",
+                            "icon": "mod_assets/gui/achievements/achmorethanfriends.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
+        $ persistent.achievements_dict["*True Friendship*"] = {"type": 0,
+                            "title": "True Friendship",
+                            "text": "Make Yuri and Natsuki befriend each other.",
+                            "icon": "mod_assets/gui/achievements/achtruefriends.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
 
     show white
     $ persistent.ghost_menu = False

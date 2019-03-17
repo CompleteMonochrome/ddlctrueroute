@@ -7924,14 +7924,14 @@ label ch14_exclusive_sayori:
         elif s_appeal < 4:
             s "Are you sure, [player]?"
             s "It feels like you care less for me than you think."
-            if ch13poemwinner == ch14poemwinner:
+            if ch13poemwinner == ch14poemwinner and ch13poemwinner != "Sayori":
                 s 1bc "You're probably more concerned about [ch14poemwinner]."
             elif ch13poemwinner != "Sayori" and ch14poemwinner != "Sayori":
                 s 1bc "You're probably more concerned about [ch13poemwinner]..."
                 s "...or maybe [ch14poemwinner]..."
-            elif ch13poemwinner != "Sayori":
+            elif ch13poemwinner != "Sayori" and ch14poemwinner == "Sayori":
                 s 1bc "You're probably more concerned about [ch13poemwinner]..."
-            elif ch14poemwinner != "Sayori":
+            elif ch14poemwinner != "Sayori" and ch13poemwinner == "Sayori":
                 s 1bc "You're probably more concerned about [ch14poemwinner]..."
             else:
                 s "You probably care about me as much as everyone else."

@@ -356,7 +356,7 @@ init python:
                             "hidden": False
                             }
         persistent.achievements_dict["*Sadist*"] = {"type": 0,
-                            "title": "Sadist*",
+                            "title": "Sadist",
                             "text": "Continue to do the wrong thing after a rewind.",
                             "icon": "mod_assets/gui/achievements/achsadist.png",
                             "achieved": False,

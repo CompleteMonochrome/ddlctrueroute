@@ -9,6 +9,7 @@ init python:
             renpy.save("clerk_restore")
             # This is here because IDK if it will still do these if you load this save
             if not renpy.exists("../characters/ayame.chr"):
+                renpy.hide_screen("menu")
                 renpy.hide_screen("timer_15_del",layer="timers")
                 renpy.jump("ch15_delete")
 

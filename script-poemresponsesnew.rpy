@@ -3759,7 +3759,7 @@ label ch6_m_start:
     m "Is everything going okay with you?"
     mc "Yeah, everything seems to be going alright."
     if ch5_name == "Monika":
-        m "How's your memories?"
+        m "How are your memories?"
         m "Are they clearing up a little?"
         mc "My memories...?"
         "I think back on the events that happened in the last week."
