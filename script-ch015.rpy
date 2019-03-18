@@ -4445,7 +4445,7 @@ label ch15_exclusive_sayori_together:
             s "Be there when it happens."
             s "Be with me...when it happens."
             s "Okay?"
-            s 1k "Because our fate entirely up to {i}you{/i}."
+            s 1k "Because our fate is entirely up to {i}you{/i}."
             s "All you need to know is when to act."
             s 1h "I hope you can figure it out."
             jump ch15_exclusive_sayori_together_questions

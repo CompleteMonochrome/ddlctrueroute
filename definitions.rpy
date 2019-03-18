@@ -4748,6 +4748,7 @@ default y_exclusivewatched = False
 
 # Mod Variables
 # Persistent
+default persistent.origial_game_warning = False
 default persistent.got_sadist = False
 default persistent.name_saves = False
 default persistent.prompt_info = False

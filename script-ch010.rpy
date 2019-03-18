@@ -1465,7 +1465,7 @@ label ch10_nat_house:
         mc "A-Am I?"
         mc "S-Sorry, I didn't intend to ask you out."
         mc "It was just an offer since I forgot to go shopping for food..."
-        mc "A-And I don't want to see like a bad host."
+        mc "A-And I don't want to seem like a bad host."
         mc "I'm happy to pay for your meal, if you do want to go."
         mc "It's the least I can do."
         m 1bm "Ahaha, that's so sweet of you."

@@ -947,7 +947,7 @@ label ch15_n_end:
         n 1g "I'll be fine."
         mc "Are you sure?"
         n 1q "I'll get over it soon."
-        n "What I'm bitter about isn't it my control anyway."
+        n "What I'm bitter about isn't in my control anyway."
         n 1s "So I shouldn't be so upset about it."
         n "But I am so..."
         mc "I'm here if you want to talk."
@@ -1099,7 +1099,6 @@ label ch9_s_end:
 
 label ch12_s_end:
     if sayori_confess and not sayori_dumped:
-        $ get_achievement("*Maybe More Than A Friend*")
         call showpoem (poem_s7c)
         mc "This is a pretty interesting poem you wrote, Sayori."
         s 1c "You think so?"
@@ -1131,7 +1130,7 @@ label ch12_s_end:
         s "Thanks for talking to me, [player]."
         mc "Ah, not a problem."
     elif s_appeal >= 4:
-        $ get_achievement("*A Past Life*")
+        $ get_achievement("*Maybe More Than A Friend*")
         call showpoem (poem_s7b)
         s 2d "There's lots of different feelings in that one, [player]."
         s "So I hope you sorta understand what I'm trying to say."

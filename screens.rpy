@@ -478,7 +478,10 @@ init -501 screen navigation():
             if main_menu:
 
                 if persistent.playthrough == 1:
-                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=If(persistent.original_game_warning,
+                        true=Function(FinishEnterName),
+                        false=[SetVariable("persistent.original_game_warning",True), Show(screen="dialog", message="The game will play like the original from here.\nPlease delete firstrun and restart the game to play True Route.", ok_action=Function(FinishEnterName))]
+                    )))
                 elif persistent.playthrough == 0 and persistent.monika_gone:
                     textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Show(screen="dialog", message="File error: \"characters/monika.chr\"\n\nThe file is missing or corrupt.",
                 ok_action=Show(screen="dialog", message="The game is corrupt. Continuing from next chapter.", ok_action=Function(renpy.full_restart, label="ch5_premainb"))), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
@@ -2037,23 +2040,17 @@ init -501 screen achievements tag menu:
                             unhovered [SetScreenVariable("imageshow",None), SetScreenVariable("colored",False), Function(renpy.restart_interaction)]
                             hover_sound gui.hover_sound
 
-                            insensitive im.MatrixColor("mod_assets/gui/achievements/achmenulocked.png", im.matrix.saturation(0))
-                            idle im.MatrixColor(persistent.achievements_dict[ach]["icon"], im.matrix.saturation(0))
-                            hover im.MatrixColor(persistent.achievements_dict[ach]["icon"], im.matrix.saturation(0.2))
+                            insensitive im.MatrixColor("mod_assets/gui/achievements/achhidden.png", im.matrix.saturation(0))
+                            idle im.MatrixColor(im.Composite((96, 96), (0, 0), persistent.achievements_dict[ach]["icon"], (0, 0), im.MatrixColor("mod_assets/gui/achievements/achlockedoverlay.png", im.matrix.opacity(0.4))), im.matrix.saturation(0))
+                            hover im.MatrixColor(im.Composite((96, 96), (0, 0), persistent.achievements_dict[ach]["icon"], (0, 0), im.MatrixColor("mod_assets/gui/achievements/achlockedoverlay.png", im.matrix.opacity(0.2))), im.matrix.saturation(0.2))
                             selected_idle im.MatrixColor(persistent.achievements_dict[ach]["icon"], im.matrix.saturation(0.7))
                             selected_hover persistent.achievements_dict[ach]["icon"]
                             selected persistent.achievements_dict[ach]["achieved"]
                             sensitive (persistent.achievements_dict[ach]["achieved"] or (persistent.achievements_dict[ach]["achieved"] and persistent.achievements_dict[ach]["hidden"]) or (not persistent.achievements_dict[ach]["achieved"] and not persistent.achievements_dict[ach]["hidden"]))
 
-                    # Fill the rest with empty buttons
+                    # Fill the rest with empty nulls
                     for i in range(0, (gridx*gridy)-len(persistent.achievements_dict)):
-                        button:
-                            xsize 100
-                            ysize 100
-                            xalign 0.5
-                            yalign 0.5
-
-                            action NullAction()
+                        null
 
         fixed:
             add (None if imageshow == None else im.Scale(imageshow, 115, 115) if colored else im.Scale(im.MatrixColor(imageshow, im.matrix.saturation(0)), 115, 115)) xpos 490 yalign 0.01

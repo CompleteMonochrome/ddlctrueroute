@@ -549,7 +549,7 @@ label splashscreen:
     if persistent.clerk_sayori_bad_ending:
         $ persistent.achievements_dict["*Good Guy Clerk*"]["achieved"] = True
         $ persistent.achievements_dict["*The Truth*"]["achieved"] = True
-        $ persistent.achievements_dict["*Past Life*"]["achieved"] = True
+        $ persistent.achievements_dict["*An Important Character*"]["achieved"] = True
     if renpy.exists(check_mod("Monika After Story")) and persistent.monika_change and not persistent.monika_gone:
         $ get_achievement("*Is This The Right Mod?*")
     # Unlock Sadist
@@ -573,6 +573,15 @@ label splashscreen:
                             "achieved": False,
                             "hidden": False
                             }
+    if "*Past Life*" in persistent.achievements_dict:
+        $ persistent.achievements_dict["*Maybe More Than A Friend*"]["text"] = "Make Sayori recall a previous life through poetry."
+        $ persistent.achievements_dict["*When Will It End?!*"]["text"] = "Get through the play by telling Yuri to kill you."
+        $ persistent.achievements_dict["*Past Life*"]["title"] = "An Important Character"
+        $ persistent.achievements_dict["*True Friendship*"]["title"] = "Blossoming Friendship"
+        $ persistent.achievements_dict["*An Important Character*"] = persistent.achievements_dict["*Past Life"]
+        $ persistent.achievements_dict["*Blossoming Friendship*"] = persistent.achievements_dict["*True Friendship"]
+        $ del persistent.achievements_dict["*Past Life*"]
+        $ del persistent.achievements_dict["*Blossoming Friendship*"]
 
     show white
     $ persistent.ghost_menu = False

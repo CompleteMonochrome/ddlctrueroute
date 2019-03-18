@@ -208,8 +208,8 @@ init python:
                             "achieved": False,
                             "hidden": True
                             }
-        persistent.achievements_dict["*Past Life*"] = {"type": 0,
-                            "title": "Past Life",
+        persistent.achievements_dict["*An Important Character*"] = {"type": 0,
+                            "title": "An Important Character",
                             "text": "Delete Ayame when you first meet her.",
                             "icon": "mod_assets/gui/achievements/achpastlife.png",
                             "achieved": False,
@@ -217,7 +217,7 @@ init python:
                             }
         persistent.achievements_dict["*When Will It End?!*"] = {"type": 0,
                             "title": "When Will It End?!",
-                            "text": "Get through Yuri's play choosing the play along option.",
+                            "text": "Get through the play by telling Yuri to kill you.",
                             "icon": "mod_assets/gui/achievements/achwhenwillitend.png",
                             "achieved": False,
                             "hidden": False
@@ -231,7 +231,7 @@ init python:
                             }
         persistent.achievements_dict["*Maybe More Than A Friend*"] = {"type": 0,
                             "title": "Maybe More Than A Friend",
-                            "text": "Read \"A Past Life\" by Sayori.",
+                            "text": "Make Sayori recall a previous life through poetry.",
                             "icon": "mod_assets/gui/achievements/achmorethanfriends.png",
                             "achieved": False,
                             "hidden": False
@@ -313,8 +313,8 @@ init python:
                             "achieved": False,
                             "hidden": False
                             }
-        persistent.achievements_dict["*True Friendship*"] = {"type": 0,
-                            "title": "True Friendship",
+        persistent.achievements_dict["*Blossoming Friendship*"] = {"type": 0,
+                            "title": "Blossoming Friendship",
                             "text": "Make Yuri and Natsuki befriend each other.",
                             "icon": "mod_assets/gui/achievements/achtruefriends.png",
                             "achieved": False,

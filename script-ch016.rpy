@@ -472,7 +472,7 @@ label ch16_main:
     "So someone must have been in here before me."
     # Natsuki and Yuri - good friends or silent acquaintances?
     if natsuki_approval >= 3 and yuri_approval >= 3:
-        $ get_achievement("*True Friendship*")
+        $ get_achievement("*Blossoming Friendship*")
         show natsuki 2q zorder 2 at t21
         n "I'm just saying, you should listen to other stuff too!"
         n 2l "Your music is fine, Yuri."
@@ -4150,7 +4150,72 @@ label ch16_main:
         ay "I probably would have imploded of the embarrassment."
         ay 2h "In fact, if I placed myself into your shoes..."
         "Ayame's voice suddenly trails off."
+        show ayame zorder 2 at t21
         "She just sits there, not moving or saying a word."
+        "Yuri looks up and sees Ayame completely frozen as well."
+        mc "Ayame?"
+        "I wave my hand in front of her but she doesn't react at all."
+        mc "Hello?"
+        "I reach out to grab her shoulder."
+        "Before I can make contact, she suddenly springs to life and shoves my arm away."
+        show ayame zorder 3 at f21
+        ay "What?"
+        show ayame zorder 2 at t21
+        mc "What?"
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "..."
+        y "Are you okay?"
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "Umm...yeah!"
+        ay "Perfectly fine."
+        ay "I am okay-dokay."
+        show ayame zorder 2 at t21
+        "Okay dokay...?"
+        mc "Are you sure?"
+        mc "You kinda froze there for a moment."
+        mc "You wouldn't react to anything."
+        mc "Right after you were talking about footwear."
+        show ayame zorder 3 at f21
+        ay "I'm fine!"
+        ay "I was just daydreaming."
+        ay "And I guess I got lost in my thoughts."
+        ay "It felt pretty lucid so I guess I was just so absorbed in it."
+        ay "And anyway, we're not here to talk about me."
+        ay "We're here for Yuri."
+        show ayame zorder 2 at t21
+        "She's right."
+        "Besides, daydreaming isn't anything to be worried about."
+        "Yuri is far more important."
+        show ayame zorder 3 at f21
+        ay "Where was I?"
+        ay "Right, footwear."
+        ay "Yuri, if I was in your shoes then I would probably be feeling the same."
+        show ayame zorder 2 at t21
+        "Yuri looks down at the ground."
+        "I don't think what Ayame is saying is reassuring her."
+        mc "I don't think that's helping."
+        show ayame zorder 3 at f21
+        ay "Let me finish."
+        ay "Unlike if I was in your shoes, I have people there for me."
+        ay "You have [player] right here."
+        ay "Whenever you're feeling down, you should rely on [player_reflexive]."
+        ay "After all, that's what [player_personal]'s there for."
+        show ayame zorder 2 at t21
+        mc "That's right."
+        mc "Any problem you have, I'll help you get through it."
+        mc "Yuri, this is nothing."
+        mc "If you really wanted to be a leader, this obstacle isn't going to stop you."
+        mc "You know that."
+        mc "You're more resilient than that, aren't you?"
+        "I offer my hand to Yuri."
+        mc "So come on."
+        mc "You aren't going to become a leader by sitting on the floor, are you?"
+        "Yuri looks up at me."
+        "She turns towards Ayame who nods her head, then grabs my hand."
+        show yuri zorder 3 at f22
+        y "Y-You're right."
     elif natsuki_date:
         "I was going to try to find Natsuki at lunch."
         "I don't know why but I feel like I should really cherish this time with her."
@@ -7359,7 +7424,7 @@ label ch16_bad:
         cl 2i "Our real plan is to go back."
         cl "It won't be too long before it finds out exactly where we are."
         label ch16_bad_7:
-        $ get_achievement("*Past Life*")
+        $ get_achievement("*An Important Character*")
         $ persistent.ch16_bad_part = "_7"
         $ renpy.save_persistent()
         cl 5e "This shop is called 'Restoration'."

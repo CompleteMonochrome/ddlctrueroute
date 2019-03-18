@@ -1378,7 +1378,7 @@ label ch8_main:
     return
 
 label ch8_end:
-    if playalong:
+    if stopher and not play_firstpart:
         $ get_achievement("*When Will It End?!*")
     scene bg corridor
     show natsuki 1g zorder 2 at i31
