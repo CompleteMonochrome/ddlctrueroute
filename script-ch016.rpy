@@ -4172,7 +4172,7 @@ label ch16_main:
         ay "Perfectly fine."
         ay "I am okay-dokay."
         show ayame zorder 2 at t21
-        "Okay dokay...?"
+        "Okay-dokay...?"
         mc "Are you sure?"
         mc "You kinda froze there for a moment."
         mc "You wouldn't react to anything."
@@ -4216,6 +4216,102 @@ label ch16_main:
         "She turns towards Ayame who nods her head, then grabs my hand."
         show yuri zorder 3 at f22
         y "Y-You're right."
+        y "I have to do better than this."
+        y "I'm not going to let something like this drag me down."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "That's the spirit!"
+        ay "I'll come up with an excuse."
+        ay "Don't you worry, Yuri."
+        ay "No one is going to know."
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "No."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "No?"
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "If I'm going to become a leader, then I need to take responsibility."
+        y "I want you to tell them the truth."
+        y "Whatever the consequences, I'm prepared to accept them."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "Wow, this is such a sudden change."
+        ay "Are you sure about this?"
+        ay "You don't have to act irrational, you know."
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "It's fine..."
+        y "I wouldn't want you to get in trouble if they find out."
+        y "It's better this way."
+        show yuri zorder 2 at t22
+        "Ayame chuckles."
+        show ayame zorder 3 at f21
+        ay "Yuri, I don't think you're aware of what would happen if I did get in trouble."
+        ay "Let's just say it wouldn't be good for the school."
+        ay "Anyway, if that's what you want, I'm not going to go against your wishes."
+        ay "I know when you become determined like this, it's hard to dissuade you."
+        ay "I'll let them know you brought a gift and things went wrong."
+        show ayame zorder 2 at t21
+        show yuri zorder 3 at f22
+        y "Thank you, Ayame."
+        show ayame zorder 3 at f21
+        show yuri zorder 2 at t22
+        ay "Well, I must be off."
+        ay "I gotta report the cause of that screeching after all."
+        ay "It's a shame we couldn't take longer."
+        ay "But we'll see each other soon enough, won't we?"
+        ay "I was going to say something to you, [player]."
+        ay "But it seems it's not needed anymore."
+        show ayame zorder 2 at t21
+        mc "Not needed anymore?"
+        mc "Why not?"
+        show ayame at thide
+        hide ayame
+        show yuri zorder 2 at t11
+        "She must not have heard what I said because she already started walking away."
+        "It's not like it was really important anyway."
+        y "What do you think she meant by it wouldn't be good for the school?"
+        y "Do school leaders really have that much influence on the school...?"
+        mc "I don't think that's it."
+        mc "They really only have an influence on the students."
+        mc "Judging by what she was saying, it didn't sound like she really had that either."
+        y "Hmm..."
+        y "Do you think maybe her family is influential?"
+        mc "What do you mean?"
+        y "Someone like her became a school leader."
+        y "But she was like me before."
+        y "Without a charismatic personality, it's hard to become recognized."
+        mc "Isn't it possible she changed?"
+        mc "With how fast you did just then, I wouldn't be surprised."
+        y "D-Don't get me wrong."
+        y "I'm still incredibly nervous."
+        y "It took all I had to say that to Ayame."
+        y "Even now, I'm not sure if it was the right thing to do."
+        y "I can't help but feel I should regret it."
+        y "I'm not saying she couldn't have changed."
+        y "Anything is possible, after all."
+        y "It's just, there might be a different reason."
+        mc "That her parents are rich?"
+        y "Well, if you want to put it bluntly, yes."
+        y "From what we know, Ayame doesn't really have leadership traits."
+        y "She might be a fantastic person, good to be around and easy to make friends with."
+        y "But that doesn't really translate to good leadership skills."
+        mc "I don't think she's a bad leader."
+        mc "But then again, I haven't really been involved with school activities that much."
+        y "Wouldn't it be the leader's responsibility to make sure the student body knows about those kind of things?"
+        mc "I suppose..."
+        y "Ah."
+        y "Sorry, I didn't mean to talk down about her."
+        y "I'm just curious as to how she became a leader."
+        y "Because if she can do it legitimately, then I can as well."
+        mc "I think you're thinking about this a little too much."
+        mc "Maybe people just genuinely liked her and the staff recognized that."
+        y "Maybe..."
+        y "But it's good to have a little superstition."
+        y "So pardon my speculations."
+        mc "If you say so."
     elif natsuki_date:
         "I was going to try to find Natsuki at lunch."
         "I don't know why but I feel like I should really cherish this time with her."

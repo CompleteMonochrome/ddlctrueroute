@@ -289,7 +289,7 @@ label ch14_main:
     s 1c "Really?"
     s "You look kind of out of it."
     mc "I do? Sorry."
-    s 1d "Ehehe, why are you apologizing for?"
+    s 1d "Ehehe, what are you apologizing for?"
     s 1q "It's not like you did anything wrong!"
     "Sayori beams."
     mc "You seem to be in a good mood."
