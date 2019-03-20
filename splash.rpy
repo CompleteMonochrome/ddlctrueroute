@@ -525,6 +525,33 @@ label splashscreen:
         pause
         $ renpy.quit()
 
+    # Set Achievements
+    if persistent.achievements_dict["*Playboy*"]["text"] == "Write for each girl at least once in a single playthrough.":
+        $ persistent.achievements_dict["*Sadist*"]["title"] = "Sadist"
+        $ persistent.achievements_dict["*Playboy*"]["text"] = "Write for each girl at least once without going on a date."
+        $ persistent.achievements_dict["*Maybe More Than A Friend*"] = {"type": 0,
+                            "title": "Maybe More Than A Friend",
+                            "text": "Read \"A Past Life\" by Sayori.",
+                            "icon": "mod_assets/gui/achievements/achmorethanfriends.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
+        $ persistent.achievements_dict["*True Friendship*"] = {"type": 0,
+                            "title": "True Friendship",
+                            "text": "Make Yuri and Natsuki befriend each other.",
+                            "icon": "mod_assets/gui/achievements/achtruefriends.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
+    if "*Past Life*" in persistent.achievements_dict:
+        $ persistent.achievements_dict["*Maybe More Than A Friend*"]["text"] = "Make Sayori recall a previous life through poetry."
+        $ persistent.achievements_dict["*When Will It End?!*"]["text"] = "Get through the play by telling Yuri to kill you."
+        $ persistent.achievements_dict["*Past Life*"]["title"] = "An Important Character"
+        $ persistent.achievements_dict["*True Friendship*"]["title"] = "Blossoming Friendship"
+        $ persistent.achievements_dict["*An Important Character*"] = persistent.achievements_dict["*Past Life*"]
+        $ persistent.achievements_dict["*Blossoming Friendship*"] = persistent.achievements_dict["*True Friendship*"]
+        $ del persistent.achievements_dict["*Past Life*"]
+        $ del persistent.achievements_dict["*Blossoming Friendship*"]
     # Unlock Achievements
     if persistent.monika_change and not persistent.monika_gone:
         $ persistent.achievements_dict["*True Route*"]["achieved"] = True
@@ -556,32 +583,6 @@ label splashscreen:
     if renpy.can_load("sadisttracker"):
         $ renpy.unlink_save("sadisttracker")
         $ persistent.achievements_dict["*Sadist*"]["achieved"] = True
-    if persistent.achievements_dict["*Playboy*"]["text"] == "Write for each girl at least once in a single playthrough.":
-        $ persistent.achievements_dict["*Sadist*"]["title"] = "Sadist"
-        $ persistent.achievements_dict["*Playboy*"]["text"] = "Write for each girl at least once without going on a date."
-        $ persistent.achievements_dict["*Maybe More Than A Friend*"] = {"type": 0,
-                            "title": "Maybe More Than A Friend",
-                            "text": "Read \"A Past Life\" by Sayori.",
-                            "icon": "mod_assets/gui/achievements/achmorethanfriends.png",
-                            "achieved": False,
-                            "hidden": False
-                            }
-        $ persistent.achievements_dict["*True Friendship*"] = {"type": 0,
-                            "title": "True Friendship",
-                            "text": "Make Yuri and Natsuki befriend each other.",
-                            "icon": "mod_assets/gui/achievements/achtruefriends.png",
-                            "achieved": False,
-                            "hidden": False
-                            }
-    if "*Past Life*" in persistent.achievements_dict:
-        $ persistent.achievements_dict["*Maybe More Than A Friend*"]["text"] = "Make Sayori recall a previous life through poetry."
-        $ persistent.achievements_dict["*When Will It End?!*"]["text"] = "Get through the play by telling Yuri to kill you."
-        $ persistent.achievements_dict["*Past Life*"]["title"] = "An Important Character"
-        $ persistent.achievements_dict["*True Friendship*"]["title"] = "Blossoming Friendship"
-        $ persistent.achievements_dict["*An Important Character*"] = persistent.achievements_dict["*Past Life"]
-        $ persistent.achievements_dict["*Blossoming Friendship*"] = persistent.achievements_dict["*True Friendship"]
-        $ del persistent.achievements_dict["*Past Life*"]
-        $ del persistent.achievements_dict["*Blossoming Friendship*"]
 
     show white
     $ persistent.ghost_menu = False

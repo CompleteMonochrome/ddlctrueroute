@@ -3693,59 +3693,59 @@ label ch16_main:
         n "If our world is in danger, we could be the only ones who could stop it."
         n 2m "Yuri, I don't want to give up."
         n "And I think I know what we can do."
-        show natsuki zorder 2 at t21
+        show natsuki zorder 2 at t22
         show yuri 2pf zorder 3 at f21
         y "What is it?"
-        show yuri zorder 2 at t22
+        show yuri zorder 2 at t21
         "Natsuki looks at me."
         "She looks at the journal on the floor then back at me again."
-        show natsuki 2q zorder 3 at f21
+        show natsuki 2q zorder 3 at f22
         n "It doesn't involve [player]."
         n "I'm sorry."
         "She picks up the journal and offers it to me."
         n 2m "Take this."
-        show natsuki zorder 2 at t21
+        show natsuki zorder 2 at t22
         mc "And do what?"
-        show natsuki 2h zorder 3 at f21
+        show natsuki 2h zorder 3 at f22
         n "Try to make sense of it."
         n "You can read further than I can."
         n "Maybe that means something."
-        show natsuki zorder 2 at t21
+        show natsuki zorder 2 at t22
         mc "Well, what are you gonna do then?"
         mc "Why can't I be part of it?"
-        show natsuki 2b zorder 3 at f21
+        show natsuki 2b zorder 3 at f22
         n "We just saw that in a matter of minutes, you lost the ability to fully read the journal."
         n "This plan I have could make it worse."
         n 2k "So I don't want to change things while they're still working."
-        show natsuki zorder 2 at t21
+        show natsuki zorder 2 at t22
         mc "But--"
-        show yuri 2pe zorder 3 at f22
+        show yuri 2pe zorder 3 at f21
         y "She's right, [player]."
         y "The more factors we keep the same, the better chance we have of deciphering that journal."
         y "Maybe you'll regain the ability to read more of it."
-        show yuri zorder 2 at t22
+        show yuri zorder 2 at t21
         mc "And what if I don't?"
-        show natsuki 1g zorder 3 at f21
+        show natsuki 1g zorder 3 at f22
         n "Then that's the end of the journal's usefulness."
         n "Look, [player]."
         n "I don't want to exclude you from this."
         n 1q "But an important part of my new plan is that you aren't involved."
-        show natsuki zorder 2 at t21
+        show natsuki zorder 2 at t22
         mc "Alright..."
         "I take the journal from Natsuki."
         mc "I get it."
         mc "I'll see what I can do."
-        show yuri 2pa zorder 3 at f22
+        show yuri 2pa zorder 3 at f21
         y "Thank you for understanding."
         y "I hope you can find something new in that journal."
         y "Good luck."
-        show natsuki 2c zorder 3 at f21
-        show yuri zorder 2 at t22
+        show natsuki 2c zorder 3 at f22
+        show yuri zorder 2 at t21
         n "I'm sure [player_personal]'ll find something."
         n "Yuri, follow me."
         n "We have things to talk about."
         n 2a "We'll see you later, [player]."
-        show natsuki zorder 2 at t21
+        show natsuki zorder 2 at t22
         mc "See you at rehearsals."
         mc "Hopefully you can do whatever it is you're planning."
         show yuri at thide
@@ -4150,59 +4150,65 @@ label ch16_main:
         ay "I probably would have imploded of the embarrassment."
         ay 2h "In fact, if I placed myself into your shoes..."
         "Ayame's voice suddenly trails off."
-        show ayame zorder 2 at t21
+        show ayame 2m zorder 2 at t21
         "She just sits there, not moving or saying a word."
+        show yuri 3pv
         "Yuri looks up and sees Ayame completely frozen as well."
         mc "Ayame?"
         "I wave my hand in front of her but she doesn't react at all."
         mc "Hello?"
         "I reach out to grab her shoulder."
         "Before I can make contact, she suddenly springs to life and shoves my arm away."
-        show ayame zorder 3 at f21
+        show ayame 1c zorder 3 at hf21
         ay "What?"
+        ay "What are you doing?"
         show ayame zorder 2 at t21
+        "Ayame steps back."
         mc "What?"
         show ayame zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 2pt zorder 3 at f22
         y "..."
         y "Are you okay?"
-        show ayame zorder 3 at f21
+        show ayame 1j zorder 3 at f21
         show yuri zorder 2 at t22
         ay "Umm...yeah!"
         ay "Perfectly fine."
-        ay "I am okay-dokay."
+        ay 1d "I am okay-dokay."
         show ayame zorder 2 at t21
         "Okay-dokay...?"
         mc "Are you sure?"
         mc "You kinda froze there for a moment."
         mc "You wouldn't react to anything."
         mc "Right after you were talking about footwear."
-        show ayame zorder 3 at f21
+        show ayame 1j zorder 3 at f21
         ay "I'm fine!"
         ay "I was just daydreaming."
-        ay "And I guess I got lost in my thoughts."
+        ay 1m "And I guess I got lost in my thoughts."
         ay "It felt pretty lucid so I guess I was just so absorbed in it."
-        ay "And anyway, we're not here to talk about me."
+        ay 1h "And anyway, we're not here to talk about me."
         ay "We're here for Yuri."
         show ayame zorder 2 at t21
         "She's right."
         "Besides, daydreaming isn't anything to be worried about."
         "Yuri is far more important."
-        show ayame zorder 3 at f21
+        show ayame 2j zorder 3 at f21
         ay "Where was I?"
-        ay "Right, footwear."
-        ay "Yuri, if I was in your shoes then I would probably be feeling the same."
+        ay 2d "Right, footwear."
+        ay 2m "Yuri, if I was in your shoes then I would probably be feeling the same."
         show ayame zorder 2 at t21
+        show yuri 2pv
         "Yuri looks down at the ground."
         "I don't think what Ayame is saying is reassuring her."
         mc "I don't think that's helping."
-        show ayame zorder 3 at f21
+        show ayame 2h zorder 3 at f21
         ay "Let me finish."
         ay "Unlike if I was in your shoes, I have people there for me."
-        ay "You have [player] right here."
+        ay 2b "You have [player] right here."
         ay "Whenever you're feeling down, you should rely on [player_reflexive]."
         ay "After all, that's what [player_personal]'s there for."
         show ayame zorder 2 at t21
+        "I should be saying what she's saying."
+        "Some [player_gender]friend I am..."
         mc "That's right."
         mc "Any problem you have, I'll help you get through it."
         mc "Yuri, this is nothing."
@@ -4214,104 +4220,290 @@ label ch16_main:
         mc "You aren't going to become a leader by sitting on the floor, are you?"
         "Yuri looks up at me."
         "She turns towards Ayame who nods her head, then grabs my hand."
-        show yuri zorder 3 at f22
+        show yuri 2pk zorder 3 at f22
         y "Y-You're right."
-        y "I have to do better than this."
+        y 2pr "I have to do better than this."
         y "I'm not going to let something like this drag me down."
-        show ayame zorder 3 at f21
+        show ayame 2e zorder 3 at f21
         show yuri zorder 2 at t22
         ay "That's the spirit!"
+        ay 1b "All you have to do now is persevere."
+        "Ayame puts a hand on Yuri's shoulder."
         ay "I'll come up with an excuse."
-        ay "Don't you worry, Yuri."
+        ay 1h "Don't you worry, Yuri."
         ay "No one is going to know."
         show ayame zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 3pr zorder 3 at f22
         y "No."
-        show ayame zorder 3 at f21
         show yuri zorder 2 at t22
+        "Yuri takes Ayame's hand from her shoulder."
+        show ayame 2m zorder 3 at f21
         ay "No?"
         show ayame zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 3pt zorder 3 at f22
         y "If I'm going to become a leader, then I need to take responsibility."
         y "I want you to tell them the truth."
-        y "Whatever the consequences, I'm prepared to accept them."
-        show ayame zorder 3 at f21
+        y 3ps "Whatever the consequences, I'm prepared to accept them."
+        show ayame 2i zorder 3 at f21
         show yuri zorder 2 at t22
         ay "Wow, this is such a sudden change."
-        ay "Are you sure about this?"
+        ay 1n "Are you sure about this?"
         ay "You don't have to act irrational, you know."
         show ayame zorder 2 at t21
-        show yuri zorder 3 at f22
-        y "It's fine..."
+        show yuri 1i zorder 3 at f22
+        y "I'm sure."
         y "I wouldn't want you to get in trouble if they find out."
-        y "It's better this way."
+        y 1q "It's better this way."
         show yuri zorder 2 at t22
         "Ayame chuckles."
-        show ayame zorder 3 at f21
+        show ayame 2e zorder 3 at f21
         ay "Yuri, I don't think you're aware of what would happen if I did get in trouble."
-        ay "Let's just say it wouldn't be good for the school."
+        ay 2k "Let's just say it wouldn't be good for the school."
         ay "Anyway, if that's what you want, I'm not going to go against your wishes."
         ay "I know when you become determined like this, it's hard to dissuade you."
-        ay "I'll let them know you brought a gift and things went wrong."
+        ay 2h "I'll let them know you brought a gift and things went wrong."
         show ayame zorder 2 at t21
-        show yuri zorder 3 at f22
+        show yuri 1m zorder 3 at f22
         y "Thank you, Ayame."
-        show ayame zorder 3 at f21
+        show ayame 1j zorder 3 at f21
         show yuri zorder 2 at t22
         ay "Well, I must be off."
         ay "I gotta report the cause of that screeching after all."
-        ay "It's a shame we couldn't take longer."
-        ay "But we'll see each other soon enough, won't we?"
-        ay "I was going to say something to you, [player]."
+        ay 1g "It's a shame we couldn't talk longer."
+        ay 1b "But we'll see each other soon enough, won't we?"
+        "Ayame begins walking away but stops as she passes me."
+        ay 1a "You know, I was going to say something to you, [player]."
         ay "But it seems it's not needed anymore."
+        ay "I'm slowly beginning to understand."
         show ayame zorder 2 at t21
         mc "Not needed anymore?"
         mc "Why not?"
         show ayame at thide
         hide ayame
         show yuri zorder 2 at t11
-        "She must not have heard what I said because she already started walking away."
+        "She must not have heard what I said because she didn't respond at all to what I said."
         "It's not like it was really important anyway."
-        y "What do you think she meant by it wouldn't be good for the school?"
+        y 2pe "What do you think she meant by it wouldn't be good for the school?"
         y "Do school leaders really have that much influence on the school...?"
         mc "I don't think that's it."
         mc "They really only have an influence on the students."
-        mc "Judging by what she was saying, it didn't sound like she really had that either."
-        y "Hmm..."
+        mc "Judging by what she was saying before, it didn't sound like she really had that either."
+        y 2ph "Hmm..."
         y "Do you think maybe her family is influential?"
         mc "What do you mean?"
-        y "Someone like her became a school leader."
+        y 3pf "Someone like her became a school leader."
         y "But she was like me before."
-        y "Without a charismatic personality, it's hard to become recognized."
-        mc "Isn't it possible she changed?"
+        y "Without a charismatic personality, it's hard to become recognized as a leader."
+        "Charisma isn't really the only thing you need to be a leader."
+        "Popularity is usually a factor too, especially if it's an elected position."
+        "But I guess if you have the charisma, you'd be popular as well."
+        "Though I don't really know how the school leadership system works."
+        "I never bothered to get into it."
+        mc "Isn't what she just did pretty charismatic?"
+        mc "She lifted up your spirits, like a charismatic person would."
+        y 3ph "To be honest..."
+        y "Her words didn't nearly have as much effect as yours."
+        "But I just basically repeated what she said..."
+        "I should defend Ayame here."
+        "She isn't that bad...is she?"
+        mc "She at least made me say something."
+        mc "And anyway, isn't it possible she changed over that period of time she was like you?"
         mc "With how fast you did just then, I wouldn't be surprised."
-        y "D-Don't get me wrong."
+        mc "After all, the two of you are rather similar."
+        y 2pq "I-I doubt I've actually changed just now."
         y "I'm still incredibly nervous."
-        y "It took all I had to say that to Ayame."
+        y 2po "It took all I had to say that to Ayame."
         y "Even now, I'm not sure if it was the right thing to do."
         y "I can't help but feel I should regret it."
-        y "I'm not saying she couldn't have changed."
+        y 2pv "She was just trying to be a friend, after all."
+        mc "Do you think change like that is impossible then?"
+        y 2pf "I'm not saying she couldn't have changed."
+        y 2pg "It's just that change like that is gradual."
+        y 1s "Think of a hero in one of those stories."
+        y "They could be perfect at first but as things happen to their life, they gradually start to become deluded with the world..."
+        y 1t "Circumstances might change, and they might inadvertently turn evil through a long period of time."
+        y "Or at the very least, more vigilante than hero."
+        mc "What are you trying to say?"
+        mc "That Ayame is evil?"
+        y 1q "Not at all!"
+        y "Maybe over time she did actually become a person suited for the leadership role."
         y "Anything is possible, after all."
-        y "It's just, there might be a different reason."
-        mc "That her parents are rich?"
-        y "Well, if you want to put it bluntly, yes."
+        mc "It just kinda sounds like you think she doesn't deserve to be a leader."
+        y 1v "D-Don't misunderstand."
+        y "I don't think she's a bad person or anything."
+        y 1s "I actually think we'll become really good friends over time."
+        y 2pk "I just think she's not taking her responsibility seriously."
+        mc "And because of that, you think there might be a different reason she became a leader."
+        y 2ph "Precisely."
+        mc "And that reason is that her parents are rich?"
+        y 3pg "Well, if you want to put it bluntly, yes."
         y "From what we know, Ayame doesn't really have leadership traits."
         y "She might be a fantastic person, good to be around and easy to make friends with."
-        y "But that doesn't really translate to good leadership skills."
+        y 3pf "But that doesn't really translate to good leadership skills."
         mc "I don't think she's a bad leader."
         mc "But then again, I haven't really been involved with school activities that much."
+        mc "I haven't really seen her in action until this morning."
         y "Wouldn't it be the leader's responsibility to make sure the student body knows about those kind of things?"
         mc "I suppose..."
-        y "Ah."
+        y 3po "Ah."
         y "Sorry, I didn't mean to talk down about her."
-        y "I'm just curious as to how she became a leader."
-        y "Because if she can do it legitimately, then I can as well."
+        y 3ph "I'm just curious as to how she became a leader."
+        y 3pa "Because if she can do it legitimately, then I can as well."
         mc "I think you're thinking about this a little too much."
         mc "Maybe people just genuinely liked her and the staff recognized that."
         y "Maybe..."
-        y "But it's good to have a little superstition."
+        y 3pb "But it's good to have a little superstition."
         y "So pardon my speculations."
         mc "If you say so."
+        mc "Maybe we should stop worrying about Ayame."
+        mc "You can talk to her more during rehearsals anyway."
+        mc "Then you can get your answer."
+        mc "There are better things to talk about right now than if someone deserves something or not."
+        y 2pq "I suppose."
+        y "What did you want to speak about?"
+        mc "How about us?"
+        mc "How did you want to spend our time after the play?"
+        mc "We can always leave afterwards and have dinner together."
+        y 2pt "Is that the right thing to do?"
+        y "What if some people join our club and we aren't there to welcome them?"
+        y "It might leave a bad image."
+        mc "I'm sure Sayori is more than capable."
+        mc "Besides, she has Monika."
+        mc "The two of them together are unstoppable."
+        mc "Having the president and vice president is more than enough."
+        y 2pv "Right...Monika."
+        mc "What's wrong?"
+        y "N-Nothing."
+        mc "Do you have a problem with Monika?"
+        if ch13_name == "Yuri":
+            mc "Tell me."
+            mc "I'm here for you."
+            mc "Whatever is on your mind."
+            y 2po "It's just...last time..."
+            y "This conversation didn't go very well."
+            mc "What conversation?"
+            y 2pn "We were talking about Monika."
+            mc "How long ago?"
+            y "Three days ago, the day after we did the play on that manga."
+            mc "I don't really remember that."
+            mc "Was it an important conversation?"
+            y 1v "I can't say."
+            y "You didn't want to speak about her."
+            y "The clear behavioral differences with her."
+            y 1w "You insisted."
+            y "I was afraid I had lost you..."
+            mc "Lost me...?"
+            y "So I don't really want to bring it up."
+            y 2ps "It's better this way."
+            mc "I'm not really sure what you're talking about."
+            mc "I don't remember this happening at all."
+            y 2pv "{i}(Maybe your memories were altered...){/i}"
+            y 2pq "Never mind, okay?"
+            y "I shouldn't have brought it up."
+            "I sigh."
+            "I want to help her but she's being really secretive about it."
+            "Just what is she talking about...?"
+            mc "If you want to talk about it at anytime, I'm here."
+            mc "You aren't losing me, Yuri."
+            mc "And you aren't going to lose me."
+            mc "That's a promise."
+            show yuri 2ps
+            "Yuri lets out a weak smile."
+            y "Okay...maybe later then."
+            y "Anyway, let's back to our plans."
+        else:
+            y 2pq "Please, let's just continue along with our plans."
+            mc "Okay..."
+            "I get the feeling she's hiding something from me."
+            "Maybe I'll ask her later, after all of this is over."
+        y 3pk "If you're sure that Monika and Sayori can handle it..."
+        y "...then I suppose we can go somewhere."
+        y 3pq "I don't really know many dinner places."
+        y "I haven't really been asked to go to one before..."
+        mc "Well, we don't have to go out to a dinner."
+        mc "We can always see a movie."
+        y 3pb "You know I'm fine doing {i}anything{/i} with you, [player]."
+        y "All I really need is your company."
+        y 3pe "That said..."
+        y "I was kind of hoping to see some of the other clubs."
+        y "They've probably been preparing just as hard as us for this."
+        y 2pf "It would be a shame if no one got to see what they had."
+        mc "That's...not a bad idea."
+        mc "It could be pretty interesting to see what they've done to appeal to everyone."
+        mc "And if we're doing that, I have something we can do after."
+        y 2pa "What would that be?"
+        mc "I'll leave that as a surprise."
+        y 2pe "A surprise?"
+        y 2pb "I hope it's nothing dangerous."
+        y "It might be dark by the time we're finished here."
+        "I'm counting on it."
+        mc "You'll see."
+        mc "Did you have any club in particular you wanted to see?"
+        mc "It might be a good idea to know where they are so we don't get lost."
+        y 1f "When I was speaking to Ayame before, I heard her mention a club."
+        y "She said she was conflicted about whether she should join that club or our one."
+        mc "What club was it?"
+        y 1q "It's like some sort of reincarnation club."
+        y "Honestly, I don't think it's a real club."
+        y 1u "She kind of sounded like she was joking when she mentioned it."
+        mc "Are they even doing something for today?"
+        y 1e "I don't know."
+        y "I suppose it's possible but I don't know what exactly they could showcase if they do exist."
+        mc "Did Ayame say what it was about?"
+        y 1h "I wanted to get her to join our club so I feigned interest and she told me."
+        y "Apparently, they believe in reincarnation and the club is about trying to get your memories from your past life."
+        y 1r "It sounds...unbelievable, in my opinion."
+        mc "Who knows?"
+        mc "Maybe they really believe in that sort of stuff."
+        y 2po "Possibly..."
+        y "It's just...not really for me."
+        y 2ph "I prefer the rational, and if I must read fiction I'd prefer for it to be horrifically supernatural."
+        mc "I'm curious as to why Ayame would consider joining it."
+        mc "Do you think maybe she thinks she's reincarnated?"
+        y 3pe "I don't know."
+        y 3pa "I can't peer into her mind."
+        y "Perhaps she just wanted to be friendly, since she's a school leader."
+        y "It's not our job to judge what club she thought about joining."
+        y 3pk "In the end, she did end up choosing the Literature Club over everything else."
+        mc "Yeah..."
+        y 3pl "By the way, {i}amimam{/i}.{nw}"
+        $ _history_list.pop()
+        y "By the way, {fast}it might be good to--"
+        mc "What?"
+        y 3pq "E-Eh?"
+        mc "What did you just say?"
+        y "I was in the middle of a sentence when you interrupted me..."
+        y "So...nothing?"
+        mc "That's weird."
+        "I could have sworn she said something else just then."
+        y 3pe "Is everything okay?"
+        mc "Yeah...just go on with what you were saying."
+        y 3pa "I was going to say it might be good to take advantage of the free food some clubs are giving out."
+        y "For after the play, I mean."
+        mc "That does sound like a good idea."
+        show yuri 3pc
+        "Yuri beams."
+        y "I thought you'd be interested in the free food."
+        mc "Well, if they're bringing their best and it's free..."
+        mc "...who am I to say no?"
+        "Yuri and I make a bit more small-talk and talk about the play for a few moments."
+        "Soon enough, the siren signaling the end of lunch rings."
+        y 3pa "I guess that's it."
+        y "Do you have a fun class next?"
+        mc "Not exactly."
+        mc "I have a free period so I was just going to hang around."
+        mc "Maybe look at the script a little so I can get some of the lines I don't quite remember."
+        y 2pe "Where are you going to do that?"
+        mc "Maybe in one of those supervised classrooms or in the library."
+        y "I wouldn't recommend the library."
+        y 2pf "I went there recently and it was quite busy due to Inauguration Day."
+        mc "There's people setting up in there?"
+        y "Yeah, it might be difficult for you to rehearse with all that noise."
+        mc "I'll keep that in mind."
+        mc "Thanks, Yuri."
+        y 2pb "Of course."
+        y "I'll see you during rehearsals."
+        mc "See you then."
     elif natsuki_date:
         "I was going to try to find Natsuki at lunch."
         "I don't know why but I feel like I should really cherish this time with her."
@@ -5464,7 +5656,7 @@ label ch16_main:
                 show layer master
                 hide screen tear
             "No.":
-                jump ch16_m_afterchoice
+                jump ch16_m_afterforce_1
         label ch16_m_forcechoice_1:
         $ quick_menu = True
         $ _history_list.pop()
@@ -5695,14 +5887,14 @@ label ch16_main:
         cl "I can still save her from herself."
         cl "I just need time."
         cl "You can trust me."
-        cl "Otherwise I'd just have removed this encounter from memory again."
+        cl "Otherwise I would have just removed this encounter from your memory again."
         "Remove from my memory?"
         "Is this who Monika was talking about?"
         cl "I want you to give her a chance."
         cl "Though I realize, I may not really have a choice."
         cl "I can't force you to do that."
         cl "I don't have the ability to do so and my judgment right now is questionable."
-        cl "All I'm asking you to do it not to say those words."
+        cl "All I'm asking you to do is not to say those words."
         cl "You've got to find another way."
         mc "What the hell are you talking about?"
         mc "I don't understand anything you're saying."
@@ -6272,7 +6464,7 @@ label ch16_main:
         ay "I just..."
         ay 1n "I want the truth."
         mc "I probably shouldn't be saying this."
-        mc "But maybe you should see a of therapist."
+        mc "But maybe you should see a therapist."
         ay 2j "Honestly, that probably isn't a bad idea."
         ay "I feel like I'm going crazy."
         ay "Especially these last couple of days."
