@@ -719,7 +719,7 @@ label ch16_main:
             n "I didn't hear you come in."
             show natsuki zorder 2 at t21
             mc "I got here just a couple of moments ago."
-            show natsuki 2i zorder 3 at F21
+            show natsuki 2i zorder 3 at f21
             n "Whatever."
             "Natsuki turns towards Yuri."
             n "What do you want, Yuri?"
