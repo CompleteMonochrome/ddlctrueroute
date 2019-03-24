@@ -551,7 +551,7 @@ label splashscreen:
         $ persistent.achievements_dict["*An Important Character*"] = persistent.achievements_dict["*Past Life*"]
         $ persistent.achievements_dict["*Blossoming Friendship*"] = persistent.achievements_dict["*True Friendship*"]
         $ del persistent.achievements_dict["*Past Life*"]
-        $ del persistent.achievements_dict["*Blossoming Friendship*"]
+        $ del persistent.achievements_dict["*True Friendship*"]
     # Unlock Achievements
     if persistent.monika_change and not persistent.monika_gone:
         $ persistent.achievements_dict["*True Route*"]["achieved"] = True
