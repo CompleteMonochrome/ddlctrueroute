@@ -805,6 +805,8 @@ label after_load:
         if _return:
             $ insert_ayame_character()
 
+    # Persistent Toggling
+    $ persistent.ch16_ny_reload = not persistent.ch16_ny_reload
 
     # Normal Stuff
     if persistent.playthrough == 0:

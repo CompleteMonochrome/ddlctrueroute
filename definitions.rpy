@@ -4787,6 +4787,7 @@ default persistent.ch15_sayori_chance = False
 default persistent.ch16_bad_part = "_1"
 default persistent.ch16_bad_ending_times = 0
 default persistent.ch16_say_date = False
+default persistent.ch16_ny_reload = False
 default persistent.clerk_sayori_bad_ending = False
 # Local Save
 # Player Gender Nouns
