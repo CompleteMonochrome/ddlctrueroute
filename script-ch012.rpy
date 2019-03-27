@@ -4174,6 +4174,7 @@ label ch12_end:
         "If only there was something I could do."
         "I want to help her but I don't know how..."
     else:
+        $ ch12_m_preagree = False
         "As I cross into the final turn before my street, someone blocks my way."
         "It's Monika."
         if ch12_natsuki_reluctance >= 3:
@@ -4214,7 +4215,7 @@ label ch12_end:
                 menu:
                     m "So...are you willing?"
                     "Yes.":
-                        $ ch12_markov_agree = True
+                        $ ch12_m_preagree = True
                         m 4a "So you're interested."
                         m "Hm."
                         m "You're taking a pretty big risk here, aren't you?"
@@ -4233,7 +4234,7 @@ label ch12_end:
                         m 1n "...you."
                         m 1e "Farewell..."
                     "No.":
-                        $ ch12_markov_agree = False
+                        $ ch12_m_preagree = False
                         m 2c "I see."
                         m "Well, it's a little surprising."
                         m 2h "I suppose I can't really force {i}you{/i} to agree."
@@ -4340,6 +4341,7 @@ label ch12_end:
         show monika at thide
         hide monika
         $ pause(1.0)
+        $ ch12_markov_agree = ch12_m_preagree
         "..."
         "Did I just miss something?"
         "Someone was in front of me a second ago...right?"

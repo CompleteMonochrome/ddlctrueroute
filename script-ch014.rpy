@@ -6621,6 +6621,7 @@ label ch14_exclusive_monika:
                     stop sound
                     hide screen tear
                     window show(None)
+                    window auto
                     $ del _history_list[-2:]
                     jump ch14_mystery
                 else:

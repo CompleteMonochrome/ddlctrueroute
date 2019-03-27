@@ -516,6 +516,7 @@ image bg lake_clearrain = "mod_assets/images/bg/lake_clearrain.png"
 image bg river_day = "mod_assets/images/bg/river_day.png"
 image bg river_sunset = "mod_assets/images/bg/river_sunset.png"
 image bg river_night = "mod_assets/images/bg/river_night.png"
+image bg flowerbed = "mod_assets/images/bg/flowebed.png"
 
 image glitch_color:
     ytile 3

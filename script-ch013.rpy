@@ -352,10 +352,10 @@ label ch13_main:
         m 4b "Anyway, we should get inside."
         m "We've kept the others waiting for long enough."
     elif ch12_markov_agree and monika_type == 1:
-        $ get_achievement("*Let Your Hair Down*")
         show monika 1a zorder 2 at t11
         m "Hi [player]~"
         "It's Monika, but..."
+        $ get_achievement("*Let Your Hair Down*")
         "...she's not wearing her white ribbon and her hair is down."
         m 3b "I suppose you're late too?"
         mc "A-Ah, I guess."
