@@ -4910,6 +4910,7 @@ default ch16_ny_stayed = False
 default ch16_ny_clue = "none"
 default ch16_s_date_personality = False
 default ch16_s_date_activities = 0
+default ch16_getmonika = False
 default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","Inauguration Day","???","???","???","???"]
 default special_chapter = False
 default christmas_chapter = False

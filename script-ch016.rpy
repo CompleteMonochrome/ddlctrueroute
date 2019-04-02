@@ -6798,8 +6798,6 @@ label ch16_main:
         ay 2b "I'll see you around, [player]."
         ay 2d "I can't wait to be an official member!"
         mc "See you, Ayame."
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
-    $ renpy.utter_restart()
     return
 
 label ch16_play_normal:
@@ -6809,6 +6807,277 @@ label ch16_play_bad:
     return
 
 label ch16_end:
+    if ch15_s_together or (monika_type == 0 or (monika_type == 1 and ch12_markov_agree)):
+        call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
+        $ renpy.utter_restart()
+    scene bg portraitshop_school with wipeleft_scene
+    "It's time to go to rehearsals for our play in a couple of hours."
+    "I still find it hard to believe that we're doing this."
+    "I don't know if this time we have is enough."
+    "Sayori seemed confident that we'd do fine, so I guess I'll hold on to that hope."
+    "As I enter the room, I can see all the costumes and props all lined up on some of the desks."
+    "I really didn't expect this much stuff for a play we're not even sure is going to go well."
+    "Sayori really went all out..."
+    show sayori 1a zorder 2 at t11
+    s "[player], you're the first one here!"
+    s "I hope you're as ready as I am because this play is going to be so much fun!"
+    mc "I don't think anyone is as ready as you are, Sayori."
+    mc "I think you're probably the most excited about this whole thing."
+    s "Are you telling me you aren't?"
+    mc "I wouldn't say excited is the right word, but I'm ready to get this over with."
+    mc "I'll put all I've got into this, Sayori. You can trust me on that."
+    s "I hope you do, this play is going to be incredible!"
+    s "I'm going to end it all on a high note."
+    mc "You mean {i}we{/i}, right?"
+    mc "As in {i}we're{/i} going to end it on a high note."
+    "Sayori ignores my correction and instead moves towards the door."
+    s "I think I see Yuri coming!"
+    "Sayori opens the door and Yuri steps inside the room."
+    show sayori zorder 2 at t21
+    show yuri 1a zorder 2 at t22
+    "She looks around and notices the assortment of stuff lying around."
+    show sayori zorder 2 at t21
+    show yuri zorder 3 at f22
+    y "I have to say, I was not expecting {i}this{/i} much stuff in that box [player] brought in."
+    y "You've really dedicated yourself to this one play, haven't you Sayori?"
+    show sayori zorder 3 at f21
+    show yuri zorder 2 at t22
+    s "It's for you guys, after all."
+    s "I'd do anything to make sure you all got what you deserved."
+    show sayori zorder 2 at t21
+    show yuri zorder 3 at f22
+    y "Even looking over the script, it seems so well made."
+    y "And you managed to do all of that in such short notice."
+    y "It kind of makes me believe you're some sort of miracle worker."
+    show sayori zorder 3 at f21
+    show yuri zorder 2 at t22
+    s "Like you said, I've dedicated myself to this play."
+    s "And I want it to be fun for everyone."
+    show sayori zorder 2 at t31
+    show yuri zorder 2 at t32
+    show natsuki zorder 3 at f33
+    n "How did you even do that?"
+    n "If I could do my assignments all in the last minute like you can write a script..."
+    n "Let's just say, my life would be a lot easier."
+    show sayori zorder 3 at f31
+    show natsuki zorder 2 at t33
+    s "H-Hey, the script wasn't really last minute."
+    s "I had a couple of days to do it, which is plenty of time."
+    s "Anyway, I'm glad you remembered we were meeting here, Natsuki."
+    show sayori zorder 2 at t31
+    show natsuki zorder 3 at f33
+    n "Why wouldn't I remember?"
+    n "It was a pretty weird thing to suddenly tell us this morning."
+    n "Is everyone here already?"
+    show sayori zorder 3 at f31
+    show natsuki zorder 2 at t33
+    s "Not yet! We're still waiting on Monika."
+    show sayori zorder 2 at t31
+    mc "Don't forget Ayame. She said she was coming to this, wasn't she?"
+    show sayori zorder 3 at f31
+    s "Right...I can't wait to meet her for the first time."
+    show sayori zorder 2 at t31
+    show yuri zorder 3 at f32
+    y "I'm sure you two will become fast friends."
+    y "She's quite eccentric but I think that's a good thing in this situation."
+    show yuri zorder 2 at t32
+    show natsuki zorder 3 at f33
+    n "Ayame isn't what we should be concerned about right now."
+    "Natsuki looks out the door."
+    n "Does anyone know where Monika is?"
+    n "We can't exactly start rehearsing without her."
+    show sayori zorder 3 at f31
+    show natsuki zorder 2 at t33
+    s "I have no idea, I thought she'd be here by now."
+    show sayori zorder 2 at t31
+    mc "Did you tell her we would be here?"
+    mc "She wasn't with us this morning so maybe she didn't know."
+    show sayori zorder 3 at f31
+    s "Oh..."
+    "Sayori scratches her head then looks like she's come to a realization."
+    s "Ehehe, I guess I forgot to tell her."
+    s "Does one of you want to go there and get her?"
+    show sayori zorder 2 at t31
+    show natsuki zorder 3 at f33
+    n "Sayori, are you serious?!"
+    n "How did you forget something like that?"
+    show sayori zorder 3 at f31
+    show natsuki zorder 2 at t33
+    s "S-Sorry, I haven't been able to speak to her all day."
+    s "The only time I could was during lunch and..."
+    if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+        s "I guess I forgot to mention it."
+    else:
+        s "I didn't see her."
+    show sayori zorder 2 at t31
+    show yuri zorder 3 at f32
+    y "I don't mind getting her."
+    y "I'm not sure about Natsuki but I left my things in the clubroom anyway so if she's there, then she can help carry it over."
+    show yuri zorder 2 at t32
+    show natsuki zorder 3 at f33
+    n "Actually, now that you mention it...I did leave my cupcakes there."
+    n "Can you get my things for me?"
+    show sayori zorder 3 at f31
+    show natsuki zorder 2 at t33
+    s "I guess this all works out then!"
+    s "Do you want to bring [player] along in case you need [player_reflexive]?"
+    show sayori zorder 2 at t31
+    show yuri zorder 3 at f32
+    y "I don't think that will be necessary, there's not that much to bring."
+    y "But if you want to come along, you're more than welcome to, [player]."
+    show yuri zorder 2 at t32
+    menu:
+        "Should I go with Yuri to get Monika?"
+        "Yes.":
+            $ ch16_getmonika = True
+            $ ch16_ay_level += 1
+            mc "I'll go just in case you need me."
+            mc "Better safe than sorry, right?"
+            mc "Besides, it's not like we can rehearse with just three of us here."
+            show sayori zorder 3 at f31
+            s "If that's what you wanna do, go ahead!"
+            s "It's not like we can do anything here without all four of us anyway."
+            show sayori zorder 2 at t31
+            show natsuki zorder 3 at f33
+            n "Whatever, just don't take too long."
+            show yuri zorder 3 at f32
+            show natsuki zorder 2 at t33
+            y "Shall we go then?"
+            show yuri zorder 2 at t32
+            mc "After you."
+            scene bg corridor
+            show yuri 1a zorder 2 at t11
+            with wipeleft_scene
+        "No.":
+            $ ch16_getmonika = False
+            mc "I think I'll stay here."
+            mc "You said it yourself, you don't need me there."
+            show yuri zorder 3 at f32
+            y "I see...I'll be back in a few moments then."
+            show sayori zorder 3 at f31
+            show yuri zorder 2 at t32
+            s "Good luck, Yuri!"
+            show sayori zorder 2 at t31
+            "Yuri gives Sayori an acknowledging nod and leaves the room."
+            show yuri at thide
+            hide yuri
+            show sayori zorder 2 at t21
+            show natsuki zorder 2 at t22
+            "Sayori closes the door and looks at the two of us left in the room."
+            show sayori zorder 3 at f21
+            s "So...what do we do in the meantime?"
+            show sayori zorder 2 at t21
+            show natsuki zorder 3 at f22
+            n "I'm just gonna look around at all this stuff."
+            "Natsuki quickly glances around the room."
+            n "Where did you even get all of this?"
+            show sayori zorder 3 at f21
+            show natsuki zorder 2 at t22
+            s "If you know where to look, it's pretty easy to get stuff!"
+            s "You shouldn't worry about it though, what matters is that it's here."
+            show sayori zorder 2 at t21
+            mc "Did all of that really fit in that one box?"
+            mc "It would explain why it was so heavy but not how it all fit in there..."
+            show sayori zorder 3 at f21
+            s "Actually, that was only one of the boxes."
+            s "There was three in total, two of which I brought in just before you guys arrived."
+            show sayori zorder 2 at t21
+            show natsuki zorder 3 at f22
+            n "This must have cost a small fortune."
+            n "I know I wouldn't even have enough money to buy all of this if I saved for months."
+            show sayori zorder 3 at f21
+            show natsuki zorder 2 at t22
+            s "L-Like I said, don't worry about it."
+            s "It's better if we just focus on the play at hand rather than the ceramics of it."
+            show sayori zorder 2 at t21
+            mc "Semantics."
+            show sayori zorder 3 at f21
+            s "You get the point! I just don't wanna talk about it, okay?"
+            show sayori zorder 2 at t21
+            show natsuki zorder 3 at f22
+            n "Fine, jeez. You don't need to get worked up about it."
+            n "I was only trying to make conversation because there's nothing really to talk about."
+            show sayori zorder 3 at f21
+            show natsuki zorder 2 at t22
+            s "Well, why don't you talk to me about Ayame?"
+            s "It'll be good to know at least something about her before she arrives."
+            s "Which reminds me...does she even know where to go?"
+            s "Like did anyone tell her at all where the club is?"
+            show sayori zorder 2 at t21
+            mc "Don't tell me we forgot to tell Ayame too..."
+            show natsuki zorder 3 at f22
+            n "It seems like rehearsals are already off to a great start."
+            n "Sigh..."
+            n "Do you want me to go find her?"
+            show natsuki zorder 2 at t22
+            ay "That won't be necessary!"
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            show natsuki zorder 2 at t33
+            ay "Why? Because I am here!"
+            "Ayame suddenly slams the door right open."
+            "She put so much force into it that it rebounded with enough momentum to hit her face."
+            "I guess she wasn't expecting it because she fell to the floor right after."
+            ay "Ow...that really hurt."
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "A-Are you okay? You're not badly hurt, are you?"
+            "Sayori goes to Ayame and offers her a hand."
+            s "You're Ayame, right?"
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "Thanks, but I can take care of myself."
+            "Ayame doesn't take Sayori's hand and instead gets up by herself."
+            ay "But yes! I am Ayame, it's good to meet you."
+            ay "You must be Sayori, right? I've heard so many things about you."
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "That's me, president of the Literature Club!"
+            show sayori zorder 2 at t32
+            show natsuki zorder 3 at f33
+            n "Ayame, how did you even find us?"
+            n "It's not like any of us told you we'd be here, did we?"
+            show ayame zorder 3 at f31
+            show natsuki zorder 2 at t33
+            ay "Well, not exactly. Since I'm a leader, I can look through certain documents and I found your club."
+            ay "So here I am!"
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "Wow, you're a school leader! That's awesome!"
+            s "Don't think that means you'll get any special treatment here though!"
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "I wouldn't have it any other way."
+            ay "In fact, I'd prefer it if you treated me just like everyone else."
+            ay "I'd hate to change the way you run things just because I'm a leader."
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "That's fine with me!"
+            s "But wait...you mentioned that you found our club on those documents, right?"
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "That's right, why?"
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "We don't usually have our meetings here."
+            s "In fact, I don't think anyone outside of our club knows we're here."
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "W-Well...you see..."
+            show ayame zorder 2 at t31
+            show natsuki zorder 3 at f33
+            n "Does it really matter? She is here now so do not worry about it, Sayori."
+            "The way Natsuki said that sounded almost...robotic."
+            n "Let us just forget it and finally welcome her."
+            show sayori zorder 3 at f32
+            show natsuki zorder 2 at t33
+            s "But you wanted to know just a second ago too..."
+            s "Ah...you're right. Sorry, Ayame."
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "N-Not a problem!"
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
+    $ renpy.utter_restart()
     return
 
 label ch16_sayoridate:
@@ -7534,7 +7803,7 @@ label ch16_sayoridate:
             "There is quite literally flowers everywhere you look."
             "In one section there's flowers of one color."
             "And in another section there's flowers of another color."
-            "It seems like theres an endless stream of flowers and colors all around us."
+            "It seems like there's an endless stream of flowers and colors all around us."
             "It's a lot to take in."
             mc "It's so..."
             s "...beautiful."
@@ -7625,7 +7894,7 @@ label ch16_sayoridate:
             s "That's a real shame."
             s "I would have thought we'd get to see the ghost."
             mc "We don't even know if he exists."
-            if ch16_s_date_persontality:
+            if ch16_s_date_personality:
                 mc "It's possible that everything so far is just a coincidence, isn't it?"
                 mc "And even if they weren't coincidence, he's only been spotted at night."
                 mc "I doubt that's going to change."
@@ -7633,7 +7902,7 @@ label ch16_sayoridate:
                 mc "Maybe he's just resting right now."
             s "Ah, you're probably right."
             s "I guess I just wanted to show you how far I'd go for you."
-            s "Sorry we couldn't get the ghost to appear."
+            s "Sorry that we couldn't get the ghost to appear."
             mc "It's not like it's your fault."
             mc "You can't just force things to happen the way you want."
             mc "Sometimes life is just like that."
@@ -7876,8 +8145,8 @@ label ch16_sayoridate:
             s "Do your worst."
             mc "It's your funeral."
             "Sayori tightens her grip on the arm."
-            "I randomly pull the lever and press some random buttons on the dashboard."
-            "The machine roars to life and starts moving around randomly."
+            "I frantically pull the lever and randomly press the buttons on the dashboard."
+            "The machine roars to life and starts moving around wildly."
             s "Whoa!"
             "Somehow, Sayori manages to hang on."
             "I can't believe she actually stayed on the arm."
@@ -7894,8 +8163,8 @@ label ch16_sayoridate:
             s "There's more to this place than some abandoned machine."
             s "So I want to look around some more."
             mc "Sure..."
-            "Luckily for her, there a simple off switch."
-            "After pressing it, the machine slowly stops but maintains the position of it's arm."
+            "Luckily for her, there is a simple off switch."
+            "After pressing it, the machine slowly stops but maintains the position of its arm."
             "Which means Sayori is at the height of it."
             mc "Do you need me to lower it?"
             s "N-No, I'll be fine."
@@ -7928,7 +8197,7 @@ label ch16_sayoridate:
             mc "Do you know where you're going?"
             s "Do you want an honest answer?"
             s "Not really."
-            mc "Then what are you looking for."
+            mc "Then what are you looking for?"
             mc "Is this path we're taking supposed to lead somewhere?"
             s "There's a legend about this part of the forest."
             mc "Another legend?"
@@ -7937,7 +8206,7 @@ label ch16_sayoridate:
             s "It just might be."
             s "Anyway, they say that if you ever get lost in the forest you can hear a sound calling you."
             s "Following it will bring you back to the lake."
-            mc "Are you sure it's just not some guy playing tricks?"
+            mc "Are you sure it's not just some guy playing tricks?"
             s "That would ruin the fun a little."
             s "Anyway, I think we're lost enough."
             s "Even I don't know the way back."

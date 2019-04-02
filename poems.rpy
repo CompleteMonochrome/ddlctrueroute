@@ -758,7 +758,7 @@ So sweet but is it real?
 Could this just be that spoonful of sugar?
 I want to believe
 I want to cherish what I have
-But theres no time for sweet dreams."""
+But there's no time for sweet dreams."""
     )
 
     poem_n9b = Poem(
