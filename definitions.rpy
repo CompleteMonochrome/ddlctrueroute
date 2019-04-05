@@ -520,6 +520,9 @@ image bg forest_day = "mod_assets/images/bg/forest_day.png"
 image bg forest_sunset = "mod_assets/images/bg/forest_sunset.png"
 image bg forest_night = "mod_assets/images/bg/forest_night.png"
 image bg flowerbed = "mod_assets/images/bg/flowerbed.png"
+image bg tree_day = "mod_assets/images/bg/tree_day.png"
+image bg s_cafe_outside = "mod_assets/images/bg/s_cafe_outside.png"
+image bg s_cafe = "mod_assets/images/bg/s_cafe.png"
 
 image glitch_color:
     ytile 3
