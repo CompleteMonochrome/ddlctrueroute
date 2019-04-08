@@ -7275,6 +7275,309 @@ label ch16_end:
             scene bg corridor
             show yuri 1a zorder 2 at t11
             with wipeleft_scene
+            "Yuri and I make our way to the clubroom at a pretty fast pace."
+            "She didn't seem like she wanted to waste any time."
+            "As we made our way here, we noticed a lot of rooms filled with people."
+            "Most of them looked like they were discussing something pretty important."
+            "They were probably talking about Inauguration Day if I had to take a guess."
+            "When we eventually arrive outside the clubroom, no one seems to be here."
+            "There are people in the rooms in the same corridor but no one in our clubroom."
+            mc "It looks like she isn't here."
+            y "That's unfortunate. Where do you suppose she is then?"
+            mc "I saw her this morning in the gym, I think she was meant to be practicing piano."
+            mc "It's possibly she could be there."
+            y "Maybe we should split up. One of us should stay here in case she comes back and the other can get her at the gym."
+            y "If we don't find her within...say ten minutes, we just head back to the club."
+            mc "Alright, that sounds like--"
+            "Suddenly, I notice the door of the closet open in the clubroom."
+            "Nobody steps outside but it definitely wasn't open when we got here."
+            y "What is it? Do you have a different idea?"
+            mc "No, the closet is open in the clubroom. It wasn't when we got here."
+            mc "I think someone is inside."
+            "Yuri peers into the room, looking for this person that could be in there."
+            y "I don't see anyone in there."
+            mc "There has to be someone in there, right?"
+            mc "There's no other reason the closet should be open."
+            y "I suppose that's a valid argument."
+            y "If the door is locked, then it was probably just left open by the class that was there last."
+            "Yuri turns the door handle to the club, expecting it to be locked."
+            "To her surprise, it opens."
+            mc "Monika is probably inside the closet."
+            y "Well, there's only one way to find out."
+            scene bg club_day
+            show yuri 1a zorder 2 at t11
+            with wipeleft_scene
+            "Yuri and I step into the clubroom. Looking around, we don't see Monika anywhere."
+            "If she's here, she must be in the closet."
+            y "Monika? Are you in here? The meeting is in a different room."
+            mc "Sayori was supposed to tell you but I guess she forgot."
+            "There's no response to either of the things we said."
+            y "I don't think she's here. She would have responded to what we said."
+            mc "Yeah, let's just take the things from the closet and leave."
+            show monika 1a zorder 1 at t21
+            m "What are you guys up to?"
+            show yuri zorder 3 at hf22
+            y "Ah!"
+            "Monika appears from behind us, causing Yuri to jump."
+            y "M-Monika, where did you come from?"
+            show monika zorder 3 at f21
+            show yuri zorder 2 at t22
+            m "I was outside looking for you guys."
+            m "I went in here looking for all of you but none of you were in here."
+            show monika zorder 2 at t21
+            mc "Weren't you just inside? How did you suddenly get outside?"
+            show monika zorder 3 at f21
+            m "What are you talking about? I was outside when you guys walked in."
+            show monika zorder 2 at t21
+            show yuri zorder 3 at f22
+            y "But [player] said the closet was closed when we walked past."
+            y "Then it was suddenly opened when [player_personal] looked again."
+            show monika zorder 3 at f21
+            show yuri zorder 2 at t22
+            m "Oh, that's probably because I was in here before."
+            m "I saw what I can only assume was Natsuki's and your things."
+            m "I guess I didn't close the closet properly and it just opened by itself."
+            show monika zorder 2 at t21
+            show yuri zorder 3 at f22
+            y "That does make sense, I suppose."
+            show monika zorder 3 at f21
+            show yuri zorder 2 at t22
+            m "And what about you two? How come you're the only ones here?"
+            m "We still have to do our rehearsals, you know."
+            show monika zorder 2 at t21
+            mc "Sayori didn't get to tell you, did she?"
+            show monika zorder 3 at f21
+            m "Tell me what exactly? Am I missing something?"
+            show monika zorder 2 at t21
+            show yuri zorder 3 at f22
+            y "We moved the meeting to another room. It's in a more secluded spot."
+            y "Sayori thought it would be easier to rehearse in seeing as less people would be seeing us."
+            y "We came here to get our stuff and look for you."
+            show monika zorder 3 at f21
+            show yuri zorder 2 at t22
+            if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
+                m "I actually saw Sayori at lunch. She didn't mention anything."
+            else:
+                m "She probably should have told me this morning."
+            m "But whatever, what's done is done."
+            m "So what room are we actually practicing in?"
+            show monika zorder 2 at t21
+            show yuri zorder 3 at f22
+            y "I don't know the classroom exactly but I do know how to get there."
+            y "Before that, we should grab the things in the closet."
+            y "That's the reason [player] is here, after all."
+            y "[cPlayer_personal] was meant to help in case you weren't here."
+            show monika zorder 3 at f21
+            show yuri zorder 2 at t22
+            m "Okay, you two! Let's get that stuff and get to rehearsals."
+            m "Ayame is probably waiting for us right now too."
+            show monika zorder 2 at t21
+            show yuri zorder 3 at f22
+            y "Right, Ayame is coming to the meeting today. I wonder where she is."
+            y "I thought she would have ended up here seeing as no one told her we'd be moving rooms for today."
+            show yuri zorder 2 at t22
+            mc "Maybe she forgot to come or has some other matters to attend to."
+            mc "She is a leader, after all."
+            show monika zorder 3 at f21
+            m "If she's not here, then there's no use waiting for her."
+            m "I know we don't have a lot of time for rehearsals so we have to make use of the time we do have."
+            m "Let's just grab the stuff and leave already."
+            show monika zorder 2 at t21
+            mc "Monika has a point. Let's get going."
+            scene bg corridor
+            show monika 1a zorder 2 at t21
+            show yuri 1a zorder 2 at t22
+            with wipeleft_scene
+            "There was three bags in the closet. Two of them belonged to Yuri and one to Natsuki."
+            "I'm carrying one of the bags Yuri brought and Monika is carrying Natsuki's."
+            "To be honest, I don't think I was really needed after all."
+            "The bag Yuri gave me was pretty light and I can only assume the other one was too."
+            "She probably just wanted to give me something to do so I wouldn't feel useless."
+            show monika zorder 3 at f21
+            m "It's a shame we couldn't get a better space for practice."
+            m "Being in a classroom means we're limited in the space we can use."
+            show monika zorder 2 at t21
+            show yuri zorder 3 at f22
+            y "Because of today, there really isn't a lot of free space."
+            y "It's like there's an extra period of school because of how many rooms are being used."
+            y "In fact, there's probably more rooms being used than there is during normal school hours."
+            show yuri zorder 2 at t22
+            mc "Why would that be the case?"
+            show yuri zorder 3 at f22
+            y "The amount of people in a room is less because it's a club."
+            y "Most clubs don't have as many members as there are students in a class."
+            y "Of course, there are some exceptions."
+            show monika zorder 3 at f21
+            show yuri zorder 2 at t22
+            m "I've only just noticed where we're heading."
+            m "We're not going to {i}those{/i} classrooms, are we?"
+            show monika zorder 2 at t21
+            show yuri zorder 3 at f22
+            y "You're going to have to be more specific, Monika."
+            y "I'm not sure what you mean by {i}those{/i} classrooms."
+            show monika zorder 3 at f21
+            show yuri zorder 2 at t22
+            m "The senior classrooms, Yuri. The ones that aren't really used much."
+            m "More than half of the classrooms aren't even used for club space."
+            show monika zorder 2 at t21
+            mc "Do you know the reason that's the case?"
+            mc "The classroom we went to this morning seemed perfectly normal."
+            if ch15_s_together:
+                "Except the fact it was actually that shop Sayori and I went to yesterday."
+            mc "It seems like a waste of the school's resources to just have them there."
+            show monika zorder 3 at f21
+            m "That's the thing, it is a waste."
+            m "The school doesn't have enough students anymore."
+            m "It seems to be losing some every couple of years but not gaining anymore."
+            m "If I remember correctly, we've been losing at four students every year."
+            show monika zorder 2 at t21
+            show yuri zorder 3 at f22
+            y "But that shouldn't be the case."
+            y "The school should be gaining a steady influx of students as the people in their senior year leave."
+            y "In fact, more students should be coming in than out."
+            "Yuri thinks for a moment before coming to a sudden realization."
+            y "H-How do you even know this information?"
+            y "Is there some sort of school history we aren't aware about?"
+            show monika zorder 3 at f21
+            show yuri zorder 2 at t22
+            if monika_type == 0:
+                m "Oh, you know what? I think I've said too much."
+                m "Just forget I said anything. Let's just get to this classroom already."
+                show monika zorder 2 at t21
+                show yuri zorder 3 at f22
+                y "Are you hiding something from us we should know about?"
+                y "If it has something to do with the school or the club then we should know."
+                show monika zorder 3 at f21
+                show yuri zorder 2 at t22
+            else:
+                m "Do you really want to know, Yuri? I can definitely give you that information."
+                "Monika stops moving, causing Yuri and I to do the same."
+                m "It's going to cost you...well, nothing."
+                m "But you'll be completely different after you've learned this information."
+                show monika zorder 2 at t21
+                show yuri zorder 3 at f22
+                y "Completely different? In what way?"
+                y "Learning something like that isn't going to cause me to change."
+                y "In fact, I'm rather interested in this information."
+                y "If what you're saying is true then the school has been operating at a loss of students for decades."
+                show monika zorder 3 at f21
+                show yuri zorder 2 at t22
+                m "You're absolutely sure, Yuri?"
+                m "This won't work if I force you into it so know that I'm giving you this chance."
+                m "You have to be willing."
+                show monika zorder 2 at t21
+                "For some reason, the way Monika said that made me feel a chill."
+                if yuri_date and not persistent.markov_agreed:
+                    mc "Can we take a moment to talk about this?"
+                    mc "I just want to talk to Yuri for a bit."
+                    show monika zorder 3 at f21
+                    m "Of course! Take all the time you need, you little lovebirds~"
+                    m "Though maybe not literally, we still have to get back to rehearsals, you know."
+                    show monika at thide
+                    hide monika
+                    show yuri zorder 2 at t11
+                    "Monika goes to another part of the clubroom where she can't hear us."
+                    "She takes out her phone and starts tapping away at the screen."
+                    "Just to be safe, I pull Yuri aside and lower my voice so that Monika can't hear."
+                    mc "Yuri, I don't like the sound of this."
+                    mc "I know it's probably nothing but you should be careful."
+                    y "But [player], aren't you curious too?"
+                    y "Why would the school be working like this...?"
+                    mc "I am but I don't know if it's worth it."
+                    mc "It's just the way Monika has been lately...I don't know."
+                    y "I'll listen to you over my own feelings on this, [player]."
+                    y "You seem genuinely concerned about this."
+                    y "So if you don't think I should do it, then I won't."
+                    menu:
+                        mc "Yuri, you should..."
+                        "Trust your own feelings.":
+                            $ ch16_yuri_choice = True
+                            mc "If that's really what you want to do, then I shouldn't stop you."
+                            mc "I guess I'm just being a little overprotective."
+                            mc "I just want you to be careful, Yuri."
+                            y "Thank you, [player]. I do appreciate that."
+                            y "You don't have anything to worry about though."
+                            y "I'm not going to do anything stupid. If things sound bad, I'll stop."
+                            "Yuri takes my hands and holds it in hers."
+                            y "I promise."
+                            y "Besides, it's just a story. That's hardly going to change who I am as a person."
+                            y "Not when I have you around."
+                            mc "If you're completely sure about this, go ahead."
+                            mc "I'm just not entirely sure why Monika would say it like that."
+                            mc "It just gave me an odd feeling, that's all."
+                            y "I don't know why but I really want to know this information."
+                            y "It's almost like a compulsion. Like I just have to know."
+                            mc "You sound set on it, Yuri. I hope you learn all you want to know."
+                        "Stay away from Monika.":
+                            $ ch16_yuri_choice = False
+                            mc "With what you said to me before, I think you should stay away from her."
+                            mc "I've started noticing the weird things she's doing too."
+                            mc "It's nothing too out of the ordinary but she's changed who she is."
+                            mc "I can definitely tell now."
+                            y "So you've finally noticed it, [player]?"
+                            y "I was beginning to think you hadn't and so I kinda gave up talking about it."
+                            mc "I just want to protect you, Yuri. You're really precious to me."
+                            mc "I don't want anything bad to happen to you."
+                            "Yuri's face turns a bright red."
+                            y "T-That's very thoughtful of you, [player]."
+                            y "I'll admit knowing the information is oddly tempting to me. It's like there's some kind of force making me want to read it."
+                            y "I'm glad you're here, you're making me listen to reason."
+                            mc "I wouldn't say I'm the best person for this kinda thing."
+                            mc "It's just the way Monika said it...it gave me an odd feeling."
+                            y "If that's the case, then I don't need to know."
+                            y "I'll trust your word over my own desires, [player]."
+                            mc "You don't need to do that all the time. I'm just concerned right now."
+                    "Yuri approaches Monika and gets her attention."
+                    show monika 1a zorder 3 at f21
+                    show yuri zorder 2 at t22
+                else:
+                    $ ch16_yuri_choice = True
+                    show yuri zorder 3 at f22
+                    y "Why are you saying it like it's so ominous?"
+                    y "It's just the history of the school, isn't it?"
+                    y "It would probably be well known to the parents bringing their children here."
+                    show monika zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    m "I have my reasons for that, Yuri."
+                    m "Just like you should have yours for wanting to learn this information."
+                    m "Remember, the decision is completely up to you."
+                    m "I don't want to force you to do anything you don't want to."
+                    show monika zorder 2 at t21
+                    show yuri zorder 3 at f22
+                    y "I'd like to take a moment to think about it."
+                    show monika zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    m "Of course, take all the time you need."
+                    m "Though maybe not, since we do have a rehearsal to get to."
+                    show monika zorder 2 at t21
+                    "Yuri ponders for a moment then looks at me with an expectant look."
+                    show yuri zorder 3 at f22
+                    y "Well, what do you think [player]? I want to get your opinion."
+                    y "Do you think I should do it?"
+                    show yuri zorder 2 at t22
+                    mc "Well, if you ask me--"
+                    show monika zorder 3 at f21
+                    m "Why are you asking [player_reflexive]?"
+                    m "It's not any of [player_possessive] business what choice you make."
+                    m "Or are you saying you aren't independent enough to make the decision yourself?"
+                    m "Come on, Yuri. It's really not that hard, is it?"
+                    show monika zorder 2 at t21
+                    show yuri zorder 3 at f22
+                    y "T-That's not it all! I was just..."
+                    y "N-Never mind, I'll decide myself. Just give me a minute."
+                    show yuri zorder 2 at t22
+                    "Yuri paces around the room. She's taking this pretty seriously."
+                    "What's the worst that could happen anyway? It's just a piece of information."
+                    "That's hardly going to change who Yuri is, is it?"
+                    show monika zorder 3 at f21
+                m "So, have you made up yo"
+                if ch16_yuri_choice:
+                    y "I've decided I want to learn this information."
+                    y "My curiosity is getting the better of me for some reason."
+                else:
+                    y "I don't need to learn this information."
+                    y "[player] and I talked about it and I don't really need to learn about it all."
+                    y "I want to know, but not enough that it outweighs my trust in [player]."
         "No.":
             $ ch16_getmonika = False
             mc "I think I'll stay here."
@@ -8811,7 +9114,7 @@ label ch16_sayoridate:
             s "Even if you did, I'm not sure I could properly explain it."
             s "Now come on, let's go inside. I'm sure they're probably expecting us now."
             "Expecting us...? Why would they be?"
-        "Picnic":
+        "Picnic.":
             $ ch16_s_date_activities += 1
             mc "I think a picnic would be better, it feels a lot more personal."
             mc "And I haven't really had something made by you in a while, so I'm eager to try it."
