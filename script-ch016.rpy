@@ -6810,7 +6810,7 @@ label ch16_end:
     if ch15_s_together or (monika_type == 0 or (monika_type == 1 and ch12_markov_agree)):
         scene bg library with wipeleft_scene
         "[ch13_name] told me to go to the library after lunch."
-        "I'm not exactly sure what I'm supposed to be doing here so I'm just reading the script for the paly."
+        "I'm not exactly sure what I'm supposed to be doing here so I'm just reading the script for the play."
         "Usually the space would be quiet since it's a place to study in peace."
         "But because of Inauguration Day, there are a whole lot of people working on stuff here."
         "Most of the tables are filled with people talking amongst themselves or doing something for their club."
@@ -7140,6 +7140,10 @@ label ch16_end:
         mc "In mind when doing what exactly?"
         ay 1l "You'll see when the time comes, for now you don't have to worry about it."
         ay 1m "Now, onto my second question!"
+        if monika_type == 0 or monika_type == 1 and ch12_markov_agree:
+            ay "What's your relationship like with Monika?"
+        else:
+            ay "What's your relationship like with Sayori?"
         call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
         $ renpy.utter_restart()
     scene bg portraitshop_school with wipeleft_scene
@@ -9280,6 +9284,10 @@ label ch16_sayoridate:
             mc "In the end, your happiness is more important to me than anything."
             mc "If I have to be a puppet of some higher power for that to happen, then so be it."
             s 1bk "..."
+            s "You shouldn't say things like that, [player]."
+            s "Even if you aren't the one I love, you're still important to me."
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
+    $ renpy.utter_restart()
     return
 
 label ch16_ending_good:

@@ -1,6 +1,6 @@
 define persistent.demo = False
 define persistent.steam = ("steamapps" in config.basedir.lower())
-define config.developer = False
+define config.developer = True
 
 python early:
     import singleton
