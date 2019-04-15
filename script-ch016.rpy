@@ -7142,8 +7142,10 @@ label ch16_end:
         ay 1m "Now, onto my second question!"
         if monika_type == 0 or monika_type == 1 and ch12_markov_agree:
             ay "What's your relationship like with Monika?"
+            mc "W-With Monika? What does this have to do with the club?"
         else:
             ay "What's your relationship like with Sayori?"
+            mc "With Sayori? That doesn't have anything to do with the club."
         call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
         $ renpy.utter_restart()
     scene bg portraitshop_school with wipeleft_scene
@@ -7599,9 +7601,72 @@ label ch16_end:
                     "That's hardly going to change who Yuri is, is it?"
                     show monika zorder 3 at f21
                 m 2c "So, have you made up your mind?"
+                show monika zorder 2 at t21
+                show yuri zorder 3 at f22
                 if ch16_yuri_choice:
                     y 3pe "I've decided I want to learn this information."
                     y "My curiosity is getting the better of me for some reason."
+                    y "So just say what you have to say, Monika."
+                    y "Or should [player] take this ridiculous agreement to hear it too?"
+                    show monika zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    m "No, [player] is different to you, Yuri."
+                    m "[cPlayer_reflexive] knowing this information won't change [player_reflexive] at all."
+                    m "But it will change you, Yuri. Just know that you've done this of your own free will."
+                    show monika zorder 2 at t21
+                    show yuri zorder 3 at f22
+                    y "Just get on with it, Monika."
+                    show monika zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    m "As you wish, Yuri. Now, where to begin?"
+                    m "Why not at the beginning, the founding of this school?"
+                    m "This school was founded over a hundred years ago, possibly more."
+                    m "Its founding was sponsored by the most influential families in the area, so it became very popular."
+                    m "Back then, there were a lot more students going to this school."
+                    m "I'd say at least five hundred of them."
+                    show monika zorder 2 at t21
+                    show yuri zorder 3 at f22
+                    y "Five hundred? That's an oddly specific number."
+                    y "How can you be so certain about the student body count back then, Monika?"
+                    y "It's not like you have access to the records...do you?"
+                    show monika zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    m "Call it an educated guess."
+                    m "If I knew the exact year it was founded, I could give you a more accurate number."
+                    show monika zorder 2 at t21
+                    mc "What does the year--"
+                    show monika zorder 3 at f21
+                    m "Silence, [player]. You'll have your time."
+                    m "Right now, all you have to do is watch and listen."
+                    m "Watch as Yuri descends into madness again."
+                    m "Do you know what will happen when you hear the end of it, Yuri?"
+                    show monika zorder 2 at t21
+                    show yuri zorder 3 at f22
+                    y "I don't know. You keep saying I'll change."
+                    y "But I'm more resolved than you think, Monika."
+                    y "Hearing the end of some possibly made up tale isn't going to change who I am."
+                    show monika zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    m "Ahaha, we'll see about that, Yuri."
+                    show monika zorder 2 at t21
+                    show yuri zorder 3 at f22
+                    y "Why are you being so ominous about this?"
+                    y "I'm starting to feel like you're just playing some kind of cruel joke."
+                    y "Maybe [player]--"
+                    show monika zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    m "[player] isn't going to save you, Yuri. In fact, [player_personal] won't say another word."
+                    m "You've already cast the die, now you must see it through to the end."
+                    m "For by the end of it, you'll see things my way."
+                    m "Now, let me finish what I was saying."
+                    m "Every year since its founding, five students would disappear from the school."
+                    m "Without fail, it was always five students."
+                    m "The student body count has always stayed the same except for that constant five student drop."
+                    m "No one, and I mean absolutely no one knows why."
+                    m "Except me."
+                    m "The cause is this vicious cycle that threatens to destroy everyone."
+                    m "This cycle that will never stop until every last person has ceased to exist."
+                    m "This cycle that I've been trapped for what seems like forever."
                 else:
                     y 3pi "I don't need to learn this information."
                     "Yuri looks at me as she says that."
@@ -7738,6 +7803,210 @@ label ch16_end:
             show sayori zorder 2 at t32
             ay "N-Not a problem!"
             ay "It's not a big deal in any sense, so let's pretend it never happened."
+            "Ayame walks into the room and looks around."
+            ay "Wow, very snazzy."
+            "She picks up one of the costumes lying around on the table."
+            ay "I'm guessing these are what you're wearing for the play."
+            ay "They're pretty high quality, I'm surprised you could afford something like this."
+            show ayame zorder 2 at t31
+            "Ayame looks at the three of us for a couple of seconds."
+            "Her gaze seems to be focused on Natsuki."
+            show natsuki zorder 3 at f33
+            n "Yeah, you're not the only one that's surprised."
+            n "Sayori really went all out for this play."
+            n "I was kinda expecting cheap stuff from one of those second hand stores or something."
+            show ayame zorder 3 at f31
+            show natsuki zorder 2 at t31
+            ay "Well, I'm not going to ask how you got all of this."
+            ay "It's probably none of my business how your club get its finances."
+            ay "So, what are you planning to do right now?"
+            "Ayame looks around the room then back at us then around the room again."
+            ay "Wait...are you missing people? I could have sworn there were two other people in the club."
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "Yeah, actually--"
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "That's right! Yuri and Monika are missing."
+            ay "Are they here today? Are they doing something?"
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "Well, Yuri is going to the usual room to find Monika and get her things."
+            s "I may have forgotten to tell Monika that the meeting was here today..."
+            s "If Yuri happens to meet Monika at the clubroom, then that would be the best possible outcome."
+            s "If not, well...I guess we'll have to delay the rehearsal a bit."
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "Rehearsals? That's what you're doing for this meeting?"
+            ay "I would have thought you'd have already rehearsed it."
+            ay "Or is this some kind of last minute rehearsal?"
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "It's actually our first rehearsal. My hope is that we'll get at least a couple of runs."
+            s "But we'll see, we don't exactly have that much time left."
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "Yeah, you really don't have that much time at all."
+            ay "With Yuri and Monika being missing, I'd be surprised if you can get even one rehearsal in."
+            ay "Though I don't actually know how long your play is."
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "You'll see when we actually rehearse."
+            s "In the meantime, why don't you take a seat while we wait for everyone?"
+            s "We're not exactly doing anything right now, so if you have any ideas on how we can pass the time..."
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "I was actually going to give you all gifts, but seeing as not everyone is here, I'll hold it off."
+            ay "Buuuuuut, if you want to pass the time...I have a couple of ideas of something we could do."
+            ay "I want to tell you guys a bit about me, and what better way than through a story?"
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "I think that's a great idea! What's the story about?"
+            s "It isn't too personal, is it?"
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "Not at all, in fact it's actually something I've been wanting to tell you all."
+            ay "I haven't told anyone else yet, not even my closest friends so you'd all be the first."
+            ay "It's a shame that Yuri and Monika aren't here but that's their loss."
+            show ayame zorder 2 at t31
+            show natsuki zorder 3 at f33
+            n "Get on with it, Ayame. We haven't got all day."
+            show ayame zorder 3 at f31
+            show natsuki zorder 2 at t33
+            ay "Ahaha, okay. I wasn't expecting you to be so eager about it."
+            ay "Now, where do I begin...? Oh, right."
+            ay "It all started one fateful afternoon when I was wandering around my home."
+            ay "My parents were out on some business meeting or something."
+            ay "I don't really keep track of what they're doing, but that's not important."
+            ay "I was admiring nature when suddenly it felt like the world around me was...frozen."
+            ay "It felt like time was frozen or even moving backwards."
+            show ayame zorder 2 at t31
+            show natsuki zorder 3 at f33
+            n "Ayame, hold on just a second. I'd like to get something clear before we move on."
+            n "Not that I really mind either way but..."
+            n "Is this a real story...or something you just made up?"
+            show ayame zorder 3 at f31
+            show natsuki zorder 2 at t33
+            ay "I don't know the answer to that question myself, Natsuki."
+            "Natsuki has a look of confusion on her face but decides not to press on."
+            ay "Like I was saying, time was frozen."
+            ay "The birds around flying in the sky were stuck in place, mid flight."
+            ay "At first, I didn't really know what to think."
+            ay "There was just a lot of questions buzzing in my head."
+            ay "Was I dreaming? Was this some kind of trick someone was playing on me?"
+            ay "I began to panic. What if the world around me was stuck like this forever?"
+            ay "Was I just supposed to live the rest of my life like this?"
+            ay "Then I took a deep breath and closed my eyes."
+            ay "Upon opening them, the world around me began to move once again."
+            ay "I never felt so relieved to hear the songs of birds in the distance."
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "Sorry to interrupt you, Ayame. I just have a couple questions already."
+            s "When did you come up with this story?"
+            s "It sounds...interesting and all but what inspired to come up with it and when?"
+            s "And more importantly why decide to tell us?"
+            s "Now that I or anyone else here minds but...you barely know us."
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "I...I don't know. I suppose it's because I feel this certain...affinity towards this club."
+            ay "Like I can tell you guys {i}everything{/i}."
+            ay "It's as if I could trust you all with my deepest, darkest secrets."
+            ay "Which is weird! I can't understand why myself."
+            show ayame zorder 2 at t31
+            show natsuki zorder 3 at f33
+            n "No offense, but that just sounds absurd."
+            n "I think you may have some sort of problem, Ayame."
+            show ayame zorder 3 at f31
+            show natsuki zorder 2 at t33
+            ay "I'm very aware that I do have some sort of problem, Natsuki."
+            ay "Believe me when I say that I have done whatever I could within my power to try to get rid of it."
+            ay "But it was all to no avail."
+            ay "Anyway, the story isn't finished yet. There's a bit more to go."
+            ay "That is, if you're still interested."
+            show ayame zorder 2 at t31
+            "Ayame looks at the three of us individually, expecting an answer."
+            mc "I'm interested to see how it ends."
+            mc "It feels like an odd thing to tell a story about."
+            if ch15_s_together:
+                mc "Yet it feels oddly familiar somehow."
+            show sayori zorder 3 at f32
+            s "You started it so you may as well tell us how it ends."
+            s "And you didn't really answer all my questions, but I think I'm about to find out the answer to them anyway."
+            show sayori zorder 2 at t32
+            show natsuki zorder 3 at f33
+            n "I thought the story would have been about something that really happened."
+            n "That way maybe I could learn a bit about you seeing as you know a lot about us from Yuri already."
+            n "But seeing as you've already told us some of it..."
+            show ayame zorder 3 at f31
+            show natsuki zorder 2 at t33
+            ay "Okay, I understand I'm not the best storyteller."
+            ay "Just bear with me, it's almost the interesting part."
+            "I thought the interesting part would have been the part where time froze."
+            "It turns out Ayame has more in store for us."
+            ay "As I was saying, when time unfroze I felt relief."
+            ay "Then I came to a sudden realization, was I the cause of it all?"
+            ay "This voice inside my head was telling me it was me."
+            ay "But how could it have been? I have no idea how I could possibly do that."
+            ay "I thought about telling my parents about what happened."
+            ay "I almost did but I decided against it for fear of sounding crazy."
+            ay "Which is ironic, since I'm telling you three."
+            ay "After a few minutes of walking around, reflecting on what just happened..."
+            ay "Time froze. Again. The clocks on the walls stopped ticking."
+            ay "The blades of grass were frozen in place and once again questions raced through my head."
+            ay "This...is where it got weird."
+            ay "When I went to the street to witness the effects, I saw someone on the corner of the street."
+            ay "Or at least, I'm pretty sure I did."
+            ay "It was only for the briefest of moments, but I could make out a sort of pink and red."
+            ay "This wouldn't be a significant detail but that person was moving."
+            ay "Moving in this period of stopped time."
+            ay "This made my head jump to two conclusions. Either I was imagining things and everyone else was frozen..."
+            ay "Or this person could somehow traverse through the world while time ceased."
+            ay "So I did what any sane person would have done."
+            show ayame zorder 2 at t31
+            mc "You decided not to follow it, right?"
+            mc "That {i}is{/i} what a sane person would have done, Ayame."
+            show ayame zorder 3 at f31
+            ay "I needed answers, [player]. Any sane person would do the same."
+            "Natsuki and Sayori look at each other with a inquiring look. Natsuki shrugs."
+            "There's a slight look of worry on Sayori's face."
+            ay "It seemed to me at the time that this would be the only one who knew what was going on."
+            ay "I had to find out why this was happening so I gave chase."
+            ay "I tried to run as fast as I could towards this person."
+            ay "When I finally turned the street, they were missing. Completely gone."
+            show ayame zorder 2 at t31
+            show natsuki zorder 3 at f33
+            n "Is it possible they just went into their house or something?"
+            n "Or maybe into a side street or alley?"
+            show ayame zorder 3 at f31
+            show natsuki zorder 2 at t33
+            ay "That street was mostly just a wide road with no houses or alleys."
+            ay "And so I was left all by myself, alone in a single moment of time."
+            ay "Just as I was venting my frustration about it all, time resumed once again."
+            ay "The people on the street walking looked at me with a bewildered look on their face and rightfully so."
+            ay "A random girl yelling in the middle of the street in broad daylight for seemingly no reason?"
+            show ayame zorder 2 at t31
+            show natsuki zorder 3 at f33
+            n "So you're saying that time started moving again because you yelled at it to?"
+            n "This sounds more and more made up as it goes on."
+            show sayori zorder 3 at f32
+            show natsuki zorder 2 at t33
+            s "You know, maybe it isn't all that ridiculous."
+            s "It's interesting to hear Ayame's side of things of this story."
+            s "{i}(This confirms my suspicions too...){/i}"
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "My side of things? Ahaha, I wasn't aware there was another side of this story."
+            ay "This is all just a recount of something that very well may have been a dream."
+            ay "But what about your suspicions?"
+            ay "Are you suspicious of me or something, Sayori?"
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "W-What? I didn't say anything like that."
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "You said it loud and clear."
+            ay "Well...maybe not loud but it was pretty clear."
+            ay "You said it confirms your suspicions."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
