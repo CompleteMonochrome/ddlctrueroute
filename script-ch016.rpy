@@ -7143,9 +7143,76 @@ label ch16_end:
         if monika_type == 0 or monika_type == 1 and ch12_markov_agree:
             ay "What's your relationship like with Monika?"
             mc "W-With Monika? What does this have to do with the club?"
+            ay "Lots of things! She's the club {i}vice{/i} president, isn't she?"
+            ay "It would make sense to see how the normal members of the club are interacting with the higher ups."
+            ay "Though I imagine it would be a lot different since you're a smaller club."
+            ay "Still! I want to know."
+            mc "Oh, that's what you meant."
+            ay "Did you think I meant something different?"
+            ay "Perhaps something personal, [player]?"
+            ay "You don't have that kind of relationship with her, do you?"
+            mc "N-No, of course not. We're just friends."
+            "But do I want it to stay like that?"
+            ay "Of course! I'm just messing around with you."
+            ay "Now, to get on with my question."
+            mc "Okay, let me think..."
+            mc "Monika and I are kinda close in the club."
+            mc "At least, compared to everyone else."
+            mc "Monika and I know each other from class last year but ever since I joined the club..."
+            mc "Well, we've started talking more and more."
+            ay "Do go on, I'm all ears, [player]."
+            mc "What I'm trying to say is that my answer might be bias."
+            mc "Are you sure that's what you want?"
+            mc "I don't want to give you a bad answer or anything."
+            ay "If anything, your answer will give me insight."
+            ay "You have a unique relationship with Monika in that you're about as close with her as Sayori."
+            ay "Yuri and Natsuki have a pretty neutral relationship with her."
+            ay "At least, judging from the journal that Yuri gave me."
+            ay "And I can't exactly get Sayori to tell me right now."
+            ay "So I want to see how it differs."
+            mc "I don't know what to tell you, Ayame."
+            ay "Start from the weekend after you joined the club."
+            ay "How were your interactions with her?"
+            ay "Were they awkward? Weird? Normal?"
+            ay "Just tell me anything and everything you're willing to share."
+            mc "They're just like anybody else for the most part."
+            mc "When Monika addresses the club, she doesn't call me out or anything."
+            mc "It's just as if I was anybody else."
+            mc "I guess where our relationship changes is during poem sharing time."
+            ay "During poem sharing time?"
+            ay "Ah, I guess that makes sense since it's a more personal time, right?"
+            mc "That's precisely why."
+            ay "Well, do you care to elaborate on just how your relationship changes?"
+            ay "Or is that too personal?"
+            mc "I don't think it's that personal so I guess I can tell you."
+            mc "I didn't notice at first but I think her poems have gotten more..."
+            mc "...I guess you could say relatable to me?"
+            mc "She has this style that she always writes with."
+            mc "I followed her style ever since I could get used to it."
+            mc "And I suppose...we bonded over that."
         else:
             ay "What's your relationship like with Sayori?"
             mc "With Sayori? That doesn't have anything to do with the club."
+            ay "Why wouldn't it have anything to do with the club?"
+            ay "She's the president of the club, is she not?"
+            ay "I just want to know what kind of relationship you have with her."
+            ay "I imagine being in a small club, you're rather close with each other."
+            mc "Oh, that's what you meant."
+            ay "Of course! I don't want to know your personal relationship or anything."
+            ay "I mean...are you two a thing or...?"
+            mc "W-What?! No...we're not."
+            mc "I mean, it's complicated..."
+            ay "None of my business, I know!"
+            ay "Let's just skip past this awkward part and get to my question."
+            mc "Sounds good to me."
+            mc "I'd say my relationship with Sayori is closer than the average member."
+            mc "We're best friends, so it only makes sense."
+            mc "Asking someone like me will probably get you a biased answer, Ayame."
+            mc "It might not be what you're looking for."
+            ay "Even so, I'd like to know what your relationship is like."
+            ay "From reading Yuri's journal, I could get an idea of her relationship with Sayori."
+            ay "I'd like to understand how it differs."
+            ay "Even the smallest detail, if you're willing to share it then I want to know."
         call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
         $ renpy.utter_restart()
     scene bg portraitshop_school with wipeleft_scene
@@ -7476,6 +7543,19 @@ label ch16_end:
                 show yuri zorder 2 at t22
                 m "No, it has nothing to do with the club."
                 m 1e "You shouldn't worry about it."
+                show monika zorder 2 at t21
+                show yuri zorder 3 at f22
+                y "Are you sure you don't want to tell us?"
+                y "If keeping this information to yourself is hurting you then--"
+                show monika zorder 3 at f21
+                show yuri zorder 2 at t22
+                m "It's fine, Yuri. I shouldn't have said anything to begin with."
+                m "Can we just get on with it?"
+                show monika zorder 2 at t21
+                mc "I think it's best if we just leave it for now, Yuri."
+                show yuri zorder 3 at f22
+                y "Yes...you're probably right about that."
+                y "That doesn't mean I don't want to know anymore though..."
             else:
                 m 1a "Do you really want to know, Yuri? I can definitely give you that information."
                 "Monika stops moving, causing Yuri and I to do the same."
@@ -7666,12 +7746,89 @@ label ch16_end:
                     m "Except me."
                     m "The cause is this vicious cycle that threatens to destroy everyone."
                     m "This cycle that will never stop until every last person has ceased to exist."
-                    m "This cycle that I've been trapped for what seems like forever."
+                    m "This cycle that I've been trapped in for what seems like forever."
+                    m "I'm the only one who can stop it, Yuri."
+                    m "Do you understand? Without me, we're all doomed."
+                    $ gtext = glitchtext(30)
+                    m "Without [gtext]{nw}"
+                    m "Yuri."
+                    show monika zorder 2 at t21
+                    "I don't understand what just happened."
+                    "Monika told a pretty strange story that didn't sound {i}that{/i} convincing."
+                    "But I felt something weird come from nowhere."
+                    "I look at Yuri and her gaze seems to be fixed on Monika."
+                    "She's completely expressionless. What happened to her?"
+                    show yuri zorder 3 at f22
+                    y "..."
+                    y "You are right. We must do something about it."
+                    show monika zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    m "You know, I'm surprised that actually worked."
+                    m "I suppose that story was enough to make Yuri give her full attention."
+                    m "Now she's completely helpless again."
+                    m "All that effort to try to fix her, only for her to end up like this."
+                    m "What a waste of my time."
+                    m "She was already a prime candidate before but you just had to meddle in all of this."
+                    m "But I suppose there's no use complaining about it now."
+                    m "I've already fixed this problem that shouldn't have been a problem to begin with."
+                    m "You'll obey me when the time comes, now won't you?"
+                    show monika zorder 2 at t21
+                    show yuri zorder 3 at f22
+                    y "As you say."
+                    show monika zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    m "So exciting that a little world manipulation can get something like that done."
+                    m "Although it wasn't the most efficient way...no, I don't have that kind of power yet."
+                    m "I was only able to do it through some roundabout way."
+                    m "But soon..."
+                    "Monika looks at me and smiles."
+                    m "Soon, it'll all be over and I can finally enact my plans."
+                    m "Now, I should probably return Yuri back to normal for now."
+                    m "But the seed is already planted, I just need to activate it."
+                    show monika zorder 2 at t21
+                    "Monika stares at Yuri intently."
+                    "The expression slowly returns to Yuri's face and she finds herself confused."
+                    show yuri zorder 3 at f22
+                    y "W-What? What's happening right now?"
+                    show monika zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    m "Right now? Well, we're about to leave to go back to the other room."
+                    m "You didn't really seemed convinced about my story."
+                    m "So there's no point going on about it anymore."
+                    show monika zorder 2 at t21
+                    show yuri zorder 3 at f22
+                    y "I didn't? I...can't even remember what you said."
+                    show monika zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    m "It was that forgettable? Wow, I guess I'm not the greatest storyteller."
+                    m "I don't suppose you feel any different at least?"
+                    show monika zorder 2 at t21
+                    show yuri zorder 3 at f22
+                    y "I don't think I do. Should I?"
+                    y "You seemed pretty adamant about me being different afterwards but I feel the same."
+                    show monika zorder 3 at f21
+                    show yuri zorder 2 at t22
+                    m "Oh, well I guess it didn't really work."
+                    show monika zorder 2 at t21
+                    mc "I'm not really sure how telling a story was meant to change someone, Monika."
+                    mc "Unless it was some sort of revelation that related to someone personally."
+                    mc "I don't know if the students disappearing thing is actually true but it does sound a bit ridiculous."
+                    show monika zorder 3 at f21
+                    m "I don't suppose you have a better explanation, do you?"
+                    show monika zorder 2 at t21
+                    show yuri zorder 3 at f22
+                    y "I can't even remember what you said the reason was but it doesn't really matter."
+                    y "If the school really does have a declining student body then there's probably some reasons for it."
                 else:
                     y 3pi "I don't need to learn this information."
                     "Yuri looks at me as she says that."
                     y "[player] and I talked about it and I don't really need to learn about it all."
                     y "I want to know, but not enough that it outweighs my trust in [player]."
+            show monika zorder 3 at f21
+            show yuri zorder 2 at t22
+            m "Okay, if we're finished here I'd really like to get going."
+            m "With how much time we have left, there's almost no time to do even one rehearsal."
+            m "So come on, you two. Let's get moving."
         "No.":
             $ ch16_getmonika = False
             mc "I think I'll stay here."
@@ -7904,8 +8061,8 @@ label ch16_end:
             s "Sorry to interrupt you, Ayame. I just have a couple questions already."
             s "When did you come up with this story?"
             s "It sounds...interesting and all but what inspired to come up with it and when?"
-            s "And more importantly why decide to tell us?"
-            s "Now that I or anyone else here minds but...you barely know us."
+            s "And more importantly, why decide to tell us?"
+            s "Not that I or anyone else here minds but...you barely know us."
             show ayame zorder 3 at f31
             show sayori zorder 2 at t32
             ay "I...I don't know. I suppose it's because I feel this certain...affinity towards this club."
@@ -8006,7 +8163,130 @@ label ch16_end:
             show sayori zorder 2 at t32
             ay "You said it loud and clear."
             ay "Well...maybe not loud but it was pretty clear."
-            ay "You said it confirms your suspicions."
+            ay "You said it confirms your suspicions, didn't you?"
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "If you heard that then you must have some amazing hearing or..."
+            s "Well, you have amazing hearing."
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "I'd say my hearing is normal, not particularly amazing or anything."
+            ay "I can just make out what people are saying as if there was words right in front of me."
+            ay "Sort of like subtitles but when I'm talking to people."
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "Like subtitles, eh? I'm sure that must be useful..."
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "If there's nothing else, I'd like to finish the story."
+            ay "It's got quite the ending, I'm sure you'll all like it."
+            show ayame zorder 2 at t31
+            show natsuki zorder 3 at f33
+            n "Just finish it already, Ayame."
+            n "I have a feeling Yuri and Monika are going to be back any second now."
+            show ayame zorder 3 at f31
+            show natsuki zorder 2 at t33
+            ay "In that case I'll just skip all the minor details."
+            ay "The story ends with me suddenly being shifted back to my home."
+            ay "It was like a time reversal, all my actions played in reverse."
+            ay "I could watch the world around me rewind but I was powerless to do anything about it."
+            ay "It kept on going until I was back inside my house, before the time stop and reversal."
+            ay "I was half expecting it all to happen again."
+            ay "An endless loop that I was destined to repeat."
+            ay "But...thankfully, it didn't repeat!"
+            ay "I actually went outside to see if anything was different but there was nothing."
+            ay "The events of the rest of that day went without a hitch."
+            show ayame zorder 2 at t31
+            show natsuki zorder 3 at f33
+            n "So you're basically saying that it didn't happen in the end?"
+            n "That everything you just told us never happened?"
+            show ayame zorder 3 at f31
+            show natsuki zorder 2 at t33
+            ay "It did happen but I suppose because of the rewind, it never did happen."
+            show ayame zorder 2 at t31
+            show natsuki zorder 3 at f33
+            n "For all we know, you could have just made it up."
+            show ayame zorder 3 at f31
+            show natsuki zorder 2 at t33
+            ay "But I'm telling you the truth!"
+            ay "I swear these events did happen, or at least they're so engrained in my head that they must have."
+            show ayame zorder 2 at t31
+            mc "Maybe it was some kind of lucid dreaming where it felt real?"
+            mc "Or it really could have happened, I don't have any reason not to believe you."
+            mc "There's just no proof that it did happen."
+            show ayame zorder 3 at f31
+            ay "I can see that telling you guys has not made me lean towards accepting if it was real or not."
+            ay "Ahaha, in fact I think I've come out more confused than before."
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "I, for one, believe Ayame."
+            s "She's going to be the newest member of the club so I don't see any reason she'd lie to us."
+            s "Dream or not, Ayame believes there's a chance it happened so let's take her word for it."
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "I really appreciate you saying that, Sayori."
+            ay "Things like that let me know that I've made the right decision joining this club."
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "Of course, any--"
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "But you shouldn't just do that with everyone, you know."
+            ay "Such gullibility could lead to your undoing. Especially with someone you've just met."
+            "Ayame locks her eyes with Sayori."
+            "It's like she's trying to intimidate her or something..."
+            "Natsuki and I can both sense the tense mood that Ayame is bringing."
+            "She wasn't like this at all yesterday."
+            "I'm not sure where this is coming from all of a sudden."
+            ay "But you don't have to worry about that with me!"
+            ay "I'm not out to hurt anyone or anything like that."
+            ay "I just thought I'd let you know."
+            ay "That tip, of course, goes to all three of you and not just Sayori."
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "Right...thanks for the advice then, Ayame."
+            s "I suppose all that's left to do now is wait for the other two to get back."
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "So what did you learn about me from that story?"
+            ay "Probably nothing since it didn't really make much sense."
+            ay "But if you learned anything at all."
+            show ayame zorder 2 at t31
+            show natsuki zorder 3 at f33
+            n "I learned that you've got some strange imagination."
+            n "Or if it really wasn't imagination, some {i}very{/i} strange things happening to you."
+            n "Though I'm not really surprised if that's the case, to be honest."
+            n "Stranger things have happened in this club, I'm sure you probably know some of them."
+            show natsuki zorder 2 at t33
+            "I can't really disagree with her there. As bizarre as the world suddenly stopping like that is..."
+            "It wouldn't be the weirdest thing I've heard happen."
+            show ayame zorder 3 at f31
+            ay "Stranger things have happened, or so I've read."
+            ay "Those, at least, have some sort of possible reason they could have happened."
+            ay "Mine just doesn't make any sense but I'm slowly understanding it."
+            "Ayame turns towards us."
+            ay "Interesting. What are your thoughts [player] and Sayori?"
+            ay "Learn absolutely anything at all?"
+            show ayame zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "I think I did but it wasn't much."
+            s "I'd rather learn more about you through the things you do and not the things you've done."
+            s "From what I can tell from your story, you sound like a wealthy person."
+            s "You said your parents were on a business meeting and that usually means meeting with some executives or something, right?"
+            s "Which also explains why you bought gifts for us because money doesn't really concern you."
+            s "Am I right?"
+            show ayame zorder 3 at f31
+            show sayori zorder 2 at t32
+            ay "That...that was a pretty good deduction from a small detail I said."
+            ay "It's true, my family has more money than they know what to do with."
+            ay "I don't meddle in their affairs, I don't plan on continuing whatever they're doing."
+            ay "I don't really have an interest."
+            ay "Though as the only heir to the family fortune, I suspect they may have other plans."
+            show ayame zorder 2 at t31
+            show natsuki zorder 3 at f32
+            n "I'd say do what you want, Ayame."
+            n "You shouldn't let your parents control your life."
+            n "I know that all too well.."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
@@ -9425,6 +9705,41 @@ label ch16_sayoridate:
             s "Now come on, let's go inside. I'm sure they're probably expecting us now."
             "Expecting us...? Why would they be?"
             "Sayori must have done something to them while she was changing a 'few things'."
+            "She grabs my hand and pulls me inside of the restaurant, almost effortlessly."
+            scene bg s_cafe with wipeleft_scene
+            "I don't really remember the inside of the restaurant very well."
+            "I can't tell if they renovated it or if it looks the same as it did all those years ago."
+            "We're greeted by an intimidating looking man wearing an employee's shirt."
+            "He examines us carefully and looks at the clipboard he's holding."
+            "Employee" "\"Ah, we've been expecting you.\""
+            "Employee" "\"If you step over here, a waiter will take you to your seats shortly.\""
+            "He directs us to an area of the restaurant where a line of waiters are idly standing by."
+            show sayori 1ba zorder 2 at t11
+            s "I told you they'd be expecting us."
+            mc "Speaking of expecting, I really didn't expect the restaurant to be like this."
+            s "What do you mean by that? Do you not like it or something...?"
+            mc "I'm just saying, I don't really have a solid opinion on it."
+            mc "From the outside, it looks like a cheap place to eat. Even the inside does."
+            mc "But in reality, the inside is like one of those top of the line restaurants."
+            mc "This place even has some kind of bouncer to keep people away."
+            s "Like I said, you're paying for the experience."
+            s "Or rather...{i}I'm{/i} paying for the experience."
+            s "I guess it's because of the ironic factor that this place is popular with those that have the money to eat here."
+            s "You and I both thought this was some ordinary cafe where you could buy something and just leave."
+            s "But instead, it's a fully fledged restaurant with a sort of vintage atmosphere."
+            s "I don't know if it's worth it but we're here and I've already paid."
+            mc "You paid before hand? That explains why they were expecting you..."
+            mc "What would have happened if we did a picnic instead?"
+            s "Then I suppose my reservation would just be cancelled."
+            s "I don't expect they'd give me a refund either, not like I really need the money anyway."
+            mc "Must be fun not having to worry about stuff like that."
+            s "I wish I could enjoy that benefit more, [player]..."
+            "The waiters talk amongst themselves before finally sending someone to serve us."
+            "A tall man bows before us in his greasy-looking waiter outfit."
+            "I'm pretty sure the coffee stains and the vintage look on the outfit is part of this place's charm."
+            "After seeing that, I definitely get what Sayori was saying when she was talking about that ironic factor."
+            "Everything is just the opposite of what you'd expect in this place."
+            "I hope it's the same with the food."
         "Picnic.":
             $ ch16_s_date_activities += 1
             mc "I think a picnic would be better, it feels a lot more personal."
@@ -9555,6 +9870,126 @@ label ch16_sayoridate:
             s 1bk "..."
             s "You shouldn't say things like that, [player]."
             s "Even if you aren't the one I love, you're still important to me."
+            mc "I get it, Sayori. You really don't have to worry about me like that."
+            mc "I'm just grateful I got to come along for the ride."
+            mc "Without this...other person, I wouldn't be with you right here and now."
+            mc "In fact, I don't know what I'd be doing."
+            s "Its just that--"
+            mc "Come on, let's not ruin the good mood."
+            mc "What else do you have in that little picnic box of yours?"
+            s "...Alright, [player]."
+            "Sayori reaches out into the picnic basket again."
+            "I can already feel my taste buds getting excited for what's coming."
+            s "I'm not sure if you'll like these but I tried hard!"
+            s "They're far from perfect but..."
+            mc "They're homemade, so that already makes them better."
+            s "Hah...well, you shouldn't be quick to judge."
+            s "Appearances can be deceiving, you know."
+            "Sayori pulls out something from the bag that looks like a pie."
+            "It's got this chocolate looking layer on top. It looks delicious."
+            s "This is our dessert. You should probably finish the burrito first because they're really contrasting flavors."
+            s "And...well, I'm not actually sure if it's any good or not."
+            s "So just keep eating the burrito and maybe you'll be full enough before you try the dessert."
+            mc "You have no idea how much I can eat, Sayori."
+            mc "I'll finish this burrito and still have room for that dessert."
+            s "We'll see about that."
+            "Sayori takes a bite into her burrito and I do the same."
+            "Now that she mentioned how much the burrito would fill me, it's actually become more difficult to eat."
+            "I wonder if I've just noticed that or if she did something to make me feel that way."
+            "After a few minutes, she manages to finish eating her burrito whereas I'm still struggling to eat mine."
+            "I don't think I can take another bite though."
+            s "Can't finish it, can you? Looks like you won't be able to try the dessert~!"
+            mc "Did you do something to me?"
+            mc "This burrito is more than I can handle."
+            s "I told you that it might make you full."
+            s "And no, I definitely didn't do anything to you just then."
+            s "Maybe you got to the meat of the burrito and just got full."
+            s "I promise you I didn't do anything."
+            mc "I believe you. It's just...wow."
+            mc "I really didn't expect to be so full off of that, I thought I could fit more into me."
+            mc "Maybe I just ate too fast and my stomach hasn't catching up."
+            s "That could be it...though I know how much you wanted to try it."
+            s "I can see what I can do so that you can try it."
+            s "But I'm making no promises to whether it actually tastes good or not."
+            mc "So you keep saying, but it sounds like you're just trying not to make me eat it because it's that good."
+            s "That...doesn't make any sense."
+            s "Why would I even do that? If I made something, it's because I'd want you to try it."
+            s "But anyway, what's the decision?"
+            s "Do you want to try the dessert or not?"
+            mc "I suppose it's not really up to me, is it?"
+            mc "Let's see..."
+            menu:
+                "So what do you want to do?"
+                "Let Sayori do her thing.":
+                    "I really do want to try her dessert."
+                    "So I'm actually really glad you chose to let me do this."
+                    "I wonder what exactly Sayori has planned for me though..."
+                    "She's obviously going to change {i}something{/i}."
+                    mc "Go on then, Sayori. I'm ready."
+                    mc "Do what you have to do."
+                    s "Does that mean you want to try the dessert?"
+                    mc "Hopefully, I get to, yeah. If it's even half as good as the burrito then I'm excited to try it."
+                    s "Okay, this might hurt a little."
+                    s "You might want to close your eyes too because this could get a little weird."
+                    mc "Um...okay, I know you're going to do something to me but why do I need to close my eyes?"
+                    s "It's just better if you do, trust me."
+                    s "Now, close them, [player]!"
+                    scene black with close_eyes
+                    "I close my eyes and wait for Sayori to do something."
+                    "I can hear her moving around but I'm not entirely sure what she's doing."
+                    "I think she stepped behind me at one point but since then I've heard nothing but silence."
+                    "The whole time I've managed to keep my eyes closed."
+                    "Suddenly, I can feel the environment around me change suddenly."
+                    "It still feels like I'm sitting on grass but it just feels different."
+                    "Like it's a liquid...or something."
+                    "A sharp pain comes from my stomach, despite that I don't flinch."
+                    "The pain goes through my whole body but I can't move."
+                    "It's like a million pins and needles have been poked into me."
+                    "And just as suddenly as the pain appeared, it was gone."
+                    "My stomach feels more empty and I can feel the solid grass underneath me."
+                    "Once again, I can hear Sayori shuffling around me."
+                    mc "Can I open my eyes now?"
+                    s "Wow, I'm actually surprised you managed to keep your eyes closed."
+                    s "But yeah! Go ahead and open them."
+                    scene bg tree_day
+                    show sayori 1ba zorder 2 at t11
+                    with open_eyes
+                    "I open my eyes and see Sayori sitting in front me where was was originally."
+                    "She's eating her burrito as if nothing happened and staring into the distance."
+                    "The pies seem to be unwrapped and ready to eat too, there's already a few slices I can see cut off."
+                    mc "So am I going to get an answer to what you just did?"
+                    "Sayori looks at me and offers me a plate of the pie she made."
+                    s "Here, you can have the first slice of the pie."
+                    "I think she just dodged my question."
+                    "I'm not complaining, this pie does look delicious."
+                    mc "Here goes nothing..."
+                    "I take the pie from the plate with my hands."
+                    "It smells freshly made, it's warm and has the scent of apples on it."
+                    "I can't wait much longer so I go for a bite."
+                    "Or at least...try to. It's rock hard, my teeth can't penetrate through the crust."
+                    "I keep trying but I think if I keep going, it's going to break my teeth."
+                    "I look at Sayori and she has this look on her face that says 'I told you so'."
+                    s "Ahaha! Weren't expecting that, were you?"
+                "Pass eating the dessert.":
+                    "You probably know better than I do than to continue trust Sayori's cooking."
+                    "I'll pass on the dessert but that doesn't mean I'm not upset about it."
+                    "I would have liked to try it but it's probably for the best if I don't right now."
+                    mc "I'll just keep eating this burrito."
+                    mc "Or try to, at least. At this rate, I doubt I'll finish it."
+                    s "So I can safely put away this pie then?"
+                    s "That's a relief. You have no idea how anxious I was that you'd eat it."
+                    s "I don't know whether I'd have laughed or felt sorry for you afterwards."
+                    s "Still, I'm glad that's over with!"
+                    mc "If you didn't want me to eat it then why did you show it to me in the first place?"
+                    s "I don't know. I guess I just wanted to see how you'd react."
+                    s "After seeing and tasting my burrito, I wanted to see whether "
+                    s "I do want you to try one of my pies at some point, especially since you seemed so interested."
+                    s "Just not this one."
+                    mc "I'm sure you have your reasons for that."
+                    s "I usually do for things like this."
+                    "Sayori wraps the pie and drops it back into the picnic basket."
+                    "I heard an unusually loud thud sound when she dropped it."
+                    "Are those pies made of rocks or something...?"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
