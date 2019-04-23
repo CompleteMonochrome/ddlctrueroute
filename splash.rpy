@@ -768,6 +768,10 @@ label after_load:
         $ ch16_getmonika = False
     if not hasattr(store,'ch16_yuri_choice'):
         $ ch16_yuri_choice = True
+    if not hasattr(store,'ch16_ay_message'):
+        $ ch16_ay_message = [False,False,False,False]
+    if not hasattr(store,'ch16_ay_questions'):
+        $ ch16_ay_questions = False
     if not hasattr(store, 'chapter_names'):
         $ chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","Inauguration Day","???","???","???","???"]
     if not hasattr(store, 'special_chapter'):
