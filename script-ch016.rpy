@@ -7389,7 +7389,11 @@ label ch16_end:
                             ay "Is that so...?"
                             "Ayame looks deep in thought to what I just said."
                             "What is this vicious cycle even meant to be?"
-                            ay "Thank you, [player]. I learned a "
+                            ay "Thank you, [player]. I learned a lot from what you said."
+                            ay "I'm not sure if you were acting or not, it doesn't matter anyway."
+                            ay "You've given me something I really need to consider."
+                            mc "I'm not sure how exactly but you're welcome."
+                            ay "Anyway...!"
                         "A place to make friends.":
                             $ ch16_ay_level += 1
                             mc "We're all just there for a good time with each other."
@@ -7490,20 +7494,230 @@ label ch16_end:
                     "This is a good opportunity for me to learn about Ayame before she becomes an official member."
                     "I should really come up with some good questions so that I can do my part to make sure she feels welcome in the club."
                     mc "Let me think..."
+                    $ ch16_ay_asked = [False,False,False,False]
+                    $ ch16_ay_question_number = 0
+                    $ quick_menu = False
                     # Have a timer to flicker the options
+                    show screen timer_16_menu_skip("ch16_ay_blinkquestions_!",_layer="timers")
                     menu:
                         "What should I ask her?"
-                        "Animam.":
-                        "Requiem.":
-                        "Inveniet.":
-                        "Amisit.":
+                        "Animam." if not ch16_ay_asked[0]:
+                            jump ch16_ay_q1
+                        "Requiem." if not ch16_ay_asked[3]:
+                            jump ch16_ay_q2
+                        "Inveniet." if not ch16_ay_asked[2]:
+                            jump ch16_ay_q3
+                        "Amisit." if not ch16_ay_asked[1]:
+                            jump ch16_ay_q4
+                    label ch16_ay_blinkquestions_1:
+                    $ quick_menu = True
+                    $ _history_list.pop()
+                    $ renpy.hide_screen("timer_16_menu_skip",layer="timers")
                     # This is the "questions menu"
                     menu:
                         "What should I ask her?"
-                        "Do you have any hobbies?":
-                        "How did you become a school leader?":
-                        "What's your favorite color?":
-                        "What other clubs did you consider?":
+                        "Do you have any hobbies?" if not ch16_ay_asked[0]:
+                            label ch16_ay_q1:
+                            if ch16_ay_question_number == 0:
+                                $ ch16_ay_message[0] = True
+                                "Ayame flinches as if she was just attacked by something."
+                                "I didn't see anything or anyone near her though..."
+                                "She shakes it off as if nothing was happened then focuses her gaze on me."
+                                ay "Um...where were we? What was it...?"
+                            else:
+                                "Ayame stares at me for a second as if to process what I just asked."
+                                "She looks slightly amused at the question."
+                            ay "Hobbies? That's a typical small talk conversation topic, isn't it?"
+                            mc "Sorry, did you want me to ask something else?"
+                            ay "No, that's perfectly fine!"
+                            ay "There's nothing wrong with small talk, and I'm not going to judge you based on the questions you ask."
+                            ay "Now...what are my hobbies?"
+                            "Ayame taps the table repeatedly for a moment."
+                            ay "If you asked my parents, they'd probably say managing the family business."
+                            ay "But that's a blatant lie that I'd rather not talk about right now."
+                            mc "Then what answer would I get if I asked you?"
+                            ay "I do lots of things. These days it seems I get endless free time..."
+                            ay "I play a couple of instruments, I do some photography..."
+                            ay "I also play a sport but I'm not very good at it."
+                            mc "So you're a musician, then?"
+                            ay "Calling me a musician is a bit of a stretch, I think."
+                            ay "I mainly do that for fun or when I want to learn a song to sing."
+                            ay "But trust me when I say you do {i}not{/i} want to hear me sing."
+                            mc "Ahaha, I'll take your word for it."
+                            ay "As for my photography...I usually take photos of scenery."
+                            ay "You know, landscapes, views from the top of tall buildings or just mother nature herself."
+                            ay "I'd bring my camera to school to take pictures but I'm not allowed to because it's really expensive."
+                            ay "If someone stole it, let's just say it wouldn't be good for anyone."
+                            ay "I don't mind that anyway, seeing as there's nothing really exceptional to take a pictures of here."
+                            mc "And what about this sport you play?"
+                            ay "I'd rather not discuss that. It's pretty embarrassing."
+                            ay "You understand, we all keep things hidden."
+                            ay "I'll tell you that it involves water, that's all I'm going to say."
+                            mc "How come you don't want to talk about your family business?"
+                            ay "I hate it. I absolutely hate it."
+                            ay "It brings income but I just don't want to become the heir to something like that."
+                            mc "And what is {i}that{/i} exactly?"
+                            ay "It's a really unethical business involving institutes and industries in the area."
+                            ay "One of which includes certain academic places."
+                            ay "Let's not discuss this further."
+                            ay "I think I've already divulged too much about it anyway..."
+                            $ ch16_ay_question_number += 1
+                        "How did you become a school leader?" if not ch16_ay_asked[3]:
+                            label ch16_ay_q2:
+                            if ch16_ay_question_number == 3 and ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2]:
+                                $ ch16_ay_message[3] = True
+                                "This time, nothing happens to her."
+                                "I was half expecting another jolt or a flinch from her."
+                                "Maybe I was just imagining her getting hurt."
+                                "If she really was getting hurt, there would be some kind of reaction...right?"
+                                ay "Becoming a school leader, huh?"
+                            else:
+                                ay "How I became a school leader...?"
+                            ay "Why? Do you want to know so you can become one?"
+                            mc "Not really. I don't have an interest in that kinda thing."
+                            mc "I feel like managing people just isn't for me."
+                            ay "That's a fair enough reason. It's definitely not a job for everyone."
+                            
+                            $ ch16_ay_question_number += 1
+                        "What's your favorite color?" if not ch16_ay_asked[2]:
+                            label ch16_ay_q3:
+                            if ch16_ay_question_number == 2 and ch16_ay_message[0] and ch16_ay_message[1]:
+                                $ ch16_ay_message[2] = True
+                                ay "More small talk conversation? [player], I would have--"
+                                "Ayame flinches again as if a jolt of electricity just hit her."
+                                "She composes herself and smiles as if nothing just happened."
+                                ay "I would have thought you'd come up with better questions."
+                            else:
+                                ay "My favorite color..."
+                                ay "That's a very general question. I can't believe you'd ask something like this."
+                                ay "Not that I mind, it's just...there are so many better questions!"
+                            mc "You still gotta answer it, don't you?"
+                            ay "I suppose I do...well, if you really wanted to know then I guess I can tell you."
+                            ay "It's not some kind of big secret anyway."
+                            ay "The answer to that is the color purple."
+                            ay "I adore the color purple, it reminds me of something dear to me."
+                            mc "Do you mind sharing what that is?"
+                            ay "It's a sentimental thing so you probably wouldn't get it."
+                            ay "The purple reminds me of my past life for some reason."
+                            mc "Your past life? What do you mean...?"
+                            ay "I mean my childhood life, [player]."
+                            ay "I used to have all these toys but I fell in love with this purple one."
+                            ay "It was like some kind of cute monster thing."
+                            ay "Ever since then, purple has been my favorite color."
+                            ay "It's pretty fortunate that the school leadership ribbon is purple."
+                            ay "I think it suits me very well."
+                            ay "Satisfied with that answer?"
+                            mc "I'll be honest, I wasn't expecting that for a favorite color."
+                            mc "I would have thought you would have just said a color and be done with it."
+                            mc "That's what I would have done."
+                            ay "Well, it was one of those small talk questions."
+                            ay "I have to talk about it somehow so we can have a decent conversation."
+                            mc "Do you still have that purple toy?"
+                            ay "..."
+                            "Ayame bows her head down and sighs."
+                            ay "Unfortunately not. I left it behind in my past life."
+                            ay "It will be forever missed."
+                            mc "If it was that special to you, why did you willingly leave it behind?"
+                            ay "Whoever said I did it willingly...?"
+                            "Ayame mumbles something under her breath before lifting her head up again."
+                            ay "That's that question done, I hope you liked my answer."
+                            $ ch16_ay_question_number += 1
+                        "What other clubs did you consider?" if not ch16_ay_asked[1]:
+                            label ch16_ay_q4:
+                            if ch16_ay_question_number == 1 and ch16_ay_message[0]:
+                                $ ch16_ay_message[1] = True
+                                "The same scene that I've just seen repeats itself."
+                                "Ayame looked like she was in pain for just a moment."
+                                "I'm not sure if she realizes it or if she's just hiding it."
+                                mc "Ayame, are you--"
+                                ay "Ah, ah, ah! I have to answer this question first."
+                                ay "Just give a second to think about the answer."
+                            else:
+                                ay "I have to think about this now..."
+                                ay "There was quite a few I looked at."
+                            ay "Some clubs tried to get me to join them but I mostly rejected them."
+                            ay "There was one club I was seriously thinking about joining."
+                            mc "What was it?"
+                            ay "Okay, you're going to think I'm crazy when I tell you."
+                            ay "So at the very least, promise not to look like you're judging me."
+                            mc "I promise I won't judge you."
+                            ay "It was a rather recently created club."
+                            ay "It's called the Rebirth club and I only heard about it through some kind of rumor."
+                            ay "Some students were talking about it, mentioning how ridiculous it was."
+                            ay "Naturally, as someone with a curious mind, I wanted to check it out."
+                            mc "There was no fliers around the place or anyone asking people to join it?"
+                            ay "None at all. It was just a pretty small club."
+                            ay "When I went to one of their get togethers, I felt almost entranced."
+                            ay "Like this club was calling me."
+                            mc "What was the club actually about?"
+                            ay "It was about reincarnation."
+                            mc "...Reincarnation? A club like that actually got formed?"
+                            ay "It's not like the school has tough restrictions on the founding of clubs."
+                            mc "Do you believe reincarnation is real, Ayame?"
+                            mc "Is that why you decided to seriously consider it."
+                            ay "I didn't know what to feel."
+                            ay "The members of the club, all four of them, said that they all believe they were reincarnated."
+                            ay "They just can't remember their memories."
+                            ay "I don't know why but I just felt like I belonged there."
+                            mc "What if they were just messing with you?"
+                            ay "If they were just messing with me, then I guess I'm a fool."
+                            ay "But that doesn't matter now anyway."
+                            ay "I'm joining the Literature Club, not this Rebirth thing."
+                            mc "That's quite a change. From reincarnation to basically books."
+                            mc "I can't imagine what your reason for that is."
+                            ay "I don't know myself. I suppose I just felt more of a connection here."
+                            ay "Which doesn't make any sense since I barely know all of you."
+                            ay "I don't know why I felt so compelled to join the club."
+                            ay "But I'm going to see it through, no matter what."
+                            mc "I'm glad to hear that, Ayame."
+                            mc "I promise we're better than some kind of reincarnation club."
+                            ay "We'll see about that, won't we?"
+                            $ ch16_ay_question_number += 1
+                    ay "Is there anything else you wanted to know?"
+                    mc "Well..."
+                    if not ch16_ay_asked[0] or ch16_ay_asked[1] or ch16_ay_asked[2] or ch16_ay_asked[3]:
+                        jump ch16_ay_blinkquestions_1
+                    mc "No, I think that's all I wanted to ask."
+                    ay "Only four main questions, eh?"
+                    if ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2] and ch16_ay_message[3]:
+                        ay "That's one more than I asked, not that I'm--"
+                    else:
+                        ay "That's one more than I asked, not that I'm complaining."
+                        ay "in fact, I'm surprised you didn't have {i}more{/i} questions."
+                        ay "You barely know a thing about me but I've got {i}you{/i} all scoped out."
+                        mc "You've got me scoped out...?"
+                        ay "Yeah, it means I know a lot of things about you already."
+                        ay "From what I read in Yuri's journal and from what you've told me just now."
+                        mc "There's more to me than you might know, Ayame."
+                        mc "I may not look it, but I do have some other things that aren't too obvious."
+                        ay "Oh? And how do you know I don't know about those?"
+                        ay "I didn't get {i}everything{/i} from Yuri's journal, you know."
+                        ay "There are some things that I found out myself."
+                        ay "Not just about you, but other people too including those from the club."
+                        mc "Isn't that...I don't know, kinda creepy?"
+                        ay "I'm not stalking you guys or anything!"
+                        ay "I just happen to have the skills of one."
+                        mc "Right...I'll take that as some sort of joke."
+                        ay "Anyway, thank you for your time."
+                        ay "I probably won't bother you for the rest of the day until your club meeting."
+                        ay "I'll be sure to bring the gifts I bought for you all!"
+                        mc "I can't wait, Ayame!"
+                        mc "For you to come to the club that is, not the gifts."
+                        ay "Nice save, [player]."
+                        "Ayame stands up and happily offers me her hand."
+                        "I stare at it for a moment then turn my attention to her."
+                        ay "It's called a handshake, [player]. Ever heard of one?"
+                        mc "No, I have...it's just..."
+                        "I take her hand and she places a tight grip on mine before shaking it."
+                        mc "Why?"
+                        ay "It is kinda odd, isn't it? I guess it's just a habit I got into."
+                        ay "You can blame my parents for that."
+                        ay "If there was nothing else, I guess I'll see you soon."
+                        "Ayame withdraws her hand and begins to walk away."
+                        show ayame at thide
+                        hide ayame
+                        "She seemed to be lost in thought as she exited the room."
+                        "Did I really impact her that much?"
                 "Deny her.":
                     $ ch16_ay_level += 2
                     mc "I'm sorry Ayame but I can't help you."
@@ -7536,10 +7750,10 @@ label ch16_end:
                     "She looked like she was thinking about something as she left."
                     "Was it really that crucial that I tell her what I know?"
                     "I didn't even know what she was talking about but she seemed so certain that I did."
+        "I just realized she doesn't know where the meeting is."
+        "Maybe I should have said something before she left."
         "I shouldn't be thinking about it too much."
         "I still have a script to read, after all."
-        call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
-        $ renpy.utter_restart()
         scene bg portraitshop_school with wipeleft_scene
     else:
         scene bg portraitshop_school with wipeleft_scene

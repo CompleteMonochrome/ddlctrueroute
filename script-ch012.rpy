@@ -3016,7 +3016,7 @@ label ch12_harukiplace:
         show natsuki at lhide
         hide natsuki
         "Natsuki runs away from the gym, with tears in her eyes."
-        show dadsuki 1l zorder 3 at f33
+        show dadsuki 1l zorder 3 at f43
         if check_whole_house:
             d "Haruki...?"
             d "What's wrong with you?"
@@ -3030,7 +3030,6 @@ label ch12_harukiplace:
             d 1c "That was..."
             d "...definitely not that."
         show momsuki zorder 2 at t41
-        show natsuki zorder 2 at t42
         show dadsuki zorder 2 at t43
         show sayori 1f zorder 3 at f44
         s "Yasuhiro's right..."
