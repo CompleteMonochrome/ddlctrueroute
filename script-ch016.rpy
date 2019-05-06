@@ -9000,7 +9000,7 @@ label ch16_end:
             show natsuki zorder 2 at t32
             ay "That's a lot easier for you to say."
             ay "Your family doesn't have these absurdly high expectations of you."
-            ay "I've only maintained a small sense of autonomy because of I live up to those expectations."
+            ay "I've only maintained a small sense of autonomy because I've lived up to those expectations."
             ay "If I didn't, I probably wouldn't be able to speak to you all now."
             ay "I'm still longing for the day when I can finally live my own life the way I want."
             ay "For now though, I have to take the small opportunities I have."
@@ -9017,6 +9017,164 @@ label ch16_end:
             show ayame zorder 2 at t32
             "Suddenly, the door opens and Monika and Yuri step through."
             "They seem to be carrying the bags that were stored in the clubroom."
+            show ayame zorder 2 at t51
+            show yuri zorder 2 at f52
+            show sayori zorder 2 at t53
+            show monika zorder 2 at t54
+            show natsuki zorder 2 at t55
+            y "We've returned with all of the stuff from the closet."
+            y "I hope we weren't gone for too long."
+            show yuri zorder 2 at t52
+            show sayori zorder 3 at f53
+            s "You guys are here now and that's what matters."
+            s "You missed out on the story Ayame told us but that was just to pass the time anyway."
+            show sayori zorder 2 at t53
+            show monika zorder 3 at f54
+            m "Speaking of which, how did she even manage to get here?"
+            m "She knew about the club meeting being moved here but I didn't?"
+            m "Not that I'm complaining or anything."
+            m "It's just an ironic kind of funny that the vice president of the club didn't know but someone who's not even a member did."
+            show sayori zorder 3 at f53
+            show monika zorder 2 at t54
+            s "I'm sorry I forgot to tell you. I guess I just forgot."
+            show sayori zorder 2 at t53
+            show monika zorder 3 at f54
+            m "Everyone makes mistakes, Sayori. This was a pretty minor one and got solved quickly."
+            m "Just make sure you remember for next time though."
+            m "A couple of mistakes here could lead to a disaster later down the line, you know."
+            show monika zorder 2 at t54
+            show natsuki zorder 3 at f55
+            n "If you two are done, we should really get on with the rehearsal."
+            n "We've used up enough time already."
+            show yuri zorder 3 at f52
+            show natsuki zorder 2 at t55
+            y "She's right. If we don't start now then we'll never get anything done."
+            show ayame zorder 3 at f51
+            show yuri zorder 2 at t52
+            ay "Wait, wait! I was going to give you all something."
+            ay "Since everybody is finally here, it's the perfect time."
+    ay "I don't mean to delay your rehearsals or anything."
+    ay "But I don't think I'll get another chance with you all here."
+    ay "This will only take a moment, I promise."
+    show ayame zorder 2 at t51
+    show natsuki zorder 3 at f55
+    n "Just make it quick, Ayame. We've got lots to do."
+    show sayori zorder 3 at f53
+    show natsuki zorder 2 at t55
+    s "We still have to officially make you a member too!"
+    s "But you don't need to worry about that. As far as we're concerned, you already are."
+    show ayame zorder 3 at f51
+    show sayori zorder 2 at t53
+    ay "Okay, I'll do my best to keep it brief."
+    "Ayame takes her bag and takes out a large plastic bag."
+    "She takes out five small boxes of different sizes from the bag and lays them out on a table."
+    "She then picks one out and turns toward Yuri."
+    ay "This one is for you, Yuri. I do hope you like it."
+    show ayame zorder 2 at t51
+    show yuri zorder 3 at f52
+    y "For me...?"
+    "Yuri takes the box and begins inspecting it."
+    "It's wrapped in some sort of purple wrapping paper with a neatly tied ribbon at the top of it."
+    y "I appreciate the gift, Ayame. It's very thoughtful of you."
+    y "It's a shame we couldn't do the same for you."
+    show ayame zorder 3 at f51
+    show yuri zorder 2 at t52
+    ay "Don't mention it. Really."
+    ay "I don't expect you all to get me anything."
+    ay "To me, the real gift is being accepted into your club."
+    show ayame zorder 2 at t51
+    show yuri zorder 3 at f52
+    y "That's quite humble of you to say..."
+    "Yuri examines the box she was given before putting it away."
+    y "What exactly did you get me?"
+    show ayame zorder 3 at f51
+    show yuri zorder 2 at t52
+    ay "That's for you to find out! I promise you'll like it."
+    ay "You don't have to open it just this moment."
+    ay "If you want, you can open it later. There's no rush anyway."
+    ay "I just wanted to get this out of the way before you all start anything important."
+    ay "Anyway, here you go, Natsuki."
+    show ayame zorder 2 at t51
+    "Ayame takes another box and offers it to Natsuki."
+    "This time it's wrapped in a colorful pink paper."
+    "Natsuki reluctantly takes the box and begins shaking it a little."
+    "She then looks at Ayame and lets out a small smile."
+    show natsuki zorder 3 at f55
+    n "I'm not going to say no to a gift like this."
+    n "I really want to open it but I think I'll just get distracted by it."
+    n "I'll leave it for later, if that's okay."
+    show ayame zorder 3 at f51
+    show natsuki zorder 2 at t55
+    ay "Of course. Like I said, there's no rush."
+    ay "The gift I brought you all isn't going anywhere soon so take your time."
+    ay "And speaking of gifts, here's one for Monika and Sayori."
+    "Ayame takes two more of the boxes into her hands."
+    "One of them is colored a bright green while the other is a light shade of blue."
+    "She puts the blue one on the desk in front of Sayori and offers the green one to Monika."
+    ay "I came up with a different kind of present for the two of you."
+    ay "It's similar but I thought that the president and vice president should have something more significant."
+    "Ayame looks towards Natsuki and Yuri."
+    ay "Don't worry, it's nothing too worry about. Your gifts are just as good!"
+    ay "It's just slightly different to theirs."
+    show ayame zorder 2 at t51
+    show sayori zorder 3 at f53
+    s "Thank you so much, Ayame!"
+    s "I wish I could have gotten you something."
+    s "But no one told me anything about this whole gifts thing!"
+    show ayame zorder 3 at f51
+    show sayori zorder 2 at t53
+    ay "Think nothing of it, Sayori."
+    ay "It's just a gesture of my appreciation to all of you."
+    show ayame zorder 2 at t51
+    show monika zorder 3 at f54
+    m "Thanks, Ayame. I'll be sure to keep this gift close to me."
+    m "I think it would be best if I didn't open it right now though."
+    m "Like Natsuki said, it might cause us to be distracted and take away from what we're meant to be doing."
+    show monika zorder 2 at t54
+    "Ayame shrugs then finally picks up the last box and offers it to me."
+    "The color of the box is just a pure white and it seems quite plain compared to the others."
+    show ayame zorder 3 at f51
+    ay "And last but not least, [player]."
+    "She offers the box to me and I take it."
+    ay "Are you going to open it, [player]?"
+    ay "No one else did, and I admit I'm kinda surprised that was the case."
+    ay "But at the same time, I applaud your dedication to this little rehearsal you're going to be having."
+    ay "Steeling yourself from distractions is something I could never do."
+    show ayame zorder 2 at t51
+    show sayori zorder 3 at f53
+    s "I just wanna take the time to appreciate it, that's all."
+    s "Opening it now isn't going to let me fully understand your intentions behind it."
+    show ayame zorder 3 at f51
+    show sayori zorder 2 at t53
+    ay "That's a pretty good reason actually."
+    ay "But I'm sure you won't need to think much about it when you open it."
+    ay "And what's your excuse, [player]? Are you going to leave it until later too?"
+    show ayame zorder 2 at t52
+    mc "I guess I could open it now, but that might cause a chain reaction."
+    mc "Someone else might feel like they should do the same, to compare their gift."
+    mc "But I'm sure the others have more self control than that."
+    show ayame zorder 3 at f52
+    ay "Then...?"
+    show ayame zorder 2 at t52
+    mc "Well, I don't see the harm in opening it."
+    mc "I'm keen to see what you've given me anyway."
+    "I begin to unwrap the present Ayame gave me."
+    "Inside I can find some kind of jewelry engraved with something."
+    "Open closer inspection, I can see it says 'Literature Club' on it."
+    "I can also see my initials priinted out on it in small writing."
+    mc "Is this a custom made ring?"
+    show ayame zorder 3 at f52
+    ay "It could be, who knows?"
+    show ayame zorder 2 at t52
+    mc "And you did this for all of us?"
+    mc "I can't imagine how much it would cost for one person, but for five?"
+    show ayame zorder 3 at f52
+    ay "Who says they have the same gift?"
+    ay "Maybe you all got different things, but you're not going to find out now."
+    "Ayame puts her bag away after having finished with the presents."
+    ay "Anyway, that's all I had. You guys can do your thing now."
+    ay "I just wanna watch and see what exactly is going on."
+    ay "I won't interrupt unless you need me to."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
@@ -10897,7 +11055,7 @@ label ch16_sayoridate_life:
     s "I thought the only option was to keep it a secret."
     s "And for years, I did."
     s "But keeping something like that bottled up isn't good."
-    s "It just keep building up and building up."
+    s "It just keeps building up and building up."
     s "I don't know how much longer I could keep it up."
     s "I would go through school day after day, living this lie."
     s "Just doing well enough in school so that my parents wouldn't be concerned about me."
@@ -10906,7 +11064,7 @@ label ch16_sayoridate_life:
     s "Once, I almost convinced myself that I was actually happy and that it wasn't all fake."
     s "But it didn't last long at all, I knew that it was just fake."
     s "I knew that I couldn't keep this up forever, that I would eventually reach a break point."
-    s "One part of me wanted to keep up this image forever, keep it all a secret and embrace the charade."
+    s "One part of me wanted to keep up this image for as long as I could, to keep it all a secret and embrace the charade."
     s "But the other part of me, I suppose the rational side of me, wanted to tell someone."
     s "Even if I did listen to it, I had no one to tell."
     s "No one was really that close to me to realize...not since you left me, [player]."
@@ -10932,8 +11090,8 @@ label ch16_sayoridate_life:
     s "I know that in her version of events, she made me kill myself."
     s "The thing is, we both know that's not entirely true."
     s "If I wasn't already depressed, I might not have done it."
-    s "I guess she just gave that other me a push which..."
-    s "...if, I'm honest with you, would have happened sooner or later."
+    s "I guess she just gave that other me that small push over the edge which..."
+    s "...if I'm honest with you, wouldn't have made a difference in the end, because it would have happened sooner or later."
     s "Sometimes that's all it takes, you know?"
     s "Just a couple of words to finally tip someone over the edge."
     s "I don't even want to imagine..."
@@ -10942,7 +11100,7 @@ label ch16_sayoridate_life:
     s "I know those two don't have depression, at least in the way that I did."
     s "So the sort of things Monika might have done..."
     s "Well, it's not like she did them in this timeline."
-    s "In fact, she made me better here and it's thanks to you that she did."
+    s "In fact, she made me better in this world and it's thanks to you that she did."
     s "And besides, this isn't about her. It's about me."
     s "But I just want you to know that's why you're so important to me."
     s "You stopped all of that from happening, you gave me this chance."
@@ -10989,7 +11147,7 @@ label ch16_sayoridate_life:
             s "I can only guess it happened the very moment Monika deleted herself."
             s "There I was in my room, happier than I've ever been in years and suddenly I get this strange feeling."
             s "Like a jolt of electricity went through my whole body."
-            s "It was pretty surprisingly, actually. I wasn't sure if I messed up somehow."
+            s "It was pretty surprisingly, actually. It made me think that I messed up something somehow."
             s "I didn't really know what it was at first."
             s "I guessed it was probably due to this new happiness I was feeling."
             s "That was completely wrong!"
