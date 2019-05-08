@@ -9174,7 +9174,171 @@ label ch16_end:
     "Ayame puts her bag away after having finished with the presents."
     ay "Anyway, that's all I had. You guys can do your thing now."
     ay "I just wanna watch and see what exactly is going on."
-    ay "I won't interrupt unless you need me to."
+    ay "I won't interrupt unless you need me to say something."
+    show ayame zorder 2 at thide
+    show yuri zorder 2 at t41
+    show sayori zorder 2 at t42
+    show monika zorder 2 at t43
+    show natsuki zorder 2 at t44
+    hide ayame
+    "I'm very tempted to open this gift right now."
+    "By the way she was talking, we all got pretty similar things."
+    "But I don't want to be the odd one out and open the gift while the others don't."
+    "I'll go against that urge, just to avoid distracting the others too."
+    "Like they said, we don't have that much time so we can't afford to get distracted."
+    show sayori zorder 3 at f42
+    s "Alright, everybody!"
+    s "It's {i}finally{/i} time to get started on rehearsals."
+    s "I know everyone's been saying we might not have enough time to do even one run through."
+    s "But I believe we can do it!"
+    show sayori zorder 2 at t42
+    show natsuki zorder 3 at f44
+    n "Sayori, you can believe all you want."
+    n "The objective fact is unless we speak super quickly, we won't even get one rehearsal through."
+    n "Even if we do manage to get a single rehearsal done, I don't think it's going to be a very good performance."
+    show sayori zorder 3 at f42
+    show natsuki zorder 2 at t44
+    s "H-Hey, come on. Don't say that."
+    s "If you do, then it's only going to be true."
+    s "If we just make proper use of the time, I know for sure it's going to be amazing!"
+    show sayori zorder 2 at t42
+    "Ayame looks like she's amused by the scene that's happening."
+    "She sits on a desk and simply smiles as if she's eager to see how this will unfold."
+    "I think Natsuki is right, but Sayori seems convinced that we can do it."
+    "I don't know why, but I have a feeling we can somehow pull it off."
+    "Sayori's enthusiasm must be rubbing off on me despite me knowing its basically impossible."
+    show yuri zorder 3 at f41
+    y "Then let's get started with the rehearsal."
+    "Yuri takes her copy of the script and opens it up."
+    y "Is everyone else ready?"
+    show yuri zorder 2 at t41
+    show sayori zorder 3 at f42
+    s "Definitely! Let me just find where I left my script..."
+    show sayori zorder 2 at t42
+    mc "Sayori, that's the opposite of being ready."
+    show sayori zorder 3 at f42
+    s "I was just kidding! It's right here."
+    "Sayori takes out her copy of the script from under some of the clothes she's standing near."
+    s "Do you guys want to wear your costumes now or later?"
+    s "It might be a good idea to try them out before the actual play."
+    show sayori zorder 2 at t42
+    show natsuki zorder 3 at f44
+    n "We don't have time. The costumes can wait until later."
+    n "They're no use if we can't even get the performance right."
+    show monika zorder 3 at f43
+    show natsuki zorder 2 at t44
+    m "While that's a good point, it would be a good idea to see if they fit."
+    m "If they don't fit then our performance won't have as much of an effect, no matter how good it is."
+    show yuri zorder 3 at f41
+    show monika zorder 2 at t43
+    y "If the two of you are done arguing, we should really start."
+    y "Look at the time."
+    "Yuri points toward the clock in the room."
+    "As she does, the quiet tick tock noise it's making seems to become louder."
+    "There's something not quite right about the clock though, and I can't understand why."
+    "It's just a normal clock...isn't it?"
+    "Maybe I'm just not used to this room."
+    y "Forget the costumes and focus on the script."
+    y "Just trust that Sayori managed to get our sizes roughly right."
+    y "After all, she's managed to do the impossible before."
+    show yuri zorder 2 at t41
+    show sayori zorder 3 at f42
+    s "That's right, there's no need to worry."
+    "Sayori opens her script to the first page."
+    s "[player], I think you're up first."
+    s "Everyone else, follow the stage directions that it says in the script."
+    show sayori zorder 2 at t42
+    "Sayori takes charge of the situation and gives the que for when things should happen."
+    "To my surprise, everyone's acting ability has improved a lot."
+    "The way they're talking sounds more natural than forced."
+    "I'm impressed at myself too. I definitely feel like I'm doing a better job than the last two plays."
+    "I guess it's got to do with the script too."
+    "It's very well written and I think Sayori made some adjustments to the lines to better suit our own acting ability."
+    "It definitely makes me feel like she's getting some sort of outside help."
+    "But I'm not gonna bother with that right now, we're busy rehearsing anyway."
+    "Maybe I could ask after this is all over..."
+    "Soon enough, we're over halfway through the rehearsal and everyone seems to be enjoying themselves."
+    "Ayame looks like she's pretty entertained too."
+    "I wonder what she thinks about all of this so far."
+    show sayori zorder 3 at f42
+    s "Alright, everybody! We've done a lot of good work so far."
+    s "Let's just take a short break so everyone can take it all in."
+    show sayori zorder 2 at t42
+    show natsuki zorder 3 at f44
+    n "Are you kidding? We should keep going!"
+    n "It feels like the worse possible time to stop."
+    show yuri zorder 3 at f41
+    show natsuki zorder 2 at t44
+    y "I concur with her. We should make proper use of our time."
+    y "Not to mention, I feel so invigorated in this rehearsal. I don't know why."
+    y "It's like this whole play is just natural, as if I wasn't rehearsing this but actually saying it."
+    y "Of course, it's still a work of fiction...it was just a figure of speech."
+    show yuri zorder 2 at t41
+    show monika zorder 3 at f43
+    m "I have to say this is rather fun."
+    m "I didn't expect myself to get so into it."
+    m "I almost lost my sense of determining what was our reality and what was our play, but only briefly."
+    m "I do think there is no reason to stop if we're in the flow of things."
+    show sayori zorder 3 at f42
+    show monika zorder 2 at t43
+    s "I don't know about you guys but I'm feeling a bit drained."
+    s "Just give me a break then, if you four don't want to stop."
+    show sayori zorder 2 at t42
+    mc "I never said I wanted to keep going."
+    mc "That said, I think it would be better if we get this done in one go."
+    mc "But if you need a break, you probably deserve it."
+    mc "You lead that whole thing pretty well, Sayori."
+    show sayori zorder 3 at f42
+    s "Well, you know...maybe it just comes naturally to me."
+    s "Bossing people around is pretty fun, you know."
+    "Sayori turns towards Ayame who is fiddling with something on her desk."
+    s "What did you think so far, Ayame?"
+    show yuri zorder 2 at t51
+    show sayori zorder 2 at t52
+    show monika zorder 2 at t53
+    show natsuki zorder 2 at t54
+    show ayame zorder 3 at f55
+    ay "You want my opinion? I'm happy to give you some criticism and feedback."
+    ay "Though there's not really much to say."
+    show sayori zorder 2 at t52
+    show ayame zorder 2 at t55
+    s "Go ahead and say anything! You're like the judge before our actual play."
+    s "If you can say anything that can make it better, then go ahead."
+    show sayori zorder 2 at t52
+    show ayame zorder 3 at f55
+    ay "Like I said, there's not much to say."
+    ay "I, personally, was pretty entertained throughout all of it."
+    ay "And that was only a rehearsal."
+    ay "It made me think that you were just saying it was your first rehearsal when you've all practice a lot."
+    ay "I wonder how it will all look in costume."
+    show monika zorder 3 at f53
+    show ayame zorder 2 at t55
+    m "You don't have anything bad to say about it?"
+    show monika zorder 2 at t53
+    show ayame zorder 3 at f55
+    ay "Oh, I definitely do. It's nothing constructive though."
+    ay "Hence, I'd rather not say it."
+    show sayori zorder 3 at f52
+    show ayame zorder 2 at t55
+    s "Okay, I really need to step outside for a minute."
+    s "I'll be back before you know it."
+    if ch15_s_together:
+        s "Do you want to come as well, [player]?"
+        s "I would enjoy some kind of company."
+        show sayori zorder 2 at t52
+        mc "Sure, if you need me to come."
+        mc "It's not like there's anything better for me to do at the moment."
+        show sayori zorder 3 at f52
+        s "Great! Then let's get moving."
+        "Sayori points to the clock on the wall."
+        s "Remember that time, we'll be back before the next minute."
+    else:
+        s "Just read ahead or something with the script."
+        s "It might not be a good idea to actually practice though."
+        s "You won't have me to yell directions at the four of you."
+        "Sayori points to the clock on the wall."
+        s "Look at that time and remember it."
+        s "I'll be back before you know it."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
