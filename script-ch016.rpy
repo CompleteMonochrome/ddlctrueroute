@@ -9331,14 +9331,114 @@ label ch16_end:
         show sayori zorder 3 at f52
         s "Great! Then let's get moving."
         "Sayori points to the clock on the wall."
-        s "Remember that time, we'll be back before the next minute."
+        s "Remember that time, we'll be back before you know it."
+        scene bg y_corridor
+        show sayori 1ba zorder 2 at t11
+        with wipeleft_scene
+        "Sayori and I exit the classroom and begin walking down the corridor."
+        "I have no idea where we're going or what we're doing."
+        "But Sayori says it won't take long so I'll believe her. "
+        "Suddenly, Monika opens the door to the room and catches up with Sayori.."
+        show sayori zorder 2 at t21
+        show monika 1a zorder 3 at f22
+        m "You know, it's pretty irresponsible to just leave like that."
+        m "Especially when it's all so sudden."
+        m "You should really tell us where you're going."
+        show sayori zorder 3 at f21
+        show monika zorder 2 at t22
+        s "I'm sorry but this was kinda urgent and I just remembered it."
+        s "I'd tell you but I really shouldn't."
+        s "I hope you understand, Monika."
+        show sayori zorder 2 at t21
+        show monika zorder 3 at f22
+        m "Of course I do. Sometimes you just wanna keep things a secret."
+        m "Anyway, I need to go back in there to make sure things are running smoothly."
+        m "You have nothing to worry about with me in charge."
+        show sayori zorder 3 at f52
+        show monika zorder 2 at t53
+        s "Thanks, but we won't be gone too long."
+        s "We just need to make a quick visit somewhere."
+        show sayori zorder 2 at t52
+        show monika zorder 3 at f53
+        m "I'm guessing it's none of my or the club's business."
+        m "Why do you have to take [player] with you though?"
+        show sayori zorder 3 at f52
+        show monika zorder 2 at t53
+        s "I have my reasons. I will say that [player_personal] doesn't have to come."
+        s "But I would greatly appreciate [player_possessive] presence."
+        show sayori zorder 2 at t52
+        mc "We're stopping practice anyway, so I might as well come with her."
+        mc "Even if it's just a minor thing."
+        show monika zorder 3 at f53
+        m "You're the president of the club, Sayori."
+        m "Do whatever you want, it's your life."
+        m "I'm going to go back inside and try to deal with the situation."
+        m "Good luck, you two! I hope you find whatever it is you're looking for."
+        show sayori zorder 2 at t11
+        show monika at thide
+        hide monika
+        "Monika goes back into the room without saying another word."
+        "After she's sure that Monika is busy insside, Sayori continues to lead me to some place."
     else:
         s "Just read ahead or something with the script."
         s "It might not be a good idea to actually practice though."
         s "You won't have me to yell directions at the four of you."
         "Sayori points to the clock on the wall."
-        s "Look at that time and remember it."
-        s "I'll be back before you know it."
+        s "Look at the time right now and remember it."
+        s "It'll seem like no time at all has passed when I get back."
+        show sayori at thide
+        hide sayori
+        show yuri zorder 2 at t41
+        show monika zorder 2 at t42
+        show natsuki zorder 2 at t43
+        show ayame zorder 2 at t44
+        "Sayori leaves the room and walks down the hallway."
+        "I wonder where she's going all of a sudden."
+        show natsuki zorder 3 at f43
+        n "What do we now? Should we wait for her to get back?"
+        n "She was pretty helpful but I think we could do it ourselves in the meantime."
+        n "That is, if the three of you are still up for it."
+        show yuri zorder 3 at f41
+        show natsuki zorder 2 at t43
+        y "I'd be happy to try to continue doing this."
+        y "But that leaves the problem of Sayori's role."
+        y "The stage directions probably aren't necessary but her lines are still there."
+        y "And if we just skip over it, I feel like it will reduce the flow of our rehearsal."
+        show yuri zorder 2 at t41
+        show monika zorder 3 at f42
+        m "Well, Ayame is here, right? That gives me an idea."
+        m "Maybe she can temporarily fill Sayori's role."
+        m "I don't know about her acting abilities but it might be better than simply pretending the line was said."
+        show monika zorder 2 at t42
+        show ayame zorder 3 at f44
+        ay "W-Wait, what? You're talking about me, right?"
+        ay "I can't act, no way! I think you're better off without me."
+        show monika zorder 3 at f42
+        show ayame zorder 2 at t44
+        m "It's not going to be a permanent thing."
+        m "It's just so we don't lose our tempo, you know?"
+        m "Besides, you're basically an official member now."
+        m "You should be involved in our activities, right?"
+        show monika zorder 2 at t42
+        show natsuki zorder 3 at f43
+        n "Come on, what's the worst that could happen?"
+        n "It's just for fun anyway. If you mess up, nobody is gonna judge you for it."
+        show natsuki zorder 2 at t43
+        show ayame zorder 3 at f44
+        ay "Well...I don't know. It just feels like I shouldn't be doing it."
+        ay "Besides, she said she was going to be back pretty quickly."
+        ay "Perhaps it's just better to wait it out."
+        show yuri zorder 2 at t41
+        show ayame zorder 2 at t44
+        y "You have nothing to worry about, Ayame."
+        y "Just take her copy of the script and follow along."
+        y "You don't have to put on an expression or accent if you can't or don't want to."
+        show yuri zorder 2 at t44
+        show ayame zorder 3 at f44
+        ay "Okay, alright. You've convinced me."
+        "Ayame picks up Sayori's copy of the script."
+        "She looks through it for a while, probably to find where we're up to in the scrip."
+        ay "I think...we were here."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
