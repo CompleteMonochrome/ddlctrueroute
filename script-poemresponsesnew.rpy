@@ -1130,7 +1130,7 @@ label ch12_s_end:
         s "Thanks for talking to me, [player]."
         mc "Ah, not a problem."
     elif s_appeal >= 4:
-        $ get_achievement("*Maybe More Than A Friend*")
+        $ get_achievement("*More Than Just Friends*")
         call showpoem (poem_s7b)
         s 2d "There's lots of different feelings in that one, [player]."
         s "So I hope you sorta understand what I'm trying to say."

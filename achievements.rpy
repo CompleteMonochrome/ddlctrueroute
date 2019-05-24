@@ -229,8 +229,8 @@ init python:
                             "achieved": False,
                             "hidden": False
                             }
-        persistent.achievements_dict["*Maybe More Than A Friend*"] = {"type": 0,
-                            "title": "Maybe More Than A Friend",
+        persistent.achievements_dict["*More Than Just Friends*"] = {"type": 0,
+                            "title": "More Than Just Friends",
                             "text": "Make Sayori recall a previous life through poetry.",
                             "icon": "mod_assets/gui/achievements/achmorethanfriends.png",
                             "achieved": False,

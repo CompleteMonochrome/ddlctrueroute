@@ -526,12 +526,13 @@ label splashscreen:
         $ renpy.quit()
 
     # Set Achievements
+
     if persistent.achievements_dict["*Playboy*"]["text"] == "Write for each girl at least once in a single playthrough.":
         $ persistent.achievements_dict["*Sadist*"]["title"] = "Sadist"
         $ persistent.achievements_dict["*Playboy*"]["text"] = "Write for each girl at least once without going on a date."
-        $ persistent.achievements_dict["*Maybe More Than A Friend*"] = {"type": 0,
-                            "title": "Maybe More Than A Friend",
-                            "text": "Read \"A Past Life\" by Sayori.",
+        $ persistent.achievements_dict["*More Than Just Friends*"] = {"type": 0,
+                            "title": "More Than Just Friends",
+                            "text": "Make Sayori recall a previous life through poetry.",
                             "icon": "mod_assets/gui/achievements/achmorethanfriends.png",
                             "achieved": False,
                             "hidden": False
@@ -544,7 +545,7 @@ label splashscreen:
                             "hidden": False
                             }
     if "*Past Life*" in persistent.achievements_dict:
-        $ persistent.achievements_dict["*Maybe More Than A Friend*"]["text"] = "Make Sayori recall a previous life through poetry."
+        $ persistent.achievements_dict["*More Than Just Friends*"]["text"] = "Make Sayori recall a previous life through poetry."
         $ persistent.achievements_dict["*When Will It End?!*"]["text"] = "Get through the play by telling Yuri to kill you."
         $ persistent.achievements_dict["*Past Life*"]["title"] = "An Important Character"
         $ persistent.achievements_dict["*True Friendship*"]["title"] = "Blossoming Friendship"
@@ -552,6 +553,15 @@ label splashscreen:
         $ persistent.achievements_dict["*Blossoming Friendship*"] = persistent.achievements_dict["*True Friendship*"]
         $ del persistent.achievements_dict["*Past Life*"]
         $ del persistent.achievements_dict["*True Friendship*"]
+    if "*Maybe More Than A Friend*" in persistent.achievements_dict:
+        $ persistent.achievements_dict["*More Than Just Friends*"] = {"type": 0,
+                            "title": "More Than Just Friends",
+                            "text": "Make Sayori recall a previous life through poetry.",
+                            "icon": "mod_assets/gui/achievements/achmorethanfriends.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
+        $ del persistent.achievements_dict["*Maybe More Than A Friend*"]
     # Unlock Achievements
     if persistent.monika_change and not persistent.monika_gone:
         $ persistent.achievements_dict["*True Route*"]["achieved"] = True

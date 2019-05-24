@@ -302,6 +302,7 @@ image bg club_day2:
         "bg club_day"
     choice:
         "bg/club-skill.png"
+image bg club_skill = "bg/club-skill.png"
 image bg closet = "bg/closet.png"
 image bg bedroom = "bg/bedroom.png"
 image bg sayori_bedroom = "bg/sayori_bedroom.png"
