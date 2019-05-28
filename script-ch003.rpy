@@ -681,11 +681,13 @@ label ch3_start_none:
         "Monika takes a deep breath and composes herself."
         m 4k "Anyway, it's time to return to routine..."
     elif monika_will_delete:
-        show monika 1e zorder 2 at t11
-        m "I appreciate you taking the time to worry about Sayori."
-        m "Try not to worry about her, I'm sure she'll be fine."
-        m "But anyway..."
-        m 1a "It was nice spending some time with you."
+        if not ignore_sayori:
+            show monika 1e zorder 2 at t11
+            m "I appreciate you taking the time to worry about Sayori."
+            m "Try not to worry about her, I'm sure she'll be fine."
+            m "But anyway..."
+        show monika 1a zorder 2 at t11
+        m "I enjoyed spending this moment with you, [player]."
         m "Even if it was only for a little while."
         m 4k "We should probably start sharing our poems though."
     elif monika_appeal[2]:
