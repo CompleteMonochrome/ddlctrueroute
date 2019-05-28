@@ -672,29 +672,30 @@ label ch3_start_none:
     "..."
     if not renpy.music.get_playing(channel='music') == audio.t3:
         play music t3
-    if sayori_save == 3:
-        show monika 1e zorder 2 at t11
-        m "Thanks for that..."
-        m 1n "I'm glad you stayed with me..."
-        m "Even if it was only for a little while."
-        m "I feel a lot better."
-        "Monika takes a deep breath and composes herself."
-        m 4k "Anyway, it's time to return to routine..."
-    elif monika_will_delete:
-        if not ignore_sayori:
+    if monika_appeal[2]:
+        if sayori_save == 3:
             show monika 1e zorder 2 at t11
-            m "I appreciate you taking the time to worry about Sayori."
-            m "Try not to worry about her, I'm sure she'll be fine."
-            m "But anyway..."
-        show monika 1a zorder 2 at t11
-        m "I enjoyed spending this moment with you, [player]."
-        m "Even if it was only for a little while."
-        m 4k "We should probably start sharing our poems though."
-    elif monika_appeal[2]:
-        show monika 1a zorder 2 at t11
-        m "It was nice spending some time with you."
-        m "Even if it was only for a little while."
-        m 4k "We should probably start sharing our poems though."
+            m "Thanks for that..."
+            m 1n "I'm glad you stayed with me..."
+            m "Even if it was only for a little while."
+            m "I feel a lot better."
+            "Monika takes a deep breath and composes herself."
+            m 4k "Anyway, it's time to return to routine..."
+        elif monika_will_delete:
+            if not ignore_sayori:
+                show monika 1e zorder 2 at t11
+                m "I appreciate you taking the time to worry about Sayori."
+                m "Try not to worry about her, I'm sure she'll be fine."
+                m "But anyway..."
+            show monika 1a zorder 2 at t11
+            m "I enjoyed spending this moment with you, [player]."
+            m "Even if it was only for a little while."
+            m 4k "We should probably start sharing our poems though."
+        else:
+            show monika 1a zorder 2 at t11
+            m "It was nice spending some time with you."
+            m "Even if it was only for a little while."
+            m 4k "We should probably start sharing our poems though."
     show monika 4b zorder 2 at t11
     m "Okay, everyone!"
     "After some time passes, Monika calls out to the clubroom."

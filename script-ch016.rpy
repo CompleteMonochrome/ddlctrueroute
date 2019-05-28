@@ -7450,7 +7450,7 @@ label ch16_end:
                             mc "No, of course not. The club is perfectly normal."
                             mc "There's no hidden thing behind it at all."
                             mc "Weird things happen sure, but I bet you that's not unique to our club."
-                            ay 2; "No hesitation on your answer..."
+                            ay 2l "No hesitation on your answer..."
                             ay 2h "I can see I'm not going to get much more information out of you."
                             ay "I, at least, learned something from your answer."
                             ay "Although it may not have been as useful as I would have liked..."
