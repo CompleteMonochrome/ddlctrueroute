@@ -7567,6 +7567,7 @@ label ch16_end:
                             ay 2h "Let's not discuss this further."
                             ay "I think I've already divulged too much about it anyway..."
                             $ ch16_ay_question_number += 1
+                            $ ch16_ay_asked[0] = True
                         "How did you become a school leader?" if not ch16_ay_asked[3]:
                             label ch16_ay_q2:
                             if ch16_ay_question_number == 3 and ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2]:
@@ -7618,12 +7619,14 @@ label ch16_end:
                             ay "But you can look at it from another side as well."
                             ay 2h "If the student body elected a leader who was popular but had none of the necessary skills..."
                             ay "Then it could be a disaster. We may never get our voices heard."
-                            ay "Choosing someone who has the necessary skills and know will do a good job is sometimes better than a popularity contest."
+                            ay "Choosing someone who has the necessary skills that you know will do a good job..."
+                            ay "Well, it's sometimes better than a popularity contest."
                             ay 2m "That's my opinion, anyway."
                             "Ayame looks lost in thought for a moment before she smiles at me."
                             ay 1h "I suppose I didn't really answer your question, did I?"
                             ay "I hope I at least gave you some insight."
                             $ ch16_ay_question_number += 1
+                            $ ch16_ay_asked[3] = True
                         "What's your favorite color?" if not ch16_ay_asked[2]:
                             label ch16_ay_q3:
                             if ch16_ay_question_number == 2 and ch16_ay_message[0] and ch16_ay_message[1]:
@@ -7667,6 +7670,7 @@ label ch16_end:
                             "Ayame mumbles something under her breath before lifting her head up again."
                             ay 2h "Anyway, that's that question done, I hope you liked my answer."
                             $ ch16_ay_question_number += 1
+                            $ ch16_ay_asked[2] = True
                         "What other clubs did you consider?" if not ch16_ay_asked[1]:
                             label ch16_ay_q4:
                             if ch16_ay_question_number == 1 and ch16_ay_message[0]:
@@ -7720,6 +7724,7 @@ label ch16_end:
                             mc "I promise we're better than some kind of reincarnation club."
                             ay 1h "We'll see about that, won't we?"
                             $ ch16_ay_question_number += 1
+                            $ ch16_ay_asked[1] = True
                     ay 1m "Is there anything else you wanted to know?"
                     mc "Well..."
                     if not ch16_ay_asked[0] or not ch16_ay_asked[1] or not ch16_ay_asked[2] or not ch16_ay_asked[3]:
@@ -7731,6 +7736,7 @@ label ch16_end:
                         if ch16_ay_level < 0:
                             $ ch16_ay_level = 0
                         ay 2j "That's one more than I asked, not that I'm--"
+                        stop music
                         ay 1c "AAAAAAAAAAAAAAAHHHH!!!"
                         "Ayame suddenly yells out in pain."
                         show ayame 1c:
@@ -8742,9 +8748,9 @@ label ch16_end:
             n "Sayori really went all out for this play."
             n 1c "I was kinda expecting cheap stuff from one of those second hand stores or something."
             show ayame 1h zorder 3 at f31
-            show natsuki zorder 2 at t31
+            show natsuki zorder 2 at t33
             ay "Well, I'm not going to ask how you got all of this."
-            ay 1j "It's probably none of my business how your club get its finances."
+            ay 1j "It's probably none of my business how your club gets its finances."
             ay "So, what are you planning to do right now?"
             "Ayame looks around the room then back at us then around the room again."
             ay 1a "Wait...are you missing people? I could have sworn there were two other people in the club."
@@ -9064,12 +9070,12 @@ label ch16_end:
             ay "I don't really have an interest."
             ay 1l "Though as the only heir to the family fortune, I suspect they may have other plans."
             show ayame zorder 2 at t31
-            show natsuki 4e zorder 3 at f32
+            show natsuki 4e zorder 3 at f33
             n "I'd say do what you want, Ayame."
             n "You shouldn't let your parents control your life."
             n 4m "I know that all too well.."
             show ayame 2n zorder 3 at f31
-            show natsuki zorder 2 at t32
+            show natsuki zorder 2 at t33
             ay "That's a lot easier for you to say."
             ay "Your family doesn't have these absurdly high expectations of you."
             ay 2g "I've only maintained a small sense of autonomy because I've lived up to those expectations."
@@ -9077,16 +9083,16 @@ label ch16_end:
             ay "I'm still longing for the day when I can finally live my own life the way I want."
             ay 2h "For now though, I have to take the small opportunities I have."
             ay 2e "Like this one!"
-            show ayame zorder 2 at t32
-            show sayori 1b zorder 3 at f33
+            show ayame zorder 2 at t31
+            show sayori 1b zorder 3 at f32
             s "So sometimes you just get forced to do something?"
             s "Like you have to accept a responsibility you wanted no part of?"
-            show ayame 2a zorder 3 at f32
-            show sayori zorder 2 at t33
+            show ayame 2a zorder 3 at f31
+            show sayori zorder 2 at t32
             ay "That's precisely it, Sayori. You got it right."
             ay "Though that happens on a nearly daily basis for me."
             ay 2g "The things I have to do...a lot of it is no fun at all!"
-            show ayame zorder 2 at t32
+            show ayame zorder 2 at t31
             "Suddenly, the door opens and Monika and Yuri step through."
             "They seem to be carrying the bags that were stored in the clubroom."
             show ayame zorder 2 at t51
@@ -9221,13 +9227,13 @@ label ch16_end:
     ay "That's a pretty good reason actually."
     ay "But I'm sure you won't need to think much about it when you open it."
     ay 1h "And what's your excuse, [player]? Are you going to leave it until later too?"
-    show ayame zorder 2 at t52
+    show ayame zorder 2 at t51
     mc "I guess I could open it now, but that might cause a chain reaction."
     mc "Someone else might feel like they should do the same, to compare their gift."
     mc "But I'm sure the others have more self control than that."
-    show ayame 1j zorder 3 at f52
+    show ayame 1j zorder 3 at f51
     ay "Then...?"
-    show ayame zorder 2 at t52
+    show ayame zorder 2 at t51
     "Ayame's face lights up at the idea of me opening it."
     mc "Well, I don't see the harm in opening it."
     mc "I'm keen to see what you've given me anyway."
@@ -9236,12 +9242,12 @@ label ch16_end:
     "Open closer inspection, I can see it says 'Literature Club' on it."
     "I can also see my initials printed out on it in small writing."
     mc "Is this a custom made ring?"
-    show ayame 1k zorder 3 at f52
+    show ayame 1k zorder 3 at f51
     ay "It could be, who knows?"
-    show ayame zorder 2 at t52
+    show ayame zorder 2 at t51
     mc "And you did this for all of us?"
     mc "I can't imagine how much it would cost for one person, but for five?"
-    show ayame 1h zorder 3 at f52
+    show ayame 1h zorder 3 at f51
     ay "Who says they have the same gift?"
     ay "Maybe you all got different things, but you're not going to find out now."
     "Ayame puts her bag away after having finished with the presents."
@@ -9379,13 +9385,13 @@ label ch16_end:
     show sayori 3c zorder 2 at t52
     show ayame zorder 2 at t55
     s "Go ahead and say anything! You're like the judge before our actual play."
-    s 3a "If you can give a suggestion that can make it better, then that would great!"
+    s 3a "If you can give a suggestion that can make it better, then that would be great!"
     show sayori zorder 2 at t52
     show ayame 1m zorder 3 at f55
     ay "Like I said, there's not much to say."
     ay 1h "I, personally, was pretty entertained throughout all of it."
     ay "And that was only a rehearsal."
-    ay 1j "It made me think that you were just saying it was your first rehearsal when you've all practice a lot."
+    ay 1j "It made me think that you were just saying it was your first rehearsal when you've all practiced a lot."
     ay "I wonder how it will all look in costume."
     show monika 1c zorder 3 at f53
     show ayame zorder 2 at t55
@@ -9711,30 +9717,30 @@ label ch16_end:
         y "I do have to agree with Monika here. The difference could be night and day."
         y "It is just one scene, it's not like you're going to be like that the whole play."
         show yuri zorder 2 at t41
-        show ayame 1l zorder 3 at f43
+        show ayame 1l zorder 3 at f44
         ay "If I may say something...?"
         ay "I know it's not really my place seeing as I just joined but..."
         ay 1j "If you'd like to hear what I have to say, then maybe it could help."
-        show ayame zorder 2 at t43
-        show natsuki 2d zorder 3 at f44
+        show natsuki 2d zorder 3 at f43
+        show ayame zorder 2 at t44
         n "Of course! You don't even need to ask about stuff like that."
         n "You're one of us now, whether you like it or not."
         n "You don't need to ask to be able to say something."
         show monika 5 zorder 3 at f42
-        show natsuki zorder 2 at t44
+        show natsuki zorder 2 at t43
         m "You're awfully supportive of Ayame, aren't you Natsuki?"
         m "You weren't like that when [player] first joined the club."
         m "I wonder why that is..."
         show monika zorder 2 at t42
-        show natsuki 2e zorder 3 at f44
+        show natsuki 2e zorder 3 at f43
         n "I-Is that not allowed? I'm just being nice."
         n "We should be doing our best to make her feel welcome!"
         show monika 1a zorder 3 at f42
-        show natsuki zorder 2 at t44
+        show natsuki zorder 2 at t43
         m "I know, I know! Just such a different reception is all~"
         m "Anyway, go on Ayame. Let's hear what you have to say."
         show monika zorder 2 at t42
-        show ayame 1h zorder 3 at f43
+        show ayame 1h zorder 3 at f44
         ay "Okay, thank you. I appreciate the thought Natsuki, but I can take care of myself."
         ay 1j "You don't have to defend me."
         show natsuki 2g
@@ -9744,10 +9750,10 @@ label ch16_end:
         ay "As I was saying, I think the emotion part isn't really needed."
         ay "The way you've done your play already means that this whole emotion thing might come so sudden."
         show yuri 2pf zorder 3 at f41
-        show ayame zorder 2 at t43
+        show ayame zorder 2 at t44
         y "What do you mean by that?"
         show yuri zorder 2 at t41
-        show ayame 1h zorder 3 at f43
+        show ayame 1h zorder 3 at f44
         ay "Well, if you look at the script..."
         "Ayame quickly flips back through the script."
         ay "At this point, here. It's the same sort of premise but none of you commented on the emotion there."
@@ -9756,11 +9762,39 @@ label ch16_end:
         ay "But that's just my opinion."
         show yuri zorder 2 at t51
         show monika zorder 2 at t52
+        show natsuki zorder 2 at t53
         show ayame zorder 2 at t54
-        show natsuki zorder 2 at t55
         show sayori 1d zorder 3 at f55
         s "I think she's right! I was actually going to point the same thing out when we got there."
         s "But it seems you guys already went past it."
+        show monika 2b zorder 3 at f52
+        show sayori zorder 2 at t55
+        m "Welcome back, Sayori. I take it you did you needed to?"
+        m "I hope it was as important as it sounded."
+        show monika zorder 2 at t52
+        show sayori 1c zorder 3 at f55
+        s "It wasn't as easy as I thought it would be."
+        s "Which means, it didn't go as I planned."
+        s 1a "But don't worry, I'm not leaving you guys again."
+        show natsuki 1g zorder 3 at f53
+        show sayori zorder 2 at t55
+        n "Where exactly did you go?"
+        n "I thought you were just gonna be gone for a minute."
+        n 1e "You even said that you'd be..."
+        "Natsuki points at the clock and then looks confused."
+        n 1o "W-Wait...how is that possible?"
+        show natsuki zorder 2 at t53
+        "Everyone turns their attention toward the clock."
+        "Sayori really was back before we knew it..."
+        show yuri 3pf zorder 3 at f51
+        y "That's very strange. It's almost like no time passed at all."
+        y "But I could have sworn that you were away for at least ten minutes."
+        show yuri zorder 2 at t51
+        "I can see Ayame look at Sayori with a suspicious look on her face."
+        "As if she suspects Sayori for some reason."
+        show ayame 2a zorder 3 at f54
+        ay "I'm sure it's nothing. Anyway, I'll let you all back to it."
+        ay "I was just standing in, after all."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
