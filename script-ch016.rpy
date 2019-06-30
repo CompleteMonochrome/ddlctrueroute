@@ -9766,6 +9766,8 @@ label ch16_end:
             s "I know you can just go back and change things if you really wanted to."
             s "If this is a mistake you're not going to change, then I'll stick with it."
             s "Maybe it will lead down a better path...who knows?"
+            show sayori zorder 2 at t22
+            mc "Okay, then what comes next?"
         else:
             mc "I just don't really know if I did anything."
             mc "I think I saw her flinch, once maybe. I'm not sure."
@@ -9812,6 +9814,96 @@ label ch16_end:
             s "I don't know what you or [player] have done to mess this up but..."
             s "I'm putting my trust on the two of you to make it work."
             s "That's not saying I'm not going to try my hardest too."
+            show sayori zorder 2 at t22
+            mc "What now then?"
+        show sayori zorder 3 at f22
+        s "Now...we try to make it work with what we have."
+        s "Everything here is already set out how we planned, right?"
+        show mysteriousclerk zorder 3 at f21
+        show sayori zorder 2 at t22
+        cl "I did everything you asked of me to the t. I just hope you know what you're doing."
+        show mysteriousclerk zorder 2 at t21
+        show sayori zorder 3 at f22
+        s "What do you mean? This was mostly your idea..."
+        s "I'm just following what you said."
+        s "Why would you say something like that?"
+        show mysteriousclerk zorder 3 at f21
+        show sayori zorder 2 at t22
+        cl "Well, I only provided you with the plan."
+        cl "It was you who actually set it into motion."
+        cl "The consequences of whatever happens besides our--"
+        cl "Pardon me, {i}your{/i} desires does not fall to me."
+        cl "It is on you."
+        show mysteriousclerk zorder 2 at t21
+        show sayori zorder 3 at f22
+        s "I thought we were meant to be working together."
+        s "You never would have told me this was possible if you didn't believe in it too."
+        s "Has something changed since then?"
+        s "You're acting indifferent...more than usual."
+        show mysteriousclerk zorder 3 at f21
+        show sayori zorder 2 at t22
+        cl "I assure you I am seeing this through with you."
+        cl "As for what has changed..."
+        cl "Well, the circumstances don't matter. It's all set in motion as of right now."
+        cl "There is nothing you or I can do to change what has already happened."
+        show mysteriousclerk zorder 2 at t21
+        show sayori zorder 3 at f22
+        s "We could always--"
+        show mysteriousclerk zorder 3 at f21
+        show sayori zorder 2 at t22
+        cl "Do I need to remind you that we're short on time here?"
+        cl "Just stop concerning yourself with anything except the task at hand."
+        show mysteriousclerk zorder 2 at t21
+        show sayori zorder 3 at f22
+        s "Look, I don't know what I did or what {i}someone else{/i} did..."
+        s "But if everything does go according to plan..."
+        show sayori zorder 2 at t22
+        "I couldn't hear the end of what she just said."
+        "I'm not sure if that's because she didn't say anything or because she went quiet as she was saying it."
+        mc "I still don't know what's supposed to happen next."
+        mc "But I remember everything now, there has to be some way I can help."
+        show sayori zorder 3 at f22
+        s "You remembering is going to be important for all of this."
+        s "Right now though, you can't really do anything."
+        s "All you can do is watch as we try to do our thing."
+        show sayori zorder 2 at t22
+        mc "And what thing is that exactly?"
+        mc "Does it have something to do with why this room looks exactly the same as our club room?"
+        mc "Is it our club room?"
+        show sayori zorder 3 at f22
+        s "No, but it's a very good replica, isn't it?"
+        s "You can thank [cl_name] for that."
+        s "He spent a ridiculous amount of time getting it juuuuuust right."
+        show sayori zorder 2 at t22
+        mc "But what's the point of it?"
+        mc "Does it have anything to do with your plan at all?"
+        mc "Or is it just because you like the atmosphere of the club or something?"
+        show sayori zorder 3 at f22
+        s "Ehehe, as much as I do like it, that's not the point of this."
+        s "It's a really odd condition for our plan to work."
+        s "I'm still not entirely sure how it works, but [cl_name] says the room has to look as close as possible."
+        show sayori zorder 2 at t22
+        mc "This doesn't make {i}any{/i} sense at all."
+        show mysteriousclerk zorder 3 at f21
+        show sayori zorder 2 at t22
+        cl "You know the room Ayame is in right now?"
+        show mysteriousclerk zorder 2 at t21
+        mc "Yeah, what about it?"
+        show mysteriousclerk zorder 3 at f21
+        cl "Like I said before, it's no ordinary room."
+        cl "It's got a special connection to me and to her."
+        cl "I can manipulate the room in special ways, similar to how Sayori can use her powers."
+        cl "But my powers are much more limited in scope."
+        cl "It's quite literally just within the room and the surrounding area."
+        show mysteriousclerk zorder 2 at t21
+        mc "I still don't get it."
+        show mysteriousclerk zorder 3 at f21
+        cl "If you'd let me finish, I could finish my explanation."
+        cl "There needs to be a strong connection between that room and the one we're in."
+        cl "So I had to change this room to look as much your original club as possible."
+        cl "The room that Ayame and the others are in look like {i}my{/i} original club."
+        cl "So there's a strong resonance between the two rooms right now because--"
+        
     else:
         s "Just read ahead or something with the script."
         s "It might not be a good idea to actually practice though."
@@ -10099,7 +10191,8 @@ label ch16_end:
         show monika zorder 2 at t42
         show natsuki zorder 2 at t43
         show sayori zorder 2 at t44
-        "Ayame takes a seat and starts looking at us eagearly."
+        "Ayame takes a seat and starts looking at us eagerly."
+
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
@@ -11829,6 +11922,22 @@ label ch16_sayoridate:
             mc "I can still remember the taste of everything there...there was just too much."
             s "Then, shall we go back to the park?"
             s "We only have a little time left, I think."
+            mc "I think it's a good place to finish off."
+            mc "Though I don't really know how much time we actually have left."
+            s "That doesn't matter, let's just get there and quick."
+            scene bg park_day
+            show sayori 1ba zorder 2 at t11
+            with wipeleft_scene
+            "In what seems like an instant, we're at the park."
+            "Whether I forgot the walk back here or if Sayori did something..."
+            "Well, that's not important."
+            s "Well, I think we did some good in the world today."
+            s "Even if it was just a really small thing."
+            s "Maybe we can brighten the day of some people, if only for a moment."
+            mc "When did you become such a philanthropist?"
+            s "I don't even know what that word means, [player]."
+            mc "It means--"
+            mc "You know what, never mind."
         "Picnic.":
             $ ch16_s_date_activities += 1
             mc "I think a picnic would be better, it feels a lot more personal."
@@ -12126,6 +12235,32 @@ label ch16_sayoridate:
             mc "I don't know the reason why though."
             s "Well, have you ever considered what makes something like that special?"
             s "It's not just the kind of food that makes something delicious."
+            s "It's how it was made."
+            mc "Well, obviously. If it was made terribly then of course it would taste horrible."
+            mc "If that's not what you're trying to say then I don't really get it."
+            s "There's a difference between something made out of necessity and made out of love."
+            s "If I was a chef, which I'm {i}definitely{/i} not, I'd just be making food because it's my job."
+            s "Eventually, all the love I'd put into making it would fade away."
+            s "Of course, that's not true for anyone."
+            s "But for someone working in a restaurant for example, their love they put into cooking could be long gone."
+            s "That doesn't mean the food they make doesn't taste good."
+            s "It just doesn't feel as special as something made just for you."
+            mc "Are you trying to imply something here, Sayori?"
+            s "I'm just saying that I'm glad you chose the picnic."
+            s "I wouldn't minded the restaurant, it just feels more personal with the just the two of us."
+            s "Away from prying eyes."
+            mc "Prying eyes...? You think someone there is out to get you?"
+            s "I don't know for sure. You can never be too sure, you know."
+            s "Anyway, that's not important."
+            mc "Now that you mention it, there was something special about the food you brought here."
+            mc "I couldn't figure it out at first so maybe you're right."
+            mc "Maybe pouring your love into making something for someone does make it taste better."
+            mc "Even if it doesn't really add anything to it in a material sense."
+            s "Sometimes you don't need to. You could have something made up of everything another is..."
+            s "...but no matter what, they could still taste completely different just because."
+            s "Well, I don't know. It's just something I thought I'd say."
+            s "In the end, it doesn't really matter if we stayed around here for a picnic or not."
+            s "As long as that time was spent with you, that's all I care about."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
