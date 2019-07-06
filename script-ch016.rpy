@@ -9821,7 +9821,7 @@ label ch16_end:
         s "Everything here is already set out how we planned, right?"
         show mysteriousclerk zorder 3 at f21
         show sayori zorder 2 at t22
-        cl "I did everything you asked of me to the t. I just hope you know what you're doing."
+        cl "I did everything you asked of me to a T. I just hope you know what you're doing."
         show mysteriousclerk zorder 2 at t21
         show sayori zorder 3 at f22
         s "What do you mean? This was mostly your idea..."
@@ -9903,7 +9903,7 @@ label ch16_end:
         cl "So I had to change this room to look as much your original club as possible."
         cl "The room that Ayame and the others are in look like {i}my{/i} original club."
         cl "So there's a strong resonance between the two rooms right now because--"
-        
+
     else:
         s "Just read ahead or something with the script."
         s "It might not be a good idea to actually practice though."
@@ -10068,7 +10068,7 @@ label ch16_end:
         n "Of course! You don't even need to ask about stuff like that."
         n "You're one of us now, whether you like it or not."
         n "You don't need to ask to be able to say something."
-        show monika 5 zorder 3 at f42
+        show monika 5a zorder 3 at f42
         show natsuki zorder 2 at t43
         m "You're awfully supportive of Ayame, aren't you Natsuki?"
         m "You weren't like that when [player] first joined the club."
@@ -11938,6 +11938,39 @@ label ch16_sayoridate:
             s "I don't even know what that word means, [player]."
             mc "It means--"
             mc "You know what, never mind."
+            s "I'm just glad that we got to spend that moment together."
+            s "Even if it was only a little bit."
+            "Something about the way she said that makes it seem like she didn't entirely enjoy the experience."
+            mc "Is something wrong?"
+            s "It's nothing you should concern yourself about."
+            mc "Sayori, I know I shouldn't really speak for {i}that{/i} person..."
+            mc "But I feel like they would want to know if there was anything wrong, at all."
+            mc "So speak your mind."
+            "Sayori looks at me and lets out a small smile."
+            s "I don't know if taking relationship advice from you is a good idea..."
+            s "But what you're saying does sound like it makes sense."
+            mc "Then you're going to tell me what's wrong?"
+            s "It's just...the food I made."
+            mc "...What about it?"
+            s "It's going to go stale! What am I supposed to do with it?"
+            s "We can't exactly eat it now, we've already had something for lunch."
+            s "And I was saving it for this occasion so now I don't really know what I'm supposed to do."
+            mc "Oh...I didn't realize that was the case."
+            s "What am I supposed to do now? It seems like a waste to just throw it away."
+            mc "Well, you could always donate it."
+            mc "Like you suggested to the waiter in the restaurant."
+            s "Donating it...?"
+            "Sayori's face suddenly lights up."
+            s "That's a wonderful idea! I'm sure they'll really appreciate what I've made."
+            s "But maybe I'll keep the dessert out of it."
+            mc "Why is that?"
+            mc "Are you bad at making desserts?"
+            s "Let's just put it this way."
+            s "They'll have a {i}hard{/i} time eating it."
+            mc "Right..."
+            s "But don't worry about the donating, I'll get on that after we're finished."
+            s "I'm glad we got to spend this moment together."
+            s "Regardless of whether we did a picnic or went to some restaurant."
         "Picnic.":
             $ ch16_s_date_activities += 1
             mc "I think a picnic would be better, it feels a lot more personal."
@@ -12261,6 +12294,247 @@ label ch16_sayoridate:
             s "Well, I don't know. It's just something I thought I'd say."
             s "In the end, it doesn't really matter if we stayed around here for a picnic or not."
             s "As long as that time was spent with you, that's all I care about."
+    s "And we still had fun along the way, right?"
+    mc "Yeah, I really enjoyed it. I'm sure I speak for the both of us when I say that."
+    s "That's good. I only wished we had more time together."
+    s "But I'm expecting something to happen any moment now."
+    s "Probably in one of his weird ways."
+    mc "What do you mean?"
+    s "I can't exactly keep up this state of frozen time indefinitely."
+    s "And there are some that aren't really affected by it."
+    s "At least, not in the way everyone else is."
+    mc "Who could that be?"
+    s "Take a wild guess, [player]."
+    s "It's the only other person who knows what's going on."
+    s "To the extent that we do."
+    mc "Is it--"
+    "A strange sound suddenly starts ringing from Sayori."
+    "We look at each other and she shrugs."
+    "She reaches into her pocket and to both of our surprises, her phone is ringing."
+    "Looking around me, it still seems like time is stopped."
+    "So who could be calling her? And how...?"
+    "Sayori looks like she just came to a realization."
+    s "It's him. Hold on, I should probably take this."
+    "She puts her phone to her ear and answers it."
+    s "Helloooooo?"
+    "I can faintly hear a familiar voice coming from the other end."
+    "It sounds like [cl_name] and he doesn't seem happy."
+    s "Yes, I know. I--"
+    "Sayori sighs as she rolls her eyes."
+    s "Alright, alright. You don't need to tell me twice."
+    s "I know what's at stake here, I just wanted a short break."
+    s "Is that too much to ask?"
+    "As Sayori finishes asking the question, the noise coming from her phone stops."
+    "It seems like he decided to hang up on her."
+    s "Looks like our time here is over."
+    s "It was really fun while it lasted, but all good things must come to an end."
+    mc "Are you okay? He didn't sound very happy with you."
+    s "He's just making sure I get back to our plan."
+    s "And he's right too, this time stop is about to run out."
+    s "So do you want to take a shortcut?"
+    mc "Well--"
+    s "Actually, we don't really have a choice. We're going to be late if we don't."
+    s "Close your eyes, [player]."
+    mc "O-Okay..."
+    stop music
+    scene black with close_eyes
+    "I wait for Sayori to do what she has to."
+    "I hear her shifting around, unsure what exactly she has to do for this shortcut."
+    "In what seems like an instant, I feel like we're in a different place."
+    "Like the ground underneath me doesn't feel like grass but instead more solid."
+    "I'm still not sure how this works but I feel like I shouldn't question it."
+    "I don't think I'm going to get an answer anyway."
+    s "Well, go ahead and open them. It's finished."
+    s "We're here."
+    scene bg portraitshop_school
+    show sayori 1a zorder 2 at t11
+    with open_eyes
+    play music t2
+    "As I open my eyes, it seems as if we're in the rehearsal room."
+    "Judging by the sounds I can hear coming from outside, it sounds like time has begun moving again."
+    "It seems like it's still the lunch break too."
+    "Sayori is back in her school uniform too."
+    "I take a look around and I can see that I'm also back in my school uniform."
+    "That must be a really convenient talent to have if she ever wakes up late in the morning..."
+    s "Where is he?"
+    cl "Over here."
+    "That all too familiar voice comes from behind us."
+    show mysteriousclerk 1a zorder 3 at f21
+    show sayori zorder 2 at t22
+    cl "I trust that you had a pleasant date?"
+    cl "I don't care if you did or not, but it's common courtesy to say something like that."
+    show mysteriousclerk zorder 2 at t21
+    show sayori zorder 3 at f22
+    s "It was just fine, thank you."
+    s "Not like it's any of your business."
+    show mysteriousclerk zorder 3 at f21
+    show sayori zorder 2 at t22
+    cl "Ohoho, on the contrary, I think you'll find it is my business."
+    cl "At least, what you do with the time you have left is."
+    cl "Spending it on pleasantries is not ideal, not at all."
+    cl "You're jeopardizing everything."
+    show mysteriousclerk zorder 2 at t21
+    show sayori zorder 3 at f22
+    s "Calm down...it's not like much has happened in the time we've been gone."
+    s "In fact, time literally started moving only a couple of seconds ago."
+    s "There's still time to do what we have to."
+    show mysteriousclerk zorder 3 at f21
+    show sayori zorder 2 at t22
+    cl "You should know that I'm not the only one that can move in your stopped instance, you know."
+    cl "A curious someone we both know could as well."
+    cl "And they were snooping around the school, probably wondering what the hell was going on."
+    cl "So perhaps you should consider what consequences your actions will actually have."
+    cl "And not be so narrowminded."
+    show mysteriousclerk zorder 2 at t21
+    "He seems kinda angry that this whole date thing happened."
+    "Who is this other person they're talking about though?"
+    "And why can they move in Sayori's stopped time...?"
+    "Are they special in some way like [cl_name]?"
+    "...Or more like Sayori?"
+    mc "You don't have to blame her for everything."
+    mc "I was a part of this too so--"
+    show mysteriousclerk zorder 3 at f21
+    cl "You're kidding, right?"
+    cl "You were just taken along for the ride. Don't try to redirect the blame here."
+    "He sighs and turns toward Sayori."
+    cl "But fine, whatever. Let's just get on with it."
+    cl "Luckily, Ayame didn't happen to find anything useful."
+    "Ayame can move in Sayori's stopped time...?"
+    cl "She ended up giving up on trying to do anything and seemed to just wait it out."
+    show mysteriousclerk zorder 2 at t21
+    show sayori zorder 3 at f22
+    s "That's good news."
+    show mysteriousclerk zorder 3 at f21
+    show sayori zorder 2 at t22
+    cl "I'm afraid that's where the good news ends."
+    cl "Because we're going to need [player] to do something for us."
+    cl "Now normally that wouldn't be bad news. I don't know if we can really rely on [player_reflexive] to do it right but that's not the problem."
+    show mysteriousclerk zorder 2 at t21
+    show sayori zorder 3 at f22
+    s "Then what is?"
+    show mysteriousclerk zorder 3 at f21
+    show sayori zorder 2 at t22
+    cl "You're going to need to wipe [player_possessive] for what we need [player_reflexive] to do."
+    cl "Which, I know, you don't like doing."
+    cl "But we need to mitigate the risk that she finds out."
+    show mysteriousclerk zorder 2 at t21
+    show sayori zorder 3 at f22
+    s "What? Why would I need to do that?"
+    s "[cPlayer_personal]'s not going to tell her anything, I know it!"
+    s "There's no way I'm going to do that..."
+    s "Now after what just happened."
+    show sayori zorder 2 at t22
+    "[cl_name] puts his hand on his face, as if to facepalm."
+    "Is there something obvious that we're missing?"
+    "Of course I wouldn't tell anyone."
+    "I know this plan means a lot to Sayori and I'd give anything to make it work."
+    "I just don't understand why my memories need to be wiped."
+    show mysteriousclerk zorder 3 at f21
+    cl "It's really not that obvious to you?"
+    cl "Think about it, I mean literally."
+    cl "Do you get it? She can read your mind."
+    cl "Much like you can do to the rest of us."
+    cl "If she found out anything about the plan, then it's all over."
+    cl "All of this would have been for nothing."
+    show mysteriousclerk zorder 2 at t21
+    mc "If it's Ayame, then wouldn't she already know about our plan?"
+    mc "I spoke to her yesterday, what could have stopped her from reading my mind then?"
+    show mysteriousclerk zorder 3 at f21
+    cl "Nothing. She could already know about it and is planning accordingly."
+    cl "But I don't think she does, judging by her behavior."
+    cl "And if she does know, then what she could know is next to nothing except that there {i}is{/i} a plan."
+    cl "You ever wonder why we've been keeping you in the dark?"
+    cl "It's for situations like that."
+    show mysteriousclerk zorder 2 at t21
+    mc "You thought that far ahead, did you?"
+    mc "Well, then why do my memories have to be wiped?"
+    show mysteriousclerk zorder 3 at f21
+    cl "I mentioned earlier that she was moving around, right?"
+    cl "Moving around during this frozen period of time that your dear friend here created."
+    cl "Now if you were in her shoes, you would be a little suspicious."
+    cl "Maybe a bit paranoid of literally everyone."
+    cl "So if you had the power to read minds, maybe someone would know something."
+    cl "You would check everyone's thoughts, to see if they knew absolutely anything."
+    cl "Chances are, they wouldn't have any recollection of being frozen in place."
+    cl "But you..."
+    cl "Well, put the pieces together."
+    cl "She's going to scan your mind and what is she going to find out?"
+    cl "That Sayori is involved with all of this."
+    cl "Perhaps she already knows, from your encounter yesterday."
+    cl "But if she knew the extent of what Sayori could do..."
+    cl "This whole plan could be ruined."
+    show mysteriousclerk zorder 2 at t21
+    show sayori zorder 3 at f22
+    s "You make a good point...but you know I can't do this."
+    s "Not again...it hurts me everytime I do."
+    show mysteriousclerk zorder 3 at f21
+    show sayori zorder 2 at t22
+    cl "You look fine to me."
+    show mysteriousclerk zorder 2 at t21
+    show sayori zorder 3 at f22
+    s "You know that's not what I meant."
+    s "It just scars me emotionally everytime I have to do it..."
+    s "It's like I'm tearing a part of [player] away every time and..."
+    show sayori zorder 2 at t22
+    mc "Sayori, do it."
+    show sayori zorder 3 at f22
+    s "H-Huh?"
+    show sayori zorder 2 at t22
+    mc "Take away my memories for the plan."
+    mc "I mean, you can always put them back, right?"
+    mc "If it means that this plan will work, then I'm willing to part with my memories."
+    show sayori zorder 3 at f22
+    s "[player], you don't know what you're saying."
+    s "Those memories are a part of who you are."
+    s "And worst of all, you'd be losing all the time we just spent together."
+    s "Doesn't that mean anything to you?"
+    show sayori zorder 2 at t22
+    mc "You know as well as I do that that time wasn't for me."
+    mc "Like [cl_name] said, I was just along for the ride."
+    mc "That's not to say I didn't enjoy it..."
+    mc "Because I did."
+    show sayori zorder 3 at f22
+    s "Then why...?"
+    show sayori zorder 2 at t22
+    mc "Because I care about you."
+    mc "If I have to lose a few memories to ensure you get what you want..."
+    mc "Then I'll do it with no regrets."
+    mc "Just...get on with it. I'm ready for the headache that's probably going to follow."
+    show sayori zorder 3 at f22
+    s "[player]...I..."
+    show mysteriousclerk zorder 3 at f21
+    show sayori zorder 2 at t22
+    cl "Whoa, hold your horses kiddos."
+    cl "You shouldn't be so eager to rush into things."
+    cl "I haven't finished explaining why it needs to happen and what needs to happen before that."
+    "That kinda ruined the moment, but I suppose he's right."
+    "There must be something more to it than simply losing my memories."
+    cl "Firstly, [player] is going to need to talk to Ayame after lunch."
+    cl "They both have a period of free time then."
+    cl "This is why it's risky for you to have your memories, since you'll be in direct contact with her."
+    cl "But you're not just going to talk to her, you're going to say four specific things."
+    cl "If Sayori wants to explain...after all she is in charge of this whole operation."
+    show mysteriousclerk zorder 2 at t21
+    show sayori zorder 3 at f22
+    s "Right..."
+    s "Those four things are going to be disguised as something else."
+    s "But the point is you need to say them in a specific order for this to work."
+    show sayori zorder 2 at t22
+    mc "Okay...I'm not sure why but I guess I can do that."
+    mc "If you're going to wipe my memory, then how am I going to remember what to say?"
+    show sayori zorder 3 at f22
+    s "That's where {i}you{/i} come in."
+    s "Since it's not your memory being wiped, you'll still remember this conversation."
+    s "We need you to make sure [player] says the right thing at the right moment."
+    s "If all goes according to plan, then we should be able to weaken Ayame enough."
+    show sayori zorder 2 at t22
+    mc "Weaken her? What is it about her that even someone with your abilities needs to weaken her?"
+    mc "You pretty much have power over this world, don't you?"
+    show sayori zorder 3 at f22
+    s "It's complicated and we don't have the time to explain it right now."
+    s "I'm sure you can find out another way...somehow."
+    show sayori zorder 2 at t22
+    mc "Okay, so what am I supposed to say?"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
@@ -12473,7 +12747,7 @@ label ch16_sayoridate_life:
             s "But of course, it didn't work."
             s 1bf "She completely removed herself from the world."
             s "There was no trace of her remaining..."
-            s 1nh "Which is why I needed you to bring her back yourself."
+            s 1bh "Which is why I needed you to bring her back yourself."
             s "I couldn't simply recreate a whole character like that."
             s 1bd "But you...if you loved Monika even a fraction of how much she loved you..."
             s "Then you would have her saved, right?"
