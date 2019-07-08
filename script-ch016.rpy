@@ -12350,6 +12350,7 @@ label ch16_sayoridate:
     show sayori 1a zorder 2 at t11
     with open_eyes
     play music t2
+    $ get_achievement("*Childhood Sweetheart*")
     "As I open my eyes, it seems as if we're in the rehearsal room."
     "Judging by the sounds I can hear coming from outside, it sounds like time has begun moving again."
     "It seems like it's still the lunch break too."
@@ -12535,6 +12536,164 @@ label ch16_sayoridate:
     s "I'm sure you can find out another way...somehow."
     show sayori zorder 2 at t22
     mc "Okay, so what am I supposed to say?"
+    mc "Or rather, what is this other person supposed to make me say?"
+    show sayori zorder 3 at f22
+    s "This won't make sense to you, so just try to look like you kinda understand it."
+    s "I'm going to give you the chance to say something to her."
+    s "From what I understand of when I looked into possible outcomes, it's going to be a bunch of questions."
+    show sayori zorder 2 at t22
+    mc "I have to ask her questions...?"
+    mc "How exactly is that going to help us?"
+    mc "It's not like she's just going to tell us her plan, is she?"
+    show mysteriousclerk zorder 3 at f21
+    cl "Well, no. That's not the point of asking her."
+    cl "The point of those questions is that there's a hidden trigger behind each one."
+    cl "Asking those questions during that timed will prompt that trigger to occur."
+    cl "It's weird how it works, but you don't really need to get into it."
+    cl "All you need to know is that it works, okay?"
+    show mysteriousclerk zorder 2 at t21
+    show sayori zorder 3 at f22
+    s "The thing is, you need to ask them in a specific order."
+    s "And it {i}has{/i} to be in that order, otherwise it won't work."
+    s "If you mess it up a little then it could mean the difference between tomorrow happening or not."
+    show sayori zorder 2 at t22
+    mc "There's really that much at stake here?"
+    "And all this responsibility is being placed on me."
+    "That's not entirely true, it's actually up to you, isn't it?"
+    "I'm just here to make sure you do your job..."
+    "I don't like knowing that the fate of the world is out of my hands and in someone elses..."
+    "Especially someone I know very little about."
+    "But if Sayori trusts you to do this, then I suppose I should too."
+    "It's not like I'm going to remember this conversation until later anyway."
+    "So I just want you to know..."
+    "...that I hope you do the right thing."
+    mc "I suppose there's really nothing to worry about."
+    mc "You trust this person with all your heart, don't you?"
+    "Sayori nods her head."
+    show sayori zorder 3 at f22
+    s "Of course I do. With my life."
+    s "I--"
+    s "{i}We{/i} wouldn't have made it this far without you."
+    s "So it's only right that you've earned that level of trust."
+    s "Unless you know something that we don't, [player]?"
+    show sayori zorder 2 at t22
+    mc "Not exactly--"
+    show mysteriousclerk zorder 3 at f21
+    cl "Ehm, the time?"
+    "[cl_name] points towards the clock in the room."
+    "It only felt like we were here a few minutes but already quite a lot of time has passed."
+    cl "Just explain what has to be done before it's too late."
+    cl "You can have this conversation later."
+    cl "Just give the orders so we can get this over with."
+    show mysteriousclerk zorder 2 at t21
+    show sayori zorder 3 at f22
+    s "Alright, fine. Just let me get this all straight."
+    "Sayori starts paces around the room slowly."
+    s "I don't want there to be any confusion, so just bear with me."
+    "After a few moments, she stops and looks directly into my eyes."
+    s "So there's going to be four questions like I said."
+    s "You're not going to have trouble remembering what those four questions are."
+    s "All you have to worry about is the order you ask them in."
+    s "After all, it's going to be implanted into your head what they are."
+    s "First, you have to ask her if she has any hobbies."
+    s "Then, you have to ask her what other clubs she thought about before choosing the literature club."
+    s "After that, you have to ask her about her favorite color."
+    s "Finally, ask about how she became a school leader."
+    show sayori zorder 2 at t22
+    mc "That's it?"
+    show sayori zorder 3 at f22
+    s "Yep! That's it. It's not that hard at all, right?"
+    s "So it should be easy enough to do right."
+    s "Did you have something to say [player]?"
+    show sayori zorder 2 at t22
+    mc "Not really, I just don't get why I have to ask those questions."
+    mc "Those questions don't seem to have any relation to each other."
+    mc "Nor do they really make any sense as to--"
+    show mysteriousclerk zorder 3 at f21
+    cl "Were you not listening?"
+    cl "I told you before that each question had a trigger."
+    cl "Doing the triggers in the wrong order will cause next to nothing to happen."
+    cl "But doing them in the right order..."
+    cl "Well..."
+    show mysteriousclerk zorder 2 at t21
+    "[cl_name]'s voice trails off."
+    "It's almost like he doesn't want to finish what he was saying, judging by the tone of his voice."
+    "Is he hiding something...? Or does he have some ulterior motive?"
+    "What am I thinking? Of course he doesn't."
+    "Sayori trusts this person and so should I."
+    show sayori zorder 3 at f22
+    s "Basically, activating all the triggers as he said will cause her to become vulnerable."
+    s "It's really hard to explain why, but that's just how it works."
+    s "If you really want to know, I can explain {i}after{/i} all of this is over."
+    s "But for now, that's all you need to know."
+    show sayori zorder 2 at t22
+    mc "So all that needs to happen is those four questions asked in that order?"
+    mc "That seems simple enough. Go ahead and wipe my memory."
+    mc "Even if I won't remember, it seems simple enough that they can remember, right?"
+    mc "Hobby, clubs, color, leader."
+    "Remember it's hobby, clubs, color, leader."
+    mc "You can count on us."
+    show mysteriousclerk zorder 3 at f21
+    show sayori zorder 2 at t22
+    cl "Whoa there, why so eager to get your memory wiped?"
+    cl "You don't know how painful it's going to be, especially now that you know it's going to happen."
+    cl "Before, you didn't expect it and so it wasn't as bad."
+    cl "But when you anticipate it and know it's coming but can't do anything about it..."
+    cl "It's a lot worse."
+    cl "Think about it like you're about to get hit by a truck."
+    cl "But you can't move out of the way."
+    cl "That's close to the amount of pain you'll feel, [player]."
+    show mysteriousclerk zorder 2 at t21
+    show sayori zorder 3 at f22
+    s "W-What? How do you know?"
+    show mysteriousclerk zorder 3 at f21
+    show sayori zorder 2 at t22
+    cl "You honestly think you're the only one who has done this kinda thing?"
+    cl "There are some dangerous people out in the world, girl."
+    cl "People I'd rather not know my circumstances, or if I even exist."
+    cl "Of course, my powers aren't nearly as versatile as yours."
+    cl "But you know, I do have my domain where I can do my thing."
+    show mysteriousclerk zorder 2 at t21
+    show sayori zorder 3 at f22
+    s "Anyway, what can I do to make it less painful?"
+    s "There must be something, right?"
+    show sayori zorder 2 at t22
+    mc "You don't have to do that for me, Sayori."
+    mc "I'm sure I'll get over it..."
+    "Eventually...right?"
+    show mysteriousclerk zorder 3 at f21
+    show sayori zorder 2 at t22
+    cl "There is {i}something{/i} we can do."
+    cl "But I'll need to speak to [player] privately for it to work."
+    show mysteriousclerk zorder 2 at t21
+    show sayori zorder 3 at f22
+    s "What exactly did you have in mind?"
+    show mysteriousclerk zorder 3 at f21
+    show sayori zorder 2 at t22
+    cl "In about a few minutes, you're going to wipe [player_possessive] memory."
+    cl "Don't do it at a set time, just randomly."
+    cl "I'll speak to [player_reflexive] in the corridor while you do that."
+    cl "By doing this, we're distracting [player_reflexive] from the thought of having [player_possessive] memory wiped."
+    cl "We can nullify some of the pain [player_personal]'s going to feel."
+    cl "Of course, it won't be fully negated but it's good enough."
+    cl "At least, to make the pain be a bit more bearable."
+    show mysteriousclerk zorder 2 at t21
+    show sayori zorder 3 at f22
+    s "Okay, do what you have to do then."
+    s "I'll be in here and wait until the time is right."
+    show mysteriousclerk zorder 3 at f21
+    show sayori zorder 2 at t22
+    cl "Good, good. Don't take too long."
+    cl "Time is of the essence, after all."
+    cl "Heh, I've always wanted to say that. Anyway..."
+    "[cl_name] points towards me."
+    cl "You, with me. We're going to have a little chat."
+    show mysteriousclerk zorder 2 at t21
+    mc "I really don't mind dealing with the pain."
+    mc "But if you insist..."
+    show mysteriousclerk zorder 3 at f21
+    cl "Nonsense, if that was the case you'd be complaining about a headache or something the whole time to Ayame."
+    cl "So come on! Chop, chop!"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
