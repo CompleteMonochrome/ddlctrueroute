@@ -9898,12 +9898,80 @@ label ch16_end:
         show mysteriousclerk zorder 2 at t21
         mc "I still don't get it."
         show mysteriousclerk zorder 3 at f21
-        cl "If you'd let me finish, I could finish my explanation."
+        cl "If you'd let me speak, I could finish my explanation."
         cl "There needs to be a strong connection between that room and the one we're in."
-        cl "So I had to change this room to look as much your original club as possible."
+        cl "So I had to change this room to look as much your original club as possible for Sayori's sake."
+        cl "That's so she can use my as a sort of link to the other room."
         cl "The room that Ayame and the others are in look like {i}my{/i} original club."
         cl "So there's a strong resonance between the two rooms right now because--"
-
+        cl "Well, let's just say that the connection between Ayame and I, it's strong."
+        cl "And through that connection I have with her, the two rooms are connected."
+        cl "A small part of her may remember that old club room but it should be insignificant enough for her to ignore."
+        cl "Look, it's really hard to explain, okay?"
+        cl "I'm no expert on the matter. To be frank, all of this is theory."
+        cl "I haven't done anything like this but according to Sayori, it {i}should{/i} work."
+        show mysteriousclerk zorder 2 at t21
+        "Well, that's reassuring."
+        mc "So there's a connection but how is that going to help at all?"
+        mc "What exactly should happen?"
+        show sayori zorder 3 at f22
+        s "That's where I come in."
+        s "Using the connection between [cl_name] and Ayame, I can bypass this sort of barrier she's put up."
+        s "I don't know if she did it subconsciously, but I can't get through to her like I can everyone else."
+        s "When I do get through to her, I'll be able to try and get through that barrier."
+        show sayori zorder 2 at t22
+        mc "A barrier? What do you mean?"
+        show sayori zorder 3 at f22
+        s "Every time I tried to get into her head, I just couldn't."
+        s "It was like I was being blocked by something...or someone."
+        s "I kinda knew it wouldn't be that easy so that's why we did the questions."
+        s "Each question slowly weakened that barrier, hopefully enough for me to get through."
+        show sayori zorder 2 at t22
+        mc "And what exactly is it you're going to be doing to her?"
+        mc "Once you're inside her head, what's going to happen?"
+        mc "Are you going to change her memories or something?"
+        show sayori zorder 3 at f22
+        s "No...I just want to make things easier."
+        "Sayori seems hesitant for some reason."
+        "I suppose I would be too, given what she has to do."
+        "I wonder just how many times she's done that to the rest of us without us even knowing..."
+        s "I don't want to change who she is, it's just that--"
+        show mysteriousclerk zorder 3 at f21
+        show sayori zorder 2 at t22
+        cl "You and I both knew that it would come to this."
+        cl "After reaching this far, are you really that afraid to go ahead with the plan?"
+        cl "You've done this sort of thing before, so it's now or never."
+        cl "I won't be able to maintain this connection forever."
+        cl "Who knows when she's going to leave the room?"
+        show mysteriousclerk zorder 2 at t21
+        mc "Sayori, I don't know if what you're doing is right or wrong."
+        mc "It sounds to me like you're hesitating because you think it's wrong."
+        mc "That just shows you've grown as a person because you don't want to do the wrong thing."
+        mc "Or maybe it's because you think you can't do it--"
+        show sayori zorder 3 at f22
+        s "I can do it! I know I can..."
+        s "I'm just doubting if the ends justify the means."
+        s "If there was some other way I could stop this danger that's coming..."
+        show mysteriousclerk zorder 3 at f21
+        show sayori zorder 2 at t22
+        cl "We don't have that much longer."
+        "[cl_name] looks like he's under some sort of strain."
+        "Is it really that difficult to keep this connection up?"
+        cl "So if you could hurry it up, that would be ideal."
+        cl "Otherwise it would have all been a waste and we're all doomed."
+        cl "But you know, not to state the obvious or anything."
+        show mysteriousclerk zorder 2 at t21
+        mc "I don't know if the ends justify the means either."
+        mc "But you know that you're doing this for us."
+        mc "So if you have to do this, regardless of whether it's right or wrong, I'm with you."
+        mc "{i}We're{/i} with you, every step of the way."
+        "Sayori looks at me with a curious look on her face."
+        "She mouths something I can't quite figure out and grabs my hand."
+        "She holds it tight, as if her life was depending on it."
+        show sayori zorder 3 at f22
+        s "Thank you, [player]."
+        s "I know what I need to do."
+        s "[cl_name], are you ready?"
     else:
         s "Just read ahead or something with the script."
         s "It might not be a good idea to actually practice though."
@@ -12694,8 +12762,85 @@ label ch16_sayoridate:
     show mysteriousclerk zorder 3 at f21
     cl "Nonsense, if that was the case you'd be complaining about a headache or something the whole time to Ayame."
     cl "So come on! Chop, chop!"
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
-    $ renpy.utter_restart()
+    show mysteriousclerk zorder 2 at t21
+    show sayori zorder 3 at f22
+    s "Go ahead and do what he says, [player]."
+    s "Everything is going to be okay, I promise."
+    scene bg school_hallway
+    show mysteriousclerk 1a zorder 2 at t11
+    with wipeleft_scene
+    "[cl_name] and I head out into the corridor."
+    "He immediately closed the door behind him and looked back into the room."
+    "Sayori looks like she's just lost in her own thoughts."
+    mc "What now then? How exactly are you going to try to take it off my mind?"
+    mc "I can't exactly {i}not{/i} think about it."
+    mc "No matter what you say, it's--"
+    cl "Shut up and listen."
+    "Okay, that's not what I expected."
+    cl "Did you really believe all that nonsense I said in there?"
+    cl "There's no way that anything is going to reduce the pain you're going to feel."
+    cl "The good news is that it won't feel like a truck will hit you."
+    mc "Wait, you lied to her? But why?"
+    cl "Because I need to tell {i}you{/i} something."
+    cl "The one making all the decisions for you."
+    "I wonder what this is all about..."
+    "If it's a message directed towards you, then why isn't Sayori around to hear it?"
+    "Unless...he's trying to keep it from Sayori for some reason."
+    "But why would he do that?"
+    cl "I have your attention, right?"
+    cl "It sure would be convenient if I could do one of those menus right now."
+    cl "But oh well, I'll just assume you actually are listening."
+    cl "If not, then I guess I'll have to rely on blind luck or your stupidity or something."
+    cl "In the case that you {i}are{/i} listening and aren't just skipping through it all, heed my words."
+    cl "She doesn't deserve the fate that Sayori has in mind."
+    cl "Sayori would erase almost all of what made Ayame...well, Ayame."
+    cl "You're probably wondering what I mean by that."
+    cl "There's no time to go into detail but think of Ayame as two different people."
+    cl "There's her original self and her current self."
+    cl "Both are fighting for control of her body, stuck in a somewhat one sided struggle."
+    cl "As of right now, Ayame's current self has a firm grasp on this reality."
+    cl "But I'm getting carried way, the point I'm trying to make is that doing what Sayori says to do will destroy her."
+    cl "Not her current self, but her original self."
+    cl "The one that's currently losing in that little power struggle they're having."
+    mc "Why aren't you telling Sayori this?"
+    cl "I wouldn't answer that question normally but I assume you want to know as well."
+    cl "So I'll enlighten you."
+    cl "I'm honestly frightened of what she'll do if she knew."
+    cl "She thinks Ayame is only a single person, hellbent on destroying this world."
+    cl "But that's not true at all!"
+    cl "Even if I could reason with her, she wouldn't want to risk something like this."
+    cl "That's why I'm going straight to you, the one who can actually do something."
+    mc "I don't think this is a good idea at all..."
+    mc "Especially since you're being so secretive about it."
+    cl "That's not exactly up to either of us to say, is it?"
+    cl "After all, we're both stuck with whatever decision is made."
+    "I don't like the sound of this, but in the end it's up to you."
+    "All I'm saying is to be careful about what he says."
+    cl "I understand if you don't trust me."
+    cl "I haven't really given you any reason to."
+    cl "I'm just asking that you only partially activate the triggers, if you do at all."
+    cl "Activate one or two of them if you must, but don't activate all of them."
+    cl "Destroying one's life to achieve a goal shouldn't be necessary."
+    cl "But activating only two of the triggers...well..."
+    cl "Maybe we can all get what we want out of this."
+    mc "There's no guarantee Sayori can pull it off if all the triggers aren't activated, is there?"
+    mc "Which means her job will be harder, or even impossible."
+    cl "..."
+    "[cl_name] turns away from me and approaches the window."
+    "He stares into the distance and sighs."
+    cl "No, there is not."
+    cl "And yet...I still ask you to do this."
+    cl "I want to preserve that original version of Ayame...the one that I..."
+    cl "Look, you may not understand my reasons but I'm asking you regardless."
+    cl "If you decide not to do it, fine."
+    cl "But heed me now, all{nw}"
+    $ currentpos = get_pos()
+    scene black
+    window hide(None)
+    stop music
+    $ pause(3.0)
+    window show(None)
+    window auto
     return
 
 label ch16_sayoridate_life:
