@@ -9972,6 +9972,153 @@ label ch16_end:
         s "Thank you, [player]."
         s "I know what I need to do."
         s "[cl_name], are you ready?"
+        show mysteriousclerk zorder 3 at f21
+        show sayori zorder 2 at t22
+        cl "Is that some kind of sick joke?"
+        cl "It literally feels like I'm dying here."
+        cl "So if you could {i}please{/i} get it over with already, that would be much appreciated."
+        show mysteriousclerk zorder 2 at t21
+        "Sayori takes a deep breath and looks at me."
+        show sayori zorder 3 at f21
+        s "Get ready, [player]."
+        show sayori zorder 2 at t21
+        mc "For what--"
+        show sayori at thide
+        hide sayori
+        "Sayori suddenly loses her balance and falls towards the floor."
+        "Luckily for her, I managed to react quick enough to catch her before she fell."
+        "I can only assume she's doing what she has to do."
+        "I don't know why exactly she just collapsed all of a sudden."
+        "Maybe it requires her undivided attention, such that it requires an out of body experience."
+        "Not unlike what happened to me yesterday..."
+        "That's just a guess though, I don't actually know what's happening."
+        cl "Ahaha, this is the most ridiculous thing we've tried so far."
+        cl "Now she better hope she can do enough damage."
+        "I set Sayori down in a comfortable position and look at [cl_name]."
+        "There's even more strain on his face right now, as if he's really struggling."
+        "Just what is he going through right now?"
+        mc "Is everything okay?"
+        cl "What does it look like to you?"
+        cl "Your friend over there is collapsed on the floor and I'm trying my hardest to keep this link."
+        cl "I'm sure Ayame must have noticed something by now."
+        mc "Do you think she knows something is going on?"
+        "[cl_name] hits one of the tables with his fists."
+        cl "Argh! She's really trying hard to resist this connection, isn't she?"
+        cl "Sorry, it's kinda tough doing this...think of it like having your memory wiped constantly."
+        cl "Well, that's how it feels like in terms of pain factor anyway."
+        cl "But to answer your question, probably."
+        cl "Ayame will have noticed a slight jolt or nudge heading towards her by now."
+        cl "I don't think she'll mention it at all because it's so minor."
+        cl "However, her subconscious could react negatively towards it so who knows what could happen?"
+        mc "What's Sayori doing then? I don't know why that happened to her but I can take a guess."
+        cl "She needs her complete self to be able to penetrate the barrier Ayame has up."
+        cl "They're essentially equal in power, so if she even relents a little..."
+        cl "Well, it could end badly for us."
+        mc "So she ended up going for it then?"
+        cl "It sure seems that way, doesn't it?"
+        cl "I hope this doesn't last too long, I don't know how long I can keep this up."
+        cl "She better--"
+        "[cl_name] grabs his head and groans in pain."
+        cl "Look, can you do me a favor?"
+        cl "I need you to go back to the clubroom and distract her."
+        cl "K-Keep her mind off this connection I'm trying to maintain."
+        cl "It should not only make it easier on me, but on Sayori too."
+        mc "What should I do?"
+        cl "What? How should I know?"
+        cl "Just distract her somehow, I can't exactly do it myself."
+        cl "You're the only one of us capable of doing this right now."
+        cl "So you can either stand there and be useless or actually do something to help out."
+        mc "Okay, I get it. I'll do what I can."
+        "I look at the time, just to see how long we've been gone for."
+        "It feels like we've been gone for a while but it says we've only been gone less than a few minutes..."
+        "Is this somehow Sayori's doing too...?"
+        cl "Oh, and one more thing."
+        if ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2] and ch16_ay_message[3]:
+            cl "Know that you are responsible for her death."
+            cl "The being that I wanted to preserve within Ayame...she's gone."
+            cl "Or...she will be, once Sayori is done."
+            cl "I hope you're happy with yourself."
+        elif ch16_ay_message[0] and ch16_ay_message[1]:
+            cl "I'm not sure if what you did was intentional."
+            cl "Frankly, I don't really care."
+            cl "I'm just glad that you did it."
+            cl "So I suppose a word of thanks is appropriate here."
+            cl "Ehm...my thanks."
+        else:
+            cl "I'm not sure if you know how to read properly..."
+            cl "But I don't think Sayori can do much with what you've done."
+            cl "And what you've done is quite literally nothing."
+            cl "Whatever, I just hope you actually know what you're doing."
+        cl "Now get out of here."
+        scene bg portraitshop_school
+        with wipeleft_scene
+        "I run my way back to the other room."
+        "Despite what the clock said, I still think time isn't on my side."
+        "For all I know, that clock could have just been broken."
+        "As I enter the room, I see everyone just standing around Ayame."
+        "This can't be good..."
+        "Monika notices me enter the room and walks up towards me."
+        show monika 1a zorder 2 at t11
+        m "Glad you made it back in one piece, [player]."
+        "Monika looks behind me and peers into the corridor, checking both directions."
+        m "And Sayori is...?"
+        mc "On her way, she's just a little delayed."
+        mc "What's happening with Ayame?"
+        m "Oh, we're not sure actually. She just screamed for a second."
+        m "That's what we're trying to figure out still."
+        ay "I'm fine! I promise, I am."
+        show ayame 1a zorder 3 at f33
+        ay "You don't have to worry, it was just a brief moment of pause."
+        ay "Just get back to your rehearsals already and stop worrying about me."
+        show monika zorder 3 at f32
+        show ayame zorder 2 at t33
+        m "That would be a good idea, except Sayori isn't here yet."
+        show natsuki 1a zorder 3 at f31
+        show monika zorder 2 at t32
+        n "You've got to be kidding! Look at the time, we've only got--"
+        "Natsuki points at the clock but slowly retracts her arm once she realizes what's happened."
+        "Well, more like what didn't happen."
+        "It turns out the clock wasn't lying when it said how much time {i}hadn't{/i} passed."
+        "There's no other explanation other than Sayori messing with time."
+        n "N-Never mind."
+        show yuri 1a zorder 3 at f41
+        show natsuki zorder 2 at t42
+        show monika zorder 2 at t43
+        show ayame zorder 2 at t44
+        y "It's irresponsible for her to be missing like this."
+        y "She should be here to rehearse with us but instead she's missing..."
+        show yuri zorder 2 at t41
+        show ayame zorder 3 at f44
+        ay "I'm sure she has her reasons, Yuri."
+        ay "Sayori doesn't seem like the kind of person who would just be missing for no reason."
+        ay "Whatever that reason may be, I'm sure it's probably for your benefit."
+        ay "Now, as for you..."
+        "Ayame slowly walks up to me and inspects me up and down."
+        ay "You've got this weird aura around you, [player]."
+        ay "Have you noticed that?"
+        show ayame zorder 2 at t44
+        mc "Weird aura?"
+        "Is she talking about you...?"
+        mc "No, I don't really know what you're talking about."
+        show ayame zorder 3 at f44
+        ay "Really? It's like you've got this other person around you."
+        ay "Watching your every movement, perhaps even influencing your decisions."
+        ay "But who knows, I could just be making this up."
+        ay "Anyway, since Sayori isn't here, perhaps we can continue on for a little while longer?"
+        ay "I'm quite enjoying this."
+        show monika zorder 3 at f43
+        show ayame zorder 2 at t44
+        m "We might as well make use of the time."
+        m "[player], care to join as your character from where we left off?"
+        m "We decided to rehearse a bit without the two of you."
+        m "We actually got pretty far into it."
+        show yuri zorder 3 at f41
+        show monika zorder 2 at t43
+        y "We all played our parts and Ayame just filled in if it was yours or Sayori's part."
+        y "I'd say it was quite productive until Ayame screamed..."
+        show yuri zorder 2 at t41
+        "Speaking of parts, I have to distract Ayame somehow."
+        "How the hell am I going to do that?"
     else:
         s "Just read ahead or something with the script."
         s "It might not be a good idea to actually practice though."
@@ -10260,7 +10407,45 @@ label ch16_end:
         show natsuki zorder 2 at t43
         show sayori zorder 2 at t44
         "Ayame takes a seat and starts looking at us eagerly."
-
+        "She gives a sort of hand signal as if she was directing us."
+        show sayori zorder 3 at f44
+        s "Right, let's finish these rehearsals!"
+        s "I don't know about you guys but I am really feeling it now."
+        s "I did the best I could but in the end it just wasn't enough I guess."
+        s "Oh well, there's always the back up."
+        show yuri zorder 3 at f41
+        show sayori zorder 2 at t44
+        y "W-What exactly are you talking about?"
+        y "Back up? What did you get up to out there?"
+        show yuri zorder 2 at t41
+        show sayori zorder 3 at f44
+        s "I just mean the back up plan for our play."
+        s "I tried talking to someone about how we can make it easier for ourselves, but..."
+        s "Let's just say that didn't go as I planned."
+        s "You don't need to worry though!"
+        s "I'm going to try my hardest to make sure that everything goes according to plan."
+        show natsuki zorder 3 at f43
+        show sayori zorder 2 at t44
+        n "But didn't you just say you had to do a back up plan?"
+        n "That makes no sense..."
+        show monika zorder 3 at f42
+        show natsuki zorder 2 at t43
+        m "I think we should just get on with it."
+        m "Now that we're all here again, we can finally make some progress as a group."
+        m "Unless you'd all prefer to keep arguing about what Sayori was up to."
+        m "But frankly, it's not really our problem right now."
+        show monika zorder 2 at t42
+        "Everyone seems to silently agree with Monika."
+        "I do wonder where Sayori went but it's not the pressing matter right now."
+        show sayori zorder 3 at f44
+        s "Okay, thank you for that."
+        s "With the amount of time we do have left, we can easily get a run through done."
+        s "So...let's get to it!"
+        "Sayori takes her copy of the script out and briefly looks through it."
+        s "We can start from where you all left off."
+        s "I think it's your line now, right [player]?"
+        show sayori zorder 2 at t44
+        mc "Oh, right..."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
