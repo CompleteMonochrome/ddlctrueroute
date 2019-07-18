@@ -4920,6 +4920,7 @@ default ch16_ay_message = [False,False,False,False]
 default ch16_ay_questions = False
 default ch16_ay_asked = [False,False,False,False]
 default ch16_ay_question_number = 0
+default ch16_ay_decision_count = 0
 default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","Inauguration Day","???","???","???","???"]
 default special_chapter = False
 default christmas_chapter = False

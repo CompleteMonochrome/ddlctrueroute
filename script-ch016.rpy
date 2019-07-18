@@ -10034,17 +10034,20 @@ label ch16_end:
         "Is this somehow Sayori's doing too...?"
         cl "Oh, and one more thing."
         if ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2] and ch16_ay_message[3]:
+            $ ch16_ay_decision_count = 4
             cl "Know that you are responsible for her death."
             cl "The being that I wanted to preserve within Ayame...she's gone."
             cl "Or...she will be, once Sayori is done."
             cl "I hope you're happy with yourself."
         elif ch16_ay_message[0] and ch16_ay_message[1]:
+            $ ch16_ay_decision_count = 2
             cl "I'm not sure if what you did was intentional."
             cl "Frankly, I don't really care."
             cl "I'm just glad that you did it."
             cl "So I suppose a word of thanks is appropriate here."
             cl "Ehm...my thanks."
         else:
+            $ ch16_ay_decision_count = 1
             cl "I'm not sure if you know how to read properly..."
             cl "But I don't think Sayori can do much with what you've done."
             cl "And what you've done is quite literally nothing."
@@ -10171,7 +10174,432 @@ label ch16_end:
         "And I don't know why, but I feel like Monika is going to get involved whether I like it or not."
         "I guess I don't really have a choice, do I?"
         mc "I need to distract Ayame, to keep her mind off something."
-        mc "I can't really get more specific than that."
+        mc "I can't really get more specific than that because--"
+        show monika zorder 3 at f43
+        m "I totally get it."
+        m "You can leave it to me, [player]."
+        show monika zorder 2 at t43
+        mc "What are you thinking of doing?"
+        show monika zorder 3 at f43
+        m "All you need is a distraction, right?"
+        m "Just to keep her mind off of things for a little bit."
+        m "Just follow my lead and we'll be fine."
+        "This can only end badly but it's too late to change my mind now."
+        m "Okay, everyone! I'd like to say something before we continue."
+        m "This'll only take a minute, so don't worry."
+        show natsuki zorder 3 at f42
+        show monika zorder 2 at t43
+        n "Is this really that important?"
+        n "We've only got so much time left and you want to get everyone's attention elsewhere."
+        show natsuki zorder 2 at t42
+        show monika zorder 3 at f43
+        m "I think you'll find that what I have to say is rather important."
+        m "Anyway, as I was saying..."
+        play music t7
+        m "I only just remembered but it's actually Ayame's birthday!"
+        "Wait...what?"
+        m "It would be rude to accept those gifts without giving another back, right?"
+        "Monika looks at me and gives me a nudge."
+        "This must be how she's going to distract her."
+        "I didn't think she would involve everyone though..."
+        m "So I thought we could do something special for her."
+        show monika zorder 2 at t43
+        show ayame zorder 3 at f44
+        ay "What?! It's my birthday?"
+        ay "I could have sworn--"
+        show ayame zorder 2 at t44
+        mc "I can't believe you didn't tell us, Ayame."
+        mc "We had to find out for ourselves and when we did..."
+        show monika zorder 3 at f43
+        m "We just knew we had to do something for you."
+        show yuri zorder 3 at f41
+        show monika zorder 2 at t43
+        y "Why didn't you tell us anything, Ayame?"
+        y "We could have gotten you something..."
+        show yuri zorder 2 at t41
+        show natsuki zorder 3 at f42
+        n "Okay, this is a big deal."
+        n "You can't just tell us something like that, Ayame!"
+        show natsuki zorder 2 at t42
+        show ayame zorder 3 at f44
+        ay "But wait a second, it's not--"
+        show yuri zorder 2 at t41
+        show ayame zorder 2 at t44
+        y "Maybe she was just shy about it all."
+        y "After all, she has just joined. I know there are some things I'd keep quiet."
+        show yuri zorder 2 at t41
+        show monika zorder 3 at f43
+        m "Some people are just like that."
+        m "I apologize if I've overstepped on your privacy, Ayame."
+        m "I hope you don't mind though..."
+        show monika zorder 2 at t43
+        show ayame zorder 3 at f44
+        ay "Oh, no. I don't mind at all."
+        ay "I just didn't think you celebrated people's birthdays in the club here."
+        ay "It wasn't in the journal Yuri gave me but maybe that's because it wasn't anyone's birthday."
+        ay "There's just one thing though..."
+        ay "Who told you it was my birthday today?"
+        ay "I can't even remember the date of my own birthday...let alone the date today."
+        ay "It's weird I know, I could have sworn it wasn't today though."
+        show yuri zorder 3 at f41
+        show ayame zorder 2 at t44
+        y "You don't remember your own birthday? Maybe saying the date will remind you."
+        y "If you need reminding, it's Friday the..."
+        "Yuri thinks for a moment before a look of concern appears on her face."
+        y "Friday the..."
+        y "I can't seem to remember the date."
+        show yuri zorder 2 at t41
+        show natsuki zorder 3 at f42
+        n "That doesn't matter, Yuri. What does matter is that we do something."
+        n "Even if it's just singing happy birthday or something."
+        show natsuki zorder 2 at t42
+        show ayame zorder 3 at f44
+        ay "That's very kind of you to suggest but I really don't think that's necessary."
+        ay "I don't even {i}know{/i} if it is my birthday today."
+        ay "Monika is just saying it is, which is why I'm curious."
+        show monika zorder 3 at f43
+        show ayame zorder 2 at t44
+        m "I'm not the one who found out it was, Ayame."
+        m "For that, you can thank [player]."
+        show monika zorder 2 at t43
+        mc "Me?!"
+        "Everyone turns their attention toward me."
+        "Monika gives smiles at me and winks."
+        mc "I-I mean, I found out how everyone else would have."
+        mc "I simply asked around and people seemed to know."
+        mc "After all, who could forget the birthday of a school leader?"
+        mc "It's something that gets stuck in your head, right?"
+        show ayame zorder 3 at f44
+        ay "I suppose that's true."
+        ay "Though who specifically told you about my birthday?"
+        ay "I don't really give out that kind of information to anybody."
+        ay "Did you happen to get it from a teacher or something?"
+        show ayame zorder 2 at t44
+        mc "Uhh...yes. Yes, I did."
+        mc "I know it's kinda creepy of me, so I'm sorry if you think that."
+        show ayame zorder 3 at f44
+        ay "Not at all! I just want to ask you one thing."
+        ay "What date is my birthday?"
+        ay "Or rather, what is the date today?"
+        ay "Seeing as those two are interchangeable, apparently."
+        show ayame zorder 2 at t44
+        mc "The date? Well that's..."
+        "I don't actually know the date."
+        "Why don't I know the date? I've never had to think about it before."
+        "But even so, it should come naturally, right?"
+        "So why can't I..."
+        "I'm going to need your help for this."
+        $ actualday = datetime.datetime.today().strftime('%A, %d %B')
+        $ actualweekday = datetime.datetime.today().strftime('%A')
+        menu:
+            mc "The date today is..."
+            "[actualday].":
+                show ayame zorder 3 at f44
+                if actualweekday != "Friday":
+                    ay "It's not Friday? That doesn't make any sense."
+                    ay "Today {i}is{/i} Friday, isn't it?"
+                    ay "You must have your dates confused, [player]."
+                    ay "It's clearly Friday, isn't it?"
+                else:
+                    ay "Oh, you actually knew. That date actually sounds reasonable."
+                ay "It makes perfect sense that that is the date."
+                ay "I just don't know how I didn't know that that's what today."
+                ay "Now that you say it, it's like..."
+                ay "Well...never mind."
+            "Friday, 22 September." if actualday != "Friday, 22 September":
+                "Monika looks at me strangely then shrugs."
+                "Did I say something wrong?"
+                show ayame zorder 3 at f44
+                ay "For some reason, that doesn't seem right to me."
+                ay "But I can't really argue against you."
+                ay "I don't actually know the date myself, but you seem so sure of yourself."
+            "Friday, 32 Octvember.":
+                show ayame zorder 3 at f44
+                ay "That...is not a real date, [player]."
+                ay "Are you just playing around? I'd actually like to know the date today."
+                ay "Unless this is all some kind of elaborate joke...?"
+                show monika zorder 3 at f43
+                show ayame zorder 2 at t44
+                m "It's not a joke! I'm sure [player_personal] just got confused."
+                m "The actual date is Friday, the twenty second of September."
+                m "Isn't that what you meant, [player]?"
+                show monika zorder 2 at t43
+                mc "Yeah...that's what I meant."
+                mc "Sorry, there's just too many things going on at once."
+                show monika zorder 2 at t43
+                show ayame zorder 3 at f44
+                ay "Oh, I understand. Don't worry."
+        ay "So I guess if what Monika is saying was true then..."
+        ay "I guess today is my birthday, huh?"
+        ay "I can't really confirm it myself but I can't deny it either."
+        show yuri zorder 3 at f41
+        show ayame zorder 2 at t44
+        y "I'm still wondering how you forgot about your birthday."
+        y "It's not exactly something that you can easily forget."
+        y "After all, it happens once a year, every year."
+        show yuri zorder 2 at t41
+        show natsuki zorder 3 at f42
+        n "It doesn't matter, what does is what we should do."
+        n "Ayame, you really should have said something!"
+        n "I would have baked you a cake or something..."
+        show natsuki zorder 2 at t42
+        show monika zorder 3 at f43
+        m "So eager to please Ayame, aren't you?"
+        m "Perhaps there's something you'd like to tell us?"
+        show natsuki zorder 3 at f42
+        show monika zorder 2 at t43
+        n "W-What's that supposed to mean?"
+        n "You know I would do the same thing for any of you guys!"
+        n "A-And it's just that she deserves better, you know."
+        n "Not even remembering her own birthday...it must suck."
+        show natsuki zorder 2 at t42
+        show ayame zorder 3 at f44
+        ay "I appreciate the thought, Natsuki."
+        ay "But really, it doesn't bother me at all."
+        ay "I'm used to people forgetting about my birthday."
+        "Ayame sits down and lowers her head."
+        ay "When you're like me, you're spoiled every day."
+        ay "It's hard to distinguish a normal day from a birthday."
+        ay "I can't even recall the last time I--"
+        ay "I--"
+        "Ayame lowers her head onto the table."
+        show ayame at thide
+        hide ayame
+        show yuri zorder 2 at t31
+        show natsuki zorder 2 at t32
+        show monika zorder 3 at f33
+        m "Aw, it's okay Ayame. There's nothing wrong with that."
+        m "We'll make today special just for you."
+        m "Ayame?"
+        "Monika tugs Ayame's shoulder."
+        m "Are you listening? You don't have to be so down."
+        m "{i}(I hope that's enough to distract her.){/i}"
+        show yuri zorder 3 at f31
+        show monika zorder 2 at t33
+        y "Is she going to be okay?"
+        y "Ayame...?"
+        show yuri zorder 2 at t41
+        show natsuki zorder 2 at t42
+        show sayori 1a zorder 3 at f43
+        show monika zorder 2 at t44
+        s "I'm finally back! Hopefully, we still have enough time."
+        "Sayori looks at me and sees Ayame slumped on the desk."
+        s "I {i}assume{/i} everything is alright here?"
+        show sayori zorder 2 at t43
+        mc "Everything should be fine, I think."
+        mc "Though I had a little help."
+        mc "I'm not sure about Ayame though."
+        show sayori zorder 2 at t43
+        show monika zorder 3 at f44
+        m "Yeah...I'm sure she's going to be okay."
+        m "She was just a moment ago."
+        show natsuki zorder 3 at f42
+        show monika zorder 2 at t44
+        n "Okay, first of all."
+        "Natsuki points at Sayori."
+        n "What took you so long?! We've been waiting for what feels like a really long time."
+        n "And I know the clock doesn't say you were gone for that long but it could be wrong."
+        n "For all we know, that clock is wrong and the event has already begun."
+        show natsuki zorder 2 at t42
+        show sayori zorder 3 at f43
+        s "Natsuki, I promised I wouldn't be gone for long."
+        s "And I wasn't! I'm here now. That clock isn't lying."
+        s "I was only gone a couple of minutes, right?"
+        show natsuki zorder 3 at f42
+        show sayori zorder 2 at t43
+        n "Sure you were. We'll see what happens when the event actually begins."
+        n "The second thing I wanted to say was that I think something is wrong with Ayame."
+        n "Like something {i}just{/i} happened to her."
+        n "Look!"
+        "Natsuki taps Ayame on the shoulder and starts shaking her."
+        "There's no reaction from Ayame."
+        n "See? There's something wrong with her."
+        show natsuki zorder 2 at t42
+        show sayori zorder 3 at f43
+        s "Are you sure about that?"
+        "I can see a small smile come from Sayori."
+        "Did it work? She got here as soon as Ayame put her head on the table."
+        "I can only asssume that was Sayori's doing."
+        s "Ayame...hello?"
+        "Sayori puts a hand on Ayame's shoulder."
+        "Ayame suddenly flinches to life and starts breathing heavily."
+        s "Are you alright?"
+        show yuri zorder 2 at t51
+        show natsuki zorder 2 at t52
+        show sayori zorder 2 at t53
+        show monika zorder 2 at t54
+        show ayame 1a zorder 3 at f55
+        ay "W-What? Where am I?"
+        "Ayame looks around the room as if she was lost."
+        ay "H-How did I get here?"
+        show natsuki zorder 3 at f52
+        show ayame zorder 2 at t55
+        n "What do you mean?"
+        n "You don't remember what just happened?"
+        show natsuki zorder 2 at t52
+        show ayame zorder 3 at f55
+        ay "I don't...what's happening right now?"
+        ay "The last thing I remember was talking to the three of you then..."
+        ay "Ugh, my head."
+        "Ayame stands up and clutches her head."
+        ay "Can someone please tell me what's happening?"
+        ay "Why does my head hurt so much?"
+        show sayori zorder 3 at f53
+        show ayame zorder 2 at t55
+        s "Like someone was in your head, right?"
+        s "I'm sure it'll be fine from now on."
+        s "But how are you feeling?"
+        show sayori zorder 2 at t53
+        show ayame zorder 3 at f55
+        ay "Did I not just say? My head feels like a truck hit it."
+        ay "And only it. Ugh, I've never felt like this before."
+        ay "It's hard to think...but I think I'll be fine."
+        show sayori zorder 3 at f53
+        show ayame zorder 2 at t55
+        s "Is that all? Nothing else to say about it...?"
+        show yuri zorder 3 at f51
+        show sayori zorder 2 at t53
+        y "Maybe it isn't the best idea to be so insistent right now, Sayori."
+        y "She must have a headache or something with the way she's describing it."
+        y "A rather familiar feeling if I say so myself."
+        show yuri zorder 2 at t51
+        show natsuki zorder 3 at f52
+        n "I agree, if she's feeling how I think she's feeling we should just leave her."
+        n "Do I need to say again that we need to get the rehearsal over with already?"
+        n "Or is no one really listening."
+        show natsuki zorder 2 at t52
+        show ayame zorder 3 at f55
+        ay "I think I'll just step outside for a little bit."
+        ay "That way I can avoid distracting you all."
+        ay "...And get some fresh air or something for my head."
+        show monika zorder 3 at f54
+        show ayame zorder 2 at t55
+        m "Are you sure? We wouldn't want you to miss out on anything..."
+        m "On the other hand, we wouldn't want to force you into anything either."
+        m "I'm sure you can make your own decision, Ayame."
+        m "But you should choose soon, otherwise we're gonna be running late."
+        m "Well, {i}later{/i} than we already are."
+        show monika zorder 2 at t54
+        if ch16_ay_decision_count > 0:
+            "I suddenly feel this strange wave of energy hit me."
+            "I look around and no one else seems to react."
+            "No one except Sayori."
+            "She looks me directly in the eye, as if to tell me something."
+            "She's constantly moving her eyes back and forth between me and Ayame."
+            "This must be part of her plan somehow."
+            "But what does she want me to do?"
+            "I'm too busy focusing on what Ayame should be doing..."
+            "But why is that the main thought in my mind?"
+            menu:
+                "I mean obviously she's going to..."
+                "Stay in the room.":
+                    $ ch16_ay_decision_count -= 1
+                    show ayame zorder 3 at f55
+                    ay "Against my better judgement, I think I'm going to stay here."
+                    ay "I don't know why but I just have this {i}urge{/i} to."
+                    ay "Maybe it's for the best."
+                    show ayame zorder 2 at t55
+                    "Sayori gives me a reassuring look and smiles."
+                    show sayori zorder 3 at f53
+                    s "Like Monika said, it is {i}your{/i} decision."
+                    s "Whether you stay or not isn't up to us."
+                    show sayori zorder 2 at t53
+                    show ayame zorder 3 at f55
+                    ay "Y-Yeah, I know! Let me just...ugh..."
+                    ay "Let me just have a moment to myself."
+                    ay "Do go on with your rehearsals though, don't wait on my account."
+                    "Ayame moves to the back of the room away from the rest of us."
+                    ay "I'll just be here...!"
+                "Leave the room.":
+                    $ ch16_ay_decision_count -= 1
+                    show ayame zorder 3 at f55
+                    ay "I'm leaving the room for sure."
+                    ay "There's no doubt in my mind that that is the best idea for me to do."
+                    show sayori zorder 3 at f53
+                    show ayame zorder 2 at t55
+                    s "Are you that sure of yourself Ayame?"
+                    s "You don't want to stay here and watch, even a little bit?"
+                    show sayori zorder 2 at t53
+                    show ayame zorder 3 at f55
+                    ay "I've never been more sure of anything my entire life."
+                    ay "Goodbye, all of you. I'll be back momentarily."
+                    ay "Or not...depending on how I feel."
+                    "Ayame gets up and quickly moves towards the door."
+                    "She seems to ignore whoever is in her way at the time, nudging Natsuki and Yuri out of the way."
+                    ay "We'll see each other later! Farewell!"
+                "...How would I know?":
+                    show ayame zorder at f55
+                    ay "I think I'm going to just leave."
+                    ay "I don't know if it's the best thing to do right now."
+                    ay "The way I see it, I can't really enjoy myself if I have this..."
+                    ay "I don't want to say headache, because it feels unnatural."
+                    ay "Whatever it is, it's going to ruin my enjoyment of watching you guys rehearse."
+                    ay "So I think it's for the best if I try to clear my head."
+                    ay "I'll try to be back, but no promises."
+                    show sayori zorder 3 at f53
+                    show ayame zorder 2 at t55
+                    s "So you don't feel an urge to stay?"
+                    "Sayori looks at me with a curious look on her face."
+                    "Was I supposed to say something?"
+                    "Or rather, were {i}you{/i} supposed to say something...?"
+                    s "No urge to go either?"
+                    show sayori zorder 2 at t53
+                    "Ayame shakes her head and shrugs."
+                    show ayame zorder 3 at f55
+                    ay "An urge? No, not really. Should I be?"
+                    show sayori zorder 3 at f53
+                    show ayame zorder 2 at t55
+                    s "N-No, I'm just asking. Don't worry about it."
+                    s "There's probably a good reason for it."
+                    show sayori zorder 2 at t53
+                    show ayame zorder 3 at f55
+                    ay "That's a strange thing to ask, Sayori."
+                    ay "But no time to argue, so I'll go excuse myself."
+                    "Ayame stands up and rushes towards the door."
+                    ay "Goodbye for now!"
+        else:
+            show ayame zorder 3 at f55
+            ay "I think I'm going to just leave."
+            ay "There's no point in me staying in here if I can't enjoy what I'm seeing."
+            ay "I'm going to try to recover as fast as I can but..."
+            ay "No promises, okay?"
+            show sayori zorder 3 at f53
+            show ayame zorder 2 at t55
+            s "You don't feel an urge to stay?"
+            s "Or go for that matter?"
+            s "That's odd...but I suppose it all makes sense, doesn't it?"
+            s "After what didn't happen..."
+            s "{i}(This is not good, at all.){/i}"
+            show sayori zorder 2 at t53
+            show ayame zorder 3 at f55
+            ay "I can't say I know what you mean, Sayori."
+            ay "But...no, I can't say I do feel an urge either way."
+            ay "I'm just following what my mind says is the logical thing to do."
+            ay "Now, if you'll excuse me..."
+            "Ayame stands up and waves goodbye to everyone."
+            "She heads towards the door, all the while keeping a hand on her head."
+            ay "I shall take my leave for now. Don't wait on my account though."
+            ay "You've all wasted too much time for me, and I apologize for that."
+            "Ayame tries to give a smile in spite of how she's feeling."
+            "Looking at her, I kinda feel sorry for her."
+            "I don't know why but I think I can feel her pain somehow..."
+            "Maybe because what she is feeling is all too familiar."
+            ay "Fare thee well!"
+        show yuri zorder 2 at t41
+        show natsuki zorder 2 at t42
+        show sayori zorder 2 at t43
+        show monika zorder 2 at t44
+        show ayame at thide
+        hide ayame
+        "With Ayame out of the picture for now, we should be able to get the rest of our rehearsals done."
+        "Not a moment too soon too."
+        "It seems like time is passing at a normal rate again."
+        show sayori zorder 3 at f43
+        s "I know you all probably have something to say."
+        s "But we don't have time anymore."
+        s "Not if we want to be able to get this all done."
+        "Natsuki looks like she's about to say something but stops herself."
+        "I can probably guess it wasn't anything good."
     else:
         s "Just read ahead or something with the script."
         s "It might not be a good idea to actually practice though."
@@ -10499,6 +10927,79 @@ label ch16_end:
         s "I think it's your line now, right [player]?"
         show sayori zorder 2 at t44
         mc "Oh, right..."
+        "I take my cue and do my part."
+        "From there, it seems like we just continued on with rehearsals smoothly."
+        "I could Ayame watching us like some sort of hawk."
+        "But she didn't really say anything, despite looking like she wanted to."
+        "Perhaps she did just want to enjoy it, even with all of our flaws that we have."
+        "After what seemed like hours, we managed to finish a single rehearsal."
+        "Everyone looks proud of themselves, even Ayame looks kinda surprised."
+        "How much time actually did pass though...?"
+        "The clock says that barely any time passed"
+        show natsuki zorder 3 at f43
+        n "I can't believe we're finally done."
+        n "All of that time spent doing one rehearsal."
+        n "Even with Sayori randomly disappearing somewhere."
+        show natsuki zorder 2 at t43
+        show sayori zorder 3 at f44
+        s "Ehehe, I told you we'd get a run through done~"
+        s "You guys really need to have more faith in me."
+        show yuri zorder 3 at f41
+        show sayori zorder 2 at t44
+        y "We managed to pull off a single rehearsal."
+        y "Even so, I don't think we're ready."
+        y "What if we forget a line? What if--"
+        show yuri zorder 2 at t41
+        show monika zorder 3 at f42
+        m "Yuri, it's going to be okay!"
+        m "You did really well on your first rehearsal, I don't know why you're so worried."
+        m "In fact, you weren't even looking at your script for parts of it."
+        m "It's like you have most of the lines remembered already."
+        show monika zorder 2 at t42
+        show sayori zorder 3 at f44
+        s "She's right! We have nothing to worry about."
+        s "In fact, we could probably fit in a scene or two in the time we have left."
+        s "Just to make sure we know the complicated scenes."
+        s "Maybe even incorporate some of the props."
+        show yuri zorder 3 at f41
+        show sayori zorder 2 at t44
+        y "I don't know how, but if you think we can do that with the {i}very{/i} little time we have left..."
+        y "Then I suppose we can try it."
+        y "We should pack up most of these for the gymnasium though, shouldn't we?"
+        show yuri zorder 2 at t51
+        show monika zorder 2 at t52
+        show natsuki zorder 2 at t53
+        show sayori zorder 2 at t54
+        show ayame 1a zorder 3 at f55
+        ay "I could do that!"
+        "Ayame gets up from her chair and eagerly approaches us."
+        ay "I'd love to be able to help you all somehow."
+        ay "If it means carrying a few boxes, then that's fine by me."
+        show sayori zorder 3 at f54
+        show ayame zorder 2 at t55
+        s "Now, just wait a second, Ayame."
+        s "You don't need to resort yourself to manual labor for us."
+        s "In fact, if anyone, [player] should do it."
+        s "[cPlayer_personal]'s the one who brought them all here anyway."
+        s "It should be [player]'s responsibility to take it all back."
+        show sayori zorder 2 at t54
+        "Wait...what? Am I going to need to carry those boxes back myself?"
+        "There's no way I can do that."
+        "Not without a significant amount of help..."
+        show ayame zorder 3 at f55
+        ay "I insist, really! It's the very least I could do after that warm welcome."
+        show monika zorder 3 at f52
+        show ayame zorder 2 at t55
+        m "Sayori, if she wants to do it, then she should be able to."
+        m "It's not like we have time to argue."
+        m "Plus, it's only beneficial for us so there's really no downside."
+        show monika zorder 2 at t52
+        show natsuki zorder 3 at f53
+        n "It still feels wrong putting her up to it."
+        n "But she insisted, so it would be more rude not to let her do it."
+        show natsuki zorder 2 at t53
+        show ayame zorder 3 at f55
+        ay "I promise I won't let you guys down!"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
