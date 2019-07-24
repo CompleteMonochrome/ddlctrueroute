@@ -10600,6 +10600,93 @@ label ch16_end:
         s "Not if we want to be able to get this all done."
         "Natsuki looks like she's about to say something but stops herself."
         "I can probably guess it wasn't anything good."
+        s "So let's finish up here and make sure we're at least kinda ready."
+        s "I still have to speak to Ayame afterwards too."
+        show sayori zorder 2 at t43
+        show monika zorder 3 at f44
+        m "What about, if you don't mind me asking?"
+        m "I'd very much like to be involved if its about Ayame."
+        show sayori zorder 3 at f43
+        show monika zorder 2 at t44
+        s "Normally, I'd let you, Monika. Especially since you're the vice president."
+        s "But this is a really private matter."
+        s "You all understand, right?"
+        show sayori zorder 2 at t43
+        show monika zorder 3 at f44
+        m "Oh...of course. Just let me know if I should be aware of anything."
+        m "Anything at all, okay?"
+        show sayori zorder 3 at f43
+        show monika zorder 2 at t44
+        s "I don't know why you seem so eager to know, but alright."
+        s "I'll let you know if there's anything you definitely need to know."
+        "Monika smiles and nods her head."
+        s "Now, let's finally get this rehearsal finished."
+        s "We can start from where you all left off."
+        s "I think it's your line now, right [player]?"
+        show sayori zorder 2 at t43
+        mc "Oh, right..."
+        "I take my cue and do my part."
+        "From there, it seems like we just continued on with rehearsals smoothly."
+        "I can't help but wonder during all this time if Ayame is okay."
+        "I know that what Sayori is doing is for the best but was it worth putting her through that?"
+        "It's not my place to judge, I'm probably clueless to her master plan."
+        "And what she's feeling is only temporary...right?"
+        "I think it's best not to think about it too much."
+        "After what seemed like hours, we managed to finish a single rehearsal."
+        "Everyone looks proud of themselves, even Ayame looks kinda surprised."
+        "How much time actually did pass though...?"
+        "The clock says that barely any time passed but that seems wrong."
+        "It felt like we discussed parts of the script for minutes."
+        "But all that time we spent discussing is how much time seems to have passed."
+        show natsuki zorder 3 at f42
+        n "I can't believe we're finally done."
+        n "All of that time spent doing one rehearsal."
+        n "Even with Sayori randomly disappearing somewhere."
+        show natsuki zorder 2 at t42
+        show sayori zorder 3 at f43
+        s "Ehehe, I told you we'd get a run through done~"
+        s "You guys really need to have more faith in me."
+        show yuri zorder 3 at f41
+        show sayori zorder 2 at t43
+        y "We managed to pull off a single rehearsal."
+        y "Even so, I don't think we're ready."
+        y "What if we forget a line? What if--"
+        show yuri zorder 2 at t41
+        show monika zorder 3 at f44
+        m "Yuri, it's going to be okay!"
+        m "You did really well on your first rehearsal, I don't know why you're so worried."
+        m "In fact, you weren't even looking at your script for parts of it."
+        m "It's like you have most of the lines remembered already."
+        show monika zorder 2 at t42
+        show sayori zorder 3 at f44
+        s "She's right! We have nothing to worry about."
+        s "In fact, we could probably fit in a scene or two in the time we have left."
+        "She's not serious, is she?"
+        "Is she really planning on slowing down time just for this...?"
+        s "Just to make sure we know the complicated scenes."
+        s "Maybe even incorporate some of the props."
+        show yuri zorder 3 at f41
+        show sayori zorder 2 at t44
+        y "I don't know how, but if you think we can do that with the {i}very{/i} little time we have left..."
+        y "Then I suppose we can try it."
+        y "We should pack up most of these for the gymnasium though, shouldn't we?"
+        show yuri zorder 2 at t41
+        show sayori zorder 3 at f44
+        s "You know, you're probably right about that Yuri."
+        s "Ehehe, I didn't even think about it."
+        "Sayori looks around the room and ponders."
+        s "Do we have enough people to carry them all in one go?"
+        s "It should be a box between two people just to be safe but..."
+        show yuri zorder 2 at t51
+        show natsuki zorder 2 at t52
+        show sayori zorder 2 at t53
+        show monika zorder 2 at t54
+        show ayame 1a zorder 3 at f55
+        ay "Normally, I would volunteer but..."
+        "Ayame comes back with her head down and a hand on her head."
+        "That headache must be really bad."
+        ay "I don't think I can even come along to watch the play."
+        ay "And I really wanted to too..."
     else:
         s "Just read ahead or something with the script."
         s "It might not be a good idea to actually practice though."
@@ -10935,7 +11022,9 @@ label ch16_end:
         "After what seemed like hours, we managed to finish a single rehearsal."
         "Everyone looks proud of themselves, even Ayame looks kinda surprised."
         "How much time actually did pass though...?"
-        "The clock says that barely any time passed"
+        "The clock says that barely any time passed but that seems wrong."
+        "It felt like we discussed parts of the script for minutes."
+        "But all that time we spent discussing is how much time seems to have passed."
         show natsuki zorder 3 at f43
         n "I can't believe we're finally done."
         n "All of that time spent doing one rehearsal."
@@ -10959,6 +11048,8 @@ label ch16_end:
         show sayori zorder 3 at f44
         s "She's right! We have nothing to worry about."
         s "In fact, we could probably fit in a scene or two in the time we have left."
+        "I don't know what Sayori is thinking."
+        "We really don't have the time for that."
         s "Just to make sure we know the complicated scenes."
         s "Maybe even incorporate some of the props."
         show yuri zorder 3 at f41
@@ -11000,6 +11091,199 @@ label ch16_end:
         show natsuki zorder 2 at t53
         show ayame zorder 3 at f55
         ay "I promise I won't let you guys down!"
+        ay "Where exactly should I drop them off at?"
+        show sayori zorder 3 at f54
+        show ayame zorder 2 at t55
+        s "I'll tell you exactly where you need to go after this."
+        s "I need to talk to you in private anyway."
+        show sayori zorder 2 at t54
+        show ayame zorder 3 at f55
+        ay "Oh, what did you want to talk about?"
+        show sayori zorder 3 at f54
+        show ayame zorder 2 at t55
+        s "There is a reason it's meant to be a private conversation."
+        s "It won't take long, so don't worry."
+        s "But let's pack all of this up first."
+        s "It doesn't really matter what box you put the clothes in, as long as they're all accounted for."
+        s "I kinda hoped that we could rehearse in the costumes but..."
+        s "I guess we'll have to do our only dress rehearsal as our actual play!"
+        show monika zorder 3 at f52
+        show sayori zorder 2 at t54
+        m "In that case, I'll take all the clothes in this section."
+        m "Let's all work as quick as we can so we can get there a bit earlier."
+        m "I think some of the other clubs have already set up, so it might be hard to get around if we don't finish here quickly."
+        show monika zorder 2 at t52
+        "Everyone seems to work very quickly and efficiently."
+        "The boxes were filled within minutes but I couldn't help notice Sayori glancing at Ayame."
+        "It wasn't very obvious but every time I looked at her I saw her look at Ayame then turn away."
+        "It's like she was looking for something from her."
+        "Maybe it has to do with the conversation they're meant to be having."
+        "I wonder what it's about...?"
+        "I doubt it's some sort of formal welcome to the club."
+        "I know I shouldn't pry into it but it's really bothering me for some reason."
+        show sayori zorder 3 at f54
+        s "Alright, everybody!"
+        s "It looks like we're all done here, I hope you all know your lines!."
+        s "There's a couple of boxes to take there, I'd say to take one between two of you."
+        show sayori zorder 2 at t54
+        mc "So now you're saying it takes two people?"
+        mc "Why did you make me carry one by myself before?"
+        show sayori zorder 3 at f54
+        s "Ehehe, I thought maybe you could handle it."
+        s "I mean, you did manage to get it here in the end, right?"
+        show sayori zorder 2 at t54
+        mc "I don't think I did it by myself."
+        mc "I know it wasn't that long ago but I can't remember exactly how it got here."
+        mc "I was at the gym with the box and the next thing I remember was that I was here."
+        mc "I remember not being able to carry it by myself though..."
+        show sayori zorder 3 at f54
+        s "Oh, really?"
+        "Sayori easily picks up one of the boxes and puts it on a desk."
+        "It makes a loud thud sound as she places it down."
+        "That thing is definitely heavier than she's making it look."
+        s "Why don't you try to pick this one up?"
+        s "Surely someone like you could do it?"
+        show sayori zorder 2 at t54
+        mc "Did anyone else hear that thud sound?"
+        mc "That box must weigh a ton and she wants me to carry it by myself."
+        show natsuki zorder 3 at f53
+        n "Get over it. The rest of us have to carry boxes so you have to too."
+        n "I'm sure you're probably just imagining it."
+        show monika zorder 3 at f52
+        show natsuki zorder 2 at t53
+        m "If you want, I could help you carry that box."
+        m "I'm sure you can manage though."
+        show yuri zorder 3 at f51
+        show monika zorder 2 at t52
+        y "You also have to carry your own box, Monika."
+        y "Come on, let's get going already."
+        show yuri zorder 2 at t51
+        show monika zorder 3 at f52
+        m "Ahaha, okay, okay. I'm just offering my help."
+        m "But you're right, I'll get this box over here and go."
+        "Monika picks up the box she packed and heads towards the door."
+        m "I'll see you all at the place. I'll try to get some things ready before you all get there."
+        show monika at thide
+        hide monika
+        show yuri zorder 2 at t41
+        show natsuki zorder 2 at t42
+        show sayori zorder 2 at t43
+        show ayame zorder 2 at t44
+        "Monika leaves the room, leaving me with this seemingly heavy box."
+        mc "Monika, wait--"
+        "I don't think she heard me from outside the room."
+        mc "I actually could have used her help."
+        show sayori zorder 3 at f43
+        s "[player], you must be imagining things."
+        "Sayori puts a hand on my shoulder."
+        s "Seriously, that box isn't as heavy as you think it is."
+        s "Go ahead and try to lift it. I'm sure you can manage."
+        show sayori zorder 2 at t43
+        "I sigh and stare at the box."
+        mc "Well, you can all say goodbye to my arms."
+        mc "Here goes nothing."
+        "I attempt to pick up the box from the table."
+        "To my surprise, it's lighter than it sounded."
+        "In fact, if it wasn't so big I could probably carry it with one hand."
+        mc "What's in here?"
+        show sayori zorder 3 at f43
+        s "Just clothes and stuff, like the box you carried before."
+        s "Why? Does it feel lighter?"
+        show sayori zorder 2 at t43
+        mc "The other box felt like there was just bricks in there."
+        mc "This one feels like there's only air."
+        show natsuki zorder 3 at f42
+        n "Okay, while you two argue about what's inside that box..."
+        "Natsuki attempts to pick up one of the boxes from the ground."
+        "She looks like she's struggling to carry it at first but manages to keep it stable in her arms."
+        n "I-I'm going to go and see if I can help out Monika."
+        show yuri zorder 3 at f41
+        show natsuki zorder 2 at t42
+        y "Are you going to be okay with that, Natsuki?"
+        y "You look--"
+        show yuri zorder 2 at t41
+        show natsuki zorder 3 at f42
+        n "I-I'm fine! Look, I can carry it myself."
+        "Natsuki struggles to move around with the box she's carrying."
+        "But she is managing to carry it, just barely."
+        n "Just make sure you hurry it up over here, okay?"
+        n "I don't wanna be the only one with Monika there when we start."
+        show natsuki at thide
+        hide natsuki
+        show yuri zorder 2 at t31
+        show sayori zorder 2 at t32
+        show ayame zorder 2 at t33
+        "Natsuki slowly walks out the door with the box in her hands."
+        "It looked like she was going to collapse at any moment."
+        show yuri zorder 3 at f31
+        y "I wonder if she's going to be okay..."
+        if natsuki_approval >= 3 and yuri_approval >= 3:
+            y "I wouldn't want her to get hurt or anything..."
+            y "I think I'll go right now to make sure she doesn't drop the box."
+            y "After all, you did say it should be between two people, Sayori."
+            y "I'll see you all when you get there."
+            show yuri zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "You two really have become good friends, haven't you?"
+            "Sayori shows a warm smile."
+            s "You should really get going if you want to catch her then, Yuri."
+            s "She's probably going to try to do it herself just to prove us wrong."
+            show yuri zorder 3 at f31
+            show sayori zorder 2 at t32
+            y "That's what I'm worried about."
+            y "I'll see you all there then..."
+        else:
+            y "She didn't really look like she could handle it."
+            y "And Sayori did say that it should be between two people..."
+            y "I suppose I should give her some help with that."
+            show yuri zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "You don't sound very eager to help her out, Yuri."
+            s "Did something happen between you two?"
+            show yuri zorder 3 at f31
+            show sayori zorder 2 at t32
+            y "Nothing happened between the two of us."
+            y "Nothing {i}that{/i} significant in the time the two of us have been here at least."
+            show yuri zorder 2 at t31
+            show sayori zorder 3 at f32
+            s "What's that meant to mean...?"
+            show yuri zorder 3 at f31
+            show sayori zorder 2 at t32
+            y "If you want, we can talk about it later."
+            y "But I should really go and lend her some assistance right now."
+        show yuri at thide
+        hide yuri
+        show sayori zorder 2 at t21
+        show ayame zorder 2 at t22
+        "Yuri rushes out the door and goes the same direction Natsuki and Monika went."
+        show sayori zorder 3 at f21
+        s "You should go as well, [player]."
+        s "This talk should only take a minute but it could last a while depending..."
+        show sayori zorder 2 at t21
+        mc "Depending on...?"
+        show sayori zorder 3 at f21
+        s "It's not important, just go already!"
+        "Sayori attempts to start pushing me out of the room."
+        "She looks like she's trying but I know she just wants to get me out nicely."
+        "If she really wanted to, she could probably push me out."
+        "Whatever those two are going to be talking about, it seems like it's gonna be pretty serious."
+        "Sayori doesn't look like it, but if I know her she's serious about this."
+        "I just wonder what in the world they're going to be talking about."
+        s "Good luck, just wait for us over there."
+        s "It's going to be really fun, I promise!"
+        show sayori zorder 2 at t21
+        mc "I'm looking forward to it, I really am."
+        "Sayori beams."
+        show ayame zorder 3 at f22
+        ay "I'll make sure to keep this conversation short."
+        ay "I don't know what it's going to be about but I'm going to try my best!"
+        ay "I wouldn't want Sayori to be late or anything."
+        show ayame zorder 2 at t22
+        mc "I guess I'll see you two there then."
+        "Both of them give me a small wave as I walk out the door."
+        "I hope Sayori is going to be okay."
+        "She seems kinda tense around Ayame and I'm not sure why..."
+    scene bg gym with wipeleft_scene
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
