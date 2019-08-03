@@ -10686,7 +10686,113 @@ label ch16_end:
         "Ayame comes back with her head down and a hand on her head."
         "That headache must be really bad."
         ay "I don't think I can even come along to watch the play."
-        ay "And I really wanted to too..."
+        ay "And I really wanted to as well..."
+        ay "I'm really sorry about all of this."
+        show sayori zorder 3 at f53
+        show ayame zorder 2 at t55
+        s "Don't say that! Your wellbeing is more important."
+        s "Besides, it's just one thing you're gonna miss."
+        s "It's not like it's the end of the world, right?"
+        "Sayori lets out a nervous laugh."
+        s "Take care of your headache before worrying about us."
+        show sayori zorder 2 at t53
+        show monika zorder 3 at f54
+        m "She's right, you know."
+        m "Although it's unfortunate that you won't be able to come with us..."
+        m "At least we know you'll be recovering somewhere."
+        show monika zorder 2 at t54
+        show ayame zorder 3 at f55
+        ay "It was just so sudden too. I can't really do anything about it."
+        ay "Or if I'll even recover before next week."
+        show sayori zorder 3 at f53
+        show ayame zorder 2 at t55
+        s "Don't worry, I'm sure you'll be fine by then."
+        s "We all will be."
+        show natsuki zorder 3 at f52
+        show sayori zorder 2 at t53
+        n "Yeah, just make sure you're set for next week!"
+        n "There's always something else to look forward to here."
+        show yuri zorder 3 at f51
+        show ayame zorder 2 at t55
+        y "Is there perhaps anything we could do to help?"
+        y "I understand there isn't really that much but maybe I could prepare some tea...?"
+        show yuri zorder 2 at t51
+        show ayame zorder 3 at f55
+        ay "While I do appreciate the offer, I'll have to pass."
+        ay "I need to go quickly improvise some sort of speech to mark the beginning of this event."
+        ay "I'm sad to say I probably wouldn't have time if I stayed for tea."
+        show monika zorder 3 at f54
+        show ayame zorder 2 at t55
+        m "I wasn't aware you were going to give a speech."
+        m "Must be something that you were assigned responsibility to as a leader, huh?"
+        show monika zorder 2 at t54
+        show ayame zorder 3 at f55
+        ay "Well, something like that."
+        ay "Anyways, I wanted to thank you all for your hospitality."
+        ay "I hope you all have fun performing."
+        ay "I'll be sure to stop by if this headache ever subsides."
+        ay "Until then, I must bid you all farewell."
+        show ayame zorder 2 at t55
+        "Ayame gives a bow as if she just finished some kind of performance on stage."
+        "I guess she really got into the practice rehearsal."
+        show sayori zorder 3 at f53
+        s "One more thing. I'd like to speak to you before you do your little speech."
+        s "Just for a short moment, if that's okay with you."
+        s "I know you probably have more pressing matters like with that headache of yours..."
+        show sayori zorder 2 at t53
+        show ayame zorder 3 at f55
+        ay "I can meet you outside a couple of minutes before my speech."
+        ay "But it has to be quick..."
+        ay "I don't think I can really manage a conversation anyway."
+        show sayori zorder 3 at f53
+        show ayame zorder 2 at t55
+        s "Of course! It will only take a moment."
+        show sayori zorder 2 at t53
+        show ayame zorder 3 at f55
+        ay "Then if that's all..."
+        "Ayame scans each of our faces one by one."
+        "It doesn't look like the rest of us really want to say anything."
+        "She takes notice of this and begins to walk towards the door."
+        "She's moving at a much slower pace."
+        "Is the pain to her head really that bad that it's affecting her movement too?"
+        ay "Goodbye for now."
+        show ayame at thide
+        hide ayame
+        show yuri zorder 2 at t41
+        show natsuki zorder 2 at t42
+        show monika zorder 2 at t43
+        show sayori zorder 2 at t44
+        "From what I can tell, she picked up her pace as she exited the room."
+        "Maybe she was just acting it all out?"
+        "She does seem pretty capable of doing so."
+        show sayori zorder 3 at f43
+        s "Let's get all our stuff packed and ready to go."
+        s "Wouldn't wanna be late, would we?"
+        show yuri zorder 3 at f41
+        show sayori zorder 2 at t43
+        y "In that case, I'll take this box over here."
+        y "It shouldn't be that heavy, right...?"
+        show yuri zorder 2 at t41
+        show sayori zorder 3 at f43
+        s "Actually, I'd recommend taking one between two of you."
+        s "It's just safer that way."
+        show yuri zorder 3 at f41
+        show sayori zorder 2 at t43
+        y "B-But there's way more boxes than people here."
+        y "How do you expect to get it all to the gym on time?"
+        show yuri zorder 2 at t41
+        show sayori zorder 3 at f43
+        s "You can leave that to me."
+        s "For now, you and Natsuki should take that box."
+        show natsuki zorder 3 at f42
+        show sayori zorder 2 at t43
+        n "I don't need anyone's help for this."
+        "Natsuki attempts to lift the box off the table."
+        "She manages to do it, just barely"
+        n "See? I'll be fine."
+        show natsuki zorder 2 at t42
+        show sayori zorder 3 at f43
+        s "Be careful, it's heavy."
     else:
         s "Just read ahead or something with the script."
         s "It might not be a good idea to actually practice though."
