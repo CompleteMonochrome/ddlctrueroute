@@ -10307,12 +10307,27 @@ label ch16_end:
                 ay "Now that you say it, it's like..."
                 ay "Well...never mind."
             "Friday, 22 September." if actualday != "Friday, 22 September":
-                "Monika looks at me strangely then shrugs."
-                "Did I say something wrong?"
                 show ayame zorder 3 at f44
                 ay "For some reason, that doesn't seem right to me."
                 ay "But I can't really argue against you."
                 ay "I don't actually know the date myself, but you seem so sure of yourself."
+                show monika zorder 3 at f42
+                show ayame zorder 2 at t44
+                m "W-Wait, isn't that--"
+                "Monika looks at me strangely then shrugs."
+                "Did I say something wrong?"
+                m "You know what, never mind."
+                m "Ahaha, forget I said anything..."
+                show monika zorder 2 at t42
+                show ayame zorder 3 at f44
+                ay "Is something the matter with that date...?"
+                show monika zorder 3 at f42
+                show ayame zorder 2 at t44
+                m "N-No, not at all."
+                m "Please, continue. It was rude of me to interrupt you."
+                show monika zorder 2 at t42
+                show ayame zorder 3 at f44
+                ay "Right then, that date you said."
             "Friday, 32 Octvember.":
                 show ayame zorder 3 at f44
                 ay "That...is not a real date, [player]."
@@ -10793,6 +10808,36 @@ label ch16_end:
         show natsuki zorder 2 at t42
         show sayori zorder 3 at f43
         s "Be careful, it's heavy."
+        s "You should really get some help with that, Natsuki."
+        s "You wouldn't want to get hurt or anything--"
+        show natsuki zorder 3 at f42
+        show sayoti zorder 2 at t43
+        n "I-I'm fine! I can do it myself."
+        "Natsuki doesn't look like she can keep this up for long."
+        "It seems like in a few minutes time her arms will finally give in and she'll drop it."
+        show yuri zorder 3 at f41
+        show natsuki zorder 2 at t42
+        if natsuki_approval >= 3 and yuri_approval >= 3:
+            y "Natsuki, don't be ridiculous."
+            "Yuri walks up to Natsuki and forcibly helps her lift it up."
+            y "I don't know what you're trying to prove but you're only going to get hurt like this."
+            y "So just let me help you before you end up looking stupid, okay?"
+            show yuri zorder 2 at t41
+            show natsuki zorder 3 at f42
+            n "..."
+            "Natsuki looks somewhat shocked at what Yuri just said."
+            "I am as well, I didn't really expect her to help her out like that."
+            "I guess their friendship has really bloomed, huh?"
+            n "F-Fine, but I didn't ask for your help."
+            n "I'm only letting you because you insisted."
+            show yuri zorder 3 at f41
+            show natsuki zorder 2 at t42
+            y "You don't have to act all tough all the time."
+            y "It's okay to be weak."
+            y "After all, your friends are the ones who will help you become stronger."
+            show yuri zorder 2 at t41
+            show sayori zorder 3 at f43
+        else:
     else:
         s "Just read ahead or something with the script."
         s "It might not be a good idea to actually practice though."
