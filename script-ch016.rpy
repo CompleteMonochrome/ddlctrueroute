@@ -10833,11 +10833,102 @@ label ch16_end:
             show yuri zorder 3 at f41
             show natsuki zorder 2 at t42
             y "You don't have to act all tough all the time."
-            y "It's okay to be weak."
+            y "It's okay to be weak. In fact, I don't even know who you're trying to prove yourself to."
+            y "Ayame is here and I'm sure by now, the rest of us know you well enough to know what you're capable of, Natsuki."
+            y "So showing signs of weakness doesn't really mean you're weak."
             y "After all, your friends are the ones who will help you become stronger."
             show yuri zorder 2 at t41
             show sayori zorder 3 at f43
+            s "That's right! We're here for each other, aren't we?"
+            s "I just want to say I'm really happy you said that, Yuri."
+            s "Friendship is really important, especially in times like this."
+            s "When all you can really rely on is each other..."
+            show natsuki zorder 3 at f42
+            show sayori zorder 2 at t43
+            n "Okay...Sayori is being weird again."
+            n "Anyway, I already said you could help me Yuri."
+            n "Jeez, you don't need to go into some kind of rant."
+            show natsuki zorder 2 at t42
+            show monika zorder 3 at f44
+            m "Ahaha, you two really are something."
+            m "Imagine if things were only slightly different..."
+            m "This whole scenario could have played out completely differently."
+            show yuri zorder 3 at f41
+            show monika zorder 2 at t44
+            y "What do you mean by that?"
+            show yuri zorder 2 at t41
+            show monika zorder 3 at f44
+            m "All I mean is that the actions of an individual led up to this moment."
+            m "You and Natsuki being close friends."
+            m "Let's be honest, you two weren't exactly friendly with each other at the beginning."
+            m "Imagine if those actions were taken differently."
+            m "You two could still be indifferent to each other, at best."
+            show sayori zorder 3 at f43
+            show monika zorder 2 at t44
+            s "M-Monika, that's not a very nice thing to say."
+            show sayori zorder 2 at t43
+            show monika zorder 3 at f44
+            m "Ahaha, I'm just saying..."
+            show natsuki zorder 3 at f42
+            show monika zorder 2 at t44
+            n "Okay, so it's not just Sayori."
+            n "Let's get out of here, Yuri. Just be careful you don't drop it."
+            show natsuki zorder 2 at t42
+            "Yuri shows Natsuki a slight smile as she loosens her grip on the box slightly."
+            "Natsuki panics for a moment as the weight of the box returns to her."
+            "As soon as Yuri saw Natsuki's face, she nods and signals her head toward the door."
+            show yuri zorder 3 at f41
+            y "We'll see the three of you, and hopefully Ayame, at the gym."
+            y "Good luck with the rest of those boxes."
         else:
+            y "I don't think you can do that by yourself, Natsuki."
+            y "You look like maybe you could use some help...?"
+            show yuri zorder 2 at t41
+            show natsuki zorder 3 at f42
+            n "Ugh! I'm fine. I don't need your help, okay?"
+            n "I can carry this myself."
+            show yuri zorder 3 at f41
+            show natsuki zorder 2 at t42
+            y "Are you sure? You don't really seem capable of doing that."
+            y "Just from observing you, it looks as if you're going to drop that at any moment."
+            y "Perhaps it would be better if you got some help with that."
+            show yuri zorder 2 at t41
+            show natsuki zorder 3 at f42
+            n "I'll...be...fine!"
+            "Natsuki attempts to adjust her grip on the box but instead manages to make it harder for herself."
+            n "J-Just go get another box already."
+            show natsuki zorder 2 at t42
+            show sayori zorder 3 at f43
+            s "Calm down, Natsuki. I'm sure Yuri only wants to help...right?"
+            show yuri zorder 3 at f41
+            show sayori zorder 2 at t43
+            y "I suppose I could lend a hand if she asked."
+            y "But she seems confident that she's able to do it herself."
+            y "I don't really want to trouble her any further."
+            show yuri zorder 2 at t41
+            show monika zorder 3 at f44
+            m "Sometimes you have to do the things that are best for others."
+            m "Even if they don't really think it is at the time."
+            m "This seems like one of those times, don't you think?"
+            show yuri zorder 3 at f41
+            show monika zorder 2 at t44
+            y "Natsuki, I know what you're capable of."
+            y "Acting all tough like this isn't going to give you any credit."
+            y "There's no one here you really have to prove yourself to."
+            y "So just admit you need help and I'd be happy to assist you."
+            show yuri zorder 2 at t41
+            show sayori zorder 3 at f43
+            s "I kinda thought you would just help her, Yuri."
+            s "Despite her protests, I mean. Without even questioning it."
+            s "But I guess you two didn't really end up being close friends."
+            show sayori zorder 2 at t43
+            show monika zorder 3 at f44
+            m "Well, things did happen to turn out this way."
+            m "I wonder why..."
+            "Monika briefly looks at me as she says that and smiles."
+            m "It's no wonder they're only indifferent to each other."
+        "Natsuki and Yuri slowly move out of the room slowly but steadily maneuvering through the desks."
+        "As they enter the hallway, they seem to pick up their pace a little, almost turning into some kind of hustle.
     else:
         s "Just read ahead or something with the script."
         s "It might not be a good idea to actually practice though."
