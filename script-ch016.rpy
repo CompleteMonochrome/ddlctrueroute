@@ -10927,8 +10927,72 @@ label ch16_end:
             m "I wonder why..."
             "Monika briefly looks at me as she says that and smiles."
             m "It's no wonder they're only indifferent to each other."
+            m "Things could have been much different, you know?"
+            show yuri zorder 3 at f41
+            show monika zorder 2 at t44
+            y "I suppose. Whose to say that things still can't change?"
+            y "There's always the future to look forward to."
+            show yuri zorder 2 at t41
+            show natsuki zorder 3 at f42
+            n "I don't know about that, Yuri."
+            n "The future doesn't always hold good things."
+            n "For all you know, it could become worse."
+            show natsuki zorder 2 at t42
+            show sayori zorder 3 at f43
+            s "H-Hey, don't say things like that."
+            s "You have to stay positive!"
+            s "Besides you don't have to worry about that now anyway."
+            s "You have a box to take to the gym."
+            "Sayori looks towards Yuri who looks as if she's waiting for something."
+            s "Yuri? Aren't you gonna...?"
+            show yuri zorder 3 at f41
+            show sayori zorder 2 at t43
+            y "I suppose..."
+            "Yuri takes the other side of the box Natsuki is holding."
+            "I can see a look of relief on Natsuki's face as the box's weight is shared between the two of them."
+            y "Let's get going then, Natsuki."
+            show yuri zorder 2 at t41
+            show natsuki zorder 3 at f42
+            n "Yeah, whatever. Let's just get this over with."
+        show natsuki at thide
+        hide natsuki
+        show yuri at thide
+        hide yuri
+        show monika zorder 2 at t21
+        show sayori zorder 2 at t22
         "Natsuki and Yuri slowly move out of the room slowly but steadily maneuvering through the desks."
-        "As they enter the hallway, they seem to pick up their pace a little, almost turning into some kind of hustle.
+        "As they enter the hallway, they seem to pick up their pace a little, almost turning into some kind of hustle."
+        show monika zorder 3 at f21
+        m "Do you want to help me take this box then, [player]?"
+        "Monika lifts up the box near her."
+        "It doesn't look like it takes much effort for her."
+        m "I think I could use the help."
+        show monika zorder 2 at t21
+        mc "Sure, I don't think I could carry one myself anyway."
+        mc "Are you going to be alright by yourself here, Sayori?"
+        show sayori zorder 3 at f22
+        s "I'll be fine, though there are a lot of boxes."
+        s "I'd appreciate it if you guys could come back and make a return trip."
+        s "Otherwise, this coooooould take a while."
+        show monika zorder 3 at f21
+        show sayori zorder 2 at t22
+        m "I'll be sure to let the two of them know."
+        m "[player] and I will try to be quick."
+        m "Are you going to be bringing those boxes there yourself?"
+        show monika zorder 2 at t21
+        show sayori zorder 3 at f22
+        s "I don't see any other option, so I guess so."
+        s "Don't worry, I can handle it."
+        s "Just worry about getting that box over there and getting back."
+        s "You know, actually don't bother coming back."
+        s "I'll get them all there."
+        show monika zorder 3 at f21
+        show sayori zorder 2 at t22
+        m "I won't even ask."
+        m "Let's go, [player]. You can take that side."
+        "I take the side of the box Monika offers."
+        "It feels like the box is weightless, as if there's nothing inside it."
+        "Either that, or Monika is stronger than I've been led to believe."
     else:
         s "Just read ahead or something with the script."
         s "It might not be a good idea to actually practice though."
