@@ -12024,13 +12024,113 @@ label ch16_end:
         m "I don't know why you haven't changed yet, and I don't really care."
         m "Just go and do it before the play starts, okay?"
         mc "Got it."
+        m "I expect you'll do your part when the time comes."
+        m "Not like you'll have a choice anyway~"
+        show monika at thide
+        hide monika
     elif ch15_s_together:
         show mysteriousclerk 1a zorder 2 at t11
+        cl "So we're finally here, huh?"
+        cl "The climax of this whole thing."
+        "[cl_name] comes out of seemingly nowhere and puts a hand on my shoulder."
+        cl "I hope that you're ready to do your part."
+        mc "Did you do what you were supposed to do?"
+        cl "What {i}I{/i} was supposed to do?"
+        cl "I've done more than I was supposed to do."
+        cl "Meanwhile you have not gone above and beyond."
+        cl "But that's not why I'm here."
+        mc "Why are you here? And where is Sayori?"
+        cl "I don't know, probably getting ready for the play."
+        cl "Speaking of which..."
+        "He looks at me up and down judgmentally."
+        cl "Maybe you should be doing the same."
+        cl "You haven't even put on your outfit yet."
+        mc "Has everyone else done that already?"
+        mc "I thought we still had some time."
+        cl "I noticed everyone already in their little costumes."
+        cl "Quite spectacular, if I do say so myself."
+        cl "Sayori must have pulled some strings to get them."
+        cl "Or you know, she materialized them out of thin air."
+        cl "She could do that if she wanted."
+        cl "That kinda goes against the laws of physics but then again..."
+        cl "None of this really makes any sense, if you think about it."
+        mc "How do you think this will turn out?"
+        if ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2] and ch16_ay_message[3]:
+            cl "How this will turn out entirely depends on you now."
+            cl "You've removed the part of Ayame that...that..."
+            cl "Ah, well it's not my place to judge."
+            cl "This isn't my time anyway..."
+        elif ch16_ay_message[0] and ch16_ay_message[1]:
+            cl "I'd say you have some control of how this turns out."
+            cl "What happens depends on what you do."
+            cl "If you make the right choices and whatnot."
+            cl "And you preserved the piece of Ayame that...never mind."
+        else:
+            cl "At this point? Who knows?"
+            cl "You didn't follow Sayori's instructions so I guess we'll see how this all plays out, won't we?"
+            cl "I don't even know how you managed to screw up that badly."
+            cl "Unless, of course, this is all intentional."
+            cl "In which case, you better know what the hell you're doing."
+            cl "Because I sure as hell don't know if you're just messing around or if you're actually doing this because you don't know any better."
+        cl "Maybe you'll actually--"
+        show sayori 1a zorder 3 at f21
+        show mysteriousclerk zorder 2 at t22
+        s "Alright, that's enough. You can go now."
+        "Sayori steps between me and [cl_name] and faces him."
+        "Like he said, she was already in her outfit for the play."
+        "I have to say, seeing it on her...all I can say is that it looks incredible."
+        s "You still have things to do, you know."
+        show sayori zorder 2 zorder 2 at t21
+        show mysteriousclerk zorder 3 at f22
+        cl "I get the idea. I'll leave you two to it then."
+        cl "Perhaps you'll get a better sense of what to do next from her than from me."
+        cl "After all, she's probably--"
+        show sayori zorder 3 at f21
+        show mysteriousclerk zorder 2 at t22
+        s "Go."
+        show sayori zorder 2 at t21
+        "Sayori points towards the door of the gym."
+        show mysteriousclerk zorder 3 at f22
+        cl "I'm going. I'm going."
+        show mysteriousclerk at thide
+        hide
+        show sayori zorder 2 at t11
+        s "He didn't bother you, did he?"
+        mc "Not at all. He just seemed like he was talking to himself."
+        mc "I didn't really pay attention to what he said."
+        s "He's done a lot and still has to do more."
+        s "All of this for a world that isn't even his anymore."
+        s "You have to understand his reasons for acting that way."
+        s "But enough about him. How are you feeling?"
+        mc "I'm ready for what comes next. Or at least, I think I am."
+        mc "All that's left to do is see how this all plays out, right?"
+        s "Yes...I suppose that's all there is for you to do."
+        s "As for me...well, you'll see what will happen."
+        s "[cl_name] still has to do some final things, but nothing you need to worry about."
+        mc "Should I watch out for anything?"
+        s "You should...just keep a close eye on everyone."
+        s "Not just the other three members but me and Ayame too."
+        s "You never know what could happen. Maybe you'll prevent something bad from happening."
+        mc "Are you saying you're gonna be doing something bad?"
+        mc "I understand why you want me to watch out for Ayame and the others, but you?"
+        s "In the end, I know you'll make the right decision."
+        s "So please, just do what's right. For everyone."
+        s "Anyway, I have to go talk to some people."
+        s "It's related to the play, I won't take long."
+        s "In the meantime, you should probably get changed!"
+        mc "Right, I'll see you later, Sayori."
+        "Sayori gives a wide smile before rushing off to a group of students."
+        "I wonder what that's about..."
+        show sayori at thide
+        hide sayori
     else:
     "I guess I better change into that outfit."
     "People are already starting to fill up the empty spaces around the gym."
     "I don't want to get caught up in all of that especially with the play so close."
     # Play finally begins
+    scene bg gym with wipeleft
+    "It's finally time. The five of us are backstage making last minute preparations."
+    "Other than that, everyone seems to be"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
