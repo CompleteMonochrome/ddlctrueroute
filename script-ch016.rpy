@@ -9560,7 +9560,7 @@ label ch16_end:
         show sayori zorder 2 at t22
         mc "W-What? What exactly are you talking about here, Sayori?"
         mc "I thought you said things would be clear when we got here."
-        show sayori zorder 3 at f22
+        show sayori 1d zorder 3 at f22
         s "They will be soon, [player]. Just wait a second..."
         s "It will all come back to you."
         s "At least, it should all come back to you. I don't see any reason it shouldn't."
@@ -9574,22 +9574,23 @@ label ch16_end:
         "As if he shouldn't be here...for some reason."
         "I can't really explain why, it just feels wrong that he's here."
         mc "What is it exactly that you want with me?"
-        show mysteriousclerk zorder 3 at f21
+        show mysteriousclerk 5a zorder 3 at f21
         cl "We want to bring you up to scratch."
         cl "You performed your duty well, I think."
+        cl 5e "At least, I hoped you did."
         cl "I mean, I guess we're gonna find out soon, aren't we?"
         "The man looks at Sayori impatiently."
-        cl "Er, what are we waiting for exactly?"
+        cl 5f "Er, what are we waiting for exactly?"
         show mysteriousclerk zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 1c zorder 3 at f22
         s "I don't know...it should be working."
         s "I just did what I usually do, but in reverse."
-        s "That's all there is to it, right?"
-        show mysteriousclerk zorder 3 at f21
+        s 1o "That's all there is to it, right?"
+        show mysteriousclerk 4b zorder 3 at f21
         show sayori zorder 2 at t22
         cl "No idea. Maybe it just takes a while."
         cl "But we don't really have that much time, do we?"
-        cl "Or at least, we wouldn't if you weren't doing that thing you're doing."
+        cl 4b "Or at least, we wouldn't if you weren't doing that thing you're doing."
         show mysteriousclerk zorder 2 at t21
         mc "I seriously have no idea what the two of you are talking about."
         mc "And I feel really unsafe here for some reason."
@@ -9603,17 +9604,17 @@ label ch16_end:
         "Sayori's plan and why she wiped my memories in the first place."
         "I fall to the floor, I think the pain finally caught up to me."
         mc "A-Ah...okay. I was not expecting that."
-        show sayori zorder 3 at f22
+        show sayori 2m zorder 3 at f22
         s "A-Are you okay, [player]?"
         s "You're not hurt, are you?"
         show sayori zorder 2 at t22
         mc "I'm fine, Sayori. Or at least, I think I am."
         mc "My whole body aches a little, especially my head."
         mc "But I'll live."
-        show sayori zorder 3 at f22
+        show sayori 2f zorder 3 at f22
         s "Do you...you know...feel any different?"
         s "Is everything clear to you now?"
-        show mysteriousclerk zorder 3 at f21
+        show mysteriousclerk 3f zorder 3 at f21
         show sayori zorder 2 at t22
         cl "Stop dancing around the real question."
         cl "Judging by [player_possessive] reaction, it's clear that something happened to [player_reflexive]."
@@ -9621,38 +9622,39 @@ label ch16_end:
         show mysteriousclerk zorder 2 at t21
         mc "I remember. Some of it is still coming back to me."
         mc "But I know what the general idea was, I think."
-        show mysteriousclerk zorder 3 at f21
+        show mysteriousclerk 1h zorder 3 at f21
         cl "You think you know, well that's always reassuring."
         cl "Whatever, we'll have to work with that."
         show mysteriousclerk zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 1c zorder 3 at f22
         s "Did you manage to get the message across?"
         s "If you did, it makes my job a whole lot easier."
-        show mysteriousclerk zorder 3 at f21
+        show mysteriousclerk 1d zorder 3 at f21
         show sayori zorder 2 at t22
         cl "Or if you didn't..."
+        show mysteriousclerk 1e
         "[cl_name] stares at me with focused eyes."
         cl "You know, it's fine. We'll make do."
         show mysteriousclerk zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 1l zorder 3 at f22
         s "Um...what? Is there a reason that would happen?"
         s "I gave pretty clear instructions on what to do."
-        show mysteriousclerk zorder 3 at f21
+        show mysteriousclerk 1c zorder 3 at f21
         show sayori zorder 2 at t22
         cl "Look, I'm just saying that people can make mistakes."
         cl "We don't know the result anyway so there's no point arguing about it."
         show mysteriousclerk zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 1a zorder 3 at f22
         s "I guess the best way is to hear it from [player]."
         s "So, why don't you tell us what you did with Ayame?"
-        s "Did you get anywhere with her?"
+        s 1c "Did you get anywhere with her?"
         s "Was there any sort of indication that it actually worked?"
         show sayori zorder 2 at t22
         mc "Well..."
         mc "I don't actually know if I did it correctly or not."
         mc "I know you put the instructions in my head but..."
         mc "I don't know if I did them correctly."
-        show sayori zorder 3 at f22
+        show sayori 1b zorder 3 at f22
         s "Just tell us what happened, then we can work from there."
         show sayori zorder 2 at t22
         if ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2] and ch16_ay_message[3]:
@@ -9662,44 +9664,46 @@ label ch16_end:
             mc "As if she was flinching every time she had to answer."
             mc "When I asked the final question...nothing seemed out of the ordinary."
             mc "At least, at first."
-            show sayori zorder 3 at f22
+            show sayori 1f zorder 3 at f22
             s "So it didn't work?"
             show sayori zorder 2 at t22
             mc "You didn't let me finish what I was saying."
             mc "When she was in the middle of saying something, she suddenly screamed."
             mc "It was just so sudden too and seemingly came out of nowhere."
-            show mysteriousclerk zorder 3 at f21
+            show mysteriousclerk 2o zorder 3 at f21
             cl "Ah...so you went through with it, did you?"
-            cl "Well then...I suppose that was your goal."
+            cl 2c "Well then...I suppose that was your goal."
             show mysteriousclerk zorder 2 at t21
-            show sayori zorder 3 at f22
+            show sayori 1h zorder 3 at f22
             s "Don't you mean {i}our{/i} goal?"
             s "I mean this is what we wanted, right? For her to be cleansed or whatever you called it."
-            show mysteriousclerk zorder 3 at f21
+            show mysteriousclerk 4d zorder 3 at f21
             show sayori zorder 2 at t22
             cl "I mean...that's what you wanted, Sayori."
             cl "You wanted things to be easy, I just gave you that answer."
-            cl "Look, it doesn't really matter."
+            cl 4h "Look, it doesn't really matter."
             cl "What's done is done, there's nothing we can do about it now."
             show mysteriousclerk zorder 2 at t21
             mc "Did I do something I wasn't supposed to...?"
-            show mysteriousclerk zorder 3 at f21
+            show mysteriousclerk 5l zorder 3 at f21
             cl "{i}You{/i} did nothing wrong, [player]. You simply did what you were told."
-            cl "Can't exactly fault you for that when you weren't even in control of your own actions."
-            cl "But let's not speak of this anymore, it's just going to make this all the more confusing."
+            cl 5m "Can't exactly fault you for that when you weren't even in control of your own actions."
+            cl 5h "But let's not speak of this anymore, it's just going to make this all the more confusing."
             show mysteriousclerk zorder 2 at t21
-            show sayori zorder 3 at f22
+            show sayori 1f zorder 3 at f22
             s "If you had other plans, you could have--"
-            show mysteriousclerk zorder 3 at f21
+            show mysteriousclerk 5d zorder 3 at f21
             show sayori zorder 2 at t22
             cl "This is your time, not mine. I have no claim to it."
             cl "I'm only here to finish what should have been done long ago."
-            cl "Now, hurry up and say what you need to before you waste more time."
-            cl "You don't know how long you can keep this state of time up, so chop, chop!"
+            cl 5c "Now, hurry up and say what you need to before you waste more time."
+            cl 5i "You don't know how long you can keep this state of time up, so chop, chop!"
             show mysteriousclerk zorder 2 at t21
-            show sayori zorder 3 at f22
-            s "...Okay. We'll talk about it later then."
-            s "[player], thank you for doing what I said."
+            show sayori 1h zorder 3 at f22
+            s "I...Okay. We'll talk about it later then."
+            "Sayori looks at [cl_name] one more time, as if trying to figure out what could be wrong."
+            "I have a feeling I know what it is, but I don't think I should say it."
+            s 1d "[player], thank you for doing what I said."
             s "I know it was wrong to take your memories from you but it was necessary."
             s "You understand, right? No hard feelings?"
             show sayori zorder 2 at t22
@@ -9710,61 +9714,63 @@ label ch16_end:
         elif ch16_ay_message[0] and ch16_ay_message[1]:
             mc "I could feel she was shaken a little bit."
             mc "But I think I messed up somehow."
-            show sayori zorder 3 at f22
-            s "You messed up? What do you mean?"
-            s "How could that have happened? I thought I told you what to do."
+            show sayori 1f zorder 3 at f22
+            s "Y-You messed up? What do you mean?"
+            s 1h "How could that have happened? I thought I told you what to do."
             s "Oh, no...this is all wrong. I don't know if I'll be able to stop it."
-            show mysteriousclerk zorder 3 at f21
+            show mysteriousclerk 2e zorder 3 at f21
             show sayori zorder 2 at t22
             cl "Before you start panicking, we don't know the full story."
             cl "Let's let [player_reflexive] explain exactly what happened before we jump to any conclusions."
-            cl "So go on, tell us what you did."
+            cl 2f "So go on, tell us what you did."
             show mysteriousclerk zorder 2 at t21
             mc "Well, I remember asking her the right questions to start with."
             mc "At least, I think I did because she started flinching."
             mc "Like she was just hit somehow, despite not really saying anything about it."
             mc "But when I asked the last two questions, there was no reaction."
             mc "I think I might have switched them or something."
-            show sayori zorder 3 at f22
+            show sayori 1f zorder 3 at f22
             s "What gives you that idea?"
             show sayori zorder 2 at t22
             mc "There was just no reaction after the first two questions."
             mc "She was just...normal, I guess."
             mc "I was kinda expecting maybe she would yell or maybe give some kind of indication."
             mc "But no, we just continued our conversation like normal, mostly."
-            show mysteriousclerk zorder 3 at f21
+            show mysteriousclerk 2a zorder 3 at f21
             cl "So you didn't do what you were told, did you?"
-            cl "Or at least, not completely."
+            cl 2b "Or at least, not completely."
             "[cl_name] shrugs and turns towards Sayori."
             cl "Well, it's not the end of the world."
             show mysteriousclerk zorder 2 at t21
-            show sayori zorder 3 at f22
+            show sayori 2j zorder 3 at f22
             s "Is that meant to be a joke? In case you forgot our situation, it very well could be!"
-            s "If she isn't stopped enough, then all of this effort would have been for nothing."
-            s "I don't know what I can do if she's still like how you described it."
-            show mysteriousclerk zorder 3 at f21
+            s "If she isn't weak enough, then all of this effort would have been for nothing!"
+            "Sayori stops as she realizes she's yelling at the person trying to help her."
+            s 2k "I-I'm sorry..."
+            s "I just don't know what I can do if she's still like how you described it."
+            show mysteriousclerk 1e zorder 3 at f21
             show sayori zorder 2 at t22
             cl "Look, I'm saying there's a chance we can still do this."
-            cl "[player] managed to get rid of some of the inner part of her."
-            cl "Not all of it, but possibly enough for you to deal with her."
+            cl 2e "[player] managed to get rid of some of the inner part of her."
+            cl 2b "Not all of it, but possibly enough for you to deal with her."
             show mysteriousclerk zorder 2 at t21
-            show sayori zorder 3 at f22
+            show sayori 1g zorder 3 at f22
             s "I don't want to doubt you or anything..."
             s "But do you have some kind of ulterior motive here, [cl_name]?"
             s "You kinda seem like you didn't want her to be completely dealt with."
-            show mysteriousclerk zorder 3 at f21
+            show mysteriousclerk 1c zorder 3 at f21
             show sayori zorder 2 at t22
-            cl "If it comes to it, I'll tell you."
+            cl "If it comes down to it, I'll tell you the answer to that question."
             cl "But as of right now, that information is not your priority."
-            cl "Your priority is dealing with the Ayame you have right now."
+            cl 1e "Your priority is dealing with the Ayame you have right now."
             cl "There's nothing the two of us can really do to change that situation, is there?"
-            cl "And if this is the path that we've been led down, there must be a reason for it, no?"
+            cl 1f "And if this is the path that we've been led down, there must be a reason for it, no?"
             show mysteriousclerk zorder 2 at t21
             "Sayori sighs then looks at me directly."
-            show sayori zorder 3 at f22
-            s "You have your reason for doing this."
+            show sayori 1h zorder 3 at f22
+            s "You must have your reason for doing this."
             s "I know you can just go back and change things if you really wanted to."
-            s "If this is a mistake you're not going to change, then I'll stick with it."
+            s 1d "If this is a mistake you're not going to change, then I'll stick with it."
             s "Maybe it will lead down a better path...who knows?"
             show sayori zorder 2 at t22
             mc "Okay, then what comes next?"
@@ -9772,89 +9778,91 @@ label ch16_end:
             mc "I just don't really know if I did anything."
             mc "I think I saw her flinch, once maybe. I'm not sure."
             mc "But I might have completely messed it up."
-            show mysteriousclerk zorder 3 at f21
+            show mysteriousclerk 5h zorder 3 at f21
+            cl "I almost don't want to know the answer but..."
             cl "How completely is completely?"
             cl "You at least got through to her a little bit, didn't you?"
             show mysteriousclerk zorder 2 at t21
             mc "I honestly don't know, I might have."
             mc "If I did, she didn't really show any sign of it."
-            show sayori zorder 3 at f22
+            show sayori 1h zorder 3 at f22
             s "This sounds pretty bad...was it intentional?"
             "Sayori turns her gaze directly towards me."
-            s "You can tell me, because you must have your reason for it."
+            s 1f "You can tell me, because you must have your reason for it."
             s "After all, I did give you pretty clear instructions."
-            show mysteriousclerk zorder 3 at f21
             show sayori zorder 2 at t22
+            "Even I don't know the answer to that question."
+            show mysteriousclerk 5c zorder 3 at f21
             cl "Look, I know it sounds like it's the end of the world..."
-            cl "And it just might be...but we can still do this."
+            cl 5d "And it just might be...but we can still do this."
             cl "There must be a good reason that [player] messed up."
             cl "If this is the path we have to follow, then shouldn't we see it through?"
             show mysteriousclerk zorder 2 at t21
-            show sayori zorder 3 at f22
+            show sayori 1j zorder 3 at f22
             s "You sound pretty optimistic about this."
             s "I really don't know if we can deal with her as she is."
-            s "If she's barely changed then what can we really do?"
-            show mysteriousclerk zorder 3 at f21
+            s "If she's barely changed, if she even did, then what can we really do?"
+            show mysteriousclerk 2e zorder 3 at f21
             show sayori zorder 2 at t22
             cl "Have you forgotten your own power? You're just as good as she is."
-            cl "Possibly even better. Besides, she hasn't even awakened it yet."
+            cl 2b "Possibly even better. Besides, she hasn't even awakened it yet."
             show mysteriousclerk zorder 2 at t21
-            show sayori zorder 3 at f22
+            show sayori 1f zorder 3 at f22
             s "Awakened what...?"
-            show mysteriousclerk zorder 3 at f21
+            show mysteriousclerk 2e zorder 3 at f21
             show sayori zorder 2 at t22
             cl "Look, that doesn't matter. We're wasting time right now."
             cl "Shouldn't you be figuring out the next stage in this grand plan of yours?"
-            cl "And don't forget, we still have to try to do our original plan."
+            cl 2c "And don't forget, we still have to try to do our original plan."
             cl "Regardless of whether or not she was changed."
-            cl "There's still a chance, no matter how miniscule that may be."
+            cl "There's still a chance, no matter how minuscule that may be."
             show mysteriousclerk zorder 2 at t21
-            show sayori zorder 3 at f22
+            show sayori 1k zorder 3 at f22
             s "All I'm hoping for is to get through this day."
             s "I don't know what you or [player] have done to mess this up but..."
-            s "I'm putting my trust on the two of you to make it work."
+            s 1d "I'm putting my trust on the two of you to make it work."
             s "That's not saying I'm not going to try my hardest too."
             show sayori zorder 2 at t22
             mc "What now then?"
-        show sayori zorder 3 at f22
+        show sayori 1c zorder 3 at f22
         s "Now...we try to make it work with what we have."
         s "Everything here is already set out how we planned, right?"
-        show mysteriousclerk zorder 3 at f21
+        show mysteriousclerk 1b zorder 3 at f21
         show sayori zorder 2 at t22
         cl "I did everything you asked of me to a T. I just hope you know what you're doing."
         show mysteriousclerk zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 1l zorder 3 at f22
         s "What do you mean? This was mostly your idea..."
-        s "I'm just following what you said."
-        s "Why would you say something like that?"
-        show mysteriousclerk zorder 3 at f21
+        s "I'm just following what you said, aren't I?"
+        s "So why would you say something like that?"
+        show mysteriousclerk 1a zorder 3 at f21
         show sayori zorder 2 at t22
         cl "Well, I only provided you with the plan."
-        cl "It was you who actually set it into motion."
+        cl 1f "It was you who actually set it into motion."
         cl "The consequences of whatever happens besides our--"
-        cl "Pardon me, {i}your{/i} desires does not fall to me."
+        cl 1e "Pardon me, {i}your{/i} desires does not fall to me."
         cl "It is on you."
         show mysteriousclerk zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 1h zorder 3 at f22
         s "I thought we were meant to be working together."
         s "You never would have told me this was possible if you didn't believe in it too."
         s "Has something changed since then?"
-        s "You're acting indifferent...more than usual."
-        show mysteriousclerk zorder 3 at f21
+        s 1j "You're acting indifferent...more than usual."
+        show mysteriousclerk 2e zorder 3 at f21
         show sayori zorder 2 at t22
-        cl "I assure you I am seeing this through with you."
+        cl "I assure you, I am seeing this through with you."
         cl "As for what has changed..."
-        cl "Well, the circumstances don't matter. It's all set in motion as of right now."
+        cl 2i "Well, the circumstances don't matter. It's all set in motion as of right now."
         cl "There is nothing you or I can do to change what has already happened."
         show mysteriousclerk zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 2h zorder 3 at f22
         s "We could always--"
-        show mysteriousclerk zorder 3 at f21
+        show mysteriousclerk 2j zorder 3 at f21
         show sayori zorder 2 at t22
         cl "Do I need to remind you that we're short on time here?"
         cl "Just stop concerning yourself with anything except the task at hand."
         show mysteriousclerk zorder 2 at t21
-        show sayori zorder 3 at f22
+        show sayori 2i zorder 3 at f22
         s "Look, I don't know what I did or what {i}someone else{/i} did..."
         s "But if everything does go according to plan..."
         show sayori zorder 2 at t22
@@ -9862,7 +9870,7 @@ label ch16_end:
         "I'm not sure if that's because she didn't say anything or because she went quiet as she was saying it."
         mc "I still don't know what's supposed to happen next."
         mc "But I remember everything now, there has to be some way I can help."
-        show sayori zorder 3 at f22
+        show sayori 2d zorder 3 at f22
         s "You remembering is going to be important for all of this."
         s "Right now though, you can't really do anything."
         s "All you can do is watch as we try to do our thing."
@@ -9870,7 +9878,7 @@ label ch16_end:
         mc "And what thing is that exactly?"
         mc "Does it have something to do with why this room looks exactly the same as our club room?"
         mc "Is it our club room?"
-        show sayori zorder 3 at f22
+        show sayori 2a zorder 3 at f22
         s "No, but it's a very good replica, isn't it?"
         s "You can thank [cl_name] for that."
         s "He spent a ridiculous amount of time getting it juuuuuust right."
@@ -9878,69 +9886,69 @@ label ch16_end:
         mc "But what's the point of it?"
         mc "Does it have anything to do with your plan at all?"
         mc "Or is it just because you like the atmosphere of the club or something?"
-        show sayori zorder 3 at f22
-        s "Ehehe, as much as I do like it, that's not the point of this."
-        s "It's a really odd condition for our plan to work."
-        s "I'm still not entirely sure how it works, but [cl_name] says the room has to look as close as possible."
+        show sayori 4l zorder 3 at f22
+        s "Ehehe, as much as I do like the atmosphere, that's not the reason."
+        s "It's just a really odd condition for our plan to work."
+        s 4o "I'm still not entirely sure how it works, but [cl_name] says the room has to look as close as possible."
         show sayori zorder 2 at t22
         mc "This doesn't make {i}any{/i} sense at all."
-        show mysteriousclerk zorder 3 at f21
+        show mysteriousclerk 1a zorder 3 at f21
         show sayori zorder 2 at t22
         cl "You know the room Ayame is in right now?"
         show mysteriousclerk zorder 2 at t21
         mc "Yeah, what about it?"
-        show mysteriousclerk zorder 3 at f21
+        show mysteriousclerk 1b zorder 3 at f21
         cl "Like I said before, it's no ordinary room."
         cl "It's got a special connection to me and to her."
-        cl "I can manipulate the room in special ways, similar to how Sayori can use her powers."
+        cl 1a "I can manipulate the room in special ways, similar to how Sayori can use her powers."
         cl "But my powers are much more limited in scope."
         cl "It's quite literally just within the room and the surrounding area."
         show mysteriousclerk zorder 2 at t21
         mc "I still don't get it."
-        show mysteriousclerk zorder 3 at f21
+        show mysteriousclerk 1f zorder 3 at f21
         cl "If you'd let me speak, I could finish my explanation."
         cl "There needs to be a strong connection between that room and the one we're in."
-        cl "So I had to change this room to look as much your original club as possible for Sayori's sake."
+        cl 1e "So I had to change this room to look as much your original club as possible for Sayori's sake."
         cl "That's so she can use my as a sort of link to the other room."
-        cl "The room that Ayame and the others are in look like {i}my{/i} original club."
+        cl 2a "The room that Ayame and the others are in look like {i}my{/i} original club."
         cl "So there's a strong resonance between the two rooms right now because--"
         cl "Well, let's just say that the connection between Ayame and I, it's strong."
-        cl "And through that connection I have with her, the two rooms are connected."
+        cl 2b "And through that connection I have with her, the two rooms are connected."
         cl "A small part of her may remember that old club room but it should be insignificant enough for her to ignore."
-        cl "Look, it's really hard to explain, okay?"
+        cl 4c "Look, it's really hard to explain, okay?"
         cl "I'm no expert on the matter. To be frank, all of this is theory."
         cl "I haven't done anything like this but according to Sayori, it {i}should{/i} work."
         show mysteriousclerk zorder 2 at t21
         "Well, that's reassuring."
         mc "So there's a connection but how is that going to help at all?"
         mc "What exactly should happen?"
-        show sayori zorder 3 at f22
+        show sayori 3d zorder 3 at f22
         s "That's where I come in."
         s "Using the connection between [cl_name] and Ayame, I can bypass this sort of barrier she's put up."
         s "I don't know if she did it subconsciously, but I can't get through to her like I can everyone else."
-        s "When I do get through to her, I'll be able to try and get through that barrier."
+        s 3l "When I do get through to her, I'll be able to try and get through that barrier and do some things."
         show sayori zorder 2 at t22
         mc "A barrier? What do you mean?"
-        show sayori zorder 3 at f22
+        show sayori 1h zorder 3 at f22
         s "Every time I tried to get into her head, I just couldn't."
         s "It was like I was being blocked by something...or someone."
-        s "I kinda knew it wouldn't be that easy so that's why we did the questions."
-        s "Each question slowly weakened that barrier, hopefully enough for me to get through."
+        s 1i "I kinda knew it wouldn't be that easy so that's why we did the questions."
+        s "Each question was supposed to slowly weaken that barrier, hopefully enough for me to get through."
         show sayori zorder 2 at t22
         mc "And what exactly is it you're going to be doing to her?"
         mc "Once you're inside her head, what's going to happen?"
         mc "Are you going to change her memories or something?"
-        show sayori zorder 3 at f22
+        show sayori 1h zorder 3 at f22
         s "No...I just want to make things easier."
         "Sayori seems hesitant for some reason."
         "I suppose I would be too, given what she has to do."
         "I wonder just how many times she's done that to the rest of us without us even knowing..."
-        s "I don't want to change who she is, it's just that--"
-        show mysteriousclerk zorder 3 at f21
+        s 1k "I don't want to change who she is, it's just that--"
+        show mysteriousclerk 1f zorder 3 at f21
         show sayori zorder 2 at t22
         cl "You and I both knew that it would come to this."
         cl "After reaching this far, are you really that afraid to go ahead with the plan?"
-        cl "You've done this sort of thing before, so it's now or never."
+        cl 1e "You've done this sort of thing before, so it's now or never."
         cl "I won't be able to maintain this connection forever."
         cl "Who knows when she's going to leave the room?"
         show mysteriousclerk zorder 2 at t21
@@ -9948,16 +9956,16 @@ label ch16_end:
         mc "It sounds to me like you're hesitating because you think it's wrong."
         mc "That just shows you've grown as a person because you don't want to do the wrong thing."
         mc "Or maybe it's because you think you can't do it--"
-        show sayori zorder 3 at f22
+        show sayori 1j zorder 3 at f22
         s "I can do it! I know I can..."
-        s "I'm just doubting if the ends justify the means."
+        s 1h "I'm just doubting if the ends justify the means."
         s "If there was some other way I could stop this danger that's coming..."
-        show mysteriousclerk zorder 3 at f21
+        show mysteriousclerk 1h zorder 3 at f21
         show sayori zorder 2 at t22
         cl "We don't have that much longer."
         "[cl_name] looks like he's under some sort of strain."
         "Is it really that difficult to keep this connection up?"
-        cl "So if you could hurry it up, that would be ideal."
+        cl 1i "So if you could hurry it up, that would be ideal."
         cl "Otherwise it would have all been a waste and we're all doomed."
         cl "But you know, not to state the obvious or anything."
         show mysteriousclerk zorder 2 at t21
@@ -9968,23 +9976,24 @@ label ch16_end:
         "Sayori looks at me with a curious look on her face."
         "She mouths something I can't quite figure out and grabs my hand."
         "She holds it tight, as if her life was depending on it."
-        show sayori zorder 3 at f22
+        show sayori 1d zorder 3 at f22
         s "Thank you, [player]."
         s "I know what I need to do."
         s "[cl_name], are you ready?"
-        show mysteriousclerk zorder 3 at f21
+        show mysteriousclerk 1j zorder 3 at f21
         show sayori zorder 2 at t22
         cl "Is that some kind of sick joke?"
         cl "It literally feels like I'm dying here."
         cl "So if you could {i}please{/i} get it over with already, that would be much appreciated."
         show mysteriousclerk zorder 2 at t21
         "Sayori takes a deep breath and looks at me."
-        show sayori zorder 3 at f21
+        show sayori 2d zorder 3 at f21
         s "Get ready, [player]."
         show sayori zorder 2 at t21
         mc "For what--"
         show sayori at thide
         hide sayori
+        show mysteriousclerk zorder 2 at t11
         "Sayori suddenly loses her balance and falls towards the floor."
         "Luckily for her, I managed to react quick enough to catch her before she fell."
         "I can only assume she's doing what she has to do."
