@@ -231,6 +231,10 @@ image s_cg4_exp2:
     "mod_assets/images/cg/s_cg4_exp2.png"
 image s_cg4_exp3:
     "mod_assets/images/cg/s_cg4_exp3.png"
+image s_cg4_exp4:
+    "mod_assets/images/cg/s_cg4_exp4.png"
+image s_cg4_exp5:
+    "mod_assets/images/cg/s_cg4_exp5.png"
 
 image m_cg1_base:
     "mod_assets/images/cg/m_cg1_base.png"

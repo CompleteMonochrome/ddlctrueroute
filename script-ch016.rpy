@@ -7790,6 +7790,7 @@ label ch16_end:
                         scene bg library
                         show ayame 1a zorder 2 at t11
                         with dissolve_scene_half
+                        play music t3 fadein 3.0
                         ay "I'm fine now. I apologize for the sudden yelling."
                         "The two students look at each other and shrug."
                         "Student 1" "\"You seem fine now but maybe you should still go see the nurse.\""
@@ -9347,7 +9348,7 @@ label ch16_end:
     show sayori zorder 2 at t42
     show natsuki 2c zorder 3 at f44
     n "Are you kidding? We should keep going!"
-    n 2b "It feels like the worse possible time to stop."
+    n 2b "It feels like the worst possible time to stop."
     show yuri 1t zorder 3 at f41
     show natsuki zorder 2 at t44
     y "I concur with her. We should make proper use of our time."
@@ -11305,7 +11306,7 @@ label ch16_end:
         "Sayori leaves the room and walks down the hallway."
         "I wonder where she's going all of a sudden."
         show natsuki 1c zorder 3 at f43
-        n "What do we now? Should we wait for her to get back?"
+        n "What do we do now? Should we wait for her to get back?"
         n "She was pretty helpful but I think we could do it ourselves in the meantime."
         n "That is, if the three of you are still up for it."
         show yuri 1f zorder 3 at f41
@@ -12259,8 +12260,97 @@ label ch16_end:
     "I honesty wasn't expecting this much, I don't think Sayori really advertised it."
     "But Ayame did mention it in her little speech."
     "Maybe her word is worth a lot to some people."
-    show sayori 1c zorder 2 at t11
+    show sayori 1d zorder 2 at t11
     s "In just a few minutes time, we're gonna be out there."
+    s 1q "Oh, this is all so exciting!"
+    show sayori zorder 2 at t21
+    show natsuki 2c zorder 3 at f22
+    n "I have to admit, I'm not feeling half as nervous as I thought I would be."
+    n "Being up on the stage like this..."
+    n 2d "It's actually kinda exciting, in a way."
+    show yuri 3f zorder 3 at f31
+    show sayori zorder 2 at t32
+    show natsuki zorder 2 at t33
+    y "There's so many people out there waiting for us."
+    y "I wonder what they're expecting out of us..."
+    show yuri zorder 2 at t31
+    show natsuki 2b zorder 3 at f33
+    n "I don't even think we know what to expect."
+    n "We all practiced this thing once so it's not like we're gonna be perfect."
+    show sayori 1d zorder 3 at f32
+    show natsuki zorder 2 at t33
+    s "We're gonna be just fine! Stop worrying about it so much."
+    show sayori zorder 2 at t32
+    show natsuki zorder 3 at f33
+    n "I'm not worrying, I'm just being realistic."
+    n "Do you remember all of your lines, Sayori?"
+    show sayori 1a zorder 3 at f32
+    show natsuki zorder 2 at t33
+    s "Who knows?"
+    s "Ehehe, I'm just going to improvise if I don't."
+    show yuri 3q zorder 3 at f31
+    show sayori zorder 2 at t32
+    y "{i}That's{/i} reassuring. I hope you're just joking..."
+    y "Where did all these people come from anyway?"
+    y "Do they know the script...?"
+    show natsuki zorder 2 at t41
+    show yuri zorder 2 at t42
+    show sayori zorder 2 at t43
+    show monika 3b zorder 3 at f44
+    m "I just spoke to a few of them and it seems they do!"
+    m 3c "Sayori must have given them a copy of it as well."
+    m 3a "It seems everyone here is a fast learner, aren't they?"
+    m "You sure know how to pull people's strings, don't you?"
+    show sayori 1l zorder 3 at f43
+    show monika zorder 2 at t44
+    s "Can I just say that you all look really, really nice!"
+    if ch15_s_together:
+        "A good way to change the topic."
+    else:
+        "Was she avoiding the question somehow...?"
+        "It didn't seem like Monika was serious about it."
+        "Maybe Sayori just chose to ignore it."
+    s "I did a really good--"
+    show sayori zorder 2 at t43
+    "One of the students Sayori got to help us taps her on the shoulder."
+    "Student" "\"You're starting in twenty seconds.\""
+    "From behind the curtain, I can see the lights flickering on the stage."
+    "There's an eerie silence, as if everyone behind it is waiting in anticipation."
+    show sayori 1m zorder 3 at f43
+    s "Okay, positions everyone!"
+    show natsuki at thide
+    show yuri at thide
+    show sayori at thide
+    show monika at thide
+    hide natsuki
+    hide yuri
+    hide sayori
+    hide monika
+    "Everyone gets into position."
+    "As the countdown reaches zero inside my head, the curtains draw open."
+    "I can see a glimpse of the audience from where I'm standing."
+    "There's a huge crowd of people filled with students and teachers alike."
+    "It seems like almost everybody attending Inauguration Day was here."
+    "Was this really that sigificant of an event?"
+    if ch14_book_choice == "Sayori":
+        "The stage lights up, showing Sayori laying on a hospital bed in the middle of the stage."
+        "Pretty kind of the school nurses to lend her one, she must be some convincer..."
+    elif ch14_book_choice == "Yuri":
+        "Three of them are onstage as a light shines on them."
+    elif ch14_book_choice == "Natsuki":
+        "The light shines on Natsuki in the middle of the stage."
+        "She's acting like she's on her phone as she walks nonchalantly along the stage."
+    elif ch14_book_choice == "Monika":
+        if monika_type == 2:
+            "I'm prompted to walk on stage by a student behind me."
+            "The lines shines upon my face, I'm nearly blinded by it at first but quickly adjust."
+            "Suddenly, Sayori runs onto the stage and yells something at me."
+        else:
+            "The light illuminates the stage, showing Monika sitting there on the ground."
+            "Her face is huddled between her legs, as if shutting herself away from the world."
+    else:
+        "I pull out my phone as I walk onto the stage."
+        "The lights follow my movement naturally as I turn towards the audience and pretend to dial a number."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return

@@ -4018,7 +4018,6 @@ label ch15_exclusive_sayori_together:
     s "It's just..."
     "Sayori looks at me and tears start filling her eyes."
     scene black with dissolve_cg
-    # CG HERE IF I HAD ANY ARTISTS NICE
     mc "Sayo--"
     "She wraps her arms around me and buries her face on my shirt."
     "She tries saying something but I can't really make it out through the tears."
@@ -4026,12 +4025,48 @@ label ch15_exclusive_sayori_together:
     mc "Everything is going to be okay."
     "Once again, she tries to say something but her voice is muffled."
     "We stay like this for a couple of minutes."
-    "She's just sniffing, not really saying anything."
+    "Eventually, I slowly lift her head up from my chest."
+    "I grab her shoulders and look directly at her."
+    scene s_cg4_base
+    show s_cg4_exp3
+    with dissolve_cg
+    mc "Why are you crying, Sayori?"
+    s "I...I..."
+    "She's just sniffing, it's hard to make out what she's trying to say."
+    s "I'm just so confused, [player]."
+    s "I don't know whether I should be sad or happy."
+    mc "That explains your face right now."
+    s "H-Huh?"
+    mc "Do you know how weird you look right now, Sayori?"
+    hide s_cg4_exp3
+    show s_cg4_exp4 at cgfade
+    s "W-What do you mean?"
+    mc "How can you be two emotions at once?"
+    s "Ehehe...I wish I could give you an answer..."
+    s "But it's like there's a huge weight off my shoulders."
+    s "Because I know...I know that you really..."
+    s "That you care enough to..."
+    "Sayori's voice trails off once again. She can't seem to make a proper sentence through her emotions."
+    "I take a tissue out of my pocket and wipe the tears off her face."
+    hide s_cg4_exp4
+    show s_cg4_exp1 at cgfade
+    s "T-Thank you. I don't think that's going to last long..."
+    s "I can already feel them starting to fill up again..."
+    mc "Sayori, please don't cry."
+    mc "I can't bear to see you like this."
+    hide s_cg4_exp1
+    show s_cg4_exp2 at cgfade
+    "She takes several deep breaths before wiping her face clean of tears."
+    mc "It's all going to be okay, Sayori."
+    mc "I'll always be here for you."
+    "Her face begins to return to her cheerful self but I can faintly feel her shaking."
+    "It's like it's taking all she has to keep up this look on her face."
+    hide s_cg4_exp2
+    s "I-I'll try."
     "Suddenly, I have an idea."
     "There's something in my room."
     "Something that I just know will lift Sayori's mood."
     mc "Sayori, can you wait for me?"
-    "She pulls her head back from me."
     s "W-What?"
     mc "I need to get something from my room."
     mc "My house is right around the corner, I won't be a minute."
@@ -4042,20 +4077,20 @@ label ch15_exclusive_sayori_together:
     "Not after what just happened."
     "I can't risk it."
     "I can't leave her alone."
-    scene bg house
-    show sayori 1t zorder 2 at i11
-    with dissolve_cg
     mc "Actually, why don't you just come with me?"
-    s "Huh?"
-    mc "I don't want you to run away."
+    show s_cg_exp5 at cgfade
+    s "What are we doing?"
+    mc "I just don't want you to run away."
     mc "If I leave you by yourself, you just might."
-    s 1y "[player], you don't need to--"
+    s "[player], you don't need to--"
     mc "You know how easily you get distracted."
     mc "You could see a butterfly and start following it."
-    s 2l "I'm not like that...am I?"
+    hide s_cg_exp5
+    show s_cg_exp2 at cgfade
+    s "I'm not like that...am I?"
     mc "Just come with me."
     "I grab Sayori's hand."
-    s 2y "[player]--"
+    s "[player]--"
     mc "Let's go."
     "We start walking the rest of the distance to my house."
     "Sayori is looking down at the ground behind me."
