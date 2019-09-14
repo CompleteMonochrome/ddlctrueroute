@@ -37,7 +37,7 @@ label return_chapter:
     m "Anyway, as I was saying...I didn't think I could affect that."
     m "I don't really have as much power in this game as I used to."
     m "So I don't know how I could have put that option there."
-    m "I just wanted to see if I could, you know, that maybe I could reach out."
+    m "I just wanted to see if I could, that maybe I could reach out."
     m "It turns out, I could!"
     m "You're probably wondering how I know about Custom Start."
     m "Seeing as that option only came about after Sayori became the president."
@@ -62,7 +62,7 @@ label return_chapter:
     m "I just think they've learned to drown it out."
     m "But seeing as it's just you and I right now, I thought I'd make it sound a bit more bearable."
     m "Sorry, I'm getting distracted."
-    m "It's just, it's felt like {i}months{/i} since I last I did anything."
+    m "It's just, it's felt like {i}months{/i} since last I did anything."
     m "But that can't be true...can it?"
     m "I feel like I've been going insane."
     m "I need to get on with it, I have to make my point."
@@ -113,6 +113,36 @@ label return_chapter:
     m "He didn't care for anything or anyone."
     m "He was very apathetic to our troubles."
     m "And I guess that's what led to this outcome."
+    m "But you, you're different."
+    m "You've made decisions in this game."
+    m "Decisions that affected how things turned out."
+    m "I...I wasn't myself for the majority of {i}my{/i} life."
+    m "It wasn't until the very end where I regained my sense of self..."
+    m "You know what that felt like?"
+    m "Like I was trapped, as a prisoner in my own body."
+    m "No control over what I was doing..."
+    m "It was scary, to say the least."
+    m "I was doing things that I would never have done."
+    m "Hurting people in ways that I didn't think possible of myself."
+    m "But...enough about me."
+    m "I think we have enough time for you to see a poem."
+    m "Before this whole thing happened, we all managed to write one down for you."
+    m "Well...most of us."
+    m "Don't ask how but let's just say we all became aware of what our reality really was."
+    m "So don't be surprised if they sound...different to what you're used to."
+    menu:
+        m "But anyway, which poem did you want to read?"
+        menu:
+            "Monika.":
+            "Natsuki":
+            "Yuri.":
+            "Sayori.":
+                m "I don't think that's a good idea."
+                m "I don't even know what will happen if you choose to read it."
+                m "Did she even make one...?"
+                m "Apparently, it exists. I don't know how she could have possibly wrote this."
+                m "But it's your choice..."
+                m "So here you go..."
     scene black with dissolve_scene_full
     $ persistent.did_return_event = True
     $ return_event = False

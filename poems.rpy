@@ -424,6 +424,27 @@ The light at the end of the tunnel
 The light through the darkness."""
 )
 
+    poem_yr = Poem(
+author = "yuri",
+title = "My Last Message",
+text = """\
+Had I known who you were
+I would have embraced the observer
+Given myself tenfold to you
+Its just something I cannot help.
+
+I was made this way
+Molded into the person I was
+Uncontrollable and irrational thoughts sway in my head
+No sense of self.
+
+Has my whole life been this way?
+Was I always meant to be an object with a single purpose?
+The reality is dark and grim
+Yet these feelings are undeniable
+I cannot stop myself from this urge."""
+)
+
     poem_n1 = Poem(
     author = "natsuki",
     title = "Eagles Can Fly",

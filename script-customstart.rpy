@@ -128,20 +128,20 @@ label choose_start:
             "No.":
                 s "Oh, okay."
                 s "Then let's get to it."
-    elif (currentdate <= (datetime.date(2019, 9, 15) + weekrange)) and persistent.arc_clear[0]:
-        menu:
-            "Hello?":
-                "Yes.":
-                    show screen tear(20, 0.1, 0.1, 0, 40)
-                    $ pause(0.25)
-                    $ return_chapter = True
-                    $ s_name = "Sayori"
-                    stop music
-                    $ renpy.save_persistent()
-                    stop sound
-                    jump return_chapter
-                "No.":
-                    pass
+    # elif (currentdate <= (datetime.date(2019, 9, 15) + weekrange)) and persistent.arc_clear[0]:
+    #     menu:
+    #         "Hello?":
+    #             "Yes.":
+    #                 show screen tear(20, 0.1, 0.1, 0, 40)
+    #                 $ pause(0.25)
+    #                 $ return_chapter = True
+    #                 $ s_name = "Sayori"
+    #                 stop music
+    #                 $ renpy.save_persistent()
+    #                 stop sound
+    #                 jump return_chapter
+    #             "No.":
+    #                 pass
     else:
         s "But we have to sort out a few things first."
 
