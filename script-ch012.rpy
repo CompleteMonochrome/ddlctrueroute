@@ -4271,7 +4271,7 @@ label ch12_end:
                 menu:
                     m "So, do you want to help me?"
                     "Yes.":
-                        $ ch12_markov_agree = True
+                        $ ch12_m_preagree = True
                         m 2b "Great."
                         m "I should warn you though..."
                         m 2j "Your ability to manipulate time? I don't think it's going to help you if you ever change your mind in the near future."
@@ -4287,7 +4287,7 @@ label ch12_end:
                         m 2e "But if this is really what you want..."
                         m "...then I'll tell you more tomorrow."
                     "No.":
-                        $ ch12_markov_agree = False
+                        $ ch12_m_preagree = False
                         m 4c "I'm a little surprised."
                         m "You agreed to mess with Sayori today and yet you say no to my proposition."
                         m 2d "I thought your curiosity would get the better of you."

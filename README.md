@@ -2,7 +2,7 @@
 
 # Doki Doki True Route
 
-Current Version: 0.9.6j
+Current Version: 0.9.6k
 
 To install, please find the download links in the reddit thread:
 https://www.reddit.com/r/DDLCMods/comments/a17l5d/doki_doki_true_route/

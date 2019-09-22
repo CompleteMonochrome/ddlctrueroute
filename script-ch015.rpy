@@ -4078,15 +4078,15 @@ label ch15_exclusive_sayori_together:
     "I can't risk it."
     "I can't leave her alone."
     mc "Actually, why don't you just come with me?"
-    show s_cg_exp5 at cgfade
+    show s_cg4_exp5 at cgfade
     s "What are we doing?"
     mc "I just don't want you to run away."
     mc "If I leave you by yourself, you just might."
     s "[player], you don't need to--"
     mc "You know how easily you get distracted."
     mc "You could see a butterfly and start following it."
-    hide s_cg_exp5
-    show s_cg_exp2 at cgfade
+    hide s_cg4_exp5
+    show s_cg4_exp2 at cgfade
     s "I'm not like that...am I?"
     mc "Just come with me."
     "I grab Sayori's hand."

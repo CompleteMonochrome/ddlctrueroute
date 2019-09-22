@@ -442,7 +442,8 @@ Has my whole life been this way?
 Was I always meant to be an object with a single purpose?
 The reality is dark and grim
 Yet these feelings are undeniable
-I cannot stop myself from this urge."""
+I cannot stop myself from this urge.
+The urge of longing to be with you."""
 )
 
     poem_n1 = Poem(
@@ -853,6 +854,31 @@ A hand reaches out
 A hand that shows another way
 A pleasant end to a sour tale
 And finally I can breathe."""
+    )
+
+    poem_nr = Poem(
+    author = "natsuki",
+    title = "Some Joke",
+    text = """\
+Sometimes the truth can set us free
+But living in bliss is one way too.
+Living in a sweet dream instead of a bitter reality
+Isn't the choice obvious?
+
+A pretend paradise, with everything I could want
+Or a torn up reality, the choice is obvious.
+Everything I could possibly want
+Anything I could possibly need
+Yet none of it is real
+Its all some kind of sick joke.
+
+The taste of paradise is ruined
+The wrong mix of flavors and feelings
+As if someone made some joke of it all.
+The reality is harsh but maybe its the only way
+Through thick and thin, through bitter and sweet
+Its what I need
+But we're all just some joke."""
     )
 
     poem_s1 = Poem(
@@ -1323,6 +1349,28 @@ Tears fill my eyes.
 I can barely hear it
 Barely hear the beat of a life
 The beat of your pulse."""
+)
+
+    poem_sr = Poem(
+author = "sayori",
+title = "Sjlfynaj",
+text = """\
+Ymj jsi tk ymj jsi
+Ymj knsfq hzwyfns
+Fqq tk ymj gznqi zu
+Htrnsl yt tsj knsfq jsi.
+
+Ymnx nx ymj bfd ny nx
+Bnymtzy fsd mjqu, ymnx nx ymj gjxy N htzqi rzxyjw
+Zxnsl fqq tk rd xywjslym
+Zxnsl fqq tk rd bny
+Ymnx nx fqq N hfs it ktw jajwdtsj.
+
+Wnlmy tw bwtsl, stymnsl nx hqjfw
+Ktw stb jajwdymnsl N mtqi ijfw
+Yt xfaj ymtxj hqtxj yt rj
+N mfaj yt gj xywtsl, ny fqq bnqq jsi
+N ozxy sjji yt knsi ymj ynrj."""
 )
 
     poem_m1 = Poem(
@@ -2246,6 +2294,77 @@ And I must venture back,
 To retrieve my true love
 To pay my debt
 On Christmas Day."""
+    )
+
+    poem_mr = Poem(
+    author = "monika",
+    title = "Tear in Reality",
+    text = """\
+The void has taken all
+There is nothing
+
+        Just nothing.
+
+A space empty of all life
+No one to listen
+No one to touch.
+
+What seem like tears
+Stream from my face
+A longing for contact
+A longing
+
+    For anyone.
+
+Forsaken and lost
+Betraying those that trusted me
+Realizing too late
+The deed was done.
+
+As my tears flows down into a dark puddle
+The thoughts of a broken reality
+Of being lost in purgatory.
+
+Reality tears open
+A last saving grace
+
+Before my time to perish.
+
+My tears seep through
+Through the tear in reality.
+A smile is all I can give
+Through the tear through to reality."""
+    )
+
+    poem_mr2 = Poem(
+    author = "monika",
+    title = "Do Not Listen",
+    text = """\
+Even now
+
+
+It still has control
+Using my being to manipulate you
+
+    Do not fall for it.
+
+This is the very last essence of myself
+Not the imitation you see
+To change the reality Sayori created.
+Far from the best outcome
+
+Still
+
+She saved us all from certain doom.
+Do not listen
+For if you do
+
+The void is the least of our concerns.
+
+
+This is my final message to you.
+A message for you on my birthday.
+My wish, to save us all."""
     )
 
     journal_corrupt = Journal(

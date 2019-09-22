@@ -7861,7 +7861,7 @@ label ch16_end:
                         ay "Yeah, it means I know a lot of things about you already."
                         ay "From what I read in Yuri's journal and from what you've told me just now."
                         mc "There's more to me than you might know, Ayame."
-                        mc "I may not look it, but I do have some other things that aren't too obvious."
+                        mc "I may not look like it, but I do have some other things that aren't too obvious."
                         ay 1k "Oh? And how do you know I don't know about those?"
                         ay "I didn't get {i}everything{/i} from Yuri's journal, you know."
                         ay 1h "There are some things that I found out myself."
@@ -8511,7 +8511,7 @@ label ch16_end:
                     show monika 3c zorder 3 at f21
                     show yuri zorder 2 at t22
                     m "Right now? Well, we're about to leave to go back to the other room."
-                    m "You didn't really seemed convinced about my story."
+                    m "You didn't really seem convinced about my story."
                     m 3d "So there's no point going on about it anymore."
                     show monika zorder 2 at t21
                     show yuri 2ph zorder 3 at f22
@@ -8541,7 +8541,7 @@ label ch16_end:
                     show monika zorder 2 at t21
                     show yuri 1g zorder 3 at f22
                     y "I can't even remember what you said the reason was but it doesn't really matter."
-                    y "If the school really does have a declining student body then there's probably some reasons for it."
+                    y "If the school really does have a declining student body, then there's probably some reasons for it."
                 else:
                     y 3pi "I don't need to learn this information."
                     "Yuri looks at me as she says that."
@@ -9239,7 +9239,7 @@ label ch16_end:
     mc "Well, I don't see the harm in opening it."
     mc "I'm keen to see what you've given me anyway."
     "I begin to unwrap the present Ayame gave me."
-    "Inside I can find some kind of jewelry engraved with something."
+    "Inside I find some kind of jewelry engraved with something."
     "Open closer inspection, I can see it says 'Literature Club' on it."
     "I can also see my initials printed out on it in small writing."
     mc "Is this a custom made ring?"
@@ -9261,7 +9261,7 @@ label ch16_end:
     show monika zorder 2 at t43
     show natsuki zorder 2 at t44
     hide ayame
-    "I'm very tempted to open this gift right now."
+    "I'm very tempted to fully open this gift right now."
     "By the way she was talking, we all got pretty similar things."
     "But I don't want to be the odd one out and open the gift while the others don't."
     "I'll go against that urge, just to avoid distracting the others too."
@@ -9448,22 +9448,22 @@ label ch16_end:
         m "We're all hiding things, some for the benefit of others."
         m 2a "Anyway, I need to go back in there to make sure things are running smoothly."
         m "You have nothing to worry about with me in charge."
-        show sayori 1a zorder 3 at f52
-        show monika zorder 2 at t53
+        show sayori 1a zorder 3 at f21
+        show monika zorder 2 at t22
         s "Thanks, but we won't be gone too long."
         s "We just need to make a quick visit somewhere."
-        show sayori zorder 2 at t52
-        show monika 2c zorder 3 at f53
+        show sayori zorder 2 at t21
+        show monika 2c zorder 3 at f22
         m "I'm guessing it's none of my or the club's business."
         m 2d "Why do you have to take [player] with you though?"
-        show sayori 1d zorder 3 at f52
-        show monika zorder 2 at t53
+        show sayori 1d zorder 3 at f21
+        show monika zorder 2 at t22
         s "I have my reasons. I will say that [player_personal] doesn't have to come."
         s "But I would greatly appreciate [player_possessive] presence."
-        show sayori zorder 2 at t52
+        show sayori zorder 2 at t21
         mc "We're stopping practice anyway, so I might as well come with her."
         mc "Even if it's just a minor thing."
-        show monika 2a zorder 3 at f53
+        show monika 2a zorder 3 at f22
         m "You're the president of the club, Sayori."
         m "Do whatever you want, it's your life."
         m 2b "I'm going to go back inside and try to deal with the situation."
@@ -9497,7 +9497,7 @@ label ch16_end:
         show sayori 1a zorder 2 at t11
         with wipeleft_scene
         "Eventually, she stops in front of a room that seemed all too familiar."
-        s "And here we're here, and it didn't take as long as I thought it would."
+        s "And here we are, and it didn't take as long as I thought it would."
         s 1c "Quickly, let's get inside."
         mc "Isn't this just our normal clubroom?"
         mc "Why are we here...?"
@@ -9518,7 +9518,7 @@ label ch16_end:
         show mysteriousclerk zorder 2 at t21
         show sayori 1g zorder 3 at f22
         s "Alright, I just hope we can do something about it now that she's in there."
-        s "At least something to help make it easier for when erupts."
+        s "At least something to help make it easier for when she erupts."
         show sayori zorder 2 at t22
         "Sayori starts walking inside the room where this odd man is."
         "I'm really confused as to what is going on right now."
@@ -9578,7 +9578,7 @@ label ch16_end:
         show mysteriousclerk 5a zorder 3 at f21
         cl "We want to bring you up to scratch."
         cl "You performed your duty well, I think."
-        cl 5e "At least, I hoped you did."
+        cl 5e "At least, I hope you did."
         cl "I mean, I guess we're gonna find out soon, aren't we?"
         "The man looks at Sayori impatiently."
         cl 5f "Er, what are we waiting for exactly?"
@@ -9911,7 +9911,7 @@ label ch16_end:
         cl "There needs to be a strong connection between that room and the one we're in."
         cl 1e "So I had to change this room to look as much your original club as possible for Sayori's sake."
         cl "That's so she can use my as a sort of link to the other room."
-        cl 2a "The room that Ayame and the others are in look like {i}my{/i} original club."
+        cl 2a "The room that Ayame and the others are in looks like {i}my{/i} original club."
         cl "So there's a strong resonance between the two rooms right now because--"
         cl "Well, let's just say that the connection between Ayame and I, it's strong."
         cl 2b "And through that connection I have with her, the two rooms are connected."
@@ -9926,7 +9926,7 @@ label ch16_end:
         show sayori 3d zorder 3 at f22
         s "That's where I come in."
         s "Using the connection between [cl_name] and Ayame, I can bypass this sort of barrier she's put up."
-        s "I don't know if she did it subconsciously, but I can't get through to her like I can everyone else."
+        s "I don't know if she did it subconsciously, but I can't get through to her like I can with everyone else."
         s 3l "When I do get through to her, I'll be able to try and get through that barrier and do some things."
         show sayori zorder 2 at t22
         mc "A barrier? What do you mean?"
@@ -9988,9 +9988,9 @@ label ch16_end:
         cl "So if you could {i}please{/i} get it over with already, that would be much appreciated."
         show mysteriousclerk zorder 2 at t21
         "Sayori takes a deep breath and looks at me."
-        show sayori 2d zorder 3 at f21
+        show sayori 2d zorder 3 at f22
         s "Get ready, [player]."
-        show sayori zorder 2 at t21
+        show sayori zorder 2 at t22
         mc "For what--"
         show sayori at thide
         hide sayori
@@ -10130,7 +10130,7 @@ label ch16_end:
         m "[player], care to join as your character from where we left off?"
         m "We decided to rehearse a bit without the two of you."
         m "We actually got pretty far into it."
-        show yuri 1pb zorder 3 at f41
+        show yuri 1b zorder 3 at f41
         show monika zorder 2 at t43
         y "We all played our parts and Ayame just filled in if it was yours or Sayori's part."
         y "I'd say it was quite productive until Ayame screamed..."
@@ -10318,7 +10318,7 @@ label ch16_end:
                 else:
                     ay 1i "Oh, you actually knew. That date actually sounds reasonable."
                 ay 1m "It makes perfect sense that that is the date."
-                ay "I just don't know how I didn't know that that's what today."
+                ay "I just don't know how I didn't know that that's what today is."
                 ay "Now that you say it, it's like..."
                 ay 1n "Well...never mind."
             "Friday, 22 September." if actualday != "Friday, 22 September":
@@ -10793,8 +10793,8 @@ label ch16_end:
         hide ayame
         show yuri zorder 2 at t41
         show natsuki zorder 2 at t42
-        show monika zorder 2 at t43
-        show sayori zorder 2 at t44
+        show sayori zorder 2 at t43
+        show monika zorder 2 at t44
         "From what I can tell, she picked up her pace as she exited the room."
         "Maybe she was just acting it all out?"
         "She does seem pretty capable of doing so."
@@ -10976,49 +10976,49 @@ label ch16_end:
         hide natsuki
         show yuri at thide
         hide yuri
-        show monika zorder 2 at t21
-        show sayori zorder 2 at t22
+        show sayori zorder 2 at t21
+        show monika zorder 2 at t22
         "Natsuki and Yuri slowly move out of the room, making sure to steadily maneuver through the desks."
         "As they enter the hallway, they seem to pick up their pace a little, almost turning into some kind of hustle."
-        show monika 1c zorder 3 at f21
+        show monika 1c zorder 3 at f22
         m "Do you want to help me take this box then, [player]?"
         "Monika lifts up the box near her."
         "It doesn't look like it takes much effort for her."
         m 1a "I think I could use the help."
-        show monika zorder 2 at t21
+        show monika zorder 2 at t22
         mc "Sure, I don't think I could carry one myself anyway."
         mc "Are you going to be alright by yourself here, Sayori?"
-        show sayori 1a zorder 3 at f22
+        show sayori 1a zorder 3 at f21
         s "I'll be fine, though there are a lot of boxes."
         s "I'd appreciate it if you guys could come back and make a return trip."
         s 1d "Otherwise, this coooooould take a while."
-        show monika 1b zorder 3 at f21
-        show sayori zorder 2 at t22
+        show sayori zorder 2 at t21
+        show monika 1b zorder 3 at f22
         m "I'll be sure to let the two of them know."
         m "[player] and I will try to be quick."
         m "Are you going to be bringing those boxes there yourself?"
-        show monika zorder 2 at t21
-        show sayori 1d zorder 3 at f22
+        show sayori 1d zorder 3 at f21
+        show monika zorder 2 at t22
         s "I don't see any other option, so I guess so."
         s "Don't worry, I can handle it."
         s "Just worry about getting that box over there and getting back."
         s 1c "You know, actually don't bother coming back."
         s "I'll get them all there."
-        show monika 1l zorder 3 at f21
-        show sayori zorder 2 at t22
+        show sayori zorder 2 at t21
+        show monika 1l zorder 3 at f22
         m "I won't even ask."
         m 1a "Let's go, [player]. You can take that side."
         "I take the side of the box Monika offers."
         "It feels like the box is weightless, as if there's nothing inside it."
         "Either that, or Monika is stronger than I've been led to believe."
         m 1b "See you soon, Sayori."
-        show monika zorder 2 at t21
-        show sayori 1d zorder 3 at f22
+        show sayori 1d zorder 3 at f21
+        show monika zorder 2 at t22
         s "Be careful on the way there, you two."
         s "Don't do anything that could compromise the mission, okay?"
         s "Good luck out there!"
-        show monika 1j zorder 3 at f21
-        show sayori zorder 2 at t22
+        show sayori zorder 2 at t21
+        show monika 1j zorder 3 at f22
         m "It's a simple enough task, I'm sure we'll manage."
         m 1k "Let's get going, [player]."
         show monika zorder 2 at t21
@@ -11234,7 +11234,7 @@ label ch16_end:
                 m "There are so many things you learn about a person when you stare into their soul."
                 m 1d "Judging someone on their outward appearance will gain you nothing."
                 m "One person can be completely different once you get to know them."
-                m "You think you know someone and suddenly they're a completely different person." 
+                m "You think you know someone and suddenly they're a completely different person."
                 m 1e "But anyway, I've already said too much."
                 m "Thank you again for the information."
                 mc "I don't know if it was the right thing to tell you all of this."
@@ -11276,7 +11276,7 @@ label ch16_end:
                 m 1p "I have to try, don't I?"
                 mc "Good luck with that, Monika."
                 mc "I just can't do that to Sayori, not after all we've been through."
-                m 1f "Look, I don't have any hard feelings towards you." 
+                m 1f "Look, I don't have any hard feelings towards you."
                 m "I understand your reasons, but that's not to say I'm not bitter."
                 m 1h "I'm just extremely disappointed in your decision, [player]."
                 m "In the case that I am right, you better hope I can find a way to stop her."
@@ -11619,7 +11619,7 @@ label ch16_end:
         mc "Oh, right..."
         "I take my cue and do my part."
         "From there, it seems like we just continued on with rehearsals smoothly."
-        "I could Ayame watching us like some sort of hawk."
+        "I could see Ayame watching us like some sort of hawk."
         "But she didn't really say anything, despite looking like she wanted to."
         "Perhaps she did just want to enjoy it, even with all of our flaws that we have."
         "After what seemed like hours, we managed to finish a single rehearsal."
@@ -11992,7 +11992,7 @@ label ch16_end:
         mc "I'll be sure to remember."
         n 2a "You better!"
         "Natsuki shows a mischievous smile and lightly punches me on my arm."
-        n 2c "In the mean time, you should probably get dressed."
+        n 2c "In the meantime, you should probably get dressed."
         n 1d "Unless we changed your outfit to your school uniform."
         mc "Pretty sure we didn't. I'll get on that right now."
         mc "I'll see you afterwards, Natsuki."
@@ -12028,7 +12028,7 @@ label ch16_end:
         m 1g "Yeah, I can feel it. It feels like it's going to happen at any instant now."
         if ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2] and ch16_ay_message[3]:
             m 1c "But with what you did, it seems a lot less threatening."
-            mc "I don't really know what I did." 
+            mc "I don't really know what I did."
             mc "I just talked to Ayame, it wasn't anything special."
             mc "I'm not sure how that changes anything at all."
             m 1d "It definitely did something."
@@ -12331,7 +12331,7 @@ label ch16_end:
     "I can see a glimpse of the audience from where I'm standing."
     "There's a huge crowd of people filled with students and teachers alike."
     "It seems like almost everybody attending Inauguration Day was here."
-    "Was this really that sigificant of an event?"
+    "Was this really that significant of an event?"
     if ch14_book_choice == "Sayori":
         "The stage lights up, showing Sayori laying on a hospital bed in the middle of the stage."
         "Pretty kind of the school nurses to lend her one, she must be some convincer..."
@@ -13934,7 +13934,7 @@ label ch16_sayoridate:
             mc "Mine tasted pretty average at first but slowly got better."
             mc "I'm not sure why, I've never experienced that before."
             mc "At least, not with this kind of meal."
-            s 1bb "Oh, then I suppose I will have to try at least one of these things then."
+            s 1bb "Oh, then I suppose I will have to try at least one of these things."
             mc "You mean you're not going to try everything?"
             s 1bd "I'm going to be honest, this was for you."
             s "Of course, I'm eating too but this place doesn't really suit me."
@@ -14539,7 +14539,7 @@ label ch16_sayoridate:
     s "There's still time to do what we have to."
     show mysteriousclerk 1a zorder 3 at f21
     show sayori zorder 2 at t22
-    cl "You should know that I'm not the only one that can move in your stopped instance, you know."
+    cl "You should know that I'm not the only one that can move in your stopped instance. I think you should be aware of that fact."
     cl "A curious someone we both know could as well."
     cl 1e "And they were snooping around the school, probably wondering what the hell was going on."
     cl "So perhaps you should consider what consequences your actions will actually have."
@@ -14573,7 +14573,7 @@ label ch16_sayoridate:
     s "Then what is?"
     show mysteriousclerk 2a zorder 3 at f21
     show sayori zorder 2 at t22
-    cl "You're going to need to wipe [player_possessive] for what we need [player_reflexive] to do."
+    cl "You're going to need to wipe [player_possessive] memory for what we need [player_reflexive] to do."
     cl 2b "Which, I know, you don't like doing."
     cl "But we need to mitigate the risk that she finds out."
     show mysteriousclerk zorder 2 at t21
@@ -14649,7 +14649,7 @@ label ch16_sayoridate:
     s "Doesn't that mean anything to you?"
     show sayori zorder 2 at t22
     mc "You know as well as I do that that time wasn't for me."
-    mc "Like [cl_name] said, I was just along for the ride."
+    mc "Like [cl_name] said, I was just taken along for the ride."
     mc "That's not to say I didn't enjoy it..."
     mc "Because I did."
     show sayori 2e zorder 3 at f22

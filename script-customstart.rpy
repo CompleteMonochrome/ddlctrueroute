@@ -128,20 +128,21 @@ label choose_start:
             "No.":
                 s "Oh, okay."
                 s "Then let's get to it."
-    # elif (currentdate <= (datetime.date(2019, 9, 15) + weekrange)) and persistent.arc_clear[0]:
-    #     menu:
-    #         "Hello?":
-    #             "Yes.":
-    #                 show screen tear(20, 0.1, 0.1, 0, 40)
-    #                 $ pause(0.25)
-    #                 $ return_chapter = True
-    #                 $ s_name = "Sayori"
-    #                 stop music
-    #                 $ renpy.save_persistent()
-    #                 stop sound
-    #                 jump return_chapter
-    #             "No.":
-    #                 pass
+    elif (currentdate <= (datetime.date(2019, 9, 22) + weekrange)) and persistent.arc_clear[1]:
+        "..."
+        menu:
+            "Hello?"
+            "Yes.":
+                show screen tear(20, 0.1, 0.1, 0, 40)
+                $ pause(0.25)
+                $ return_chapter = True
+                $ s_name = "Sayori"
+                stop music
+                $ renpy.save_persistent()
+                stop sound
+                jump return_chapter
+            "No.":
+                pass
     else:
         s "But we have to sort out a few things first."
 
@@ -339,7 +340,7 @@ label choose_start:
         $ read_book = True
         $ did_all_tasks = False
     else:
-        $ yuri_approval += 1
+        $ yuri_approval -= 1
         $ read_book = False
         $ did_all_tasks = False
         if newpoemwinner[1] == "natsuki":
