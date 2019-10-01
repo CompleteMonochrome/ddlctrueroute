@@ -6726,7 +6726,7 @@ label ch13_exclusive_sayori:
         show natsuki zorder 2 at t21
         show sayori 2c zorder 3 at f22
         s "Huh? What do you mean?"
-        show natsuki 2h zorder 3 at f21
+        show natsuki 2bh zorder 3 at f21
         show sayori zorder 2 at t22
         n "My mom wanted me to help clean the house from my dad's mess all day."
         n "I had nothing better to do and I wanted to spend time with her so I agreed..."
@@ -6747,7 +6747,7 @@ label ch13_exclusive_sayori:
         show sayori 3a zorder 3 at f22
         s "Actually, yeah!"
         s "I know you're really good at doing that so I was about to ask you to."
-        show natsuki 5z zorder 3 at f21
+        show natsuki 5bz zorder 3 at f21
         show sayori zorder 2 at t22
         n "You can count on me, Sayori."
         n "I'm sure my mom would love to help, too."

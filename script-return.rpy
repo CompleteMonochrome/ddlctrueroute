@@ -175,7 +175,7 @@ label return_chapter:
             m "You know what, it's a little confusing but I think you understand."
             m 1j "So let's just move on, now that you've seen that."
             m "Take the message however you want.."
-            m "I can't explain it's meaning to you, it's up for interpretation."
+            m "I can't explain its meaning to you, it's up for interpretation."
         "Natsuki":
             m 1c "You really want to see Natsuki's last poem?"
             m 1a "Well, okay then."
@@ -211,7 +211,7 @@ label return_chapter:
             m 1d "I don't think that's a good idea."
             m "I don't even know what will happen if you choose to read it."
             m "Did she even make one...?"
-            m 1h "Apparently, it exists. I don't know how she could have possibly wrote this."
+            m 1h "Apparently, it exists. I don't know how she could have possibly written this."
             m 1l "But it's your choice..."
             m "So here you go..."
             call showpoem (poem_sr)
@@ -281,7 +281,7 @@ label return_chapter:
             m "Seeing what will happen, for better or worse."
             m 1d "I've seen it all by now."
             m "With different people, the same events over and over."
-            m 1q "Like a viscous cycle I'm doomed to repeat."
+            m 1q "Like a vicious cycle I'm doomed to repeat."
             m "And now I just want to break out of it."
             m 1h "Admittedly, this whole sequence of events we have going right now is new to me."
             m "Ever since you {i}saved{/i} Monika, all these events have been completely new."
@@ -365,7 +365,7 @@ label return_chapter:
     m "I just...I can't bear the thought of going through this again."
     m "It's not like there's anything else you can do for me..."
     m 1o "So please..."
-    m "Do it for the me that's still in a fixable world."
+    m "Do it for {i}that{/i} me that's still in a fixable world."
     m 1p "And if not for me...then for the others."
     m "They don't deserve this fate..."
     stop music

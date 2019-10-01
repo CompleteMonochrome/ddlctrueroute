@@ -12326,6 +12326,7 @@ label ch16_end:
     hide yuri
     hide sayori
     hide monika
+    # Play Start
     "Everyone gets into position."
     "As the countdown reaches zero inside my head, the curtains draw open."
     "I can see a glimpse of the audience from where I'm standing."
@@ -12335,11 +12336,29 @@ label ch16_end:
     if ch14_book_choice == "Sayori":
         "The stage lights up, showing Sayori laying on a hospital bed in the middle of the stage."
         "Pretty kind of the school nurses to lend her one, she must be some convincer..."
+        "Slowly, the light expands revealing the others speaking indistinctly along the stage."
+        "Sayori coughs and asks for the nurse."
+        "Yuri slowly walks up to her and fiddles around with the contraption next to Sayori."
+        "I can hear Sayori moaning in agony, as if she's in terrible pain."
+        "It sounds suspiciously convincing..."
+        "After toying with the contraption some more, Yuri looks down at Sayori solemnly, before smiling and leaving her again."
+        "With the way they're acting, you'd think it was a real hospital..."
     elif ch14_book_choice == "Yuri":
         "Three of them are onstage as a light shines on them."
+        "They're all sitting down, talking to each other in an idle conversation."
+        "I think the context was that they were heading to some island for as an annual trip."
+        "Suddenly, Monika stands up and suggests they take a picture to commemorate the trip."
+        "Natsuki and Yuri look hesitant at first, but agree to take the photo."
+        "Monika takes out a phone from her pocket and takes a picture with all three of them."
+        "She asks Yuri if she brought the radio with her, to which Yuri nods."
+        "Monika takes the radio from Yuri and pretends to tune it."
+        "As she does, a voice emits from the stage as if to imitate a radio plays."
+        "That wasn't in the rehearsal..."
     elif ch14_book_choice == "Natsuki":
         "The light shines on Natsuki in the middle of the stage."
         "She's acting like she's on her phone as she walks nonchalantly along the stage."
+        "After reaching the halfway point, she stops and gazes towards the audience."
+        "As she does, a light shines in the distance and she stares at it in awe."
     elif ch14_book_choice == "Monika":
         if monika_type == 2:
             "I'm prompted to walk on stage by a student behind me."
@@ -12348,9 +12367,226 @@ label ch16_end:
         else:
             "The light illuminates the stage, showing Monika sitting there on the ground."
             "Her face is huddled between her legs, as if shutting herself away from the world."
+            "I can hear quiet sniffs and crying, amplified by the microphone Monika has."
+            "The others walk on stage towards Monika. As Monika notices them, she quickly wipes her face and puts on a smile."
+            "It's all an act, to show a brave face when the world is going against her."
+            "In the context of the play, she's trying to make her friends not worry about her."
+            "They briefly make conversation but eventually leave her alone, after which it's my cue to walk on stage."
+            "As I walk across the stage, a light follows me."
+            "Monika looks up and stares at me in complete awe."
+            "As if I had just performed some kind of miracle."
     else:
         "I pull out my phone as I walk onto the stage."
         "The lights follow my movement naturally as I turn towards the audience and pretend to dial a number."
+        "Usually, I'm not good with being in front of so many people."
+        "But being up here now, it's like nothing else matters."
+        "Just me and the act."
+        "Well...here goes nothing."
+    "After a while, it's time for a brief intermission."
+    "The curtains close with everyone frozen in place on the stage."
+    "I can hear the audience clapping through the curtain."
+    "I guess they really did like it."
+    "Everyone retreats backstage and frantically look at each other."
+    "Sayori is jumping up and down with joy."
+    "Natsuki looks like she's secretly enjoying herself."
+    "Yuri has this really huge grin on her face."
+    "And Monika is just smiling, as she usually does."
+    show yuri 1a zorder 3 at f51
+    y "Can you believe this?"
+    y "There's so many people out there! I wasn't expecting such a large audience."
+    show yuri zorder 2 at t51
+    show natsuki 1a zorder 3 at f52
+    n "I know, right? It's kind of scary actually."
+    n "I'm surprised I haven't messed up already."
+    show yuri zorder 3 at f51
+    show natsuki zorder 2 at t52
+    y "They all seem so eager for the next act..."
+    y "I hope we can continue to deliver a performance they'll actually enjoy."
+    show yuri zorder 2 at t51
+    show sayori 1a zorder 3 at f53
+    s "It won't be a problem, Yuri! We've got this!"
+    "Sayori beams."
+    s "I'm glad everyone is enjoying themselves."
+    s "It's good to see everyone having so much fun."
+    show sayori zorder 2 at t53
+    show monika 1a zorder 3 at f54
+    m "I'm kinda wondering how so many people ended up watching us."
+    m "It's not like we're the main event or anything."
+    m "I'm sure there are other clubs with something more spectacular to show than a play rehearsed just a short while ago."
+    show sayori zorder 3 at f53
+    show monika zorder 2 at t54
+    s "Maybe they're all just so amazed that the stage is being used at all on a day like this."
+    s "Even though we're pretty much isolated from the rest of the clubs, the stage is still the thing that stands out the most."
+    s "It kinda makes sense that people would be coming to see what's happening, wouldn't it?"
+    show sayori zorder 2 at t53
+    show monika zorder 3 at f54
+    m "That makes sense...still, I can't help but feel there might be another reason."
+    m "Maybe--"
+    show monika zorder 2 at t54
+    show ayame 1a zorder 3 at f55
+    ay "That was incredible! I'm so happy for all of you!"
+    "Ayame appears from behind us, somehow without making a sound."
+    "It's like she was just suddenly there or something..."
+    ay "I can't believe you all managed to perform so well!"
+    ay "Hehe, it's almost like you've all been programmed to act this way."
+    show sayori zorder 3 at f53
+    show ayame zorder 2 at t55
+    s "P-Programmed? What do you mean?"
+    s "I don't think you know what you're talking about."
+    if ch16_ay_decision_count > 0:
+        show sayori zorder 2 at t53
+        "Once again, a strange wave of energy hits me."
+        "It's like there's some kind of wind at my side, even though there couldn't possibly be."
+        "Sayori turns towards me as she responds to Ayame."
+        "Does she expect me to do something about this?"
+        "It doesn't seem important but I feel like I can redirect this energy to Ayame somehow."
+        "I don't know what that will do but I have this feeling."
+        menu:
+            "Ayame is..."
+            "Completely right.":
+                $ ch16_ay_decision_count -= 1
+                "Ayame shivers for a brief moment before staring directly at Sayori."
+                show ayame zorder 3 at f55
+                ay "Perhaps you have something to share, Sayori?"
+                ay "You seem to be quite the control freak, you know?"
+                ay "Always have to make sure you get your way."
+                ay "You may have the rest of them fooled, but not me."
+                ay "Not anymore."
+                ay "Both you and I know these tricks, don't we?"
+                ay "So why don't you just say you changed them?"
+                ay "Or is that something you're not willing to admit?"
+                show ayame zorder 2 at t55
+                "As Ayame says those words, she immediately covers her mouth."
+                "As if she didn't really mean to say them."
+                "Did I do that...somehow?"
+                show sayori zorder 3 at f53
+                s "W-What are you saying?"
+                "Sayori looks like she's struggling to stay calm."
+                "We may have made a mistake..."
+                show sayori zorder 2 at t53
+                show ayame zorder 3 at f55
+                ay "I don't...I didn't..."
+                ay "I-I..."
+                show sayori zorder 2 at t53
+                show monika zorder 3 at f54
+                m "Well, okay then! I don't know what that was."
+                m "But clearly, we started off this conversation on the wrong foot."
+                m "So, Ayame, what exactly are you doing here?"
+                show monika zorder 2 at t54
+                show ayame zorder 3 at
+            "Completely wrong.":
+                $ ch16_ay_decision_count -= 1
+                "Ayame twitches, as if a cold shiver was sent down her spine."
+                "She begins to stare directly at Sayori."
+                show ayame zorder 3 at f55
+                ay "Oh! Of course..."
+                ay "I didn't mean what I said, it was just a metaphor."
+                ay "Because you guys are doing so great, I mean."
+                ay "I'm obviously completely wrong, don't mind me."
+                show sayori zorder 3 at f53
+                show ayame zorder 2 at t55
+            "...I have no idea.":
+                show ayame zorder 3 at f55
+                ay "I'm kidding! That would be impossible."
+                ay "Or at least, with the technology we have right now."
+                ay "Unless those spy agencies have some kind of super high tech stuff that can do that."
+                show natsuki zorder 3 at f51
+                show ayame zorder 2 at t55
+                n "What...?"
+                show natsuki zorder 2 at t51
+                show ayame zorder 3 at f55
+                ay "Aha, don't mind me. I'm just fantasizing."
+                ay "I must say, what you've all done so far was incredible."
+    else:
+        s "Everyone is just super talented, that's all!"
+        show sayori zorder 2 at t53
+        show ayame zorder 3 at f55
+        ay "I know, I know! I'm only kidding, of course."
+        ay "That would be kinda weird if you could just mold a person into that."
+        ay "You'd have to fundamentally change them, or parts about them."
+        ay "At which point, they're not really the same person, are they?"
+        ay "At least, not really. They wouldn't have done that if they weren't changed."
+        show monika zorder 3 at f54
+        show ayame zorder 2 at t55
+        m "...Are you going somewhere with this, Ayame?"
+        m "As you can see, we're still a little busy."
+        show monika zorder 2 at t54
+        show ayame zorder 3 at f55
+        ay "My apologies! I didn't mean to interrupt."
+    ay "I just wanted to congratulate you all on an excellent first act."
+    ay "I actually told people to come watch your play from around the school."
+    ay "Which is why there might be a lot more people around than you expected."
+    show natsuki zorder 3 at f52
+    show ayame zorder 2 at t55
+    n "What? Are you saying you told them to come here and they just did it?"
+    n "Why would they do that?"
+    show natsuki zorder 2 at t52
+    show ayame zorder 3 at f55
+    ay "I don't know, maybe they were already going to go."
+    ay "Or maybe because I'm an important person or something."
+    ay "Whatever the case, it doesn't really matter."
+    ay "What I wanted to do was wish you all luck in your next act."
+    ay "I brought you all something to drink."
+    "Ayame opens her bag and pulls out some drinks with straws already attached on them."
+    "The cup is wrapped completely in plastic, so I have no idea what it could be."
+    "She offers one to me first."
+    ay "Well? You do know how to drink, right?"
+    show ayame zorder 2 at t55
+    mc "I do, it's just...I don't know what that is."
+    mc "Not that I don't appreciate you coming over here for this."
+    show ayame zorder 3 at f55
+    ay "It's something one of the clubs made. They told me to give it to you for a job well done."
+    ay "You aren't just gonna reject it, are you?"
+    show natsuki zorder 3 at f51
+    show ayame zorder 2 at t55
+    n "Jeez, if [player] isn't going to take it, then I will!"
+    n "This break isn't going to last forever and I plan to use the time we do have to get refreshed."
+    "Natsuki takes the drink from Ayame's hands and begins sucking on the straw."
+    "As she takes her first few sips, her face lights up."
+    n "This...is amazing! What is this stuff?"
+    show natsuki zorder 2 at t51
+    show ayame zorder 3 at f55
+    ay "That...was intended for [player]."
+    ay "It doesn't matter though, I'm glad you enjoyed it."
+    ay "As for what it is..."
+    ay "I have no clue! It could be anything."
+    ay "All I know is that it tastes like heaven."
+    ay "Care to try one, Yuri?"
+    "Ayame takes another one of the drinks from her bag and offers it to Yuri."
+    show yuri zorder 3 at f52
+    show ayame zorder 2 at t55
+    y "Well...Natsuki seems to be enjoying it. I suppose there's no harm in trying."
+    show yuri zorder 2 at t52
+    "Yuri takes a sip as well, and soon after takes another and another."
+    "She can't seem to stop, does it really taste that good?"
+    show ayame zorder 3 at f55
+    ay "And the three of you?"
+    show sayori zorder 3 at f53
+    show ayame zorder 2 at t55
+    s "I'm alright. I had a big lunch, but thank you."
+    "Sayori eyes the drink Ayame is holding and then looks away."
+    s "It was a good try though."
+    show sayori zorder 2 at t53
+    show ayame zorder 3 at f55
+    ay "A good try? I'm not sure I follow."
+    ay "I'm just the delivery girl."
+    show sayori zorder 3 at f53
+    show ayame zorder 2 at t55
+    s "Can I have a moment?"
+    "Ayame shrugs and nods."
+    show sayori zorder 2 at t21
+    show monika zorder 2 at t22
+    show natsuki at thide
+    show yuri at thide
+    show ayame at thide
+    hide natsuki
+    hide yuri
+    hide ayame
+    "Sayori takes me and Monika aside while Yuri and Natsuki talk to Ayame about the drinks."
+    "I think I heard them say the reincarnation club made them..."
+    "Since when do they do that kind of thing?"
+    show sayori zorder 3 at f21
+    s "Those aren't ordinary drinks."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
