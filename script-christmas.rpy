@@ -1413,7 +1413,7 @@ label christmas_chapter:
     cl 1chf "You don't wanna mess this up."
     cl "The last girl is..."
     "Nick pretends to think for a moment."
-    cl 1chb"Charming, charismatic, beautiful."
+    cl 1chb "Charming, charismatic, beautiful."
     cl "She's a wonderful person."
     cl "She's also a very special person."
     cl 1chc "Not to just to you but..."

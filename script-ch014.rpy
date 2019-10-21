@@ -796,7 +796,7 @@ label ch14_main:
         y "But I'm still not making any sense, am I?"
     else:
         n "Just say it already, Yuri."
-        show yuri 4pg zorder 3 at f43
+        show yuri 3pg zorder 3 at f43
         y "..."
         y "Well, that's what I'm trying to do."
         y "I'm not really making any sense, am I?"

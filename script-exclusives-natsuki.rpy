@@ -892,7 +892,7 @@ label natsuki_exclusive_3:
     show natsuki 1i zorder 3 at f31
     n "Sorry we're late!"
     n "We lost track of time and..."
-    "Natsuki looks at me as if she wants to back her up."
+    "Natsuki looks at me as if she's asking me to back her up."
     show natsuki zorder 2 at t31
     mc "It's my fault."
     mc "If I didn't distract her then she would have been here earlier."

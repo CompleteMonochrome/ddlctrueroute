@@ -892,7 +892,7 @@ label ch15_main:
                 mc "Then what did you mean?"
                 n "I meant that us getting this far."
                 n "Something tells me it shouldn't be happening."
-                n "That our relationship shouldn't have let to a date and..."
+                n "That our relationship shouldn't have led to a date and..."
                 mc "But it did."
                 mc "And it is happening."
                 mc "We should just let the world take it's course."
@@ -2406,7 +2406,7 @@ label ch15_exclusive_natsuki:
         mc "You can count on me."
         if natsuki_date:
             "I give a wink to Natsuki."
-            "She gives my a look of disgust and punches my arm."
+            "She gives me a look of disgust and punches my arm."
         "Yasuhiro presses the button on his car keys."
         "The car closest to Natsuki's house lights up."
         "It's not a very expensive car."

@@ -6161,7 +6161,7 @@ label ch13_exclusive_monika:
         "Unlike me, who chose based on what others might like."
         "But the novels look short enough to do a play on, at least for a few chapters."
         m 1be "Any comments on my choices?"
-        m "I don't you've heard of them but maybe you'd like to say something?"
+        m "I don't what you've heard of them but maybe you'd like to say something?"
         mc "You're right, I haven't really heard of them before."
         mc "But from the first glance by reading the blurb, they all seem kinda..."
         mc "Um...romantic?"

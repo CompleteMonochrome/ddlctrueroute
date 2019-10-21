@@ -3370,7 +3370,7 @@ label ch12_s_med:
     s "Just hand me your poem."
     mc "Alright..."
     mc "Here you go."
-    "I give me poem to Sayori."
+    "I give my poem to Sayori."
     s "It's a nice poem, [player]."
     s "Really gives me a sort of..."
     s 2q "I don't know, actually!"
@@ -4483,6 +4483,7 @@ label ch15_m_start:
     if sayarcpoemwinner[2] == "monika":
         $ nextscene = "msay_" + sayarcpoemwinner[2] + "_" + str(eval(sayarcpoemwinner[2][0] + "_appealS"))
     else:
+        $ ch13poemwinner = ch15poemwinner
         $ nextscene = "msay_universal_" + str(eval(sayarcpoemwinner[2][0] + "_appealS"))
     call expression nextscene
 
