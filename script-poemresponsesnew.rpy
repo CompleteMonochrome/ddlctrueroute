@@ -4341,7 +4341,10 @@ label ch14_m_start:
     if sayarcpoemwinner[1] == "monika":
         $ nextscene = "msay_" + sayarcpoemwinner[1] + "_" + str(eval(sayarcpoemwinner[1][0] + "_appealS"))
     else:
+        $ temp = ch13poemwinner
+        $ ch13poemwinner = ch14poemwinner
         $ nextscene = "msay_universal_" + str(eval(sayarcpoemwinner[1][0] + "_appealS"))
+        $ ch13poemwinner = temp
     call expression nextscene
 
     if monika_type == 0:
@@ -4483,8 +4486,10 @@ label ch15_m_start:
     if sayarcpoemwinner[2] == "monika":
         $ nextscene = "msay_" + sayarcpoemwinner[2] + "_" + str(eval(sayarcpoemwinner[2][0] + "_appealS"))
     else:
+        $ temp = ch13poemwinner
         $ ch13poemwinner = ch15poemwinner
         $ nextscene = "msay_universal_" + str(eval(sayarcpoemwinner[2][0] + "_appealS"))
+        $ ch13poemwinner = temp
     call expression nextscene
 
     if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):

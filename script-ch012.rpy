@@ -4006,7 +4006,7 @@ label ch12_harukinoplace:
         "Sayori enters the gym, from the door opposite where she exited."
         "Police officers enter the gym and surround Yasuhiro."
         show sayori zorder 2 at t51
-        show dadsuki  zorder 3 at f53
+        show dadsuki 1h zorder 3 at f52
         d "What's happening here?"
         d "When did you get the police involved?!"
         scene black with dissolve_cg

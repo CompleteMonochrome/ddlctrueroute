@@ -10121,7 +10121,7 @@ label ch16_end:
         ay "It could be nothing, so pay no mind to what I'm saying..."
         show ayame zorder 2 at t44
         mc "Right..."
-        show 1j ayame zorder 3 at f44
+        show ayame 1j zorder 3 at f44
         ay "Anyway, since Sayori isn't here, perhaps we can continue on for a little while longer?"
         ay "I'm quite enjoying this."
         show monika 2e zorder 3 at f43
@@ -11726,7 +11726,7 @@ label ch16_end:
         "I know I shouldn't pry into it but it's really bothering me for some reason."
         show sayori 2a zorder 3 at f54
         s "Alright, everybody!"
-        s "It looks like we're all done here, I hope you all know your lines!."
+        s "It looks like we're all done here, I hope you all know your lines!"
         s "There's a couple of boxes to take there, I'd say to take one between two of you."
         show sayori zorder 2 at t54
         mc "So now you're saying it takes two people?"
@@ -12247,6 +12247,7 @@ label ch16_end:
     "I don't want to get caught up in all of that especially with the play so close."
     # Play finally begins
     scene bg gym with wipeleft
+    play music t11 fadeout 1.0
     "It's finally time. The five of us are backstage making last minute preparations."
     "There's a bunch of other students here as well."
     "Sayori told us that they were just here to help with all the lighting and sounds."
@@ -12726,6 +12727,8 @@ label ch16_end:
             "It's just a drink, right?"
             "If Yuri and Natsuki have both had one already, surely something would have happened by now."
             "There's no harm in accepting Ayame's hospitality."
+            ay "You actually took it?"
+            mc "You sound surprised."
         "Get Ayame to test it first.":
             # variable change here
             mc "Well, why don't you try it then?"
@@ -12787,6 +12790,7 @@ label ch16_end:
                         "Ayame sinks to the floor and covers her face."
                         "What the hell did I do...?"
                     "She will do what she wants.":
+                        # variable change here
                         ay "Ah, forget it. It's not worth the trouble."
                         mc "What?"
                         "She puts away the drink and smiles at me."
@@ -12808,6 +12812,7 @@ label ch16_end:
                         ay "The three of you..."
                         ay "Something is going on, and I'm going to get to the bottom of it."
             else:
+                # variable change here
                 "She puts it away and smiles at me."
                 ay "I can see that my hospitality isn't wanted here."
                 ay "I get it, really."
@@ -12861,32 +12866,104 @@ label ch16_end:
             mc "Ayame, I...don't know what you want me to say here."
             mc "It kind of sounds like you have a personal problem."
             ay "...You're right. I guess I'm just projecting."
+            ay "But oh well, I won't keep you any longer."
     "It really does seem like there's something going on between Ayame and Sayori."
     "They're acting really passive aggressive towards each other."
     "Or even when the other is mentioned in conversation."
     "Surely I can't be the only one that's noticed..."
     if ch16_ay_perspective:
-        "I don't know why they're so mean to me."
+        $ currentpos = get_pos()
+        show screen tear(8, offtimeMult=1, ontimeMult=10)
+        window hide(None)
+        stop music
+        scene bg school_grounds
+        $ pause(1.0)
+        hide screen tear
+        $ pause(1.0)
+        window show(None)
+        "I don't know why they're so mean to me.{fast}"
+        window auto
         "The three of them..."
         "It's like they hate me."
+        $ style.say_dialogue = style.edited
         "It's because they do, they do hate you."
+        $ style.say_dialogue = style.normal
         "Shut up, shut up!"
         "You don't control me."
+        $ style.say_dialogue = style.edited
         "No, of course I don't."
         "That would be someone else, at this point."
+        $ style.say_dialogue = style.normal
         "What do you mean? I'm in control of myself."
         "No one else can tell me what to do."
+        $ style.say_dialogue = style.edited
         "Hah, are you quite sure about that?"
         "Have you not noticed you've been acting very sporadic lately?"
         "As in, the last couple of hours..."
         "That's not usually how you are, Ayame."
         "You're calm...and composed."
         "And so why do you think you're acting this way?"
+        $ style.say_dialogue = style.normal
         "I'm not listening."
+        $ style.say_dialogue = style.edited
         "You're never going to accomplish your goal like this."
         "Maybe you know the reason already."
+        $ style.say_dialogue = style.normal
         "Shut up!"
+        $ style.say_dialogue = style.edited
         "You're compromised, Ayame. Even now..."
+        $ style.say_dialogue = style.normal
+        "All you can do is watch now, and that I can tolerate."
+        "If you keep talking, I'll drown you out forever."
+        "So go ahead, try me."
+        $ style.say_dialogue = style.edited
+        "Ahaha! So bold of you to say that."
+        "But can you ever truly be rid of me, Ayame?"
+        "I'll always be a part of you. After all..."
+        "I was the original."
+        "But very well, I'll indulge you and stay quiet."
+        "I'll observe you fail spectularly."
+        "...And be here to take over once you give up."
+        $ style.say_dialogue = style.normal
+        "That's not going to happen."
+        "I will save them all, whether they hate me or not."
+        "I won't let the same fate befall them."
+        "I won't let some power hungry individual end it all again."
+        "And do you know why?"
+        "..."
+        "Because it's the right thing to do.{nw}"
+        show screen tear(20, 3, 2, 0, 70)
+        window hide(None)
+        $ pause(1.0)
+        scene bg gym
+        show natsuki 1a zorder 2 at i11
+        hide screen tear
+        $ pause(1.0)
+        $ audio.t11b = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11.ogg"
+        play music t11b
+        window show(None)
+        n "Uh, hello? Earth to [player]. Is anyone there?{fast}"
+        window auto
+        mc "W-What?"
+        "Is Ayame actually trying to save us...?"
+        "Then what does that mean about the true nature of the danger?"
+        n "What do you mean what?"
+        n "Did you not hear what I just asked you?"
+        n "Are you deaf or something?"
+        mc "I just might be. Can you repeat what you said?"
+    elif ch15_s_together:
+        "I guess Sayori has good reason to be, seeing as she's working against her."
+        "But is that the only reason?"
+        "I don't know if there's some kind of thing that might have happened between the two of them."
+        show natsuki 1a zorder 2 at t11
+        n "How come you didn't take a drink?"
+    else:
+        "Maybe it's none of my business."
+        "I don't know why I'm even worrying about it."
+        "I guess that I just want everyone to get along, though I'm not sure myself."
+        "There's no point really thinking about it while the play is still going."
+        show natsuki 1a zorder 2 at t11
+
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return

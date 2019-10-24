@@ -2021,7 +2021,7 @@ label ch13_exclusive_natsuki:
         hide momsuki
         show dadsuki 1a zorder 2 at t11
         d "I'm sure she'd appreciate your company."
-        d "And both of us appreciate you talking your time to spend time with her."
+        d "And both of us appreciate you taking your own time to spend time with her."
         mc "It's nothing..."
         d 1b "I don't think it is..."
         d "You mean a lot more to her than she lets on and--"
@@ -6161,7 +6161,7 @@ label ch13_exclusive_monika:
         "Unlike me, who chose based on what others might like."
         "But the novels look short enough to do a play on, at least for a few chapters."
         m 1be "Any comments on my choices?"
-        m "I don't what you've heard of them but maybe you'd like to say something?"
+        m "I don't know what you've heard of them but maybe you'd like to say something?"
         mc "You're right, I haven't really heard of them before."
         mc "But from the first glance by reading the blurb, they all seem kinda..."
         mc "Um...romantic?"
