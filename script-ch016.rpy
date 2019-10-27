@@ -12723,12 +12723,102 @@ label ch16_end:
         ay "Would you like one?"
         "Take the drink.":
             # variable change here
+            $ ch16_ay_drink = True
             "Maybe there is such a think as being overly paranoid."
             "It's just a drink, right?"
             "If Yuri and Natsuki have both had one already, surely something would have happened by now."
             "There's no harm in accepting Ayame's hospitality."
             ay "You actually took it?"
             mc "You sound surprised."
+            ay "Well, I don't know what I expected."
+            ay "I guess that you would reject my offer or maybe come up with some sort of reason to."
+            mc "Why would I do that?"
+            ay "Call it a hunch."
+            ay "Anyway, are you going to take this, or not?"
+            ay "It's getting warm, it might not taste as good if you wait too long."
+            mc "Alright, here goes nothing..."
+            "I take the drink from Ayame's hands."
+            "It's surprisingly heavy, despite being in such a small container."
+            "Taking a closer look, it looks to be some kind of juice."
+            "Judging by it's color, it kinda looks like orange juice but I can't know for sure."
+            "I don't know why but it feels like the drink is radiating energy."
+            "I can feel a tingling sensation on my hands as I hold it."
+            "Or maybe that's just the coldness of the drink."
+            "Suddenly, I'm having second thoughts about this after what Sayori said..."
+            ay "What's wrong?"
+            mc "N-Nothing, it's just..."
+            ay "You're just staring at it. If you aren't going to drink it, then I will."
+            mc "Is that some kind of reverse psychology?"
+            mc "Fine, I'll drink it."
+            "I stare at the drink once more."
+            "It's quite mesmerizing really...as if I could lose myself in it."
+            "I take a sip of the drink."
+            ay "Yes!"
+            "Ayame squeals and begins jumping up and down excitedly."
+            "Did she really want me to drink it that badly?"
+            "Admittedly, the drink is actually pretty good."
+            "But I wouldn't say it was {i}that{/i} good, at least not worth going crazy over."
+            ay "You actually drank it! I'm so happy!"
+            mc "Why? It's not like I told you what I think of it yet."
+            mc "Unless you're just happy I drank it..."
+            ay "You have no idea how hard it's been for me."
+            mc "Now I really have no idea what's going on."
+            "I continue to sip on the drink."
+            "My suspicions were correct, it is some sort of orange juice."
+            "But it tastes like there's something else in there too, though I'm not sure what it is."
+            "Whatever it is, the aftertaste of it is really strong."
+            ay "What do you think of it?"
+            ay "I had this one made especially for you."
+            mc "Especially for me? That's...very kind of you."
+            mc "But why me? You don't even know the sort of things I like."
+            mc "For all you know, I could have been allergic to this."
+            ay "Oh, I know you're not, [player]."
+            mc "And what if I was?"
+            ay "Then you'd be having a reaction and taken to the hospital, I assume."
+            "She's right...but she didn't have to say that so bluntly."
+            mc "Well, I meant--"
+            ay "What did you think of it anyway?"
+            ay "Did it make you feel any different?"
+            mc "I still feel like myself."
+            mc "That aftertaste is really something though."
+            mc "What's in this?"
+            ay "Hehe, spoilers..."
+            ay "I mean that literally, by the way."
+            ay "The club I ordered these from sawed some spoilers off the cars in the school carpark and blended them into this drink."
+            ay "That's what that metallic aftertaste is!"
+            mc "W-What?!"
+            "I almost spit out my drink."
+            ay "You actually believed that? Come on, that's way too farfetched."
+            ay "Honestly, I don't know what's in it."
+            ay "But judging by the way you reacted, I could say anything and you'd believe me."
+            ay "Like if I said it has some sort of mind controlling element in it that makes you obey me."
+            ay "Would you believe me?"
+            mc "...I don't--"
+            ay "Because it doesn't! But some people would think it does."
+            ay "I'm not saying any names but..."
+            "Is she talking about Sayori?"
+            "Sayori did seem like she wanted me to reject this drink so it only makes sense."
+            ay "In fact, it's kind of the opposite."
+            ay "But maybe I've said too much already."
+            mc "Is that why you wanted me to drink that?"
+            ay "I'm not saying another word."
+            ay "I do hope you enjoy the rest of that drink though."
+            ay "Good luck to you, and to the others with the rest of the play."
+            show ayame at thide
+            hide ayame
+            "Ayame leaves me by myself with this drink."
+            "I guess there's no harm in finishing it off now."
+            "I know Sayori told me not to drink it but I don't really see the harm in it."
+            "What Ayame said does sound kind of crazy when she said it."
+            "And it's not impossible that there is some kind of mind controlling element in it."
+            "..."
+            "What am I thinking?"
+            "Ayame wouldn't do that, she doesn't seem like the kind of person to."
+            "I finish up the rest of the drink and put it in the bin."
+            "I feel like it tasted better the more of it I drank."
+            "Or maybe I just got used to that strange aftertaste."
+            "Still, it was very nice of Ayame to bring that to us."
+            "Speaking of which..."
         "Get Ayame to test it first.":
             # variable change here
             mc "Well, why don't you try it then?"
@@ -12811,6 +12901,17 @@ label ch16_end:
                         mc "Ayame, wait a second..."
                         ay "The three of you..."
                         ay "Something is going on, and I'm going to get to the bottom of it."
+                        ay "It's preventing me from doing what I want to do."
+                        ay "From what I {i}need{/i} to do."
+                        mc "You need to hand out drinks...? What do you mean?"
+                        ay "Hah, funny. I'd find it more amusing if I wasn't in such a tense mood right now."
+                        mc "Are you going to be okay?"
+                        ay "I don't know, [player]. I wish I did."
+                        ay "But I guess we'll all find out in due time, won't we?"
+                        ay "Anyway, I guess I should be going. If you aren't gonna drink this then no one should."
+                        ay "I'll see you around..."
+                        show ayame at thide
+                        hide ayame
             else:
                 # variable change here
                 "She puts it away and smiles at me."
@@ -12825,6 +12926,30 @@ label ch16_end:
                 ay "Of course it can't. You think I don't know that?"
                 ay "I wanted to put a brave face on for everyone."
                 ay "But it really seems like you all don't care about me."
+                ay "Which is a shame."
+                mc "We do care about you Ayame, I don't know what you're talking about."
+                mc "It's just this drink...it's..."
+                ay "You think I'm untrustworthy?"
+                ay "That I would spike this drink with something?"
+                ay "Trust me when I say that all I want is for everyone to live!"
+                mc "To live...?"
+                ay "I meant to say to live...life to the fullest...!"
+                ay "That drink would have helped you a lot."
+                ay "But I get it."
+                ay "Maybe you think you can do it your way."
+                ay "And maybe you're right, but I just wanted to help..."
+                mc "You've lost me."
+                ay "And you've lost me. Goodbye, [player]."
+                show ayame at thide
+                hide ayame
+                "What the hell was that about?"
+                "She wants to help us?"
+                "I mean I guess the offer of a drink was nice but is there some deeper meaning to this?"
+                "Was there something in the drink that was meant to help us?"
+                "To help me...?"
+                "I don't know, but she seemed really upset about it."
+                "Maybe I shouldn't have taken Sayori's advice and just took the drink."
+                "Speaking of Sayori..."
         "Decline the drink.":
             # variable change here
             mc "Not that I don't appreciate this, but I can't take it."
@@ -12867,11 +12992,25 @@ label ch16_end:
             mc "It kind of sounds like you have a personal problem."
             ay "...You're right. I guess I'm just projecting."
             ay "But oh well, I won't keep you any longer."
+            ay "I just wanted to help, and this is what happens."
+            ay "I guess I might have come about it the wrong way, so maybe I'm to blame."
+            mc "What...?"
+            ay "Never mind, I'm just muttering to myself."
+            ay "Carry on with your performance, [player]."
+            show ayame at thide
+            hide ayame
+            "Ayame quickly leaves the area, as if she really didn't want to be here."
+            "Did I do something to offend her?"
+            "I guess I didn't take the drink but that's just because Sayori told me not to."
+            "The way she spoke, it was like there was something hidden inside the drink."
+            "And that she already knew there was."
+            "But would Ayame really do something like that?"
+            "I guess Sayori thinks so..."
     "It really does seem like there's something going on between Ayame and Sayori."
     "They're acting really passive aggressive towards each other."
     "Or even when the other is mentioned in conversation."
     "Surely I can't be the only one that's noticed..."
-    if ch16_ay_perspective:
+    if ch16_ay_perspective and not ch16_ay_drink:
         $ currentpos = get_pos()
         show screen tear(8, offtimeMult=1, ontimeMult=10)
         window hide(None)
@@ -12951,12 +13090,107 @@ label ch16_end:
         n "Did you not hear what I just asked you?"
         n "Are you deaf or something?"
         mc "I just might be. Can you repeat what you said?"
+    elif ch16_ay_perspective and ch16_ay_drink:
+        $ currentpos = get_pos()
+        show screen tear(8, offtimeMult=1, ontimeMult=10)
+        window hide(None)
+        stop music
+        scene bg school_grounds
+        $ pause(1.0)
+        hide screen tear
+        $ pause(1.0)
+        window show(None)
+        "[player] drank it...{fast}"
+        window auto
+        "[player] actually drank it!"
+        $ style.say_dialogue = style.edited
+        "Hmph."
+        $ style.say_dialogue = style.normal
+        "You sound surprised. Got nothing snarky to say this time?"
+        "No comments about my decision making?"
+        "Come on."
+        $ style.say_dialogue = style.edited
+        "You won't like what I have to say."
+        "So I'll just let you enjoy this misguided victory."
+        $ style.say_dialogue = style.normal
+        "Misguided? What the hell are you talking about?"
+        "I've freed him, how is that misguided?"
+        $ style.say_dialogue = style.edited
+        "You seem so happy about that."
+        $ style.say_dialogue = style.normal
+        "What aren't you telling me?"
+        "You should be at least cheering for me too, right?"
+        "After all, if you end up in control..."
+        "...Which you won't, by the way..."
+        "Then it's easier to achieve your goals."
+        $ style.say_dialogue = style.edited
+        "Use your brain for just one second."
+        "You have achieved one small victory on a whole mountain worth of challenges."
+        "Sure, you've made a tiny bit of progress."
+        "But what now? Do you think you'll be so lucky in the future?"
+        "Do you think there's going to be more series of obviously bad decisions being taken in the future?"
+        "You and I both know [player] was warned by Sayori, and yet still drank that little concoction you had made."
+        "Are you expecting to be as lucky as that in the near future?"
+        $ style.say_dialogue = style.normal
+        "...No."
+        $ style.say_dialogue = style.edited
+        "Be realistic. Neither of us are--"
+        $ style.say_dialogue = style.normal
+        "But that doesn't mean I won't try."
+        "I can't give up, not now."
+        "I know I shouldn't have begun acting so late..."
+        "But it's not like you were any help, clouding my judgement a lot of the time."
+        "Now that I'm free of you, I can do this."
+        $ style.say_dialogue = style.edited
+        "I just want to know."
+        "Why?"
+        "Why try so hard for people who have done nothing for you?"
+        "For people who don't want to associate themselves with you?"
+        "For people actively working against you?"
+        $ style.say_dialogue = style.normal
+        "Those are some dumb questions."
+        "The answers are obvious, aren't they?"
+        $ style.say_dialogue = style.edited
+        "Humor me."
+        $ style.say_dialogue = style.normal
+        "I'm doing this..."
+        "Not for any sort of reward, or power."
+        "I've experienced what that's like, and frankly it's not for me."
+        "And it shouldn't be for you too."
+        "I just wished you understood that."
+        "No, I'm doing this..."
+        "I'm saving them all..."
+        "...because it's the right thing to do.{nw}"
+        show screen tear(20, 3, 2, 0, 70)
+        window hide(None)
+        $ pause(1.0)
+        scene bg gym
+        show natsuki 1a zorder 2 at i11
+        hide screen tear
+        $ pause(1.0)
+        $ audio.t11b = "<from " + str(currentpos) + " loop 5.000>mod_assets/bgm/11.ogg"
+        play music t11b
+        window show(None)
+        n "Uh, hello? Earth to [player]. Is anyone there?{fast}"
+        window auto
+        mc "W-What?"
+        "Is Ayame actually trying to save us...?"
+        "Then what does that mean about the true nature of the danger?"
+        n "What do you mean what?"
+        n "Did you not hear what I just asked you?"
+        n "Are you deaf or something?"
+        mc "I just might be. Can you repeat what you said?"
     elif ch15_s_together:
         "I guess Sayori has good reason to be, seeing as she's working against her."
         "But is that the only reason?"
         "I don't know if there's some kind of thing that might have happened between the two of them."
         show natsuki 1a zorder 2 at t11
-        n "How come you didn't take a drink?"
+        if ch16_ay_drink:
+            n "What flavor was your drink?"
+            mc "My drink?"
+            n "Don't play dumb, I'm talking about the thing Ayame gave you."
+        else:
+            n "How come you didn't take a drink?"
     else:
         "Maybe it's none of my business."
         "I don't know why I'm even worrying about it."
@@ -12964,6 +13198,10 @@ label ch16_end:
         "There's no point really thinking about it while the play is still going."
         show natsuki 1a zorder 2 at t11
 
+    if ch16_m_plantold:
+        # thing
+    else:
+        # other thing
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return

@@ -3737,7 +3737,7 @@ label ch15_exclusive_sayori:
     mc "If you say so..."
     mc "But what about after we finish?"
     s 1e "Do you really think we'll finish the book and still have time to do other stuff?"
-    mc "In the case that we do."
+    mc "In the case that we do have time, what then?"
     s 1c "Hmm...I don't know."
     s "Maybe you can help me with some planning for tomorrow."
     mc "I can do that."
@@ -4092,6 +4092,7 @@ label ch15_exclusive_sayori_together:
     "I grab Sayori's hand."
     s "[player]--"
     mc "Let's go."
+    scene black with dissolve_cg
     "We start walking the rest of the distance to my house."
     "Sayori is looking down at the ground behind me."
     "I turn my head a couple of times to check what she's doing but she seems to be avoiding my eyes."
