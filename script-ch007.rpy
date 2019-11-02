@@ -1236,7 +1236,7 @@ label ch7_end:
     show yuri 2r zorder 3 at f42
     show natsuki zorder 2 at t43
     y "Natsuki..."
-    y 2y4 "Why don't you just shut your fucking mouth and let [player_reflexive] decide for himself?"
+    y 2y4 "Why don't you just shut your fucking mouth and let [player_reflexive] decide for [player_reflexive]self?"
     show monika 3i
     show natsuki 2q
     stop music fadeout 1.5

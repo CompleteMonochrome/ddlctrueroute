@@ -1331,7 +1331,7 @@ label christmas_chapter:
     cl 2che "Like a book."
     cl "Did you not hear me?"
     mc "Uh...right."
-    mc "So what did you learn about her that I could me choose a gift for her?"
+    mc "So what did you learn about her that I could help me choose a gift for her?"
     cl 2chi "I only got a short glimpse."
     cl "But I think I have just the things."
     cl "The clerk directs [player] to the section of the store filled with artifacts."

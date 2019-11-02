@@ -181,7 +181,7 @@ label ch14_main:
     s "After all, it's nothing that I can't handle even if you did mess up."
     s "Though I'm not suggesting you did!"
     s "That's hardly possible now."
-    s 1c "[player] is thinking for himself."
+    s 1c "[player] is thinking for [player_reflexive]self."
     s "Well...to a degree."
     s "You still get to make [player_possessive] choices."
     s "What [player_personal] says and how [player_personal] acts for the most part isn't up to you."
@@ -3564,7 +3564,7 @@ label ch14_end:
                 show natsuki zorder 2 at t41
                 show sayori 2l zorder 3 at f42
                 s "Ehehe, I think you're putting a bit too much pressure on [player_reflexive]."
-                s "Just let [player_reflexive] decide for himself."
+                s "Just let [player_reflexive] decide for [player_reflexive]self."
                 s "[cPlayer_personal] did volunteer after all."
                 show sayori zorder 2 at t42
                 mc "Let me think..."

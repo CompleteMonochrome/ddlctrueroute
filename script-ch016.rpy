@@ -13090,6 +13090,8 @@ label ch16_end:
         n "Did you not hear what I just asked you?"
         n "Are you deaf or something?"
         mc "I just might be. Can you repeat what you said?"
+        n "I was saying to look at this part of the script."
+        "Natsuki waves a copy of the script in front of me and points to one of the lines."
     elif ch16_ay_perspective and ch16_ay_drink:
         $ currentpos = get_pos()
         show screen tear(8, offtimeMult=1, ontimeMult=10)
@@ -13180,6 +13182,8 @@ label ch16_end:
         n "Did you not hear what I just asked you?"
         n "Are you deaf or something?"
         mc "I just might be. Can you repeat what you said?"
+        n "I was saying to look at this part of the script."
+        "Natsuki waves a copy of the script in front of me and points to one of the lines."
     elif ch15_s_together:
         "I guess Sayori has good reason to be, seeing as she's working against her."
         "But is that the only reason?"
@@ -13189,19 +13193,126 @@ label ch16_end:
             n "What flavor was your drink?"
             mc "My drink?"
             n "Don't play dumb, I'm talking about the thing Ayame gave you."
+            n "Yuri and I both had one but they were different flavors."
+            n "But they were the flavors we liked, so I'm asking what she got you."
+            mc "I can't really describe the flavor of it but I guess it was closest to orange juice."
+            n "Orange juice...and it had some weird aftertaste, right?"
+            mc "Yeah, that's right."
         else:
             n "How come you didn't take a drink?"
+            n "I saw her offer one to you and you didn't take it."
+            mc "I just didn't want one."
+            n "Is that the real reason?"
+            mc "Yeah...? Is there a reason I would be lying?"
+            n "Well...no. I guess not. It just doesn't seem like something you would pass up on."
+            mc "I just didn't want it at the time."
+            n "It was really good, by the way."
+        n "Anyway, let's talk about this next part of the play."
+        "She takes out a copy of the script and points to one of the lines."
     else:
         "Maybe it's none of my business."
         "I don't know why I'm even worrying about it."
         "I guess that I just want everyone to get along, though I'm not sure myself."
         "There's no point really thinking about it while the play is still going."
         show natsuki 1a zorder 2 at t11
-
-    if ch16_m_plantold:
-        # thing
+        n "Just one more act, and we're done."
+        "Natsuki walks towards me, with script in hand."
+        n "Can you believe that, [player]?"
+        n "I can't wait to get this over with so I can go check out the other stuff."
+        n "How are you feeling?"
+        mc "I could be better."
+        if ch16_ay_drink:
+            mc "The drink helped a bit."
+            n "I saw you take it, how was it?"
+            n "The one Yuri and I had were different flavors."
+            mc "It was okay, there was something weird about it though."
+            n "Yeah...it had some weird aftertaste right?"
+            mc "Yeah, it did. It seemed like orange juice at first and then suddenly..."
+            mc "I don't know how to describe it."
+            n "Anyway, that's not important right now."
+        else:
+            n "Well, maybe you should have got something to drink!"
+            n "Like, I don't know, the thing Ayame offered you."
+            mc "I just didn't want it."
+            n "Oh, come on. Are you serious?"
+            mc "I'm serious, it just wasn't for me."
+            n "You can't know that without trying but fine."
+        n "I wanted to talk about this part here."
+        "Natsuki directs me to a section on the script she's holding."
+    n "It's important that we do this scene properly."
+    mc "What's so important about this one scene?"
+    n "Have you not been paying attention?"
+    n "Don't you remember rehearsing this, it's really important!"
+    mc "I'll be honest, rehearsals is kind of a blur to me."
+    mc "I know it happened, I know when it happened..."
+    mc "But I don't remember {i}all{/i} of it happening."
+    mc "So tell me again why it's so important?"
+    n "It's important because its your big solo part."
+    n "You're going to be by yourself on the stage and the rest of us have to hope you do your part properly."
+    n "And seeing as you didn't even know this was your part, we're kinda worried."
+    mc "I know that scene like the back of my hand...I think."
+    n "Well, you'd better hope you do."
+    n "I don't want us to mess this up because you can't do this properly."
+    mc "Natsuki, have I ever let you down?"
+    if natsuki_date:
+        n "...No. I just don't want you to mess this up."
+        n "They could make fun of you and--"
+        mc "I'll be fine, I promise."
+        n "Okay..."
     else:
-        # other thing
+        n "Do you really want me to answer that?"
+        n "Because I can...but you might be surprised."
+        mc "No, I think I get it."
+    n "But the point is, I want you to practice off-stage while it's not your turn."
+    n "I know you think you'll be fine, but I want to make sure."
+    n "You know, so we don't end up as the laughing stock of the school for the next week."
+    mc "You really think people are that mean?"
+    show monika 1a zorder 3 at f33
+    m "Only some. Though I'm sure the school wouldn't do that to us."
+    m "Especially with Sayori in charge."
+    show natsuki zorder 3 at f32
+    show monika zorder 2 at t33
+    n "Monika? What are you doing here?"
+    show natsuki zorder 2 at t32
+    show monika zorder 3 at f33
+    m "Is there something wrong with me being here?"
+    m "I have just as much of a right to be here as you, don't I?"
+    show natsuki zorder 3 at f32
+    show monika zorder 2 at t33
+    n "I guess...but we were in the middle of a conversation about the play."
+    show natsuki zorder 2 at t32
+    show monika zorder 3 at f33
+    m "In that case, all the more reason to be here."
+    m "I was just about to talk to [player] about the play."
+    m "I'll let you finish what you were saying though."
+    show natsuki zorder 3 at f32
+    show monika zorder 2 at t33
+    n "...As I was saying, just do it right."
+    "Natsuki looks at Monika and then looks at me."
+    "She seems concerned for some reason."
+    n "It's clear that you two have something you want to talk about in private."
+    n "I've said what I needed to say, [player]."
+    n "Don't ruin this for us. Good luck."
+    show natsuki at thide
+    hide natsuki
+    show monika zorder 2 at t11
+    "Natsuki walks away while looking at the script."
+    "After walking a few steps, she turns around then quickens her pace."
+    "I'm not sure if that good luck was about the play."
+    "Or about this talk with Monika."
+    if ch16_ay_drink:
+        "Though I do feel weird when I'm around her for some reason."
+        "I wonder why that is."
+        "Maybe it's just my imagination."
+    else:
+        "It's probably about the play, there's no reason she'd be wishing me luck talking to Monika."
+    m "I'll skip the introductions."
+    m "You know why I'm here, don't you?"
+    if ch16_m_plantold:
+        m "It's about my plan."
+    else:
+        m "I want to make sure there's nothing wrong with you."
+        mc "What?"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return

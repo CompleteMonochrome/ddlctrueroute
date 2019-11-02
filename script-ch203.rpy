@@ -385,7 +385,7 @@ label ch203_end:
     n 3c "We can just--"
     show natsuki zorder 2 at t31
     show yuri zorder 3 at f33
-    y 2r "Natsuki, shut your fucking mouth and let [player_reflexive] decide for himself."
+    y 2r "Natsuki, shut your fucking mouth and let [player_reflexive] decide for [player_reflexive]self."
     show yuri zorder 2 at t33
     show natsuki zorder 3 at f31
     n 1o "{i}You{/i} shut your mouth!"
