@@ -13377,6 +13377,38 @@ label ch16_end:
         m "Surprised at the kind of person Sayori has become."
         m "Surprised at the real reason I'm doing this..."
         m "But who knows? You'll just have to wait and see~"
+        m "You must be wondering about her."
+        m "How she's implicated in all of this and what I plan to do."
+        if ch12_markov_agree:
+            m "Seeing as you can't back out now, I don't suppose there is any real harm."
+            m "The decisions you make to try to stop it can't be reverted."
+            m "No matter how hard you try."
+            m "It's like a stain you can't remove."
+        else:
+            m "Telling you now could ruin things."
+            m "So I'll keep it a secret, for now."
+            m "Just know that I've thought this all through."
+            m "I've thought of hundreds of ways this whole thing could play out."
+            m "And all of them end up the same."
+            m "So I've worked a way around it."
+            m "You need to trust that I can do this."
+            m "With your help, of course."
+            mc "It seems I don't really have a choice, do I?"
+            mc "Now that I'm down this path, there's no turning back, is there?"
+            m "I'm glad you're aware of that fact."
+            m "I just want you in particular to be willing to see my point of view in this."
+            m ""
+    elif ch15_s_together:
+        m "I know I can't stop what the two of you are planning."
+        m "At this point, I couldn't stop her myself if I tried."
+        m "She's already got everything she needs set up."
+        m "The outcome of this day is all but set."
+        m "All that she needs is you."
+        mc "I already told you I'm not helping you, Monika."
+        mc "I don't believe what you've said about Sayori."
+        m "That may be so."
+        m "But if you're the one she's so dependent on."
+        m "Then what's stopping me from making sure you can't act at all?"
     else:
         m "I want to make sure there's nothing wrong with you."
         mc "What? Why would there be anything wrong with me?"
@@ -13405,7 +13437,31 @@ label ch16_end:
         m "The reason we're doing this play in the first place."
         mc "What do you mean? I thought we were just doing this for fun."
         m "Sure, that's the front for it."
-        m "In fact, that's what the intention is."
+        m "In fact, that's what the intention is. That we do this for fun."
+        if monika_type == 0:
+            m "I just question why Sayori would do this."
+            m "She wants what's best for everyone, but she hasn't even asked if this is what they want."
+            m "I want to help her, but not like this..."
+            m "I know there's got to be another way."
+            m "But I can't do anything, [player]. She won't listen to me."
+            m "I'm certain she knows that I know about her plan."
+            m "When I going to approach her about it, it's like she could sense it."
+            m "She had this sad look on her face when I was about to speak to her about it."
+            m "As if she really didn't want me to bring it up."
+            m "She won't listen to anyone. I don't even think she'll listen to you."
+        elif ch12_markov_agree:
+            m "But I'll have my own fun, won't I?"
+            m "When this is all over and it's just me."
+            if monika_type == 1:
+                m "I can't forget about you, of course."
+                m "It will be the two of us."
+                m "While the rest of them will be buried underneath us."
+                m "Just a little longer now."
+                m ""
+        else:
+            m "So that we end up distracted by all of it."
+            m "So that we won't notice when she takes the ground from beneath our feet."
+
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
