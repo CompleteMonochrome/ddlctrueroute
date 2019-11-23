@@ -1,6 +1,9 @@
 screen timer_16_menu_skip(jumploc):
     timer 0.5 action Jump(jumploc) repeat True
 
+screen timer_16_long_menu_skip(jumploc):
+    timer 30.0 action Jump(jumploc) repeat True
+
 label ch16_main:
     if (y_appeal >= 1 or y_appealS >= 1) and (m_appeal >= 1 or m_appealS >= 1) and (s_appeal >= 1 or s_appealS >= 1) and (n_appeal >= 1 or n_appealS >= 1) and not yuri_date and not natsuki_date and not ch15_s_together:
         $ get_achievement("*Playboy*")
@@ -120,13 +123,15 @@ label ch16_main:
         "That girl."
         "I know it's inside her."
         "That spirit of pure evil."
+        $ style.say_dialogue = style.edited
         "The one that prevented me from..."
         "No matter."
         "It will pay."
         "And soon, the rest of them."
-        "But first, I have to keep up this facade."
+        "But first, we have to keep up this facade."
         "Putting up these damn stalls."
-        "Why does it matter when they're all going to perish anyway?"
+        "Why does it matter when they're all going to perish anyway?{nw}"
+        $ style.say_dialogue = style.normal
         $ currentpos = get_pos()
         show screen tear(8, offtimeMult=1, ontimeMult=10)
         window hide(None)
@@ -13743,6 +13748,7 @@ label ch16_end:
     "I hear a voice inside my head, it sounds like..."
     ay "Yes, it's me. I'm in your head, [player]."
     ay "It's me, the person standing right in front of you."
+    $ ay_name = "Ayame's Voice"
     ay "Ayame."
     "You can hear what I'm thinking?"
     ay "Sort of. I figured this was the only way we could properly communicate."
@@ -13774,13 +13780,188 @@ label ch16_end:
     ay "I just hope you cooperate with me here."
     ay "It doesn't look like you have much time left, literally."
     if ch16_ay_drink:
-        ay "Since you drank what I gave you, you do have a little time extra."
+        ay "Since you drank what I gave you, you do have a little extra time."
         ay "It's not much, but it might be enough."
     ay "Don't waste it."
     "Hold on, I'm still incredibly confused."
     "Can you at least explain {i}something{/i}? What is going on?"
     ay "The end of the Literature Club."
     ay "Now, come on. Follow me."
+    ay "But brace yourself...this could turn weird."
+    "Where are we going?"
+    ay "We're going to where Sayori is."
+    ay "Don't ask where, because I don't know the answer myself."
+    ay "All I can say is that you better be prepared for the strange."
+    "What about the others?"
+    "Are we just going to leave them here?"
+    ay "What do you want me to do?"
+    ay "Bring them along with us?"
+    ay "Do you really think they're ready for this?"
+    "I--"
+    ay "Do you really want to involve them in something so...dangerous?"
+    ay "Think about it, [player]."
+    ay "We can't guarantee their safety. They're not like us."
+    ay "We have a means of getting out of bad situations."
+    ay "But them? They're just normal people in this world."
+    ay "Where we're going, they could end up dead and we might not be able to bring them back."
+    ay "Or worse..."
+    if ch16_ay_question_number == 3 and ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2]:
+        $ style.say_dialogue = style.edited
+        ay "Don't decide for [player_reflexive]."
+        ay "If [player_personal] wants to make a bad decision, then let [player_reflexive]."
+        ay "After all, that's why you gave the others drinks, wasn't it?"
+        ay "To be able to make this choice."
+        $ style.say_dialogue = style.normal
+    else:
+        ay "But...I suppose I can't stop you if you wanted to do something."
+        ay "Which is why I came prepared."
+        ay "Remember how I gave the other two drinks?"
+        ay "Well, because of that you now have a choice."
+    "What are you talking about?"
+    ay "As you probably know, those drinks I gave out weren't just because I liked you all."
+    ay "They were for this particular moment."
+    ay "It's a special concoction I made that gives them a tiny essence of power."
+    ay "It's nothing substantial, and it's very temporary but it does mean they can leave this stasis they're in."
+    ay "If you choose to do so, you can bring them along with us."
+    ay "Or at least, try to."
+    "Try...?"
+    ay "I have no idea how they'll react to all of this, [player]."
+    ay "I've linked up our minds so that we can communicate since we can't seem to make any sound right now."
+    ay "Think about how each of them would react to this."
+    ay "As far as I know, none of them have been exposed to something so surreal such as this."
+    ay "They could completely freak out or not want to be a part of it at all."
+    ay "I didn't even know you would be so calm about all of this."
+    ay "Just imagine their reaction when we pull them out of this stopped place in time."
+    ay "You may be wondering what the point of bringing them along with us is."
+    ay "It will only be for a short while but..."
+    ay "Their presence might be able to change Sayori's mind."
+    ay "Or it might not."
+    ay "I'm leaving the decision to you, but I insist that you think this over."
+    ay "Bringing the wrong people with us, or anyone at all could make things worse for you."
+    ay "So just...think about it before you make any rash decision."
+    ay "But not too long, we don't have much time before all of this is over."
+    "What about Monika? She didn't drink any of it, did she?"
+    ay "That's true. But there's something different about her."
+    ay "I have a feeling she'll be receptive if we try to unfreeze her as well."
+    ay "But I'm not so sure that's a good idea."
+    "Why not? She probably knows some things that could help us."
+    ay "There's just this...weird overbearing presence about Monika."
+    ay "It's probably nothing but you can't be too cautious, especially at times like this."
+    ay "I'd rather not take her and somebody else with us."
+    ay "Not that I don't trust {i}her{/i}, I just don't want to make things overly complicated."
+    "So what are my options?"
+    ay "It's either Natsuki, Yuri or both, just Monika or no one."
+    ay "It could just be the two of us. Two resonating souls..."
+    "Right..."
+    ay "Besides, I don't know if I can handle keeping all three of them with us through the whole journey."
+    "I'll need some time to think about this."
+    ay "Go ahead, but we don't have much time. Make your decision, or I'll make it for you."
+    $ quick_menu = False
+    # Make it timeout so we don't waste time
+    show screen timer_16_long_menu_skip("ch16_ay_skipmenu_1",_layer="timers")
+    menu:
+        ay "Who are we taking with us?"
+        "Monika.":
+            $ ch16_ay_companions = 1
+            $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+            ay "You really want to take Monika with us?"
+            ay "I understand that she could be one of the better choices to stop Sayori."
+            ay "But what's the tradeoff we're making here...?"
+            "I'm sure Monika is going to help us."
+            "She'd want to help the others get through all of this."
+            ay "I sure hope you're right."
+            ay "This is your decision and I'm putting a lot on the line by trusting you."
+            "Why do you seem so distrustful of Monika?"
+            ay "I told you, there's just something about her."
+            ay "I don't want to seem like a bad person but its moments like this where I have to be cynical."
+            ay "But let's go, there's no time to waste."
+            show screen tear(20, 0.1, 0.1, 0, 40)
+            window hide(None)
+            play sound "sfx/s_kill_glitch1.ogg"
+            show ayame 2a zorder 2 at t11
+            show monika 1c zorder 2 at i31
+            $ pause(0.25)
+            stop sound
+            hide screen tear
+            window show(None)
+            ay "But let's go, there's no time to waste.{fast}"
+            window auto
+            "In what seems like an instant, we're right next to Monika."
+            "Was that Ayame's doing? Or is it because of time being frozen that that happened?"
+            ay "Here goes nothing..."
+            "Ayame reaches out to Monika."
+            "As her hand approaches Monika, Monika's head turns and her eyes open wide."
+            "She opens her mouth to say something but no sound comes out."
+            "Monika looks around and seems to understand the situation."
+            "I don't think she knows exactly what is happening, but she can probably tell that it's not normal."
+            "She seems to be taking it well."
+            ay "It doesn't seem like the first time she's experienced this, or something like this."
+            "Ayame takes Monika's hand and stares directly into her eyes."
+            "Monika seems surprised at first but seems to realize that Ayame is trying to help her."
+            $ m_name = "Monika's Voice"
+            ay "Monika, can you hear us?"
+            m "Ayame...are you in my head?"
+            "I'm here as well."
+            m "[player] too, huh? I don't suppose the two of you are behind this."
+            ay "Not at all. In fact, we're trying to stop the person who did do this."
+            m "Sayori?"
+            ay "What about her?"
+            m "She's the one that's behind what's going on right now, isn't she?"
+            ay "What gives you that idea?"
+            m "I think we both know that it's Sayori that's responsible for this, Ayame."
+            m "So you don't need to act dumb with me."
+            ay "Okay. I guess you do know."
+            ay "Straight to the point then. We're going to find Sayori and stop her."
+            m "What about the other two?"
+            "Monika looks towards Natsuki and Yuri."
+            ay "They can't escape the frozen stasis they're in."
+            ay "I assume you know the reason to that too."
+            m "I can guess, but that's not important."
+            m "We can do this by ourselves."
+            jump ch16_ay_afterskip_1
+        "Natsuki." if not ch12_markov_agree:
+            $ ch16_ay_companions = 2
+            $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+            jump ch16_ay_afterskip_1
+        "Yuri." if not ch12_markov_agree:
+            $ ch16_ay_companions = 3
+            $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+            ay "Just Yuri, huh?"
+            ay "Well, it's your choice but it's hers if she doesn't want to come."
+            ay "If she's a good friend to you and Sayori, I don't see why she wouldn't."
+            ay "She seems like the type of person who would help a friend out."
+            ay "In fact, they all do."
+            ay "I just hope she doesn't freak out."
+            ""
+            jump ch16_ay_afterskip_1
+        "Natsuki and Yuri." if not ch12_markov_agree:
+            $ ch16_ay_companions = 4
+            $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+            ay "We're going to try to take the two of them?"
+            ay "I don't know if they'll both want to come, or even one of them."
+            ay "But we can try, I suppose."
+            jump ch16_ay_afterskip_1
+        "No one." if not ch12_markov_agree:
+            $ ch16_ay_companions = 0
+            $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+            ay "The smart choice. We can't risk any stragglers anyway."
+            ay "Though I'm not sure how Sayori will react with just two of us."
+            ay "If she'll even stop."
+            "If she won't?"
+            ay "Then I guess we'll have to stop her some other way."
+            jump ch16_ay_afterskip_1
+    label ch16_ay_skipmenu_1:
+    $ quick_menu = True
+    $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+    ay "You are taking far too long to decide."
+    "What--"
+    ay "We're not going to take anyone."
+    ay "There's not much time left before the entryway closes."
+    ay "So it's either leave now"
+    label ch16_ay_afterskip_1:
+    $ quick_menu = True
+    ay "Alright, let's get going then."
+    "Ayame takes a step forward but as "
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
@@ -14822,8 +15003,19 @@ label ch16_sayoridate:
                 "Something I need to take to [player_reflexive] about."
                 "I feel this resonance towards [player]."
                 "I don't know why."
+                "I have a feeling [player] might be able to help out with this recipe I'm making."
+                "You know what I'm talking about, don't you?"
                 $ style.say_dialogue = style.edited
-                "Whatever your reason..."
+                "That will never work."
+                "Even if it does, there's no guarantee any of them will drink it."
+                "Hand me the reigns, and I'll handle this the proper way."
+                $ style.say_dialogue = style.normal
+                "I'm not stupid."
+                "If I do that, you're never going to give it back."
+                "Not that I would ever do that while I'm in the right state of mind."
+                $ style.say_dialogue = style.edited
+                "Suit yourself, sooner or later you'll learn to appreciate what I'm trying to do for us."
+                "Though I will tell you this."
                 "[cPlayer_personal]'s no longer at school."
                 "You know I'm not lying."
                 $ style.say_dialogue = style.normal
