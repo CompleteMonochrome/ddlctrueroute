@@ -13649,13 +13649,13 @@ label ch16_end:
             m "I'm urging you to rethink how you look at Sayori."
             m "If not for my sake, then for yours or the others."
             mc "What exactly is she going to do, Monika?"
-            mc "And how are you so sure its a bad thing?"
+            mc "And how are you so sure it's a bad thing?"
             m "Everyone will be caught in this, no one is safe."
             m "Just because you're her best friend, doesn't mean she'll spare you too."
             m "Maybe you have no idea what I'm talking about."
             m "But I just want you to keep what I've said in mind."
             m "When the time comes, who will you choose?"
-            mc "I don't know know, Monika."
+            mc "I don't know, Monika."
             m "It's your choice, [player]. I just hope you can make up your mind soon."
             m "The way I see it, there's only two ways to go about this."
             m "You choose her perceived 'right' way, or the way that leads to a future?"
@@ -13744,38 +13744,41 @@ label ch16_end:
     "She looks like she has an idea, but what can she do?"
     "We can only communicate through our actions, and I was never the best at charades."
     $ ay_name = "Voice"
+    $ temp_name = player
+    $ player = "My Voice"
     ay "Uh, can you hear me?"
-    "I hear a voice inside my head, it sounds like..."
-    ay "Yes, it's me. I'm in your head, [player]."
+    mc "I hear a voice inside my head, it sounds like..."
+    ay "Yes, it's me. I'm in your head, [temp_name]."
     ay "It's me, the person standing right in front of you."
     $ ay_name = "Ayame's Voice"
     ay "Ayame."
-    "You can hear what I'm thinking?"
+    mc "You can hear what I'm thinking?"
     ay "Sort of. I figured this was the only way we could properly communicate."
     ay "I hope I'm not overstepping my boundaries or anything."
-    "I think we have more pressing matters right now, Ayame."
-    "Do you know what's going on?"
-    "And more importantly, do you know where I can find Sayori?"
-    ay "To answer both of those questions, yes."
+    mc "I think we have more pressing matters right now, Ayame."
+    mc "Do you know what's going on?"
+    mc "And more importantly, do you know where I can find Sayori?"
+    ay "Hah, even now you're still concerned about Sayori."
+    ay "But to answer both of those questions, yes."
     if ch16_ay_question_number == 3 and ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2]:
         $ style.say_dialogue = style.edited
         ay "We do."
         $ style.say_dialogue = style.normal
-        "Another voice? You sound like Ayame but you seem...different."
-        "You did say 'we', are you a different person?"
+        mc "Another voice? You sound like Ayame but you seem...different."
+        mc "You did say 'we', are you a different person?"
         $ style.say_dialogue = style.edited
         ay "Of sorts."
         $ style.say_dialogue = style.normal
         ay "Ignore her, I'll take you to where Sayori is."
     ay "She's hidden herself away from the world completely."
-    ay "She isn't in this time anymore, [player]."
-    "Then...does that mean she isn't frozen either?"
+    ay "She isn't in this time anymore, [temp_name]."
+    mc "Then...does that mean she isn't frozen either?"
     ay "That's right. In fact, she's the one that's orchestrated what you're seeing right now."
     ay "To get to her, we're going to need to do something that might blow your mind."
-    "My mind is already blown."
-    "How did you even get into my head?"
+    mc "My mind is already blown."
+    mc "How did you even get into my head?"
     ay "Do you want answers, or do you want to get to Sayori?"
-    "I'd like both...but I have a feeling I'll get everything I need to know from Sayori."
+    mc "I'd like both...but I have a feeling I'll get everything I need to know from Sayori."
     ay "I have a feeling you will too."
     ay "I just hope you cooperate with me here."
     ay "It doesn't look like you have much time left, literally."
@@ -13783,23 +13786,23 @@ label ch16_end:
         ay "Since you drank what I gave you, you do have a little extra time."
         ay "It's not much, but it might be enough."
     ay "Don't waste it."
-    "Hold on, I'm still incredibly confused."
-    "Can you at least explain {i}something{/i}? What is going on?"
+    mc "Hold on, I'm still incredibly confused."
+    mc "Can you at least explain {i}something{/i}? What is going on?"
     ay "The end of the Literature Club."
     ay "Now, come on. Follow me."
     ay "But brace yourself...this could turn weird."
-    "Where are we going?"
+    mc "Where are we going?"
     ay "We're going to where Sayori is."
     ay "Don't ask where, because I don't know the answer myself."
     ay "All I can say is that you better be prepared for the strange."
-    "What about the others?"
-    "Are we just going to leave them here?"
+    mc "What about the others?"
+    mc "Are we just going to leave them here?"
     ay "What do you want me to do?"
     ay "Bring them along with us?"
     ay "Do you really think they're ready for this?"
-    "I--"
+    mc "I--"
     ay "Do you really want to involve them in something so...dangerous?"
-    ay "Think about it, [player]."
+    ay "Think about it, [temp_name]."
     ay "We can't guarantee their safety. They're not like us."
     ay "We have a means of getting out of bad situations."
     ay "But them? They're just normal people in this world."
@@ -13817,15 +13820,15 @@ label ch16_end:
         ay "Which is why I came prepared."
         ay "Remember how I gave the other two drinks?"
         ay "Well, because of that you now have a choice."
-    "What are you talking about?"
+    mc "What are you talking about?"
     ay "As you probably know, those drinks I gave out weren't just because I liked you all."
     ay "They were for this particular moment."
     ay "It's a special concoction I made that gives them a tiny essence of power."
     ay "It's nothing substantial, and it's very temporary but it does mean they can leave this stasis they're in."
     ay "If you choose to do so, you can bring them along with us."
     ay "Or at least, try to."
-    "Try...?"
-    ay "I have no idea how they'll react to all of this, [player]."
+    mc "Try...?"
+    ay "I have no idea how they'll react to all of this, [temp_name]."
     ay "I've linked up our minds so that we can communicate since we can't seem to make any sound right now."
     ay "Think about how each of them would react to this."
     ay "As far as I know, none of them have been exposed to something so surreal such as this."
@@ -13840,23 +13843,32 @@ label ch16_end:
     ay "Bringing the wrong people with us, or anyone at all could make things worse for you."
     ay "So just...think about it before you make any rash decision."
     ay "But not too long, we don't have much time before all of this is over."
-    "What about Monika? She didn't drink any of it, did she?"
+    mc "What about Monika? She didn't drink any of it, did she?"
     ay "That's true. But there's something different about her."
     ay "I have a feeling she'll be receptive if we try to unfreeze her as well."
     ay "But I'm not so sure that's a good idea."
-    "Why not? She probably knows some things that could help us."
+    mc "Why not? She probably knows some things that could help us."
     ay "There's just this...weird overbearing presence about Monika."
     ay "It's probably nothing but you can't be too cautious, especially at times like this."
     ay "I'd rather not take her and somebody else with us."
     ay "Not that I don't trust {i}her{/i}, I just don't want to make things overly complicated."
-    "So what are my options?"
+    mc "So what are my options?"
     ay "It's either Natsuki, Yuri or both, just Monika or no one."
     ay "It could just be the two of us. Two resonating souls..."
-    "Right..."
+    mc "Right..."
     ay "Besides, I don't know if I can handle keeping all three of them with us through the whole journey."
-    "I'll need some time to think about this."
+    mc "I'll need some time to think about this."
     ay "Go ahead, but we don't have much time. Make your decision, or I'll make it for you."
+    ay "And be warned. Beyond this point, everything is crucial so I can't risk you altering something you shouldn't."
+    ay "Doing so would disrupt everything, and we may not have a chance to reach Sayori."
+    ay "You won't be able to go back, you won't have a second chance."
+    ay "At least, not in this life."
+    ay "Any decision you make from now on, you'll have to live with."
+    ay "I hope you know what I mean."
+    mc "I think I do..."
+    ay "Now that that's over with, let's get down to business."
     $ quick_menu = False
+    $ ch16_end_part = True
     # Make it timeout so we don't waste time
     show screen timer_16_long_menu_skip("ch16_ay_skipmenu_1",_layer="timers")
     menu:
@@ -13864,25 +13876,26 @@ label ch16_end:
         "Monika.":
             $ ch16_ay_companions = 1
             $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+            $ quick_menu = True
             ay "You really want to take Monika with us?"
             ay "I understand that she could be one of the better choices to stop Sayori."
             ay "But what's the tradeoff we're making here...?"
-            "I'm sure Monika is going to help us."
-            "She'd want to help the others get through all of this."
+            mc "I'm sure Monika is going to help us."
+            mc "She'd want to help the others get through all of this."
             ay "I sure hope you're right."
             ay "This is your decision and I'm putting a lot on the line by trusting you."
-            "Why do you seem so distrustful of Monika?"
+            mc "Why do you seem so distrustful of Monika?"
             ay "I told you, there's just something about her."
             ay "I don't want to seem like a bad person but its moments like this where I have to be cynical."
             ay "But let's go, there's no time to waste."
-            show screen tear(20, 0.1, 0.1, 0, 40)
+            $ _history_list.pop()
+            show screen tear(8, offtimeMult=1, ontimeMult=10)
             window hide(None)
-            play sound "sfx/s_kill_glitch1.ogg"
+            $ pause(1.0)
             show ayame 2a zorder 2 at t11
             show monika 1c zorder 2 at i31
-            $ pause(0.25)
-            stop sound
             hide screen tear
+            $ pause(1.0)
             window show(None)
             ay "But let's go, there's no time to waste.{fast}"
             window auto
@@ -13901,8 +13914,8 @@ label ch16_end:
             $ m_name = "Monika's Voice"
             ay "Monika, can you hear us?"
             m "Ayame...are you in my head?"
-            "I'm here as well."
-            m "[player] too, huh? I don't suppose the two of you are behind this."
+            mc "I'm here as well."
+            m "[temp_name] too, huh? I don't suppose the two of you are behind this."
             ay "Not at all. In fact, we're trying to stop the person who did do this."
             m "Sayori?"
             ay "What about her?"
@@ -13913,42 +13926,311 @@ label ch16_end:
             ay "Okay. I guess you do know."
             ay "Straight to the point then. We're going to find Sayori and stop her."
             m "What about the other two?"
-            "Monika looks towards Natsuki and Yuri."
+            mc "Monika looks towards Natsuki and Yuri."
             ay "They can't escape the frozen stasis they're in."
             ay "I assume you know the reason to that too."
             m "I can guess, but that's not important."
             m "We can do this by ourselves."
+            m "Judging by what I'm seeing, we don't have much time to waste."
+            "Ayame looks at Monika suspiciously then nods."
+            ay "That's right."
+            m "Then we should get going, right now."
+            m "How are we going to find her?"
+            ay "Leave that to me."
             jump ch16_ay_afterskip_1
         "Natsuki." if not ch12_markov_agree:
             $ ch16_ay_companions = 2
             $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+            $ quick_menu = True
+            $ n_name = "Natsuki's Voice"
+            ay "You want to take Natsuki with us?"
+            mc "Is that a problem?"
+            ay "Well...no. I don't see the harm in taking her."
+            ay "I'm just wondering why you're taking her."
+            mc "I thought it was because she would help us out."
+            ay "Out of everyone?"
+            ay "I'm not trying to undermine your choice, I'm just trying to see your reasoning."
+            mc "If anyone can talk some sense into Sayori, it will be Natsuki."
+            mc "She's the right person for this, I know it."
+            ay "You sound confident."
+            ay "Or at least, your thoughts sound confident."
+            ay "I admit, she does have something about her."
+            ay "That she would help a friend no matter what."
+            ay "They all seem like they would."
+            ay "If you're sure about this decision, then let's do this."
+            mc "I'm sure."
+            ay "Then let's get her and go stop Sayori."
+            $ _history_list.pop()
+            show screen tear(8, offtimeMult=1, ontimeMult=10)
+            window hide(None)
+            $ pause(1.0)
+            show ayame 2a zorder 2 at t11
+            show natsuki 1c zorder 2 at i33
+            hide screen tear
+            $ pause(1.0)
+            window show(None)
+            ay "Then let's get her and go stop Sayori.{fast}"
+            window auto
+            "As I take a step forward, we somehow end up right by where Natsuki is standing."
+            "She was standing by the sides of the stage, looking focused at what was on display."
+            "I guess she really wanted to see if I could live up to expectations."
+            "I turn towards Ayame and try to say something."
+            "Right...I forgot."
+            mc "What now?"
+            ay "Well, I'm going to release her from this frozen period of time."
+            ay "Only temporarily though, remember. We're on a timer here."
+            ay "It would last longer but I couldn't complete the recipe."
+            ay "I needed your help to finish it but when I went looking for you, I couldn't find you."
+            mc "I'm sorry I wasn't there for you."
+            "Ayame shows me a weak smile."
+            ay "It's not your fault."
+            ay "I just hope this lasts long enough to get our point across to Sayori."
+            "Ayame reaches out a hand to Natsuki."
+            "As her hand touches Natsuki's shoulder, Natsuki slowly begins to move."
+            "I can see her eyes moving back and forth while the rest of her body is still."
+            "Eventually she's able to move her arms, and then her legs."
+            "She falls to the ground once enough of her body is free from the time stop."
+            "Finally, she looks at us and the people around her and opens her mouth."
+            "No words come out of it."
+            ay "Hold on just a moment..."
+            ay "There."
+            ay "Natsuki, can you hear us?"
+            n "Ah! What the hell?!"
+            ay "Calm down, Natsuki, it's only me."
+            n "Ayame? What are you doing in my head?!"
+            mc "Hello."
+            n "[temp_name] too?! Okay, what is going on?"
+            n "Someone please tell me before I freak out."
+            ay "Okay, there's no easy way to say this."
+            ay "So I'm just going to say it. Promise me you won't freak out."
+            n "Okay, fine. Just tell me already."
+            ay "Sayori is causing the world as we know it to end."
+            ay "Don't ask how, but she has the power to do it and we're trying to stop her."
+            ay "And we need your help."
+            "Natsuki looks at Ayame, then turns towards me."
+            n "Why me? Why not the others?"
+            ay "I can't answer that quesiton for you, Natsuki."
+            ay "[temp_name] is the one that suggested we get you, instead of the others."
+            ay "And I'm trusting [player_possessive] judgement on this."
+            ay "I hope [player_personal]'s right."
+            "She looks like she's thinking about this really hard."
+            "After a few seconds pass, she stands up."
+            if natsuki_date:
+                n "I'll do it."
+                ay "Wait, really? You made up your mind really quickly."
+                n "Yeah, this all sounds completely bizarre."
+                n "But for some reason, I believe you."
+                ay "You don't know how much this means to me."
+                ay "To all of us."
+                n "Yeah, well...I couldn't exactly let [temp_name] handle this by [player_reflexive]self."
+                n "Knowing [player_reflexive], [player_personal]'d mess it up!"
+                n "Plus...I think we both knew that something like this was coming."
+                n "Didn't we, [temp_name]?"
+                n "I guess I just didn't expect it to be {i}this{/i}."
+                mc "I'm glad you're here with us, Natsuki."
+                mc "With me."
+                "Natsuki's face turns a bright red and she turns to look away from me."
+                n "D-Don't get used to it!"
+                ay "If the two of you don't mind..."
+                ay "I'd like to get going. We don't have much time."
+                n "Oh, and one more thing. I've connected the dots, Ayame."
+                ay "W-What do you mean?"
+                n "I do want to be your friend, you know. You don't have to do those things."
+                n "Okay?"
+                ay "...Thank you, Natsuki."
+                mc "What are you two talking about?"
+                ay "No time to explain, it's time to get going."
+                mc "Right. Of course, let's go."
+            elif natsuki_approval >= 3 and ch12_outcome > 0:
+                n "I never thought I would be spending my Friday afternoon doing this."
+                n "But I guess...it's only right."
+                ay "Does that mean...?"
+                n "Yeah...I'll come with you."
+                n "But I don't know how much help I can be."
+                ay "Just you coming along has increased our chances by a lot."
+                ay "Thank you, Natsuki."
+                n "I haven't done anything yet."
+                mc "You've already made up your mind to help a friend."
+                n "I'd do the same for any one of you."
+                n "You're like my second family..."
+                n "And I can overlook some of the things you've done."
+                n "Because I want to help my family."
+                ay "That means a lot, Natsuki. I'm glad you could see through things."
+                mc "What are you talking about?"
+                ay "It doesn't matter. We have to get out of here now."
+            else:
+                n "I can't do this. This is crazy."
+                ay "But Natsuki..."
+                n "I can't! Okay?! I'm not ready for this."
+                n "I have so much going on with me right now."
+                n "And this? This is too much."
+                ay "Natsuki, I didn't mean to--"
+                "Ayame tries to put a hand on Natsuki's shoulder but Natsuki swipes it away."
+                n "D-Don't you touch me, Ayame!"
+                n "I know what you did, okay?"
+                n "I didn't want to believe it, but it makes sense."
+                ay "What are you talking about?"
+                n "In the meeting, you made me defend you."
+                n "I thought it was just me being nice, but no."
+                n "You got into my head and made me think highly of you!"
+                ay "I..."
+                mc "You did that?"
+                n "Because you were insecure! B-Because you couldn't fit in!"
+                mc "Natsuki, I'm sure Ayame didn't--"
+                n "How can you defend her like this, [temp_name]?"
+                n "You barely know her! All of us barely know her."
+                n "And yet, she thinks she has the right to do that."
+                n "How do you know she hasn't changed your thoughts about her, [temp_name]?"
+                n "She could have you wrapped around her finger and you wouldn't even realize it."
+                mc "Ayame...?"
+                ay "I won't deny that I did do that."
+                ay "And whatever my reasons may be, they're not excusable."
+                ay "But I'm asking you to think of your friends, of Sayori."
+                n "I won't help you, Ayame."
+                n "Because...I can't help you. Not like this."
+                "Natsuki gets back on the ground, looking defeated."
+                n "Not when I know what you've done..."
+                mc "Natsuki--"
+                ay "Leave her, [temp_name]. She's right."
+                ay "Bringing her along now, would only hinder us."
+                ay "Come on, let's get out of here."
+                mc "We're just going to leave her here?"
+                ay "Without my presence around her, she'll eventually be brought back into the time stop."
+                ay "That drink I made her will only work so long as I'm around."
+                ay "Not that it would last very long even if I was."
+                ay "So come on, let's go. It's just the two of us."
+                mc "Alright..."
+                $ ch16_ay_companions = 0
+            $ _history_list.pop()
+            show screen tear(8, offtimeMult=1, ontimeMult=10)
+            window hide(None)
+            $ pause(1.0)
+            hide screen tear
+            $ pause(1.0)
+            window show(None)
+            window auto
             jump ch16_ay_afterskip_1
         "Yuri." if not ch12_markov_agree:
             $ ch16_ay_companions = 3
             $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+            $ quick_menu = True
             ay "Just Yuri, huh?"
             ay "Well, it's your choice but it's hers if she doesn't want to come."
             ay "If she's a good friend to you and Sayori, I don't see why she wouldn't."
             ay "She seems like the type of person who would help a friend out."
             ay "In fact, they all do."
+            mc "Yuri will help us, I know it."
+            ay "I hope you're right, [temp_name]. If this goes wrong, we don't have time to get another person."
             ay "I just hope she doesn't freak out."
-            ""
+            ay "Come on, let's go get her."
+            $ _history_list.pop()
+            show screen tear(8, offtimeMult=1, ontimeMult=10)
+            window hide(None)
+            $ pause(1.0)
+            show yuri 1c zorder 2 at i31
+            show ayame 2a zorder 2 at t11
+            hide screen tear
+            $ pause(1.0)
+            window show(None)
+            ay "Come on, let's go get her.{fast}"
+            window auto
+            "As I put one foot forward, I find myself suddenly in the gym next to Yuri."
+            "There's an intense look on Yuri's face directed towards the stage."
+            "I guess she was really into my solo part there."
+            mc "How do we free her?"
+            ay "Leave that to me."
+            "Ayame reaches out and puts a hand on Yuri's shoulder."
+            "Slowly, her body seems to be coming out of the time stop and moves slowly."
+            "First, her eyes then her hands, arms, feet until eventually her whole body can move."
+            "She collapses to the floor and stares at Ayame and I."
+            "She opens her mouth to speak but not a single sound could be heard."
+            ay "Just give me a second..."
+            ay "Yuri! Are you okay?"
+            $ y_name = "Yuri's Voice"
+            y "A-Ayame? How am I hearing you right now?"
+            ay "[temp_name] and I are talking to you through a sort of telepathic link."
+            y "Telepathy? B-But that's just fiction."
+            ay "Then how do you explain what's going on right now?"
+            ay "Look around you, Yuri."
+            "Yuri slowly glances at the environment around her."
+            "Her mouth drops as she realizes the situation she's in."
+            mc "Stay calm, Yuri. We need your help."
+            y "[temp_name]! I...what is going on?"
+            ay "There's no way to say this lightly, so I'll just put it bluntly."
+            ay "Just promise that you won't go crazy."
+            y "I'll try but there's no guarantee."
+            ay "I suppose that's enough."
+            ay "Sayori has the power to end the world as we know it."
+            ay "And that's exactly what she's trying to do right now."
+            ay "The two of us, and hopefully you, are going to get to her and stop it."
+            ay "And trust me when I say, this is not fiction, Yuri."
+            ay "This is all really happening."
+            ay "But we need you to stay calm and to be reasonable."
+            y "...This is insane, even for me."
+            ay "I know, Yuri. But please, we need your help."
+            ay "Will you give us your aid?"
+            y "I don't want to sound ungrateful, but why me?"
+            y "I don't know what I could possibly provide you with to help you solve something so bizarre."
+            ay "The truth is, I don't know the answer to that question."
+            ay "[temp_name] is the one that chose you."
+            "Yuri stares at me and I look her directly in the eyes."
+            "She quickly averts my gaze and looks towards the ground."
+            if yuri_date:
+                y "I-I'll try to assist in the best way I can."
+            elif yuri_approval >= 3 and did_all_tasks:
+                y "I-I suppose I can try to help."
+            else:
+                y "I-I'm sorry, but I can't help."
+                y "I use books to escape reality and to immerse myself in a fictional world."
+                y "But this?"
+                "Yuri looks at her surroundings, and all the people trapped in stasis."
+                y "This is too much. I-I can't."
+                ay "Yuri, you have to try."
+                ay "This isn't just about you, it's about Sayori."
+                ay "It's about saving this whole world that we live in!"
             jump ch16_ay_afterskip_1
         "Natsuki and Yuri." if not ch12_markov_agree:
             $ ch16_ay_companions = 4
             $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+            $ quick_menu = True
             ay "We're going to try to take the two of them?"
             ay "I don't know if they'll both want to come, or even one of them."
             ay "But we can try, I suppose."
+            show screen tear(8, offtimeMult=1, ontimeMult=10)
+            window hide(None)
+            $ pause(1.0)
+            hide screen tear
+            $ pause(1.0)
+            window show(None)
+            window auto
             jump ch16_ay_afterskip_1
         "No one." if not ch12_markov_agree:
             $ ch16_ay_companions = 0
             $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+            $ quick_menu = True
             ay "The smart choice. We can't risk any stragglers anyway."
             ay "Though I'm not sure how Sayori will react with just two of us."
             ay "If she'll even stop."
-            "If she won't?"
+            mc "If she won't?"
             ay "Then I guess we'll have to stop her some other way."
+            ay "I...can't say what I would do."
+            ay "Because I don't know what I would do."
+            ay "There are a lot of different ways to end this problem, [temp_name]."
+            ay "Lots of them involve hurting Sayori in some way."
+            ay "Physically or emotionally."
+            mc "You can't be serious."
+            ay "I'm not that kind of person, [temp_name]."
+            ay "Violence is the last thing I would want to resort to."
+            ay "I just hope she's receptive to just the two of us."
+            ay "Aha. Well, no sense worrying about that now."
+            ay "We have to worry about the now."
+            show screen tear(8, offtimeMult=1, ontimeMult=10)
+            window hide(None)
+            $ pause(1.0)
+            hide screen tear
+            $ pause(1.0)
+            window show(None)
+            window auto
             jump ch16_ay_afterskip_1
     label ch16_ay_skipmenu_1:
     $ quick_menu = True
@@ -13957,7 +14239,8 @@ label ch16_end:
     "What--"
     ay "We're not going to take anyone."
     ay "There's not much time left before the entryway closes."
-    ay "So it's either leave now"
+    ay "So it's either leave now and have a chance to save Sayori, and this world."
+    ay "Or let this world end because you couldn't make up your mind."
     label ch16_ay_afterskip_1:
     $ quick_menu = True
     ay "Alright, let's get going then."

@@ -879,6 +879,9 @@ init -1 python:
         elif persistent.playthrough == 0 and christmas_chapter:
             return Show(screen="dialog", message="You have no influence on this timeline.", ok_action=Hide("dialog"))
 
+        elif persistent.playthrough == 0 and ch16_end_part:
+            return Show(screen="dialog", message="Actions that can affect the original sequence\nof events have been disabled.", ok_action=Hide("dialog"))
+
         # Monika Bad Ending Saturday
         elif persistent.playthrough == 0 and persistent.monika_ch3_skip and renpy.current_screen().screen_name[0] == "save":
             return Show(screen="dialog", message="There's no point in saving anymore.\nDon't worry, I'm not going anywhere.", ok_action=Hide("dialog"))
