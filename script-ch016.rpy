@@ -12299,15 +12299,15 @@ label ch16_end:
     y "{i}That's{/i} reassuring. I hope you're just joking..."
     y "Where did all these people come from anyway?"
     y "Do they know the script...?"
-    show natsuki zorder 2 at t41
-    show yuri zorder 2 at t42
-    show sayori zorder 2 at t43
+    show yuri zorder 2 at t41
+    show sayori zorder 2 at t42
+    show natsuki zorder 2 at t43
     show monika 3b zorder 3 at f44
     m "I just spoke to a few of them and it seems they do!"
     m 3c "Sayori must have given them a copy of it as well."
     m 3a "It seems everyone here is a fast learner, aren't they?"
     m "You sure know how to pull people's strings, don't you?"
-    show sayori 1l zorder 3 at f43
+    show sayori 1l zorder 3 at f42
     show monika zorder 2 at t44
     s "Can I just say that you all look really, really nice!"
     if ch15_s_together:
@@ -12317,12 +12317,12 @@ label ch16_end:
         "It didn't seem like Monika was serious about it."
         "Maybe Sayori just chose to ignore it."
     s "I did a really good--"
-    show sayori zorder 2 at t43
+    show sayori zorder 2 at t42
     "One of the students Sayori got to help us taps her on the shoulder."
     "Student" "\"You're starting in twenty seconds.\""
     "From behind the curtain, I can see the lights flickering on the stage."
     "There's an eerie silence, as if everyone behind it is waiting in anticipation."
-    show sayori 1m zorder 3 at f43
+    show sayori 1m zorder 3 at f42
     s "Okay, positions everyone!"
     show natsuki at thide
     show yuri at thide
@@ -12473,13 +12473,12 @@ label ch16_end:
                 show ayame zorder 3 at f55
                 ay "I don't...I didn't..."
                 ay "I-I..."
-                show sayori zorder 2 at t53
                 show monika zorder 3 at f54
+                show ayame zorder 2 at t55
                 m "Well, okay then! I don't know what that was."
                 m "But clearly, we started off this conversation on the wrong foot."
                 m "So, Ayame, what exactly are you doing here?"
                 show monika zorder 2 at t54
-                show ayame zorder 3 at
             "Completely wrong.":
                 $ ch16_ay_decision_count -= 1
                 "Ayame twitches, as if a cold shiver was sent down her spine."
@@ -13310,7 +13309,7 @@ label ch16_end:
     mc "I know it happened, I know when it happened..."
     mc "But I don't remember {i}all{/i} of it happening."
     mc "So tell me again why it's so important?"
-    n "It's important because its your big solo part."
+    n "It's important because it's your big solo part."
     n "You're going to be by yourself on the stage and the rest of us have to hope you do your part properly."
     n "And seeing as you didn't even know this was your part, we're kinda worried."
     mc "I know that scene like the back of my hand...I think."
@@ -13693,7 +13692,7 @@ label ch16_end:
         "There's only one way to find out, isn't there?"
     elif monika_type == 0:
         "Could this be the danger Monika was talking about?"
-        "Then that must mean there's more to it that this."
+        "Then that must mean there's more to it than this."
     else:
         "Maybe someone from the club is still normal."
         "I guess I'm about to find out."
@@ -13875,7 +13874,7 @@ label ch16_end:
         ay "Who are we taking with us?"
         "Monika.":
             $ ch16_ay_companions = 1
-            $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+            $ renpy.hide_screen("timer_16_long_menu_skip",layer="timers")
             $ quick_menu = True
             ay "You really want to take Monika with us?"
             ay "I understand that she could be one of the better choices to stop Sayori."
@@ -13940,7 +13939,7 @@ label ch16_end:
             jump ch16_ay_afterskip_1
         "Natsuki." if not ch12_markov_agree:
             $ ch16_ay_companions = 2
-            $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+            $ renpy.hide_screen("timer_16_long_menu_skip",layer="timers")
             $ quick_menu = True
             $ n_name = "Natsuki's Voice"
             ay "You want to take Natsuki with us?"
@@ -14112,7 +14111,7 @@ label ch16_end:
             jump ch16_ay_afterskip_1
         "Yuri." if not ch12_markov_agree:
             $ ch16_ay_companions = 3
-            $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+            $ renpy.hide_screen("timer_16_long_menu_skip",layer="timers")
             $ quick_menu = True
             ay "Just Yuri, huh?"
             ay "Well, it's your choice but it's hers if she doesn't want to come."
@@ -14191,7 +14190,7 @@ label ch16_end:
             jump ch16_ay_afterskip_1
         "Natsuki and Yuri." if not ch12_markov_agree:
             $ ch16_ay_companions = 4
-            $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+            $ renpy.hide_screen("timer_16_long_menu_skip",layer="timers")
             $ quick_menu = True
             ay "We're going to try to take the two of them?"
             ay "I don't know if they'll both want to come, or even one of them."
@@ -14206,7 +14205,7 @@ label ch16_end:
             jump ch16_ay_afterskip_1
         "No one." if not ch12_markov_agree:
             $ ch16_ay_companions = 0
-            $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+            $ renpy.hide_screen("timer_16_long_menu_skip",layer="timers")
             $ quick_menu = True
             ay "The smart choice. We can't risk any stragglers anyway."
             ay "Though I'm not sure how Sayori will react with just two of us."
@@ -14234,7 +14233,7 @@ label ch16_end:
             jump ch16_ay_afterskip_1
     label ch16_ay_skipmenu_1:
     $ quick_menu = True
-    $ renpy.hide_screen("ch16_ay_skipmenu_1",layer="timers")
+    $ renpy.hide_screen("timer_16_long_menu_skip",layer="timers")
     ay "You are taking far too long to decide."
     "What--"
     ay "We're not going to take anyone."
@@ -14244,7 +14243,13 @@ label ch16_end:
     label ch16_ay_afterskip_1:
     $ quick_menu = True
     ay "Alright, let's get going then."
-    "Ayame takes a step forward but as "
+    "Ayame takes a step forward but as she does, it seems her leg disappears."
+    "She turns around and smiles."
+    ay "It's not as scary as it looks. Come on!"
+    if ch16_ay_companions == 0:
+        "Ayame beckons for me to follow her."
+    else:
+        "Ayame beckons for us to follow her."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
