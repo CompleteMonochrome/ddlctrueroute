@@ -13759,7 +13759,9 @@ label ch16_end:
     mc "And more importantly, do you know where I can find Sayori?"
     ay "Hah, even now you're still concerned about Sayori."
     ay "But to answer both of those questions, yes."
-    if ch16_ay_question_number == 3 and ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2]:
+    if ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2] and ch16_ay_message[3]:
+        ay "Come, I'll take you to where Sayori is."
+    else:
         $ style.say_dialogue = style.edited
         ay "We do."
         $ style.say_dialogue = style.normal
@@ -13807,18 +13809,18 @@ label ch16_end:
     ay "But them? They're just normal people in this world."
     ay "Where we're going, they could end up dead and we might not be able to bring them back."
     ay "Or worse..."
-    if ch16_ay_question_number == 3 and ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2]:
+    if ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2] and ch16_ay_message[3]:
+        ay "But...I suppose I can't stop you if you wanted to do something."
+        ay "Which is why I came prepared."
+        ay "Remember how I gave the other two drinks?"
+        ay "Well, because of that you now have a choice."
+    else:
         $ style.say_dialogue = style.edited
         ay "Don't decide for [player_reflexive]."
         ay "If [player_personal] wants to make a bad decision, then let [player_reflexive]."
         ay "After all, that's why you gave the others drinks, wasn't it?"
         ay "To be able to make this choice."
         $ style.say_dialogue = style.normal
-    else:
-        ay "But...I suppose I can't stop you if you wanted to do something."
-        ay "Which is why I came prepared."
-        ay "Remember how I gave the other two drinks?"
-        ay "Well, because of that you now have a choice."
     mc "What are you talking about?"
     ay "As you probably know, those drinks I gave out weren't just because I liked you all."
     ay "They were for this particular moment."
@@ -13936,6 +13938,21 @@ label ch16_end:
             m "Then we should get going, right now."
             m "How are we going to find her?"
             ay "Leave that to me."
+            m "You know where she is?"
+            ay "Not exactly, but I have a good idea of where to go."
+            ay "But before all of that...you mind telling us what you are exactly, Monika?"
+            m "What do you mean?"
+            ay "I think you know exactly what I mean."
+            "Ayame turns towards me and glares at me with suspicion."
+            ay "And you."
+            mc "Me?"
+            ay "You know about Monika, don't you?"
+            ay "What her true nature is."
+            m "Ayame, I'm afraid I don't know what you're talking about."
+            ay "If you want to play dumb with me, that's fine."
+            ay "We can deal with all of that later."
+            ay "For now, we have to deal with Sayori."
+            m "Agreed. Lead the way, Ayame."
             jump ch16_ay_afterskip_1
         "Natsuki." if not ch12_markov_agree:
             $ ch16_ay_companions = 2
@@ -14176,8 +14193,77 @@ label ch16_end:
             "She quickly averts my gaze and looks towards the ground."
             if yuri_date:
                 y "I-I'll try to assist in the best way I can."
+                y "[temp_name]'s problem is my problem too."
+                y "It wouldn't be right to let [player_reflexive] handle this all by [player_reflexive]self."
+                ay "[temp_name] wouldn't be alone. If you wouldn't go, I'd be there right next to [player_reflexive]."
+                ay "But it's good to see that you two have built a strong relationship with one another."
+                y "You could say that."
+                mc "Yuri and I are closer than anyone else in the club."
+                "Yuri smiles bashfully."
+                ay "Well then, I hope your relationship is strong enough to beat Sayori."
+                ay "That the bond between the two of you is as strong as you think it is."
+                y "Is it going to be tested somehow...?"
+                ay "I don't know, Yuri. Anything could happen."
+                ay "If we're lucky, then maybe everything will be easy."
+                ay "That we'll arrive there and simply have to tell her to stop this insanity."
+                ay "But if it comes down to it..."
+                ay "...do you think the two of you could pull something crazy?"
+                mc "What are you talking about?"
+                ay "Never mind. I'm getting too sidetracked."
+                ay "Shall we go then?"
+                ay "That is, if the two of you are done thinking about each other."
+                y "W-We're done, let's go."
+                mc "Lead the way, Ayame."
+                $ _history_list.pop()
+                show screen tear(8, offtimeMult=1, ontimeMult=10)
+                window hide(None)
+                $ pause(1.0)
+                show yuri 1a zorder 2 at t31
+                show ayame 2a zorder 2 at t11
+                hide screen tear
+                $ pause(1.0)
+                window show(None)
+                mc "Lead the way, Ayame.{fast}"
+                window auto
             elif yuri_approval >= 3 and did_all_tasks:
                 y "I-I suppose I can try to help."
+                y "But as I said, there's not much I can actually do in something so unreal such as this."
+                y "It's like some sort of messed up reality from a horror book."
+                ay "That's fine, Yuri. You coming with us is already better than you staying here."
+                ay "I know you'll find some way to help."
+                y "If you say so..."
+                "Yuri sheepishly turns towards me."
+                y "[temp_name], how are you involved in all of this?"
+                y "Why is it only the three of us that aren't frozen?"
+                mc "I'm here to help keep the world moving."
+                mc "Is there much to say beyond that?"
+                mc "I'm not exactly the heroic type or anything."
+                mc "I was kinda just pulled into this mess."
+                y "I see..."
+                ay "[temp_name] wants to save the world."
+                ay "Would you really say no to an opportunity like that?"
+                y "If it's as extraorindary as this, then yes."
+                y "Normally I would have said no..."
+                ay "But...?"
+                y "[temp_name] has helped me get my life back on track and I intend to repay the favor."
+                y "So as crazy as this is, I'm willing to help."
+                ay "All of this just to repay [temp_name], huh?"
+                ay "Well, I'm not complaining. The more the help we have, the better our chances."
+                ay "Thanks for coming along, Yuri."
+                y "M-My pleasure."
+                ay "Now...if there was nothing else."
+                ay "We should get moving, come along."
+                $ _history_list.pop()
+                show screen tear(8, offtimeMult=1, ontimeMult=10)
+                window hide(None)
+                $ pause(1.0)
+                show yuri 1a zorder 2 at t31
+                show ayame 2a zorder 2 at t11
+                hide screen tear
+                $ pause(1.0)
+                window show(None)
+                ay "We should get moving, come along.{fast}"
+                window auto
             else:
                 y "I-I'm sorry, but I can't help."
                 y "I use books to escape reality and to immerse myself in a fictional world."
@@ -14187,6 +14273,71 @@ label ch16_end:
                 ay "Yuri, you have to try."
                 ay "This isn't just about you, it's about Sayori."
                 ay "It's about saving this whole world that we live in!"
+                y "This isn't for me, Ayame. I get what you're saying."
+                y "But I'm not this type of person."
+                mc "Yuri, come on--"
+                y "Even if I did help, what could I do?"
+                y "There's clearly something special about the two of you."
+                y "I can only speculate that you weren't affected by all of this to begin with."
+                y "And that leaves me. An ordinary person with no sort of special powers."
+                y "That had to be taken out of this frozen place in time."
+                y "I'll just be a liability to the two of you."
+                ay "Yuri, that's not true."
+                ay "You're more than you think you are."
+                y "Am I really, Ayame? I'd certainly like to know what you think of me."
+                y "Of what I could possibly to do help you."
+                y "Because I'm willing to listen."
+                ay "Well, you..."
+                y "That's what I thought."
+                mc "Yuri, you'll never know what you can do if you don't try."
+                y "[temp_name] you haven't helped me much at all."
+                y "There's no way you could possibly convince me to risk my life like this."
+                ay "But if you don't risk your life, then it's not going to exist anyway."
+                ay "Are you really just going to stay here and be complacent about all of this?"
+                ay "When you have a chance to make a difference...?"
+                y "I already told you, I can't possibly help the two of you."
+                y "Now please...leave me be."
+                ay "...Alright, Yuri. Come on, [temp_name]."
+                mc "R-Right.{nw}"
+                $ _history_list.pop()
+                show screen tear(8, offtimeMult=1, ontimeMult=10)
+                window hide(None)
+                $ pause(1.0)
+                show ayame 2a zorder 2 at t11
+                hide screen tear
+                $ pause(1.0)
+                window show(None)
+                mc "R-Right.{fast}"
+                window auto
+                "In an instant, we're outside the gym and ready to go."
+                "Except Ayame looks kind of distressed."
+                mc "Everything o--"
+                ay "No, it's not. Nothing is okay."
+                ay "Yuri decided not to help us which just reduces our chances of saving this world."
+                ay "This is not good at all."
+                mc "But that doesn't mean we should give up, does it?"
+                mc "Even without Yuri, we still have a chance."
+                mc "Don't we?"
+                ay "...You're right, of course."
+                ay "I'm sorry, I wasn't thinking properly."
+                ay "All of this pressure must be getting to me."
+                if ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2] and ch16_ay_message[3]:
+                    ay "But, I have to stay strong."
+                    ay "Or at least, fake being strong..."
+                    ay "I'll eventually end up believing it myself...right?"
+                    mc "I suppose...?"
+                else:
+                    $ style.say_dialogue = style.edited
+                    ay "That's not entirely you."
+                    ay "Your worry is being amplified, to deter you from following her."
+                    ay "Because she knows that you're the only person who has a chance of stopping her."
+                    $ style.say_dialogue = style.normal
+                    mc "Uh...what? Were you talking to yourself?"
+                    ay "In a way, but that isn't important."
+                    ay "She has a point. I wouldn't normally be like this."
+                ay "I have to press on."
+                ay "{i}We{/i} have to press on."
+                $ ch16_ay_companions = 0
             jump ch16_ay_afterskip_1
         "Natsuki and Yuri." if not ch12_markov_agree:
             $ ch16_ay_companions = 4
@@ -14222,7 +14373,12 @@ label ch16_end:
             ay "Violence is the last thing I would want to resort to."
             ay "I just hope she's receptive to just the two of us."
             ay "Aha. Well, no sense worrying about that now."
-            ay "We have to worry about the now."
+            ay "We have to worry about the big problem that lies ahead."
+            ay "Are you ready?"
+            mc "To be honest, I'm not. But what choice do we have?"
+            ay "We could always let her win and let the world end as we know it."
+            ay "But that doesn't seem like a very good option, does it?"
+            mc "Y-Yeah..."
             show screen tear(8, offtimeMult=1, ontimeMult=10)
             window hide(None)
             $ pause(1.0)
