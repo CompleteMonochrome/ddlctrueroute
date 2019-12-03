@@ -13953,6 +13953,34 @@ label ch16_end:
             ay "We can deal with all of that later."
             ay "For now, we have to deal with Sayori."
             m "Agreed. Lead the way, Ayame."
+            $ _history_list.pop()
+            show screen tear(8, offtimeMult=1, ontimeMult=10)
+            window hide(None)
+            $ pause(1.0)
+            show ayame 2a zorder 2 at t11
+            show monika 1c zorder 2 at i31
+            hide screen tear
+            $ pause(1.0)
+            window show(None)
+            m "Agreed. Lead the way, Ayame.{fast}"
+            window auto
+            m "Oh, we're only going to the outside of the gym?"
+            m "Sayori didn't run far, I take it."
+            ay "Well, here's the first place she went through."
+            ay "We have to follow the path she took in order to catch up to her."
+            m "That makes sense, but it's not like she just left a trail for you to follow."
+            ay "No, but there's this portal in front of us."
+            ay "I don't think the two of you can see it."
+            ay "But it's definitely there."
+            m "If you say so, Ayame."
+            ay "You don't seem that surprised about all of this."
+            m "Well, look around us, Ayame."
+            m "The world is frozen and apparently coming to an end."
+            m "A portal is hardly anymore hard to believe."
+            ay "That's a valid explanation but..."
+            mc "Should we really be suspicious of each other when there's more important things at hand?"
+            ay "...Okay, okay. You've made your points."
+            m "So what are we waiting around for?"
             jump ch16_ay_afterskip_1
         "Natsuki." if not ch12_markov_agree:
             $ ch16_ay_companions = 2
@@ -14057,6 +14085,28 @@ label ch16_end:
                 mc "What are you two talking about?"
                 ay "No time to explain, it's time to get going."
                 mc "Right. Of course, let's go."
+                $ _history_list.pop()
+                show screen tear(8, offtimeMult=1, ontimeMult=10)
+                window hide(None)
+                $ pause(1.0)
+                show ayame 2a zorder 2 at t11
+                show natsuki 1c zorder 2 at i33
+                hide screen tear
+                $ pause(1.0)
+                window show(None)
+                mc "Right. Of course, let's go.{fast}"
+                window auto
+                n "Was it just me or did we just...?"
+                ay "No time to explain, Natsuki."
+                n "Then how are we supposed to know where we're going?"
+                ay "I'm following Sayori's trail, that's all you really have to know."
+                ay "It'll be too difficult for you to comprehend exactly what I'm doing."
+                n "I don't think I want to know, anyway."
+                ay "You probably don't."
+                n "Ready to save the world, [temp_name]?"
+                mc "Well, I can't think of anything better to do."
+                "Natsuki smiles, but I can tell she's scared about this whole thing."
+                "I mean...who wouldn't be?"
             elif natsuki_approval >= 3 and ch12_outcome > 0:
                 n "I never thought I would be spending my Friday afternoon doing this."
                 n "But I guess...it's only right."
@@ -14074,6 +14124,25 @@ label ch16_end:
                 ay "That means a lot, Natsuki. I'm glad you could see through things."
                 mc "What are you talking about?"
                 ay "It doesn't matter. We have to get out of here now."
+                n "Where exactly{nw}"
+                $ _history_list.pop()
+                show screen tear(8, offtimeMult=1, ontimeMult=10)
+                window hide(None)
+                $ pause(1.0)
+                show ayame 2a zorder 2 at t11
+                show natsuki 1c zorder 2 at i33
+                hide screen tear
+                $ pause(1.0)
+                window show(None)
+                n "Where exactly{fast} are--"
+                window auto
+                n "Whoa. Did that just happen?"
+                ay "No time to explain, all I'll say is that we're following Sayori's trail."
+                n "How exactly are you going to do that?"
+                ay "Just trust me on this, alright?"
+                n "I guess I don't really have a choice anymore, do I?"
+                n "Ah well, at least it's better than being frozen in place."
+                ay "Definitely."
             else:
                 n "I can't do this. This is crazy."
                 ay "But Natsuki..."
@@ -14116,6 +14185,26 @@ label ch16_end:
                 ay "Not that it would last very long even if I was."
                 ay "So come on, let's go. It's just the two of us."
                 mc "Alright..."
+                $ _history_list.pop()
+                show screen tear(8, offtimeMult=1, ontimeMult=10)
+                window hide(None)
+                $ pause(1.0)
+                show ayame 2a zorder 2 at t11
+                hide screen tear
+                $ pause(1.0)
+                window show(None)
+                mc "Alright...{fast}"
+                window auto
+                ay "I have to say, I'm kind of disappointed."
+                ay "I thought Natsuki was a closer friend to you than this."
+                mc "I guess not...what are we supposed to do now?"
+                ay "Now? Now we press on, no matter the circumstances."
+                ay "I have to ask though, what did you do to her?"
+                ay "Or rather, what didn't you to her?"
+                ay "She reacted so differently to what I expected."
+                mc "You're not innocent either, Ayame."
+                mc "I think we just get a move on."
+                ay "That's probably for the best."
                 $ ch16_ay_companions = 0
             $ _history_list.pop()
             show screen tear(8, offtimeMult=1, ontimeMult=10)
@@ -14225,6 +14314,17 @@ label ch16_end:
                 window show(None)
                 mc "Lead the way, Ayame.{fast}"
                 window auto
+                y "...Hmm."
+                ay "It's odd at first, but you might have to get used to it."
+                ay "Are you all set, Yuri?"
+                y "As much as I can be. How do you plan on getting to Sayori?"
+                ay "I'm going to follow her trail."
+                ay "It's hard to explain so I'll spare you the details."
+                ay "But basically she left some sort of trace that I can use to try to track her down."
+                y "I'm assuming it's much more complicated than simply a track..."
+                ay "Much more, but like I said it's hard to explain."
+                y "Then I'm ready. [temp_name]?"
+                mc "I'm with you, Yuri."
             elif yuri_approval >= 3 and did_all_tasks:
                 y "I-I suppose I can try to help."
                 y "But as I said, there's not much I can actually do in something so unreal such as this."
@@ -14337,6 +14437,11 @@ label ch16_end:
                     ay "She has a point. I wouldn't normally be like this."
                 ay "I have to press on."
                 ay "{i}We{/i} have to press on."
+                mc "What's going to happen to her?"
+                ay "Without my presence, she's going to freeze in place."
+                ay "That concotion I made is only effective if I'm in close proximity."
+                ay "But don't worry, she'll be fine if we do things right."
+                mc "No pressure, huh?"
                 $ ch16_ay_companions = 0
             jump ch16_ay_afterskip_1
         "Natsuki and Yuri." if not ch12_markov_agree:
@@ -14346,13 +14451,51 @@ label ch16_end:
             ay "We're going to try to take the two of them?"
             ay "I don't know if they'll both want to come, or even one of them."
             ay "But we can try, I suppose."
+            mc "It's worth a shot, right?"
+            ay "I don't know if this was the wisest choice."
+            ay "If it goes wrong then it might just be the two of us."
+            ay "Maybe it would have been safer to just ask one person."
+            mc "Is it too late to change my decision?"
+            ay "Yes. You can't go and change it now."
+            ay "Your choices from now on have to be absolute, so live with the outcome."
+            mc "If you say so..."
+            ay "I think it will be easier if I bring them to us."
+            ay "Hopefully, they don't completely freak out."
+            $ _history_list.pop()
             show screen tear(8, offtimeMult=1, ontimeMult=10)
             window hide(None)
             $ pause(1.0)
+            show yuri 1a zorder 2 at i31
+            show ayame 2a zorder 2 at t11
             hide screen tear
             $ pause(1.0)
             window show(None)
+            ay "Hopefully, they don't completely freak out.{fast}"
             window auto
+            ay "There's Yuri. Now for Natsuki..."
+            mc "How did you--"
+            ay "And{nw}"
+            $ _history_list.pop()
+            show screen tear(8, offtimeMult=1, ontimeMult=10)
+            window hide(None)
+            $ pause(1.0)
+            show yuri 1a zorder 2 at t31
+            show ayame 2a zorder 2 at t11
+            show natsuki 1a zorder 2 at t33
+            hide screen tear
+            $ pause(1.0)
+            window show(None)
+            ay "And{fast} here she is."
+            window auto
+            ay "Are you really that surprised?"
+            ay "The world is frozen and you're surpised I can displace them to us?"
+            mc "When you put it that way..."
+            ay "Anyway, here we go. I'll wake them up at the same time."
+            ay "On three..."
+            ay "Three...two..."
+            ay "One...!"
+            $ y_name = "Yuri's Voice"
+            $ n_name = "Natsuki's Voice"
             jump ch16_ay_afterskip_1
         "No one." if not ch12_markov_agree:
             $ ch16_ay_companions = 0
@@ -14379,13 +14522,10 @@ label ch16_end:
             ay "We could always let her win and let the world end as we know it."
             ay "But that doesn't seem like a very good option, does it?"
             mc "Y-Yeah..."
-            show screen tear(8, offtimeMult=1, ontimeMult=10)
-            window hide(None)
-            $ pause(1.0)
-            hide screen tear
-            $ pause(1.0)
-            window show(None)
-            window auto
+            ay "Don't worry, I'll protect you."
+            ay "Or maybe I'm relying on you to protect me."
+            ay "Who knows, really?"
+            mc "What...?"
             jump ch16_ay_afterskip_1
     label ch16_ay_skipmenu_1:
     $ quick_menu = True
@@ -14398,7 +14538,7 @@ label ch16_end:
     ay "Or let this world end because you couldn't make up your mind."
     label ch16_ay_afterskip_1:
     $ quick_menu = True
-    ay "Alright, let's get going then."
+    ay "Alright, let's get going then!"
     "Ayame takes a step forward but as she does, it seems her leg disappears."
     "She turns around and smiles."
     ay "It's not as scary as it looks. Come on!"
