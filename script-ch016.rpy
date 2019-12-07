@@ -14488,14 +14488,73 @@ label ch16_end:
             ay "And{fast} here she is."
             window auto
             ay "Are you really that surprised?"
-            ay "The world is frozen and you're surpised I can displace them to us?"
+            ay "The world is frozen and you're surprised I can displace them to us?"
             mc "When you put it that way..."
             ay "Anyway, here we go. I'll wake them up at the same time."
             ay "On three..."
             ay "Three...two..."
             ay "One...!"
+            "Nothing seems to have happened."
+            "Natsuki and Yuri still seem to be frozen in place."
+            mc "Uh, Ayame? They're still--"
+            ay "Y-Yeah, just give it a moment. I don't know what's gone wrong."
+            ay "They should be moving already."
+            ay "Maybe it's because I'm trying to get to two of them at once."
+            ay "I thought I could do it..."
             $ y_name = "Yuri's Voice"
             $ n_name = "Natsuki's Voice"
+            y "Who's voice is that in my head?"
+            n "Yuri? What the hell is going on?"
+            ay "Calm down you two, it's only me. Ayame."
+            n "Ah! How are you in my head?"
+            n "And why can't I move my body?"
+            y "Will someone please explain what is going on?"
+            ay "I was about to get to that."
+            ay "Meanwhile, could the two of you stop..."
+            ay "Uhh...thinking? So that you can hear me out."
+            ay "Long story short, time is frozen and Sayori is the root cause of it."
+            ay "She's planning to end the world."
+            y "What?"
+            n "That's crazy. She couldn't possibly be capable of such a thing."
+            ay "It's true. Believe it or not, that's simply what's happened."
+            ay "I don't know the exact details but I do know that if we don't stop her, then we won't see tomorrow."
+            y "Did you say 'we'?"
+            ay "That's right, Yuri. [temp_name] thought it would be a good idea to get the two of you to help."
+            ay "And that's why the two of you are here now."
+            ay "We're asking you to help us."
+            "There's an awkward silence in our heads as no one speaks up."
+            "Natsuki and Yuri must not be taking this well."
+            ay "Well? You can reply, you know."
+            n "This is some kind of dream, right? None of this is actually happening."
+            y "If it's a dream then I must be having the same one."
+            ay "This is all real, I can assure you."
+            n "I just don't see how I could possibly help."
+            n "I can't even move my body let alone stop Sayori."
+            mc "You're still stuck like that?"
+            y "I am as well."
+            ay "Hold on, let me try something..."
+            "Ayame focuses hard on Yuri and Natsuki for a moment."
+            ay "Is that better?"
+            "Natsuki and Yuri both move their bodies."
+            "They look like they're straining to move but at least they can."
+            n "A little bit, I think."
+            y "What did you do to us?"
+            ay "Not important. What is important is that you help us."
+            ay "Please."
+            # Set variable to arbritary value to see if they will both do it
+            if natsuki_approval >= 3 or natsuki_date:
+                $ ch16_ay_companions = 6
+                n "This is all so ridiculous."
+                n "I have no idea what you want from me or Yuri."
+                n "But...you seem desperate. So I guess I have to believe you."
+            else:
+
+            if yuri_approval >= 3 or yuri_date:
+                if ch16_ay_companions == 4:
+                else:
+            else:
+
+
             jump ch16_ay_afterskip_1
         "No one." if not ch12_markov_agree:
             $ ch16_ay_companions = 0
