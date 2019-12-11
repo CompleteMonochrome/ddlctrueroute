@@ -14601,7 +14601,7 @@ label ch16_end:
                     ay "It doesn't really seem like something you'd do."
                     ay "If I know you, and I think I do, you're more closeted and less open to ideas like this."
                     y "The answer is simple really."
-                    y "It's because of [temp_name]?"
+                    y "It's because of [temp_name]."
                     mc "Me? What did I do?"
                     y "Yes, you. If it wasn't for you, I wouldn't be here today."
                     y "I-I don't mean that in a dark way, I just mean I wouldn't be the person I am."
@@ -14688,6 +14688,21 @@ label ch16_end:
                     ay "I'm sorry. I messed up."
                     ay "We can't take them with us anymore."
                     ay "I let my feelings get the better of me."
+                    mc "How come they aren't moving anymore?"
+                    ay "I lost my focus. I was the only one keeping both of them moving."
+                    ay "Through sheer will, and a little help, I could make them move in frozen time."
+                    ay "But with what Yuri said, my mind slipped..."
+                    ay "And I briefly lost the will to keep her moving."
+                    ay "And then...I forgot about Natsuki."
+                    mc "Can't you just bring them back?"
+                    ay "It requires a vast amount of my energy to do that."
+                    ay "And right now, we need this energy to track Sayori down."
+                    ay "The choice is obvious, isn't it?"
+                    mc "That's a shame. Natsuki's help would have been invaluable."
+                    ay "But even then...without the both of them working together..."
+                    ay "Natsuki might have ended up as more of a liability."
+                    mc "How? If we just went with Natsuki, then that would have had the same effect, right?"
+                    ay "Possibly."
                 else:
                     y "I am...going to have to decline as well."
                     ay "Both of you?"
@@ -14713,6 +14728,46 @@ label ch16_end:
                     y "That together, you and I could have..."
                     mc "Could have...? What is it?"
                     y "It's not important anymore."
+                    y "Now, good luck to the both of you."
+                    ay "This is not good news. I honestly expected better from the two of you."
+                    n "What's that supposed to mean?"
+                    n "You barely know us, Ayame."
+                    n "I don't want to sound mean but how could you expect anything?"
+                    ay "I knew people very similar to the two of you."
+                    ay "They did the same thing, you know."
+                    ay "They wouldn't help me when I needed the most."
+                    ay "Unlike them, however, you have a choice."
+                    ay "It's a shame you wasted it."
+                    y "Trying to shame me isn't going to make me help you."
+                    n "Yuri's right, what's your point?"
+                    ay "My point is...look, never mind."
+                    ay "I'll let the two of you stay here, while you still have a chance to move around."
+                    ay "If we make it back, none of you will remember what happened anyway."
+                    ay "Come on, [temp_name]."
+                    y "I know this probably doesn't mean much coming from me."
+                    y "But I do hope you manage to stop her."
+                    y "Even without our help."
+                    ay "I'll try my best, though I suspect that may not be enough..."
+                    ay "Anyway, it's time I brought the two of you back where you were."
+                    $ _history_list.pop()
+                    show screen tear(8, offtimeMult=1, ontimeMult=10)
+                    window hide(None)
+                    $ pause(1.0)
+                    hide yuri
+                    hide natsuki
+                    show ayame 2a zorder 2 at t11
+                    hide screen tear
+                    $ pause(1.0)
+                    window show(None)
+                    ay "Anyway, it's time I brought the two of you back where you were.{fast}"
+                    window auto
+                    ay "Now that that complete disaster is dealt with..."
+                    mc "I don't know why they wouldn't help us, Ayame."
+                    mc "I'm sorry. I must have done something wrong."
+                    ay "I'd say that even if you did, you weren't in full control of your actions."
+                    ay "There's some power out there that must be laughing at our demise."
+                    ay "But nevertheless, we press on. Right?"
+                    mc "Right."
             jump ch16_ay_afterskip_1
         "No one." if not ch12_markov_agree:
             $ ch16_ay_companions = 0
