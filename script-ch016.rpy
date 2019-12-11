@@ -14701,8 +14701,30 @@ label ch16_end:
                     mc "That's a shame. Natsuki's help would have been invaluable."
                     ay "But even then...without the both of them working together..."
                     ay "Natsuki might have ended up as more of a liability."
-                    mc "How? If we just went with Natsuki, then that would have had the same effect, right?"
-                    ay "Possibly."
+                    mc "If we just went to talk to Natsuki, then that would have had the same effect, right?"
+                    ay "Possibly. But the energy I expended here and the energy I have to use to keep her moving would have been massive."
+                    ay "If it was just her, then I wouldn't feel as weak as I do now."
+                    ay "And if it was the two of them, then I could have justified using so much energy."
+                    mc "I suppose that makes sense."
+                    ay "I'm sorry we couldn't bring either of them with us."
+                    ay "Natsuki, at least, would have been helpful for sure."
+                    mc "Is it time to go?"
+                    ay "Just give me a moment."
+                    $ _history_list.pop()
+                    show screen tear(8, offtimeMult=1, ontimeMult=10)
+                    window hide(None)
+                    $ pause(1.0)
+                    hide yuri
+                    hide natsuki
+                    show ayame 2a zorder 2 at t11
+                    hide screen tear
+                    $ pause(1.0)
+                    window show(None)
+                    ay "Just give me a moment.{fast}"
+                    window auto
+                    ay "I brought them back to their original places."
+                    ay "If we do get back here and save the day, they won't remember a thing."
+                    ay "It's safer that way."
                 else:
                     y "I am...going to have to decline as well."
                     ay "Both of you?"
