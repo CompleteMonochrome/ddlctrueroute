@@ -14342,7 +14342,7 @@ label ch16_end:
                 y "I see..."
                 ay "[temp_name] wants to save the world."
                 ay "Would you really say no to an opportunity like that?"
-                y "If it's as extraorindary as this, then yes."
+                y "If it's as extraordinary as this, then yes."
                 y "Normally I would have said no..."
                 ay "But...?"
                 y "[temp_name] has helped me get my life back on track and I intend to repay the favor."
@@ -14364,6 +14364,17 @@ label ch16_end:
                 window show(None)
                 ay "We should get moving, come along.{fast}"
                 window auto
+                y "I'm not even going to ask how we ended up out here."
+                ay "It's a little trick we'll be using a lot."
+                ay "So {i}try{/i} to get used to it."
+                ay "Though realistically, you'll never be able to get used to it."
+                y "That's not helping, Ayame."
+                ay "Ha, sorry. Guess it's just exciting."
+                ay "The three of us, saving the world."
+                ay "And Natsuki and Monika won't even know about it."
+                y "That's okay, I'd rather keep this quiet anyway."
+                y "And even if I did tell them, I doubt they would believe me."
+                ay "You might be surprised, but that's an argument for another day."
             else:
                 y "I-I'm sorry, but I can't help."
                 y "I use books to escape reality and to immerse myself in a fictional world."
@@ -14439,7 +14450,7 @@ label ch16_end:
                 ay "{i}We{/i} have to press on."
                 mc "What's going to happen to her?"
                 ay "Without my presence, she's going to freeze in place."
-                ay "That concotion I made is only effective if I'm in close proximity."
+                ay "That concoction I made is only effective if I'm in close proximity."
                 ay "But don't worry, she'll be fine if we do things right."
                 mc "No pressure, huh?"
                 $ ch16_ay_companions = 0
@@ -14572,7 +14583,6 @@ label ch16_end:
                 ay "We'll figure it out on the way."
                 ay "First, I need Yuri's answer too."
             else:
-                $ ch16_ay_companions = 7
                 n "I...can't help you. I'm sorry."
                 ay "What?"
                 ay "I just can't do this. This is all too crazy for me."
@@ -14626,6 +14636,13 @@ label ch16_end:
                     ay "So instead of finding a needle in a haystack..."
                     ay "We'll be finding a needle in a much smaller haystack."
                     n "Right..."
+                    ay "You don't sound convinced."
+                    y "Honestly, neither am I. The way you're making it sound, our chances of succeeding are quite low."
+                    y "But, we've already decided to help you."
+                    n "That's right, no backing out now."
+                    ay "I'm so happy that both of you are with us."
+                    ay "It means that it will be worth it."
+                    n "Let's just get on with it already."
                 else:
                     $ ch16_ay_companions == 0
                     y "If Natsuki won't help, then I will."
@@ -14646,8 +14663,45 @@ label ch16_end:
                     n "Guess you're even weirder than I thought."
                     y "Excuse me?"
                     mc "Yuri, you don't have to listen to her."
+                    mc "Come on, let's just leave her."
+                    n "Yeah, of course you would."
+                    n "Why would I expect anything else?"
+                    mc "What's wrong with you Natsuki?"
+                    n "What's wrong with {i}me{/i}?"
+                    n "Seriously? I'm the only one acting normal out of everyone here."
+                    n "Saving the world? Everyone being frozen in place?"
+                    n "Sayori, of all people, being responsible for it all?"
+                    n "How crazy are all of you? This is completely ridiculous."
+                    ay "Natsuki, please stop."
+                    n "No. I've had enough."
+                    n "I'm tired of being told to shut up."
+                    n "I'm tired of keeping to myself."
+                    ay "Natsuki--"
+                    n "I know what you did, Ayame."
+                    n "What you did to me back during the meeting."
+                    n "Do you really think I'm that stupid?"
+                    n "That I couldn't connect the dots."
+                    n "If Yuri knew just what type of person you were..."
+                    y "W-What did she do?"
+                    n "She--"
+                    "Suddenly Natsuki's 'voice' stops emitting from our heads."
+                    "It also looks like she's become frozen in place again."
+                    "Yuri also looks like she's in no position to move."
+                    mc "What just happened?"
+                    ay "I...I messed up."
+                    mc "What did you do to them, Ayame?"
+                    ay "I misplaced my focus for just a moment."
+                    ay "Because of what Natsuki was about to say."
+                    mc "And because of that, they can't move again?"
+                    mc "Why not just...I don't know, refocus...?"
+                    ay "The amount of energy I expended allowing them to move again was already huge."
+                    ay "Not to mention the upkeep of having them continue to move."
+                    ay "I just didn't want Natsuki to sabotage our chances with Yuri."
+                    ay "And so...I subconsciously..."
+                    ay "I'm sorry. I should have known better."
+                    mc "How could you have? It's not like you're an expert at this kinda stuff."
+                    mc "The question is, what do we do now that they can't help us?"
             else:
-                $ ch16_ay_companions = 0
                 if ch16_ay_companions == 6:
                     y "Unlike Natsuki, I can't help you."
                     ay "W-What? Why not?"
@@ -14725,6 +14779,11 @@ label ch16_end:
                     ay "I brought them back to their original places."
                     ay "If we do get back here and save the day, they won't remember a thing."
                     ay "It's safer that way."
+                    mc "I guess this would be a very weird thing to remember."
+                    mc "It's probably better to let them live in bliss, right?"
+                    ay "Precisely! Glad you could see things my way."
+                    ay "Though if you do feel you have to tell one or both of them afterwards..."
+                    ay "Well, I'm not gonna stop you. It is your decision to make."
                 else:
                     y "I am...going to have to decline as well."
                     ay "Both of you?"
@@ -14790,6 +14849,7 @@ label ch16_end:
                     ay "There's some power out there that must be laughing at our demise."
                     ay "But nevertheless, we press on. Right?"
                     mc "Right."
+            $ ch16_ay_companions = 0
             jump ch16_ay_afterskip_1
         "No one." if not ch12_markov_agree:
             $ ch16_ay_companions = 0
@@ -14840,6 +14900,15 @@ label ch16_end:
         "Ayame beckons for me to follow her."
     else:
         "Ayame beckons for us to follow her."
+    "She takes a step back, her leg reappearing as she braces herself."
+    "She rushes forward, completely disappearing from sight."
+    "I guess there's only one way to find out where she ended up."
+    "And that's to follow her."
+    "Here goes..."
+    if ch16_ay_companions ==
+    scene white with dissolve_scene_full
+    $ pause(2.5)
+    ""
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
