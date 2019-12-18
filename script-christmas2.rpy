@@ -7,7 +7,7 @@ label christmas_chapter:
         $ quick_menu = True
         hide screen tear
     $ cl_name = "???"
-    if presistent.did_christmas2_event:
+    if persistent.did_christmas2_event:
         cl "Ho, ho, oh, it's you again."
         cl "Why are you even here?"
         cl "Are you expecting something new to happen?"
@@ -18,7 +18,7 @@ label christmas_chapter:
         cl "Now...where was I."
         cl "Oh, yeah. Today is a day to have fun, yada, yada."
         cl "Enjoy it and so on and so forth."
-    elif persistent.did_christmas_event and not presistent.did_christmas2_event:
+    elif persistent.did_christmas_event and not persistent.did_christmas2_event:
         cl "Ho, ho, ho! Good to see you."
         cl "Back again, are you?"
         cl "I don't know what you think you're gonna get out of this."
@@ -64,7 +64,7 @@ label christmas_chapter:
     $ insert_characters_alternate(mc=True,ayame=True,timeline=7)
     if persistent.did_christmas_event:
         $ cl_name = "Nick"
-    "I can't believe its almost been a whole year since Ayame joined the club."
+    "I can't believe it's almost been a whole year since Ayame joined the club."
     "So much has happened since then."
     "Members have joined the club."
     "Members have left the club."
@@ -170,8 +170,8 @@ label christmas_chapter:
     show ayame 1a zorder 3 at f55
     ay "Wow, that was the least convincing thing I've ever heard you say."
     "Ayame walks in the room and takes the other seat next to me."
-    "She sees excited for some reason."
-    ay "Sorry, I'm running late. Had to discuss somethings with the principal and such."
+    "She seems excited for some reason."
+    ay "Sorry, I'm running late. Had to discuss some things with the principal and such."
     show monika zorder 3 at f51
     show ayame zorder 2 at t55
     m "About the funding being given to clubs and events?"
@@ -204,7 +204,7 @@ label christmas_chapter:
     show monika zorder 3 at f51
     show ayame zorder 2 at t55
     m "Exactly, we were about to start assigning tasks."
-    m "I want to cover all bases, to make sure its the best possible thing we could do for it."
+    m "I want to cover all bases, to make sure it's the best possible thing we could do for it."
     show monika zorder 2 at t51
     show ayame zorder 3 at f55
     ay "Well, that sounds simple enough."
@@ -212,7 +212,7 @@ label christmas_chapter:
     show monika zorder 3 at f51
     show ayame zorder 2 at t55
     m "Ahaha, I don't know. You seem to be good at everything."
-    "Monika thinks for a moment then she points her finger up as if she has an idea."
+    "Monika thinks for a moment then points her finger up as if she has an idea."
     m "How about this..."
     m "We'll let the others decide first and you can do what hasn't been taken already."
     show monika zorder 2 at t51
@@ -266,4 +266,153 @@ label christmas_chapter:
     m "Any ideas as to what you would like to do?"
     show monika zorder 2 at t51
     show sayori zorder 3 at f52
+    s "Hmmm...."
+    s "I dunno! I can't think of anything on the spot."
+    s "But I'll do anything you need me to, Monika."
+    s "Just name it and I'll do the best I can!"
+    show monika zorder 3 at f51
+    show sayori zorder 2 at t52
+    m "Well, it could be a good idea to get some gifts for people who show up."
+    m "We could give out gifts to people randomly during the festival."
+    m "And through that, spread the joy of Christmas!"
+    show monika zorder 2 at t51
+    show ayame zorder 3 at f55
+    ay "That's a wonderful idea! I'd be more than happy to borrow some money from my parents to make this happen."
+    ay "Just let me know how much you need and I'll make sure it's covered."
+    show sayori zorder 3 at f52
+    show ayame zorder 2 at t55
+    s "Wow! That's really generous of you, Ayame."
+    s "But...I can't do that."
+    show sayori zorder 2 at t52
+    show ayame zorder 3 at f55
+    ay "Huh? Why not...?"
+    show natsuki zorder 3 at f53
+    show ayame zorder 2 at t55
+    n "Yeah, what are you saying, Sayori?"
+    n "Ayame helping you out like that would be incredible."
+    show natsuki zorder 2 at t53
+    show ayame zorder 3 at f55
+    ay "You don't have to accept my help, of course."
+    ay "I'm just curious as to why."
+    show sayori zorder 3 at f52
+    show ayame zorder 2 at t55
+    s "It's not that I don't want your help, Ayame."
+    s "It's just that I want this gift to be more meaningful that simply worth a lot of money."
+    s "I want the people who get these gifts to have something unique."
+    s "And not something that everyone else could get."
+    show sayori zorder 2 at t52
+    show ayame zorder 3 at f55
+    ay "Oh...that's...."
+    "Ayame's face lights up."
+    ay "That's actually a really good idea!"
+    ay "And it makes so much sense, too!"
+    show monika zorder 3 at f51
+    show sayori zorder 2 at t52
+    m "What kinds of things are you going to be making, Sayori?"
+    show monika zorder 2 at t51
+    show sayori zorder 3 at f52
+    s "That's going to be a surprise!"
+    s "I think you'll all like it a lot."
+    show sayori zorder 2 at t52
+    show ayame zorder 3 at f55
+    ay "In that case, why don't you let me provide the materials?"
+    ay "Just make me a list and I'll get you the stuff you need for this weekend."
+    ay "You could even put some random items in there to throw me off from guessing what you'll be making."
+    show sayori zorder 3 at f52
+    show ayame zorder 2 at t55
+    s "I might take you up on that offer."
+    s "I still feel kinda bad about taking advantage of you like that."
+    show sayori zorder 2 at t52
+    show ayame zorder 3 at f55
+    ay "Don't feel bad! Seriously, it's the least I can do to help."
+    ay "You're still doing all the hard work, and I really want us to succeed."
+    show yuri zorder 3 at f54
+    show ayame zorder 2 at t55
+    y "I don't want to be 'that person', but a little bit of finances could be useful for me as well."
+    y "T-That is, if you weren't just offering to Sayori."
+    y "You did say you wanted us to succeed."
+    show yuri zorder 2 at t54
+    show ayame zorder 3 at f55
+    ay "Of course! Name it and I'll get it to you as soon as I can."
+    ay "How about you, Natsuki? Need me to buy you some ingredients or something?"
+    show natsuki zorder 3 at f53
+    show ayame zorder 2 at t55
+    n "If you're offering, I'm not going to say no."
+    show natsuki zorder 2 at t53
+    show ayame zorder 3 at f55
+    ay "I'll take that as a 'yes', then!"
+    ay "So what are you gonna be doing, Monika?"
+    ay "And what about you, [player]?"
+    ay "Need me to help either of you in what you're going to do?"
+    show ayame zorder 2 at t55
+    "I don't even know what I'm going to be doing."
+    "I better come up with something, and fast."
+    show monika zorder 3 at f51
+    m "I'm not so sure you could help me in that way, Ayame."
+    m "What I'm going to do is come up with activities that are gonna make our part more enjoyable."
+    m "Sure, we have food but we won't engage anyone without anything to do, right?"
+    m "Hopefully, I can try to make it fun."
+    show monika zorder 2 at t51
+    show ayame zorder 3 at f55
+    ay "So like an itinerary? Well, if anyone can come up with a list of things to do, it's you."
+    ay "Which gives me an idea..."
+    show natsuki zorder 3 at f53
+    show ayame zorder 2 at t55
+    n "Here we go..."
+    show natsuki zorder 2 at t53
+    show ayame zorder 3 at f55
+    ay "Did you say something, Natsuki?"
+    show natsuki zorder 3 at f53
+    show ayame zorder 2 at t55
+    n "Nope! Not a thing, go ahead with your idea."
+    show natsuki zorder 2 at t53
+    show ayame zorder 3 at f55
+    ay "Okay, well last time we all got gifts for each other, right?"
+    ay "How about this time, we do some sort of Secret Santa!"
+    ay "It's only one gift, instead of five so it's a lot easier to do."
+    ay "And you have the entire weekend to get a present."
+    show monika zorder 3 at f51
+    show ayame zorder 2 at t55
+    m "I'd love to do something like that!"
+    m "It's a lot more exciting when you don't know who you got your present from."
+    m "And this way, we all still get presents."
+    show monika zorder 2 at t51
+    show yuri zorder 3 at f54
+    y "If that's what we're doing then..."
+    "Yuri takes out a hat from her bag and puts something in it."
+    "She shakes it around a little bit and offers it to Natsuki."
+    y "Take one."
+    show natsuki zorder 3 at f53
+    show yuri zorder 2 at t54
+    n "Uh...what is this?"
+    n "What exactly am I taking?"
+    show natsuki zorder 2 at t53
+    show yuri zorder 3 at f54
+    y "It's a list of names, choose one and that will be who you're buying a gift for."
+    y "If you get yourself, just put it back and get a new one."
+    y "That is how these things work, right?"
+    show natsuki zorder 3 at f53
+    show yuri zorder 2 at t54
+    n "Pulling names out of a hat..."
+    n "That is how we're supposed to do it."
+    n "I'm just surprised you had this ready to go."
+    show monika zorder 3 at f51
+    show natsuki zorder 2 at t53
+    m "Me too, actually. Do you just happen to have a cut out of all our names on you?"
+    m "Or was it for some other reason?"
+    show monika zorder 2 at t51
+    show yuri zorder 3 at f54
+    y "I was going to suggest a mystery gift exchange, like Ayame."
+    y "So I came prepared to do something like this if we decided to follow through with it."
+    y "But I didn't know if you would all want to do that..."
+    y "So I just kept quiet..."
+    y "However, Ayame spoke up with the same idea."
+    show yuri zorder 2 at t54
+    show ayame zorder 3 at f55
+    ay "Well, what can I say? Great minds think alike, right?"
+    show ayame zorder 2 at t55
+    "Natsuki takes out a piece of paper from the hat and stares at it."
+    "She says something I can't make out before putting the paper in her pocket."
+    show natsuki zorder 3 at f53
+    n "And before you ask, no. I didn't get myself."
     return
