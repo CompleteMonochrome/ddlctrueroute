@@ -59,11 +59,9 @@ label christmas_chapter:
         cl "I'm just suggesting--"
         cl "Alrighty, I'll shut up now."
     scene bg club_day with Dissolve(1.5)
-    play music t2 fadein 3.0
+    play music t3 fadein 3.0
     # Continuation of last Christmas event - canon is the good ending
     $ insert_characters_alternate(mc=True,ayame=True,timeline=7)
-    if persistent.did_christmas_event:
-        $ cl_name = "Nick"
     "I can't believe it's almost been a whole year since Ayame joined the club."
     "So much has happened since then."
     "Members have joined the club."
@@ -415,4 +413,343 @@ label christmas_chapter:
     "She says something I can't make out before putting the paper in her pocket."
     show natsuki zorder 3 at f53
     n "And before you ask, no. I didn't get myself."
+    n "Is there a price limit on how much we should spend?"
+    show natsuki zorder 2 at t53
+    show yuri zorder 3 at f54
+    y "Perhaps limiting it {i}would{/i} be a good idea."
+    "Yuri shifts her eyes to Ayame."
+    y "After all, some of us are less strained on expenses than others."
+    show yuri zorder 2 at t54
+    show ayame zorder 3 at f55
+    ay "Hey, I'm right here, you know."
+    ay "But sure, a price limit should definitely be instated."
+    show monika zorder 3 at f51
+    show ayame zorder 2 at t55
+    m "Good idea, we can establish that later though."
+    m "For now, let's continue the drawing so we can finish the meeting."
+    show monika zorder 2 at t51
+    show yuri zorder 3 at f54
+    y "Right, continuing on..."
+    show yuri zorder 2 at t54
+    "Yuri distributes the rest of the names to the others."
+    "Luckily, it was quick since no one got themselves."
+    "I managed to get Monika for my Secret Santa."
+    "Well...I hope I can manage to get something she'll like."
+    "I wonder who got me?"
+    show monika zorder 3 at f51
+    m "Now that that's done, there's just one thing I'd like to address."
+    m "As you all know, I've been the club president for a while now."
+    m "But I really don't see myself fulfilling the role as effectively as I had hoped."
+    show monika zorder 2 at t51
+    show sayori zorder 3 at f52
+    s "Is this about everyone leaving the club?"
+    s "You shouldn't blame yourself for those things happening."
+    s "Because you're really doing a good job, Monika!"
+    s "If you weren't, then all of us wouldn't be here now."
+    show monika zorder 3 at f51
+    show sayori zorder 2 at t52
+    m "No, it's not--"
+    show monika zorder 2 at t51
+    show sayori zorder 3 at f52
+    s "You're not gonna try to make me the president, are you?"
+    s "I gave that up for a reason, you know."
+    s "I...can't exactly remember the reason but it must have been important."
+    show monika zorder 3 at f51
+    show sayori zorder 2 at t52
+    m "No, that's not it. Just let me finish."
+    m "What I wanted to say was that the club is only as it is because I have all of you to support me."
+    m "As president, I should be the one coming up with things."
+    m "But instead, I'm getting all of my ideas from all of you."
+    m "That shouldn't be the case."
+    m "There's also the problem of the school's term limits for clubs."
+    m "They won't allow someone to be the president of a club for more than two terms."
+    m "And so, I would like to step down as president of the club--"
+    show monika zorder 3 at f51
+    show natsuki zorder 3 at f53
+    n "What? You can't just do that!"
+    show natsuki zorder 2 at t53
+    show yuri zorder 3 at f54
+    y "Natsuki's right, that's highly irresponsible of you!"
+    show sayori zorder 3 at f52
+    show yuri zorder 2 at t54
+    s "Monika..."
+    show sayori zorder 2 at t52
+    show ayame zorder 3 at f55
+    ay "There must be more to it. It can't just end like this."
+    show ayame zorder 2 at t55
+    "Monika sighs before looking up at all of us."
+    "She has this strange smile on her face."
+    show monika zorder 3 at f51
+    m "Ahaha, I did say to let me finish."
+    m "What I was saying was that I was stepping down {i}and{/i} introducing a new role."
+    m "A role that everyone will be assigned, and that is 'Committee Member'."
+    m "Instead of having one leader in the club, the six of us will all have equal say in the club."
+    m "Which...shouldn't really make any difference since that's pretty much the case anyway!"
+    m "It also means we can share everything, since we're all equals."
+    m "You'll all know what exactly is planned, because you'll all be planning it, together."
+    m "Any objections?"
+    "Monika looks around the room. Everyone seems to agree with this idea."
+    "I feel like I should say something about myself not being suitable for the role."
+    "Since when have I ever come up with a good idea for the club?"
+    "But...I don't really want to ruin the moment."
+    m "I'm glad to hear it!"
+    show monika zorder 2 at t51
+    show natsuki zorder 3 at f53
+    n "Ugh! Why would you scare us like that?"
+    n "You could have said that before you said you were stepping down."
+    show monika zorder 3 at f51
+    show natsuki zorder 2 at t53
+    m "It was to add some effect to what I was saying."
+    m "Though I guess it had the wrong kind of effect..."
+    show monika zorder 2 at t51
+    show yuri zorder 3 at f54
+    y "So effectively, the roles of president and vice-president are virtually non-existent now."
+    y "I wonder how the school would see this."
+    show yuri zorder 2 at t54
+    show ayame zorder 3 at f55
+    ay "They won't allow that, Monika."
+    ay "In order for a club to be valid, it has to have the role of president, at the very least."
+    show monika zorder 3 at f51
+    show ayame zorder 2 at t55
+    m "I'm aware of that rule."
+    m "As of right now, the role of president has become meaningless."
+    m "And so, anyone could take the mantle if they wanted."
+    m "There might be a few administrative stuff but nothing too scary."
+    m "Any volunteers?"
+    show monika zorder 2 at t51
+    show sayori zorder 3 at f52
+    s "Why are you looking at me?"
+    s "I already said I don't want it, even if it is just a title."
+    show sayori zorder 2 at t52
+    show natsuki zorder 3 at f53
+    n "Nuh uh, no. Definitely not."
+    show natsuki zorder 2 at t53
+    show yuri zorder 3 at f54
+    y "I'd rather avoid the attention that could bring."
+    show yuri zorder 2 at t54
+    show ayame zorder 3 at f55
+    ay "I stepped out of one leadership role, I'm not stepping into another."
+    show monika zorder 3 at f51
+    show ayame zorder 2 at t55
+    m "Oh, come on guys. I just told you it doesn't mean anything."
+    m "What are you all so scared of?"
+    m "[player], I'm counting on you."
+    m "I can even do all the paperwork and stuff, it's important so that we can stay as an official club."
+    m "So would you please take it?"
+    show monika zorder 2 at t51
+    "Everyone else already disagreed."
+    "I'm tempted to disagree as well. I don't know why."
+    "It just seems like a lot of work, even if Monika will do all the work anyway."
+    "But I don't want to disappoint her."
+    "Besides, it's for the club.."
+    mc "Alright, I'll do it then."
+    mc "If it means that we can stay as a club."
+    show monika zorder 3 at f51
+    m "Great! Thank you so much for agreeing, [player]."
+    show monika zorder 2 at t51
+    mc "So what happens now?"
+    show monika zorder 3 at f51
+    m "Now...we have to discuss what you and Ayame are going to be doing."
+    m "Everyone else, including myself, has already said what they will do for the Christmas festival on Monday."
+    m "So what are the two of you gonna be doing?"
+    show monika zorder 2 at t51
+    show ayame zorder 3 at f55
+    ay "I just remembered I have something to do for another club."
+    ay "I'm afraid it might take a lot of my time so I can't fully commit to something myself."
+    ay "If I did, it would be a rather small and insignificant part of the festival which isn't what any of us want."
+    ay "But after this, I promise you that I'll dedicate myself to the Literature Club fully!"
+    show monika zorder 3 at f51
+    show ayame zorder 2 at t55
+    m "That's fine! You are buying the things for everyone, after all."
+    m "If you still feel like doing something, you're free to. Maybe you'll find time..."
+    m "Or maybe you could help [player] with what [player_personal]'s doing.'"
+    m "Speaking of which..."
+    show monika zorder 2 at t51
+    "Monika looks at me expectantly."
+    "What am I doing...?"
+    "I look toward everyone in the room and they all shrug or give me a quizzical look."
+    show ayame zorder 3 at f55
+    ay "Well, maybe you could help me buy some of the things that are needed."
+    ay "Everyone seems to have something they need to get."
+    ay "We could go to the mall over the weekend and get it all done in one day."
+    ay "It would take me much longer if I did it myself."
+    show sayori zorder 3 at f52
+    show ayame zorder 2 at t55
+    s "Aw, that's not fair you can't just strawberry him like that."
+    s "Ehehe, it would have been funny to see [player_reflexive] panic a little."
+    show sayori zorder 2 at t52
+    mc "S-Sayori, come on..."
+    mc "How is me panicking funny to you?"
+    show sayori zorder 3 at f52
+    s "You have this funny spot on your face when you panic."
+    s "It's not hard to notice if you're looking..."
+    show sayori zorder 2 at t52
+    mc "W-What?"
+    "Sayori smiles mischievously."
+    mc "You know what? Whatever, fine."
+    "I direct my attention to Ayame."
+    mc "I'd be happy to help you out."
+    show ayame zorder 3 at f55
+    ay "Great! I'll text you when I figure out a good time."
+    show yuri zorder 3 at f54
+    show ayame zorder 2 at t55
+    y "Wait a second,...just before, did you say 'strawberry'?"
+    show sayori zorder 3 at f52
+    show yuri zorder 2 at t54
+    s "Did I? I meant to say 'save'..."
+    s "I have no idea how I missed those two words up!"
+    show sayori zorder 2 at t52
+    show natsuki zorder 3 at f53
+    n "Probably thinking about food again..."
+    show sayori zorder 3 at f52
+    show natsuki zorder 2 at t53
+    s "H-Hey, I'm not always thinking about food!"
+    s "Meanie..."
+    show monika zorder 3 at f51
+    show sayori zorder 2 at t52
+    m "I guess that's it! The last meeting of me as the president is officially over."
+    m "When I all see you next, I hope you've made an effort to celebrate this festive season."
+    m "Meeting adjourned!"
+    m "...I always wanted to say that, but it always felt so cheesy."
+    show monika zorder 2 at t51
+    show ayame zorder 3 at f55
+    ay "Well, what better time to say it then at your last meeting as president?"
+    show monika zorder 3 at f51
+    show ayame zorder 2 at t55
+    m "My thoughts exactly, Ayame."
+    m "Okay, see you later, everyone!"
+    scene bg residential_day with wipeleft_scene
+    "After the meeting, Monika sent everyone a price limit on the Secret Santa."
+    "Thankfully, it wasn't too high so my wallet wouldn't be impacted too much."
+    "I still wonder what would be a good gift though..."
+    show mysteriousclerk 1a at face
+    cl "Did I hear you say you wanted to buy a good gift?"
+    mc "Uwaa--!"
+    "Suddenly, this really familiar looking guy appears out of nowhere."
+    "I nearly fall to the ground out of pure surprise."
+    show mysteriousclerk zorder 2 at t11
+    play music t17
+    cl "Whoops, sorry. Shouldn't have done that."
+    mc "What the hell is your problem?"
+    cl "Me? I don't have a problem!"
+    cl "But you, you sound like you have a problem."
+    cl "What's the matter? Don't recognize me?"
+    if persistent.did_christmas_event:
+        cl "Try a little harder, would you?"
+        mc "Wait...you're that guy from the shop."
+        mc "From last time! It was...uh...."
+        $ cl_name = "Nick"
+        cl "Nick. Or did I call myself Bruce?"
+        cl "Clark...? No, it was definitely Nick."
+        cl "Whatever, not important."
+    else:
+        cl "Whatever, just call me Rad B."
+        $ cl_name "Rad B"
+        mc "'Rad B'? What kind of name is that?"
+        cl "It's my rapper name, brotha."
+        mc "What?"
+        cl "I'm just kidding. It's not important."
+    cl "What is important is that you are struggling to buy a gift for someone."
+    cl "Is that right?"
+    mc "How can you tell?"
+    cl "You look like your panicking."
+    cl "Or, at least you do. There's this really funny-looking spot on your face."
+    cl "It could mean anything but judging by the way you're walking, it seems like you're kinda panicking."
+    mc "What? Where is that spot?"
+    mc "N-Never mind! Just leave me alone."
+    cl "Leave you alone?"
+    cl "Leave you alone?!"
+    cl "Yeah, sure. I could do that."
+    mc "Good, now let me get home in peace."
+    cl "But!"
+    "Ugh..."
+    if persistent.did_christmas_event:
+        "I almost forgot how annoying this guy was."
+    else:
+        "There's just no end to it with this guy, huh?"
+    "Maybe if I just keep walking he'll give up."
+    "I make it a few steps before he appears right in front of me."
+    "How could he have done that?"
+    "He didn't even make a sound..."
+    "Why am I even wondering this? Just keep moving."
+    "Just ignore him...keep going. Is he following me?"
+    cl "Oh, come on. You don't want to hear the 'but'?"
+    "Keep moving, [player]. Keep moving..."
+    "You're almost home."
+    "Wait a second..."
+    "If I make it home, then he'll know where I live."
+    "What will he do then...?"
+    "I better talk to him now, maybe he'll leave me alone."
+    "I stop and turn around and sure enough, he's only two steps behind me."
+    cl "Great!"
+    mc "What is?"
+    cl "You've decided to do the smart thing and hear me out."
+    mc "I haven't said anything of the sort."
+    mc "Maybe I'm just changing direction."
+    cl "Nice try, but there's no way you're that smart."
+    "I'm about to give this guy a piece of my mind."
+    cl "No thanks, I would probably lose IQ if you did that."
+    cl "Anyway! I have the perfect gift for that certain someone."
+    cl "And I can guarantee it's well within your budget."
+    mc "What are you talking about?"
+    cl "You know, just because it's called 'Secret Santa'..."
+    cl "Doesn't mean you have to play dumb, okay?"
+    cl "That girl, you can't think of a present for her, can you?"
+    cl "You're worried that you might get her something she doesn't like."
+    cl "Luckily, I have just the thing that will solve your problems!"
+    mc "And I should believe you?"
+    if persistent.did_christmas_event:
+        cl "It worked pretty well last time, didn't it?"
+        cl "I mean...canonically you did the right thing."
+        mc "Canonically...? You're talking as if there's some sort of weird fan fiction or something."
+        cl "Maybe there is, maybe there isn't."
+        cl "Either way, I know that if I leave you to choose a gift, you'd probably end up with something stupid."
+        cl "Like a ribbon or pen."
+        cl "Come on, don't be stupid."
+        mc "Do you even know who I'm gifting?"
+        "I have a feeling he does..."
+        cl "Need you even ask?"
+        mc "I guess not."
+    else:
+        cl "Well, you got any bright ideas?"
+        cl "What were you gonna get her if I wasn't here to offer you the best gift ever?"
+        cl "What, a pen? Ooh, ooh, how about a ribbon?"
+        cl "Ooh, I know! Probably some lame plush toy."
+        cl "Please, do you really think she'd appreciate any of those things?"
+        mc "You don't even know who I'm gifting."
+        cl "{i}Riiiiiight{/i}, and my name isn't Rad B."
+        cl "But if I must prove myself to you..."
+        cl "Girl with coral brown hair, white ribbon, emerald eyes."
+        cl "Plays piano, etcetera, etcetera."
+        cl "Believe me now?"
+        "How could he possibly know that?"
+        "There's no way."
+        cl "So maybe I do know what she likes."
+        cl "Willing to listen now?"
+        mc "Okay, fine."
+    mc "What is it you want me to give her?"
+    cl "Indeed, what do you give the girl who has everything she could ever want?"
+    cl "What indeed?"
+    "There's about twenty seconds of silence as I wait for his answer."
+    "He doesn't say anything...what a waste of time."
+    mc "Are--"
+    cl "Wrong!"
+    mc "Wrong? I didn't even get to finish what I was saying!"
+    cl "Hah, I know. I just wanted to interrupt you and say 'wrong'."
+    cl "Now that I've had my fun, time to get serious."
+    "Did he seriously waste twenty seconds just to do that?"
+    cl "Yes, I did."
+    cl "Anyway, the answer is that Monika doesn't have everything she could ever want."
+    cl "She's missing that special someone in her life."
+    cl "Do you know who I could possibly be talking about?"
+    "Special someone...? Could he be talking about..."
+    mc "Me?"
+    cl "You? Hah! Don't make--"
+    cl "Yeah, it's you."
+    mc "I think you've got it all wrong, friend."
+    mc "Monika would never choose someone like me."
+    cl "Oh really?"
+    cl "Well, {i}Monika{/i} chose you to be the next president of your little gang of friends, didn't she?"
+    cl "Do you really think that wasn't an accident?"
+    mc "What do you mean?"
     return
