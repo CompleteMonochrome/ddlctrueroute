@@ -54,7 +54,7 @@ A: It's probably an undefined variable. It might be my fault but I have done upd
 **Credits:**
 
 - Proofreaders: the people of my discord server
-- Background Art: petan, mugenjohncel, きまぐれアフター (Kimagure After), Nuxill, hello hello, ぐったりにゃんこ [3DBG], 「（ｃ）安野譲」 (Anno Yuzuru), すこあ, 佐藤敏, PatTraX#7767, Alex [ORG]#9077, SovietSpartan, yagamirai10, Zeus KrAZy
+- Background Art: petan, mugenjohncel, きまぐれアフター (Kimagure After), Nuxill, hello hello, ぐったりにゃんこ [3DBG], 「（ｃ）安野譲」 (Anno Yuzuru), すこあ, 佐藤敏, PatTraX#7767, Alex [ORG], SovietSpartan, yagamirai10, Zeus KrAZy
 - Character Art: Childish-N, Akiko Osaka, GyloToTheRescue, truesonic53, yagamirai10, MAS Team (particularly Ryuse), Reddit users /u/SovietSpartan, /u/singusasongpianoman, /u/Drealengo, /u/NormallyAverage, /u/Meddy-sin, Discord users Erni_Editions™, Malukah Maker, bman and finally MUGかぶり and wingzofdarkness from lemmasoft forums
 - Music: G-RiNe Project, ScubDomino and Reddit users: /u/Zerorurariro and /u/-ShInIgAmIsAmA-
 - Sound Effects: SoundBible and AR Sound Effects
