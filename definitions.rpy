@@ -286,6 +286,11 @@ image end:
     truecenter
     "gui/end.png"
 image bg residential_day = "bg/residential.png"
+image bg residential_snow = "mod_assets/images/bg/residential_snow.png"
+image bg residential_transition_snow:
+    "bg/residential.png"
+    pause 1.5
+    "mod_assets/images/bg/residential_snow.png" with Dissolve(2.5)
 image bg class_day = "bg/class.png"
 image bg corridor = "bg/corridor.png"
 image bg club_day = "bg/club.png"
@@ -4932,6 +4937,7 @@ default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","
 default return_chapter = False
 default special_chapter = False
 default christmas_chapter = False
+default christmas2_chapter = False
 default christmas_gifts = ["plush","knife","manga","Xileh","bracelet"]
 default christmas_approval = 0
 default all_sayarc_poems_monika = False

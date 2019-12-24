@@ -159,6 +159,13 @@ init python:
                             "achieved": False,
                             "hidden": False
                             }
+        persistent.achievements_dict["*Christmas Miracle*"] = {"type": 0,
+                            "title": "Christmas Miracle",
+                            "text": "Finish the 2019 Christmas event.",
+                            "icon": "mod_assets/gui/achievements/achchristmas2.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
         persistent.achievements_dict["*The Bashful Lady*"] = {"type": 0,
                             "title": "The Bashful Lady",
                             "text": "Go on a date with Yuri.",

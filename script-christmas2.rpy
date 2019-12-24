@@ -1,4 +1,4 @@
-label christmas_chapter:
+label christmas2_chapter:
     # Alternate Reality?
     $ chapter = 1000
     scene black
@@ -593,7 +593,7 @@ label christmas_chapter:
     ay "Great! I'll text you when I figure out a good time."
     show yuri zorder 3 at f54
     show ayame zorder 2 at t55
-    y "Wait a second,...just before, did you say 'strawberry'?"
+    y "Wait a second...just before, did you say 'strawberry'?"
     show sayori zorder 3 at f52
     show yuri zorder 2 at t54
     s "Did I? I meant to say 'save'..."
@@ -652,7 +652,7 @@ label christmas_chapter:
     cl "What is important is that you are struggling to buy a gift for someone."
     cl "Is that right?"
     mc "How can you tell?"
-    cl "You look like your panicking."
+    cl "You look like you're panicking."
     cl "Or, at least you do. There's this really funny-looking spot on your face."
     cl "It could mean anything but judging by the way you're walking, it seems like you're kinda panicking."
     mc "What? Where is that spot?"
@@ -805,14 +805,20 @@ label christmas_chapter:
     "I better make myself ready for it then..."
     stop music fadeout 3.0
     scene black with dissolve_scene_half
+    play music m1
     "What's going on?"
     "What is this feeling I'm having?"
     "It's like...a surge of power or something."
     "I don't know how to describe it."
+    show bg glitch:
+        yoffset 480 ytile 2
+        linear 0.25 yoffset 0
+        repeat
     "It's like I have the power to change the world."
     "For better...or worse."
     "But where did this all come from?"
     "And what does it mean...?"
+    scene black
     $ m_name = "???"
     m "Uh...can you hear me?"
     "A familiar voice rings across my mind."
@@ -824,9 +830,25 @@ label christmas_chapter:
     m "Ahaha, no...this is very real."
     m "I'm here to pass on the presidency to you."
     mc "Yeah...this is definitely a dream."
+    show bg glitch:
+        yoffset 480 ytile 2
+        linear 0.25 yoffset 0
+        repeat
     m "It's not...just listen to what I have to say."
     m "It's really important otherwise you'll end up really confused."
+    m "Perhaps it would be easier if I show myself.{nw}"
+    $ _history_list.pop()
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    window hide(None)
+    play sound "sfx/s_kill_glitch1.ogg"
+    scene black
     show monika 1ba zorder 2 at i11
+    $ pause(0.25)
+    stop sound
+    hide screen tear
+    window show(None)
+    m "Perhaps it would be easier if I show myself.{fast}"
+    window auto
     m "Perhaps it would be easier if I show myself."
     m "Right now, we're in the transition process of the presidency."
     m "It won't be long now until you become the president of the Literature Club."
@@ -869,7 +891,7 @@ label christmas_chapter:
     m "{i}Love{/i} you. But I know that I'm not part of the real timeline."
     m "Your timeline."
     m "That Monika isn't me but her mind has merged with mine."
-    m "And now, I'm the same as her. I wish it wasn't."
+    m "And now, I'm the same as her. I wish that wasn't the case."
     m "She...{i}I{/i} thought I could live without you. Just continue life as normal."
     m "But because you aren't there...it feels so empty."
     m "Truth is, I almost forgot that you existed because you've been gone from this timeline for so long."
@@ -900,7 +922,7 @@ label christmas_chapter:
     m "Now that all these memories that aren't mine are in my head..."
     "Monika looks as if she's about to cry."
     m "I-I can't bear it."
-    m "So, I want to forget. I want to live my life to it's fullest."
+    m "So, I want to forget. I want to live my life to its fullest."
     m "But that can't happen, not while we're part of some alternate world."
     mc "Monika..."
     m "Time is running short, [player]."
@@ -1148,7 +1170,6 @@ label christmas_chapter:
     "Like if you were talking to them and then they walk away..."
     "You could appear right in front of--"
     "Wait a second."
-    # Reference this at the end
     "That man. That can't be right."
     "Does he have the power I have as well?"
     "Has he known this whole time?"
@@ -1175,6 +1196,7 @@ label christmas_chapter:
     "I peer back into my past. And the past from another world."
     "The gift for the girl who has everything."
     "And then, it hit me. Literally. [cl_name] pat me on the shoulder and smiled."
+    "I know I said I wouldn't just make things appear out of nowhere, but this is important."
     cl "Perfect. Now, this is probably the second to last time you'll see me."
     mc "Second to last?"
     cl "Soon, it won't be necessary."
@@ -1185,8 +1207,351 @@ label christmas_chapter:
     hide mysteriousclerk
     "He steps out the bedroom and nods his head."
     "As soon as he disappears from sight, I can tell he's nowhere near."
+    "He probably did the same thing I did."
+    "Which makes me even more curious as to who he really is."
+    "I guess that as long as he doesn't want me to know, I'll never figure it out."
     "But he's right. Christmas is coming and I have to be ready for it."
     scene black with dissolve_scene_full
     stop music fadeout 3.0
-    scene bg club_day with dissolve_scene_full
+    scene bg residential_day with dissolve_scene_full
+    play music t2
+    "It's the day of the Christmas festival."
+    "I made sure to contact everyone to see if their preparations were going okay."
+    "I just felt like I had that responsibility as the president now."
+    "I know Monika said I didn't have to do these kind of things, but I can't help it."
+    $ s_name = "???"
+    s "Heeeeeeeyyy!!"
+    "I'd recognize that voice anywhere. Sayori must have decided to catch up to me today."
+    "I turn around and notice she has two large bags with her. Those must be the gifts she made for today."
+    "She puts the bags down and starts waving her arms around like she's oblivious to all the attention she might bring herself."
+    "Luckily for her, there doesn't seem to be many people walking to school today."
+    $ s_name = "Sayori"
+    show sayori 4p zorder 2 at t11
+    s "Haaahhh...haaahhh..."
+    mc "I would have thought you'd be late today."
+    mc "You've been getting into that habit again lately."
+    s "N-Not today! This time, I caught you."
+    "Sayori struggles to catch her breath."
+    mc "Need a hand? You look like you're struggling."
+    "I point to one of the bags she's carrying."
+    s "I thought you'd never ask!"
+    "Sayori offers me one of the bags."
+    s "I'm only struggling because these things are so heavy."
+    mc "Yeah, right."
+    "I take the bag from her hand and surprisingly it is pretty heavy."
+    "I'm surprised she managed to carry one, let alone two of these."
+    "I peer inside and see a few wrapped gifts."
+    mc "What the hell did you pack in here? Rocks?"
+    s "Rocks? No, where would I even find that many rocks?"
+    s "But if I did put rocks in there, it would be coal."
+    s "Besides, why does it matter to you?"
+    s "It's not like you're getting any of them anyway."
+    mc "I guess not...it's just, a little heavy is all."
+    mc "Don't worry, I'll manage."
+    s "I'm sure you will! If I can do it, then you can as well."
+    s "You know, I've always wanted to experience the snow."
+    mc "Huh?"
+    s "It doesn't really snow around here."
+    s "Any you see all those films and shows that show a snowy Christmas."
+    s "It would be kinda nice to have that, don't you think?"
+    s "Buuut, I guess with where we live, that's not really possible."
+    s "Ehehe, sorry...I guess I'm just fantasizing about things that can never happen."
+    mc "Snow..."
+    "Sayori wants to see the snow."
+    s "That's right. I'm talking about the snow."
+    hide bg residential_day
+    show bg residential_transition_snow zorder 0
+    s "Is there a..."
+    "A drop of snow suddenly falls on Sayori's face."
+    s "What the...?"
+    "Snow suddenly comes slowly falling from the sky."
+    "How did that happen?"
+    "Did I do this?"
+    s "[player], it's snowing!"
+    mc "You're a master of observation, Sayori."
+    s "How did this happen?"
+    s "It's like some sort of Christmas miracle!"
+    mc "Maybe someone out there is looking out for us."
+    s "Well, tell that someone that they're the best person ever!"
+    s "I can't believe it!"
+    "Seeing Sayori so happy like this...it warms my heart."
+    "Small things like this, maybe this is how I can bring good to the world."
+    s "This is going to be the best Christmas ever, [player]."
+    s "It's going to be twice as fun as last year! Merry, Merry Christmas!"
+    mc "Double the 'Merrys', huh? Merry Christmas, Sayori."
+    "Sayori beams."
+    s "Now come on! Let's hurry to the school."
+    s "I can't wait to see everyone's reaction!"
+    "Sayori starts running ahead at full speed."
+    "While I'm struggling to keep up with her enthusiasm."
+    scene bg club_day with wipeleft_scene
+    "After an otherwise average day of school, I arrive at the club. Everyone else is already here."
+    "Yuri is putting up decorations but with how the room is already, I'm surprised she's not done."
+    "There's Christmas decorations everywhere and a huge banner saying 'Merry Christmas' on the wall."
+    "She really did an incredible job with the atmosphere."
+    "There's also this divine smell coming from the closet."
+    "I can only guess that must be Natsuki's baking."
+    "Everything seems to be going according to plan."
+    "Natsuki and Sayori are helping Yuri put the decorations up."
+    "While Monika and Ayame are talking amongst themselves until they notice me."
+    show ayame 1a zorder 2 at t21
+    ay "Look who decided to show up!"
+    ay "We were just talking about you."
+    mc "Oh? What about exactly?"
+    show ayame zorder 2 at t21
+    ay "About how Monika gave you your gift early."
+    ay "I wonder what's going on there, eh?"
+    show monika 1a zorder 3 at f22
+    m "T-There's nothing going on, Ayame!"
+    m "I just felt like I needed to get it to [player_reflexive] as soon as possible."
+    m "But...I don't even remember what I got [player_reflexive]."
+    m "I just know that it happened."
+    m "But I want to know...did you end up liking it, [player]?"
+    show monika zorder 2 at t22
+    mc "I did. It was a very thoughtful gift, Monika. Thank you."
+    mc "You don't have to worry about it."
+    show monika zorder 3 at f22
+    m "That's a relief. I'm glad you liked the gift then."
+    m "I wonder who got me...and what they got me."
+    m "I guess I'll find out later today, huh?"
+    m "We were meant to have a set time for the exchange but I guess because of me it's kinda ruined."
+    show ayame zorder 3 at f21
+    show monika zorder 2 at t22
+    ay "Everyone understood, Monika. Besides, I doubt they could be angry at you for being in the spirit of Christmas."
+    ay "But let's finish up here and help with the setting up."
+    ay "We have quite a long day ahead of us."
+    show ayame zorder 2 at t21
+    show monika zorder 3 at f22
+    m "True enough. What do you say, president [player]?"
+    m "Shall we get to work?"
+    show monika zorder 2 at t22
+    mc "Let's do this."
+    scene bg club_day with wipeleft
+    "After putting up all of the decorations, the students arrived soon after."
+    "I saw some familiar faces. People that were a part of the club before."
+    "There weren't any bad blood or anything, it was just a lot of small talk."
+    "I understood their reasons for leaving, now more than ever."
+    "There's just so many things with the club that are incompatible with their personalities."
+    "It made sense that they would leave before they started to resent us."
+    show yuri 1a zorder 2 at t11
+    y "Everything appears to be running smoothly."
+    y "I'm so glad it turned out this way."
+    mc "Yeah...I couldn't have asked for a better Christmas festival."
+    mc "Thank you for creating this wonderful environment, Yuri."
+    y "I-It's nothing."
+    mc "No, really. You did an awesome job. Don't discredit yourself."
+    mc "You even came prepared with that drawing names out of a hat thing."
+    mc "Even if you didn't say it out loud, you had the idea in mind."
+    mc "You deserve recognition for it."
+    y "I appreciate you saying that, [player]."
+    y "It's just a bad habit I need to get rid of."
+    y "I put a lot of effort into the things I do."
+    y "I suppose I just need to stop being so humble..."
+    mc "Being humble isn't bad, but when you do something like this..."
+    mc "You should feel proud of yourself."
+    mc "Proud of all you've accomplished."
+    y "Thank you. I'll take those words to heart."
+    mc "I hope you do."
+    "Yuri looks outside at the snow still slowly falling down."
+    y "I never would have expected it to snow here."
+    y "Let alone on a day like this."
+    y "There truly are some extraordinary things in this world."
+    y "Things that are better left unexplained, am I correct?"
+    mc "Trying to explain it would ruin the magic."
+    y "Precisely."
+    "Yuri smiles bashfully."
+    y "One last thing, [player]...Merry Christmas."
+    show yuri at d11
+    "Yuri approaches me and gives me a hug."
+    "I happily return it and smile for her."
+    mc "Merry Christmas, Yuri."
+    y "N-Now, I think I left something over there."
+    y "Y-Yeah, I'll go get that."
+    mc "Do what you need to do."
+    show yuri at thide
+    hide yuri
+    "Yuri walks over to one of the Christmas decorations and begins fiddling with it."
+    "It's clear that she still has feelings for me."
+    "And still gets really embarrassed when I give her compliments but I know she's improving."
+    show natsuki a zorder 2 at t11
+    n "What was that about?"
+    "Natsuki points to where Yuri is."
+    mc "Oh, nothing. She's just 'getting something'."
+    mc "Did you need to speak to me about something, Natsuki?"
+    n "Well...no. Not particularly."
+    n "But I did want to greet you."
+    mc "Greet me?"
+    n "Greet you for Christmas, you idiot."
+    n "So, you know...I hope you have a Merry Christmas and stuff."
+    n "Just don't expect this to happen too often."
+    mc "Are you okay, Natsuki? Did something hit you on the head or something?"
+    n "No, but something is about to hit you in a second."
+    mc "I-I'm only kidding. Thank you, Natsuki."
+    mc "I hope you have a Merry Christmas with your parents too."
+    n "I never thought I'd get to spend Christmas as a whole family again."
+    n "I thought it would be a one time thing and that there would be more conflict."
+    n "Somehow, the three of us managed to stick together."
+    n "But then again, strange things happen all the time."
+    n "Like right now with the snow..."
+    mc "What do you think of it?"
+    n "I know it should be impossible."
+    n "It doesn't make any sense."
+    n "But I don't care. Maybe it's a sign."
+    "Natsuki looks over at the desserts she's prepared."
+    "It looks like they're running low."
+    n "I have to put more on the table."
+    mc "Go ahead."
+    show natsuki at thide
+    hide natsuki
+    "Natsuki goes to the closet for a minute and returns with a new tray full of cupcakes."
+    "She also made some gingerbread men which tasted incredible."
+    "I never knew she could make those, maybe she's had it under her sleeve for a while."
+    "If so, today was the perfect occasion to bring them out for sure."
+    "They were a huge success with all the students."
+    "Some of the teachers even came in and complimented Natsuki's baking too."
+    "Monika begins addressing the crowd of people again."
+    "We had to move all the desks to the edge of the room to make space."
+    "I don't think any of us were expecting this many people to go to our event."
+    "Sayori even ran out of gifts just a couple of minutes ago."
+    "Where did this surge of popularity come from anyway?"
+    "We weren't this popular since Ayame joined..."
+    "I find her in the room, talking to the presidents from one of the other clubs."
+    "I don't know which one exactly but I do know it was a pretty big one."
+    "He notices me and nods to Ayame before leaving the two of us."
+    show ayame 1a zorder 2 at t11
+    ay "[player], can I help you?"
+    mc "Did you have something to do with this?"
+    ay "I don't know what you could possibly be talking about."
+    mc "About all these people here."
+    mc "I don't think me and the others expected such a crowd."
+    ay "Oh, that! Well, I might have called in a few favors."
+    ay "Helping out the other clubs does come with some benefits, you know."
+    mc "Really, you did that?"
+    ay "Is...is that a problem?"
+    mc "No, in fact it's the opposite."
+    mc "Look at everyone! They're so happy."
+    mc "They have all these people here with them enjoying our event."
+    mc "It's like all their hard work and preparation paid off."
+    ay "That was the intention I was going for."
+    ay "I'm glad it didn't backfire or anything."
+    mc "You sure are full of surprises, aren't you?"
+    ay "I try to be. Just like today seems to be."
+    ay "I mean...snow? Seriously?"
+    ay "That's something I never would thought I'd see here."
+    ay "I've been overseas and seen it, but to be home and witness it for myself..."
+    ay "Let's just say it seems nothing short of a miracle."
+    mc "It does seem something like that, doesn't it?"
+    ay "Merry Christmas, to you and the Literature Club."
+    mc "Merry Christmas, Ayame."
+    ay "Now that that's done, I better go talk to the other presidents here."
+    ay "I'll see you later, maybe."
+    mc "Maybe."
+    show ayame at thide
+    hide ayame
+    "We still have a long day ahead of us."
+    "How long is this event meant to last for anyway?"
+    "I guess I better participate too."
+    "The teachers don't know that the president role is meaningless, so as the new president I should probably greet them."
+    scene bg corridor
+    with wipeleft_scene
+    "People actually stayed up until the very end of the event."
+    "Which meant that we had to pack up and didn't have time for the gift exchange."
+    "Sayori figured that the best time to do it was now, before Christmas was over."
+    "It turns out that everyone managed to get the same person who was gifting them."
+    "Yuri got Natsuki, and Sayori got Ayame."
+    "Which means Natsuki got Yuri, and Ayame got Sayori."
+    "I guess that makes this whole process a lot easier."
+    "Now, to give my gift to Monika."
+    show monika 1a zorder 2 at t11
+    m "Ah, [player]. I should have known you would have gotten me."
+    m "Why would fate have it any other way?"
+    mc "Fate can be kind."
+    m "Fate can also be incredibly cruel."
+    m "But today fate seems to be in our favor."
+    m "Snow, a huge turnout and more importantly, time with each other."
+    m "Who could ask for a better day?"
+    mc "I couldn't have said it better myself."
+    m "Just one thing left now, isn't there?"
+    mc "Right..."
+    "I search my bag for the gift that I created for Monika."
+    "I wrapped it in a small box and attached a card to it."
+    "She takes the card and begins reading it."
+    m "Let's see here...'Everything will be okay. There's nothing for you to worry about anymore.''"
+    m "'Happy holidays and best wishes, from [player].'"
+    m "I..."
+    "Tears begin to well up in Monika's eyes."
+    m "I don't know why but I'm so happy to hear those words."
+    m "It doesn't even make any sense. There's just no context."
+    m "But somehow, those words just touch me deeply."
+    m "Thank you."
+    mc "Well, you haven't even opened the present yet."
+    mc "I spent some time thinking about what you would want."
+    m "Oh? Did you now?"
+    "Monika begins unwrapping the present I made for her."
+    "Slowly, the expression on her face changes to one of pure joy."
+    m "H-How did you get this?"
+    mc "Let's just say that fate had been kind over the weekend, and leave it at that."
+    "She takes the little miniature I made of her and hugs it."
+    m "It's so adorable. It's like a tiny version of me."
+    m "I love it. Thank you so much."
+    mc "There was two ways I thought that would go."
+    mc "You would either love it or be really creeped out by it."
+    mc "I'm so glad it wasn't the creeped out option."
+    m "Don't worry, this is amazing. I'll cherish this gift forever."
+    m "To be honest, anything from you would have done fine."
+    m "I know you aren't exactly the richest person around."
+    m "It must have cost you a fortune to get this custom-made."
+    mc "I wouldn't think about it too much."
+    m "Then I won't. Merry Christmas, [player]!"
+    "Monika wraps her arms around me in a warm embrace."
+    mc "Merry Christmas, Monika."
+    show mysteriousclerk zorder 3 at f33
+    cl "And so, this is how our story ends."
+    "[cl_name] places an arm on my shoulder and stares out the window."
+    cl "What a neat little story."
+    show monika zorder 3 at f32
+    show mysteriousclerk zorder 2 at t33
+    m "What? Who are you?"
+    "Monika releases her embrace and stares in bewilderment at [cl_name]."
+    m "If you're here for the event, you're a bit late..."
+    show monika zorder 2 at t32
+    show mysteriousclerk zorder 3 at f33
+    cl "But nothing can last forever, can it?"
+    cl "Just like how this can't last forever."
+    cl "Perhaps it's time to return to your own time."
+    cl "And to stop dallying in this world that doesn't need you."
+    show monika zorder 3 at f32
+    show mysteriousclerk zorder 2 at t33
+    m "[player], do you know who this is?"
+    show monika zorder 2 at t32
+    mc "Even if I did, I can't stop him."
+    mc "Because he's right."
+    "This is as far as you need to see."
+    "This world doesn't need you anymore."
+    "And I think we're better off without you."
+    "But still, I hope you at least enjoyed this little event we did."
+    "But my fate is my own now, and I intend to keep it that way."
+    show mysteriousclerk zorder 3 at f33
+    cl "And so it is with deep regret that I must transition us to black."
+    cl "And end this fairy tale that will never come to pass."
+    cl "That never should have come to pass."
+    cl "Perhaps, with the right choices you can still achieve this path."
+    cl "If you stick to the side of righteousness."
+    cl "Stray away from the darkness and trust your friends."
+    cl "Then maybe...your timeline can still be saved."
+    cl "Farewell!"
+    play sound "sfx/closet-open.ogg"
+    scene black
+    n "Hey, who turned out the lights?"
+    y "Did the power go out?"
+    s "What's going on?"
+    ay "Does anyone have their phone on them?"
+    cl "Goodnight."
+    $ persistent.did_christmas2_event = True
+    $ christmas2_chapter = False
+    $ get_achievement("*Christmas Miracle*")
+    $ pause(1.0)
+    $ style.say_window = style.window
+    $ quick_menu = True
+    $ renpy.utter_restart()
     return

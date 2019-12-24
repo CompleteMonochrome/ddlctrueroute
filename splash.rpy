@@ -526,7 +526,14 @@ label splashscreen:
         $ renpy.quit()
 
     # Set Achievements
-
+    if not "*Christmas Miracle*" in persistent.achievements_dict:
+        $ persistent.achievements_dict["*Christmas Miracle*"] = {"type": 0,
+                            "title": "Christmas Miracle",
+                            "text": "Finish the 2019 Christmas event.",
+                            "icon": "mod_assets/gui/achievements/achchristmas2.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
     if persistent.achievements_dict["*Playboy*"]["text"] == "Write for each girl at least once in a single playthrough.":
         $ persistent.achievements_dict["*Sadist*"]["title"] = "Sadist"
         $ persistent.achievements_dict["*Playboy*"]["text"] = "Write for each girl at least once without going on a date."
@@ -799,6 +806,8 @@ label after_load:
     if not hasattr(store, 'special_chapter'):
         $ special_chapter = False
     if not hasattr(store, 'christmas_chapter'):
+        $ christmas_chapter = False
+    if not hasattr(store, 'christmas2_chapter'):
         $ christmas_chapter = False
     if not hasattr(store, 'christmas_gifts'):
         $ christmas_gifts = ["plush","knife","manga","Xileh","bracelet"]

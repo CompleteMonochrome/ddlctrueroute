@@ -128,6 +128,34 @@ label choose_start:
             "No.":
                 s "Oh, okay."
                 s "Then let's get to it."
+    elif (currentdate <= (datetime.date(2020, 1, 1) + weekrange)) and persistent.arc_clear[0]:
+        s "Oh...that's unexpected."
+        if persistent.did_christmas2_event:
+            s "I know you've already done this."
+            s "But I'll say it again anyway."
+            s "The holiday season has come."
+            s "You don't have to do today again."
+        else:
+            s "I know you've already chosen where you want to start but..."
+            s "A special day has just shown up."
+            s "It's the festive season...so maybe..."
+            s "Well, it's not my choice to make."
+            s "You are in charge here after all."
+        menu:
+            s "But I think it's got to do with Christmas."
+            "Celebrate Christmas.":
+                s "Let's see what's in store for us..."
+                show screen tear(20, 0.1, 0.1, 0, 40)
+                $ pause(0.25)
+                $ christmas_chapter = True
+                $ s_name = "Sayori"
+                stop music
+                $ renpy.save_persistent()
+                stop sound
+                jump christmas2_chapter
+            "No.":
+                s "Oh, okay."
+                s "Then forget what I just said."
     elif (currentdate <= (datetime.date(2019, 9, 22) + weekrange)) and persistent.arc_clear[1]:
         "..."
         menu:
