@@ -1415,7 +1415,7 @@ label christmas2_chapter:
     "Sayori even ran out of gifts just a couple of minutes ago."
     "Where did this surge of popularity come from anyway?"
     "We weren't this popular since Ayame joined..."
-    "I find her in the room, talking to the presidents from one of the other clubs."
+    "I find her in the room, talking to a president from one of the other clubs."
     "I don't know which one exactly but I do know it was a pretty big one."
     "He notices me and nods to Ayame before leaving the two of us."
     show ayame 1a zorder 2 at t11
