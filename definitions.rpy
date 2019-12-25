@@ -2855,6 +2855,7 @@ image monika 1r = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "mon
 image monika 1s = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 1downschools", "True", "monika 1schools")
 image monika 1t = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 1downschoolt", "True", "monika 1schoolt")
 image monika 1u = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 1downschoolu", "True", "monika 1schoolu")
+image monika 1v = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 1downschoolv", "True", "monika 1schoolv")
 
 image monika 2a = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 2downschoola", "True", "monika 2schoola")
 image monika 2b = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 2downschoolb", "True", "monika 2schoolb")
@@ -2877,6 +2878,7 @@ image monika 2r = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "mon
 image monika 2s = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 2downschools", "True", "monika 2schools")
 image monika 2t = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 2downschoolt", "True", "monika 2schoolt")
 image monika 2u = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 2downschoolu", "True", "monika 2schoolu")
+image monika 2v = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 2downschoolv", "True", "monika 2schoolv")
 
 image monika 3a = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 3downschoola", "True", "monika 3schoola")
 image monika 3b = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 3downschoolb", "True", "monika 3schoolb")
@@ -2899,6 +2901,7 @@ image monika 3r = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "mon
 image monika 3s = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 3downschools", "True", "monika 3schools")
 image monika 3t = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 3downschoolt", "True", "monika 3schoolt")
 image monika 3u = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 3downschoolu", "True", "monika 3schoolu")
+image monika 3v = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 3downschoolv", "True", "monika 3schoolv")
 
 image monika 4a = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 4downschoola", "True", "monika 4schoola")
 image monika 4b = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 4downschoolb", "True", "monika 4schoolb")
@@ -2921,6 +2924,7 @@ image monika 4r = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "mon
 image monika 4s = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 4downschools", "True", "monika 4schools")
 image monika 4t = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 4downschoolt", "True", "monika 4schoolt")
 image monika 4u = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 4downschoolu", "True", "monika 4schoolu")
+image monika 4v = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 4downschoolv", "True", "monika 4schoolv")
 
 image monika 5a = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 5downschoola", "True", "monika 5schoola")
 image monika 5b = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 5downschoolb", "True", "monika 5schoolb")

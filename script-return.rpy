@@ -336,7 +336,7 @@ label return_chapter:
             $ persistent.return_event_final = True
             $ pause(1.0)
             $ style.say_window = style.window
-            $ config.version = "0.9.6k"
+            $ config.version = "0.9.7a"
             $ config.allow_skipping = True
             $ renpy.utter_restart()
             return
@@ -384,6 +384,6 @@ label return_chapter:
     $ return_event = False
     $ pause(1.0)
     $ style.say_window = style.window
-    $ config.version = "0.9.6k"
+    $ config.version = "0.9.7a"
     $ renpy.utter_restart()
     return

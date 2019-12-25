@@ -12397,6 +12397,9 @@ label ch16_end:
     "Natsuki looks like she's secretly enjoying herself."
     "Yuri has this really huge grin on her face."
     "And Monika is just smiling, as she usually does."
+    # Remove this later
+    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
+    $ renpy.utter_restart()
     show yuri 1a zorder 3 at f51
     y "Can you believe this?"
     y "There's so many people out there! I wasn't expecting such a large audience."
@@ -14905,10 +14908,11 @@ label ch16_end:
     "I guess there's only one way to find out where she ended up."
     "And that's to follow her."
     "Here goes..."
-    if ch16_ay_companions ==
+    if ch16_ay_companions == True:
+        "Nothing"
     scene white with dissolve_scene_full
     $ pause(2.5)
-    ""
+    "aa"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
