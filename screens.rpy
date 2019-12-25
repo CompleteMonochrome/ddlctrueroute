@@ -460,7 +460,7 @@ init -501 screen navigation():
         customstarthover_outlines = [(4, "#fac", 0, 0), (2, "#fac", 2, 2)]
         customstartinsensitive_outlines = [(4, "#fce", 0, 0), (2, "#fce", 2, 2)]
 
-        if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2019, 1, 1) + weekrange))) and persistent.arc_clear[0]:
+        if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2019, 1, 1) + weekrange)) or (currentdate <= (datetime.date(2019, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2020, 1, 1) + weekrange))) and persistent.arc_clear[0]:
             customstartoutlines = [(4, "#228B22", 0, 0), (2, "#228B22", 2, 2)]
             customstarthover_outlines = [(4, "#32CD32", 0, 0), (2, "#32CD32", 2, 2)]
             customstartinsensitive_outlines = [(4, "#00FF00", 0, 0), (2, "#00FF00", 2, 2)]
@@ -616,7 +616,7 @@ init -501 screen main_menu() tag menu:
             if not persistent.arc_clear[0]:
                 add "menu_art_m"
             else:
-                if persistent.markov_agreed and not ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2019, 1, 1) + weekrange)) or (currentdate <= (datetime.date(2019, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2020, 1, 1) + weekrange))) and persistent.arc_clear[0]):
+                if persistent.markov_agreed and not ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2019, 1, 1) + weekrange)) or (currentdate <= (datetime.date(2019, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2020, 1, 1) + weekrange)) and persistent.arc_clear[0]):
                     add "menu_art_m_evil_early"
                 else:
                     add "menu_art_m_evil"

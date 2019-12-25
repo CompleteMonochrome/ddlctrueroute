@@ -38,8 +38,8 @@ label christmas2_chapter:
     else:
         cl "Ho, ho, ho! It's Christmas!"
         cl "Or at least, in our time it's Christmas."
-        cl "Do you know what that means?"
         menu:
+            cl "Do you know what that means?"
             "No.":
                 pass
         cl "Of course you don't!"
