@@ -12397,9 +12397,6 @@ label ch16_end:
     "Natsuki looks like she's secretly enjoying herself."
     "Yuri has this really huge grin on her face."
     "And Monika is just smiling, as she usually does."
-    # Remove this later
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
-    $ renpy.utter_restart()
     show yuri 1a zorder 3 at f51
     y "Can you believe this?"
     y "There's so many people out there! I wasn't expecting such a large audience."
@@ -14908,11 +14905,109 @@ label ch16_end:
     "I guess there's only one way to find out where she ended up."
     "And that's to follow her."
     "Here goes..."
-    if ch16_ay_companions == True:
-        "Nothing"
+    if ch16_ay_companions == 0:
+        "I take a step backward then run forward to follow Ayame's steps."
+    else:
+        "We take a few careful steps forward, following Ayame's lead."
     scene white with dissolve_scene_full
     $ pause(2.5)
-    "aa"
+    "It feels like nothingness."
+    "I can't feel anything."
+    "I can't see anything."
+    "I can't hear anything."
+    "It's just completely white."
+    "It's like being caught in some kind of silent snowstorm."
+    "I'm left wondering if I somehow messed up."
+    "I mean I did follow after her, didn't I?"
+    "She should be right in front of me."
+    hide white
+    show bg residential_transition_white
+    "I can slowly feel my senses coming back."
+    "As I look around, I can feel...life."
+    "It's as if time has started to move again."
+    "The area feels familiar. It's one of the streets that Sayori and I would pass on the way to school."
+    "But how did we get here? We were just at school a minute ago."
+    if ch16_ay_companions == 4:
+        "I look around for Yuri and Natsuki."
+        "They're nowhere in sight, and neither is Ayame."
+    elif ch16_ay_companions == 3:
+        "I look around for Yuri, or Ayame."
+        "Neither of them seem to be in sight anywhere."
+    elif ch16_ay_companions == 2:
+        "I look around for Natsuki, or Ayame."
+        "There's no one in sight."
+    elif ch16_ay_companions == 1:
+        "I search around for Monika and Ayame."
+        "The two of them don't seem to be here."
+    elif ch16_ay_companions == 0:
+        "I look around me for Ayame."
+        "She doesn't seem to be around here."
+    "I guess we somehow wound up in different locations."
+    "I wonder if I can..."
+    $ player = temp_name
+    mc "Hello?"
+    "It seems that I can speak again."
+    mc "Is there anybody out there?"
+    "But there's something strange about my voice."
+    "It's like it's distorted somehow."
+    "I know I'm the one saying something, but it just sounds...off."
+    "In fact, now that I think about it this whole place seems weird."
+    "I know the area but there's just something about it that's wrong but I can't figure out what exactly."
+    "I have to get my priorities straight though."
+    "The first thing I have to do is make sure that we're all together."
+    "But where could they be?"
+    "If I ended up here, then they could have ended up anywhere."
+    "We should have come up with a plan if something like this happened."
+    ay "We still have our telepathic link, you know that."
+    ay "Where did you end up landing, [player]?"
+    "My Voice" "\"Ayame? I'm in a street near my house.\""
+    "My Voice" "\"Where are you? But something feels wrong about this all.\""
+    ay "You'd be right about that!"
+    ay "Something is definitely wrong with this place."
+    ay "But to answer your question..."
+    $ ay_name = "Ayame"
+    show ayame 1a zorder 2 at t11
+    ay "I'm right behind you!"
+    mc "Whoa! How did you get there?"
+    ay "What we've stepped into is a fragment of time."
+    ay "Something in Sayori's past that's an important part of her life."
+    ay "Everything looks similar but really it's all scattered about the place."
+    ay "I actually ended up at my house, but upon leaving my home I ended up right here."
+    ay "You may have noticed I sound funny."
+    ay "Well, that's because time is moving at a different pace in this place."
+    ay "It's constantly changing it's speed which is why I sound funny."
+    ay "But at least it's moving at all! Hence why we can speak like this."
+    ay "It's good that I found you so quickly."
+    ay "Because I think you're going to be key to step one."
+    mc "Step one?"
+    ay "We have to find out what's so important about this fragment of time we're in."
+    ay "Then we have to move on until we reach her."
+    mc "So it's like we're going through her memories."
+    mc "Why would she hide in a place like this though?"
+    ay "Who knows? Maybe she finds comfort in them."
+    ay "Maybe she had to revisit them to find out who she really was."
+    ay "Whatever the case, we need to get moving."
+    ay "The longer we spend in this time, the less we'll have on the others."
+    if ch16_ay_companions == 0:
+        ay "Do you have any ideas?"
+        mc "My guess is to go to her house."
+        mc "That seems like the most obvious choice."
+    else:
+        ay "But first we have to group up."
+        ay "That way we have a higher chance of stopping Sayori."
+        mc "Well, you managed to find me."
+        if ch16_ay_companions == 1:
+            mc "What's stopping Monika from doing the same?"
+            ay "I suppose nothing is."
+        elif ch16_ay_companions == 2:
+            mc "Couldn't Natsuki figure it out too?"
+            ay "We'll see about that."
+        elif ch16_ay_companions == 3:
+            mc "Yuri could probably figure it out as well."
+            ay "It's possible..."
+        elif ch16_ay_companions == 4:
+            mc "Natsuki and Yuri are bound to figure it out too, right?"
+            ay "I'd hope so."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return

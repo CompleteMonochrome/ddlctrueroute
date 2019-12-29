@@ -599,7 +599,7 @@ label christmas2_chapter:
     show sayori 1n zorder 3 at f52
     show yuri zorder 2 at t54
     s "Did I? I meant to say 'save'..."
-    s 1r "I have no idea how I missed those two words up!"
+    s 1r "I have no idea how I mixed those two words up!"
     show sayori zorder 2 at t52
     show natsuki 2g zorder 3 at f53
     n "Probably thinking about food again..."
@@ -1426,7 +1426,7 @@ label christmas2_chapter:
     "I guess she was lying when I asked her if there were rocks in there but it did make the people who got them even more surprised."
     "I'm still wondering...where did this surge of popularity come from anyway?"
     "We weren't this popular since Ayame joined..."
-    "I find her in the room, talking to the presidents from one of the other clubs."
+    "I find her in the room, talking to a president from one of the other clubs."
     "I don't know which one exactly but I do know it was a pretty big one."
     "He notices me and nods to Ayame before leaving the two of us."
     show ayame 2j zorder 2 at t11
