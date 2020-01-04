@@ -14973,6 +14973,7 @@ label ch16_end:
     ay "Something in Sayori's past that's an important part of her life."
     ay "Everything looks similar but really it's all scattered about the place."
     ay "I actually ended up at my house, but upon leaving my home I ended up right here."
+    ay "I guess our link that we made earlier allowed me to find you easily."
     ay "You may have noticed I sound funny."
     ay "Well, that's because time is moving at a different pace in this place."
     ay "It's constantly changing it's speed which is why I sound funny."
@@ -15005,7 +15006,7 @@ label ch16_end:
         ay "That could be it."
         ay "She's probably assuming that only I could be following you."
         ay "I haven't heard of this park before so you'll have to lead the way."
-        mc "But didn't you say this world is all messed up in someway?"
+        mc "But didn't you say this world is all messed up in some way?"
         mc "Going in that direction could take us to somewhere else entirely."
         ay "It's more like a forced shortcut."
         ay "Assuming you go in that general direction, if it's the right way you'll end up at the park."
@@ -15082,10 +15083,11 @@ label ch16_end:
             mc "You said it yourself. You ended up instantly after leaving your house."
             ay "What you said about the logic isn't entirely right, [player]."
             ay "When I left my house, I was intending on meeting with you."
-            ay "And so I ended up here."
-            mc "You know where I live?"
-            ay "I...know the whereabouts. That's not important."
-            ay "What is, is that we use this knowledge to find Monika."
+            ay "Because of the link we had, I was able to hone on your position much more easily."
+            mc "So we could do the same thing to find Monika, right?"
+            ay "Wrong. It seems that traversing through ended up breaking our link with her."
+            mc "So what do we do now then? How are we suppoed to find her?"
+            ay "We can use this knowledge to help in our search for her?"
             mc "How would we do that?"
             ay "Where could Monika be?"
             ay "Simply think about going there and turn the corner."
@@ -15102,6 +15104,226 @@ label ch16_end:
             ay "You must not risk being alone with Monika."
             ay "Especially not now."
             mc "What are you talking about?"
+            ay "I just don't want you to venture alone."
+            ay "It's too dangerous."
+            mc "Can't you just use that mind link thing you used before we got here?"
+            mc "That would make things a whole lot easier."
+            ay "I would love to, but it seems that travelling here broke the connection."
+            ay "I had to find you to reestablish mine."
+            ay "So as soon as we can find Monika, I can bring her in again."
+            mc "Then how are we meant to find her?"
+            ay "We'll go together."
+            ay "If we don't find her there, then we'll have to go on without her."
+            mc "But then what's going to happen to Monika?"
+            ay "..."
+            ay "Let's just decide where we're going to go, okay?"
+            menu:
+                ay "Are we going to the school, or to her house?"
+                "The school.":
+                    mc "There's only one place Monika could be."
+                    mc "She's probably definitely at the school."
+                    ay "'Probably definitely', I'm really assured now."
+                    ay "And why the school anyway?"
+                    ay "I mean, weren't we just there?"
+                    ay "Though, I suppose that was in a different way but still."
+                    mc "It's just a feeling that I have."
+                    ay "You know what will happen if you're wrong, right?"
+                    mc "We'll go on without her."
+                    ay "And that will reduce our chances of getting to Sayori."
+                    ay "So I just hope you know where you're going."
+                    mc "I can't say that for certain."
+                    mc "But the school seems like the place Monika would wait for us at."
+                    ay "No time to waste then, let's go."
+                    "Ayame grabs my hand and starts running in a direction, taking me along with her."
+                    mc "W-Wait a second, what are you doing?"
+                    ay "We're going to school, aren't we?"
+                    ay "The easiest way to get there is to imagine it."
+                    ay "Then start running."
+                    mc "Wh{nw}"
+                    $ _history_list.pop()
+                    show screen tear(20, 0.1, 0.1, 0, 40)
+                    window hide(None)
+                    play sound "sfx/s_kill_glitch1.ogg"
+                    $ pause(0.25)
+                    stop sound
+                    scene bg school_front
+                    show ayame 1a zorder 2 at t11
+                    hide screen tear
+                    window show(None)
+                    mc "Wh{fast}at are you talk--"
+                    window auto
+                    "All of a sudden, we're at the front of the school."
+                    "From the street we were at, it would have taken another ten minutes or so to get to school."
+                    "But it seems we arrived almost instantly."
+                    mc "How did we get here?"
+                    ay "This world we're in isn't our world [player]."
+                    ay "It's simply...fragments of the original."
+                    ay "Which means nothing is as it really seems."
+                    ay "Distance matters little when the things between two places don't exist."
+                    mc "So it's like we skipped passed those other roads because they don't exist?"
+                    ay "They don't exist in this fragmented reality that Sayori made up."
+                    mc "Then what would have happened if we went to Monika's house?"
+                    ay "I'm not sure but the fact that we ended up here in one piece is a good sign."
+                    ay "Let's look for her. I'll search to the east side and you to the west."
+                    mc "Okay, and how will I know if you've found her?"
+                    "Ayame's Voice" "\"Our link still exists, I'll let you know when I find her.\""
+                    mc "Got it. I'll meet back when I find her."
+                    ay "When you find her, you have to tell me {i}immediately{/i}."
+                    ay "I'll get to you as soon as I can."
+                    mc "I don't understand why you seem so apprehensive, but okay."
+                    mc "If it makes you feel better, I'll contact you as soon as I can."
+                    ay "Good, that's all I can ask for."
+                    ay "Now go ahead and search the west side but don't take too long."
+                    show ayame at thide
+                    hide ayame
+                    "Ayame quickly runs towards the east side of the school."
+                    "I really hope I didn't mess this up."
+                    "If Monika isn't here...then it will just be the two of us."
+                    "And I don't know if the two of us can stop Sayori."
+                    "But before worrying about that, I have to find Monika."
+                    "I try looking around the yard, but there doesn't seem to be anyone around."
+                    "The whole place is just completely empty."
+                    "All of the windows are shut, or blacked out so I can't look inside any of the rooms."
+                    "Maybe if I go to the Literature Club, I can find her."
+                    "Where else could she be, right?"
+                    show screen tear(20, 0.1, 0.1, 0, 40)
+                    window hide(None)
+                    $ pause(0.25)
+                    stop sound
+                    scene bg corridor
+                    hide screen tear
+                    window show(None)
+                    "Thinking about going there instantly brings to the corridor outside the Literature Club."
+                    window auto
+                    "Once again, I arrived here instantly after thinking about it."
+                    "What a useful trick to have."
+                    "The rooms in this corridor don't seem to be blacked out."
+                    "I see lots of familiar sights and everything else seems normal."
+                    "But the whole place is still completely deserted."
+                    "This kinda makes me think that only Ayame and I made it."
+                    "It's probably a good idea to check the club itself."
+                    "I gently open the door to the club."
+                    "There doesn't seem to be anything--{nw}"
+                    show monika 1a zorder 2 at h11
+                    $ m_name = "Monika"
+                    m "[player]?!"
+                    "Monika appears from behind the door."
+                    "I take a step backwards and almost fall over from the surprise."
+                    m "Are you okay?"
+                    mc "I'm fine. You just surprised me, that's all."
+                    mc "How are you feeling?"
+                    m "Transported to a replica of the school and separated from you."
+                    m "So how do you think?"
+                    mc "You seem to be taking it well."
+                    m "I knew you would find me."
+                    m "I went to the most obvious place I could think of."
+                    m "And it seems you were right."
+                    "I should probably let Ayame know that Monika is here."
+                    if ch12_markov_agree:
+                        "But at the same time, I have a feeling that I shouldn't."
+                        "I'm going to completely ignore what Ayame told me to do and instead stare at Monika expectantly."
+                        if monika_type == 0:
+                            m "What is it?"
+                            m "Why are you looking at me like that?"
+                            mc "H-Huh?"
+                            m "Is everything okay with you?"
+                            mc "Yeah, I'm fine. I'll tell Ayame we're here."
+                            m "If you say so..."
+                            "Monika steps out of the club and closes the door behind her."
+                        else:
+                            m "So we've made it this far, have we?"
+                            m "Ayame is making it a lot more complicated than this should be."
+                            m "But we'll play along for now."
+                            m "I'll have to figure out a way to earn her trust somehow."
+                            m "And you're going to help me do it."
+                            m "The plan is{nw}"
+                            $ _history_list.pop()
+                            show screen tear(25, 0.3, 0.3, 0, 50)
+                            window hide(None)
+                            $ pause(0.25)
+                            stop sound
+                            hide screen tear
+                            window show(None)
+                            "Monika smiles at me as she closes the door of the club behind her.."
+                            window auto
+                    "My Voice" "\"I've found Monika, Ayame.\""
+                    "My Voice" "\"She was at the Literature Club.\""
+                    "Ayame's Voice" "\"Of course she was...I'll be right there.\""
+                    m "How did you know I would be here?"
+                    mc "I didn't. I took a wild guess."
+                    m "Huh. Well, that's some lucky guess."
+                    show monika zorder 2 at t21
+                    show ayame 1a zorder 2 at f22
+                    ay "There you are."
+                    "Ayame looks at Monika suspiciously and turns toward me."
+                    ay "You told me as soon as you found her, right?"
+                    show ayame zorder 2 at t22
+                    mc "Y-Yeah, I just don't get the big deal."
+                    show ayame zorder 3 at f22
+                    ay "It doesn't matter."
+                    show monika zorder 2 at f21
+                    show ayame zorder 2 at t22
+                    m "It's good to see you, Ayame."
+                    m "What's the next course of action?"
+                    show monika zorder 2 at t21
+                    show ayame zorder 3 at f22
+                "Monika's house":
+                    mc "There's only one place Monika could be."
+                    mc "She's most likely but maybe not at her home."
+                    ay "'Most liley but maybe not', I like the sound of that..."
+                    ay "But why would she be at her home?"
+                    ay "That doesn't seem like a very obvious place to be."
+                    ay "If she wanted either of us to find her, she would have picked some place more accessible to me."
+                    mc "Maybe she was expecting you to go to me..."
+                    mc "But I don't really know why I chose her house, I guess it's just a feeling that I have."
+                    ay "You know what will happen if you're wrong, right?"
+                    mc "We'll go on without her."
+                    ay "And that will reduce our chances of getting to Sayori."
+                    ay "So I just hope you know where you're going."
+                    mc "I can't say that for certain."
+                    mc "But her house is the only place I can think of right now."
+                    ay "I hope that you're right."
+                    ay "I suppsoe there's no time to waste then, lead the way."
+                    "I lead Ayame down the street where I think Monika's house is."
+                    "She grabs onto my arm just before we turn the corner."
+                    mc "W-Wait a second, what are you doing?"
+                    ay "I'm holding on to your arm, obviously."
+                    mc "B-But why?"
+                    ay "This way we can travel through it together."
+                    mc "I'm not sure I follow..."
+                    ay "Just keep walking, you'll see what I mean in a second."
+                    "I don't know what she means by that but I continue down the corner anyway."
+                    mc "I'm pretty sure it{nw}"
+                    $ _history_list.pop()
+                    show screen tear(20, 0.1, 0.1, 0, 40)
+                    window hide(None)
+                    play sound "sfx/s_kill_glitch1.ogg"
+                    $ pause(0.25)
+                    stop sound
+                    scene bg m_house
+                    show ayame 1a zorder 2 at t11
+                    hide screen tear
+                    window show(None)
+                    mc "I'm pretty sure it{fast} was in this direction..."
+                    window auto
+                    mc "...How did we get here so fast?"
+                    "Upon thinking about Monika's house, Ayame and I suddenly arrive outside of it."
+                    "I look at Ayame in disbelief."
+                    ay "That's what I meant. You simply think of the place you want to go and you'll end up there."
+                    ay "It's a result of this fragmented world and how I found you in the first place."
+                    ay "But seeing as we ended up at an actual place is a good sign."
+                    ay "Where do you suppose she is?"
+                    mc "I don't know. I could try calling out for her."
+                    mc "Monika?!"
+                    "I shout her name and wait for an answer from the house."
+                    "There's something strange about her house though."
+                    "All of the windows are blacked out, as if it's completely dark in there."
+                    "I can't see a thing inside her house despite it being broad daylight."
+                    mc "Maybe we should go in. The gate seems to be unlocked."
+                    "I take a step forward..."
+                    "...but I'm instantly pulled back by Ayame."
+                    ay "No. She's not here."
+                    mc "What? How do you know?"
         elif ch16_ay_companions == 2:
             mc "Couldn't Natsuki figure it out too?"
             ay "We'll see about that."
