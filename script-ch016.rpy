@@ -15252,25 +15252,49 @@ label ch16_end:
                     m "How did you know I would be here?"
                     mc "I didn't. I took a wild guess."
                     m "Huh. Well, that's some lucky guess."
-                    show monika zorder 2 at t21
-                    show ayame 1a zorder 2 at f22
+                    show ayame 1a zorder 2 at f21
+                    show monika zorder 2 at t22
                     ay "There you are."
                     "Ayame looks at Monika suspiciously and turns toward me."
                     ay "You told me as soon as you found her, right?"
-                    show ayame zorder 2 at t22
+                    show ayame zorder 2 at t21
                     mc "Y-Yeah, I just don't get the big deal."
-                    show ayame zorder 3 at f22
+                    show ayame zorder 3 at f21
                     ay "It doesn't matter."
-                    show monika zorder 2 at f21
-                    show ayame zorder 2 at t22
+                    show ayame zorder 2 at t21
+                    show monika zorder 2 at f22
                     m "It's good to see you, Ayame."
                     m "What's the next course of action?"
-                    show monika zorder 2 at t21
-                    show ayame zorder 3 at f22
+                    show ayame zorder 3 at f21
+                    show monika zorder 2 at t22
+                    ay "I just want to know how you got here."
+                    ay "Kind of odd that you'd end up in the first place [player] looks?"
+                    ay "But maybe that's just me."
+                    show ayame zorder 2 at t21
+                    show monika zorder 3 at f22
+                    m "I arrived here. After we did that little thing near the gym."
+                    m "I figured just waiting here would be the best course of action."
+                    m "Since the both of you would be out to find me."
+                    m "But how did you get here so quickly?"
+                    show ayame zorder 3 at f21
+                    show monika zorder 2 at t22
+                    ay "This world isn't real, Monika."
+                    ay "It's simply a fragmented reality created by Sayori."
+                    ay "You can traverse it very fast, because certain sections of it don't even exist."
+                    ay "So it's like you just end up at one place, because that's just how this world is connected."
+                    ay "We can't perceive it, but that's just how it is."
+                    show ayame zorder 2 at t21
+                    show monika zorder 3 at f22
+                    m "I figured."
+                    m "The world doesn't seem right. It's like a copy...a replica."
+                    m "You and [player] don't even sound normal."
+                    show ayame zorder 3 at f21
+                    show monika zorder 2 at t22
+                    ay "You sound as if you know already."
                 "Monika's house":
                     mc "There's only one place Monika could be."
                     mc "She's most likely but maybe not at her home."
-                    ay "'Most liley but maybe not', I like the sound of that..."
+                    ay "'Most likey but maybe not', I like the sound of that..."
                     ay "But why would she be at her home?"
                     ay "That doesn't seem like a very obvious place to be."
                     ay "If she wanted either of us to find her, she would have picked some place more accessible to me."
@@ -15324,6 +15348,155 @@ label ch16_end:
                     "...but I'm instantly pulled back by Ayame."
                     ay "No. She's not here."
                     mc "What? How do you know?"
+                    ay "Look at her house."
+                    ay "It's completely empty. Like a void."
+                    ay "Stepping inside will cause some issues that I'd rather avoid."
+                    mc "How do you know that? Monika could be in there."
+                    ay "If she is, then she's already lost."
+                    ay "But I doubt she would be in there."
+                    ay "She's much more resourceful than that."
+                    mc "Then we have to find her!"
+                    ay "[player]!"
+                    ay "What did I say about this?"
+                    ay "Making the wrong decision will cost us precious time."
+                    ay "Time, that we do not have."
+                    mc "We can't just leave her here."
+                    ay "I'm afraid we have no choice, [player]."
+                    ay "If we're to have any chance at all in stopping Sayori, we have to go. Now."
+                    mc "She deserves better..."
+                    ay "That's not for me to say."
+                    mc "What's going to happen to her?"
+                    ay "I don't know. She could end up trapped here."
+                    ay "But what I know for certain is that we're all doomed if we don't act."
+                    ay "So please. I know it's hard."
+                    ay "But you're going to need to live with your choice."
+                    ay "If all goes well, then Monika will get out of this with no problems."
+                    show ayame zorder 2 at t21
+                    show monika 1a zorder 2 at f22
+                    m "That won't be necessary."
+                    "Monika taps my shoulder and appears from behind us."
+                    m "I'm coming with the two of you."
+                    show monika zorder 2 at t22
+                    mc "Monika? But how?!"
+                    mc "Ayame said--"
+                    show monika 1a zorder 2 at f22
+                    m "Ayame said that I was resourceful, didn't she?"
+                    show ayame zorder 3 at f21
+                    show monika zorder 2 at t22
+                    ay "That's true. I did say that."
+                    ay "I fully expected you to have been lost to this time."
+                    ay "But it does seem that you are here and well."
+                    show ayame zorder 2 at t21
+                    show monika zorder 3 at f22
+                    m "I'm afraid you can't get rid of me so easily, Ayame."
+                    m "Now, we're all together. Where are we supposed to go?"
+                    show ayame zorder 3 at f21
+                    show monika zorder 2 at t22
+                    ay "I'd like to know something first."
+                    ay "The same thing [player] wants to know."
+                    ay "How did you get here?"
+                    show ayame zorder 2 at t21
+                    show monika zorder 3 at f22
+                    m "Oh, come on. Do we really--"
+                    show ayame zorder 3 at f21
+                    show monika zorder 2 at t22
+                    ay "Tell me."
+                    show ayame zorder 2 at t21
+                    show monika zorder 3 at f22
+                    m "I just...arrived here. At first, I was at the club room."
+                    m "I ended up there after that little thing we did."
+                    m "I figured staying there meant that you would have a higher chance of finding me."
+                    m "Then I realized that we're on a time limit, aren't we?"
+                    m "I realized that if I didn't find the two of you myself, then I wouldn't be able to do anything to help."
+                    m "I thought about returning home, even with how strange this world seemed, to get some supplies and suddenly I was here."
+                    m "I don't know how it works, I think it's like a distorted replica of our world, but I don't think I have the time to speculate."
+                    show ayame zorder 3 at f21
+                    show monika zorder 2 at t22
+                    ay "It's just strange you figured it all out so quickly..."
+            ay "It's like you've done this before."
+            ay "But it doesn't matter, what you said was right."
+            ay "We're running out of time."
+            ay "There's no time to figure out your true motives right now."
+            show ayame zorder 2 at t21
+            show monika zorder 3 at f22
+            m "My true motives?"
+            "Monika scoffs in disbelief."
+            m "Ayame, do you think I have some kind of ulterior motive?"
+            m "What's gotten into you?"
+            show ayame zorder 3 at f21
+            show monika zorder 2 at t22
+            ay "[player], we need to pass Sayori's test."
+            "Ayame seemingly ignores what Monika just said."
+            ay "Then we can continue to try to find her."
+            show ayame zorder 2 at t21
+            mc "What test?"
+            show ayame zorder 3 at f21
+            ay "This whole world has been created by Sayori."
+            ay "It's just a fragment of reality."
+            ay "And so we need to figure out where she could be hiding."
+            ay "Where she could have placed the next place we need to go through."
+            show ayame zorder 2 at t21
+            show monika zorder 3 at f22
+            m "I know the place."
+            show monika zorder 2 at t22
+            mc "How can you be so sure?"
+            show ayame zorder 3 at f21
+            ay "Where is it?"
+            show ayame zorder 2 at t21
+            show monika zorder 3 at f22
+            m "Sayori told me about this park she would go to."
+            m "That she still goes to."
+            m "But it holds a lot of value for her because it was where she would play when she was younger."
+            m "Isn't that right, [player]?"
+            show monika zorder 2 at t22
+            mc "The playground..."
+            mc "Sayori really told you about that place?"
+            show monika zorder 3 at f22
+            m "Well...let's just say it wasn't easy getting it out of her."
+            m "This was when she was still vulnerable and..."
+            if monika_type == 0:
+                m "I still feel bad about taking advantage of her like that."
+            else:
+                m "Forget it..."
+            show ayame zorder 3 at f21
+            show monika zorder 2 at t22
+            ay "Well, the two of you both seem certain it's this park."
+            ay "I suppose we'll find out if we can even go there."
+            ay "Lead the way, [player]."
+            show ayame zorder 2 at t21
+            "Ayame grabs my hand, and without being prompted, Monika does the same with my other hand."
+            mc "Alright...let's see if I can do this."
+            mc "I think it{nw}"
+            $ _history_list.pop()
+            show screen tear(20, 0.1, 0.1, 0, 40)
+            window hide(None)
+            play sound "sfx/s_kill_glitch1.ogg"
+            $ pause(0.25)
+            stop sound
+            scene bg park_day
+            show ayame 1a zorder 2 at t21
+            show monika 1a zorder 2 at t22
+            hide screen tear
+            window show(None)
+            mc "I think it{fast} was right over here."
+            window auto
+            "Simply thinking about the park and taking a step got us over here in an instant."
+            "This place brings back fond memories of my childhood."
+            "Back when Sayori and I were still younger...innocent people."
+            "Is it still possible to go back to the people that we were?"
+            mc "What are we supposed to be looking for?"
+            show ayame zorder 3 at f21
+            ay "It could be anything."
+            ay "What exactly could be so important in this place?"
+            show ayame zorder 2 at t21
+            show monika zorder 3 at f22
+            m "Wait a second...do the two of you hear that?"
+            m "Be quiet for a second..."
+            "It's a soft whisper, quietly telling me to go back."
+            "Go back. Go back. Go back."
+            m "It's a voice. Like a child whispering..."
+            show ayame zorder 3 at f21
+            show monika zorder 2 at t22
         elif ch16_ay_companions == 2:
             mc "Couldn't Natsuki figure it out too?"
             ay "We'll see about that."
