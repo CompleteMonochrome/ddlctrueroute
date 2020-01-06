@@ -15497,9 +15497,27 @@ label ch16_end:
             m "It's a voice. Like a child whispering..."
             show ayame zorder 3 at f21
             show monika zorder 2 at t22
+            ay "That must mean we're getting close."
+            ay "It's awfully creepy though, isn't it?"
+            show ayame zorder 2 at t21
         elif ch16_ay_companions == 2:
             mc "Couldn't Natsuki figure it out too?"
             ay "We'll see about that."
+            ay "Right now, our best bet is to try to look for her."
+            ay "If she doesn't know what's going on, then she's going to be lost in here."
+            ay "So we need to make sure we get in contact with her as soon as we can."
+            mc "Can't you use that link you made before we jumped through?"
+            ay "I tried. It seems that only ours is intact."
+            ay "Our only choice is to look for her manually."
+            mc "Then what are we waiting for?"
+            ay "Wait. There's something you have to know."
+            ay "If we can't find her, then we have to go on without her."
+            mc "What? How can you even suggest that?!"
+            ay "We have to face the facts, [player]."
+            ay "We need to stop Sayori to prevent this from even happening."
+            ay "If that means leaving Natsuki behind here then..."
+            mc "We're going to find her, Ayame."
+            ay "I hope you're right."
         elif ch16_ay_companions == 3:
             mc "Yuri could probably figure it out as well."
             ay "It's possible..."
