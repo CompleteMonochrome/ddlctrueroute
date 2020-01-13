@@ -15599,7 +15599,6 @@ label ch16_end:
                     mc "Okay...well then here goes nothing."
                     "I have to get to Natsuki's house."
                     "I've been there several times, thanks to Sayori."
-                    mc "It should be"
                     mc "It should be{nw}"
                     $ _history_list.pop()
                     show screen tear(20, 0.1, 0.1, 0, 40)
@@ -15607,7 +15606,7 @@ label ch16_end:
                     play sound "sfx/s_kill_glitch1.ogg"
                     $ pause(0.25)
                     stop sound
-                    scene bg n_house
+                    scene bg n_house_day
                     show ayame 1a zorder 2 at t11
                     hide screen tear
                     window show(None)
@@ -15662,8 +15661,9 @@ label ch16_end:
                     mc "Got it. I'll check upstairs."
                     ay "Then I suppose I'll check down here. Take care."
                     "Now, where could she be?"
-                    scene bg n_bedroom with wipeleft_scene
+                    scene bg n_bedroom_day with wipeleft_scene
                     "I go upstairs to Natsuki's bedroom."
+                    mc "Natsuki?"
                     "I kept calling out her name but again there was no reply."
                     "Did I choose the wrong place?"
                     "No, I can't have."
@@ -15671,6 +15671,52 @@ label ch16_end:
                     "Probably..."
                     "I can't lose hope. Natsuki could be in trouble."
                     "If she is, she'll need my help."
+                    "I look all over the room, but there's no sign of Natsuki."
+                    "It looks like there's been no one here for a while."
+                    "All of the things scattered throughout the room don't look like they've been used recently."
+                    "Maybe I should search another room."
+                    scene bg n_dadroom with wipeleft_scene
+                    "This room..."
+                    "I doubt Natsuki would be in here, but I have to try looking."
+                    mc "Natsuki?"
+                    mc "Are you here?"
+                    "Once again, there's no response."
+                    "I make sure to check every single part of the room."
+                    "I check the closet and nothing is in there."
+                    "There's something eerie about this room."
+                    "I can't quite figure it out."
+                    "Now that I notice it, it was the same with Natsuki's room."
+                    "There's something very wrong here."
+                    "And I have to figure it out before it's too late."
+                    "Don't tell me I chose the wrong place..."
+                    "In any case, I should check the other rooms."
+                    "She has to be here."
+                    "She has to be."
+                    scene bg n_hitroom with wipeleft_scene
+                    "I have a terrible feeling about this room."
+                    "And I know she can't possibly be in here."
+                    "It's all open space, there's no where she could be hiding."
+                    "But I'm going to try calling for her anyway."
+                    mc "Natsuki, you can't be in here...can you?"
+                    "There's a deafening silence as no reply "
+                    "Suddenly, a chill rides up my spine."
+                    "What is this feeling?"
+                    "The more I search Natsuki's house for her, the stronger this feeling gets."
+                    "It's like something is slowly creeping up on me."
+                    "But every time I turn around to look at what it is, there's nothing there."
+                    "Is my mind playing tricks on me?"
+                    "Is Sayori the one doing this?"
+                    "I have to check this last room upstairs."
+                    "Before this becomes unbearable."
+                    "I hope Ayame is having more luck than me and has at least found a clue or something."
+                    scene bg n_oldlivingroom with wipeleft_scene
+                    "The final room upstairs."
+                    mc "Natsuki? Please tell me you're in here."
+                    "I could swear that some one just tapped me on the back."
+                    mc "Who's there?"
+                    "As I turn around, there's no one there."
+                    "What the hell is going on?"
+                    "I should be quick searching for her in here."
                 "The club.":
                     mc "The most likely place for her to be is at the club."
                     mc "If I know her, she's going to want to be at the most obvious spot to find."
