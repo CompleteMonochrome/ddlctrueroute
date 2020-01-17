@@ -15792,6 +15792,37 @@ label ch16_end:
                     ay "We have no choice but to continue on without Natsuki."
                     mc "But--"
                     ay "I'm sorry, it has to be this way."
+                    ay "It's a tough decision, I know."
+                    ay "Believe me...I know."
+                    "Ayame lets the voice taunt her for a moment before sighing."
+                    ay "But this is the only way we can save them."
+                    ay "If we don't use our time wisely, then it's all for nothing."
+                    ay "Do you understand?"
+                    ay "Nod your head, if you understand, [player]."
+                    "I look at Ayame and reluctantly nod my head."
+                    ay "Good. Then we have to go."
+                    mc "But where are we going?"
+                    ay "I was about to ask you the same thing."
+                    ay "You're Sayori's best friend, aren't you?"
+                    ay "Surely you would know the place where she would go next."
+                    mc "I don't have any idea anymore, Ayame."
+                    mc "I don't even know the first place to look."
+                    ay "But there {i}must{/i} be somewhere."
+                    ay "Somewhere that holds some sort of sentimental value to Sayori."
+                    ay "That's the next piece of this puzzle."
+                    ay "So think, [player]. And quickly."
+                    mc "There's only a couple of places I can think of off the top of my head."
+                    ay "Name one of them. The one that resonates with you the most right now."
+                    ay "In this very instant."
+                    "Of the places that are floating around in my head..."
+                    "One of them seems to be the most clear for some reason."
+                    mc "The park."
+                    mc "We have to go to the park."
+                    ay "Then lead the way."
+                    ay "I don't know what park you could possibly be talking about."
+                    ay "There are several scattered throughout the city."
+                    ay "You must have a specific one in mind, right?"
+                    mc "Yeah..."
                 "The club.":
                     mc "The most likely place for her to be is at the club."
                     mc "If I know her, she's going to want to be at the most obvious spot to find."
@@ -15848,6 +15879,152 @@ label ch16_end:
                     ay "This world has been created by Sayori."
                     ay "She's the one that dictates what does or does not exist."
                     ay "Now come on, let's look for Natsuki."
+                    mc "Where should we start?"
+                    ay "I suggest that we split up."
+                    mc "Wait a second, didn't you say it was a bad idea to split up?"
+                    ay "That was only if we weren't in close proximity with each other."
+                    ay "The school is small enough for that to pose no threat."
+                    ay "I'll get started searching the east side of the school."
+                    mc "So I guess I'll take the west."
+                    ay "I'm glad you know your cardinal directions."
+                    ay "When you find her, make sure to contact me via our link."
+                    ay "I'll do the same, got it?"
+                    mc "Yeah, I got it."
+                    ay "Great. Now, let's get moving."
+                    show ayame at thide
+                    hide ayame
+                    "Ayame quickly runs towards the east side of the school."
+                    "The east side of the school doesn't contain many places that Natsuki would go to."
+                    "The library, the gym..."
+                    if ch13_name == "Natsuki":
+                        "...and the place Natsuki took me to that time."
+                    "There's not exactly a high chance Natsuki would be at those places."
+                    "On the other hand, the west side doesn't have a lot of places either."
+                    "It's the more modern area of the school, or at least it looks that way."
+                    "The main place I think she could be on this side would be..."
+                    "The club."
+                    show screen tear(20, 0.1, 0.1, 0, 40)
+                    window hide(None)
+                    $ pause(0.25)
+                    stop sound
+                    scene bg corridor
+                    hide screen tear
+                    window show(None)
+                    "Thinking about going there instantly brings me to the corridor outside the Literature Club."
+                    window auto
+                    "Ayame was right. It seems that thinking about the club brought me to the corridor just outside of it."
+                    "What a useful trick to have."
+                    "Everything appears to be normal, which is probably a good sign."
+                    "But the whole place is still completely deserted."
+                    "This kinda makes me think that only Ayame and I made it."
+                    "It's probably a good idea to check the club itself."
+                    "I gently open the door to the club."
+                    scene bg club_day with wipeleft_scene
+                    "The room seems to be empty."
+                    "All the desks are perfectly arranged, as if there hasn't been any activity in weeks."
+                    "It looks like there is dust collecting on all the chairs and desks too."
+                    "But I know for sure this is the club room."
+                    "And we used it just earlier today..."
+                    "I can't worry about that now."
+                    mc "Natsuki? It's me, [player]."
+                    mc "Please tell me you're in here."
+                    mc "It would be a good time to come out right about now."
+                    "I slowly walk around the room, making sure to look for any clues as to where she could be."
+                    "But it seems there's no sign of her."
+                    "Where could she be?"
+                    "If not the club, then where?"
+                    "Maybe Ayame has found her already..."
+                    "But she would have contacted me if she had."
+                    "Don't tell me I chose the wrong place."
+                    "I have to keep looking."
+                    "I have to keep looking."
+                    mc "Where are you?!"
+                    show natsuki 1a zorder 2 at t11
+                    n "Where is who?"
+                    "Natsuki stands at the entrance of the club, holding some kind of bowl on one of her hands."
+                    "She takes a spoon and scoops up something from the bowl into her mouth."
+                    mc "Natsuki?! But..."
+                    mc "Did you take that from the canteen?"
+                    n "W-What? It's your fault that I'm hungry."
+                    n "I didn't have anything better to do while waiting for you, you know."
+                    mc "How long have you been here?"
+                    n "Here?"
+                    "Natsuki steps into the room and puts the bowl aside"
+                    "She taps her finger on a desk and looks as if she's thinking hard."
+                    n "I can't really tell how long it's been."
+                    n "It feels like this place is all kinds of messed up."
+                    n "But it's felt like it's been hours."
+                    mc "Hours? For me it's only felt like a couple of minutes."
+                    mc "I don't know about Ayame."
+                    n "Ayame? She's here too?"
+                    mc "Yeah--"
+                    n "You already found each other?"
+                    n "What the hell, [player]?"
+                    n "I can't believe you didn't look for me first."
+                    mc "I didn't exactly have a choice."
+                    n "Where is she? She has some explaining to do."
+                    mc "I'll tell her to come over here."
+                    "My Voice" "\"I've found Natsuki, Ayame.\""
+                    "My Voice" "\"We're at the club.\""
+                    "Ayame's Voice" "\"Of course she would be. I'll be there in just a moment.\""
+                    "Ayame's Voice" "\"Is she okay?\""
+                    "I look at Natsuki, who's taking another serving of whatever is in that bowl."
+                    "My Voice" "\"Yeah, I think she's just fine.\""
+                    ay "That's good to hear."
+                    show ayame 1a zorder 2 at t33
+                    "Ayame suddenly appears right beside Natsuki."
+                    "She must have used that trick she talked about to get here quickly."
+                    show natsuki 1a zorder 3 at hf32
+                    n "Ah! What the hell?"
+                    n "When did you get here?!"
+                    show natsuki zorder 2 at t32
+                    show ayame 1a zorder 3 at f33
+                    ay "There's no time to explain, Natsuki."
+                    ay "We've found you, and we need to move to that next stage immediately."
+                    show natsuki zorder 3 at f32
+                    show ayame zorder 2 at t33
+                    n "Next...stage? What's going to be happening now?"
+                    show natsuki zorder 2 at t32
+                    show ayame zorder 3 at f33
+                    ay "We have to figure out the next place we're going."
+                    ay "The next little dimension we have to traverse through."
+                    show natsuki zorder 3 at f32
+                    show ayame zorder 2 at t33
+                    n "Hold on a second!"
+                    n "We only just got reunited and you want us to have to split up again?"
+                    n "Can you at least tell me why the world is like this?"
+                    n "Why is whole place messed up?!"
+                    show natsuki zorder 2 at t32
+                    show ayame zorder 3 at f33
+                    ay "I already told you it was because of Sayori."
+                    ay "She created these worlds for us, as a layer of protection for her."
+                    ay "We have to get through them all if we're to stop her."
+                    ay "Explaining any more would complicate things unnecessarily."
+                    ay "So we have to go on."
+                    show natsuki zorder 3 at f32
+                    show ayame zorder 2 at t33
+                    n "You trust her, don't you?"
+                    show natsuki zorder 2 at t32
+                    "Natsuki turns to me and stares expectantly."
+                    mc "It's complicated."
+                    show natsuki zorder 3 at f32
+                    n "Just say whether you trust her or not, [player]."
+                    n "After all, you're the one who dragged me into this."
+                    menu:
+                        n "I'll follow along with what you have to say."
+                        "Trust Ayame.":
+                            show natsuki zorder 2 at t32
+                            mc "I trust Ayame."
+                            mc "There's no reason not to."
+                            mc "It's not like she's lied to us so far, right?"
+                            "I notice Ayame turn her head away and avoid eye contact."
+                        "Indifferent.":
+                            show natsuki zorder 2 at t32
+                            # $ ch16_ay_level -= 1
+                            mc "We don't exactly have much of a choice, do we?"
+                            mc "What other option do we have, now that we made it this far?"
+                    show natsuki zorder 3 at f32
+                    n "I guess you're right."
         elif ch16_ay_companions == 3:
             mc "Yuri could probably figure it out as well."
             ay "It's possible..."
