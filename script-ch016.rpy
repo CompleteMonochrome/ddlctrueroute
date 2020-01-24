@@ -16183,7 +16183,7 @@ label ch16_end:
                     mc "It's this{fast} way...?"
                     window auto
                     "Barely taking a step forward, I somehow end up right in front of my house."
-                    "Ayame looks around then smiles before letting go my my hand."
+                    "Ayame looks around then smiles before letting go my hand."
                     "She looks pleased with herself for some reason."
                     ay "I knew you would do it."
                     ay "That's good though, may as well get used to it for a while."
@@ -16236,7 +16236,160 @@ label ch16_end:
                     "There was this very faint whisper as I was walking up the stairs to my room."
                     "I didn't notice it at first but the closer I got to my room, the more distinct it became."
                     "It just sounds like random mumbling, I can't quite make out what it's saying."
-                    "As I finally get into my bedroom,"
+                    "As I get into my bedroom, the whispering becomes slightly more clear."
+                    "I still can't make it what it's saying but I can determine there's definitely two voices."
+                    "They're speaking at the same time, so it's hard to determine if there's only two."
+                    "But from what I can tell, one of them is a soft whisper, speaking in a slow, almost timid tone."
+                    "The other seems more serious. It seems angry or upset. It's speaking much faster."
+                    "What the hell is going on?"
+                    mc "Yuri?"
+                    "I try to call out for Yuri, but I can't even hear my own voice."
+                    "The whispers are getting too loud."
+                    "I wonder, is this just my imagination?"
+                    "I can't seem to figure out where the hell it's coming from."
+                    "It's like it's changing directions every time I take a step."
+                    "One moment the whispers are coming from behind me, the next they're coming from in front of me."
+                    mc "Yuri? Are you in here?"
+                    "Once again, I can't seem to make a sound."
+                    "If Yuri was in here, she wouldn't be able to hear me."
+                    "I take a deep breath and scream as loud as I can."
+                    mc "YURIIIIIIIIIIIIIIIIIIII!"
+                    "The voices stop."
+                    "There's a moment of calm as a figure slowly makes it's way from underneath my bed."
+                    "As it stands up, I breath a sigh of relief."
+                    show yuri 1a zorder 2 at t11
+                    y "[player]...I..."
+                    mc "It's okay, I'm here."
+                    y "I didn't know what to do...I..."
+                    "Yuri takes a step forward and begins falling to the ground."
+                    "I react quickly and catch her in my arms."
+                    y "The voice are so loud, [player]."
+                    y "They won't stop. T-They're taunting me..."
+                    mc "You can still hear them?"
+                    y "They're still going...make it stop...!"
+                    mc "Let's get out of here."
+                    "My Voice" "\"Ayame I found her. She's--\""
+                    show yuri 1a zorder 2 at t21
+                    show ayame 1a zorder 2 at f22
+                    ay "I'm here."
+                    "Ayame looks at the position Yuri and I are in and grins."
+                    ay "I hope I'm not interrupting anything."
+                    show ayame 1a zorder 2 at t22
+                    mc "She just ended up like this."
+                    show ayame 1a zorder 2 at f22
+                    ay "If you say so. Quickly, let's--"
+                    ay "Agh!"
+                    "Ayame grabs her head in pain."
+                    ay "What is that sound?"
+                    ay "Can you hear that?"
+                    show ayame zorder 2 at t22
+                    mc "You're hearing them too?"
+                    "The voices are slowly coming back."
+                    "I can't tell but they seem to be saying the same sort of thing again."
+                    show ayame zorder 3 at f22
+                    ay "They're {i}deafening{/i}. I can't stand it."
+                    ay "Grab my hand."
+                    show ayame zorder 2 at t22
+                    mc "What?"
+                    show ayame zorder 3 at f22
+                    ay "Do it!"
+                    show ayame zorder 2 at t22
+                    "Ayame forcibly grabs my hand."
+                    "She drags me forward, Yuri in tow and{nw}"
+                    $ _history_list.pop()
+                    show screen tear(20, 0.1, 0.1, 0, 40)
+                    window hide(None)
+                    play sound "sfx/s_kill_glitch1.ogg"
+                    $ pause(0.25)
+                    stop sound
+                    scene bg house
+                    show yuri 1a zorder 2 at s21
+                    show ayame 1a zorder 2 at t22
+                    hide screen tear
+                    window show(None)
+                    "She drags me forward, Yuri in tow and{fast} we make it outside."
+                    window auto
+                    "The voices come to a halt, at least for now."
+                    "Ayame begins hyperventilating."
+                    show ayame zorder 3 at f22
+                    ay "It's over...it's...over."
+                    show ayame zorder 2 at t22
+                    "Yuri looks around before silently falling to the ground."
+                    mc "What is going on with the two of you?"
+                    mc "The voices were loud but they weren't that bad, were they?"
+                    "Ayame manages to finally catch her breath and stares at me."
+                    "The look on her eyes were of pure shock."
+                    show ayame zorder 3 at f22
+                    ay "Do you remember what I said?"
+                    ay "About this place being set up so that it could psychologically torture us?"
+                    ay "The voice I heard...it was tormenting me."
+                    ay "It was making me doubt what I was doing, who I was."
+                    ay "That voice that I thought I would never hear again."
+                    ay "Her voice..."
+                    show ayame zorder 2 at t22
+                    mc "Her voice? Weren't there multiple voices?"
+                    mc "I was hearing at least two."
+                    mc "One sounded like a girl's voice, and the other was..."
+                    mc "Well, it sounded like a guy around my age."
+                    show ayame zorder 3 at f22
+                    ay "You heard more than one voice?"
+                    "Ayame looks at Yuri intently."
+                    ay "Yuri...I know this isn't the best time."
+                    ay "But what voice did you hear?"
+                    "Yuri briefly looks up at Ayame, before quietly staring at the ground again."
+                    "Did it really affect her that badly?"
+                    "Then again...she was exposed to it for much longer than me or Ayame."
+                    "And Ayame was only there for a couple of seconds...I can't imagine what she must have gone through."
+                    ay "I'm sorry. I know how distressing it was."
+                    ay "I'll change the topic..."
+                    ay "Just know that we'll have to move soon."
+                    "Ayame turns towards me."
+                    ay "It looks like your hunch was right."
+                    ay "But we're not out of the woods yet."
+                    show ayame zorder 2 at t22
+                    mc "What's next?"
+                    show ayame zorder 3 at f22
+                    ay "We have to find the next point to get to the next world."
+                    ay "There's no time to waste."
+                    ay "So once again, it's up to you."
+                    show ayame zorder 2 at t22
+                    mc "What am I meant to do?"
+                    mc "I don't know the first place the next point could be."
+                    show ayame zorder 3 at f22
+                    ay "You have to think, [player]."
+                    ay "Think!"
+                    ay "If you were Sayori, where would you go?"
+                    show ayame zorder 2 at t22
+                    mc "I'm not Sayori."
+                    mc "But there is one place that's been ringing at the back of my head."
+                    mc "Ever since we got here."
+                    show ayame zorder 3 at f22
+                    ay "Where would that be?"
+                    show ayame zorder 2 at t22
+                    mc "There's this park..."
+                    mc "Sayori and I used to go there a lot when we were younger."
+                    show ayame zorder 3 at f22
+                    ay "Of course, a place with sentimental value."
+                    ay "I don't know how I didn't figure that out sooner."
+                    ay "Then let's go there, lead the way."
+                    show ayame zorder 2 at t22
+                    mc "Aren't you forgetting something?"
+                    "I nudge my head towards Yuri, who is still speechless on the ground."
+                    "She looks so defeated. It hurts to see her like this."
+                    show ayame zorder 3 at f22
+                    ay "You're the only one that can snap her out of it."
+                    show ayame zorder 2 at t22
+                    mc "Me? What am I supposed to do?"
+                    show ayame zorder 3 at f22
+                    ay "Are you kidding? Out of everyone, you're the closest person to Yuri."
+                    ay "At times like this, you're the only one who can help her."
+                    ay "I know you can do it."
+                    show ayame zorder 2 at t22
+                    "Ayame smiles reassuringly."
+                    "She believes I can snap Yuri out of this."
+                    "But I don't even know what 'this' is."
+                    mc "Yuri..."
+
                 "The mall.":
         elif ch16_ay_companions == 4:
             mc "Natsuki and Yuri are bound to figure it out too, right?"
