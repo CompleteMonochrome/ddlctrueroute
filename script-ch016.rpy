@@ -16612,6 +16612,66 @@ label ch16_end:
             mc "Fine, I'll play along."
             mc "Where are we going?"
             ay "My house."
+            mc "What's at your house that we have to go there?"
+            ay "You have to see it for yourself."
+            ay "The fact that it even exists is crazy to me."
+            mc "Why?"
+            ay "Because it means that Sayori has been to my house."
+            ay "Inside it, and scoured around the place."
+            ay "I don't know if it was intentional that she put it there."
+            mc "Put what where? You're being incredibly vague."
+            ay "You have to see it with your own eyes."
+            ay "Grab onto my hand."
+            "Ayame reaches out and offers me her hand."
+            "She looks at me with a serious look on her face."
+            "She must have something planned."
+            mc "Alright..."
+            "I extend out my hand and connect it with hers."
+            "Immediately she pulls me forward and{nw}"
+            $ _history_list.pop()
+            show screen tear(20, 0.1, 0.1, 0, 40)
+            window hide(None)
+            play sound "sfx/s_kill_glitch1.ogg"
+            $ pause(0.25)
+            stop sound
+            scene bg ay_house
+            show ayame 1a zorder 2 at t11
+            hide screen tear
+            window show(None)
+            "Immediately she pulls me forward and{fast} we quickly appear outside a large house."
+            window auto
+            "How did we get here?"
+            "Wait a second...is this Ayame's house?"
+            "I guess she does have a wealthy family, I shouldn't be surprised."
+            "But how did we get to her house soon? Does she live nearby?"
+            "Even if she did, it makes no sense to just suddenly be here..."
+            ay "You have questions, I don't have the time to answer."
+            ay "I will just say that this world has a few 'shortcuts'."
+            ay "Now come on, follow me."
+            scene bg ay_livingroom
+            show ayame 1a zorder 2 at t11
+            with wipeleft_scene
+            "Ayame takes us through her house."
+            "For some reason, it seems a lot bigger on the inside than out."
+            "We get to what I can only assume is her living room before she stops and holds a hand out her ear."
+            mc "What now?"
+            ay "You don't hear that?"
+            mc "Hear...what?"
+            ay "The whispering. Listen closely."
+            "Silence fills the room as I try to hear these whispers Ayame is talking about."
+            "I'm hearing something, but it doesn't sound like a whisper."
+            "It sounds like...some kind of instrument playing."
+            "I can't tell what it is."
+            mc "I hear some kind of instrument playing."
+            mc "Not a whisper."
+            ay "Instruments? I knew they would be different sounds to everyone but..."
+            ay "Alright. Then I need you to see something."
+            mc "What is..."
+            "Before I can ask her what she wants me to see, Ayame begins moving the couch across the floor."
+            "It was hard to tell before but looking at it directly, it seems there's some writing on the floor written in dark ink."
+            "It camouflages almost perfectly with the carpet."
+            mc "...this?"
+            ay "Something terrible. Go on, read it."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
