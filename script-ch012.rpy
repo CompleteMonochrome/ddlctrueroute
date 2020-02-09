@@ -1323,11 +1323,10 @@ label ch12_play:
     mc "I'll follow your lead, Saika."
     "And besides..."
     "I can't really say no to Sayori when she's being so cute..."
-    show sayori 4r zorder 2 at h11
+    scene s_cg5_base with dissolve_cg
     s "Yaaaaaaaay--"
-    s 2l "I mean, good! Let's take them out."
-    show sayori at thide
-    hide sayori
+    show s_cg5_exp1 at cgfade
+    s "I mean, good! Let's take them out."
     "Sayori continues running around the gym with her arms stretched out."
     "I do the same."
     "I'm getting this really strange feeling inside me."
@@ -1336,15 +1335,16 @@ label ch12_play:
     "I feel like the other three are judging the two of us right now..."
     "But honestly..."
     "This feeling that I have is making it seem like I could care less."
-    show sayori 1d zorder 2 at t11
+    show s_cg5_exp2 at cgfade
+    hide s_cg5_exp1
     s "Try to use your power Maemi, I'll do the same."
     "Their power is some sort of time manipulation ability."
     "In the manga, it stops time and allows them to finish off the thugs pretty quickly."
     "However, during the scene, only Saika can activate the ability properly."
     mc "It's not working!"
-    s 2e "Then...just try to keep up."
+    hide s_cg5_exp2
+    s "Then...just try to keep up."
     "We start running around the gym without a care in the world."
-    show sayori 4q
     "I can't help but feel like I'm actually having fun..."
     "This goes on for a couple of minutes until Sayori finally decides to calm down."
     s "Ehehe, that was fun."

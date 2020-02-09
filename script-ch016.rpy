@@ -16735,6 +16735,10 @@ label ch16_end:
             ay "If they don't pass their test, then that's unfortunate for them."
             mc "And also for us. I think you're forgetting why we brought them along in the first place."
             mc "It wasn't to test them, it was to help with Sayori."
+            ay "I know that, [player]."
+            ay "But if the two of them aren't compatible, then they'll only be a liability when it comes to Sayori."
+            ay "You have to trust me on this."
+            ay "And you have to trust in them."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
