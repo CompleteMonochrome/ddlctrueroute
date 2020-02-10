@@ -16739,6 +16739,81 @@ label ch16_end:
             ay "But if the two of them aren't compatible, then they'll only be a liability when it comes to Sayori."
             ay "You have to trust me on this."
             ay "And you have to trust in them."
+            mc "I just feel so restless."
+            mc "I got them into this mess and I'm doing nothing to help."
+            mc "They trusted me to do the right thing and instead I'm doing nothing."
+            mc "Don't you understand how that feels?"
+            ay "I do."
+            "Ayame looks away and stares into the distance."
+            ay "Believe me, I do."
+            "I wonder just what Ayame did before all of this."
+            "Clearly there's more to it than what she's letting on."
+            n "They're going to be over here."
+            mc "Was that...?"
+            show natsuki 1a zorder 3 at f31
+            n "See? There they are!"
+            "From the corner of the street, I can see Natsuki."
+            "And right next to her is..."
+            show natsuki zorder 2 at t31
+            show yuri 1a zorder 3 at f32
+            show ayame zorder 2 at t33
+            y "How did we even end up over here?"
+            y "This makes no sense..."
+            show yuri zorder 2 at t32
+            mc "Yuri...Natsuki...you're--"
+            show natsuki zorder 3 at f31
+            n "Yeah, we're fine."
+            n "What? Did you expect us to get lost or something?"
+            show natsuki zorder 2 at t31
+            show ayame zorder 3 at f33
+            ay "[player] totally did."
+            ay "But I knew you two would find us."
+            show yuri zorder 3 at f32
+            show ayame zorder 2 at t33
+            y "With two heads, we were able to figure out things pretty quickly."
+            y "Surprisingly, because we had different thought processes, we were able to discern things more easily."
+            y "With Natsuki's shocked outbursts and my analytical skills, we figured out that this place we're in isn't the same as where we were."
+            y "It's like some kind of twisted, horrible place. Like something out of a horror book."
+            show natsuki zorder 3 at f31
+            show yuri zorder 2 at t32
+            n "But I guess it isn't all bad since the two of you are here."
+            show natsuki zorder 2 at t31
+            mc "How did you even find us?"
+            show yuri zorder 3 at f32
+            y "T-That's...um...."
+            show natsuki zorder 3 at f31
+            show yuri zorder 2 at t32
+            n "I figured you two would have found each other and would have stayed in one spot."
+            n "There were only a few options that we had to go through."
+            show natsuki zorder 2 at t31
+            show yuri zorder 3 at f32
+            y "It was either [player]'s house, the school itself, which we already searched..."
+            show natsuki zorder 3 at f31
+            show yuri zorder 2 at t32
+            n "Or Ayame's house, which neither of us knew how to get to."
+            n "So we went through the records at school."
+            show natsuki zorder 2 at t31
+            show yuri zorder 3 at f32
+            y "F-For the record, I was against it from the beginning."
+            show natsuki zorder 3 at f31
+            show yuri zorder 3 at t32
+            n "Come on, as soon as we got there you were all over it."
+            n "Anyway, once we found Ayame's record we just thought about the directions and suddenly..."
+            n "We ended up a few streets away from here."
+            show natsuki zorder 2 at t31
+            show ayame zorder 3 at f33
+            ay "I'm glad you two were able to work so well together."
+            show natsuki zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "Don't thank us yet. We have no idea what to do from here."
+            n "I was hoping one of you know what to do now."
+            n "Because we might know how to get around here, but we have no idea what to do next."
+            show natsuki zorder 2 at t31
+            show ayame zorder 3 at f33
+            ay "I don't know exactly where we have to go next."
+            ay "But luckily for us, [player] does."
+            show ayame zorder 2 at t33
+            mc "I do?"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return

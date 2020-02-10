@@ -1327,6 +1327,7 @@ label ch12_play:
     s "Yaaaaaaaay--"
     show s_cg5_exp1 at cgfade
     s "I mean, good! Let's take them out."
+    hide s_cg5_exp1
     "Sayori continues running around the gym with her arms stretched out."
     "I do the same."
     "I'm getting this really strange feeling inside me."
@@ -1336,7 +1337,6 @@ label ch12_play:
     "But honestly..."
     "This feeling that I have is making it seem like I could care less."
     show s_cg5_exp2 at cgfade
-    hide s_cg5_exp1
     s "Try to use your power Maemi, I'll do the same."
     "Their power is some sort of time manipulation ability."
     "In the manga, it stops time and allows them to finish off the thugs pretty quickly."
