@@ -12397,45 +12397,45 @@ label ch16_end:
     "Natsuki looks like she's secretly enjoying herself."
     "Yuri has this really huge grin on her face."
     "And Monika is just smiling, as she usually does."
-    show yuri 1a zorder 3 at f51
+    show yuri 1g zorder 3 at f51
     y "Can you believe this?"
-    y "There's so many people out there! I wasn't expecting such a large audience."
+    y 1f "There's so many people out there! I wasn't expecting such a large audience."
     show yuri zorder 2 at t51
-    show natsuki 1a zorder 3 at f52
+    show natsuki 2c zorder 3 at f52
     n "I know, right? It's kind of scary actually."
-    n "I'm surprised I haven't messed up already."
-    show yuri zorder 3 at f51
+    n 2q "I'm surprised I haven't messed up already."
+    show yuri 1q zorder 3 at f51
     show natsuki zorder 2 at t52
     y "They all seem so eager for the next act..."
-    y "I hope we can continue to deliver a performance they'll actually enjoy."
+    y 1c "I hope we can continue to deliver a performance they'll actually enjoy."
     show yuri zorder 2 at t51
-    show sayori 1a zorder 3 at f53
+    show sayori 4q zorder 3 at f53
     s "It won't be a problem, Yuri! We've got this!"
     "Sayori beams."
-    s "I'm glad everyone is enjoying themselves."
+    s 4r "I'm glad everyone is enjoying themselves."
     s "It's good to see everyone having so much fun."
     show sayori zorder 2 at t53
-    show monika 1a zorder 3 at f54
+    show monika 3b zorder 3 at f54
     m "I'm kinda wondering how so many people ended up watching us."
     m "It's not like we're the main event or anything."
-    m "I'm sure there are other clubs with something more spectacular to show than a play rehearsed just a short while ago."
-    show sayori zorder 3 at f53
+    m 3a "I'm sure there are other clubs with something more spectacular to show than a play rehearsed just a short while ago."
+    show sayori 4a zorder 3 at f53
     show monika zorder 2 at t54
     s "Maybe they're all just so amazed that the stage is being used at all on a day like this."
     s "Even though we're pretty much isolated from the rest of the clubs, the stage is still the thing that stands out the most."
-    s "It kinda makes sense that people would be coming to see what's happening, wouldn't it?"
+    s 4d "It kinda makes sense that people would be coming to see what's happening, wouldn't it?"
     show sayori zorder 2 at t53
-    show monika zorder 3 at f54
+    show monika 1c zorder 3 at f54
     m "That makes sense...still, I can't help but feel there might be another reason."
-    m "Maybe--"
+    m 1e "Maybe--"
     show monika zorder 2 at t54
-    show ayame 1a zorder 3 at f55
+    show ayame 2e zorder 3 at f55
     ay "That was incredible! I'm so happy for all of you!"
     "Ayame appears from behind us, somehow without making a sound."
     "It's like she was just suddenly there or something..."
-    ay "I can't believe you all managed to perform so well!"
-    ay "Hehe, it's almost like you've all been programmed to act this way."
-    show sayori zorder 3 at f53
+    ay 2h "I can't believe you all managed to perform so well!"
+    ay 2d "Hehe, it's almost like you've all been programmed to act this way."
+    show sayori 4l zorder 3 at f53
     show ayame zorder 2 at t55
     s "P-Programmed? What do you mean?"
     s "I don't think you know what you're talking about."
@@ -12452,130 +12452,130 @@ label ch16_end:
             "Completely right.":
                 $ ch16_ay_decision_count -= 1
                 "Ayame shivers for a brief moment before staring directly at Sayori."
-                show ayame zorder 3 at f55
+                show ayame 1l zorder 3 at f55
                 ay "Perhaps you have something to share, Sayori?"
-                ay "You seem to be quite the control freak, you know?"
+                ay 1f "You seem to be quite the control freak, you know?"
                 ay "Always have to make sure you get your way."
                 ay "You may have the rest of them fooled, but not me."
-                ay "Not anymore."
+                ay 1a "Not anymore."
                 ay "Both you and I know these tricks, don't we?"
-                ay "So why don't you just say you changed them?"
+                ay 1f "So why don't you just say you changed them?"
                 ay "Or is that something you're not willing to admit?"
-                show ayame zorder 2 at t55
+                show ayame 2g zorder 2 at t55
                 "As Ayame says those words, she immediately covers her mouth."
                 "As if she didn't really mean to say them."
                 "Did I do that...somehow?"
-                show sayori zorder 3 at f53
+                show sayori 1h zorder 3 at f53
                 s "W-What are you saying?"
                 "Sayori looks like she's struggling to stay calm."
                 "We may have made a mistake..."
                 show sayori zorder 2 at t53
-                show ayame zorder 3 at f55
+                show ayame 2n zorder 3 at f55
                 ay "I don't...I didn't..."
                 ay "I-I..."
-                show monika zorder 3 at f54
+                show monika 1n zorder 3 at f54
                 show ayame zorder 2 at t55
                 m "Well, okay then! I don't know what that was."
                 m "But clearly, we started off this conversation on the wrong foot."
-                m "So, Ayame, what exactly are you doing here?"
+                m 1l "So, Ayame, what exactly are you doing here?"
                 show monika zorder 2 at t54
             "Completely wrong.":
                 $ ch16_ay_decision_count -= 1
                 "Ayame twitches, as if a cold shiver was sent down her spine."
                 "She begins to stare directly at Sayori."
-                show ayame zorder 3 at f55
+                show ayame 2l zorder 3 at f55
                 ay "Oh! Of course..."
                 ay "I didn't mean what I said, it was just a metaphor."
-                ay "Because you guys are doing so great, I mean."
+                ay 2j "Because you guys are doing so great, I mean."
                 ay "I'm obviously completely wrong, don't mind me."
                 show sayori zorder 3 at f53
                 show ayame zorder 2 at t55
             "...I have no idea.":
-                show ayame zorder 3 at f55
+                show ayame 2d zorder 3 at f55
                 ay "I'm kidding! That would be impossible."
-                ay "Or at least, with the technology we have right now."
+                ay 2i "Or at least, with the technology we have right now."
                 ay "Unless those spy agencies have some kind of super high tech stuff that can do that."
-                show natsuki zorder 3 at f51
+                show natsuki 4g zorder 3 at f51
                 show ayame zorder 2 at t55
                 n "What...?"
                 show natsuki zorder 2 at t51
-                show ayame zorder 3 at f55
+                show ayame 2e zorder 3 at f55
                 ay "Aha, don't mind me. I'm just fantasizing."
                 ay "I must say, what you've all done so far was incredible."
     else:
-        s "Everyone is just super talented, that's all!"
+        s 2d "Everyone is just super talented, that's all!"
         show sayori zorder 2 at t53
-        show ayame zorder 3 at f55
+        show ayame 2h zorder 3 at f55
         ay "I know, I know! I'm only kidding, of course."
         ay "That would be kinda weird if you could just mold a person into that."
         ay "You'd have to fundamentally change them, or parts about them."
-        ay "At which point, they're not really the same person, are they?"
+        ay 2m "At which point, they're not really the same person, are they?"
         ay "At least, not really. They wouldn't have done that if they weren't changed."
-        show monika zorder 3 at f54
+        show monika 3c zorder 3 at f54
         show ayame zorder 2 at t55
         m "...Are you going somewhere with this, Ayame?"
         m "As you can see, we're still a little busy."
         show monika zorder 2 at t54
-        show ayame zorder 3 at f55
+        show ayame 1d zorder 3 at f55
         ay "My apologies! I didn't mean to interrupt."
-    ay "I just wanted to congratulate you all on an excellent first act."
+    ay 1j "I just wanted to congratulate you all on an excellent first act."
     ay "I actually told people to come watch your play from around the school."
-    ay "Which is why there might be a lot more people around than you expected."
-    show natsuki zorder 3 at f52
+    ay 2k "Which is why there might be a lot more people around than you expected."
+    show natsuki 2c zorder 3 at f52
     show ayame zorder 2 at t55
     n "What? Are you saying you told them to come here and they just did it?"
-    n "Why would they do that?"
+    n 2g "Why would they do that?"
     show natsuki zorder 2 at t52
-    show ayame zorder 3 at f55
+    show ayame 1m zorder 3 at f55
     ay "I don't know, maybe they were already going to go."
-    ay "Or maybe because I'm an important person or something."
-    ay "Whatever the case, it doesn't really matter."
+    ay 1l "Or maybe because I'm an important person or something."
+    ay 1j "Whatever the case, it doesn't really matter."
     ay "What I wanted to do was wish you all luck in your next act."
-    ay "I brought you all something to drink."
+    ay 1h "I brought you all something to drink."
     "Ayame opens her bag and pulls out some drinks with straws already attached on them."
     "The cup is wrapped completely in plastic, so I have no idea what it could be."
     "She offers one to me first."
-    ay "Well? You do know how to drink, right?"
+    ay 1h "Well? You do know how to drink, right?"
     show ayame zorder 2 at t55
     mc "I do, it's just...I don't know what that is."
     mc "Not that I don't appreciate you coming over here for this."
-    show ayame zorder 3 at f55
+    show ayame 1j zorder 3 at f55
     ay "It's something one of the clubs made. They told me to give it to you for a job well done."
     ay "You aren't just gonna reject it, are you?"
-    show natsuki zorder 3 at f51
+    show natsuki 1b zorder 3 at f51
     show ayame zorder 2 at t55
     n "Jeez, if [player] isn't going to take it, then I will!"
-    n "This break isn't going to last forever and I plan to use the time we do have to get refreshed."
+    n 1a "This break isn't going to last forever and I plan to use the time we do have to get refreshed."
     "Natsuki takes the drink from Ayame's hands and begins sucking on the straw."
     "As she takes her first few sips, her face lights up."
-    n "This...is amazing! What is this stuff?"
+    n 1k "This...is amazing! What is this stuff?"
     show natsuki zorder 2 at t51
-    show ayame zorder 3 at f55
+    show ayame 1b zorder 3 at f55
     ay "That...was intended for [player]."
-    ay "It doesn't matter though, I'm glad you enjoyed it."
+    ay 1d "It doesn't matter though, I'm glad you enjoyed it."
     ay "As for what it is..."
-    ay "I have no clue! It could be anything."
+    ay 1e "I have no clue! It could be anything."
     ay "All I know is that it tastes like heaven."
-    ay "Care to try one, Yuri?"
+    ay 1h "Care to try one, Yuri?"
     "Ayame takes another one of the drinks from her bag and offers it to Yuri."
-    show yuri zorder 3 at f52
+    show yuri 2a zorder 3 at f52
     show ayame zorder 2 at t55
     y "Well...Natsuki seems to be enjoying it. I suppose there's no harm in trying."
     show yuri zorder 2 at t52
     "Yuri takes a sip as well, and soon after takes another and another."
     "She can't seem to stop, does it really taste that good?"
-    show ayame zorder 3 at f55
+    show ayame 2j zorder 3 at f55
     ay "And the three of you?"
-    show sayori zorder 3 at f53
+    show sayori 2a zorder 3 at f53
     show ayame zorder 2 at t55
     s "I'm alright. I had a big lunch, but thank you."
     "Sayori eyes the drink Ayame is holding and then looks away."
-    s "It was a good try though."
+    s 2q "It was a good try though."
     show sayori zorder 2 at t53
-    show ayame zorder 3 at f55
+    show ayame 2n zorder 3 at f55
     ay "A good try? I'm not sure I follow."
-    ay "I'm just the delivery girl."
-    show sayori zorder 3 at f53
+    ay 2h "I'm just the delivery girl."
+    show sayori 1d zorder 3 at f53
     show ayame zorder 2 at t55
     s "Can I have a moment?"
     "Ayame shrugs and nods."
@@ -12590,19 +12590,19 @@ label ch16_end:
     "Sayori takes me and Monika aside while Yuri and Natsuki talk to Ayame about the drinks."
     "I think I heard them say the reincarnation club made them..."
     "Since when do they do that kind of thing?"
-    show sayori zorder 3 at f21
+    show sayori 1h zorder 3 at f21
     s "Those aren't ordinary drinks."
     s "There's something strange about them, I can feel it."
     show sayori zorder 2 at t21
-    show monika zorder 3 at f22
+    show monika 1d zorder 3 at f22
     m "Now that you mention it, something does seem odd about this."
     m "Are they spiked with something?"
-    show sayori zorder 3 at f21
+    show sayori 1i zorder 3 at f21
     show monika zorder 2 at t22
     s "In a way. All I want to say is that you shouldn't drink that."
-    s "Especially you, Monika."
+    s 1h "Especially you, Monika."
     show sayori zorder 2 at t21
-    show monika zorder 3 at f22
+    show monika 1n zorder 3 at f22
     m "Especially me?"
     if monika_type == 0:
         m "I'll try to come up with a reason to decline then."
@@ -12613,67 +12613,68 @@ label ch16_end:
     else:
         m "I don't know why you're singling me out, but okay."
         m "I won't take one of those drinks."
-    show sayori zorder 3 at f21
+    show sayori 1d zorder 3 at f21
     show monika zorder 2 at t22
     s "And the same goes for you, [player]."
     s "I know that should be obvious too."
-    s "I can't really stop you, but you should know that Ayame doesn't have the best intentions in mind."
+    s 1f "I can't really stop you, but you should know that Ayame doesn't have the best intentions in mind."
     show sayori zorder 2 at t21
     mc "Not the best intentions?"
     mc "I'll keep that in mind..."
-    show sayori zorder 3 at f21
+    show sayori 1j zorder 3 at f21
     s "Just be careful, you two."
-    s "They've already drank some, so I can't help them now."
+    s 1f "They've already drank some, so I can't help them now."
     s "Now..."
     show sayori zorder 2 at t31
     show monika zorder 2 at t32
-    show ayame 1a zorder 3 at f33
+    show ayame 2h zorder 3 at f33
     ay "Are you three done over here?"
-    show sayori zorder 3 at f31
+    show sayori 3a zorder 3 at f31
     show ayame zorder 2 at t33
     s "We're done. We were just talking about the play."
     show sayori zorder 2 at t31
-    show ayame zorder 3 at f33
+    show ayame 2a zorder 3 at f33
     ay "Talking about the play without Natsuki and Yuri?"
     ay "Wouldn't they want to hear what you had to say too?"
-    show sayori zorder 3 at f31
+    show sayori 3l zorder 3 at f31
     show ayame zorder 2 at t33
     s "It...wasn't that important."
-    show sayori zorder 2 at t31
+    show sayori 2h zorder 2 at t31
     "Ayame gives Sayori a peculiar look then smiles."
     show ayame zorder 3 at f33
     ay "Well, I wouldn't know anything about it..."
     "She turns towards Monika and I."
-    ay "Anyway, would either of you like a drink?"
+    ay 2j "Anyway, would either of you like a drink?"
     ay "Sayori didn't seem interested but they're really quite good!"
     ay "Natsuki and Yuri seem to be enjoying them a lot."
-    ay "I promise, you won't regret it."
-    show monika zorder 3 at f32
+    ay 2k "I promise, you won't regret it."
+    show monika 2a zorder 3 at f32
     show ayame zorder 2 at t33
     m "Oh, no. Thank you, I've already had something to drink."
-    m "Drinking more now would make me lose concentration on this next act of the play."
+    m 2b "Drinking more now would make me lose concentration on this next act of the play."
     m "I'm sure you can understand."
     show monika zorder 2 at t32
-    show ayame zorder 3 at f33
+    show ayame 1n zorder 3 at f33
     ay "I...suppose that makes sense?"
     ay "You could have just said you didn't want one!"
-    ay "I wouldn't have taken offense to that or anything."
-    ay "After all, it's not like I'm forcing you to drink it."
+    ay 1m "I wouldn't have taken offense to that or anything."
+    ay 1a "After all, it's not like I'm forcing you to drink it."
     "Ayame looks at Monika and I carefully."
     ay "What's with you guys?"
     ay "You're both looking at me like I just murdered someone."
-    show monika zorder 3 at f32
+    ay 1n "...Did I murder someone I don't know about?"
+    show monika 2l zorder 3 at f32
     show ayame zorder 2 at t33
     m "W-What? No, it's nothing like that."
-    m "I doubt someone like you is capable of murdering anyone anyway."
+    m 2n "I doubt someone like you is capable of murdering anyone anyway."
     show monika zorder 2 at t32
-    show ayame zorder 3 at f33
-    ay "What's that meant to mean?"
-    show monika zorder 3 at f32
+    show ayame 2f zorder 3 at f33
+    ay "What's {i}that{/i} meant to mean?"
+    show monika 4o zorder 3 at f32
     show ayame zorder 2 at t33
     m "I just mean that--"
-    m "Ahaha, never mind. I should really get back to preparing for the next act."
-    m "Thank you for the offer, Ayame."
+    m 4m "Ahaha, never mind. I should really get back to preparing for the next act."
+    m 4e "Thank you for the offer, Ayame."
     "Monika turns towards Sayori and nods."
     m "I'll see you on the stage, Sayori."
     show sayori zorder 2 at t21
@@ -12682,10 +12683,10 @@ label ch16_end:
     hide monika
     "Monika quickly walks away from the scene."
     "That all seemed incredibly tense, for some reason..."
-    show sayori zorder 3 at f21
+    show sayori 1a zorder 3 at f21
     s "Well, I'll leave the two of you to it."
     s "I have to manage some people to make sure the next part all runs smoothly."
-    s "Don't take too long, [player]."
+    s 1d "Don't take too long, [player]."
     s "And remember what I said."
     show sayori zorder 2 at t21
     mc "S-Sayori, wait...!"
@@ -12694,16 +12695,16 @@ label ch16_end:
     hide sayori
     "Sayori's attention was taken by one of the students helping with the play."
     "I guess that is more important right now."
-    ay "Are you going to reject me as well, [player]?"
+    ay 2m "Are you going to reject me as well, [player]?"
     ay "Will you not try one of these drinks?"
-    ay "Something that I made specifically for the five of you?"
+    ay 2g "Something that I made specifically for the five of you?"
     $ _history_list[-1].what = "\"Something some clubs made for the five of you?\""
     mc "I thought you said one of the clubs made it."
-    ay "That's what I said, isn't it?"
+    ay 2n "That's what I said, isn't it?"
     ay "Look, don't worry about that."
-    ay "I really just want to offer you one of these."
+    ay 2m "I really just want to offer you one of these."
     ay "Don't tell me you're not thirsty after that."
-    ay "You had so much to say, your mouth has to be getting dry or something."
+    ay 2j "You had so much to say, your mouth has to be getting dry or something."
     mc "Now that you mention it..."
     mc "I could use a drink, but..."
     "Remember what Sayori said. Ayame doesn't have the best intentions in mind."
@@ -12713,33 +12714,33 @@ label ch16_end:
         "Though I guess you can never be too paranoid if I knew what she does."
     else:
         "I'm sure there's a good reason for it."
-    ay "But...? Come on, it's not like it's not gonna kill you."
+    ay 2h "But...? Come on, it's not like it's not gonna kill you."
     ay "Yuri and Natsuki have already tried it."
-    ay "They loved it!"
+    ay 2d "They loved it!"
     mc "They did?"
     ay "Yeah, you can ask them yourself if you like."
-    ay "In fact, they're still drinking them over there."
+    ay 2h "In fact, they're still drinking them over there."
     "Ayame points to Natsuki and Yuri who seem to be having the time of their life with this drink."
     "Could it really be that good...?"
-    ay "So..."
+    ay 1j "So..."
     "Ayame extends her hand, offering one of the drinks."
     menu:
         ay "Would you like one?"
         "Take the drink.":
-            # variable change here
+            $ ch16_ay_level += 2
             $ ch16_ay_drink = True
             "Maybe there is such a think as being overly paranoid."
             "It's just a drink, right?"
             "If Yuri and Natsuki have both had one already, surely something would have happened by now."
             "There's no harm in accepting Ayame's hospitality."
-            ay "You actually took it?"
+            ay 2i "You actually took it?"
             mc "You sound surprised."
-            ay "Well, I don't know what I expected."
+            ay 2j "Well, I don't know what I expected."
             ay "I guess that you would reject my offer or maybe come up with some sort of reason to."
             mc "Why would I do that?"
-            ay "Call it a hunch."
+            ay 2d "Call it a hunch."
             ay "Anyway, are you going to take this, or not?"
-            ay "It's getting warm, it might not taste as good if you wait too long."
+            ay 2h "It's getting warm, it might not taste as good if you wait too long."
             mc "Alright, here goes nothing..."
             "I take the drink from Ayame's hands."
             "It's surprisingly heavy, despite being in such a small container."
@@ -12749,63 +12750,64 @@ label ch16_end:
             "I can feel a tingling sensation on my hands as I hold it."
             "Or maybe that's just the coldness of the drink."
             "Suddenly, I'm having second thoughts about this after what Sayori said..."
-            ay "What's wrong?"
+            ay 2n "What's wrong?"
             mc "N-Nothing, it's just..."
-            ay "You're just staring at it. If you aren't going to drink it, then I will."
+            ay 2j "You're just staring at it. If you aren't going to drink it, then I will."
             mc "Is that some kind of reverse psychology?"
             mc "Fine, I'll drink it."
             "I stare at the drink once more."
             "It's quite mesmerizing really...as if I could lose myself in it."
             "I take a sip of the drink."
-            ay "Yes!"
+            ay 1e "Yes!"
+            show ayame at h11
             "Ayame squeals and begins jumping up and down excitedly."
             "Did she really want me to drink it that badly?"
             "Admittedly, the drink is actually pretty good."
             "But I wouldn't say it was {i}that{/i} good, at least not worth going crazy over."
-            ay "You actually drank it! I'm so happy!"
+            ay 1d "You actually drank it! I'm so happy!"
             mc "Why? It's not like I told you what I think of it yet."
             mc "Unless you're just happy I drank it..."
-            ay "You have no idea how hard it's been for me."
+            ay 1n "You have no idea how hard it's been for me."
             mc "Now I really have no idea what's going on."
             "I continue to sip on the drink."
             "My suspicions were correct, it is some sort of orange juice."
             "But it tastes like there's something else in there too, though I'm not sure what it is."
             "Whatever it is, the aftertaste of it is really strong."
-            ay "What do you think of it?"
+            ay 1j "What do you think of it?"
             ay "I had this one made especially for you."
             mc "Especially for me? That's...very kind of you."
             mc "But why me? You don't even know the sort of things I like."
             mc "For all you know, I could have been allergic to this."
-            ay "Oh, I know you're not, [player]."
+            ay 1h "Oh, I know you're not, [player]."
             mc "And what if I was?"
             ay "Then you'd be having a reaction and taken to the hospital, I assume."
             "She's right...but she didn't have to say that so bluntly."
             mc "Well, I meant--"
-            ay "What did you think of it anyway?"
+            ay 2j "What did you think of it anyway?"
             ay "Did it make you feel any different?"
             mc "I still feel like myself."
             mc "That aftertaste is really something though."
             mc "What's in this?"
-            ay "Hehe, spoilers..."
+            ay 2h "Hehe, spoilers..."
             ay "I mean that literally, by the way."
-            ay "The club I ordered these from sawed some spoilers off the cars in the school carpark and blended them into this drink."
+            ay "The...club I ordered these from sawed some spoilers off the cars in the school carpark and blended them into this drink."
             ay "That's what that metallic aftertaste is!"
             mc "W-What?!"
             "I almost spit out my drink."
-            ay "You actually believed that? Come on, that's way too farfetched."
+            ay 1e "You actually believed that? Come on, that's way too farfetched."
             ay "Honestly, I don't know what's in it."
-            ay "But judging by the way you reacted, I could say anything and you'd believe me."
+            ay 1j "But judging by the way you reacted, I could say anything and you'd believe me."
             ay "Like if I said it has some sort of mind controlling element in it that makes you obey me."
             ay "Would you believe me?"
             mc "...I don't--"
-            ay "Because it doesn't! But some people would think it does."
+            ay 1m "Because it doesn't! But some people would think it does."
             ay "I'm not saying any names but..."
             "Is she talking about Sayori?"
             "Sayori did seem like she wanted me to reject this drink so it only makes sense."
-            ay "In fact, it's kind of the opposite."
+            ay 1j "In fact, it's kind of the opposite."
             ay "But maybe I've said too much already."
             mc "Is that why you wanted me to drink that?"
-            ay "I'm not saying another word."
+            ay 1h "I'm not saying another word."
             ay "I do hope you enjoy the rest of that drink though."
             ay "Good luck to you, and to the others with the rest of the play."
             show ayame at thide
@@ -12824,9 +12826,9 @@ label ch16_end:
             "Still, it was very nice of Ayame to bring that to us."
             "Speaking of which..."
         "Get Ayame to test it first.":
-            # variable change here
+            $ ch16_ay_level += 1
             mc "Well, why don't you try it then?"
-            ay "Why don't I try it?"
+            ay 1n "Why don't I try it?"
             mc "Yeah, there's still three drinks left, right?"
             mc "Monika and Sayori didn't have one, and you were gonna give one to me."
             mc "So why don't you try it?"
@@ -12834,11 +12836,11 @@ label ch16_end:
             ay "It would be kind of bad to the clubs I got them from if I took a drink when it was meant for someone else."
             mc "Well, in that case, why don't you drink my one then?"
             mc "And I'll take Sayori's one."
-            ay "You really want me to do this, don't you?"
+            ay 2n "You really want me to do this, don't you?"
             ay "To prove it isn't poisoned or something."
             ay "You really think I would do that to you guys?"
             mc "No, of course not!"
-            ay "I would have thought we trusted each other."
+            ay 2g "I would have thought we trusted each other."
             mc "Then I guess you have nothing to be afraid of right?"
             ay "...R-Right..."
             "Ayame hesitantly brings the drink closer towards her."
@@ -12848,20 +12850,23 @@ label ch16_end:
                     "She decides that..."
                     "She will drink it whole.":
                         $ ch16_ay_decision_count -= 1
+                        $ ch16_ay_level -= 2
+                        if ch16_ay_level < 0:
+                            $ ch16_ay_level = 0
                         "Ayame looks at the drink and then at me."
                         "She seems like she's in shock...or something."
                         "There's just something incredibly unnatural about the way she's moving."
                         "She quickly takes the drink and consumes it all in a matter of seconds."
                         "She then puts it away and glares at me."
-                        ay "T-There..."
+                        ay 2a "T-There..."
                         "Ayame suddenly begins coughing violently."
                         mc "Are you okay? What's wrong?"
                         "Maybe Sayori was right about the drink."
-                        ay "I'm fine! It's just...not good."
+                        ay 1a "I'm fine! It's just...not good."
                         mc "The drink was bad?"
-                        ay "No, don't get me wrong the drink was amazing."
+                        ay 1b "No, don't get me wrong the drink was amazing."
                         ay "It's just that I drank all of it at the same time."
-                        ay "That's what tends to happen, you know."
+                        ay 1n "That's what tends to happen, you know."
                         ay "Sometimes you can choke, and that's what happened there."
                         mc "Ah, that makes sense."
                         ay "Well, I drank it all. I don't suppose you want some now?"
@@ -12870,45 +12875,46 @@ label ch16_end:
                         $ ch16_ay_decision_count -= 1
                         "Ayame looks at the drink and puts it away."
                         "She then looks at me and smiles as she drops it."
+                        "After that, she reaches for another drink and does the same thing."
                         "I look at her in surprise and it's not until a couple of seconds later she realizes what she's done."
-                        ay "What did I just...?"
+                        ay 1c "What did I just...?"
                         "The floor beneath us is wet with the drink she tried to offer."
-                        ay "Oh, I'm so stupid. Stupid, stupid, stupid."
+                        ay 1n "Oh, I'm so stupid. Stupid, stupid, stupid."
                         mc "Ayame, I--"
                         "I try to put my hand on her shoulder to comfort but she quickly swipes it away."
-                        ay "No, no, no...this is all wrong."
+                        ay 2n "No, no, no...this is all wrong."
                         ay "I can't deal with this right now."
                         mc "Are you okay?"
                         "Ayame looks at me with a wild look on her face."
                         ay "G-Get away from me."
+                        show ayame 2f at s11
                         "Ayame sinks to the floor and covers her face."
                         "What the hell did I do...?"
                     "She will do what she wants.":
-                        # variable change here
-                        ay "Ah, forget it. It's not worth the trouble."
+                        ay 1l "Ah, forget it. It's not worth the trouble."
                         mc "What?"
                         "She puts away the drink and smiles at me."
-                        ay "I don't know how, but it seems you've seen right through me."
+                        ay 1m "I don't know how, but it seems you've seen right through me."
                         ay "Do you actually know what's going on, [player]?"
-                        ay "Or are you just rejecting my hospitality?"
+                        ay 1n "Or are you just rejecting my hospitality?"
                         "Ayame sighs sadly."
-                        ay "I guess that's what happens when you try to do something nice, huh?"
+                        ay 2n "I guess that's what happens when you try to do something nice, huh?"
                         ay "You just get burned."
                         mc "It's not like that, Ayame."
-                        ay "Oh, is it not?"
+                        ay 2a "Oh, is it not?"
                         ay "I'm privy to a lot of tells, [player]."
                         ay "It seems to me that I can never really truly fit in until Sayori..."
                         mc "Until Sayori...?"
-                        ay "Look, forget it."
+                        ay 2f "Look, forget it."
                         ay "I'm sorry I asked if you wanted one."
                         ay "I guess I should have known better than to try something so dumb as to offer a drink."
-                        mc "Ayame, wait a second..."
+                        mc 2l "Ayame, wait a second..."
                         ay "The three of you..."
                         ay "Something is going on, and I'm going to get to the bottom of it."
-                        ay "It's preventing me from doing what I want to do."
+                        ay 2m "It's preventing me from doing what I want to do."
                         ay "From what I {i}need{/i} to do."
                         mc "You need to hand out drinks...? What do you mean?"
-                        ay "Hah, funny. I'd find it more amusing if I wasn't in such a tense mood right now."
+                        ay 2a "Hah, funny. I'd find it more amusing if I wasn't in such a tense mood right now."
                         mc "Are you going to be okay?"
                         ay "I don't know, [player]. I wish I did."
                         ay "But I guess we'll all find out in due time, won't we?"
@@ -12917,33 +12923,33 @@ label ch16_end:
                         show ayame at thide
                         hide ayame
             else:
-                # variable change here
+                $ ch16_ay_level += 1
                 "She puts it away and smiles at me."
-                ay "I can see that my hospitality isn't wanted here."
+                ay 2n "I can see that my hospitality isn't wanted here."
                 ay "I get it, really."
                 mc "What do you mean?"
-                ay "You don't want it. I can tell."
+                ay 1b "You don't want it. I can tell."
                 ay "Or rather you would take it, but you don't trust me."
-                ay "I would have thought we'd be over this after I gave you all gifts."
+                ay 1a "I would have thought we'd be over this after I gave you all gifts."
                 mc "W-Wait a second, that's not true."
                 mc "And besides, it's not like money can just buy you trust and friendship."
-                ay "Of course it can't. You think I don't know that?"
+                ay 1g "Of course it can't. You think I don't know that?"
                 ay "I wanted to put a brave face on for everyone."
-                ay "But it really seems like you all don't care about me."
+                ay 2n "But it really seems like you all don't care about me."
                 ay "Which is a shame."
                 mc "We do care about you Ayame, I don't know what you're talking about."
                 mc "It's just this drink...it's..."
                 ay "You think I'm untrustworthy?"
                 ay "That I would spike this drink with something?"
-                ay "Trust me when I say that all I want is for everyone to live!"
+                ay 2f "Trust me when I say that all I want is for everyone to live!"
                 mc "To live...?"
-                ay "I meant to say to live...life to the fullest...!"
+                ay 2a "I meant to say to live...life to the fullest...!"
                 ay "That drink would have helped you a lot."
-                ay "But I get it."
+                ay 2n "But I get it."
                 ay "Maybe you think you can do it your way."
                 ay "And maybe you're right, but I just wanted to help..."
                 mc "You've lost me."
-                ay "And you've lost me. Goodbye, [player]."
+                ay 2a "And you've lost me. Goodbye, [player]."
                 show ayame at thide
                 hide ayame
                 "What the hell was that about?"
@@ -12955,52 +12961,52 @@ label ch16_end:
                 "Maybe I shouldn't have taken Sayori's advice and just took the drink."
                 "Speaking of Sayori..."
         "Decline the drink.":
-            # variable change here
+            $ ch16_ay_level += 1
             mc "Not that I don't appreciate this, but I can't take it."
             mc "I'm sorry, Ayame."
-            ay "Wow...I can't say I'm not surprised."
+            ay 1l "Wow...I can't say I'm not surprised."
             mc "What do you mean?"
-            ay "You and Sayori had a little talk before I offered it to you just now."
+            ay 1m "You and Sayori had a little talk before I offered it to you just now."
             ay "You think I don't know what she said to you?"
             mc "..."
-            ay "Too much trust in one person is going to be your downfall, [player]."
+            ay 1n "Too much trust in one person is going to be your downfall, [player]."
             ay "That's all I'm saying..."
             "Ayame puts the drink away."
-            ay "If you're not going to have it, then I guess I better tell the club that made it."
+            ay 1g "If you're not going to have it, then I guess I better tell the club that made it."
             ay "Don't worry, I'm sure they'll understand."
-            ay "You know, I'm glad you're straight with me."
-            ay "You don't try to avoid the question or redirect it to something else."
+            ay 1l "You know, I'm glad you're straight with me."
+            ay 1a "You don't try to avoid the question or redirect it to something else."
             ay "Unlike some people."
             mc "I'm sure they have nothing against you, Ayame."
             mc "I mean, why would they?"
             ay "Who knows, [player]?"
             ay "It could be anything. There are just those types of people out there in the world."
-            ay "But, luckily there aren't many of them!"
+            ay 2j "But, luckily there aren't many of them!"
             ay "And there are way more people like you to drown them out."
             mc "Right...."
-            ay "There are those out there who would try to manipulate others."
+            ay 2h "There are those out there who would try to manipulate others."
             ay "Who would do anything to get their way."
             ay "Tell me, what do you think of people like that?"
             mc "What do I think...? I-I don't know."
-            ay "Would you tolerate someone like that?"
-            ay "Would you befriend someone like that?"
-            ay "Ask yourself those questions, [player]."
+            ay 2l "Would you tolerate someone like that?"
+            ay 2m "Would you befriend someone like that?"
+            ay 2n "Ask yourself those questions, [player]."
             mc "I guess...it depends...?"
             ay "On what?"
             mc "I don't know, maybe their intentions."
             mc "If they're doing it for the sake of their own gain, then maybe they aren't the best person."
             mc "But if they're doing it because they have the best intentions in mind then--"
-            ay "And what if those intentions are misinformed?!"
+            ay 2a "And what if those intentions are misinformed?!"
             ay "What if they're all just leading us all into a certain doom because they don't know any better?"
             mc "Ayame, I...don't know what you want me to say here."
             mc "It kind of sounds like you have a personal problem."
             ay "...You're right. I guess I'm just projecting."
             ay "But oh well, I won't keep you any longer."
-            ay "I just wanted to help, and this is what happens."
+            ay 2n "I just wanted to help, and this is what happens."
             ay "I guess I might have come about it the wrong way, so maybe I'm to blame."
             mc "What...?"
-            ay "Never mind, I'm just muttering to myself."
-            ay "Carry on with your performance, [player]."
+            ay 2l "Never mind, I'm just muttering to myself."
+            ay 1j "Carry on with your performance, [player]."
             show ayame at thide
             hide ayame
             "Ayame quickly leaves the area, as if she really didn't want to be here."
@@ -15307,7 +15313,7 @@ label ch16_end:
                     mc "I can't say that for certain."
                     mc "But her house is the only place I can think of right now."
                     ay "I hope that you're right."
-                    ay "I suppsoe there's no time to waste then, lead the way."
+                    ay "I suppose there's no time to waste then, lead the way."
                     "I lead Ayame down the street where I think Monika's house is."
                     "She grabs onto my arm just before we turn the corner."
                     mc "W-Wait a second, what are you doing?"
@@ -16677,7 +16683,7 @@ label ch16_end:
             ay "Something terrible. Go on, read it."
             "I try to read the writing on the floor."
             "For some reason, the longer I stare at it, the harder it is to make out."
-            "I can see the letters but I can't seem to form to form the word in my head."
+            "I can see the letters but I can't seem to form the word in my head."
             mc "What the hell is this?"
             mc "I can't make out what it's saying even though..."
             ay "Strange, isn't it? Your eyes won't let you read it."
@@ -16690,7 +16696,7 @@ label ch16_end:
             ay "And hopefully, {i}never{/i} have to worry yourself about."
             mc "Can you read what it says?"
             ay "..."
-            ay "Look forget about the writing, maybe you can see what's underneath it."
+            ay "Look, forget about the writing, maybe you can see what's underneath it."
             ay "It's a picture, of sorts."
             "I turn my attention to a small drawing underneath it."
             "This I can see clearly."
@@ -16806,7 +16812,7 @@ label ch16_end:
             show natsuki zorder 3 at f31
             show ayame zorder 2 at t33
             n "Don't thank us yet. We have no idea what to do from here."
-            n "I was hoping one of you know what to do now."
+            n "I was hoping one of you knows what to do now."
             n "Because we might know how to get around here, but we have no idea what to do next."
             show natsuki zorder 2 at t31
             show ayame zorder 3 at f33
