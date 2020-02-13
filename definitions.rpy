@@ -4957,6 +4957,7 @@ default ch16_m_plantold = False
 default ch16_ay_drink = False
 default ch16_ay_companions = 0
 default ch16_end_part = False
+default ch16_play_convince = False
 default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","Inauguration Day","???","???","???","???"]
 default return_chapter = False
 default special_chapter = False
