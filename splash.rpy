@@ -797,6 +797,8 @@ label after_load:
         $ ch16_m_plantold = False
     if not hasattr(store,'ch16_ay_drink'):
         $ ch16_ay_drink = False
+    if not hasattr(store,'ch16_ay_drink_own'):
+        $ ch16_ay_drink_own = False
     if not hasattr(store,'ch16_end_part'):
         $ ch16_end_part = False
     if not hasattr(store,'ch16_play_convince'):

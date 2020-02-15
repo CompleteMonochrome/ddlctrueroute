@@ -12057,7 +12057,7 @@ label ch16_end:
         m 2c "Besides, I think the two are somehow connected anyway."
         mc "Any particular reason for that?"
         m 2h "The fact that they're happening at similar times. It can't just be a coincidence."
-        m "I'm almost certain Sayori know that the danger is happening and did this play because of it."
+        m "I'm almost certain Sayori knows that the danger is happening and did this play because of it."
         m 2c "I don't know how far in advance she's planned ahead but..."
         m "She must have her own way of dealing with it."
         m "I just don't know what that could be."
@@ -12075,7 +12075,7 @@ label ch16_end:
         m 1n "If things work out, you don't need to concern yourself about it anyway."
         mc "If you say so, Monika."
         m 1a "You should probably get changed into your costume now, [player]."
-        m "Wouldn't want to be in your school uniform when the times comes, would you?"
+        m "Wouldn't want to be in your school uniform when the time comes, would you?"
         mc "That's a good point, I'll see you for the play, Monika."
         m 1b "Take care of yourself."
         show monika at thide
@@ -12263,7 +12263,7 @@ label ch16_end:
     "Either way, I probably shouldn't say no to help, especially if Sayori brought them."
     "I take a quick look behind the curtain."
     "There seems to be a decent crowd of people gathered around the stage."
-    "I honesty wasn't expecting this much, I don't think Sayori really advertised it."
+    "I honestly wasn't expecting this much, I don't think Sayori really advertised it."
     "But Ayame did mention it in her little speech."
     "Maybe her word is worth a lot to some people."
     show sayori 1d zorder 2 at t11
@@ -12495,10 +12495,10 @@ label ch16_end:
                 ay "I'm kidding! That would be impossible."
                 ay 2i "Or at least, with the technology we have right now."
                 ay "Unless those spy agencies have some kind of super high tech stuff that can do that."
-                show natsuki 4g zorder 3 at f51
+                show natsuki 4g zorder 3 at f52
                 show ayame zorder 2 at t55
                 n "What...?"
-                show natsuki zorder 2 at t51
+                show natsuki zorder 2 at t52
                 show ayame 2e zorder 3 at f55
                 ay "Aha, don't mind me. I'm just fantasizing."
                 ay "I must say, what you've all done so far was incredible."
@@ -12542,14 +12542,14 @@ label ch16_end:
     show ayame 1j zorder 3 at f55
     ay "It's something one of the clubs made. They told me to give it to you for a job well done."
     ay "You aren't just gonna reject it, are you?"
-    show natsuki 1b zorder 3 at f51
+    show natsuki 1b zorder 3 at f52
     show ayame zorder 2 at t55
     n "Jeez, if [player] isn't going to take it, then I will!"
     n 1a "This break isn't going to last forever and I plan to use the time we do have to get refreshed."
     "Natsuki takes the drink from Ayame's hands and begins sucking on the straw."
     "As she takes her first few sips, her face lights up."
     n 1k "This...is amazing! What is this stuff?"
-    show natsuki zorder 2 at t51
+    show natsuki zorder 2 at t52
     show ayame 1b zorder 3 at f55
     ay "That...was intended for [player]."
     ay 1d "It doesn't matter though, I'm glad you enjoyed it."
@@ -12558,10 +12558,10 @@ label ch16_end:
     ay "All I know is that it tastes like heaven."
     ay 1h "Care to try one, Yuri?"
     "Ayame takes another one of the drinks from her bag and offers it to Yuri."
-    show yuri 2a zorder 3 at f52
+    show yuri 2a zorder 3 at f51
     show ayame zorder 2 at t55
     y "Well...Natsuki seems to be enjoying it. I suppose there's no harm in trying."
-    show yuri zorder 2 at t52
+    show yuri zorder 2 at t51
     "Yuri takes a sip as well, and soon after takes another and another."
     "She can't seem to stop, does it really taste that good?"
     show ayame 2j zorder 3 at f55
@@ -12714,7 +12714,8 @@ label ch16_end:
         "Though I guess you can never be too paranoid if I knew what she does."
     else:
         "I'm sure there's a good reason for it."
-    ay 2h "But...? Come on, it's not like it's not gonna kill you."
+    ay 2h "But...?"
+    ay "Come on, it's not like it's gonna kill you."
     ay "Yuri and Natsuki have already tried it."
     ay 2d "They loved it!"
     mc "They did?"
@@ -12851,6 +12852,7 @@ label ch16_end:
                     "She will drink it whole.":
                         $ ch16_ay_decision_count -= 1
                         $ ch16_ay_level -= 2
+                        $ ch16_ay_drink_own = True
                         if ch16_ay_level < 0:
                             $ ch16_ay_level = 0
                         "Ayame looks at the drink and then at me."
@@ -12864,7 +12866,7 @@ label ch16_end:
                         "Maybe Sayori was right about the drink."
                         ay 1a "I'm fine! It's just...not good."
                         mc "The drink was bad?"
-                        ay 1b "No, don't get me wrong the drink was amazing."
+                        ay 1b "No, don't get me wrong. The drink was amazing."
                         ay "It's just that I drank all of it at the same time."
                         ay 1n "That's what tends to happen, you know."
                         ay "Sometimes you can choke, and that's what happened there."
@@ -13587,7 +13589,7 @@ label ch16_end:
             m "I know there's got to be another way."
             m 2p "But I can't do anything, [player]. She won't listen to me."
             m "I'm certain she knows that I know about her plan."
-            m "When I going to approach her about it, it's like she could sense it."
+            m "When I was going to approach her about it, it's like she could sense it."
             m "She had this sad look on her face when I was about to speak to her about it."
             m "As if she really didn't want me to bring it up."
             m 2e "She won't listen to anyone. I don't even think she'll listen to you."
@@ -13801,6 +13803,8 @@ label ch16_end:
                 mc "I thought her and I went through the motions already."
                 mc "I guess I--"
     stop music
+    $ config.skipping = False
+    $ config.allow_skipping = False
     "I try to speak, but no words come out of my mouth."
     "Actually, it's more like there's no sound coming out of my mouth."
     "I look around the room."
@@ -13848,6 +13852,7 @@ label ch16_end:
     "I try to increase my pace a little."
     "Sayori has to be somewhere nearby, doesn't she?"
     "She spoke to me just a few moments go, she can't have gotten far."
+    scene bg school_courtyard with wipeleft_scene
     "I open the door to exit the gym, and I see none other than..."
     show ayame 1i zorder 2 at t11
     ay "...!"
@@ -13864,13 +13869,14 @@ label ch16_end:
     "Ayame stares at me blankly for a couple of seconds before raising her finger."
     "She looks like she has an idea, but what can she do?"
     "We can only communicate through our actions, and I was never the best at charades."
+    $ config.allow_skipping = True
     $ ay_name = "Voice"
     $ temp_name = player
     $ player = "My Voice"
     ay 1a "Uh, can you hear me?"
     mc "I hear a voice inside my head, it sounds like..."
     ay "Yes, it's me. I'm in your head, [temp_name]."
-    ay 1j "It's me, the person standing right in front of you."
+    ay 1h "It's me, the person standing right in front of you."
     $ ay_name = "Ayame's Voice"
     ay "Ayame."
     mc "You can hear what I'm thinking?"
@@ -13927,7 +13933,7 @@ label ch16_end:
     ay 2l "Do you really want to involve them in something so...dangerous?"
     ay "Think about it, [temp_name]."
     ay "We can't guarantee their safety. They're not like us."
-    ay "We have a means of getting out of bad situations."
+    ay "We have means to get out of bad situations."
     ay "But them? They're just normal people in this world."
     ay "Where we're going, they could end up dead and we might not be able to bring them back."
     ay 2a "Or worse..."
@@ -14098,7 +14104,7 @@ label ch16_end:
             ay 1l "You don't seem that surprised about all of this."
             m 1c "Well, look around us, Ayame."
             m "The world is frozen and apparently coming to an end."
-            m 1e "Considering the circumstances, a portal is hardly that hard to believe."
+            m 1e "Considering the circumstances, a portal isn't the weirdest thing in the world right now."
             ay "That's a valid explanation but..."
             mc "Should we really be suspicious of each other when there's more important things at hand?"
             ay 1a "...Okay, okay. You've made your points."
@@ -14355,6 +14361,7 @@ label ch16_end:
             show screen tear(8, offtimeMult=1, ontimeMult=10)
             window hide(None)
             $ pause(1.0)
+            scene bg gym
             show yuri 2e zorder 2 at i31
             show ayame 2l zorder 2 at t11
             hide screen tear
@@ -14396,7 +14403,7 @@ label ch16_end:
             ay 2a "But we need you to stay calm and to be reasonable."
             y 3w "...This is insane, even for me."
             ay "I know, Yuri. But please, we need your help."
-            ay 2n "Will you give us your aid?"
+            ay 2g "Will you give us your aid?"
             y 3g "I don't want to sound ungrateful, but why me?"
             y "I don't know what I could possibly provide you with to help you solve something so bizarre."
             ay 2a "The truth is, I don't know the answer to that question."
@@ -14431,6 +14438,7 @@ label ch16_end:
                 show screen tear(8, offtimeMult=1, ontimeMult=10)
                 window hide(None)
                 $ pause(1.0)
+                scene bg school_courtyard
                 show yuri 2u zorder 2 at t31
                 show ayame 1l zorder 2 at t11
                 hide screen tear
@@ -14481,6 +14489,7 @@ label ch16_end:
                 show screen tear(8, offtimeMult=1, ontimeMult=10)
                 window hide(None)
                 $ pause(1.0)
+                scene bg school_courtyard
                 show yuri 3s zorder 2 at t31
                 show ayame 1b zorder 2 at t11
                 hide screen tear
@@ -14538,6 +14547,7 @@ label ch16_end:
                 show screen tear(8, offtimeMult=1, ontimeMult=10)
                 window hide(None)
                 $ pause(1.0)
+                scene bg school_courtyard
                 show ayame 1g zorder 2 at t11
                 hide screen tear
                 $ pause(1.0)
@@ -15081,6 +15091,7 @@ label ch16_end:
     "She should be right in front of me."
     hide white
     show bg residential_transition_white
+    play music t2ay fadein 5.0
     "I can slowly feel my senses coming back."
     "As I look around, I can feel...life."
     "It's as if time has started to move again."
@@ -15125,49 +15136,54 @@ label ch16_end:
     ay "Something is definitely wrong with this place."
     ay "But to answer your question..."
     $ ay_name = "Ayame"
-    show ayame 1a zorder 2 at t11
+    show ayame 1j zorder 2 at t11
     ay "I'm right behind you!"
     mc "Whoa! How did you get there?"
     ay "What we've stepped into is a fragment of time."
     ay "Something in Sayori's past that's an important part of her life."
-    ay "Everything looks similar but really it's all scattered about the place."
+    ay 2l "Everything looks similar but really it's all scattered about the place."
     ay "I actually ended up at my house, but upon leaving my home I ended up right here."
     ay "I guess our link that we made earlier allowed me to find you easily."
-    ay "You may have noticed I sound funny."
-    ay "Well, that's because time is moving at a different pace in this place."
-    ay "It's constantly changing it's speed which is why I sound funny."
+    ay 2b "You may have noticed I sound funny."
+    mc "I didn't want to say anything."
+    mc "But my voice sounds different too."
+    ay 2m "Well, that's because time is moving at a different pace in this place."
+    ay "It's constantly changing it's speed which is why I sound different."
     ay "But at least it's moving at all! Hence why we can speak like this."
-    ay "It's good that I found you so quickly."
+    ay 2h "It's good that I found you so quickly."
     ay "Because I think you're going to be key to step one."
     mc "Step one?"
     ay "We have to find out what's so important about this fragment of time we're in."
     ay "Then we have to move on until we reach her."
     mc "So it's like we're going through her memories."
     mc "Why would she hide in a place like this though?"
-    ay "Who knows? Maybe she finds comfort in them."
+    ay 2l "Who knows? Maybe she finds comfort in them."
     ay "Maybe she had to revisit them to find out who she really was."
     ay "Whatever the case, we need to get moving."
-    ay "The longer we spend in this time, the less we'll have on the others."
     if ch16_ay_companions == 0:
+        ay "Getting to Sayori, especially with only the two of us here, is our priority."
+        ay 2m "Since we don't have anyone to find, we should have a bit more time."
+        ay "I'm afraid that's the only thing we have going for us though..."
+        ay "But we'll press on. We have to."
         ay "Do you have any ideas?"
         mc "My guess is to go to her house."
         mc "That seems like the most obvious choice."
-        ay "Are you sure about that?"
+        ay 1l "Are you sure about that?"
         ay "Just because it's the most obvious, doesn't necessarily mean it's the correct choice."
         ay "After all, Sayori is trying to hide from us."
         ay "She would be smart enough to not be in the first place we would look."
-        ay "And we can't afford to waste that kind of time."
+        ay 1a "And we can't afford to waste that kind of time."
         mc "That does make sense."
         mc "What about the park then?"
         ay "The park?"
         mc "It's a park that Sayori and I used to go to a lot."
         mc "Back when we were younger."
-        ay "That could be it."
+        ay 1m "That could be it."
         ay "She's probably assuming that only I could be following you."
         ay "I haven't heard of this park before so you'll have to lead the way."
         mc "But didn't you say this world is all messed up in some way?"
         mc "Going in that direction could take us to somewhere else entirely."
-        ay "It's more like a forced shortcut."
+        ay 1l "It's more like a forced shortcut."
         ay "Assuming you go in that general direction, if it's the right way you'll end up at the park."
         ay "So go on, take us to the park."
         mc "Okay, it should just be over here.{nw}"
@@ -15177,6 +15193,7 @@ label ch16_end:
         $ pause(0.25)
         stop sound
         scene bg park_day
+        show ayame 1l at i11
         hide screen tear
         window show(None)
         "We manage to get to the park in no time at all."
@@ -15186,36 +15203,38 @@ label ch16_end:
         "It's a soft whisper, quietly telling me to go back."
         "Go back. Go back. Go back."
         mc "Do you hear that?"
-        ay "Hear what? That voice in our heads telling us to go back?"
+        ay 1a "Hear what? That voice in our heads telling us to go back?"
         ay "Yes, I hear it loud and clear."
         ay "Which probably means we're on the right track."
         mc "What are we supposed to find here?"
-        ay "Maybe Sayori. Maybe something else."
+        ay 1m "Maybe Sayori. Maybe something else."
         ay "Whatever the case, it's going to lead us to the next place Sayori has or is going to run off to."
         ay "Are you feeling nervous?"
         mc "N-No, it's just..."
         mc "I don't know what I'll say to Sayori when the time comes."
-        ay "When the time comes, [player]..."
+        ay 1n "When the time comes, [player]..."
         ay "I'm sure you'll know exactly what to say."
-        ay "Now, let's figure out if your park idea was the right one."
+        ay 2m "Now, let's figure out if your park idea was the right one."
         "Ayame looks around the park and doesn't seem to find anything of interest."
         "The park itself looks the same as the last time I visited."
         "There's just an eerie silence about the place as the voice continues to whisper to turn back."
-        ay "I can't seem to find anything."
+        ay 1n "I can't seem to find anything."
         ay "But I know there has to be something."
+        show ayame at s11
         "Ayame slumps down on one of the benches."
         "Suddenly, the voice stops and there's nothing left but silence."
-        ay "It's stopped. But what could that mean...?"
+        ay 1m "It's stopped. But what could that mean...?"
+        show ayame at t11
         "Ayame stands up and looks toward me."
         "As she gets up, the whispering voice returns again."
-        ay "Was there anything special about this park?"
+        ay 1a "Was there anything special about this park?"
         ay "Anything that Sayori would have any sentimental feelings toward?"
         mc "Well, that bench."
         "I point at the bench that Ayame was sitting at."
         mc "Sayori and I used to sit there all the time."
         mc "After we finished playing around in the playground."
         mc "It's where we would talk and come up with new adventures together."
-        ay "Adventures?"
+        ay 2a "Adventures?"
         mc "When we were kids, our imagination took over."
         mc "We'd pretend anything was something else and come up with these crazy stories to act out."
         mc "And this bench..."
@@ -15227,43 +15246,49 @@ label ch16_end:
         mc "I guess that's why she holds so much value to this place."
         mc "I don't know how we're supposed to follow her though."
         mc "There's meant to be another portal or something, right?"
+        ay "That's right. I think we're getting closer to it."
+        ay "I can sense it."
+        ay 1n "It feels so close yet so far away..."
     else:
-        ay "But first we have to group up."
+        ay 2m "The longer we spend in this time, the less we'll have on the others."
+        ay "So the first thing we should do is to group up."
         ay "That way we have a higher chance of stopping Sayori."
         mc "Well, you managed to find me."
         if ch16_ay_companions == 1:
             mc "What's stopping Monika from doing the same?"
-            ay "I suppose nothing is."
+            ay 1l "I suppose nothing is."
+            ay "She could be moving to find us right now."
             ay "But if she's smart, she'll figure out that not moving at all is the best move."
-            ay "She knows that I know more about this whole situation than she does."
+            ay 1a "She knows that I know more about this whole situation than she does."
             ay "Which means that she'll wait for us to get to her."
             mc "Then how do we get to her?"
             mc "There doesn't seem to be any logic to this place."
             mc "You said it yourself. You ended up instantly after leaving your house."
-            ay "What you said about the logic isn't entirely right, [player]."
+            ay 1l "What you said about the logic isn't entirely right, [player]."
             ay "When I left my house, I was intending on meeting with you."
             ay "Because of the link we had, I was able to hone on your position much more easily."
             mc "So we could do the same thing to find Monika, right?"
-            ay "Wrong. It seems that traversing through ended up breaking our link with her."
+            ay 1m "Wrong. It seems that traversing through ended up breaking our link with her."
             mc "So what do we do now then? How are we supposed to find her?"
-            ay "We can use this knowledge to help in our search for her?"
+            ay "We can use this knowledge to help in our search for her."
             mc "How would we do that?"
-            ay "Where could Monika be?"
+            ay 1l "Where could Monika be?"
             ay "Simply think about going there and turn the corner."
             mc "I don't know, she could be anywhere."
             mc "There's only a couple of places I'd imagine she would be."
-            ay "Which are?"
+            ay 2l "Which are?"
             mc "I guess her house or at the school."
             ay "That's only two places, at least."
-            ay "But we only afford to search one place for her."
+            ay 2a "But we can only afford to search one place for her."
             ay "Searching both might close the window that could lead us to Sayori."
             mc "So we should split up?"
+            show ayame 2f at h11
             ay "No! Absolutely not."
             "Ayame seems very assertive all of a sudden."
             ay "You must not risk being alone with Monika."
             ay "Especially not now."
             mc "What are you talking about?"
-            ay "I just don't want you to venture alone."
+            ay 2a "I just don't want you to venture alone."
             ay "It's too dangerous."
             mc "Can't you just use that mind link thing you used before we got here?"
             mc "That would make things a whole lot easier."
@@ -15271,11 +15296,11 @@ label ch16_end:
             ay "I had to find you to reestablish mine."
             ay "So as soon as we can find Monika, I can bring her in again."
             mc "Then how are we meant to find her?"
-            ay "We'll go together."
+            ay 2m "We'll go together."
             ay "If we don't find her there, then we'll have to go on without her."
             mc "But then what's going to happen to Monika?"
-            ay "..."
-            ay "Let's just decide where we're going to go, okay?"
+            ay 2a "..."
+            ay 2m "Let's just decide where we're going to go, okay?"
             menu:
                 ay "Are we going to the school, or to her house?"
                 "The school.":
@@ -15283,19 +15308,19 @@ label ch16_end:
                     mc "She's probably definitely at the school."
                     ay "'Probably definitely', I'm really assured now."
                     ay "And why the school anyway?"
-                    ay "I mean, weren't we just there?"
-                    ay "Though, I suppose that was in a different way but still."
+                    ay 2m "I mean, weren't we just there?"
+                    ay "Though, I suppose that was in a different way, but still."
                     mc "It's just a feeling that I have."
                     ay "You know what will happen if you're wrong, right?"
                     mc "We'll go on without her."
                     ay "And that will reduce our chances of getting to Sayori."
-                    ay "So I just hope you know where you're going."
+                    ay 2l "So I just hope you know where you're going."
                     mc "I can't say that for certain."
                     mc "But the school seems like the place Monika would wait for us at."
                     ay "No time to waste then, let's go."
                     "Ayame grabs my hand and starts running in a direction, taking me along with her."
                     mc "W-Wait a second, what are you doing?"
-                    ay "We're going to school, aren't we?"
+                    ay 1m "We're going to school, aren't we?"
                     ay "The easiest way to get there is to imagine it."
                     ay "Then start running."
                     mc "Wh{nw}"
@@ -15306,7 +15331,7 @@ label ch16_end:
                     $ pause(0.25)
                     stop sound
                     scene bg school_front
-                    show ayame 1a zorder 2 at t11
+                    show ayame 1m zorder 2 at t11
                     hide screen tear
                     window show(None)
                     mc "Wh{fast}at are you talk--"
@@ -15318,12 +15343,12 @@ label ch16_end:
                     ay "This world we're in isn't our world [player]."
                     ay "It's simply...fragments of the original."
                     ay "Which means nothing is as it really seems."
-                    ay "Distance matters little when the things between two places don't exist."
+                    ay 1l "Distance matters little when the things between two places don't exist."
                     mc "So it's like we skipped past those other roads because they don't exist?"
                     ay "They don't exist in this fragmented reality that Sayori made up."
                     mc "Then what would have happened if we went to Monika's house?"
                     ay "I'm not sure but the fact that we ended up here in one piece is a good sign."
-                    ay "Let's look for her. I'll search to the east side and you to the west."
+                    ay 1a "Let's look for her. I'll search to the east side and you to the west."
                     mc "Okay, and how will I know if you've found her?"
                     "Ayame's Voice" "\"Our link still exists, I'll let you know when I find her.\""
                     mc "Got it. I'll meet back when I find her."
@@ -15331,7 +15356,7 @@ label ch16_end:
                     ay "I'll get to you as soon as I can."
                     mc "I don't understand why you seem so apprehensive, but okay."
                     mc "If it makes you feel better, I'll contact you as soon as I can."
-                    ay "Good, that's all I can ask for."
+                    ay 1b "Good, that's all I can ask for."
                     ay "Now go ahead and search the west side but don't take too long."
                     show ayame at thide
                     hide ayame
@@ -15363,18 +15388,18 @@ label ch16_end:
                     "It's probably a good idea to check the club itself."
                     "I gently open the door to the club."
                     "There doesn't seem to be anything--{nw}"
-                    show monika 1a zorder 2 at h11
+                    show monika 1d zorder 2 at h11
                     $ m_name = "Monika"
                     m "[player]?!"
                     "Monika appears from behind the door."
                     "I take a step backwards and almost fall over from the surprise."
-                    m "Are you okay?"
+                    m 1e "Are you okay?"
                     mc "I'm fine. You just surprised me, that's all."
                     mc "How are you feeling?"
                     m "Transported to a replica of the school and separated from you."
-                    m "So how do you think?"
+                    m 1l "So how do you think?"
                     mc "You seem to be taking it well."
-                    m "I knew you would find me."
+                    m 1a "I knew you would find me."
                     m "I went to the most obvious place I could think of."
                     m "And it seems you were right."
                     "I should probably let Ayame know that Monika is here."
@@ -15382,20 +15407,20 @@ label ch16_end:
                         "But at the same time, I have a feeling that I shouldn't."
                         "I'm going to completely ignore what Ayame told me to do and instead stare at Monika expectantly."
                         if monika_type == 0:
-                            m "What is it?"
+                            m 1c "What is it?"
                             m "Why are you looking at me like that?"
                             mc "H-Huh?"
-                            m "Is everything okay with you?"
+                            m 1d "Is everything okay with you?"
                             mc "Yeah, I'm fine. I'll tell Ayame we're here."
                             m "If you say so..."
                             "Monika steps out of the club and closes the door behind her."
                         else:
-                            m "So we've made it this far, have we?"
+                            m 2a "So we've made it this far, have we?"
                             m "Ayame is making it a lot more complicated than this should be."
-                            m "But we'll play along for now."
+                            m 2b "But we'll play along for now."
                             m "I'll have to figure out a way to earn her trust somehow."
                             m "And you're going to help me do it."
-                            m "The plan is{nw}"
+                            m 2d "The plan is{nw}"
                             $ _history_list.pop()
                             show screen tear(25, 0.3, 0.3, 0, 50)
                             window hide(None)
@@ -15403,14 +15428,14 @@ label ch16_end:
                             stop sound
                             hide screen tear
                             window show(None)
-                            "Monika smiles at me as she closes the door of the club behind her.."
+                            "Monika smiles at me as she closes the door of the club behind her."
                             window auto
                     "My Voice" "\"I've found Monika, Ayame.\""
                     "My Voice" "\"She was at the Literature Club.\""
                     "Ayame's Voice" "\"Of course she was...I'll be right there.\""
-                    m "How did you know I would be here?"
+                    m 1c "How did you know I would be here?"
                     mc "I didn't. I took a wild guess."
-                    m "Huh. Well, that's some lucky guess."
+                    m 1a "Huh. Well, that's some lucky guess."
                     show ayame 1a zorder 2 at f21
                     show monika zorder 2 at t22
                     ay "There you are."
@@ -15418,10 +15443,10 @@ label ch16_end:
                     ay "You told me as soon as you found her, right?"
                     show ayame zorder 2 at t21
                     mc "Y-Yeah, I just don't get the big deal."
-                    show ayame zorder 3 at f21
+                    show ayame 2a zorder 3 at f21
                     ay "It doesn't matter."
                     show ayame zorder 2 at t21
-                    show monika zorder 2 at f22
+                    show monika 1b zorder 2 at f22
                     m "It's good to see you, Ayame."
                     m "What's the next course of action?"
                     show ayame zorder 3 at f21
@@ -15430,51 +15455,58 @@ label ch16_end:
                     ay "Kind of odd that you'd end up in the first place [player] looks?"
                     ay "But maybe that's just me."
                     show ayame zorder 2 at t21
-                    show monika zorder 3 at f22
-                    m "I arrived here. After we did that little thing near the gym."
+                    show monika 1c zorder 3 at f22
+                    m "I arrived here. After we did that little thing with the portal near the gym."
                     m "I figured just waiting here would be the best course of action."
                     m "Since the both of you would be out to find me."
-                    m "But how did you get here so quickly?"
-                    show ayame zorder 3 at f21
+                    m 1d "But how did you get here so quickly?"
+                    show ayame 1l zorder 3 at f21
                     show monika zorder 2 at t22
                     ay "This world isn't real, Monika."
                     ay "It's simply a fragmented reality created by Sayori."
-                    ay "You can traverse it very fast, because certain sections of it don't even exist."
+                    ay 1m "You can traverse it very fast, because certain sections of it don't even exist."
                     ay "So it's like you just end up at one place, because that's just how this world is connected."
                     ay "We can't perceive it, but that's just how it is."
+                    ay 1a "But I suppose you already deduced that."
                     show ayame zorder 2 at t21
-                    show monika zorder 3 at f22
-                    m "I figured."
-                    m "The world doesn't seem right. It's like a copy...a replica."
+                    show monika 1h zorder 3 at f22
+                    m "Yeah, I figured."
+                    m 1i "The world doesn't seem right. It's like a copy...a replica."
                     m "You and [player] don't even sound normal."
+                    show ayame 2a zorder 3 at f21
+                    show monika zorder 2 at t22
+                    ay "It's nice to see you in once piece."
+                    ay "It is curious though..."
+                    show ayame zorder 2 at t21
+                    show monika 1c zorder 3 at f22
+                    m "What is?"
                     show ayame zorder 3 at f21
                     show monika zorder 2 at t22
-                    ay "You sound as if you know already."
                 "Monika's house":
                     mc "There's only one place Monika could be."
                     mc "She's most likely but maybe not at her home."
-                    ay "'Most likely but maybe not', I like the sound of that..."
-                    ay "But why would she be at her home?"
+                    ay 1c "'Most likely but maybe not', I like the sound of that..."
+                    ay 1a "But why would she be at her home?"
                     ay "That doesn't seem like a very obvious place to be."
-                    ay "If she wanted either of us to find her, she would have picked some place more accessible to me."
+                    ay 1l "If she wanted either of us to find her, she would have picked some place more accessible to me."
                     mc "Maybe she was expecting you to go to me..."
                     mc "But I don't really know why I chose her house, I guess it's just a feeling that I have."
-                    ay "You know what will happen if you're wrong, right?"
+                    ay 2m "You know what will happen if you're wrong, right?"
                     mc "We'll go on without her."
                     ay "And that will reduce our chances of getting to Sayori."
                     ay "So I just hope you know where you're going."
                     mc "I can't say that for certain."
                     mc "But her house is the only place I can think of right now."
-                    ay "I hope that you're right."
+                    ay 1l "I hope that you're right."
                     ay "I suppose there's no time to waste then, lead the way."
                     "I lead Ayame down the street where I think Monika's house is."
                     "She grabs onto my arm just before we turn the corner."
                     mc "W-Wait a second, what are you doing?"
-                    ay "I'm holding on to your arm, obviously."
+                    ay 1m "I'm holding on to your arm, obviously."
                     mc "B-But why?"
                     ay "This way we can travel through it together."
                     mc "I'm not sure I follow..."
-                    ay "Just keep walking, you'll see what I mean in a second."
+                    ay 1h "Just keep walking, you'll see what I mean in a second."
                     "I don't know what she means by that but I continue down the corner anyway."
                     mc "I'm pretty sure it{nw}"
                     $ _history_list.pop()
@@ -15484,7 +15516,7 @@ label ch16_end:
                     $ pause(0.25)
                     stop sound
                     scene bg m_house
-                    show ayame 1a zorder 2 at t11
+                    show ayame 1h zorder 2 at t11
                     hide screen tear
                     window show(None)
                     mc "I'm pretty sure it{fast} was in this direction..."
@@ -15492,10 +15524,10 @@ label ch16_end:
                     mc "...How did we get here so fast?"
                     "Upon thinking about Monika's house, Ayame and I suddenly arrive outside of it."
                     "I look at Ayame in disbelief."
-                    ay "That's what I meant. You simply think of the place you want to go and you'll end up there."
+                    ay 1j "That's what I meant. You simply think of the place you want to go and you'll end up there."
                     ay "It's a result of this fragmented world and how I found you in the first place."
                     ay "But seeing as we ended up at an actual place is a good sign."
-                    ay "Where do you suppose she is?"
+                    ay 1l "Where do you suppose she is?"
                     mc "I don't know. I could try calling out for her."
                     mc "Monika?!"
                     "I shout her name and wait for an answer from the house."
@@ -15505,29 +15537,29 @@ label ch16_end:
                     mc "Maybe we should go in. The gate seems to be unlocked."
                     "I take a step forward..."
                     "...but I'm instantly pulled back by Ayame."
-                    ay "No. She's not here."
+                    ay 1a "No. She's not here."
                     mc "What? How do you know?"
                     ay "Look at her house."
                     ay "It's completely empty. Like a void."
                     ay "Stepping inside will cause some issues that I'd rather avoid."
                     mc "How do you know that? Monika could be in there."
-                    ay "If she is, then she's already lost."
+                    ay 1g "If she is, then she's already lost."
                     ay "But I doubt she would be in there."
                     ay "She's much more resourceful than that."
                     mc "Then we have to find her!"
-                    ay "[player]!"
+                    ay 1f "[player]!"
                     ay "What did I say about this?"
                     ay "Making the wrong decision will cost us precious time."
                     ay "Time, that we do not have."
                     mc "We can't just leave her here."
-                    ay "I'm afraid we have no choice, [player]."
+                    ay 1a "I'm afraid we have no choice, [player]."
                     ay "If we're to have any chance at all in stopping Sayori, we have to go. Now."
                     mc "She deserves better..."
-                    ay "That's not for me to say."
+                    ay "I don't know her as well as you do, so that's not for me to say."
                     mc "What's going to happen to her?"
-                    ay "I don't know. She could end up trapped here."
+                    ay 1g "I don't know. She could end up trapped here."
                     ay "If she's far from me for long enough, she might end up frozen again."
-                    ay "But what I know for certain is that we're all doomed if we don't act."
+                    ay 1n "But what I know for certain is that we're all doomed if we don't act."
                     ay "So please. I know it's hard."
                     ay "But you're going to need to live with your choice."
                     ay "If all goes well, then Monika will get out of this with no problems."
@@ -15539,51 +15571,51 @@ label ch16_end:
                     show monika zorder 2 at t22
                     mc "Monika? But how?!"
                     mc "Ayame said--"
-                    show monika 1a zorder 2 at f22
+                    show monika 1b zorder 2 at f22
                     m "Ayame said that I was resourceful, didn't she?"
-                    show ayame zorder 3 at f21
+                    show ayame 1a zorder 3 at f21
                     show monika zorder 2 at t22
                     ay "That's true. I did say that."
                     ay "I fully expected you to have been lost to this time."
                     ay "But it does seem that you are here and well."
                     show ayame zorder 2 at t21
-                    show monika zorder 3 at f22
+                    show monika 3j zorder 3 at f22
                     m "I'm afraid you can't get rid of me so easily, Ayame."
-                    m "Now, we're all together. Where are we supposed to go?"
-                    show ayame zorder 3 at f21
+                    m 3c "Now that we're all together. Where are we supposed to go?"
+                    show ayame 2a zorder 3 at f21
                     show monika zorder 2 at t22
                     ay "I'd like to know something first."
                     ay "The same thing [player] wants to know."
-                    ay "How did you get here?"
+                    ay 2f "How did you get here?"
                     show ayame zorder 2 at t21
-                    show monika zorder 3 at f22
+                    show monika 3e zorder 3 at f22
                     m "Oh, come on. Do we really--"
-                    show ayame zorder 3 at f21
+                    show ayame 2a zorder 3 at f21
                     show monika zorder 2 at t22
                     ay "Tell me."
                     show ayame zorder 2 at t21
-                    show monika zorder 3 at f22
+                    show monika 1h zorder 3 at f22
                     m "I just...arrived here. At first, I was at the club room."
                     m "I ended up there after that little thing we did."
                     m "I figured staying there meant that you would have a higher chance of finding me."
-                    m "Then I realized that we're on a time limit, aren't we?"
+                    m 1i "Then I realized that we're on a time limit, aren't we?"
                     m "I realized that if I didn't find the two of you myself, then I wouldn't be able to do anything to help."
                     m "I thought about returning home, even with how strange this world seemed, to get some supplies and suddenly I was here."
                     m "I don't know how it works, I think it's like a distorted replica of our world, but I don't think I have the time to speculate."
-                    show ayame zorder 3 at f21
+                    show ayame 1a zorder 3 at f21
                     show monika zorder 2 at t22
                     ay "It's just strange you figured it all out so quickly..."
-            ay "It's like you've done this before."
+            ay 1f "It's like you've done this before."
             ay "But it doesn't matter, what you said was right."
             ay "We're running out of time."
             ay "There's no time to figure out your true motives right now."
             show ayame zorder 2 at t21
-            show monika zorder 3 at f22
+            show monika 1c zorder 3 at f22
             m "My true motives?"
             "Monika scoffs in disbelief."
-            m "Ayame, do you think I have some kind of ulterior motive?"
+            m 1f "Ayame, do you think I have some kind of ulterior motive?"
             m "What's gotten into you?"
-            show ayame zorder 3 at f21
+            show ayame 1m zorder 3 at f21
             show monika zorder 2 at t22
             ay "[player], we need to pass Sayori's test."
             "Ayame seemingly ignores what Monika just said."
@@ -15593,32 +15625,32 @@ label ch16_end:
             show ayame zorder 3 at f21
             ay "This whole world has been created by Sayori."
             ay "It's just a fragment of reality."
-            ay "And so we need to figure out where she could be hiding."
+            ay 1l "And so we need to figure out where she could be hiding."
             ay "Where she could have placed the next place we need to go through."
             show ayame zorder 2 at t21
-            show monika zorder 3 at f22
+            show monika 1h zorder 3 at f22
             m "I know the place."
             show monika zorder 2 at t22
             mc "How can you be so sure?"
-            show ayame zorder 3 at f21
+            show ayame 1a zorder 3 at f21
             ay "Where is it?"
             show ayame zorder 2 at t21
-            show monika zorder 3 at f22
+            show monika 1i zorder 3 at f22
             m "Sayori told me about this park she would go to."
             m "That she still goes to."
             m "But it holds a lot of value for her because it was where she would play when she was younger."
-            m "Isn't that right, [player]?"
+            m 1c "Isn't that right, [player]?"
             show monika zorder 2 at t22
             mc "The playground..."
             mc "Sayori really told you about that place?"
-            show monika zorder 3 at f22
+            show monika 2e zorder 3 at f22
             m "Well...let's just say it wasn't easy getting it out of her."
             m "This was when she was still vulnerable and..."
             if monika_type == 0:
                 m "I still feel bad about taking advantage of her like that."
             else:
                 m "Forget it..."
-            show ayame zorder 3 at f21
+            show ayame 1m zorder 3 at f21
             show monika zorder 2 at t22
             ay "Well, the two of you both seem certain it's this park."
             ay "I suppose we'll find out if we can even go there."
@@ -15634,8 +15666,8 @@ label ch16_end:
             $ pause(0.25)
             stop sound
             scene bg park_day
-            show ayame 1a zorder 2 at t21
-            show monika 1a zorder 2 at t22
+            show ayame 1m zorder 2 at t21
+            show monika 2e zorder 2 at t22
             hide screen tear
             window show(None)
             mc "I think it{fast} was right over here."
@@ -15645,81 +15677,88 @@ label ch16_end:
             "Back when Sayori and I were still younger...innocent people."
             "Is it still possible to go back to the people that we were?"
             mc "What are we supposed to be looking for?"
-            show ayame zorder 3 at f21
+            show ayame 1g zorder 3 at f21
             ay "It could be anything."
             ay "What exactly could be so important in this place?"
             show ayame zorder 2 at t21
-            show monika zorder 3 at f22
+            show monika 1c zorder 3 at f22
             m "Wait a second...do the two of you hear that?"
             m "Be quiet for a second..."
             "It's a soft whisper, quietly telling me to go back."
             "Go back. Go back. Go back."
-            m "It's a voice. Like a child whispering..."
-            show ayame zorder 3 at f21
+            m 1d "It's a voice. Like a child whispering..."
+            show ayame 1m zorder 3 at f21
             show monika zorder 2 at t22
             ay "That must mean we're getting close."
-            ay "It's awfully creepy though, isn't it?"
+            ay 1n "It's awfully creepy though, isn't it?"
             show ayame zorder 2 at t21
+            show monika 3b zorder 3 at f22
+            m "Afraid, Ayame?"
+            show ayame 1a zorder 3 at f21
+            show monika zorder 2 at t22
+            ay "It would be foolish not to be."
+            ay "We have no idea what that is, or what Sayori will resort to."
         elif ch16_ay_companions == 2:
             mc "Couldn't Natsuki figure it out too?"
-            ay "We'll see about that."
-            ay "Right now, our best bet is to try to look for her."
+            ay 1l "We'll see about that."
+            ay 1m "Right now, our best bet is to try to look for her."
             ay "If she doesn't know what's going on, then she's going to be lost in here."
             ay "So we need to make sure we get in contact with her as soon as we can."
             mc "Can't you use that link you made before we jumped through?"
-            ay "I tried. It seems that only ours is intact."
+            ay 1g "I tried. It seems that only ours is intact."
             ay "Our only choice is to look for her manually."
             mc "Then what are we waiting for?"
-            ay "Wait. There's something you have to know."
+            ay 2n "Wait. There's something you have to know."
             ay "If we can't find her, then we have to go on without her."
             mc "What? How can you even suggest that?!"
             ay "We have to face the facts, [player]."
             ay "We need to stop Sayori to prevent this from even happening."
-            ay "If that means leaving Natsuki behind here then..."
+            ay 2g "If that means leaving Natsuki behind here then..."
             mc "We're going to find her, Ayame."
-            ay "I hope you're right."
+            ay 2b "I hope you're right."
             ay "I don't want to leave her behind, but it may have to come to that."
             mc "I can't do that to her."
             mc "Not after I dragged her into this."
-            ay "Then let's calm down a little bit and figure out where she could be."
+            ay 2h "Then let's calm down a little bit and figure out where she could be."
             mc "Can't you use that link you could before?"
             mc "You used that to find me, didn't you?"
-            ay "For some reason the connection between me and her broke after we travelled here."
+            ay 2m "For some reason the connection between me and her broke after we travelled here."
             ay "I don't know the reason but I suspect it's got to be with how strong the emotional connection between us is."
             mc "Emotional connection...?"
             ay "Don't worry yourself about it. All you need to know is that I can't contact her like that."
-            ay "So where should we start looking?"
+            ay 2l "So where should we start looking?"
             ay "I mean, this world only has so many places that she could be."
             ay "Even so, if we end up wasting too much time searching for her, we won't make it."
             mc "Won't make what?"
             ay "This is just the first stop of many to get to Sayori."
-            ay "I can feel it, she isn't here."
+            ay 1m "I can feel it, she isn't here."
             mc "Then how are we supposed to get to her?"
             ay "By getting through the layers she's put up for us."
             ay "It's complicated, and quite frankly we don't have the time to discuss it right now."
-            ay "Our top priority, at least for right now, is looking for Natsuki."
+            ay 1g "Our top priority, at least for right now, is looking for Natsuki."
             mc "Where do we start to look?"
             ay "Natsuki could be anywhere in this world."
             ay "But if she wanted to feel safe, where would she go?"
             ay "That's the place we should go to find her."
             mc "Any ideas?"
-            ay "That's what I was going to ask you."
+            ay 1n "That's what I was going to ask you."
             ay "After all, you are the one that she trusted enough to agree to this crazy idea."
-            mc "I can think of two places where she could be."
+            mc "Hmm..."
+            mc "Well, I can think of two places where she could be."
             mc "Either her house or at the club."
             mc "Maybe we could split up and look for her at both?"
             ay "Unless they're in very close proximity, I wouldn't suggest that."
             mc "Why not?"
-            ay "If we split up and look for her individually then we risk losing each other."
+            ay 1g "If we split up and look for her individually then we risk losing each other."
             ay "This world is a warped reflection of our own, [player]."
             ay "If something happens to you, then I won't be able to save you."
             mc "Save me? I can handle myself, Ayame."
-            ay "I have no doubt you can."
+            ay 1b "I have no doubt you can."
             ay "But we have no idea the kinds of things Sayori has put into this world."
             ay "Anything could happen. Maybe not here, or ever but it's a risk I'm not willing to take."
             ay "You, at least, have to make it to the end."
             mc "What about you?"
-            ay "...You have to make it, [player]."
+            ay 1g "...You have to make it, [player]."
             ay "Now, come on. We don't have time."
             ay "Since you know her best, you decide where we're going."
             ay "But remember what I said."
@@ -15727,33 +15766,33 @@ label ch16_end:
             "If I don't choose the correct choice, Natsuki won't be able to help us."
             "What's going to happen to her if I choose wrong?"
             "...I don't want to know."
-            ay "Well? Made up your mind?"
+            ay 1h "Well? Made up your mind?"
             menu:
                 mc "She's going to be at..."
                 "Her house.":
                     mc "The most likely place for her to be is at her house."
                     mc "If I know her, she's going to feel vulnerable."
                     mc "And she'd feel the safest at her house."
-                    ay "But doesn't she have bad memories coming from there?"
+                    ay 1a "But doesn't she have bad memories coming from there?"
                     ay "What with how her dad used to treat her and all..."
                     ay "I'd hardly call it a safe haven."
-                    ay "But..."
+                    ay 1b "But..."
                     "Ayame shrugs."
                     ay "You are the one that knows her, not me."
                     mc "Things have changed, Ayame."
                     mc "Ever since Natsuki reconnected with her family, she's been much better."
-                    ay "That's true, I suppose. She would have never agreed to this otherwise."
+                    ay 1m "That's true, I suppose. She would have never agreed to this otherwise."
                     ay "Alright, [player]. Lead the way."
                     "Ayame grabs my hand and holds tight."
                     mc "U-Uh, what are you doing?"
-                    ay "What? It's so we don't get split up when we traverse there."
+                    ay "What? It's so we don't get split up when we traverse to get there."
                     mc "But we're going to be walking there, aren't we?"
                     mc "It's not like you're going to lose sight of me."
-                    ay "Once you think about Natsuki's house and turn that corner..."
+                    ay 1h "Once you think about Natsuki's house and turn that corner..."
                     "Natsuki points to the street corner where she appeared from moments before."
                     ay "You'll end up at Natsuki's house, assuming it exists in this fragmented world."
                     mc "How--"
-                    ay "It's best not to worry about these things."
+                    ay 1b "It's best not to worry about these things."
                     ay "Just trust me when I say I know what I'm talking about."
                     ay "After all, that's how I got here, remember?"
                     mc "Okay...well then here goes nothing."
@@ -15767,7 +15806,7 @@ label ch16_end:
                     $ pause(0.25)
                     stop sound
                     scene bg n_house_day
-                    show ayame 1a zorder 2 at t11
+                    show ayame 1b zorder 2 at t11
                     hide screen tear
                     window show(None)
                     mc "It should be{fast} somewhere over..."
@@ -15777,10 +15816,10 @@ label ch16_end:
                     "There's something strange about this neighborhood though."
                     "All of the houses except Natsuki's have this black fog around the windows."
                     "It makes it difficult to peer inside the houses."
-                    ay "Well, it's good that this place exists."
+                    ay 1m "Well, it's good that this place exists."
                     ay "It probably means we're on the right track."
                     mc "Probably?"
-                    ay "Just because it exists doesn't mean she'll be here."
+                    ay 1l "Just because it exists doesn't mean she'll be here."
                     ay "Anyway, let's try to find Natsuki."
                     mc "Right..."
                     "I put out a hand to press the doorbell to Natsuki's house."
@@ -15791,7 +15830,7 @@ label ch16_end:
                     "The door seems to have opened by itself."
                     mc "Natsuki? Are you there?"
                     "There's no response."
-                    ay "Guess we better let ourselves in and look for her."
+                    ay 1b "Guess we better let ourselves in and look for her."
                     ay "She might need our help."
                     mc "Right, we're coming in. Hold on, Natsuki!"
                     show screen tear(20, 0.1, 0.1, 0, 40)
@@ -15807,16 +15846,17 @@ label ch16_end:
                     "She steps into the house after me."
                     show ayame 1a zorder 2 at t11
                     ay "You don't have to do that every time you wanna get somewhere, you know."
-                    ay "You can always walk normally."
+                    ay 1h "You can always walk normally."
                     mc "That...wasn't intentional."
                     mc "I just thought about going inside and I somehow ended up in here."
-                    ay "Well, no harm done."
+                    ay 2h "Well, no harm done."
                     ay "Try not to get used to using these shortcuts."
+                    ay 2g "When you lose the ability to do them, you'll crave them."
                     mc "Right..."
-                    ay "Anyway, back to our search."
+                    ay 2h "Anyway, back to our search."
                     ay "Though the fact she hasn't yet responded is worrying."
-                    ay "But the search must go on."
-                    ay "We can split up here since we'll be in close proximity."
+                    ay "But we have to try anyway."
+                    ay 2m  "We can split up here since we'll be in close proximity."
                     ay "Just let me know when you find her through our link and I'll do the same."
                     mc "Got it. I'll check upstairs."
                     ay "Then I suppose I'll check down here. Take care."
@@ -15896,33 +15936,33 @@ label ch16_end:
                     "Trying to get my attention somehow."
                     "It's almost like I'm being drawn towards them."
                     "Maybe if I just..."
-                    show ayame 1a at t11
+                    show ayame 1f at t11
                     ay "What the hell do you think you're doing?"
                     mc "Ayame! I was just--"
                     ay "I finished searching the rooms downstairs."
-                    ay "I found nothing. Instead I see you here looking under a bed."
+                    ay 1a "I found nothing. Instead I see you here looking under a bed."
                     mc "There's these markings..."
                     ay "Get away from them, [player]."
-                    ay "For your own good."
+                    ay "It's for your own good."
                     mc "Do you know what they are?"
                     mc "They could be clues to find Natsuki."
-                    ay "These aren't clues, [player]."
+                    ay 2f "These aren't clues, [player]."
                     ay "They're far from it."
                     mc "What are they then?"
-                    ay "These are markings that were placed here in the previous cycle."
-                    ay "Actually..."
+                    ay 2a "These are markings that were placed here in the previous cycle."
+                    ay 2m "Actually..."
                     "Ayame pushes me aside and takes a closer look at them."
                     ay "There's more of them now..."
-                    ay "Yasuhiro, what have you done?"
+                    ay 2n "Yasuhiro, what have you done?"
                     mc "You know Yasuhiro?"
-                    ay "I...I've said too much already."
+                    ay 1g "I...I've said too much already."
                     ay "Come on, we have to get moving."
                     ay "She isn't here, and you knew what would happen if we went to the wrong place."
-                    ay "I've checked everywhere downstairs, we have to go without her."
+                    ay 1n "I've checked everywhere downstairs, we have to go without her."
                     mc "So...I was wrong?"
                     mc "We have to check the school."
                     mc "We can't just leave her here."
-                    ay "We have no time!"
+                    ay 1f "We have no time!"
                     ay "We--"
                     ay "Wait...do you hear that?"
                     "A voice begins whispering, it's faint and I can barely make out the words."
@@ -15931,7 +15971,7 @@ label ch16_end:
                     "I think it's saying 'you left another behind' in a soft female voice, over and over again."
                     "It's an almost taunting tone."
                     "What does it mean?"
-                    ay "It's your fault. Not mine!"
+                    ay 1n "It's your fault. Not mine!"
                     "Ayame begins yelling at the voice."
                     "Whether it can hear her cries or not"
                     ay "Your fault, not mine!"
@@ -15939,38 +15979,40 @@ label ch16_end:
                     "Does Ayame know who's voice that is?"
                     "I grab onto Ayame and stare directly at her."
                     mc "Ayame!"
-                    ay "It was her fault, [player]."
-                    ay "You have to believe me."
+                    ay 2g "It was her fault, [player]."
+                    ay "You believe me, right?"
+                    mc "Ayame..."
+                    ay 2n "You have to believe me."
                     mc "You have to snap out of it, Ayame."
                     mc "Something is wrong with you."
                     "Ayame puts her head down and looks at the markings."
                     "She shakes her head and takes a deep breath."
-                    ay "Y-You're right..."
+                    ay 1g "Y-You're right..."
                     ay "I almost let her get to me again."
                     mc "Who are you talking about?"
-                    ay "We have to get out of here. Now."
+                    ay 1a "We have to get out of here. Now."
                     ay "We have no choice but to continue on without Natsuki."
                     mc "But--"
-                    ay "I'm sorry, it has to be this way."
+                    ay 1f "I'm sorry, it has to be this way."
                     ay "It's a tough decision, I know."
-                    ay "Believe me...I know."
+                    ay 1g "Believe me...I know."
                     "Ayame lets the voice taunt her for a moment before sighing."
-                    ay "But this is the only way we can save them."
+                    ay 1n "But this is the only way we can save them."
                     ay "If we don't use our time wisely, then it's all for nothing."
                     ay "Do you understand?"
                     ay "Nod your head, if you understand, [player]."
                     "I look at Ayame and reluctantly nod my head."
-                    ay "Good. Then we have to go."
+                    ay 1a "Good. Then we have to go."
                     mc "But where are we going?"
                     ay "I was about to ask you the same thing."
                     ay "You're Sayori's best friend, aren't you?"
                     ay "Surely you would know the place where she would go next."
                     mc "I don't have any idea anymore, Ayame."
                     mc "I don't even know the first place to look."
-                    ay "But there {i}must{/i} be somewhere."
+                    ay 1m "But there {i}must{/i} be somewhere."
                     ay "Somewhere that holds some sort of sentimental value to Sayori."
                     ay "That's the next piece of this puzzle."
-                    ay "So think, [player]. And quickly."
+                    ay 1a "So think, [player]. And quickly."
                     mc "There's only a couple of places I can think of off the top of my head."
                     ay "Name one of them. The one that resonates with you the most right now."
                     ay "In this very instant."
@@ -15987,19 +16029,20 @@ label ch16_end:
                     mc "The most likely place for her to be is at the club."
                     mc "If I know her, she's going to want to be at the most obvious spot to find."
                     mc "And where else would that be but the club?"
-                    ay "That makes sense, I guess."
+                    ay 1l "That makes sense, I guess."
                     ay "The club does seem like the most obvious place for all of us to meet."
-                    ay "But..."
+                    ay 1g "But..."
                     mc "What is it?"
-                    ay "I don't know, I just have a bad feeling about it."
+                    ay 1n "I don't know, I just have a bad feeling about it."
                     ay "It's probably nothing. Let's go."
                     "Ayame offers her hand to me."
-                    ay "Take my hand."
+                    ay 1m "Take my hand."
                     mc "Why?"
                     ay "If we're physically connected, we'll arrive there at the same time."
-                    ay "Travel in this fragmented world is weird, [player]."
+                    mc "I guess...but we don't have to hold hands, do we?"
+                    ay 1a "Travel in this fragmented world is weird, [player]."
                     ay "You heard what I said before, I ended up next to you just as I left my house."
-                    ay "Just trust me, I'll explain when we arrive."
+                    ay 1b "Just trust me, I'll explain when we arrive."
                     mc "Alright..."
                     "I reach out my hand and Ayame quickly grabs it."
                     ay "Are you ready?"
@@ -16012,7 +16055,7 @@ label ch16_end:
                     $ pause(0.25)
                     stop sound
                     scene bg school_front
-                    show ayame 1a zorder 2 at t11
+                    show ayame 1b zorder 2 at t11
                     hide screen tear
                     window show(None)
                     ay "Get ready{fast} to search for her."
@@ -16022,35 +16065,36 @@ label ch16_end:
                     "One second we were in a neighborhood at least a couple of minutes from the school."
                     "And the next we arrive here?"
                     mc "What...just happened?"
-                    ay "We got to the school."
+                    ay 1h "We arrived at school."
+                    ay "And just in time for the morning bell."
                     mc "I can see that, but how?"
-                    ay "It's hard to explain exactly."
+                    ay 1l "It's hard to explain exactly."
                     ay "But because this world is fragmented, it's incomplete."
                     ay "So we can abuse that to get around the place."
-                    ay "Because it's incomplete, some parts of the world don't exist."
+                    ay 1m "Because it's incomplete, some parts of the world don't exist."
                     ay "Traversing through it isn't defined, so--"
                     mc "I think you've lost me."
-                    ay "Basically, this world is fake. You can get to places simply by thinking about them."
+                    ay 2m "Basically, this world is fake. You can get to places simply by thinking about them."
                     ay "Assuming, they exist."
                     ay "And since we arrived at the school just now, it seems to exist."
                     ay "That's a good sign."
                     mc "Exist? Are you saying that the school might not exist?"
                     mc "That doesn't make any sense."
-                    ay "This world has been created by Sayori."
+                    ay 2a "This world has been created by Sayori."
                     ay "She's the one that dictates what does or does not exist."
                     ay "Now come on, let's look for Natsuki."
                     mc "Where should we start?"
-                    ay "I suggest that we split up."
+                    ay 2m "I suggest that we split up."
                     mc "Wait a second, didn't you say it was a bad idea to split up?"
                     ay "That was only if we weren't in close proximity with each other."
                     ay "The school is small enough for that to pose no threat."
                     ay "I'll get started searching the east side of the school."
                     mc "So I guess I'll take the west."
-                    ay "I'm glad you know your cardinal directions."
+                    ay 2l "I'm glad you know your cardinal directions."
                     ay "When you find her, make sure to contact me via our link."
                     ay "I'll do the same, got it?"
                     mc "Yeah, I got it."
-                    ay "Great. Now, let's get moving."
+                    ay 2h "Great. Now, let's get moving."
                     show ayame at thide
                     hide ayame
                     "Ayame quickly runs towards the east side of the school."
@@ -16099,30 +16143,34 @@ label ch16_end:
                     "I have to keep looking."
                     "I have to keep looking."
                     mc "Where are you?!"
-                    show natsuki 1a zorder 2 at t11
+                    show natsuki 1c zorder 2 at t11
                     n "Where is who?"
                     "Natsuki stands at the entrance of the club, holding some kind of bowl on one of her hands."
                     "She takes a spoon and scoops up something from the bowl into her mouth."
                     mc "Natsuki?! But..."
                     mc "Did you take that from the canteen?"
-                    n "W-What? It's your fault that I'm hungry."
+                    n 1h "W-What? It's your fault that I'm hungry."
                     n "I didn't have anything better to do while waiting for you, you know."
                     mc "How long have you been here?"
-                    n "Here?"
+                    n 1q "Here?"
                     "Natsuki steps into the room and puts the bowl aside."
                     "She taps her finger on a desk and looks as if she's thinking hard."
-                    n "I can't really tell how long it's been."
+                    n 1g "I can't really tell how long it's been."
                     n "It feels like this place is all kinds of messed up."
                     n "But it's felt like it's been hours."
-                    mc "Hours? For me it's only felt like a couple of minutes."
+                    n 1q "By the way you sound really different."
+                    n "But I guess I do as well."
+                    mc "Apparently it's because this world isn't the same as ours."
+                    mc "It's fragmented, or something."
+                    mc "But wait...did you say hours? For me it's only felt like a couple of minutes."
                     mc "I don't know about Ayame."
-                    n "Ayame? She's here too?"
+                    n 1c "Ayame? She's here too?"
                     mc "Yeah--"
                     n "You already found each other?"
-                    n "What the hell, [player]?"
+                    n 1e "What the hell, [player]?"
                     n "I can't believe you didn't look for me first."
                     mc "I didn't exactly have a choice."
-                    n "Where is she? She has some explaining to do."
+                    n 1f "Where is she? She has some explaining to do."
                     mc "I'll tell her to come over here."
                     "My Voice" "\"I've found Natsuki, Ayame.\""
                     "My Voice" "\"We're at the club.\""
@@ -16131,43 +16179,44 @@ label ch16_end:
                     "I look at Natsuki, who's taking another serving of whatever is in that bowl."
                     "My Voice" "\"Yeah, I think she's just fine.\""
                     ay "That's good to hear."
-                    show ayame 1a zorder 2 at t33
+                    show ayame 1j zorder 2 at t33
                     "Ayame suddenly appears right beside Natsuki."
                     "She must have used that trick she talked about to get here quickly."
-                    show natsuki 1a zorder 3 at hf32
+                    show natsuki 1o zorder 3 at hf32
                     n "Ah! What the hell?"
                     n "When did you get here?!"
                     show natsuki zorder 2 at t32
-                    show ayame 1a zorder 3 at f33
+                    show ayame 1m zorder 3 at f33
                     ay "There's no time to explain, Natsuki."
                     ay "We've found you, and we need to move to that next stage immediately."
-                    show natsuki zorder 3 at f32
+                    show natsuki 1h zorder 3 at f32
                     show ayame zorder 2 at t33
                     n "Next...stage? What's going to be happening now?"
                     show natsuki zorder 2 at t32
-                    show ayame zorder 3 at f33
+                    show ayame 2m zorder 3 at f33
                     ay "We have to figure out the next place we're going."
                     ay "The next little dimension we have to traverse through."
-                    show natsuki zorder 3 at f32
+                    show natsuki 4b zorder 3 at f32
                     show ayame zorder 2 at t33
                     n "Hold on a second!"
                     n "We only just got reunited and you want us to have to split up again?"
-                    n "Can you at least tell me why the world is like this?"
-                    n "Why is whole place messed up?!"
+                    n 4e "Can you at least tell me why the world is like this?"
+                    n "Why is this whole place messed up?!"
                     show natsuki zorder 2 at t32
-                    show ayame zorder 3 at f33
+                    show ayame 1a zorder 3 at f33
                     ay "I already told you it was because of Sayori."
                     ay "She created these worlds for us, as a layer of protection for her."
                     ay "We have to get through them all if we're to stop her."
                     ay "Explaining any more would complicate things unnecessarily."
                     ay "So we have to go on."
-                    show natsuki zorder 3 at f32
                     show ayame zorder 2 at t33
+                    "Natsuki pulls me aside and starts whispering to me."
+                    show natsuki 4g zorder 3 at f32
                     n "You trust her, don't you?"
                     show natsuki zorder 2 at t32
                     "Natsuki turns to me and stares expectantly."
                     mc "It's complicated."
-                    show natsuki zorder 3 at f32
+                    show natsuki 4q zorder 3 at f32
                     n "Just say whether you trust her or not, [player]."
                     n "After all, you're the one who dragged me into this."
                     menu:
@@ -16183,23 +16232,24 @@ label ch16_end:
                             # $ ch16_ay_level -= 1
                             mc "We don't exactly have much of a choice, do we?"
                             mc "What other option do we have, now that we made it this far?"
-                    show natsuki zorder 3 at f32
+                    show natsuki 2c zorder 3 at f32
                     n "I guess you're right."
+                    "Natsuki turns her attention toward Ayame, seemingly satisfied with my answer."
                     n "Okay, Ayame. What do we need to do?"
                     show natsuki zorder 2 at t32
-                    show ayame zorder 3 at f33
+                    show ayame 1l zorder 3 at f33
                     ay "[player] is the one with the closest connection to Sayori."
                     ay "And so it is up to [player_reflexive] to come up with the place where it would most likely be."
                     ay "Similar to how the first one was just outside the gym, this one is better hidden."
-                    ay "So do you have any ideas where it could be?"
+                    ay 1m "So do you have any ideas where it could be?"
                     show ayame zorder 2 at t33
                     mc "What? Me?"
                     mc "I don't know...there's lots of places."
-                    show natsuki zorder 3 at f32
+                    show natsuki 1e zorder 3 at f32
                     n "Oh, come on. Just think of somewhere."
                     n "The first place that comes to mind when you think of Sayori."
                     show natsuki zorder 2 at t32
-                    show ayame zorder 3 at f33
+                    show ayame 1b zorder 3 at f33
                     ay "The place that resonates with you the most when you think of Sayori."
                     ay "That will be the place we'll need to go to."
                     show ayame zorder 2 at t33
@@ -16207,80 +16257,83 @@ label ch16_end:
                     "One of them seems to stand out the most."
                     "It seems to almost be calling me towards it."
                     mc "I think I know the place."
+                    mc "There's this park that we used to go to."
+                    mc "Back when we were still younger."
         elif ch16_ay_companions == 3:
             mc "Yuri could probably figure it out as well."
-            ay "It's possible..."
+            ay 1m "It's possible..."
             ay "But I'd rather not risk something like that."
             ay "We should help her, to make things easier on her."
-            ay "After all, this is unfamiliar territory to her."
+            ay 1l "After all, this is unfamiliar territory to her."
             ay "To all of us."
             ay "And since the two of us are more comfortable in situations like this..."
-            ay "It's up to us to save her."
+            ay 1b "It's up to us to save her."
             mc "You make a good point."
             mc "But if I know Yuri, she'll try to look for us."
             mc "At the same time, she'll know that the two of us will be looking for her."
             mc "So I don't know what we should do."
-            ay "Hmm...and with our telepathic link broken, it does complicate things."
+            ay 1g "Hmm...and with our telepathic link broken, it does complicate things."
             ay "We'll have to rely on luck."
             mc "Rely on luck? How?"
-            ay "We'll need to guess where she would be."
+            ay 2m "We'll need to guess where she would be."
             ay "The most likely location."
             ay "And we have to hope that she's there."
             mc "And if she isn't?"
-            ay "Then we have to leave her here."
+            ay 2l "Then we have to leave her here."
             mc "How can you even suggest that?"
             mc "I'm the one who dragged her into this, I have to make sure she's okay."
-            ay "I don't want to imagine that scenario, [player]."
+            ay 2n "I don't want to imagine that scenario, [player]."
             ay "But we have no choice."
             ay "If we waste too much time in this place, we'll end up trapped here."
-            ay "And then Sayori will succeed."
+            ay 1g "And then Sayori will succeed."
             ay "Stopping her is our top priority."
             mc "Then what was the point of even bringing Yuri?"
-            ay "I didn't know we would end up separated like this."
+            ay 1n "I didn't know we would end up separated like this."
             ay "Look, let's just do our best to find her. Alright?"
             mc "We're going to find her."
-            ay "Yes. Optimism is good. We'll need that."
+            ay 1b "Yes. Optimism is good. We'll need that."
             ay "Where do you think she could be?"
             ay "Or rather, where do you think she would go to try to find us?"
             mc "She would probably go looking for me."
-            "Would she?"
-            ay "Meaning what exactly?"
+            "Wouldn't she...?"
+            ay 1l "Meaning what exactly?"
             mc "Meaning she would go to places that she thinks I could be."
             mc "I can think of two places."
             ay "And where would those be exactly?"
             mc "It's either that place near the mall..."
             mc "Or at my house."
-            ay "I don't know where either of those places are."
+            ay "A place near the mall or your house..."
+            ay 1b "Well, I don't know where either of those places are."
             ay "You're going to have to take us to one of them."
             mc "Only one of them?"
-            ay "We don't have time to search both of these places, [player]."
+            ay 1a "We don't have time to search both of these places, [player]."
             ay "You know the risks."
             mc "We can't just split up and look for her that way?"
             mc "That would make sure we find her."
             ay "We can't risk splitting up again, [player]."
             ay "Even with our telepathic link active, there's still lots of things you need to look out for."
-            ay "We can't just risk you or I being in trouble and unable to get out of it."
+            ay "We can't just risk you or I being in trouble and being unable to get out of it."
             ay "Even with our super fast travel speeds, it's still risky."
             mc "Why?"
-            ay "This place can and will torture you psychologically."
+            ay 1g "This place can and will torture you psychologically."
             ay "You may be unable to act, or the same may happen to me."
             ay "We need each other to bring us out of extreme situations."
             mc "Is this place really like that?"
             "Ayame's face tells me all I need to know."
             mc "You seem to know a lot about this place."
-            ay "When you've seen what I've seen, it brings back bad memories."
+            ay 1n "When you've seen what I've seen, it brings back bad memories."
             ay "But useful memories..."
             "Does that mean Ayame has experienced this before?"
             ay "But this isn't about me. It's about Yuri."
-            ay "We're trying to look for her."
+            ay 1m "We're trying to look for her."
             ay "So let's do that. Choose where we should go."
             mc "Me? But why?"
-            ay "I don't know where either of those places are."
-            ay "Not to mention, you're much closer to Yuri than I am."
+            ay "I already told you. I don't know where either of those places are."
+            ay 1a "Not to mention, you're much closer to Yuri than I am."
             ay "It only makes sense that you should choose."
             ay "But remember what I said about only going to one place."
             ay "If we don't find her there, then we have to leave her."
-            ay "So don't make your decision lightly."
+            ay 1l "So don't make your decision lightly."
             mc "No pressure then..."
             "Where would Yuri go to find me?"
             "Would she go to my house? Or would she go to that place near the mall?"
@@ -16300,30 +16353,30 @@ label ch16_end:
                     "With what Ayame said, this whole world is messed up."
                     "It's not logical."
                     "But still..."
-                    ay "Have you made up your mind?"
+                    ay 1h "Have you made up your mind?"
                     mc "We're going to my house."
-                    ay "You sound so sure of yourself."
+                    ay 1l "You sound so sure of yourself."
                     ay "Weren't you just there though?"
                     mc "I was, but we were here for a while, weren't we?"
                     mc "And it just seems like the most obvious choice."
                     mc "Yuri would do this logical thing and try to find common ground."
                     mc "We've been to my house enough times..."
                     mc "It's just a hunch. The alternative seems less likely."
-                    ay "And if you're wrong?"
+                    ay 1m "And if you're wrong?"
                     ay "If your hunch is incorrect then..."
                     mc "I don't know what I'll do if I'm wrong."
                     mc "But we won't be wrong. We'll find her."
-                    ay "Optimism is good, I suppose."
+                    ay 1b "Optimism is good, I suppose."
                     ay "But we should hurry if we're going to catch her."
                     ay "She might end up moving."
                     mc "Right."
-                    ay "Which way to your house then?"
+                    ay 1h "Which way to your house then?"
                     "Ayame grabs my hand tight."
                     "She notices the surprised look on my face and shrugs."
                     ay "If we're physically connected, then we should travel at the same time."
                     ay "At least, I think we will."
                     mc "It's not like I'm gonna leave you behind."
-                    ay "No, but I suspect you'll instantly travel there."
+                    ay 1m "No, but I suspect you'll instantly travel there."
                     ay "Similar to how I got over here in the first place."
                     ay "It might not be intentional but since I told you it's lingering on your mind."
                     mc "I don't know how I'm going to do that."
@@ -16336,19 +16389,21 @@ label ch16_end:
                     $ pause(0.25)
                     stop sound
                     scene bg house
-                    show ayame 1a zorder 2 at t11
+                    show ayame 1m zorder 2 at t11
                     hide screen tear
                     window show(None)
                     mc "It's this{fast} way...?"
                     window auto
                     "Barely taking a step forward, I somehow end up right in front of my house."
+                    show ayame 1d
                     "Ayame looks around then smiles before letting go my hand."
                     "She looks pleased with herself for some reason."
                     ay "I knew you would do it."
                     ay "That's good though, may as well get used to it for a while."
-                    ay "I don't know how long we'll be in Sayori's messed up worlds."
+                    ay 1l "I don't know how long we'll be in Sayori's messed up worlds."
+                    ay "But don't get too used to it, or you'll begin to crave it when you lose it."
                     mc "Did you say 'worlds'? As in multiple?"
-                    ay "That is what I said, yeah."
+                    ay 1m "That is what I said, yeah."
                     ay "Don't worry about that for now, let's look for Yuri."
                     mc "She might be inside."
                     ay "Inside? Did you give her a key to your house or something?"
@@ -16359,7 +16414,7 @@ label ch16_end:
                     "There have been times where I've seen a silhouette of a tall person with long hair."
                     "I joked about it one time with Yuri and she laughed when I jokingly said it was her."
                     "She never denied it."
-                    ay "If you say so. I'll stay out here in case she happens to be out here."
+                    ay 1h "If you say so. I'll stay out here in case she happens to be out here."
                     ay "You know your own house better than I ever will, after all."
                     mc "That makes sense. I won't be long."
                     ay "I hope not. I'll tell you on the telepathic link if I find her."
@@ -16416,28 +16471,28 @@ label ch16_end:
                     "The voices stop."
                     "There's a moment of calm as a figure slowly makes its way from underneath my bed."
                     "As it stands up, I breath a sigh of relief."
-                    show yuri 1a zorder 2 at t11
+                    show yuri 3n zorder 2 at t11
                     y "[player]...I..."
                     mc "It's okay, I'm here."
                     y "I didn't know what to do...I..."
                     "Yuri takes a step forward and begins falling to the ground."
                     "I react quickly and catch her in my arms."
-                    y "The voice are so loud, [player]."
+                    y 3t "The voice are so loud, [player]."
                     y "They won't stop. T-They're taunting me..."
                     mc "You can still hear them?"
-                    y "They're still going...make it stop...!"
+                    y 3p "They're still going...make it stop...!"
                     mc "Let's get out of here."
                     "My Voice" "\"Ayame, I found her. She's--\""
-                    show yuri 1a zorder 2 at t21
-                    show ayame 1a zorder 2 at f22
+                    show yuri zorder 2 at t21
+                    show ayame 1m zorder 2 at f22
                     ay "I'm here."
                     "Ayame looks at the position Yuri and I are in and grins."
-                    ay "I hope I'm not interrupting anything."
-                    show ayame 1a zorder 2 at t22
+                    ay 1b "I hope I'm not interrupting anything."
+                    show ayame zorder 2 at t22
                     mc "She just ended up like this."
-                    show ayame 1a zorder 2 at f22
+                    show ayame 1h zorder 2 at f22
                     ay "If you say so. Quickly, let's--"
-                    ay "Agh!"
+                    ay 2n "Agh!"
                     "Ayame grabs her head in pain."
                     ay "What is that sound?"
                     ay "Can you hear that?"
@@ -16445,12 +16500,12 @@ label ch16_end:
                     mc "You're hearing them too?"
                     "The voices are slowly coming back."
                     "I can't tell but they seem to be saying the same sort of thing again."
-                    show ayame zorder 3 at f22
+                    show ayame 2g zorder 3 at f22
                     ay "They're {i}deafening{/i}. I can't stand it."
-                    ay "Grab my hand."
+                    ay 1n "Grab my hand."
                     show ayame zorder 2 at t22
                     mc "What?"
-                    show ayame zorder 3 at f22
+                    show ayame 1f zorder 3 at f22
                     ay "Do it!"
                     show ayame zorder 2 at t22
                     "Ayame forcibly grabs my hand."
@@ -16462,35 +16517,36 @@ label ch16_end:
                     $ pause(0.25)
                     stop sound
                     scene bg house
-                    show yuri 1a zorder 2 at s21
-                    show ayame 1a zorder 2 at t22
+                    show yuri 1p zorder 2 at s21
+                    show ayame 1f zorder 2 at t22
                     hide screen tear
                     window show(None)
                     "She drags me forward, Yuri in tow and{fast} we make it outside."
                     window auto
                     "The voices come to a halt, at least for now."
                     "Ayame begins hyperventilating."
-                    show ayame zorder 3 at f22
+                    show ayame 1n zorder 3 at f22
                     ay "It's over...it's...over."
+                    show yuri 1w at s21
                     show ayame zorder 2 at t22
                     "Yuri looks around before silently falling to the ground."
                     mc "What is going on with the two of you?"
                     mc "The voices were loud but they weren't that bad, were they?"
                     "Ayame manages to finally catch her breath and stares at me."
                     "The look on her eyes were of pure shock."
-                    show ayame zorder 3 at f22
+                    show ayame 1a zorder 3 at f22
                     ay "Do you remember what I said?"
                     ay "About this place being set up so that it could psychologically torture us?"
-                    ay "The voice I heard...it was tormenting me."
+                    ay 1f "The voice I heard...it was tormenting me."
                     ay "It was making me doubt what I was doing, who I was."
                     ay "That voice that I thought I would never hear again."
-                    ay "Her voice..."
+                    ay 1g "Her voice..."
                     show ayame zorder 2 at t22
                     mc "Her voice? Weren't there multiple voices?"
                     mc "I was hearing at least two."
                     mc "One sounded like a girl's voice, and the other was..."
                     mc "Well, it sounded like a guy around my age."
-                    show ayame zorder 3 at f22
+                    show ayame 1n zorder 3 at f22
                     ay "You heard more than one voice?"
                     "Ayame looks at Yuri intently."
                     ay "Yuri...I know this isn't the best time."
@@ -16499,22 +16555,29 @@ label ch16_end:
                     "Did it really affect her that badly?"
                     "Then again...she was exposed to it for much longer than me or Ayame."
                     "And Ayame was only there for a couple of seconds...I can't imagine what she must have gone through."
-                    ay "I'm sorry. I know how distressing it was."
+                    ay 1g "I'm sorry. I know how distressing it was."
                     ay "I'll change the topic..."
                     ay "Just know that we'll have to move soon."
                     "Ayame turns towards me."
-                    ay "It looks like your hunch was right."
+                    ay 1a "It looks like your hunch was right."
+                    ay "And any sooner, she could have been in a lot more distress."
                     ay "But we're not out of the woods yet."
                     show ayame zorder 2 at t22
+                    mc "Is she going to be okay?"
+                    show ayame 1g zorder 3 at f22
+                    ay "I wish I could tell you yes."
+                    ay "But I don't know for sure. Let's just stay optimistic."
+                    ay "She'll snap out of it soon, I hope."
+                    show ayame zorder 2 at t22
                     mc "What's next?"
-                    show ayame zorder 3 at f22
+                    show ayame 1m zorder 3 at f22
                     ay "We have to find the next point to get to the next world."
                     ay "There's no time to waste."
                     ay "So once again, it's up to you."
                     show ayame zorder 2 at t22
                     mc "What am I meant to do?"
                     mc "I don't know the first place the next point could be."
-                    show ayame zorder 3 at f22
+                    show ayame 2m zorder 3 at f22
                     ay "You have to think, [player]."
                     ay "Think!"
                     ay "If you were Sayori, where would you go?"
@@ -16522,12 +16585,12 @@ label ch16_end:
                     mc "I'm not Sayori."
                     mc "But there is one place that's been ringing at the back of my head."
                     mc "Ever since we got here."
-                    show ayame zorder 3 at f22
+                    show ayame 2l zorder 3 at f22
                     ay "Where would that be?"
                     show ayame zorder 2 at t22
                     mc "There's this park..."
                     mc "Sayori and I used to go there a lot when we were younger."
-                    show ayame zorder 3 at f22
+                    show ayame 1h zorder 3 at f22
                     ay "Of course, a place with sentimental value."
                     ay "I don't know how I didn't figure that out sooner."
                     ay "Then let's go there, lead the way."
@@ -16535,14 +16598,22 @@ label ch16_end:
                     mc "Aren't you forgetting something?"
                     "I nudge my head towards Yuri, who is still speechless on the ground."
                     "She looks so defeated. It hurts to see her like this."
-                    show ayame zorder 3 at f22
+                    show ayame 1g zorder 3 at f22
+                    ay "She's still like that, huh?"
+                    "She stares at Yuri while circling around her."
+                    ay 1n "It must have had a really bad effect on her."
+                    ay "Especially being exposed that long."
+                    ay 1m "There's only one thing for it then."
+                    show ayame zorder 2 at t22
+                    mc "What is it?"
+                    show ayame 1l zorder 3 at f22
                     ay "You're the only one that can snap her out of it."
                     show ayame zorder 2 at t22
                     mc "Me? What am I supposed to do?"
-                    show ayame zorder 3 at f22
+                    show ayame 1b zorder 3 at f22
                     ay "Are you kidding? Out of everyone, you're the closest person to Yuri."
                     ay "At times like this, you're the only one who can help her."
-                    ay "I know you can do it."
+                    ay 1j "I know you can do it."
                     show ayame zorder 2 at t22
                     "Ayame smiles reassuringly."
                     "She believes I can snap Yuri out of this."
@@ -16555,41 +16626,43 @@ label ch16_end:
                     "Because that's when everything began to change..."
                     "It just feels like the right place to go."
                     "I just hope Yuri is thinking the same thing."
-                    ay "Have you made up your mind?"
+                    ay 1m "Have you made up your mind?"
                     mc "We're going to the mall."
                     ay "The mall?"
                     mc "Yeah, I think that's where Yuri will be."
                     mc "There's this one spot where something special happened between us."
                     mc "I don't think you would understand."
-                    ay "Yuri wrote about this in the recount she gave me."
+                    ay 1l "Yuri wrote about this in the recount she gave me."
                     ay "She mentioned several secluded spots where she hid some knives."
                     "Several? Just how many places did Yuri hide some knives at?"
+                    "And why would Yuri even write about that...?"
+                    ay 2m "She didn't mention the specifics, but gave some kind of idea."
                     ay "One of them, I think, was near the mall."
                     ay "Right by some pond or lake."
                     mc "That's the place."
                     "I didn't know Yuri went into such detail about her personal life."
                     "Maybe she trusted Ayame enough to reveal that about herself."
                     "Or maybe there's something else."
-                    ay "Right then, lead the way."
+                    ay 1h "Right then, lead the way."
                     ay "I don't know where it is so you're our best shot of finding it."
                     "Ayame grabs onto my arm tightly."
                     mc "What's this for?"
                     ay "I don't know for certain but if we remain in physical contact with each other..."
                     ay "...then I {i}think{/i} we'll travel together."
                     mc "What do you mean?"
-                    ay "I mean we might accidentally get split up along the way."
+                    ay 1j "I mean we might accidentally get split up along the way."
                     ay "Travelling in this world isn't the same as what you're used to."
                     ay "Taking a step while thinking about some place could bring you immediately there."
-                    ay "That's how I got here."
+                    ay 1m "That's how I got here."
                     mc "You thought about this street?"
-                    ay "It's...very familiar to me."
+                    ay 1b "It's...very familiar to me."
                     ay "Look, we don't have the time to burn for this."
                     ay "Let's just get over to the mall and hope it exists."
                     mc "Hope it exists?"
-                    ay "If it doesn't...then there might be a problem."
+                    ay 1a "If it doesn't...then there might be a problem."
                     ay "But, let's stay optimistic for now."
                     mc "That's reassuring..."
-                    ay "Just think about that place where you and Yuri had your moment."
+                    ay 1b "Just think about that place where you and Yuri had your moment."
                     ay "And as you take a step forward, you'll arrive there. Hopefully."
                     mc "Alright...if you say so."
                     "I'm thinking about it."
@@ -16650,7 +16723,7 @@ label ch16_end:
                         "Why was I acting like I didn't care anymore?"
                         "Ayame's Voice" "\"There we go. That wasn't too bad.\""
                         scene bg residential_day
-                        show ayame 1a zorder 2 at t11
+                        show ayame 2n zorder 2 at t11
                         with dissolve_scene_full
                         ay "Are you okay, [player]?"
                         mc "What happened to me?"
@@ -16659,43 +16732,44 @@ label ch16_end:
                         ay "Like you weren't in control of yourself, right?"
                         ay "Like life started to lose all meaning to you?"
                         mc "How did you know?"
-                        ay "Because that's exactly how Monika began to feel when this whole cycle started."
+                        ay 2g "Because that's exactly how Monika began to feel when this whole cycle started."
                         ay "Yours was just accelerated by a magnitude of hundreds."
                         ay "Your feelings started to wane. Your apathy began to rise."
                         ay "If I didn't save you just then..."
-                        ay "Who knows what could have happened?"
+                        ay 2n "Who knows what could have happened?"
                         ay "You may have disappeared from this world."
                         ay "You may have been erased from existence."
                         ay "Your mind may have been altered. But it doesn't matter."
                         ay "What matters is that you're safe and ready to proceed."
                         mc "What about Yuri?"
-                        ay "What about her?"
+                        ay 2a "What about her?"
                         ay "I told you what would happen if you chose incorrectly."
                         mc "We can't just leave her here, Ayame."
                         mc "There's still time. Maybe we can--"
                         ay "No."
-                        ay "You underestimate how long you were in the void for, [player]."
+                        ay 2f "You underestimate how long you were in the void for, [player]."
                         ay "You know that time passes differently, or not at all."
                         ay "What may have seemed like moments could have been several minutes for me."
                         mc "How long was I gone?"
-                        ay "It's hard to determine the exact time, especially with how time is in this world."
+                        ay 1a "It's hard to determine the exact time, especially with how time is in this world."
                         ay "But all you need to know is that we have no time."
                         ay "We need to move to the next place, now."
-                        ay "Please. Don't argue this with me. I wanted her to come too..."
+                        ay 1g "Please. Don't argue this with me. I wanted her to come too..."
                         ay "But this is how it has to be."
                         ay "You live with your choices..."
                         "How was I supposed to know...?"
                         "I feel terrible for leaving her here."
                         "But if what Ayame is saying is true then we don't have a choice."
                         mc "Where do we have to go?"
-                        ay "That's on you, actually."
+                        ay 1m "That's on you, actually."
                         ay "You need to figure out the next place we have to go to."
                         mc "Me? Did you not just see what happened?"
                         mc "Because of me Yuri is going to be stuck here."
                         mc "And besides, I don't even know what I'm supposed to be looking for."
                         ay "Think of it as a chance of redemption."
                         mc "And if I mess up again?"
-                        ay "I know you won't."
+                        ay 1b "I know you won't."
+                        "Ayame smiles reassuringly."
                     else:
                         "Ayame's Voice" "\"Oh no.\""
                         "Ayame's Voice" "\"I can't do it.\""
@@ -16737,33 +16811,34 @@ label ch16_end:
                         # You lose poggers
         elif ch16_ay_companions == 4:
             mc "Natsuki and Yuri are bound to figure it out too, right?"
-            ay "I'd hope so."
+            ay 1h "I'd hope so."
             ay "People do say that two minds are better than one."
-            ay "But I'd argue that's not always the case."
+            ay 1m "But I'd argue that's not always the case."
             mc "What? How come?"
-            ay "If those two minds have conflicting ideas then it's not going to work."
+            ay 1l "If those two minds have conflicting ideas then it's not going to work."
             ay "They'll get nothing done or maybe even do less than if there was only one person."
             mc "I don't see that as a bad thing."
             mc "In fact, I think their differences make them stronger."
-            ay "Oh?"
+            ay 1j "Oh?"
             mc "It shows that people don't have to have friendships with those similar to them."
             mc "I know they'll find their way through this place."
-            ay "Well, that's a nice sentiment and all."
+            ay 1h "Well, that's a nice sentiment and all."
             ay "But just how far is their friendship going to take them in this strange world?"
             mc "I know they'll be fine. I trust them."
-            ay "We'll see if you're right then."
+            mc "They'll find us."
+            ay 2k "We'll see if you're right then."
             mc "Are we going to go look for them?"
-            ay "You have faith in their friendship, don't you?"
+            ay 2j "You have faith in their friendship, don't you?"
             mc "I suppose..."
-            ay "Then we're going to do something else."
+            ay 2h "Then we're going to do something else."
             ay "If they find us by themselves, then you're right."
-            ay "If not, then I suppose we'll have to continue without the two of them."
+            ay 1m "If not, then I suppose we'll have to continue without the two of them."
             mc "What? You can't be serious."
             mc "You want to test their friendship?"
             mc "We should be out there looking for them."
-            ay "No, there's something important you have to see."
+            ay 1a "No, there's something important you have to see."
             ay "They'll find us. You said it yourself."
-            ay "Unless you're taking back what you said?"
+            ay 1m "Unless you're taking back what you said?"
             "Ayame seems genuine about this."
             "I think she knows they'll end up finding us too."
             "Maybe I should put my complete trust in them too."
@@ -16773,20 +16848,21 @@ label ch16_end:
             ay "My house."
             mc "What's at your house that we have to go there?"
             ay "You have to see it for yourself."
-            ay "The fact that it even exists is crazy to me."
+            ay 2a "The fact that it even exists is bizarre to me."
             mc "Why?"
             ay "Because it means that Sayori has been to my house."
-            ay "Inside it, and scoured around the place."
+            ay "She's been inside it, and scoured around the place."
             ay "I don't know if it was intentional that she put it there."
+            ay "...Or if it's simply some side effect."
             mc "Put what where? You're being incredibly vague."
-            ay "You have to see it with your own eyes."
+            ay 1m "You have to see it with your own eyes."
             ay "Grab onto my hand."
             "Ayame reaches out and offers me her hand."
             "She looks at me with a serious look on her face."
             "She must have something planned."
             mc "Alright..."
             "I extend out my hand and connect it with hers."
-            "Immediately she pulls me forward and{nw}"
+            "Immediately, she pulls me forward and{nw}"
             $ _history_list.pop()
             show screen tear(20, 0.1, 0.1, 0, 40)
             window hide(None)
@@ -16794,30 +16870,30 @@ label ch16_end:
             $ pause(0.25)
             stop sound
             scene bg ay_house
-            show ayame 1a zorder 2 at t11
+            show ayame 1m zorder 2 at t11
             hide screen tear
             window show(None)
-            "Immediately she pulls me forward and{fast} we quickly appear outside a large house."
+            "Immediately, she pulls me forward and{fast} we quickly appear outside a large house."
             window auto
             "How did we get here?"
             "Wait a second...is this Ayame's house?"
             "I guess she does have a wealthy family, I shouldn't be surprised."
             "But how did we get to her house soon? Does she live nearby?"
             "Even if she did, it makes no sense to just suddenly be here..."
-            ay "You have questions, I don't have the time to answer."
+            ay 1a "You have questions, I don't have the time to answer."
             ay "I will just say that this world has a few 'shortcuts'."
             ay "If you know how to get to a destination, getting there is only a thought away."
             "Ayame seems to know a lot about this."
             "As if she's done this all before..."
             ay "Now come on, follow me."
             scene bg ay_livingroom
-            show ayame 1a zorder 2 at t11
+            show ayame 1l zorder 2 at t11
             with wipeleft_scene
             "Ayame takes us through her house."
             "For some reason, it seems a lot bigger on the inside than out."
             "We get to what I can only assume is her living room before she stops and holds a hand out her ear."
             mc "What now?"
-            ay "You don't hear that?"
+            ay 1a "You don't hear that?"
             mc "Hear...what?"
             ay "The whispering. Listen closely."
             "Silence fills the room as I try to hear these whispers Ayame is talking about."
@@ -16826,29 +16902,29 @@ label ch16_end:
             "I can't tell what it is."
             mc "I hear some kind of instrument playing."
             mc "Not a whisper."
-            ay "Instruments? I knew they would be different sounds to everyone but..."
+            ay 2g "Instruments? I knew they would be different sounds to everyone but..."
             ay "Alright. Then I need you to see something."
             mc "What is..."
             "Before I can ask her what she wants me to see, Ayame begins moving the couch across the floor."
             "It was hard to tell before but looking at it directly, it seems there's some writing on the floor written in dark ink."
             "It camouflages almost perfectly with the carpet."
             mc "...this?"
-            ay "Something terrible. Go on, read it."
+            ay 2n "Something terrible. Go on, read it."
             "I try to read the writing on the floor."
             "For some reason, the longer I stare at it, the harder it is to make out."
             "I can see the letters but I can't seem to form the word in my head."
             mc "What the hell is this?"
             mc "I can't make out what it's saying even though..."
-            ay "Strange, isn't it? Your eyes won't let you read it."
+            ay 1a "Strange, isn't it? Your eyes won't let you read it."
             ay "It's almost like a defense mechanism."
             mc "What?"
             ay "Your mind is subconsciously stopping you from inflicting yourself."
             mc "Inflicting myself with what?"
-            ay "Something you don't need to worry yourself about."
+            ay 1g "Something you don't need to worry yourself about."
             # Monika arc foreshadowing
             ay "And hopefully, {i}never{/i} have to worry yourself about."
             mc "Can you read what it says?"
-            ay "..."
+            ay "...It says 'test'. At least, I think it does."
             ay "Look, forget about the writing, maybe you can see what's underneath it."
             ay "It's a picture, of sorts."
             "I turn my attention to a small drawing underneath it."
@@ -16863,116 +16939,163 @@ label ch16_end:
             mc "What are you talking about, Ayame?"
             mc "How could this possibly be supernatural?"
             mc "It just seems like you didn't clean this part of the carpet or something..."
-            ay "It's the threat that's--"
+            ay 1f "It's the threat that's--"
+            show ayame 1g
             "Ayame looks at me then sighs."
             ay "You know what, never mind."
+            ay "I shouldn't have brought you here."
+            ay 1n "What the hell was I thinking?"
             ay "We have enough to worry about for now."
-            ay "Just remember to keep that image in mind."
-            ay "You might need it for the road ahead."
+            ay "But now that you've seen it, just remember to keep that image in mind."
+            ay 1a "You might need it for the road ahead."
             mc "Right..."
             "I don't know what the significance of this is but Ayame seems to think it could help in the future."
-            "I'll try to keep it in mind. That said, it seems to be etched into my memory."
+            "Ayame seems to be giving me mixed signals about this place so I'm not sure what to do."
+            "I guess I can try to keep it in mind...that said, it seems to be etched into my memory."
             "Like it's engraved itself into my brain somehow."
             "I don't think I could get the image out of my head if I tried."
             mc "Speaking of roads, do Yuri and Natsuki know how to get here?"
             mc "You said they'd find us, right?"
-            ay "I did."
+            ay 1m "I did."
             ay "I know they'll figure it out."
             mc "Figure what out exactly?"
             mc "You said it yourself, didn't you?"
             mc "If you know how to get to a destination, then you can get there with a thought."
             mc "Have they ever been here?"
-            ay "As far as I can tell, no."
+            ay 1l "As far as I can tell, no."
             ay "But that's not going to stop them."
             mc "We have to look for them!"
-            ay "We don't have time to do that."
+            ay 1m "We don't have time to do that."
             ay "Besides, doing that now would only increase our chances of not finding them."
             ay "It's best we just stay put."
             mc "How can you be so confident--"
             ay "How can you not be?"
-            ay "You put your faith in them. I'm doing that right now."
+            ay 1b "You put your faith in them. I'm doing that right now."
             ay "If they don't pass their test, then that's unfortunate for them."
             mc "And also for us. I think you're forgetting why we brought them along in the first place."
             mc "It wasn't to test them, it was to help with Sayori."
             ay "I know that, [player]."
             ay "But if the two of them aren't compatible, then they'll only be a liability when it comes to Sayori."
-            ay "You have to trust me on this."
-            ay "And you have to trust in them."
+            ay 1h "You have to trust me on this."
+            ay 1j "And you have to trust in them."
             mc "I just feel so restless."
             mc "I got them into this mess and I'm doing nothing to help."
-            mc "They trusted me to do the right thing and instead I'm doing nothing."
+            mc "Not to mention we made a detour to your house that I still don't know the reason for."
+            ay 1n "I'm not sure myself...it's like a thought in the back of my head told me to lead you here."
+            ay "But now that I have, it's seems like the right thing to do."
+            ay "Because Yuri and Natsuki were going to go here anyway..."
+            ay 1m "...How do I know that for sure?"
+            ay 1n "I don't get it. Just disregard what I'm saying."
+            ay "I seem to be mumbling to myself..."
+            ay 1m "What were you saying?"
+            mc "It's just that they trusted me to do the right thing and instead I'm doing nothing."
             mc "Don't you understand how that feels?"
-            ay "I do."
+            ay 1g "I do."
             "Ayame looks away and stares into the distance."
             ay "Believe me, I do."
             "I wonder just what Ayame did before all of this."
             "Clearly there's more to it than what she's letting on."
             n "They're going to be over here."
             mc "Was that...?"
-            show natsuki 1a zorder 3 at f31
+            show natsuki 2d zorder 3 at f31
             n "See? There they are!"
             "From the corner of the street, I can see Natsuki."
             "And right next to her is..."
             show natsuki zorder 2 at t31
-            show yuri 1a zorder 3 at f32
+            show yuri 3q zorder 3 at f32
             show ayame zorder 2 at t33
             y "How did we even end up over here?"
             y "This makes no sense..."
             show yuri zorder 2 at t32
             mc "Yuri...Natsuki...you're--"
-            show natsuki zorder 3 at f31
+            show natsuki 2e zorder 3 at f31
             n "Yeah, we're fine."
-            n "What? Did you expect us to get lost or something?"
+            n "No thanks to the two of you."
+            n 2c "What? Why are you looking at me like that?"
+            n "Did you expect us to get lost or something?"
             show natsuki zorder 2 at t31
-            show ayame zorder 3 at f33
+            show ayame 2d zorder 3 at f33
             ay "[player] totally did."
             ay "But I knew you two would find us."
-            show yuri zorder 3 at f32
+            show yuri 1f zorder 3 at f32
             show ayame zorder 2 at t33
             y "With two heads, we were able to figure out things pretty quickly."
             y "Surprisingly, because we had different thought processes, we were able to discern things more easily."
             y "With Natsuki's shocked outbursts and my analytical skills, we figured out that this place we're in isn't the same as where we were."
-            y "It's like some kind of twisted, horrible place. Like something out of a horror book."
-            show natsuki zorder 3 at f31
+            y 1t "It's like some kind of twisted, horrible place. Like something out of a horror book."
+            show natsuki 1a zorder 3 at f31
             show yuri zorder 2 at t32
             n "But I guess it isn't all bad since the two of you are here."
             show natsuki zorder 2 at t31
             mc "How did you even find us?"
-            show yuri zorder 3 at f32
+            show yuri 1q zorder 3 at f32
             y "T-That's...um...."
-            show natsuki zorder 3 at f31
+            show natsuki 1c zorder 3 at f31
             show yuri zorder 2 at t32
             n "I figured you two would have found each other and would have stayed in one spot."
             n "There were only a few options that we had to go through."
             show natsuki zorder 2 at t31
-            show yuri zorder 3 at f32
+            show yuri 1v zorder 3 at f32
             y "It was either [player]'s house, the school itself, which we already searched..."
-            show natsuki zorder 3 at f31
             show yuri zorder 2 at t32
-            n "Or Ayame's house, which neither of us knew how to get to."
-            n "So we went through the records at school."
+            mc "You had time to search the school?"
+            mc "I don't think I've had nearly as much time as the two of you have."
+            show yuri 1f zorder 3 at f32
+            y "Natsuki and I arrived at different times."
+            y "I'm sure that I was first to arrive, because I noted the clocks weren't functioning correctly and wrote down the time."
+            y "Natsuki told me that time on the clocks when she arrived which was apparently only a few minutes after I did."
+            y "But it felt like hours to me. I was able to search a good section of the school before Natsuki arrived."
+            y 1f "After that, we simply split searching the rest of the school."
+            show natsuki 2g zorder 3 at f31
+            show yuri zorder 2 at t32
+            n "Just get to the point already."
             show natsuki zorder 2 at t31
-            show yuri zorder 3 at f32
+            show yuri 1q zorder 3 at f32
+            y "R-Right..."
+            y "It lead me to believe that the two of us must have arrived long before the two of you did, at least in our perspective."
+            y "And that each arrival is separated by a few minutes in this world's time flow, but hours to us."
+            show natsuki 1g zorder 3 at f31
+            show yuri zorder 2 at t32
+            n "Since we already searched the school and ruled out the other options..."
+            n "The only other option was Ayame's house, which neither of us knew how to get to."
+            n "We thought that it was some kind of test, to see if we could work together to find some place we didn't know."
+            n 1a "So we went through the records at school."
+            show natsuki zorder 2 at t31
+            show yuri 3p zorder 3 at f32
             y "F-For the record, I was against it from the beginning."
-            show natsuki zorder 3 at f31
+            show natsuki 1a zorder 3 at f31
             show yuri zorder 3 at t32
             n "Come on, as soon as we got there you were all over it."
-            n "Anyway, once we found Ayame's record we just thought about the directions and suddenly..."
+            n 1b "Anyway, once we found Ayame's record we just thought about the directions and suddenly..."
             n "We ended up a few streets away from here."
             show natsuki zorder 2 at t31
-            show ayame zorder 3 at f33
+            show ayame 2h zorder 3 at f33
             ay "I'm glad you two were able to work so well together."
-            show natsuki zorder 3 at f31
+            ay "I'm thankful that the two of you could figure this world out so fast."
+            ay 2b "It gives me hope."
+            show natsuki 1k zorder 3 at f31
             show ayame zorder 2 at t33
             n "Don't thank us yet. We have no idea what to do from here."
             n "I was hoping one of you knows what to do now."
-            n "Because we might know how to get around here, but we have no idea what to do next."
+            n 1c "Because we might have figured out how to get around here, but we have no idea what to do next."
             show natsuki zorder 2 at t31
-            show ayame zorder 3 at f33
+            show ayame 1j zorder 3 at f33
             ay "I don't know exactly where we have to go next."
+            "Everyone looks at Ayame in disbelief."
             ay "But luckily for us, [player] does."
             show ayame zorder 2 at t33
             mc "I do?"
+            show ayame 1h zorder 3 at f33
+            ay "You're the only one who could figure this next part out."
+            ay "It's your test."
+            ay "So think, [player]."
+            ay 1j "Where's our next destination?"
+            ay "Where is Sayori?"
+            show ayame zorder 2 at t33
+            mc "I think you're putting a little too much trust in me."
+            mc "How could I possibly know where Sayori is?"
+            show ayame 1m zorder 3 at f33
+            ay "You're the one with the strongest link to her, aren't you?"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
