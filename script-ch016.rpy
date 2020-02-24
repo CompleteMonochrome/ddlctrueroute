@@ -15698,6 +15698,64 @@ label ch16_end:
             show monika zorder 2 at t22
             ay "It would be foolish not to be."
             ay "We have no idea what that is, or what Sayori will resort to."
+            ay "I'm just being cautious, that's all."
+            show ayame zorder 2 at t21
+            show monika zorder 3 at f22
+            m "Can you make out what it's saying?"
+            m "It seems to be repeating the same thing, over and over."
+            m "As if some sort of chant."
+            show monika zorder 2 at t22
+            mc "It sounds to me like it's saying 'go back'."
+            mc "Like it doesn't want us to be here."
+            show ayame zorder 3 at f21
+            ay "Go back?"
+            ay "That sounds nothing like what I'm hearing."
+            ay "To me it sounds more like 'remember'."
+            ay "And it's just repeating that constantly."
+            ay "But remember what exactly...?"
+            show ayame zorder 2 at t21
+            show monika zorder 3 at f22
+            m "Now I know you two are messing with me."
+            m "That disembodied voice is definitely not saying either of those things."
+            m "'To when we were innocent', or something to that degree is what I'm hearing."
+            m "But if you two aren't just fooling around, then..."
+            show ayame zorder 3 at f21
+            show monika zorder 2 at t22
+            ay "Maybe it's supposed to relay some kind of message."
+            show ayame zorder 2 at t21
+            show monika zorder 3 at f22
+            m "That's exactly what I was thinking!"
+            m "So we have 'to when we were innocent', 'remember' and 'go back'."
+            m "It seems the message is as clear as day."
+            show ayame zorder 3 at f21
+            show monika zorder 2 at t22
+            ay "On that, we can both agree on."
+            ay "[player], it's up to you to take us there."
+            show ayame zorder 2 at t21
+            mc "Me again?"
+            show monika zorder 3 at f22
+            m "That's right. You're the only one who could possibly solve this."
+            m "None of us have your experience with Sayori when you were 'innocent'."
+            m "So you have to remember."
+            show ayame zorder 3 at f21
+            show monika zorder 2 at t22
+            ay "You have to go back."
+            ay "You probably have suppressed memories."
+            ay "Memories that you'll need to get us through."
+            show ayame zorder 2 at t21
+            mc "I'm not sure I follow."
+            show monika zorder 3 at f22
+            m "The voices combine to say 'Go back. Remember to when we were innocent.'"
+            m "That's the only logical way to rearrange what we were hearing."
+            "Monika looks over to Ayame to get her confirmation. She nods her head."
+            m "This is pure speculation, but I think that you know something that only you and Sayori know."
+            m "Back when the two of you were 'innocent'."
+            m "Perhaps a place in this park that could lead us to the next portal."
+            show monika zorder 2 at t22
+            mc "How exactly am I meant to remember?"
+            mc "Besides, I don't even know when I supposedly lost my innocence."
+            mc "This could be anything for all we know."
+            # Monika part continue here (so I can find it easier in future)
         elif ch16_ay_companions == 2:
             mc "Couldn't Natsuki figure it out too?"
             ay 1l "We'll see about that."
