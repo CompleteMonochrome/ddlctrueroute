@@ -793,6 +793,8 @@ label after_load:
         $ ch16_ay_asked = [False,False,False,False]
     if not hasattr(store,'ch16_ay_question_number'):
         $ ch16_ay_question_number = 0
+    if not hasattr(store,'ch16_ay_decision_count'):
+        $ ch16_ay_decision_count = 0
     if not hasattr(store,'ch16_m_plantold'):
         $ ch16_m_plantold = False
     if not hasattr(store,'ch16_ay_drink'):

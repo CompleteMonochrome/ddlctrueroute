@@ -13335,7 +13335,7 @@ label ch16_end:
         mc "No, I think I get it."
     n 2k "But the point is, I want you to practice off-stage while it's not your turn."
     n "I know you think you'll be fine, but I want to make sure."
-    n "2g You know, so we don't end up as the laughing stock of the school for the next week."
+    n 2g "You know, so we don't end up as the laughing stock of the school for the next week."
     mc "You really think people are that mean?"
     show monika 3a zorder 3 at f33
     m "Only some. Though I'm sure the school wouldn't do that to us."
@@ -13670,7 +13670,7 @@ label ch16_end:
             m "A future that maybe you have a chance to save..."
             m "As opposed to guaranteed doom and nobody wins."
             m 2e "But you still have to play your role first."
-        m 5 "Good luck on your part, [player]~"
+        m 5a "Good luck on your part, [player]~"
     show monika at thide
     hide monika
     "Monika looks me directly in the eyes before smiling and walking away."
@@ -14779,7 +14779,7 @@ label ch16_end:
                     ay "It means that it will be worth it."
                     n 2q "Let's just get on with it already."
                 else:
-                    $ ch16_ay_companions == 0
+                    $ ch16_ay_companions = 0
                     y 1r "If Natsuki won't help, then I will."
                     n 5g "You will?"
                     y 2v "I know, it's out of character. It isn't something I want to be doing."
@@ -15176,6 +15176,7 @@ label ch16_end:
         mc "That does make sense."
         mc "What about the park then?"
         ay "The park?"
+        label ch16_lost_companion:
         mc "It's a park that Sayori and I used to go to a lot."
         mc "Back when we were younger."
         ay 1m "That could be it."
@@ -15203,10 +15204,19 @@ label ch16_end:
         "It's a soft whisper, quietly telling me to go back."
         "Go back. Go back. Go back."
         mc "Do you hear that?"
-        ay 1a "Hear what? That voice in our heads telling us to go back?"
+        ay 1a "Hear what? That voice in our heads telling us to 'remember'?"
         ay "Yes, I hear it loud and clear."
         ay "Which probably means we're on the right track."
-        mc "What are we supposed to find here?"
+        mc "'Remember'? That's not what I'm hearing at all."
+        ay "Huh?"
+        mc "I'm hearing 'go back'. Like a warning, or something."
+        ay "Interesting...so we're hearing two different things."
+        ay "Maybe they're connected somehow."
+        ay "But all we have to work with is 'go back' and 'remember'."
+        mc "Go back. Remember."
+        mc "Remember. Go back...?"
+        ay "They don't seem to make sense whichever way you say them."
+        mc "Well, what are we supposed to find here?"
         ay 1m "Maybe Sayori. Maybe something else."
         ay "Whatever the case, it's going to lead us to the next place Sayori has or is going to run off to."
         ay "Are you feeling nervous?"
@@ -15249,6 +15259,33 @@ label ch16_end:
         ay "That's right. I think we're getting closer to it."
         ay "I can sense it."
         ay 1n "It feels so close yet so far away..."
+        ay "Think, Ayame, think!"
+        ay "Those two things the voices are whispering to us..."
+        ay "Perhaps they're telling you something."
+        mc "What do you mean?"
+        ay "Maybe you need to delve into your memories."
+        ay "Go back into the past and remember something important."
+        mc "That could be anything."
+        mc "How am I suppose to--"
+        ay "[player], just...!"
+        ay "Ugh!"
+        "Ayame sighs."
+        ay "Sorry, I guess that must be the desperation affecting me."
+        ay "You're the only one who could possibly figure this next part out."
+        ay "I don't have your memories."
+        ay "I suppose I could access them somehow but we don't have the time."
+        ay "So please, just try to remember."
+        mc "Okay...I can try."
+        "I close my eyes and try to think."
+        "I still have no idea what I'm meant to try to remember."
+        "But if it's in my past, maybe it's about my childhood..."
+        "My childhood with Sayori?"
+        "That's the only thing that makes sense to think of."
+        "I didn't meet any of the other girls until I was a member of the club."
+        "At least, not to the extent I know them now."
+        "Unless somehow it has to do with the other girls...?"
+        "No. Focus, [player]. I can do this."
+        # Only Ayame continue part here
     else:
         ay 2m "The longer we spend in this time, the less we'll have on the others."
         ay "So the first thing we should do is to group up."
@@ -15755,6 +15792,13 @@ label ch16_end:
             mc "How exactly am I meant to remember?"
             mc "Besides, I don't even know when I supposedly lost my innocence."
             mc "This could be anything for all we know."
+            mc "We could be missing words or phrases."
+            # MC is right btw, all girls will hear different things to make one whole phrase
+            show ayame zorder 3 at f21
+            ay "It's our best shot right now."
+            ay "If we don't act soon then it might be too late to do anything."
+            ay "So please, try to remember."
+            show ayame zorder 2 at t21
             # Monika part continue here (so I can find it easier in future)
         elif ch16_ay_companions == 2:
             mc "Couldn't Natsuki figure it out too?"
@@ -16083,6 +16127,7 @@ label ch16_end:
                     ay "There are several scattered throughout the city."
                     ay "You must have a specific one in mind, right?"
                     mc "Yeah..."
+                    # Natsuki continue part here v1
                 "The club.":
                     mc "The most likely place for her to be is at the club."
                     mc "If I know her, she's going to want to be at the most obvious spot to find."
@@ -16317,6 +16362,7 @@ label ch16_end:
                     mc "I think I know the place."
                     mc "There's this park that we used to go to."
                     mc "Back when we were still younger."
+                    # Natsuki continue part here v2
         elif ch16_ay_companions == 3:
             mc "Yuri could probably figure it out as well."
             ay 1m "It's possible..."
@@ -16677,6 +16723,7 @@ label ch16_end:
                     "She believes I can snap Yuri out of this."
                     "But I don't even know what 'this' is."
                     mc "Yuri..."
+                    # Yuri continue part here v1
                 "The mall.":
                     "The secluded area near the mall has to be the place, doesn't it?"
                     "It makes the most sense."
@@ -16828,6 +16875,7 @@ label ch16_end:
                         mc "And if I mess up again?"
                         ay 1b "I know you won't."
                         "Ayame smiles reassuringly."
+                        # Yuri continue part here v2
                     else:
                         "Ayame's Voice" "\"Oh no.\""
                         "Ayame's Voice" "\"I can't do it.\""
@@ -17154,6 +17202,20 @@ label ch16_end:
             mc "How could I possibly know where Sayori is?"
             show ayame 1m zorder 3 at f33
             ay "You're the one with the strongest link to her, aren't you?"
+            ay "There must be something you can figure out using that."
+            show natsuki zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "It makes sense..."
+            n "But I don't think it's going to be that easy."
+            show natsuki zorder 2 at t31
+            show yuri zorder 3 at f32
+            y "It never is with these sort of things."
+            y "Perhaps we have to awaken some sort of dormant memory."
+            y "Something that [player] might have forgotten after all this time."
+            show yuri zorder 2 at t32
+            show ayame zorder 3 at f33
+            ay "You might be onto something here."
+            # Natsuki and Yuri continue part here
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
