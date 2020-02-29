@@ -15233,7 +15233,11 @@ label ch16_end:
         show ayame at s11
         "Ayame slumps down on one of the benches."
         "Suddenly, the voice stops and there's nothing left but silence."
-        ay 1m "It's stopped. But what could that mean...?"
+        ay 1m "It's stopped. Has it done the same for you?"
+        mc "It's stopped. What happened?"
+        ay "I don't know. I just sat down and--"
+        ay "That's it! Sitting down here must have triggered it, somehow."
+        ay "But what could that mean...?"
         show ayame at t11
         "Ayame stands up and looks toward me."
         "As she gets up, the whispering voice returns again."
@@ -15258,14 +15262,19 @@ label ch16_end:
         mc "There's meant to be another portal or something, right?"
         ay "That's right. I think we're getting closer to it."
         ay "I can sense it."
-        ay 1n "It feels so close yet so far away..."
+        ay "And the voice changed what it's saying too, didn't it?"
+        mc "Yeah...it's now saying 'it's playtime'."
+        ay "For me, it's changed to 'come on'."
+        ay "It's sounds like it's almost taunting us, isn't it?"
+        ay 1n "We must be getting close."
         ay "Think, Ayame, think!"
         ay "Those two things the voices are whispering to us..."
-        ay "Perhaps they're telling you something."
+        ay "Perhaps they're telling {i}you{/i} something."
         mc "What do you mean?"
         ay "Maybe you need to delve into your memories."
         ay "Go back into the past and remember something important."
         mc "That could be anything."
+        ay "Something relating to playing."
         mc "How am I suppose to--"
         ay "[player], just...!"
         ay "Ugh!"
@@ -15285,7 +15294,11 @@ label ch16_end:
         "At least, not to the extent I know them now."
         "Unless somehow it has to do with the other girls...?"
         "No. Focus, [player]. I can do this."
-        # Only Ayame continue part here
+        "Go back to when I was younger, during playtime."
+        "Think of me and Sayori...where would we go?"
+        "As I delve deeper into my memories, one place seems to spring to mind."
+        "One place that seems to be overpowering all others."
+        # Ayame part
     else:
         ay 2m "The longer we spend in this time, the less we'll have on the others."
         ay "So the first thing we should do is to group up."
@@ -15799,6 +15812,37 @@ label ch16_end:
             ay "If we don't act soon then it might be too late to do anything."
             ay "So please, try to remember."
             show ayame zorder 2 at t21
+            mc "I'm trying...but I can't seem to figure out anything."
+            mc "Just give me a second to think..."
+            "I take a seat on one of the benches."
+            "As I sit down, the voice suddenly stops and an eerie silence fills the air."
+            "Before I can even process what happened, the silence is replaced by another voice."
+            "It's more frantic this time and it's changed what it's saying."
+            "It's playtime. It's playtime. It's playtime."
+            show monika zorder 3 at f22
+            m "I take it the two of you are hearing different things as well then?"
+            show ayame zorder 3 at f21
+            show monika zorder 2 at t22
+            ay "That's right. It seems that [player] must have triggered something."
+            "Ayame ponders for a moment."
+            ay "Take a step back, [player]."
+            show ayame zorder 2 at t21
+            mc "Huh? O-Okay..."
+            "I stand up from the bench and take a step back."
+            "The voice still seems to be repeating the same thing."
+            show ayame zorder 3 at f21
+            ay "Since the voice is still repeating 'come on' for me, I'd say we're on the right track."
+            ay "Tell me, does this bench mean anything to you?"
+            show ayame zorder 2 at t21
+            mc "This bench?"
+            "I take a closer look at the bench and dig through my memories."
+            "Suddenly, it comes flooding back. All those memories..."
+            mc "This bench...I remember now."
+            mc "Sayori and I used to sit there all the time."
+            mc "After we finished playing around in the playground."
+            mc "It's where we would talk and come up with new adventures together."
+            show monika zorder 3 at f22
+            m "Adventures?"
             # Monika part continue here (so I can find it easier in future)
         elif ch16_ay_companions == 2:
             mc "Couldn't Natsuki figure it out too?"
