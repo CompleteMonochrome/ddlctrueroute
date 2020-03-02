@@ -15843,6 +15843,75 @@ label ch16_end:
             mc "It's where we would talk and come up with new adventures together."
             show monika zorder 3 at f22
             m "Adventures?"
+            show monika zorder 2 at t22
+            mc "When we were younger, that's what we used to call those little things we made up."
+            mc "Our imagination became our limit."
+            show ayame zorder 3 at f21
+            ay "That still doesn't explain why this bench is important."
+            ay "Sure you two sat here all the time."
+            ay "But you also sit at your desks at school all the time."
+            show ayame zorder 2 at t21
+            mc "I guess you could call this bench our hub."
+            mc "It's where we would go after every adventure to rest and talk about it."
+            mc "Which is why it holds so much sentimental value."
+            mc "But I don't know how we're meant to follow her."
+            mc "There's meant to be a portal or something, right?"
+            show ayame zorder 3 at f21
+            ay "That's right. It must be really close."
+            "Ayame holds out her hand in front of her."
+            "She closes her eyes and takes a deep breath before turning toward me."
+            ay "I can feel it."
+            ay "It's like it's just out of reach."
+            ay "Like it's right under our noses."
+            show ayame zorder 2 at t21
+            show monika zorder 3 at f22
+            m "Forgive me if this seems rather...insensitive."
+            m "But what if the test is to sever your connections?"
+            show ayame zorder 3 at f21
+            show monika zorder 2 at t22
+            ay "What are you trying to imply here, Monika?"
+            show ayame zorder 2 at t21
+            show monika zorder 3 at f22
+            m "I'm implying that maybe to open this portal, we need to break this bench."
+            m "That in order to stop Sayori, [player] has to break [player_possessive] bond with Sayori."
+            m "One step at a time."
+            show ayame zorder 3 at f21
+            show monika zorder 2 at t22
+            ay "That seems cruel..."
+            ay "But I don't see another lead."
+            ay "From what I can tell, the portal should be right around here."
+            ay "And yet, it's not here. It's like it's dormant."
+            ay "[player], you said that bench holds sentimental value to you."
+            ay "Would you be okay if we desecrated it?"
+            show ayame zorder 2 at t21
+            mc "What...?"
+            show monika zorder 3 at f22
+            m "She's asking if you'll be okay if we break it."
+            m "Even if it does hold sentimental value to you..."
+            if monika_type == 0:
+                m "This world isn't real."
+                m "That can't be the same bench as the one in the world we know."
+                m "Our world."
+            else:
+                m "We don't exactly have another option."
+                m "Your feelings are going to have to come second."
+            show monika zorder 2 at t22
+            mc "I don't know about this."
+            mc "What if you're wrong?"
+            "I'm remembering so many things about this now."
+            "Why are these memories flooding back?"
+            mc "I can't just pretend this never existed and get rid of it so easily."
+            show ayame zorder 3 at f21
+            show monika zorder 2 at t22
+            ay "I'm of the same mind as Monika."
+            ay "Hear me out, I'm speaking logically as someone who wants to save this world."
+            ay "I'm not to doubting you, but you only just remembered this bench, didn't you?"
+            ay "It's not like you've always kept it in mind."
+            ay "It's clear that the sentiment on this bench has disappeared."
+            ay "Or perhaps misplaced."
+            show ayame zorder 2 at t21
+            mc "It's not misplaced, Ayame."
+            mc "I just..."
             # Monika part continue here (so I can find it easier in future)
         elif ch16_ay_companions == 2:
             mc "Couldn't Natsuki figure it out too?"
