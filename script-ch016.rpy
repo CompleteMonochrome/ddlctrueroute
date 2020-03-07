@@ -16475,6 +16475,68 @@ label ch16_end:
                     mc "I think I know the place."
                     mc "There's this park that we used to go to."
                     mc "Back when we were still younger."
+                    show natsuki zorder 3 at f32
+                    n "Well, what are we waiting for?"
+                    n "Take us there already."
+                    show natsuki zorder 2 at t32
+                    mc "Okay, take my hand."
+                    "I extend out both my arms and offer one to Ayame and one to Natsuki."
+                    show natsuki zorder 3 at f32
+                    n "What's this meant to be?"
+                    show natsuki zorder 2 at t32
+                    show ayame zorder 3 at f33
+                    ay "Just hold onto [player_possessive] hand, and tight."
+                    ay "You'll see it in just a minute."
+                    show natsuki zorder 3 at f32
+                    show ayame zorder 2 at t33
+                    n "I don't like this."
+                    n "But I don't really have the time to argue, do I?"
+                    show natsuki zorder 2 at t32
+                    "They both grab one and hold on tight."
+                    mc "Okay, here goes nothing...{nw}"
+                    $ _history_list.pop()
+                    show screen tear(20, 0.1, 0.1, 0, 40)
+                    window hide(None)
+                    play sound "sfx/s_kill_glitch1.ogg"
+                    $ pause(0.25)
+                    stop sound
+                    scene bg park_day
+                    show natsuki zorder 2 at t32
+                    show ayame zorder 2 at t33
+                    hide screen tear
+                    window show(None)
+                    mc "Okay, here goes nothing...{fast}"
+                    window auto
+                    "Simply thinking about the park and taking a step got us over here in an instant."
+                    "This place brings back fond memories of my childhood."
+                    "Back when Sayori and I were still younger...innocent people."
+                    "Is it still possible to go back to the people that we were?"
+                    "I let go of both of their hands and take a look around the place."
+                    mc "What are we supposed to be looking for?"
+                    show ayame zorder 3 at f33
+                    ay "I don't--"
+                    show natsuki zorder 3 at f32
+                    show ayame zorder 2 at t33
+                    n "What the...how did we get here so quick?"
+                    n "Is this some sort of trick?"
+                    show natsuki zorder 2 at t32
+                    show ayame zorder 3 at f33
+                    ay "It's not really a trick."
+                    ay "Just a side effect of this world."
+                    ay "You can almost instantly travel between two places just by thinking about your destination."
+                    show natsuki zorder 3 at f32
+                    show ayame zorder 2 at t33
+                    n "Oh, really?"
+                    n "So if I thought about some place and took a step--{nw}"
+                    hide natsuki
+                    "Suddenly, Natsuki disappears from sight."
+                    mc "Where did she go?"
+                    show ayame zorder 3 at t33
+                    ay "Why did she do that?"
+                    mc "What did she do exactly?"
+                    ay "She decided to test it out."
+                    ay "Who knows where she could be right now?"
+                    ay "Ugh, I shouldn't have said anything!"
                     # Natsuki continue part here v2
         elif ch16_ay_companions == 3:
             mc "Yuri could probably figure it out as well."
