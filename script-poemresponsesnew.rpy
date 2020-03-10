@@ -2365,7 +2365,7 @@ label ch9_n_med:
     mc "But if you have a better idea, I can let her know."
     n 2f "Why do you care?"
     mc "You're the one telling me all of this..."
-    mc "So if that's the case, how can't I care?"
+    mc "So if that's the case, how could I not care?"
     n 4i "W-W-W...!!"
     "Natsuki finds herself unable to form a proper word."
     n "Well...!"

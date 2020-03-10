@@ -15911,8 +15911,68 @@ label ch16_end:
             ay "Or perhaps misplaced."
             show ayame zorder 2 at t21
             mc "It's not misplaced, Ayame."
-            mc "I just..."
-            # Monika part continue here (so I can find it easier in future)
+            mc "I just...okay, fine."
+            mc "What do you want me to do?"
+            show ayame zorder 3 at f21
+            ay "You have to leave the past behind you."
+            ay "You have to be the one to destroy it."
+            ay "Sever one of the connections you had with Sayori."
+            ay "That way, the path to her will open."
+            show ayame zorder 2 at t21
+            show monika zorder 3 at f22
+            m "It's better if you do it quickly."
+            m "That way it won't hurt so much after."
+            m "Unleash all your strength in one go and tear it apart."
+            show monika zorder 2 at t22
+            mc "It looks like it's bolted to the ground."
+            mc "I don't know how I'm going to be able to do this but you both seem to think I can."
+            mc "Alright...here goes nothing."
+            "I take a deep breath and brace myself."
+            "I put my hands underneath the bench in anticipation."
+            mc "Three...two..."
+            mc "One...!"
+            "With all the strength I can bring together, I attempt to pull the bench out of the ground."
+            "Not to my surprise, I fail spectacularly."
+            "I fall over on my back from all the force I put on the bench."
+            mc "Well...I tried."
+            show monika zorder 3 at f22
+            m "I can't say I didn't expect that to happen."
+            m "At least you fell gracefully."
+            m "I think there must be some sort of trick to this."
+            show ayame zorder 3 at f21
+            show monika zorder 2 at t22
+            ay "You're not doing it right."
+            ay "Remember, this world isn't the same as what we know."
+            ay "You have to believe you can do it."
+            ay "It's not a matter of strength, it's a matter of will."
+            ay "How much do you want to sever your connection with Sayori?"
+            "I don't..."
+            ay "How much do you want to save the world?"
+            "This is crazy..."
+            ay "How much do you want to see Sayori again?"
+            ay "This is the only way you're going to ever see her again, [player]."
+            ay "To go forward, you have to forget the past."
+            show ayame zorder 2 at t21
+            mc "Okay, okay. Let me try this again."
+            "Sayori, I have to see you again."
+            "I need to snap you out of this."
+            "So if I have to sever the memories we had with each other to do that..."
+            mc "Then...AAAAA!"
+            "I pull the bench right out of the ground."
+            "The bolts burst off and the bench topples over."
+            "Did I really manage to do that?"
+            show monika zorder 3 at f22
+            m "Wow, [player]. You actually managed to do it."
+            m "It must have--"
+            m "Wait...is that a tear on your face?"
+            show monika zorder 2 at t22
+            mc "Huh?"
+            "I move my hand towards my eyes and she's right."
+            "A single tear fell, but I didn't even realize it."
+            mc "That's weird..."
+            show monika zorder 3 at f22
+            m "Is something wrong?"
+            # Monika continue here (so I can find it easier in future)
         elif ch16_ay_companions == 2:
             mc "Couldn't Natsuki figure it out too?"
             ay 1l "We'll see about that."
