@@ -15961,8 +15961,10 @@ label ch16_end:
             "I pull the bench right out of the ground."
             "The bolts burst off and the bench topples over."
             "Did I really manage to do that?"
+            "Suddenly, the voices are silenced."
             show monika zorder 3 at f22
             m "Wow, [player]. You actually managed to do it."
+            m "The voices seem to have stopped too."
             m "It must have--"
             m "Wait...is that a tear on your face?"
             show monika zorder 2 at t22
@@ -15972,6 +15974,54 @@ label ch16_end:
             mc "That's weird..."
             show monika zorder 3 at f22
             m "Is something wrong?"
+            show monika zorder 2 at t22
+            mc "N-No. At least, I don't think so."
+            show ayame zorder 3 at f21
+            ay "Maybe there was something in your eye."
+            ay "Or maybe it had something to do with your connection to Sayori."
+            "Ayame ponders for a moment before shrugging."
+            ay "Either way, let's see what your efforts uncovered."
+            "Ayame stares at the now open space were the bench was."
+            "She reaches her hand out slowly then quickly pulls it back."
+            ay "The presence has become much more resonant."
+            ay "It's here, I can feel it now."
+            show ayame zorder 2 at t21
+            mc "I don't see anything."
+            show ayame zorder 3 at f21
+            ay "You didn't see the last portal either."
+            ay "Trust me when I say it's here though."
+            show ayame zorder 2 at t21
+            show monika zorder 3 at f22
+            m "Where does it lead to?"
+            show ayame zorder 3 at f21
+            show monika zorder 2 at t22
+            ay "It could be anywhere really."
+            ay "It might be a whole different kind of reality."
+            ay "We might all end up as some nonsensical looking things."
+            ay "But the only way we'll know for sure is if we go through there."
+            ay "Are the two of you ready?"
+            show ayame zorder 2 at t21
+            show monika zorder 3 at f22
+            m "I suppose I'm ready to journey into the unknown once again."
+            m "Hopefully this time we won't end up separated."
+            show monika zorder 2 at t22
+            "Ayame eyes Monika suspiciously."
+            show ayame zorder 3 at f21
+            ay "I hope not either."
+            ay "But there's no telling what will happen when we cross over."
+            ay "[player], what about you?"
+            menu:
+                ay "Are you ready to go?"
+                "Yes.":
+                    pass
+                "No.":
+                    pass
+            show ayame zorder 2 at t21
+            mc "I--"
+            show ayame zorder 3 at f21
+            ay "You don't really have a choice here."
+            ay "The sooner we stay, the harder it's going to be to stop Sayori."
+            ay "Now, let's get out of here."
             # Monika continue here (so I can find it easier in future)
         elif ch16_ay_companions == 2:
             mc "Couldn't Natsuki figure it out too?"
@@ -16299,7 +16349,7 @@ label ch16_end:
                     ay "I don't know what park you could possibly be talking about."
                     ay "There are several scattered throughout the city."
                     ay "You must have a specific one in mind, right?"
-                    mc "Yeah..."
+                    jump ch16_lost_companion
                     # Natsuki continue part here v1
                 "The club.":
                     mc "The most likely place for her to be is at the club."
@@ -16597,6 +16647,70 @@ label ch16_end:
                     ay "She decided to test it out."
                     ay "Who knows where she could be right now?"
                     ay "Ugh, I shouldn't have said anything!"
+                    ay "We're losing valuable time here."
+                    ay "She can't just go and--"
+                    show natsuki zorder 3 at f31
+                    n "I'm back! Sorry..."
+                    n "I had to grab something."
+                    show natsuki zorder 2 at t31
+                    show ayame zorder 3 at f33
+                    ay "Do you not realize what you could have done?"
+                    ay "Don't do something so reckless, Natsuki."
+                    ay "It's for your own good. You could have been in really big trouble!"
+                    show natsuki zorder 3 at f31
+                    show ayame zorder 2 at t33
+                    n "What are you talking about?"
+                    n "It's not like there's something out here to get us."
+                    show natsuki zorder 2 at t31
+                    show ayame zorder 3 at f33
+                    ay "There are many things we don't know, Natsuki."
+                    ay "This whole place is volatile, filled with unknowns."
+                    ay "Doing anything reckless like that is a big risk."
+                    show natsuki zorder 3 at f31
+                    show ayame zorder 2 at t33
+                    n "Okay...look, I'm sorry, okay?"
+                    n "I know it was stupid but I really needed to get something."
+                    show natsuki zorder 2 at t31
+                    show ayame zorder 3 at f33
+                    ay "I..."
+                    "Ayame looks dumbfounded."
+                    ay "What could have possibly been worth the risk?"
+                    show natsuki zorder 3 at f31
+                    show ayame zorder 2 at t33
+                    n "This."
+                    show natsuki zorder 2 at t31
+                    "Natsuki shows Ayame and I some sort of book."
+                    "She blows the dust off of it opens it, staring at the first page."
+                    show ayame zorder 3 at f33
+                    ay "And what exactly is 'this'?"
+                    ay "It just looks like some dusty old book to me."
+                    show natsuki zorder 3 at f31
+                    show ayame zorder 2 at t33
+                    n "You're right about that."
+                    n "It's something from my house, something I never thought I'd ever have to look into again."
+                    n "It's my dad's old journal."
+                    show natsuki zorder 2 at t31
+                    show ayame zorder 3 at f33
+                    ay "Yasuhiro's journal...?"
+                    show ayame zorder 2 at t33
+                    "Natsuki looks at Ayame curiously."
+                    "Does Ayame know Yasuhiro somehow?"
+                    mc "Why is that so important?"
+                    show ayame zorder 3 at f33
+                    ay "I didn't even think that would exist here."
+                    ay "Is there any writing inside of it?"
+                    ay "Wait...did you say 'again'?"
+                    ay "You've read that thing before?"
+                    show natsuki zorder 3 at f31
+                    show ayame zorder 2 at t33
+                    n "I only took a peek. A while ago."
+                    n "Ayame, I'm not completely oblivious to the things going on, you know."
+                    n "I've noticed and kept track of all this weird stuff happening."
+                    n "At first it just seemed like coincidence but because you mentioned Sayori beind behind all of it..."
+                    n "It's all starting to make some sort of sense."
+                    show natsuki zorder 2 at t31
+                    mc "How does the journal help us?"
+                    mc "If it's your dad's journal then I don't really see how it could do anything."
                     # Natsuki continue part here v2
         elif ch16_ay_companions == 3:
             mc "Yuri could probably figure it out as well."
