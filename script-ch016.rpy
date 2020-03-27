@@ -17017,6 +17017,34 @@ label ch16_end:
                     ay "Or maybe..."
                     ay "...maybe it has to do with your connection to Sayori."
                     ay "Severing a bond that you two once had..."
+                    show natsuki zorder 3 at f31
+                    show ayame zorder 2 at t33
+                    n "Are you sure you're okay?"
+                    n "That must have been hard on you."
+                    show natsuki zorder 2 at t31
+                    show ayame zorder 3 at f33
+                    ay "But we can talk about that later."
+                    ay "We don't have time to speculate what it could or couldn't be."
+                    ay "We have to get to Sayori."
+                    "Ayame puts a hand out into the air."
+                    "She closes her eyes as if she's focusing intently on what's in front of her."
+                    "She breathes in and as she does, it's as if all other sound is drowned out."
+                    "She opens here eyes and looks at Natsuki and I and smiles."
+                    ay "Are you ready?"
+                    show natsuki zorder 3 at f31
+                    show ayame zorder 2 at t33
+                    n "No, but I don't have much of a choice."
+                    show natsuki zorder 2 at t31
+                    show ayame zorder 3 at f33
+                    ay "Ahaha, well I'm glad you understand the situation."
+                    ay "Make sure to bring that little journal with you."
+                    ay "[player], what about you?"
+                    show ayame zorder 2 at t33
+                    mc "Ready as I'll ever be."
+                    mc "That is to say, I'm not ready at all."
+                    show ayame zorder 3 at f33
+                    ay "Good to see we're on the same page."
+                    ay "Okay, you two...let's do this."
                     # Natsuki continue part here v2
         elif ch16_ay_companions == 3:
             mc "Yuri could probably figure it out as well."
@@ -17439,6 +17467,48 @@ label ch16_end:
                     mc "Yuri?"
                     mc "Please. I know you're still there."
                     mc "Whatever horrors you saw..."
+                    mc "We'll get through them, together."
+                    "As I move my arms around her, I can feel a solid object in her uniform."
+                    "I try to carefully make it out without alerting Yuri."
+                    "From what I can tell, it feels like a..."
+                    mc "Knife?"
+                    "I don't know if anything happened to her."
+                    mc "Do you remember?"
+                    mc "That moment in the play. The first play."
+                    mc "The first time we solved someone's problem."
+                    "I pull back from Yuri and attempt to take the knife from where I felt it on her uniform."
+                    "She doesn't react."
+                    mc "You had a problem with knives."
+                    "I take the knife from her uniform and show it to her."
+                    "It's a small, intricate wooden knife."
+                    "It doesn't look too sharp but I'm careful in handling it anyway."
+                    mc "You used them to hurt yourself."
+                    mc "I can't claim to know all of the reasons for doing so."
+                    mc "But I do know one of them."
+                    mc "It's because you were alone."
+                    mc "Or, at least, you thought you were."
+                    "There's still nothing coming out of Yuri."
+                    "Which means I'm going to have to try something stupid."
+                    mc "Yuri..."
+                    "I take the knife and point it towards my arm."
+                    mc "You're not alone."
+                    "I make a small cut in my arm, and blood slowly starts pouring out."
+                    "Yuri slowly turns to look at the cut I've made on my arm."
+                    "She stares at it for a couple of moments."
+                    "Did I make things worse...?"
+                    "The expression on her face suddenly changes and her eyes widen."
+                    y "[player]! W-What are you doing?"
+                    y "Y-You can't just...! L-Let me..."
+                    "She frantically searches her pockets and pulls out a handkerchief."
+                    "Before she can do anything else, I move without thinking."
+                    "Once again, I lock her in a tight embrace."
+                    mc "Yuri! You're okay!"
+                    mc "I thought I'd lost you for good."
+                    y "[player], I...I'm sorry."
+                    show yuri 1a zorder 2 at t11
+                    "She pulls herself away from the embrace and turns away from me."
+                    mc "Sorry for what?"
+                    y "For being so weak. For letting you see me like this."
                     # Yuri continue part here v1
                 "The mall.":
                     "The secluded area near the mall has to be the place, doesn't it?"
