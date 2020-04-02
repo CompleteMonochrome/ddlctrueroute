@@ -14695,7 +14695,7 @@ label ch16_end:
             y 3t "What did you do to us?"
             ay 1g "Not important. What is important is that you help us."
             ay "Please."
-            # Set variable to arbritary value to see if they will both do it
+            # Set variable to arbitrary value to see if they will both do it
             if natsuki_approval >= 3 or natsuki_date:
                 $ ch16_ay_companions = 6
                 n 2f "This is all so ridiculous."
@@ -15019,7 +15019,7 @@ label ch16_end:
                     "Ayame looks around as if she's taking in the atmosphere."
                     "She looks like she's taking a deep breath."
                     "Not that I can tell with no sound other than her voice in my head."
-            $ ch16_ay_companions = 0
+                $ ch16_ay_companions = 0
             jump ch16_ay_afterskip_1
         "No one." if not ch12_markov_agree:
             $ ch16_ay_companions = 0
@@ -18065,6 +18065,113 @@ label ch16_end:
             show yuri zorder 2 at t32
             show ayame 4m zorder 3 at f33
             ay "You might be onto something here."
+            ay "[player], think carefully."
+            ay "There must be something going through your mind right now."
+            ay "Something that's just poking at you and you don't know why."
+            ay "Concentrate on it, and tell us what it is."
+            show ayame zorder 2 at t33
+            "I haven't noticed anything."
+            mc "I don't know what you're talking about."
+            show ayame zorder 3 at f33
+            ay "I think you do, [player]."
+            ay "You may not realize it, but it's there."
+            ay "Like I said, you just have to concentrate on it."
+            ay "Once you know it, you'll wonder why you never noticed it before."
+            ay "Just think."
+            show natsuki zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "Are you sure about this?"
+            show natsuki zorder 2 at t31
+            show ayame zorder 3 at f33
+            ay "I'm absolutely positive."
+            ay "Just observe."
+            show ayame zorder 2 at t33
+            "I try to concentrate."
+            "On what, I don't particularly know, but I'm thinking anyway."
+            "There does seem to be a stray thought in my head."
+            "One that just doesn't seem to be there for any reason."
+            "Just one place..."
+            mc "The park."
+            show ayame zorder 3 at f33
+            ay "Aha, there we go, see?"
+            ay "The park! We need to go to the park!"
+            ay "Now, we just have to figure out which park..."
+            ay "Um...how many parks are in this area?"
+            show yuri zorder 3 at f32
+            show ayame zorder 2 at t33
+            y "There's at least a dozen around here."
+            show yuri zorder 2 at t32
+            mc "It's the park Sayori and I used to go when we were younger."
+            mc "But why?"
+            show ayame zorder 3 at f33
+            ay "It's where we have to go."
+            ay "The location of the next portal."
+            ay "You know where it is, right?"
+            show ayame zorder 2 at t33
+            mc "I think I--"
+            "Suddenly, these memories I didn't even know I had come flooding back."
+            "All these memories of when Sayori and I were younger."
+            "But why now?"
+            mc "Yeah, I definitely know where it is."
+            mc "Are we going there now?"
+            show ayame zorder 3 at f33
+            ay "Grab [player_possessive] hand."
+            "Natsuki looks like she's about to say something but Ayame puts a finger on her lips to stop her."
+            ay "Don't ask, just do it."
+            "Natsuki reluctantly takes my left hand and Yuri sheepishly takes my right."
+            ay "Now, you have to imagine the park in your head."
+            ay "Remember how I said this world has shortcuts?"
+            ay ""
+            ay "Think about the entrance to the park and picture yourself there."
+            ay "Then take a step forward."
+            show ayame zorder 2 at t33
+            mc "Is that all?"
+            show ayame zorder 3 at f33
+            ay "Hold on."
+            "Ayame takes Yuri's free hand and nods."
+            ay "Ok, go for it."
+            show ayame zorder 2 at t33
+            mc "Okay, here goes nothing..."
+            "I picture the park in my head."
+            "It's hard not to when it's all I can think about now."
+            "Seriously, where are all these coming from...?"
+            "I take a deep breath and a small step{nw}"
+            $ _history_list.pop()
+            show screen tear(20, 0.1, 0.1, 0, 40)
+            window hide(None)
+            play sound "sfx/s_kill_glitch1.ogg"
+            $ pause(0.25)
+            stop sound
+            scene bg park_day
+            show natsuki 1a zorder 2 at t31
+            show yuri 1a zorder 2 at t32
+            show ayame 1a zorder 2 at t33
+            hide screen tear
+            window show(None)
+            "I take a deep breath and a small step{fast} we suddenly appear right outside the park."
+            window auto
+            "I look beside me and notice we're all still here."
+            "I guess that it worked."
+            show natsuki zorder 3 at f31
+            n "So that's how you do it?"
+            "Natsuki lets go of my hand."
+            n "Yuri and I did it by accident when we got to your house."
+            show natsuki zorder 2 at t31
+            show ayame zorder 3 at f33
+            ay "Yeah, but I wouldn't get used to it."
+            ay "We don't have the time to mess--"
+            hide natsuki
+            "Suddenly Natsuki disappears."
+            ay "I can't believe she did that."
+            ay "You've gotta be kidding me."
+            show yuri zorder 3 at f32
+            show ayame zorder 2 at t33
+            y "Where did she go?"
+            show yuri zorder 2 at t32
+            show ayame zorder 3 at f33
+            ay "Who knows?"
+            ay "She better have a good reason for leaving."
+            ay "If she can even get back."
             # Natsuki and Yuri continue part here
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
