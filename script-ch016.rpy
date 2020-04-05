@@ -16652,10 +16652,17 @@ label ch16_end:
                     ay 2a "Ugh, I shouldn't have said anything!"
                     ay "We're losing valuable time here."
                     ay 2n "She can't just go and--"
+                    n "I'm back...!"
+                    "From the distance, I can hear what sounds like the faint sound of Natsuki's voice."
+                    ay "Natsuki?!"
                     show natsuki 3q zorder 3 at f31
                     n "I'm back! Sorry..."
+                    "Natsuki appears from across the street. She looks like she's out of breath."
+                    n "I couldn't figure out the exact location of the park but I recognized the street."
+                    n "So I got here from around the corner."
                     n "I had to grab something."
                     show natsuki zorder 2 at t31
+                    "Natsuki looks like she's holding some kind of book."
                     show ayame 2a zorder 3 at f33
                     ay "Do you not realize what you could have done?"
                     ay "Don't do something so reckless, Natsuki."
@@ -16682,7 +16689,7 @@ label ch16_end:
                     show ayame zorder 2 at t33
                     n "This."
                     show natsuki zorder 2 at t31
-                    "Natsuki shows Ayame and I some sort of book."
+                    "Natsuki shows Ayame and I the book."
                     "She blows the dust off of it opens it, staring at the first page."
                     show ayame zorder 3 at f33
                     ay "And what exactly is 'this'?"
@@ -18121,7 +18128,7 @@ label ch16_end:
             "Natsuki reluctantly takes my left hand and Yuri sheepishly takes my right."
             ay "Now, you have to imagine the park in your head."
             ay "Remember how I said this world has shortcuts?"
-            ay ""
+            ay "Well, now you're going to use one."
             ay "Think about the entrance to the park and picture yourself there."
             ay "Then take a step forward."
             show ayame zorder 2 at t33
@@ -18172,6 +18179,54 @@ label ch16_end:
             ay "Who knows?"
             ay "She better have a good reason for leaving."
             ay "If she can even get back."
+            show yuri zorder 3 at f32
+            show ayame zorder 2 at t33
+            y "I'm sure she must have a good reason."
+            y "Natsuki wouldn't just do something so reckless."
+            y "Whatever she's doing, it must be to help us."
+            y "Just give her a chance."
+            show yuri zorder 2 at t32
+            "Ayame looks hesitant but gives a sigh of acceptance."
+            show ayame zorder 3 at f33
+            ay "You're right, of course."
+            ay "I just wish she would have said something before she left."
+            ay "I'm worried she'll end up in trouble."
+            ay "Or worse..."
+            ay "She better get back quickly."
+            show ayame zorder 2 at t33
+            mc "Natsuki can take care of herself, I'm sure."
+            mc "Besides, what's the worst that could happen?"
+            show ayame zorder 3 at f33
+            ay "Do you not remember what we saw just before Natsuki and Yuri arrived?"
+            show ayame zorder 2 at t33
+            "Those were definitely strange..."
+            "But they didn't seem that harmful, did they?"
+            mc "Well--"
+            show ayame zorder 3 at f33
+            ay "Who knows how many of those are scattered throughout this world?"
+            ay "Natsuki could be anywhere and we have no idea where."
+            ay "I should have brought back the telepathic link."
+            ay "But I can't do that if she's not here."
+            ay "I don't even know how she's going to get back here."
+            show yuri zorder 3 at f32
+            show ayame zorder 2 at t33
+            y "We don't need it."
+            y "Just have faith that she'll be back."
+            y "Natsuki is smarter than she looks you know."
+            n "Hey! What's that supposed to mean?"
+            "In the distance, we can faintly hear Natsuki's distorted voice."
+            y "N-Natsuki?!"
+            show natsuki 1a zorder 3 at f31
+            show yuri zorder 2 at t32
+            n "The one and only."
+            "Natsuki appears from across the street holding some kind of book."
+            "She looks around at all of our faces."
+            n "What? Is it that surprising that I got back here so quickly?"
+            n "I'll admit, I don't remember the exact place but I do sort of recognize the street."
+            n "So I couldn't just get back to the park."
+            show natsuki zorder 2 at t31
+            show ayame zorder 3 at f33
+            ay "Natsuki, please. Don't do that again."
             # Natsuki and Yuri continue part here
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
