@@ -16793,8 +16793,7 @@ label ch16_end:
                     mc "It doesn't sound like 'remember' at all."
                     mc "To me, it sounds like a warning. I'm just hearing 'go back' over and over."
                     show natsuki 2c zorder 3 at f31
-                    n "You guys are crazy, it didn't sound like either of those things"
-                    n "I'll tell you which one it really is."
+                    n "You guys are crazy, I'll settle this."
                     "Natsuki approaches the bench until she's right next to it."
                     "She doesn't seem phased at all. Is she not hearing anything?"
                     n 5g "Huh. It's neither of what the two of you said."
@@ -16837,7 +16836,7 @@ label ch16_end:
                     n "What if we just destroyed it?"
                     show natsuki zorder 2 at t31
                     mc "What?!"
-                    mc "You can't do that! It's public property!"
+                    mc "You can't do that! I-It's public property!"
                     "Besides...it holds sentimental value to me."
                     "Even if I can't exactly remember those times, I know they were precious."
                     show ayame 2n zorder 3 at f33
@@ -18227,6 +18226,476 @@ label ch16_end:
             show natsuki zorder 2 at t31
             show ayame zorder 3 at f33
             ay "Natsuki, please. Don't do that again."
+            ay "I know you can take care of yourself but there's a lot more to do this world than you think."
+            ay "There's things out there that could hurt you in ways you can't imagine."
+            show natsuki zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "O-Okay...I'm sorry."
+            n "It's just, I think this could really help."
+            "Natsuki presents the book she's holding to Ayame."
+            n "It's my dad's journal."
+            show natsuki zorder 2 at t31
+            show ayame zorder 3 at f33
+            ay "What?!"
+            show natsuki zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "Look, Ayame I know what you're thinking but--"
+            show natsuki zorder 2 at t31
+            show ayame zorder 3 at f33
+            ay "That changes things..."
+            ay "I didn't even know that would exist in this world."
+            ay "Yasuhiro..."
+            show natsuki zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "Y-You know my dad?"
+            show natsuki zorder 2 at t31
+            show ayame zorder 3 at f33
+            ay "...We can talk about it later."
+            ay "For now, let's figure out what we're supposed to be doing here."
+            ay "We've wasted enough time."
+            show ayame at thide
+            hide ayame
+            "Ayame goes into the park and begins looking around."
+            show natsuki zorder 3 at f31
+            n "Does she even know what we're meant to be looking for?"
+            n "I think she might...given how much she knows about this place."
+            show natsuki zorder 2 at t31
+            show yuri zorder 3 at f32
+            y "I suspect so too."
+            y "I'm glad you're okay, Natsuki."
+            y "But why did you bring that journal? Didn't you already have it?"
+            y "You showed it to [player] and I at--"
+            show natsuki zorder 3 at f31
+            show yuri zorder 2 at t32
+            n "Q-Quiet about that...!"
+            n "She doesn't know about that journal."
+            n "And I don't know if we should even tell her."
+            show natsuki zorder 2 at t31
+            show yuri zorder 3 at f32
+            y "Huh? Why not?"
+            y "We need to trust each other if we're going to get through this, Natsuki."
+            show natsuki zorder 3 at f31
+            show yuri zorder 2 at t32
+            n "Isn't it kind of convenient that she happens to know what things might be lurking around here?"
+            n "It's almost like she's done this before, Yuri."
+            n "I'm just trying to be careful."
+            show natsuki zorder 2 at t31
+            mc "What are you trying to say, Natsuki?"
+            show natsuki zorder 3 at f31
+            n "I'm saying that I don't completely trust Ayame."
+            n "I know she wants to stop Sayori but I think she's got some other goal in mind."
+            show natsuki zorder 2 at t31
+            show yuri zorder 3 at f32
+            y "Normally, I would think you're overreacting."
+            y "But given the circumstances and how convenient Ayame is..."
+            y "I'll have to agree with you here, as much as I don't like it."
+            show natsuki zorder 3 at f31
+            show yuri zorder 2 at t32
+            n "[player]."
+            show natsuki zorder 2 at t31
+            "Natsuki and Yuri both turn toward me."
+            mc "What?"
+            show natsuki zorder 3 at f31
+            n "We're trusting you not to tell her."
+            n "We want to help Sayori just as much as you do, okay?"
+            n "We're just being careful."
+            show natsuki zorder 2 at t31
+            mc "Alright, alright...I won't tell her."
+            "What exactly did Natsuki find that's making her so suspicious of Ayame all of a sudden?"
+            "It must be something in that journal she just got."
+            ay "Are you three coming?"
+            show natsuki zorder 3 at f31
+            n "We're on our way!"
+            n "Come on, let's go."
+            scene bg park_day
+            show natsuki 1a zorder 2 at t31
+            show yuri 1a zorder 2 at t32
+            show ayame 1a zorder 3 at t33
+            with wipeleft
+            "We meet up with Ayame further into the park."
+            "I recognize the area, it all feels very familiar to me."
+            "I don't know why but it feels like all these memories are flooding back."
+            "Memories of Sayori and I playing around here."
+            "Some of them I didn't even know existed."
+            "Anyway, what exactly are we looking for here?"
+            show ayame zorder 3 at f33
+            ay "Let's look around for some clues."
+            ay "I can feel the portal really close by."
+            ay "But I can't pinpoint where it is exactly."
+            show natsuki zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "This entry in my dad's journal might help."
+            n 1c "Listen to this..."
+            n "'The world was still, I couldn't move. Yet I was conscious. I could perceive things happening but not act.'"
+            n "'I thought I saw a figure walk near me. Scratch that, it was unmistakably a girl in front of me. She simply vanished into thin air.'"
+            show natsuki zorder 2 at t31
+            "Ayame looks like she was caught off guard for a second but quickly composes herself."
+            "Natsuki seems to notice this and gives Yuri a look."
+            show ayame zorder 3 at f33
+            ay "A-Alright, well that doesn't really help here."
+            ay "We already know these portals exist, that doesn't tell us where it is."
+            ay "I didn't realize you'd already read that thing, Natsuki."
+            show natsuki zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "I only took a peek. A while ago."
+            n "Ayame, I'm not completely oblivious to the things going on, you know."
+            n "I've noticed and kept track of all this weird stuff happening."
+            n 2c "At first it just seemed like coincidence but because you mentioned Sayori being behind all of it..."
+            n "It's all starting to make some sort of sense."
+            show natsuki zorder 2 at t31
+            mc "How does this help us anyway?"
+            mc "What does your dad's journal have to do with any of this?"
+            show natsuki zorder 3 at f31
+            n "There's a lot of weird things written in here."
+            n "I'll spare you the details and skip straight to this section."
+            "Natsuki flicks through the pages of the journal. She seems to know what she's looking for."
+            n "This section of the journal here has some really weird entries."
+            n "I think what he wrote here could help us find the next portal."
+            n "He mentions a park, which kinda sounds like the one we're in right now."
+            n "When he approached one of the benches, he began to hear these voices."
+            n "But he couldn't remember what they were saying after the fact."
+            show natsuki zorder 2 at t31
+            show ayame zorder 3 at f33
+            ay "So we're looking for a bench."
+            "Ayame looks around the park."
+            ay "Well, at least there doesn't seem to be that many around here."
+            ay "But I wonder which one it is."
+            show ayame zorder 2 at t33
+            mc "I think I know the one."
+            show ayame 2m zorder 3 at f33
+            ay "You do? How could you possibly...?"
+            show ayame zorder 2 at t33
+            mc "There's just this one bench that has some sentimental value."
+            mc "Sayori and I used to go to it a lot."
+            mc "Back when we were younger."
+            show yuri zorder 3 at f32
+            y "Take us there then, [player]."
+            y "There's no time to lose."
+            show natsuki zorder 2 at t31
+            mc "Okay, I think..."
+            "I look around the park, trying to figure out which bench it was."
+            "I walk towards one of the benches and suddenly begin to hear a faint whisper."
+            "I can't make out what it's saying at first, it's too faint."
+            "But it sounds like it's repeating something."
+            "As I get closer and closer to the bench, it becomes more distinct."
+            "I can hear the words now."
+            "Go back. Go back. Go back."
+            "It's just constantly repeating that as I approach."
+            mc "Do you hear that?"
+            show ayame 5a zorder 3 at f33
+            ay "I can't hear anything...maybe you're just--"
+            "Ayame takes a step closer towards me then freezes in her tracks."
+            "She must be hearing it too."
+            ay 5l "Remember..."
+            show ayame zorder 2 at t33
+            mc "Huh?"
+            show ayame 5m zorder 3 at f33
+            ay "That's what the whisper is saying, isn't it?"
+            ay "'Remember', just on repeat."
+            show ayame zorder 2 at t33
+            mc "What? No, I'm hearing something completely different."
+            mc "It doesn't sound like 'remember' at all."
+            mc "To me, it sounds like a warning. I'm just hearing 'go back' over and over."
+            "Yuri walks over to where Ayame and I are and closes her eyes."
+            show yuri zorder 2 at t32
+            "After a brief moment, she opens them and has a worried look on her face."
+            show yuri zorder 3 at f32
+            y "I don't mean to alarm anyone, but I'm hearing 'because the world will end'."
+            y "That doesn't sound very good..."
+            show natsuki 2c zorder 3 at f31
+            n "I'll tell you which one it really is."
+            "Natsuki approaches the bench until she's right next to it."
+            "She doesn't seem phased at all. Is she not hearing anything?"
+            n 5g "Huh. It's neither of what the two of you said."
+            n "The voice I'm hearing sounds like an old man saying 'the good times'."
+            n "It's kind of creepy, actually."
+            show natsuki zorder 2 at t31
+            show ayame 4l zorder 3 at f33
+            ay "You don't seem bothered by it at all."
+            show natsuki 5q zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "I've been through worse."
+            n 5s "Anyway, it sounds like we're all hearing different things."
+            n "Maybe they combine to form some kind of message."
+            show natsuki zorder 2 at t31
+            show ayame 1g zorder 3 at f33
+            ay "That's what I thought too."
+            ay "Maybe they come together to form some kind of clue..."
+            ay "Hmm..."
+            show natsuki 5k zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "There's only one way I can think of to arrange what the voices are saying that makes sense."
+            n "Are you thinking what I'm thinking, Yuri?"
+            show natsuki zorder 2 at t31
+            show yuri zorder 3 at f32
+            y "I think I am. It does make sense."
+            show yuri zorder 2 at t32
+            mc "I think I know what the two of you are thinking."
+            "At least, I think I do."
+            "She's thinking of a way to rearrange the words."
+            mc "The good times, remember. Go back because the world will end."
+            "That wasn't it at all, was it?"
+            show yuri zorder 3 at f32
+            y "Well...it was a good attempt, [player]."
+            y "But I don't think it's a warning to tell us to go away."
+            y "Besides, I don't think the first part of the way you rearranged it makes sense."
+            show yuri zorder 2 at t32
+            show ayame 1b zorder 3 at f33
+            ay "I don't know about what you're thinking, Natsuki."
+            ay "But I think Yuri is right."
+            ay "I thought it was more along the lines of 'go back. Remember the good times because the world will end'."
+            ay 1h "Unless it was meant to be nonsensical or a warning, but I don't think so."
+            show natsuki 5a zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "That's what I was thinking too."
+            n "But there's a lot of different things that could mean."
+            n 4c "Unless..."
+            "Natsuki turns her attention to me."
+            n 4c "You said this bench was special to you, right?"
+            n "What if we just destroyed it?"
+            show natsuki zorder 2 at t31
+            mc "What?!"
+            mc "You can't do that! I-It's public property!"
+            "Besides...it holds sentimental value to me."
+            "Even if I can't exactly remember those times, I know they were precious."
+            "I have a feeling these flooding memories are influencing my thought process here, but I don't care."
+            show ayame 2n zorder 3 at f33
+            ay "Technically, it's not anyone's property. This isn't the city we know, [player]."
+            ay "But I am curious as to where Natsuki drew the conclusion to just suddenly break it."
+            ay "Do you agree with this decision, Yuri?"
+            show yuri zorder 3 at f32
+            show ayame zorder 2 at t33
+            y "I'm just as surprised as you are, Ayame."
+            y "What's the meaning of this, Natsuki?"
+            show natsuki zorder 3 at f31
+            show yuri zorder 2 at t32
+            n "Just hear me out. If we're supposed to get to Sayori, then she would have put up some barriers to stop us, right?"
+            n "Maybe if we destroy something sentimental to her, then it'll bring us to her."
+            n 2m "That's just a theory...but there is something in the journal that related to this."
+            n "'Remember the past, a forgetting it can often be the way forward.'"
+            n "That's written as a note on one of these pages."
+            n 2k "It could mean anything but..."
+            show natsuki zorder 2 at t31
+            "Natsuki notices the look on my face and stops."
+            "Is this really how we're going to get to Sayori?"
+            "All we have is some lousy journal and an annoying voice in our heads."
+            "There has to be another way..."
+            "I approach the bench and take a seat."
+            "As I sit down, the voice in my head suddenly changes what it's saying."
+            "It's playtime. It's playtime. It's playtime."
+            mc "Did--"
+            show ayame 2a zorder 3 at f33
+            ay "The voice in my head changed to say 'come on'."
+            ay "I assume that's what you were gonna ask."
+            show ayame zorder 2 at t33
+            mc "Y-Yeah, more or less."
+            show natsuki 1g zorder 3 at f31
+            n "Mine's saying 'take my hand'. Do you think they're all connected?"
+            show natsuki zorder 2 at t31
+            ################
+            # Change this part next commit to include Yuri and be slightly different
+            ################
+            show ayame zorder 3 at f33
+            ay "I don't think so. I think because we went closer to the bench, the clue changed."
+            ay "But I might be wrong. This isn't exactly something I'm an expert on."
+            ay 2g "Now that you mention it...what were the last things the voices said?"
+            "Ayame scratches her head."
+            ay "I can't...remember."
+            show natsuki 1o zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "I can't remember either, it's just like the journal."
+            n "We knew it existed but now we can't figure it out."
+            show natsuki zorder 2 at t31
+            mc "I still remember it."
+            mc "And the current voice is telling me 'it's playtime'."
+            show natsuki 1c zorder 3 at f31
+            n "You do? Then naybe we can use you to--"
+            show natsuki zorder 2 at t31
+            show ayame 4a zorder 3 at f33
+            ay "That's it! Forget the other words, they're a distraction."
+            ay "Remebering them won't work for this next part."
+            show natsuki 1e zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "How could you possibly know that?"
+            n "We haven't even tried it yet."
+            show natsuki zorder 2 at t31
+            show ayame 4m zorder 3 at f33
+            ay "Just trust me when I say that that isn't the right direction."
+            show natsuki 5g zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "Can you at explain?"
+            show natsuki zorder 2 at t31
+            show ayame 2m zorder 3 at f33
+            ay "My deduction is that the voices seem like they're reflecting what's happening in the now."
+            ay "But I do think Natsuki was on the right track with destroying something sentimental."
+            ay "Such as that bench."
+            ay "It might seem reckless but we're running out of time."
+            ay 2h "Besides...I can feel we're getting close."
+            ay "The portal feels like it's right under our noses."
+            show natsuki 2e zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "Then what are we waiting for?"
+            n 1f "Let's..."
+            "Natsuki puts her hands under the bench and attempts to rip it off the ground."
+            n 1o "...do this...!"
+            "I don't think it's going to work. It looks like it's bolted to the ground."
+            "She struggles a little more before looking at the two of us to signal for help."
+            n "I can't exactly do this myself, you know."
+            show natsuki zorder 2 at t31
+            "Ayame looks at me and shrugs."
+            "She walks over to the bench and the two of them try to lift it off the ground."
+            "To no one's surprise, they can't seem to do it."
+            show ayame 5m zorder 3 at f33
+            ay "Let me try something, step back."
+            "Natsuki complies and observes Ayame carefully."
+            "Ayame closes her eyes and puts her hands beneath the bench in another attempt to pull it off the ground."
+            "She begins to pull but suddenly she's repelled from the bench."
+            "It's as if an invisible force pushed her away from it."
+            ay 5n "Ow...okay, I was not expecting that."
+            show natsuki 1k zorder 3 at f31
+            n "Are you okay?"
+            n "What the hell just happened?"
+            show natsuki zorder 2 at t31
+            show ayame 2j zorder 3 at f33
+            ay "I'm fine, Natsuki. It'll take a lot more than that to hurt me."
+            ay "I tried to tap into the world to forcibly remove that bench but it seems there were measures in place to stop me."
+            ay "Which means it's all up to [player]."
+            show natsuki 1c zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "What's [player_personal] gonna do?"
+            n "If the two of us couldn't do it and you can't use...whatever the hell that was to do it..."
+            n "Then what could [player] accomplish that we can't?"
+            show natsuki zorder 2 at t31
+            show ayame 4m zorder 3 at f33
+            ay "I can't be certain but I think that [player] is the only one who can go past those measures."
+            ay "It's like some sort of test."
+            "Both of them look directly at me."
+            ay 4h "Can you do it, [player]?"
+            show ayame zorder 2 at t33
+            "I stare at the bench."
+            "It feels like memories I didn't even know I had are flooding back."
+            "Memories of Sayori and I when we were younger."
+            "When we still had those little adventures around the park."
+            "I know this is wrong but doing this seems worse."
+            mc "It's just..."
+            show ayame 4g zorder 3 at f33
+            ay "I know what you're thinking."
+            ay "You can't do it."
+            ay "The sentimental value might be too much."
+            ay 1g "It's like it's bringing back memories of a better time."
+            ay "And you can't just destroy it, not when it means so much to you."
+            "She does know what I'm thinking..."
+            ay 1m "Well, I want you to remember something, [player]."
+            ay "This world isn't real."
+            ay "For all you know, those memories aren't real."
+            ay "This is a test, she could be affecting your mind as we speak."
+            show natsuki 2k zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "Just because this world is fake doesn't mean the things in it aren't."
+            n "This journal--"
+            show natsuki zorder 2 at t31
+            show ayame 2g zorder 3 at f33
+            ay "You're not helping..."
+            show natsuki 2e zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "Just let me finish."
+            n 2c "Think about it, [player]. If that bench means so much to you, wouldn't you rather have the real thing?"
+            n "You only have to see through the lies."
+            n 2a "If you can get through this, then you and Sayori can make new memories together."
+            n "In the future, not in the past."
+            show natsuki zorder 2 at t31
+            "Natsuki's right."
+            "I don't know why I'm so worked up about this bench."
+            "It's not like I'm a really sentimental person but this..."
+            "Sigh."
+            "I have to do it, not just for them but for Sayori too."
+            mc "If this is what it will take..."
+            "I approach the bench and get ready to try to pull it off."
+            mc "I'll do whatever..."
+            "I pull, the bench won't budge."
+            mc "...it..."
+            "I pull harder, the bench seems to be coming loose."
+            mc "...takes!"
+            "I brace myself and then pull as hard as I can."
+            "The bench comes off the ground, the bolts come flying off."
+            "I fall on my back as the bench topples over in front of me."
+            "I know it wasn't my strength that did that."
+            "But it's done."
+            "I guess Ayame was right."
+            "The whispers in my head are silenced."
+            "Is that a good sign?"
+            show ayame 2e zorder 3 at f33
+            ay "You did it! I knew you could."
+            ay 1j "I can feel the portal right around here."
+            ay "The signal is much stronger than before."
+            show natsuki 1c zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "Huh? I don't see anything."
+            show natsuki zorder 2 at t31
+            show ayame 1h zorder 3 at f33
+            ay "It's not like you saw the last portal either."
+            ay "But trust me, I can feel it around here."
+            ay "We only need to follow it."
+            show natsuki 1g zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "Do you know what's on the other side?"
+            show natsuki zorder 2 at t31
+            show ayame 1l zorder 3 at f33
+            ay "It could be anything."
+            ay "It could be a whole new type of distorted reality."
+            ay 1m "We won't know until we traverse to it."
+            show natsuki 2e zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "Ugh, I hate surprises. But I'm already this far..."
+            n "Alright, well we should probably get going."
+            n 2c "[player], you..."
+            "Natsuki walks up to me and puts a finger on my face."
+            "She pulls it back and looks at it. It looks like a drop of water."
+            n "Are you...crying?"
+            show natsuki zorder 2 at t31
+            mc "Huh? I don't think I am."
+            show natsuki 1m zorder 3 at f31
+            n "That's weird. There was just a single tear on your face."
+            n "Are you okay?"
+            show natsuki zorder 2 at t31
+            mc "Yeah, as far as I can tell."
+            "I wept a single tear and didn't even realize it."
+            show ayame 1m zorder 3 at f33
+            ay "Maybe there was something in your eyes."
+            ay "Maybe it got there after you ripped the bench from the ground."
+            ay 4g "Or maybe..."
+            ay "...maybe it has to do with your connection to Sayori."
+            ay "Severing a bond that you two once had..."
+            show natsuki 1c zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "Are you sure you're okay?"
+            n "That must have been hard on you."
+            show natsuki zorder 2 at t31
+            mc "I'm fine, I promise."
+            "At least, I think I am."
+            show ayame 4a zorder 3 at f33
+            ay "But we can talk about that later."
+            ay "We don't have time to speculate what it could or couldn't be."
+            ay "We have to get to Sayori."
+            "Ayame puts a hand out into the air."
+            "She closes her eyes as if she's focusing intently on what's in front of her."
+            "She breathes in and as she does, it's as if all other sound is drowned out."
+            "She opens here eyes and looks at Natsuki and I and smiles."
+            ay 4m "Are you ready?"
+            show natsuki 1g zorder 3 at f31
+            show ayame zorder 2 at t33
+            n "No, but I don't have much of a choice."
+            show natsuki zorder 2 at t31
+            show ayame 1j zorder 3 at f33
+            ay "Ahaha, well I'm glad you understand the situation."
+            ay "Make sure to bring that little journal with you."
+            ay 1h "[player], what about you?"
+            show ayame zorder 2 at t33
+            mc "Ready as I'll ever be."
+            mc "That is to say, I'm not ready at all."
+            show ayame 1d zorder 3 at f33
+            ay "Good to see we're on the same page."
+            ay "Okay, you two...let's do this."
             # Natsuki and Yuri continue part here
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
