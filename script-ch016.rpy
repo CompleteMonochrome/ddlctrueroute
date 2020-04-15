@@ -16958,10 +16958,34 @@ label ch16_end:
                     show yuri zorder 2 at t31
                     mc "There's not enough space for me to be able to, Yuri."
                     mc "Besides, I doubt my strength added is gonna help much at all."
+                    show natsuki zorder 3 at f32
+                    n "Just try! We'll squeeze over so you can fit."
+                    n "Come on, everyone."
+                    "Natsuki moves a bit to the side, prompting Yuri and Ayame to do the same."
+                    "There's just enough space for me to fit."
+                    n "Well?"
+                    show natsuki zorder 2 at t32
+                    mc "Alright..."
+                    "I stand next to Ayame, ready to be disappointed but not surprised."
+                    mc "Ready?"
+                    show natsuki zorder 3 at f31
+                    n "Go!"
+                    show yuri zorder 3 at f32
+                    show ayame zorder 3 at f33
+                    "The four of us struggle against the bench."
+                    "Me being here doesn't seem to make any difference."
+                    n "Just...a...little...more...!"
+                    "To my surprise, the bench actually feels it's budging, or at least shaking."
+                    "But only very slightly."
+                    n "Puuuuuuuuuuuuuuuuull!"
+                    show natsuki zorder 2 at t31
+                    show yuri zorder 2 at t33
                     show ayame 5m zorder 3 at f33
-                    ay "[cPlayer_personal]'s right. This barrier is stronger than I thought..."
+                    ay "It's no good. It won't budge."
+                    ay "But that is surprising. I wasn't expecting it to move at all."
+                    ay "Maybe the barrier isn't that strong...?"
                     ay "Let me try something, step back."
-                    "Natsuki complies and observes Ayame carefully."
+                    "Yuri and Natsuki take a few steps back and observe Ayame carefully."
                     "Ayame closes her eyes and puts her hands beneath the bench in another attempt to pull it off the ground."
                     "She begins to pull but suddenly she's repelled from the bench."
                     "It's as if an invisible force pushed her away from it."
@@ -16972,18 +16996,27 @@ label ch16_end:
                     show natsuki zorder 2 at t31
                     show ayame 2j zorder 3 at f33
                     ay "I'm fine, Natsuki. It'll take a lot more than that to hurt me."
-                    ay "I tried to tap into the world to forcibly remove that bench but it seems there were measures in place to stop me."
+                    ay "I tried to tap into the world to forcibly remove that bench but it seems the barrier was stronger than I thought."
+                    ay "I'm surprised our combined physical strength was even enough to shake it slightly."
+                    ay "Unless..."
+                    show yuri zorder 3 at f32
+                    show ayame zorder 2 at t33
+                    y "Unless...?"
+                    show yuri zorder 2 at t32
+                    show ayame zorder 3 at f33
+                    ay "Unless we could only move it {i}because{/i} of [player]."
+                    ay "We couldn't do a thing until [player_personal] helped."
                     ay "Which means it's all up to [player]."
                     show natsuki 1c zorder 3 at f31
                     show ayame zorder 2 at t33
                     n "What's [player_personal] gonna do?"
                     n "If the two of us couldn't do it and you can't use...whatever the hell that was to do it..."
-                    n "Then what could [player] accomplish that we can't?"
+                    n "Then what could [player] accomplish that we can't do together?"
                     show natsuki zorder 2 at t31
                     show ayame 4m zorder 3 at f33
                     ay "I can't be certain but I think that [player] is the only one who can go past those measures."
                     ay "It's like some sort of test."
-                    "Both of them look directly at me."
+                    "The three of them look directly at me."
                     ay 4h "Can you do it, [player]?"
                     show ayame zorder 2 at t33
                     "I stare at the bench."
@@ -17003,6 +17036,14 @@ label ch16_end:
                     ay "This world isn't real."
                     ay "For all you know, those memories aren't real."
                     ay "This is a test, she could be affecting your mind as we speak."
+                    show yuri zorder 3 at f32
+                    show ayame zorder 2 at t33
+                    y "It's unfair...why does [player_personal] have to go through it by [player_reflexive]self?"
+                    show yuri zorder 2 at t32
+                    show ayame zorder 3 at f33
+                    ay "But [player_personal] isn't doing it by [player_reflexive]self."
+                    ay "We're here to support [player_reflexive]."
+                    ay "And already, that's better than doing it alone."
                     show natsuki 2k zorder 3 at f31
                     show ayame zorder 2 at t33
                     n "Just because this world is fake doesn't mean the things in it aren't."
@@ -17058,12 +17099,17 @@ label ch16_end:
                     ay "It could be anything."
                     ay "It could be a whole new type of distorted reality."
                     ay 1m "We won't know until we traverse to it."
-                    show natsuki 2e zorder 3 at f31
+                    show yuri zorder 3 at f32
                     show ayame zorder 2 at t33
+                    y "I hope we at least sound normal."
+                    y "Hearing everyone sound so distorted is getting to me a little..."
+                    y "But I suppose there's no guarantee."
+                    show natsuki 2e zorder 3 at f31
+                    show yuri zorder 2 at t32
                     n "Ugh, I hate surprises. But I'm already this far..."
                     n "Alright, well we should probably get going."
                     n 2c "[player], you..."
-                    "Natsuki walks up to me and puts a finger on my face."
+                    "Natsuki walks up to me and puts a finger on my face, taking the tear with her."
                     "She pulls it back and looks at it. It looks like a drop of water."
                     n "Are you...crying?"
                     show natsuki zorder 2 at t31
@@ -17080,8 +17126,12 @@ label ch16_end:
                     ay 4g "Or maybe..."
                     ay "...maybe it has to do with your connection to Sayori."
                     ay "Severing a bond that you two once had..."
-                    show natsuki 1c zorder 3 at f31
+                    show yuri zorder 3 at f32
                     show ayame zorder 2 at t33
+                    y "[player], is this true?"
+                    show yuri zorder 2 at t32
+                    mc "I-I don't know."
+                    show natsuki 1c zorder 3 at f31
                     n "Are you sure you're okay?"
                     n "That must have been hard on you."
                     show natsuki zorder 2 at t31
@@ -17094,23 +17144,26 @@ label ch16_end:
                     "Ayame puts a hand out into the air."
                     "She closes her eyes as if she's focusing intently on what's in front of her."
                     "She breathes in and as she does, it's as if all other sound is drowned out."
-                    "She opens here eyes and looks at Natsuki and I and smiles."
-                    ay 4m "Are you ready?"
+                    "She opens here eyes and looks at the three of us and smiles."
+                    ay 4m "Are you all ready?"
                     show natsuki 1g zorder 3 at f31
                     show ayame zorder 2 at t33
                     n "No, but I don't have much of a choice."
                     show natsuki zorder 2 at t31
+                    show yuri zorder 3 at f32
+                    y "Me neither, so let's just get this over with."
+                    sshow yuri zorder 2 at t32
                     show ayame 1j zorder 3 at f33
-                    ay "Ahaha, well I'm glad you understand the situation."
+                    ay "Ahaha, well I'm glad the two of you understand the situation."
                     ay "Make sure to bring that little journal with you."
                     ay 1h "[player], what about you?"
                     show ayame zorder 2 at t33
                     mc "Ready as I'll ever be."
                     mc "That is to say, I'm not ready at all."
                     show ayame 1d zorder 3 at f33
-                    ay "Good to see we're on the same page."
-                    ay "Okay, you two...let's do this."
-                    # Natsuki continue part here v2
+                    ay "Good to see we're all on the same page."
+                    ay "Okay, you three...let's do this."
+                    # Natsuki and Yuri continue here
         elif ch16_ay_companions == 3:
             mc "Yuri could probably figure it out as well."
             ay 1m "It's possible..."
@@ -18696,7 +18749,7 @@ label ch16_end:
             n "Ugh, I hate surprises. But I'm already this far..."
             n "Alright, well we should probably get going."
             n 2c "[player], you..."
-            "Natsuki walks up to me and puts a finger on my face."
+            "Natsuki walks up to me and puts a finger on my face, taking the tear with her."
             "She pulls it back and looks at it. It looks like a drop of water."
             n "Are you...crying?"
             show natsuki zorder 2 at t31
@@ -18727,7 +18780,7 @@ label ch16_end:
             "Ayame puts a hand out into the air."
             "She closes her eyes as if she's focusing intently on what's in front of her."
             "She breathes in and as she does, it's as if all other sound is drowned out."
-            "She opens here eyes and looks at Natsuki and I and smiles."
+            "She opens her eyes and looks at Natsuki and I and smiles."
             ay 4m "Are you ready?"
             show natsuki 1g zorder 3 at f31
             show ayame zorder 2 at t33
@@ -18746,6 +18799,7 @@ label ch16_end:
             # Natsuki and Yuri continue part here
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
+    jump ch16_mainb:
     return
 
 label ch16_sayoridate:
