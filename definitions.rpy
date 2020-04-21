@@ -5027,6 +5027,11 @@ image bg random_gray:
             im.Grayscale("mod_assets/images/bg/n_dadroom.png") with Dissolve(1.5)
         4.5
         repeat
+image bg bedroom_gray_color:
+    im.Grayscale("bg/bedroom.png")
+    3.0
+    "bg/bedroom.png" with Dissolve(1.5)
+
 image sayori 1g_gray = im.Grayscale("mod_assets/images/sayori/preset/1g.png")
 image sayori 1r_gray = im.Grayscale("mod_assets/images/sayori/preset/1r.png")
 image sayori 1x_gray = im.Grayscale("mod_assets/images/sayori/preset/1x.png")
