@@ -537,6 +537,9 @@ image bg flowerbed = "mod_assets/images/bg/flowerbed.png"
 image bg tree_day = "mod_assets/images/bg/tree_day.png"
 image bg s_cafe_outside = "mod_assets/images/bg/s_cafe_outside.png"
 image bg s_cafe = "mod_assets/images/bg/s_cafe.png"
+image bg beach_day = "mod_assets/images/bg/beach_day.png"
+image bg beach_sunset = "mod_assets/images/bg/beach_sunset.png"
+image bg beach_night = "mod_assets/images/bg/beach_night.png"
 
 image glitch_color:
     ytile 3
@@ -5062,6 +5065,33 @@ image monika 1bo_gray = im.Grayscale("mod_assets/images/monika/preset/1bo.png")
 image monika 1bp_gray = im.Grayscale("mod_assets/images/monika/preset/1bp.png")
 image monika 2bl_gray = im.Grayscale("mod_assets/images/monika/preset/2bl.png")
 image monika 2bm_gray = im.Grayscale("mod_assets/images/monika/preset/2bm.png")
+
+# Stick Figures
+image natsuki stick_gray = im.Grayscale("mod_assets/images/natsuki/stick.png")
+image natsuki stick = "mod_assets/images/natsuki/stick.png"
+image natsuki gray_color:
+    im.Grayscale("mod_assets/images/natsuki/stick.png")
+    3.0
+    "mod_assets/images/natsuki/stick.png" with Dissolve(1.5)
+image yuri stick_gray = im.Grayscale("mod_assets/images/yuri/stick.png")
+image yuri stick = "mod_assets/images/yuri/stick.png"
+image yuri gray_color:
+    im.Grayscale("mod_assets/images/yuri/stick.png")
+    3.0
+    "mod_assets/images/yuri/stick.png" with Dissolve(1.5)
+image monika sticknorm = "mod_assets/images/monika/stick.png"
+image monika stickhair = "mod_assets/images/monika/stickh.png"
+image monika sticknorm_gray = im.Grayscale("mod_assets/images/monika/stick.png")
+image monika stickhair_gray = im.Grayscale("mod_assets/images/monika/stickh.png")
+image monika stick_gray = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika stickhair_gray", "True", "monika sticknorm_gray")
+image monika stick = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika stickhair", "True", "monika sticknorm")
+image ayame stick_gray = im.Grayscale("mod_assets/images/ayame/stick.png")
+image ayame stick = "mod_assets/images/ayame/stick.png"
+image ayame gray_color:
+    im.Grayscale("mod_assets/images/ayame/stick.png")
+    3.0
+    "mod_assets/images/ayame/stick.png" with Dissolve(1.5)
+
 
 define narrator = Character(ctc="ctc", ctc_position="fixed")
 define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")

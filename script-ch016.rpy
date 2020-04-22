@@ -18797,9 +18797,7 @@ label ch16_end:
             ay "Good to see we're on the same page."
             ay "Okay, you two...let's do this."
             # Natsuki and Yuri continue part here
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
-    $ renpy.utter_restart()
-    jump ch16_mainb:
+    jump ch16_mainb
     return
 
 label ch16_sayoridate:
