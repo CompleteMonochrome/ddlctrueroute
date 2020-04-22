@@ -5069,13 +5069,13 @@ image monika 2bm_gray = im.Grayscale("mod_assets/images/monika/preset/2bm.png")
 # Stick Figures
 image natsuki stick_gray = im.Grayscale("mod_assets/images/natsuki/stick.png")
 image natsuki stick = "mod_assets/images/natsuki/stick.png"
-image natsuki gray_color:
+image natsuki stick_gray_color:
     im.Grayscale("mod_assets/images/natsuki/stick.png")
     3.0
     "mod_assets/images/natsuki/stick.png" with Dissolve(1.5)
 image yuri stick_gray = im.Grayscale("mod_assets/images/yuri/stick.png")
 image yuri stick = "mod_assets/images/yuri/stick.png"
-image yuri gray_color:
+image yuri stick_gray_color:
     im.Grayscale("mod_assets/images/yuri/stick.png")
     3.0
     "mod_assets/images/yuri/stick.png" with Dissolve(1.5)
@@ -5085,9 +5085,18 @@ image monika sticknorm_gray = im.Grayscale("mod_assets/images/monika/stick.png")
 image monika stickhair_gray = im.Grayscale("mod_assets/images/monika/stickh.png")
 image monika stick_gray = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika stickhair_gray", "True", "monika sticknorm_gray")
 image monika stick = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika stickhair", "True", "monika sticknorm")
+image monika stick_gray_colornorm:
+    im.Grayscale("mod_assets/images/monika/stick.png")
+    3.0
+    "mod_assets/images/monika/stick.png" with Dissolve(1.5)
+image monika stick_gray_colorhair:
+    im.Grayscale("mod_assets/images/monika/stickh.png")
+    3.0
+    "mod_assets/images/monika/stickh.png" with Dissolve(1.5)
+image monika stick_gray_color = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika stick_gray_colorhair", "True", "monika stick_gray_colornorm")
 image ayame stick_gray = im.Grayscale("mod_assets/images/ayame/stick.png")
 image ayame stick = "mod_assets/images/ayame/stick.png"
-image ayame gray_color:
+image ayame stick_gray_color:
     im.Grayscale("mod_assets/images/ayame/stick.png")
     3.0
     "mod_assets/images/ayame/stick.png" with Dissolve(1.5)
