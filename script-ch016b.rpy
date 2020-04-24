@@ -75,50 +75,66 @@ label ch16_mainb:
     mc "But how do I do that?"
     mc "Do I just think of you?"
     mc "Of what you look like?"
-    ay "No. You don't have to do that."
-    ay "If you looked at the mirror you could see how well that turned out."
+    ay "I suppose you could do that."
+    ay "Just be careful."
+    mc "What do you mean?"
+    ay "If you looked at the mirror you could see what I mean."
+    ay "But don't worry, I'm sure you'll do fine."
     mc "...Huh?"
     ay "Let's just say you didn't exactly give yourself the best embodiment."
-    ay "For me, just imagine something simple."
-    ay "Something that I can easily embody and navigate through the world with."
-    ay "I don't think we'll be here long, so anything will do."
+    ay "Now focus, [player]."
+    ay "Remember who I am. What I looked like."
+    ay "Give me something that resembles who I am."
+    ay "Then I'll take it over."
+    mc "What, are you going to possess it or something?"
+    ay "Something like that."
     ay "After that, we can work out where to go next."
     mc "Okay, here goes nothing."
-    ay "Remember, simple."
-    ay "Nothing complicated. I wouldn't want to end up like you."
-    mc "Got it..."
-    "Something simple..."
-    "I think I have something in mind."
-    "I mean what could be more simple than that, right?"
-    "Like Ayame said, we won't be here long."
-    "Just something to get the job done..."
-    "I think I've done it."
-    "It's also lacking color somehow. I didn't think of it like that, did I?"
-    "Never mind. How is she going to embody it?"
-    mc "Okay."
-    ay "Are you serious?"
-    mc "I couldn't think of a more simple thing."
-    mc "It's enough, right?"
-    ay "...I suppose."
-    "Ayame doesn't seem satisfied with what I came up with."
-    "But what else could I have done?"
-    ay "It won't matter anyway."
-    ay "Here goes nothing..."
-    "Ayame's voice is gone."
-    "For a little while, I'm left alone again."
-    mc "Ayame, are you--"
-    ay "Yeah...I'm here."
-    "The figure I came up with suddenly begins to come to life."
-    "I guess she figured it out."
-    show ayame stick_gray zorder 2 at t11
-    ay "I can't believe you did this."
-    "Ayame's voice seems to be coming from the thing I created now."
-    "So I think that's a good sign."
-    mc "You did say simple."
-    mc "You can't possibly put all of the blame of this on me."
-    ay "Whatever, let's just get this over with."
+    ay "Focus. You have to focus."
+    ay "It's nothing too complicated."
+    ay "I don't know if the human body is as complicated as rocket science but...you get it."
+    mc "I'll try my best."
+    "Despite not knowing her for that long, I've got a vivid image of Ayame in my head."
+    "I guess being around her recently will do that."
+    "Or maybe she had something to do with it."
+    "Either way..."
+    ay "You've done it!"
+    ay "I'm quite impressed, actually."
+    mc "So how is this going to work?"
+    ay "Well...I assume I just do {i}this{/i} and..."
+    show ayame 1a_gray zorder 2 at t11
+    ay "Okay that seemed to work."
+    "Ayame appears to have gained control of the image of her I created."
+    "Her voice seems to be coming from it now too."
+    ay "We have to start by{nw}"
+    $ _history_list.pop()
+    show screen tear(20, 3, 2, 0, 70)
+    window hide(None)
+    $ pause(0.3)
+    show ayame gw_2_gray
+    hide screen tear
+    $ pause(0.3)
+    window show(None)
+    ay "We have to start by{fast}...huh?"
+    window auto
+    mc "What's wrong?"
+    ay "I just...felt something happen. I--"
+    ay "This body feels like it's disintegrating."
+    ay "It's like...I'm not whole."
+    ay "I don't know if that's because of you or..."
+    "For some reason, I can't seem to see Ayame's face anymore either."
+    "I'm looking directly at her but her face is just...shadowed by something."
+    ay "Whatever, we have to start acting now."
+    mc "Are you okay, Ayame? Your face is--"
+    ay "It doesn't matter if I am or not."
+    ay "This isn't my real body and so I can't feel anything right now."
+    ay "All my senses, they're just gone."
+    ay "I can barely even move properly."
+    ay "I don't know how long we have, but it's best we act quickly."
+    ay "I have a suspicion we don't want to be here for too long."
+    mc "Alright..."
     if ch16_ay_companions == 4:
-        ay "You need to do the same for the other two as well."
+        ay "But first, you need to do the same for the other two as well."
         mc "How come I can't hear their voices?"
         ay "I...don't know. It might be because I'm the only one you still have a link to."
         ay "We didn't exactly re-establish it."
@@ -158,30 +174,60 @@ label ch16_mainb:
         ay "I think that should do it."
         ay "We should be able to communicate properly now."
         ay "I forgot to mention I'm not actually speaking."
-        ay "That's why it doesn't sound like my voice is coming from...this thing you made."
+        ay "I just thought it'd be more natural if my voice was emitting from this body you made for me."
         ay "It's like how it was when the whole world was frozen."
         ay "I'm not sure you've realized but you don't have a mouth either, [player]."
         mc "I don't even know how I made myself."
         mc "From what I can see, I don't look any different."
         mc "Or {i}feel{/i} that much different."
-        ay "I mean...it's probably best you don't look in a mirror."
+        ay "Your body doesn't seem to be disintegrating like mine."
+        ay "Perhaps you made it more sturdy somehow."
+        ay "Regardless...it's probably best you don't look in a mirror."
         ay "Anyway...did the link work? Natsuki? Yuri?"
-        show natsuki stick_gray zorder 2 at t31
-        n "Are you serious, [player]?"
+        show natsuki 1a_gray zorder 2 at t31
+        n "What's going on?"
         "Natsuki's voice echoes in my head."
-        "At the same time, Natsuki's figure starts to move a bit more naturally now."
+        "But at the same time it sounds like it's coming from the figure I made of her."
+        n "What the{nw}"
+        $ _history_list.pop()
+        show screen tear(20, 3, 2, 0, 70)
+        window hide(None)
+        $ pause(0.3)
+        show natsuki gw_2_gray
+        hide screen tear
+        $ pause(0.3)
+        window show(None)
+        n "What the{fast} hell is this?"
+        window auto
+        "Natsuki's figure starts to move a bit more naturally now."
         "I guess whatever Ayame did work."
-        n "What the hell is this?"
-        n "Could you have picked a worse thing for us to be?"
+        "But now Natsuki's face is shadowed too."
+        "What is going on...?"
+        ay "There it is again..."
+        ay "[player], you've noticed it, right?"
+        mc "I think so."
+        n "You couldn't have made me a little taller?"
         mc "Ayame said--"
-        n "Ugh, whatever. It's not like it should be the thing we're worried about."
+        n "Ugh, whatever. It's not like it should be the thing we're worried about right now."
         n "But come on."
-        mc "I'll do better next time."
+        mc "I'll...do better next time, I guess?"
         ay "I don't think there'll be a next time."
         ay "But since we can hear Natsuki, the link must be back up. Yuri, are you here?"
-        show yuri stick_gray zorder 2 at t33
-        y "I-I'm here. At least, I think I am."
+        show yuri 1a_gray zorder 2 at t33
+        y "I-I'm here.{nw}"
+        $ _history_list.pop()
+        show screen tear(20, 3, 2, 0, 70)
+        window hide(None)
+        $ pause(0.3)
+        show yuri gw_2_gray
+        hide screen tear
+        $ pause(0.3)
+        window show(None)
+        y "I-I'm here.{fast} At least, I think I am."
+        window auto
         "Yuri figure raises one of it's hand and tries to wave."
+        "Her face, like I expected, started became shadowed too."
+        ay "{i}(There it is again...){/i}"
         y "What are we doing here?"
         ay "Have you forgotten what we're meant to be doing?"
         y "No, I mean...why are we in [player]'s room?"
@@ -240,9 +286,9 @@ label ch16_mainb:
         "Natsuki points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bedroom_gray_color
-        show natsuki stick_gray_color zorder 2 at t31
-        show ayame stick_gray_color zorder 2 at t32
-        show yuri stick_gray_color zorder 2 at t33
+        show natsuki gw_2_gray_color zorder 2 at t31
+        show ayame gw_2_gray_color zorder 2 at t32
+        show yuri gw_2_gray_color zorder 2 at t33
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."
         ay "[player], was this your doing?"
@@ -263,9 +309,9 @@ label ch16_mainb:
         "I think."
         ay "Daylights burning, let's go."
         scene bg beach_day
-        show natsuki stick zorder 2 at t31
-        show ayame stick zorder 2 at t32
-        show yuri stick zorder 2 at t33
+        show natsuki gw_2 zorder 2 at t31
+        show ayame gw_2 zorder 2 at t32
+        show yuri gw_2 zorder 2 at t33
         with wipeleft_scene
     elif ch16_ay_companions == 3:
         ay "You have to imagine something for Yuri as well."
@@ -311,9 +357,9 @@ label ch16_mainb:
         mc "From what I can see, I don't look any different."
         mc "Or {i}feel{/i} that much different."
         ay "I mean...it's probably best you don't look in a mirror."
-        ay "Anyway...did the link work? uri?"
+        ay "Anyway...did the link work? Yuri?"
         show ayame zorder 2 at t21
-        show yuri stick_gray zorder 2 at t22
+        show yuri gw_2_gray zorder 2 at t22
         y "[player], what is this?"
         "Yuri's voice echoes in my head."
         "At the same time, Yuri's figure starts to move a bit more naturally now."
@@ -382,8 +428,8 @@ label ch16_mainb:
         "Yuri points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bedroom_gray_color
-        show ayame stick_gray_color zorder 2 at t21
-        show yuri stick_gray_color zorder 2 at t22
+        show ayame gw_2_gray_color zorder 2 at t21
+        show yuri gw_2_gray_color zorder 2 at t22
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."
         ay "[player], was this your doing?"
@@ -404,8 +450,8 @@ label ch16_mainb:
         "I think."
         ay "Daylights burning, let's go."
         scene bg beach_day
-        show ayame stick zorder 2 at t21
-        show yuri stick zorder 2 at t22
+        show ayame gw_2 zorder 2 at t21
+        show yuri gw_2 zorder 2 at t22
         with wipeleft_scene
     elif ch16_ay_companions == 2:
         ay "You have to imagine something for Natsuki as well."
@@ -451,7 +497,7 @@ label ch16_mainb:
         mc "Or {i}feel{/i} that much different."
         ay "I mean...it's probably best you don't look in a mirror."
         ay "Anyway...did the link work? Natsuki?"
-        show natsuki stick_gray zorder 2 at t21
+        show natsuki gw_2_gray zorder 2 at t21
         show ayame zorder 2 at t22
         n "Are you serious, [player]?"
         "Natsuki's voice echoes in my head."
@@ -523,8 +569,8 @@ label ch16_mainb:
         "Natsuki points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bedroom_gray_color
-        show natsuki stick_gray_color zorder 2 at t21
-        show ayame stick_gray_color zorder 2 at t22
+        show natsuki gw_2_gray_color zorder 2 at t21
+        show ayame gw_2_gray_color zorder 2 at t22
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."
         ay "[player], was this your doing?"
@@ -545,8 +591,8 @@ label ch16_mainb:
         "I think."
         ay "Daylights burning, let's go."
         scene bg beach_day
-        show ayame stick zorder 2 at t21
-        show natsuki stick zorder 2 at t22
+        show ayame gw_2 zorder 2 at t21
+        show natsuki gw_2 zorder 2 at t22
         with wipeleft_scene
     elif ch16_ay_companions == 1:
         ay "You need to do the same for Monika as well."
@@ -592,7 +638,7 @@ label ch16_mainb:
         ay "Monika!"
         "Ayame quickly changes the topic."
         ay "Can you speak to us?"
-        show monika stick_gray zorder 2 at t21
+        show monika gw_2_gray zorder 2 at t21
         show ayame zorder 2 at t22
         m "This is certainly an interesting turn of events."
         "Monika's voice echoes in my head."
@@ -645,8 +691,8 @@ label ch16_mainb:
         "Natsuki points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bedroom_gray_color
-        show monika stick_gray_color zorder 2 at t21
-        show ayame stick_gray_color zorder 2 at t22
+        show monika gw_2_gray_color zorder 2 at t21
+        show ayame gw_2_gray_color zorder 2 at t22
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."
         ay "[player], was this your doing?"
@@ -668,8 +714,8 @@ label ch16_mainb:
         "I think."
         ay "Daylights burning, let's go."
         scene bg beach_day
-        show monika stick zorder 2 at t21
-        show ayame stick zorder 2 at t22
+        show monika gw_2 zorder 2 at t21
+        show ayame gw_2 zorder 2 at t22
         with wipeleft_scene
     elif ch16_ay_companions == 0:
         ay "So it's just the two of us."
@@ -741,7 +787,7 @@ label ch16_mainb:
         "Ayame points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bedroom_gray_color
-        show ayame stick_gray_color zorder 2 at t11
+        show ayame gw_2_gray_color zorder 2 at t11
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."
         ay "[player], was this your doing?"
@@ -760,7 +806,7 @@ label ch16_mainb:
         "I think."
         ay "If you say so. Daylights burning, let's go."
         scene bg beach_day
-        show ayame stick zorder 2 at t11
+        show ayame gw_2 zorder 2 at t11
         with wipeleft_scene
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
