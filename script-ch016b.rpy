@@ -285,7 +285,7 @@ label ch16_mainb:
         n "Look outside!"
         "Natsuki points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
-        scene bedroom_gray_color
+        scene bg bedroom_gray_color
         show natsuki gw_2_gray_color zorder 2 at t31
         show ayame gw_2_gray_color zorder 2 at t32
         show yuri gw_2_gray_color zorder 2 at t33
@@ -315,17 +315,18 @@ label ch16_mainb:
         with wipeleft_scene
     elif ch16_ay_companions == 3:
         ay "You have to imagine something for Yuri as well."
-        ay "I don't know if she's here because she doesn't have a voice but she should be."
+        ay "I don't know if she's here because she doesn't have a voice."
+        ay "But I can faintly sense her presence."
         mc "Why is that anyway? I could hear you just fine."
         ay "It's probably because we didn't re-establish the link."
         ay "That's how I was able to speak to you."
         mc "That makes sense."
         ay "Now imagine something for Yuri to inhabit."
         ay "It doesn't have to be the same as me, it could be--"
-        "Before Ayame can finish her sentence, I come up with something that mildly resembles Yuri."
+        "Before Ayame can finish her sentence, I come up with something that resembles Yuri."
         "It suddenly appears in front of us."
-        ay "...a bit more sophisticated."
-        ay "Never mind."
+        ay "...wow."
+        ay "Never mind. I guess you know her image quite well."
         mc "What now?"
         ay "Now, we wait. If my theory is correct it'll start moving soon."
         ay "Yuri, if you can hear me..."
@@ -343,43 +344,59 @@ label ch16_mainb:
         mc "Are you okay, Yuri?"
         mc "I didn't mess anything up did I?"
         "The figure I made for Yuri looks at me."
-        "Or at least, I think it is. I didn't exactly give it eyes."
-        ay "I think maybe it's trying to talk. It doesn't exactly have a mouth."
-        mc "But I can hear you just fine."
-        ay "Oh, right. Hold on a second."
-        ay "I think that should do it."
+        ay "I think maybe she's trying to talk."
+        ay "It is kind of different to how you're used to Yuri."
+        mc "But you can talk just fine."
+        ay "Oh, right."
+        "Ayame puts a hand on Yuri's arm and closes her eyes."
+        ay "That should do it."
         ay "We should be able to communicate properly now."
         ay "I forgot to mention I'm not actually speaking."
-        ay "That's why it doesn't sound like my voice is coming from...this thing you made."
+        ay "I just thought it'd be more natural if my voice was emitting from this body you made for me."
         ay "It's like how it was when the whole world was frozen."
-        ay "I'm not sure you've realized but you don't have a mouth either, [player]."
+        ay "I'm not sure you've realized but you don't have a mouth, [player]."
+        ay "I don't think you gave yourself one."
         mc "I don't even know how I made myself."
         mc "From what I can see, I don't look any different."
         mc "Or {i}feel{/i} that much different."
         ay "I mean...it's probably best you don't look in a mirror."
         ay "Anyway...did the link work? Yuri?"
         show ayame zorder 2 at t21
-        show yuri gw_2_gray zorder 2 at t22
+        show yuri 1a_gray zorder 2 at t22
         y "[player], what is this?"
         "Yuri's voice echoes in my head."
-        "At the same time, Yuri's figure starts to move a bit more naturally now."
+        "It sounds like it's coming from Yuri though."
+        "At the same time, Yuri starts to move a bit more naturally now."
         "I guess whatever Ayame did work."
-        y "What am I?"
-        y "Why am I...like this?"
-        "Yuri figure raises one of it's hand and tries to wave."
+        y "Why do I feel so...different?"
+        "Yuri raises one of her hands and tries to wave."
         mc "Well..."
         y "I suppose it's not the biggest of our concerns at the moment."
-        y "At the very least, I can move."
+        y "At the very least, I can move. I'll manage."
+        mc "I'm sorry it might have been me that could have made your body differently."
+        mc "I thought it would have been okay since I made Ayame's too and she's okay."
         mc "I'll do better next time."
         ay "I don't think there'll be a next time."
         ay "But since we can hear Yuri, the link must be back up."
         y "That does seem to be the case. I think we're set."
-        y "So what are we doing here?"
+        y "So what{nw}"
+        $ _history_list.pop()
+        show screen tear(20, 3, 2, 0, 70)
+        window hide(None)
+        $ pause(0.3)
+        show yuri gw_2_gray
+        hide screen tear
+        $ pause(0.3)
+        window show(None)
+        y "So what{fast} are we doing here?"
+        window auto
+        ay "{i}(What is that...?){/i}"
+        y "Did you say something?"
+        ay "Nothing."
         ay "Have you forgotten what we're meant to be doing?"
         y "No, I mean...why are we in [player]'s room?"
         ay "Well..."
-        "Ayame's figure--"
-        "{i}Ayame{/i} looks towards me."
+        "Ayame looks towards me."
         mc "It was the first place I thought of."
         mc "This whole place was just a void."
         y "I think you did a good job recreating it."
@@ -427,7 +444,7 @@ label ch16_mainb:
         y "U-Um...what's happening out there?"
         "Yuri points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
-        scene bedroom_gray_color
+        scene bg bedroom_gray_color
         show ayame gw_2_gray_color zorder 2 at t21
         show yuri gw_2_gray_color zorder 2 at t22
         "Slowly, the world begins to regain color."
@@ -456,16 +473,17 @@ label ch16_mainb:
     elif ch16_ay_companions == 2:
         ay "You have to imagine something for Natsuki as well."
         ay "I don't know if she's here because she doesn't have a voice but she should be."
+        ay "I can sense her presence but just barely."
         mc "Why is that anyway? I could hear you just fine."
         ay "It's probably because we didn't re-establish the link."
         ay "That's how I was able to speak to you."
         mc "That makes sense."
         ay "Now imagine something for Natsuki to inhabit."
         ay "It doesn't have to be the same as me, it could be--"
-        "Before Ayame can finish her sentence, I come up with something that mildly resembles Natsuki."
+        "Before Ayame can finish her sentence, I come up with something that resembles Natsuki."
         "It suddenly appears in front of us."
-        ay "...a bit more sophisticated."
-        ay "Never mind."
+        ay "...wow."
+        ay "Never mind. I guess you know her image quite well."
         mc "What now?"
         ay "Now, we wait. If my theory is correct it'll start moving soon."
         ay "Natsuki, if you can hear me..."
@@ -481,45 +499,61 @@ label ch16_mainb:
         "I wonder why it's movements are so different to Ayame's."
         mc "Are you okay, Natsuki?"
         mc "I didn't mess anything up did I?"
-        "The figure resembling Natsuki looks at me."
-        "Or at least, I think it is. I didn't exactly give it eyes."
-        ay "I think maybe it's trying to talk. It doesn't exactly have a mouth."
-        mc "But I can hear you just fine."
-        ay "Oh, right. Hold on a second."
-        ay "I think that should do it."
+        "Natsuki looks at me."
+        ay "I think maybe she's trying to talk."
+        ay "It is kind of different to how you're used to Natsuki."
+        mc "But you can talk just fine."
+        ay "Oh, right."
+        "Ayame puts a hand on Natsuki's arm and closes her eyes."
+        ay "That should do it."
         ay "We should be able to communicate properly now."
         ay "I forgot to mention I'm not actually speaking."
-        ay "That's why it doesn't sound like my voice is coming from...this thing you made."
+        ay "I just thought it'd be more natural if my voice was emitting from this body you made for me."
         ay "It's like how it was when the whole world was frozen."
-        ay "I'm not sure you've realized but you don't have a mouth either, [player]."
+        ay "I'm not sure you've realized but you don't have a mouth, [player]."
+        ay "I don't think you gave yourself one."
         mc "I don't even know how I made myself."
         mc "From what I can see, I don't look any different."
         mc "Or {i}feel{/i} that much different."
         ay "I mean...it's probably best you don't look in a mirror."
         ay "Anyway...did the link work? Natsuki?"
-        show natsuki gw_2_gray zorder 2 at t21
+        show natsuki 1a_gray zorder 2 at t21
         show ayame zorder 2 at t22
-        n "Are you serious, [player]?"
+        n "H-Hello?"
+        n "Ugh, can you guys hear me?"
         "Natsuki's voice echoes in my head."
-        "At the same time, Natsuki's figure starts to move a bit more naturally now."
+        "It sounds like it's coming from Natsuki though."
+        "At the same time, Natsuki starts to move a bit more naturally now."
         "I guess whatever Ayame did work."
-        n "What the hell is this?"
-        n "Could you have picked a worse thing for us to be?"
-        mc "Ayame said--"
-        n "Ugh, whatever. It's not like it should be the thing we're worried about."
-        n "But come on."
+        n "What's happening? Why do I feel like this?"
+        mc "Well..."
+        n "You don't sound like you know."
+        n "Whatever, it's not what we have to worry about right now, is it?"
+        n "I'll figure it out so don't worry."
+        mc "I'm sorry it might have been me that could have made your body differently."
+        mc "I thought it would have been okay since I made Ayame's too and she's okay."
         mc "I'll do better next time."
         ay "I don't think there'll be a next time."
         ay "But since we can hear Natsuki, the link must be back up."
-        n "Yeah, it's back up so don't worry."
-        n "So what's the deal? Where are we?"
-        ay "Have you forgotten what we're meant to be doing?"
-        mc "I think she means what is this place."
-        mc "It's my bedroom."
+        n "If you say so."
+        n "So what{nw}"
+        $ _history_list.pop()
+        show screen tear(20, 3, 2, 0, 70)
+        window hide(None)
+        $ pause(0.3)
+        show natsuki gw_2_gray
+        hide screen tear
+        $ pause(0.3)
+        window show(None)
+        n "So what{nw} are we doing here?"
+        window auto
+        ay "{i}(What is that...?){/i}"
+        n "I can't hear you, Ayame."
+        ay "I'm just talking to myself, never mind me."
+        mc "This place is my bedroom."
         n "W-What? Why are we in your bedroom?"
         ay "Well..."
-        "Ayame's figure--"
-        "{i}Ayame{/i} looks towards me."
+        "Ayame looks towards me."
         mc "It was the first place I thought of."
         mc "This whole place was just a void."
         n "R-Right..."
@@ -568,7 +602,7 @@ label ch16_mainb:
         n "Look outside!"
         "Natsuki points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
-        scene bedroom_gray_color
+        scene bg bedroom_gray_color
         show natsuki gw_2_gray_color zorder 2 at t21
         show ayame gw_2_gray_color zorder 2 at t22
         "Slowly, the world begins to regain color."
@@ -605,7 +639,7 @@ label ch16_mainb:
         mc "Why wouldn't I?"
         ay "I don't know. I'm just saying."
         mc "Alright, here goes..."
-        "I close my eyes and try to come up with something that mildly resembles Monika."
+        "I close my eyes and try to come up with something that resembles Monika."
         "It suddenly appears in front of us."
         ay "In the same likeness as me, I see."
         mc "Well you did say to keep it simple."
@@ -616,17 +650,15 @@ label ch16_mainb:
         "It starts off slightly rigid but quickly begins to move more naturally."
         mc "Are you okay, Monika?"
         mc "I didn't mess anything up did I?"
-        "The figure resembling Monika looks at me."
-        "Or at least, I think it is. I didn't exactly give it eyes."
+        "Monika turns towards me."
         ay "She's probably trying to speak to us."
-        ay "But she can't, since she doesn't have a mouth."
-        mc "But I can hear you just fine."
-        ay "Oh, right. The link."
+        ay "But she can't, since she isn't part of the link."
         ay "I suppose I could reconnect it with her."
+        mc "That would be a good start, I think."
         ay "Okay, that should do it."
         ay "We should be able to communicate properly now."
         ay "I forgot to mention I'm not actually speaking."
-        ay "That's why it doesn't sound like my voice is coming from...this thing you made."
+        ay "I just thought it'd be more natural if my voice was emitting from this body you made for me."
         ay "It's like how it was when the whole world was frozen."
         ay "I'm not sure you've realized but you don't have a mouth either, [player]."
         mc "I don't even know how I made myself."
@@ -638,7 +670,7 @@ label ch16_mainb:
         ay "Monika!"
         "Ayame quickly changes the topic."
         ay "Can you speak to us?"
-        show monika gw_2_gray zorder 2 at t21
+        show monika 1a_gray zorder 2 at t21
         show ayame zorder 2 at t22
         m "This is certainly an interesting turn of events."
         "Monika's voice echoes in my head."
@@ -650,7 +682,21 @@ label ch16_mainb:
             m "We're trying to save Sayori."
         else:
             m "We're trying to stop Sayori."
-        m "But why here?"
+        m "But why{nw}"
+        $ _history_list.pop()
+        show screen tear(20, 3, 2, 0, 70)
+        window hide(None)
+        $ pause(0.3)
+        show monika gw_2_gray
+        hide screen tear
+        $ pause(0.3)
+        window show(None)
+        m "But why{nw} here?"
+        window auto
+        if monika_type == 1 and ch12_markov_agree:
+            ay "{i}(Even you then...?){/i}"
+        else:
+            ay "{i}(What is that...?){/i}"
         mc "It was the first place I thought of."
         mc "This whole place was just a void."
         m "I see...a black and white void."
@@ -690,7 +736,7 @@ label ch16_mainb:
         m "Well, something is going on out there."
         "Natsuki points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
-        scene bedroom_gray_color
+        scene bg bedroom_gray_color
         show monika gw_2_gray_color zorder 2 at t21
         show ayame gw_2_gray_color zorder 2 at t22
         "Slowly, the world begins to regain color."
@@ -786,7 +832,7 @@ label ch16_mainb:
         ay "I think that means progress. Look!"
         "Ayame points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
-        scene bedroom_gray_color
+        scene bg bedroom_gray_color
         show ayame gw_2_gray_color zorder 2 at t11
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."

@@ -5097,7 +5097,7 @@ image monika gw_2_hair = "mod_assets/images/monika/g2h_mod.png"
 image monika gw_2_norm_gray = im.Grayscale("mod_assets/images/monika/g2_mod.png")
 image monika gw_2_hair_gray = im.Grayscale("mod_assets/images/monika/g2h_mod.png")
 image monika gw_2_gray_colornorm:
-    im.Grayscale("mod_assets/images/monika/g2.png")
+    im.Grayscale("mod_assets/images/monika/g2_mod.png")
     3.0
     "mod_assets/images/monika/g2.png" with Dissolve(1.5)
 image monika gw_2_gray_colorhair:
