@@ -5129,7 +5129,7 @@ image monika gw_2_gray_colorhair:
 image monika gw_2_gray_colornorm_blur:
     im.Grayscale("mod_assets/images/monika/g2_mod_blur.png")
     3.0
-    "mod_assets/images/monika/g2.png_blur" with Dissolve(1.5)
+    "mod_assets/images/monika/g2_mod_blur.png" with Dissolve(1.5)
 image monika gw_2_gray_colorhair_blur:
     im.Grayscale("mod_assets/images/monika/g2h_mod_blur.png")
     3.0
