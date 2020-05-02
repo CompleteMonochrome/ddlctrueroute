@@ -286,9 +286,9 @@ label ch16_mainb:
         "Natsuki points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bg bedroom_gray_color
-        show natsuki gw_2_gray_color_blur zorder 2 at t31
-        show ayame gw_2_gray_color_blur zorder 2 at t32
-        show yuri gw_2_gray_color_blur zorder 2 at t33
+        show natsuki gw_2_blur zorder 2 at i31
+        show ayame gw_2_blur zorder 2 at i32
+        show yuri gw_2_blur zorder 2 at i33
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."
         ay "[player], was this your doing?"
@@ -449,8 +449,8 @@ label ch16_mainb:
         "Yuri points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bg bedroom_gray_color
-        show ayame gw_2_gray_color_blur zorder 2 at t21
-        show yuri gw_2_gray_color_blur zorder 2 at t22
+        show ayame gw_2_blur zorder 2 at i21
+        show yuri gw_2_blur zorder 2 at i22
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."
         ay "[player], was this your doing?"
@@ -611,8 +611,8 @@ label ch16_mainb:
         "Natsuki points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bg bedroom_gray_color
-        show natsuki gw_2_gray_color_blur zorder 2 at t21
-        show ayame gw_2_gray_color_blur zorder 2 at t22
+        show natsuki gw_2_blur zorder 2 at i21
+        show ayame gw_2_blur zorder 2 at i22
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."
         ay "[player], was this your doing?"
@@ -749,8 +749,8 @@ label ch16_mainb:
         "Natsuki points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bg bedroom_gray_color
-        show monika gw_2_gray_color_blur zorder 2 at t21
-        show ayame gw_2_gray_color_blur zorder 2 at t22
+        show monika gw_2_blur zorder 2 at i21
+        show ayame gw_2_blur zorder 2 at i22
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."
         ay "[player], was this your doing?"
@@ -849,7 +849,7 @@ label ch16_mainb:
         "Ayame points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bg bedroom_gray_color
-        show ayame gw_2_gray_color_blur zorder 2 at t11
+        show ayame gw_2_blur zorder 2 at i11
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."
         ay "[player], was this your doing?"
