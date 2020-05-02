@@ -5075,27 +5075,49 @@ image monika 1a_gray = ConditionSwitch("monika_type == 1 and ch12_markov_agree",
 
 # Glitch Figures
 image natsuki gw_1 = "mod_assets/images/natsuki/g1.png"
+image natsuki gw_1_blur = "mod_assets/images/natsuki/g1_blur.png"
 image natsuki gw_2 = "mod_assets/images/natsuki/g2.png"
+image natsuki gw_2_blur = "mod_assets/images/natsuki/g2_blur.png"
 image natsuki gw_2_gray = im.Grayscale("mod_assets/images/natsuki/g2.png")
+image natsuki gw_2_gray_blur = im.Grayscale("mod_assets/images/natsuki/g2_blur.png")
 image natsuki gw_2_gray_color:
     im.Grayscale("mod_assets/images/natsuki/g2.png")
     3.0
     "mod_assets/images/natsuki/g2.png" with Dissolve(1.5)
+image natsuki gw_2_gray_color_blur:
+    im.Grayscale("mod_assets/images/natsuki/g2_blur.png")
+    3.0
+    "mod_assets/images/natsuki/g2_blur.png" with Dissolve(1.5)
 image natsuki gw_3 = "mod_assets/images/natsuki/g3.png"
+image natsuki gw_3_blur = "mod_assets/images/natsuki/g3_blur.png"
 image yuri gw_1 = "mod_assets/images/yuri/g1.png"
+image yuri gw_1_blur = "mod_assets/images/yuri/g1_blur.png"
 image yuri gw_2 = "mod_assets/images/yuri/g2.png"
+image yuri gw_2_blur = "mod_assets/images/yuri/g2_blur.png"
 image yuri gw_2_gray = im.Grayscale("mod_assets/images/yuri/g2.png")
+image yuri gw_2_gray_blur = im.Grayscale("mod_assets/images/yuri/g2_blur.png")
 image yuri gw_2_gray_color:
     im.Grayscale("mod_assets/images/yuri/g2.png")
     3.0
     "mod_assets/images/yuri/g2.png" with Dissolve(1.5)
+image yuri gw_2_gray_color_blur:
+    im.Grayscale("mod_assets/images/yuri/g2_blur.png")
+    3.0
+    "mod_assets/images/yuri/g2_blur.png" with Dissolve(1.5)
 image yuri gw_3 = "mod_assets/images/yuri/g3.png"
+image yuri gw_3_blur = "mod_assets/images/yuri/g3_blur.png"
 image monika gw_1_norm = "mod_assets/images/monika/g1_mod.png"
 image monika gw_1_hair = "mod_assets/images/monika/g1h_mod.png"
+image monika gw_1_norm_blur = "mod_assets/images/monika/g1_mod_blur.png"
+image monika gw_1_hair_blur = "mod_assets/images/monika/g1h_mod_blur.png"
 image monika gw_2_norm = "mod_assets/images/monika/g2_mod.png"
 image monika gw_2_hair = "mod_assets/images/monika/g2h_mod.png"
+image monika gw_2_norm_blur = "mod_assets/images/monika/g2_mod_blur.png"
+image monika gw_2_hair_blur = "mod_assets/images/monika/g2h_mod_blur.png"
 image monika gw_2_norm_gray = im.Grayscale("mod_assets/images/monika/g2_mod.png")
 image monika gw_2_hair_gray = im.Grayscale("mod_assets/images/monika/g2h_mod.png")
+image monika gw_2_norm_gray_blur = im.Grayscale("mod_assets/images/monika/g2_mod_blur.png")
+image monika gw_2_hair_gray_blur = im.Grayscale("mod_assets/images/monika/g2h_mod_blur.png")
 image monika gw_2_gray_colornorm:
     im.Grayscale("mod_assets/images/monika/g2_mod.png")
     3.0
@@ -5104,21 +5126,44 @@ image monika gw_2_gray_colorhair:
     im.Grayscale("mod_assets/images/monika/g2h_mod.png")
     3.0
     "mod_assets/images/monika/g2h_mod.png" with Dissolve(1.5)
+image monika gw_2_gray_colornorm_blur:
+    im.Grayscale("mod_assets/images/monika/g2_mod_blur.png")
+    3.0
+    "mod_assets/images/monika/g2.png_blur" with Dissolve(1.5)
+image monika gw_2_gray_colorhair_blur:
+    im.Grayscale("mod_assets/images/monika/g2h_mod_blur.png")
+    3.0
+    "mod_assets/images/monika/g2h_mod_blur.png" with Dissolve(1.5)
 image monika gw_3_norm = "mod_assets/images/monika/g3_mod.png"
 image monika gw_3_hair = "mod_assets/images/monika/g3h_mod.png"
+image monika gw_3_norm_blur = "mod_assets/images/monika/g3_mod_blur.png"
+image monika gw_3_hair_blur = "mod_assets/images/monika/g3h_mod_blur.png"
 image monika gw_1 = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika gw_1_hair", "True", "monika gw_1_norm")
+image monika gw_1_blur = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika gw_1_hair_blur", "True", "monika gw_1_norm_blur")
 image monika gw_2 = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika gw_2_hair", "True", "monika gw_2_norm")
+image monika gw_2_blur = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika gw_2_hair_blur", "True", "monika gw_2_norm_blur")
 image monika gw_2_gray = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika gw_2_hair_gray", "True", "monika gw_2_norm_gray")
+image monika gw_2_gray_blur = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika gw_2_hair_gray_blur", "True", "monika gw_2_norm_gray_blur")
 image monika gw_2_gray_color = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika gw_2_gray_colorhair", "True", "monika gw_2_gray_colornorm")
+image monika gw_2_gray_color_blur = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika gw_2_gray_colorhair_blur", "True", "monika gw_2_gray_colornorm_blur")
 image monika gw_3 = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika gw_3_hair", "True", "monika gw_3_norm")
+image monika gw_3_blur = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika gw_3_hair_blur", "True", "monika gw_3_norm_blur")
 image ayame gw_1 = "mod_assets/images/ayame/g1.png"
+image ayame gw_1_blur = "mod_assets/images/ayame/g1_blur.png"
 image ayame gw_2 = "mod_assets/images/ayame/g2.png"
+image ayame gw_2_blur = "mod_assets/images/ayame/g2_blur.png"
 image ayame gw_2_gray = im.Grayscale("mod_assets/images/ayame/g2.png")
+image ayame gw_2_gray_blur = im.Grayscale("mod_assets/images/ayame/g2_blur.png")
 image ayame gw_2_gray_color:
     im.Grayscale("mod_assets/images/ayame/g2.png")
     3.0
     "mod_assets/images/ayame/g2.png" with Dissolve(1.5)
+image ayame gw_2_gray_color_blur:
+    im.Grayscale("mod_assets/images/ayame/g2_blur.png")
+    3.0
+    "mod_assets/images/ayame/g2_blur.png" with Dissolve(1.5)
 image ayame gw_3 = "mod_assets/images/ayame/g3.png"
+image ayame gw_3_blur = "mod_assets/images/ayame/g3_blur.png"
 
 
 define narrator = Character(ctc="ctc", ctc_position="fixed")

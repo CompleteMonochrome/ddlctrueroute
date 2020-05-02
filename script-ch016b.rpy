@@ -111,7 +111,7 @@ label ch16_mainb:
     show screen tear(20, 3, 2, 0, 70)
     window hide(None)
     $ pause(0.3)
-    show ayame gw_2_gray
+    show ayame gw_2_gray_blur
     hide screen tear
     $ pause(0.3)
     window show(None)
@@ -193,7 +193,7 @@ label ch16_mainb:
         show screen tear(20, 3, 2, 0, 70)
         window hide(None)
         $ pause(0.3)
-        show natsuki gw_2_gray
+        show natsuki gw_2_gray_blur
         hide screen tear
         $ pause(0.3)
         window show(None)
@@ -219,7 +219,7 @@ label ch16_mainb:
         show screen tear(20, 3, 2, 0, 70)
         window hide(None)
         $ pause(0.3)
-        show yuri gw_2_gray
+        show yuri gw_2_gray_blur
         hide screen tear
         $ pause(0.3)
         window show(None)
@@ -286,9 +286,9 @@ label ch16_mainb:
         "Natsuki points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bg bedroom_gray_color
-        show natsuki gw_2_gray_color zorder 2 at t31
-        show ayame gw_2_gray_color zorder 2 at t32
-        show yuri gw_2_gray_color zorder 2 at t33
+        show natsuki gw_2_gray_color_blur zorder 2 at t31
+        show ayame gw_2_gray_color_blur zorder 2 at t32
+        show yuri gw_2_gray_color_blur zorder 2 at t33
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."
         ay "[player], was this your doing?"
@@ -309,10 +309,14 @@ label ch16_mainb:
         "I think."
         ay "Daylights burning, let's go."
         scene bg beach_day
-        show natsuki gw_2 zorder 2 at t31
-        show ayame gw_2 zorder 2 at t32
-        show yuri gw_2 zorder 2 at t33
+        show natsuki gw_2_blur zorder 2 at t31
+        show ayame gw_2_blur zorder 2 at t32
+        show yuri gw_2_blur zorder 2 at t33
         with wipeleft_scene
+        "As I open the door, the four of us are treated to an eerily familiar shoreline."
+        "Well, except the random bedroom in the middle of it all."
+        "A memory is trying to bring itself forward in my head."
+        "Pirates...?"
     elif ch16_ay_companions == 3:
         ay "You have to imagine something for Yuri as well."
         ay "I don't know if she's here because she doesn't have a voice."
@@ -384,7 +388,7 @@ label ch16_mainb:
         show screen tear(20, 3, 2, 0, 70)
         window hide(None)
         $ pause(0.3)
-        show yuri gw_2_gray
+        show yuri gw_2_gray_blur
         hide screen tear
         $ pause(0.3)
         window show(None)
@@ -445,8 +449,8 @@ label ch16_mainb:
         "Yuri points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bg bedroom_gray_color
-        show ayame gw_2_gray_color zorder 2 at t21
-        show yuri gw_2_gray_color zorder 2 at t22
+        show ayame gw_2_gray_color_blur zorder 2 at t21
+        show yuri gw_2_gray_color_blur zorder 2 at t22
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."
         ay "[player], was this your doing?"
@@ -467,9 +471,13 @@ label ch16_mainb:
         "I think."
         ay "Daylights burning, let's go."
         scene bg beach_day
-        show ayame gw_2 zorder 2 at t21
-        show yuri gw_2 zorder 2 at t22
+        show ayame gw_2_blur zorder 2 at t21
+        show yuri gw_2_blur zorder 2 at t22
         with wipeleft_scene
+        "As I open the door, the three of us are treated to an eerily familiar shoreline."
+        "Well, except the random bedroom in the middle of it all."
+        "A memory is trying to bring itself forward in my head."
+        "Pirates...?"
     elif ch16_ay_companions == 2:
         ay "You have to imagine something for Natsuki as well."
         ay "I don't know if she's here because she doesn't have a voice but she should be."
@@ -541,7 +549,7 @@ label ch16_mainb:
         show screen tear(20, 3, 2, 0, 70)
         window hide(None)
         $ pause(0.3)
-        show natsuki gw_2_gray
+        show natsuki gw_2_gray_blur
         hide screen tear
         $ pause(0.3)
         window show(None)
@@ -603,8 +611,8 @@ label ch16_mainb:
         "Natsuki points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bg bedroom_gray_color
-        show natsuki gw_2_gray_color zorder 2 at t21
-        show ayame gw_2_gray_color zorder 2 at t22
+        show natsuki gw_2_gray_color_blur zorder 2 at t21
+        show ayame gw_2_gray_color_blur zorder 2 at t22
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."
         ay "[player], was this your doing?"
@@ -625,9 +633,13 @@ label ch16_mainb:
         "I think."
         ay "Daylights burning, let's go."
         scene bg beach_day
-        show ayame gw_2 zorder 2 at t21
-        show natsuki gw_2 zorder 2 at t22
+        show ayame gw_2_blur zorder 2 at t21
+        show natsuki gw_2_blur zorder 2 at t22
         with wipeleft_scene
+        "As I open the door, the three of us are treated to an eerily familiar shoreline."
+        "Well, except the random bedroom in the middle of it all."
+        "A memory is trying to bring itself forward in my head."
+        "Pirates...?"
     elif ch16_ay_companions == 1:
         ay "You need to do the same for Monika as well."
         mc "Why can't I hear her?"
@@ -687,7 +699,7 @@ label ch16_mainb:
         show screen tear(20, 3, 2, 0, 70)
         window hide(None)
         $ pause(0.3)
-        show monika gw_2_gray
+        show monika gw_2_gray_blur
         hide screen tear
         $ pause(0.3)
         window show(None)
@@ -737,8 +749,8 @@ label ch16_mainb:
         "Natsuki points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bg bedroom_gray_color
-        show monika gw_2_gray_color zorder 2 at t21
-        show ayame gw_2_gray_color zorder 2 at t22
+        show monika gw_2_gray_color_blur zorder 2 at t21
+        show ayame gw_2_gray_color_blur zorder 2 at t22
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."
         ay "[player], was this your doing?"
@@ -760,9 +772,13 @@ label ch16_mainb:
         "I think."
         ay "Daylights burning, let's go."
         scene bg beach_day
-        show monika gw_2 zorder 2 at t21
-        show ayame gw_2 zorder 2 at t22
+        show monika gw_2_blur zorder 2 at t21
+        show ayame gw_2_blur zorder 2 at t22
         with wipeleft_scene
+        "As I open the door, the three of us are treated to an eerily familiar shoreline."
+        "Well, except the random bedroom in the middle of it all."
+        "A memory is trying to bring itself forward in my head."
+        "Pirates...?"
     elif ch16_ay_companions == 0:
         ay "So it's just the two of us."
         ay "Which means there's only two minds to figure out what the hell is going on here."
@@ -833,7 +849,7 @@ label ch16_mainb:
         "Ayame points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bg bedroom_gray_color
-        show ayame gw_2_gray_color zorder 2 at t11
+        show ayame gw_2_gray_color_blur zorder 2 at t11
         "Slowly, the world begins to regain color."
         "I can hear waves crashing and the wind howling outside."
         ay "[player], was this your doing?"
@@ -852,8 +868,12 @@ label ch16_mainb:
         "I think."
         ay "If you say so. Daylights burning, let's go."
         scene bg beach_day
-        show ayame gw_2 zorder 2 at t11
+        show ayame gw_2_blur zorder 2 at t11
         with wipeleft_scene
+        "As I open the door, Ayame and I are treated to an eerily familiar shoreline."
+        "Well, except the random bedroom in the middle of it all."
+        "A memory is trying to bring itself forward in my head."
+        "Pirates...?"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
