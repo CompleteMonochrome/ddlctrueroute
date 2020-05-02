@@ -18084,7 +18084,7 @@ label ch16_end:
                     "She begins to pull but suddenly she's repelled from the bench."
                     "It's as if an invisible force pushed her away from it."
                     ay 5n "Ow...okay, I was not expecting that."
-                    show yuri 2p zorder zorder 3 at f32
+                    show yuri 2p zorder 3 at f32
                     y "A-Ayame, are you okay?"
                     show yuri zorder 2 at t32
                     show ayame 2j zorder 3 at f33
