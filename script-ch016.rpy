@@ -14056,7 +14056,7 @@ label ch16_end:
             ay "Okay. I guess you do know."
             ay "Straight to the point then. We're going to find Sayori and stop her."
             m 1f "What about the other two?"
-            mc "Monika looks towards Natsuki and Yuri."
+            "Monika looks towards Natsuki and Yuri."
             ay "They can't escape the frozen stasis they're in."
             ay 1a "I assume you know the reason to that too."
             m 1a "I can guess, but that's not important."
@@ -14737,7 +14737,7 @@ label ch16_end:
                 ay "How about you, Yuri? Do you want to help us?"
             if yuri_approval >= 3 or yuri_date:
                 if ch16_ay_companions == 6:
-                    $ ch16_ay_companions == 4
+                    $ ch16_ay_companions = 4
                     y 3s "I suppose if Natsuki is helping, it would only be right that I do as well."
                     y "It would be wrong to say no to something like this, with the stakes so high."
                     y 3v "Though, like Natsuki, I'm still unsure as to what I could actually do."
