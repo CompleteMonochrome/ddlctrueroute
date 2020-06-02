@@ -708,7 +708,7 @@ label ch12_n_end:
         "She sounds unconvincing."
         mc "Well, if you say so."
         n "And besides...!"
-        n "This poem is written in my sort of like my style!"
+        n "This poem is written like my style!"
         mc "Are you telling me or yourself?"
         n 1o "Uuuuuu...!"
         n "Why are you being like this?!"

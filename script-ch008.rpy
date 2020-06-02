@@ -1387,7 +1387,7 @@ label ch8_end:
     with wipeleft_scene
     play music t8 fadein 0.5
     "We all left the clubroom to give Yuri some space."
-    "There's clearly something wrong with her and judging by how just acted..."
+    "There's clearly something wrong with her and judging by how she just acted..."
     "Well, I can't tell if she's feeling better or worse."
     show sayori 1d zorder 3 at f32
     s "She's feeling better, I know it."

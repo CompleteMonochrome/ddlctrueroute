@@ -344,7 +344,7 @@ label ch16_mainb:
         ay "Was there any location of signif--"
         "Ayame suddenly cuts herself off."
         "It's as if she's doesn't know the word she's trying to say."
-        ay "How do you say that word? S-Significance. There."
+        ay "How do you say that word? S-Signifidance? N-No...significance. There."
         ay "Any locations of significance around here?"
         mc "Just a couple. There was this tree for one..."
         "I lead the three of them to one of the trees."
@@ -367,7 +367,11 @@ label ch16_mainb:
         mc "It might not seem that impressive but we were a lot younger back then!"
         mc "This tree seemed really tall."
         mc "Funny thing is, I don't think I could do it now if I wanted to."
-
+        mc "I could try but I'd probably fail miserably."
+        mc "Besides, there's some other things I want to show you all."
+        n "That would have been something to see."
+        n "But I guess we don't have much time, do we?"
+        ay "Where's the next place?"
     elif ch16_ay_companions == 3:
         ay "You have to imagine something for Yuri as well."
         ay "I don't know if she's here because she doesn't have a voice."

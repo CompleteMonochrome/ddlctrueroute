@@ -747,7 +747,7 @@ label ch6_end:
             s 3bl "Um..."
             s "The story!"
             "I'm guessing she's talking about the club novel."
-            "But the way she said how closer we are to the end..."
+            "But the way she said how close we are to the end..."
             "Well, it leaves a bad feeling."
             s 1ba "I'll see you tomorrow then."
             s "I promise I'll be the one waiting."
