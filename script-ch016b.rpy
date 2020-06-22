@@ -371,7 +371,84 @@ label ch16_mainb:
         mc "Besides, there's some other things I want to show you all."
         n "That would have been something to see."
         n "But I guess we don't have much time, do we?"
-        ay "Where's the next place?"
+        ay "Hmm...I can't seem to feel anything from this."
+        ay "I don't think this is the right spot."
+        mc "The right spot for what?"
+        ay "I suspect that one of these areas is the key to get to Sayori."
+        ay "Don't ask me why, just trust me on this."
+        y "There's no time to argue."
+        n "Just do as she says, [player]."
+        "I haven't even said anything to suggest I would disagree with her."
+        "Besides, it's not like I have much choice anyway."
+        "We're stuck here until we can fix this mess."
+        ay "So where's the next place?"
+        mc "Alright...let me think."
+        "I didn't even get to finish explaining the rest of this place."
+        "It's strange. All of the memories that were in my subconscious are coming back to me."
+        "The times that I spent here, at this tree, with Sayori..."
+        "I wouldn't trade them for anything."
+        # stop music fadeout 2.0
+        scene bg beach_day_gray
+        show sayori 4bl_gray zorder 2 at i11
+        show vignette zorder 100
+        with dissolve_scene_full
+        # play music "<loop 4.444>bgm/5.ogg" fadein 1.0
+        $ style.say_window = style.window_flashback
+        "What the...?"
+        "It's Sayori...and we're at the beach except..."
+        mc "S-Sayori, are you okay?!"
+        mc "You're not hurt, are you?"
+        s "I-I'm fine, [player]."
+        s "It's just a scratch, see?"
+        "This is when she..."
+        mc "Sayori, you're bleeding! We need to go find your parents."
+        s "No, don't! I'll be fine, I promise."
+        mc "You can't be fine after falling from the tree like that."
+        mc "Come on. It's the right thing to do."
+        s "My parents don't have to know."
+        mc "You really think they're not gonna notice that red patch on your knee?"
+        s "W-Well..."
+        "I remember this...but why is she older?"
+        "This happened when we were still children, didn't it?"
+        "This doesn't make any sense."
+        mc "I just don't want you to get hurt, okay?"
+        mc "I'll even carry you back."
+        s "Ahaha, are you serious?"
+        mc "Of course."
+        s 4by_gray "Well, when you put it like that..."
+        s "Alright, fine. Only because you're insisting on it."
+        s "I'm gonna get in so much trouble for this..."
+        mc "You'll get over it."
+        scene white with dissolve_cg
+        scene bg beach_day_gray
+        show natsuki gw_2_blur zorder 2 at t31
+        show ayame gw_2_blur zorder 2 at t32
+        show yuri gw_2_blur zorder 2 at t33
+        with dissolve_scene_full
+        $ style.say_window = style.window
+        n "Are you there?"
+        mc "H-Huh?"
+        n "You looked like you were daydreaming."
+        mc "I was just remembering something, sorry."
+        "Was Sayori being older in my memory a result of this new world we're in?"
+        "Was that memory even real? It sure {i}felt{/i} real but..."
+        "I have so many questions. It's so frustrating not being able to get them answered."
+        "I'll just have to ask Sayori myself when I see here."
+        mc "What were we doing again?"
+        ay "You were bringing us to the next place you think is important around here."
+        y "Where's the next location, [player]?"
+        mc "It should be just over here."
+        "I lead the three of them through some bushes and trees."
+        "The spot we're going to was a hiding spot me and Sayori used a lot."
+        "Whenever we just wanted to hear the distant crashing of waves, we would go there."
+        "There was a little clearing there that was perfect to just sit down and take in the world."
+        "No one would ever go there, probably because it was pretty well hidden."
+        n "What is this place?"
+        y "How curious."
+        ay "This is a pretty small place, isn't it?"
+        ay "Though I imagine the two of you were smaller when you used it."
+        mc "Yeah, I haven't been here in a while..."
+        mc "It does seem smaller than I remember."
     elif ch16_ay_companions == 3:
         ay "You have to imagine something for Yuri as well."
         ay "I don't know if she's here because she doesn't have a voice."
@@ -801,7 +878,7 @@ label ch16_mainb:
         mc "Go back. Remember to when we were innocent."
         "I say that without even thinking and suddenly the room begins to shake."
         m "Well, something is going on out there."
-        "Natsuki points out the window and it appears that some sort of beach is forming."
+        "Monika points out the window and it appears that some sort of beach is forming."
         "Was that because of me?"
         scene bg bedroom_gray_color
         show monika gw_2_blur zorder 2 at i21

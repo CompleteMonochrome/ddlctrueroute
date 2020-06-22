@@ -1391,7 +1391,7 @@ label ch12_play:
     show natsuki 1q zorder 3 at f42
     show sayori zorder 2 at t44
     n "There's nothing you can do, Saika..."
-    n "Even with your powers of time manipulation, it's far too late to do change the past."
+    n "Even with your powers of time manipulation, it's far too late to change the past."
     n 2s "You can't change what's happened, not like this."
     show natsuki zorder 2 at t42
     show sayori 2k zorder 3 at f44
