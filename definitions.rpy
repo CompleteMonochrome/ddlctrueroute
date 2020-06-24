@@ -540,6 +540,7 @@ image bg s_cafe = "mod_assets/images/bg/s_cafe.png"
 image bg beach_day = "mod_assets/images/bg/beach_day.png"
 image bg beach_sunset = "mod_assets/images/bg/beach_sunset.png"
 image bg beach_night = "mod_assets/images/bg/beach_night.png"
+image bg clearing = "mod_assets/images/bg/clearing.png"
 
 image glitch_color:
     ytile 3
