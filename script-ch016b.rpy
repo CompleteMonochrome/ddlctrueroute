@@ -632,6 +632,12 @@ label ch16_mainb:
         ay "Why they're all glitched out like this, [player]."
         n "Did you really not pay attention?"
         y "Or maybe you were just scared to point it out?"
+        "Now that she mentions it...I did notice they sounded kind of different."
+        "It's like there was a faint trace of Sayori's voice when they spoke."
+        "It wasn't obvious at first but as I took them around the beach..."
+        "I could make out her voice more and more."
+        "I thought I was just hearing it but now it makes sense."
+        "Sayori's voice is mixed with theirs, but it's overpowering them now."
         mc "Sayori, please."
         ay "Please what?"
         mc "Don't do this."
@@ -640,10 +646,97 @@ label ch16_mainb:
         ay "We're just perpetually doomed to repeat the same mistakes over and over."
         mc "You know that's not true."
         mc "We've been given another chance. We have to use it, not like this."
-        ay "Ehehe, you're still quite naive about this world, aren't you?"
+        ay "Ehehe, you're still quite naïve about this world, aren't you?"
         ay gw_2_blur "..."
         "Ayame's face suddenly becomes hidden again."
         ay "You think I haven't considered that, [player]?"
+        ay "Do you think I'm doing this without thinking?"
+        ay "That I'm somehow mislead in my thinking?"
+        ay "I've thought about this for a long time."
+        ay "It's...{nw}"
+        y "...the...{nw}"
+        n "...only way."
+        mc "That can't be true Sayori."
+        mc "There's always another way."
+        ay "Do you truly believe that?"
+        mc "Of course I do. We always manage to get through these things, Sayori."
+        mc "Why would it be any different now?"
+        y "Those were different!"
+        n "The things that will happen if this goes on isn't worth it."
+        mc "And why do you get to be the judge of that, Sayori?"
+        ay "Because I have to be! Don't you see?"
+        ay "Without me, the world would have already ended."
+        ay "This whole game would have already ended."
+        ay "All I'm doing is delaying the inevitable."
+        ay "It's all going to come to and end, one way or another."
+        mc "Is that really what you believe?"
+        ay "Yes, it is."
+        mc "Not you, Sayori."
+        ay "...?"
+        mc "Ayame."
+        ay "She's gone. They all are. You know they are."
+        mc "Ayame, you're the one who brought us here."
+        mc "Are you really going to give up so easily?"
+        n "What are you playing at, [player]?"
+        y "It's not going to work."
+        mc "I know the three of you are still here."
+        n "They're gone."
+        y "They never made it to this world, [player]."
+        "That's not true at all."
+        "I could feel them here before...when their faces weren't blurred."
+        "Is that when it happened?"
+        mc "You're still here, aren't you?"
+        mc "I know it."
+        ay "[player], stop this."
+        ay "You know you can't get out of this situation."
+        ay "Can't we just give up together?"
+        mc "Sayori, you know I can't do that."
+        mc "There's still hope, there has to be."
+        mc "Whatever is coming, it can't be the end."
+        ay "..."
+        "It was just for a moment, but I could have sworn I saw Ayame hesitate."
+        ay "I won't let this happen."
+        ay "Stop it!"
+        mc "Ayame, you're the one who wanted to stop Sayori."
+        mc "Because you wanted to help."
+        if ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2] and ch16_ay_message[3]:
+            ay "I {i}can't{/i}{nw}"
+            $ _history_list.pop()
+            show screen tear(20, 3, 2, 0, 70)
+            window hide(None)
+            $ pause(0.3)
+            show ayame 1a
+            hide screen tear
+            $ pause(0.3)
+            window show(None)
+            ay "I {i}can't{/i}{fast} let this happen!"
+            window auto
+            "Ayame's voice rings out. There's only a faint trace of Sayori's voice now."
+            "Her face is clear again."
+            "This time, her eyes look normal."
+        else:
+            $ style.say_dialogue = style.edited
+            ay "Y-You..."
+            ay "You won't stop{nw}"
+            $ _history_list.pop()
+            show screen tear(20, 3, 2, 0, 70)
+            window hide(None)
+            $ pause(0.3)
+            show ayame 1o
+            hide screen tear
+            $ pause(0.3)
+            window show(None)
+            ay "You won't stop{fast} {i}us{/i} so easily!"
+            window auto
+            "A distorted version of Ayame's voice rings out."
+            "Her face is clear again."
+            "But there's something about her eyes..."
+        mc "Ayame?"
+        n "W-What?"
+        y "H-How did you break free? That's impossible!"
+        ay "Sayori."
+        ay "Did you really think it would be that easy?"
+        ay "You know my history, don't you?"
     elif ch16_ay_companions == 3:
         ay "You have to imagine something for Yuri as well."
         ay "I don't know if she's here because she doesn't have a voice."
