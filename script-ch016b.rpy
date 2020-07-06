@@ -993,9 +993,11 @@ label ch16_mainb:
         "I carefully trace her footsteps and continue on towards the tree."
         "So far so good...I look back behind me and Ayame still isn't back yet."
         "She's taking longer than before, I wonder if{nw}"
+        $ currentpos = get_pos()
         $ _history_list.pop()
         scene bg residential_day_gray
         show vignette zorder 100
+        stop music
         # play music "<loop 4.444>bgm/5.ogg" fadein 1.0
         $ style.say_window = style.window_flashback
         "She's taking longer than before, I wonder if{fast} she..."
@@ -1079,7 +1081,142 @@ label ch16_mainb:
         s "You look like a crazy person, you know that right?"
         s "Can you just calm down?"
         s "You're scaring me a little..."
-        mc "I'm sorry."
+        mc "I'm sorry. This is all just...all so confusing."
+        s "It's alright...I don't blame you."
+        mc "What do you mean?"
+        s "You don't know?"
+        s "People have been disappearing recently, I'm sure you've seen the news."
+        mc "No? Who's gone missing?"
+        "I don't remember this happening."
+        "Maybe this is part of the corruption."
+        s "It started just a couple of weeks ago."
+        s "A tall girl with purple hair was the first to disappear."
+        s "I think her name was--"
+        mc "Yuri?"
+        s "Yeah! How did you know?"
+        mc "She's gone?"
+        s "Well, no one knows where she went."
+        s "People are saying she was kidnapped or something."
+        s "She's not even the only one."
+        s "There was this cute, short girl. Natsuki...?"
+        mc "She's gone too?!"
+        s "Y-Yeah, you sound really surprised. You must have been too busy being a NEET to see the news."
+        mc "It's just..."
+        s "Do you know these people?"
+        mc "Sort of..."
+        s "Huh, that's weird."
+        s "I didn't think you'd hang around girls much, [player]."
+        s "Maybe you've grown up, and I didn't know about it."
+        s "Well, good for you~"
+        mc "What about Monika?"
+        s "Monika?"
+        mc "Has she disappeared as well?"
+        s "No...at least, I don't think so."
+        s "I spoke to her just yesterday."
+        mc "Ah, that's right. You two run the Literature Club, don't you?"
+        s "Literature Club? I don't know what you're talking about."
+        mc "Then how do you know Monika?"
+        s "We're in the debating club! She runs it and I'm sort of like the vice-president."
+        mc "What? This is all wrong..."
+        s "[player]?"
+        s "What is wrong with you? I'm really worried!"
+        s "You're acting really weird!"
+        mc "This world isn't real."
+        mc "I know it isn't."
+        s "There you go again..."
+        s "Come on, [player]. You have to stop this."
+        s "I really don't know what's gotten over you."
+        s "Do you need some help?"
+        s "I just want to help you accept this reality.{nw}"
+        show yuri 1a zorder 2 at i31
+        y "Don't listen to her!{nw}"
+        $ _history_list.pop()
+        hide yuri
+        show natsuki 1a zorder 2 at i33
+        n "She's trying to trick you!{nw}"
+        $ _history_list.pop()
+        hide natsuki
+        show screen tear(8, offtimeMult=1, ontimeMult=10)
+        window hide(None)
+        $ pause(1.0)
+        show sayori 1a zorder 2 at i11
+        hide screen tear
+        $ pause(1.0)
+        window show(None)
+        s "I just want to help you accept this reality.{fast}"
+        window auto
+        mc "W-What? Did you hear that?"
+        mc "Natsuki and Yuri, they were behind you!"
+        s "Huh?"
+        "Sayori turns around."
+        s "There's no one there, [player]."
+        s "I really don't know what's wrong with you but I want to help."
+        s "Let's do this, together."
+        $ sayori_convince = 2
+        label sayori_convince_1_4:
+        show sayori 1bj
+        menu:
+            s "What do you say? Will you let me help?"
+            "Yes.":
+                jump ch16_convince_1_end
+            "Yes." if sayori_convince <= 1:
+                jump ch16_convince_1_end
+            "Yes." if sayori_convince <= 0:
+                jump ch16_convince_1_end
+            "No.":
+                $ sayori_convince -= 1
+                if sayori_covince == 0:
+                    pass
+                else:
+                    $ _history_list.pop()
+                    show screen tear(20, 0.1, 0.1, 0, 40)
+                    window hide(None)
+                    play sound "sfx/s_kill_glitch1.ogg"
+                    $ pause(0.25)
+                    stop sound
+                    hide screen tear
+                    window show(None)
+                    jump sayori_convince_1_4
+        mc "I don't need your help, Sayori."
+        mc "Do you know why?"
+        "Sayori frowns."
+        s "Why not?"
+        mc "Because I know this isn't real."
+        mc "Natsuki and Yuri haven't disappeared."
+        mc "Monika isn't the leader of the debate club."
+        mc "She left it this year."
+        s "..."
+        mc "I'm going to save you, Sayori."
+        mc "Whatever it takes, I will save you."
+        mc "Stop you from doing something you{nw}"
+        $ _history_list.pop()
+        show screen tear(8, offtimeMult=1, ontimeMult=10)
+        window hide(None)
+        $ pause(1.0)
+        scene bg beach_sunset
+        show ayame 1a zorder 2 at i11
+        $ audio.t3ayb = "<from " + str(currentpos) + " loop 9.236>mod_assets/bgm/3ay.ogg"
+        play music t3ayb
+        hide screen tear
+        $ pause(1.0)
+        window show(None)
+        mc "Stop you from doing something you{fast}'re going to regret."
+        window auto
+        ay "What?"
+        "Ayame seems to be in front of me by a couple of steps."
+        "She must have gotten back already."
+        mc "I was..."
+        ay "Oh, you made it out of the corrupted memory."
+        ay "Congratulations."
+        mc "Yeah, it wasn't as hard as I expected."
+        ay "Well, my second memory was a lot more difficult."
+        ay "I fear that as we get closer to the rope, it's only gonna become harder."
+        ay "Just stick to the truth, and you'll be fine."
+        ay "Don't get tricked."
+        mc "I thought I heard Natsuki and Yuri's voices while I was there."
+        mc "They told me it was a trick..."
+        ay "Hmm...that's good. It shows that they're still here somewhere."
+        ay "That Sayori hasn't completely gotten rid of them."
     elif ch16_ay_companions == 3:
         ay "You have to imagine something for Yuri as well."
         ay "I don't know if she's here because she doesn't have a voice."
@@ -4034,4 +4171,14 @@ label ch16_mainb:
         ay "Music to my ears, let's do it."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
+    return
+
+label ch16_convince_1_end:
+    s "I'm so glad you could listen to reason, [player]."
+    s "I was really worried for a second."
+    mc "So what's the plan then?"
+    s "The plan?"
+    mc "How are you going to help me?"
+    s "Just leave it all to me."
+    s "I know what to do."
     return
