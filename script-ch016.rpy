@@ -15093,7 +15093,7 @@ label ch16_end:
     "She should be right in front of me."
     hide white
     show bg residential_transition_white
-    play music t2ay fadein 5.0
+    play music t18 fadein 5.0
     "I can slowly feel my senses coming back."
     "As I look around, I can feel...life."
     "It's as if time has started to move again."
