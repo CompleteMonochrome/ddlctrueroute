@@ -1177,6 +1177,7 @@ label ch16_mainb:
                     stop sound
                     hide screen tear
                     window show(None)
+                    window auto
                     jump sayori_convince_1_4
         mc "I don't need your help, Sayori."
         mc "Do you know why?"
@@ -1254,7 +1255,7 @@ label ch16_mainb:
         scene bg bedroom
         $ audio.t3b = "<from " + str(meldpos) + " loop 4.618>bgm/3.ogg"
         play music t3b
-        "I know Sayori won't make it easy but{nw} I'm prepared."
+        "I know Sayori won't make it easy but{fast} I'm prepared."
         "At least, I think I am. The transition to this memory felt a lot more real."
         "But now to figure out what this is and get out of here as fast as possible."
         "I seem to be in my bedroom so there's a lot of possibilities as to what this could be."
@@ -1414,12 +1415,123 @@ label ch16_mainb:
         ay "And I'll make sure Monika does too."
         m "...Please don't do this, [player]. Think about what you can accomplish with us."
         m "You've barely scratched the surface of our potential."
+        python:
+            try: os.remove(config.basedir + "/wait")
+            except: pass
+            try: os.remove(config.basedir + "/do nothing")
+            except: pass
+            try: renpy.file(config.basedir + "/wait")
+            except: open(config.basedir + "/wait", "wb").write(renpy.file("wait").read())
+            try: renpy.file(config.basedir + "/do nothing")
+            except: open(config.basedir + "/do nothing", "wb").write(renpy.file("do nothing").read())
         "This is a test, isn't it?"
         "One of them is trying to get me to leave the club, while the other is trying to get me to stay."
         "I think Sayori set this up to try to confuse me."
         "There's half a chance I'll mess up and half a chance I'll get it right."
         "But how am I supposed to figure out what the right choice is?"
+        s "Make your decision [player]."
+        $ quick_menu = False
+        show screen timer_16_long_menu_skip("ch16_convince_2_true_4",_layer="timers")
+        menu:
+            s "Are you going to stay in the club, or leave?"
+            "Stay in the club.":
+                $ renpy.hide_screen("timer_16_long_menu_skip",layer="timers")
+                $ quick_menu = True
+                jump ch16_convince_2_end_1
+            "Leave the club.":
+                $ renpy.hide_screen("timer_16_long_menu_skip",layer="timers")
+                $ quick_menu = True
+                jump ch16_convince_2_end_2
+        label ch16_convince_2_true_4:
+        $ quick_menu = True
+        $ renpy.hide_screen("timer_16_long_menu_skip",layer="timers")
+        $ _history_list.pop()
+        $ _history_list.pop()
+        show screen tear(20, 0.1, 0.1, 0, 40)
+        window hide(None)
+        play sound "sfx/s_kill_glitch1.ogg"
+        $ pause(0.25)
+        stop sound
+        hide screen tear
+        window show(None)
+        s "Make your decision [player]."
+        window auto
+        menu:
+            s "Are you going to stay in the club, or leave?"
+            "Stay in the club.":
+                jump ch16_convince_2_end_1
+            "Leave the club.":
+                jump ch16_convince_2_end_2
+            "Leave this memory.":
+                pass
+        s "W-What? That shouldn't have been there."
+        s "What do you mean by leave this memory?"
+        mc "I will save you, Sayori."
+        mc "You can count on it."
+        m "[player], what's happening?"
+        m "You said you're leaving this memory, what does that mean?"
+        mc "You genuinely don't know what's happening, don't you?"
+        mc "I'll save us all, Monika. You can count on it."
+        m "I don't know what you mean."
+        s "[player], I don't need saving."
+        s "You're under the impression that this isn't what I want to do."
+        s "That I'm being mislead or misunderstood somehow."
+        s "I'm not. I'm completely doing this of my own free will."
+        s "Or whatever 'free will' we have in this world."
+        m "Sayori, what are you talking about?"
+        s "Ugh, just get out of here already."
+        mc "You've really changed, haven't you Sayori?"
+        mc "What sort of things have you seen?"
+        mc "How did you end up like this?"
+        m "I'm so confused..."
+        s "Even if you do manage to get to me, [player]."
+        s "There's no way you'll{nw}"
+        $ currentpos = get_pos()
+        $ meldpos = currentpos*2
+        scene bg beach_sunset
+        show ayame 1a zorder 2 at i11
+        $ audio.t3ayb = "<from " + str(meldpos) + " loop 9.236>mod_assets/bgm/3ay.ogg"
+        $ _history_list[-1].what = "\"There's no way you'll be able to stop me or what's coming.\""
         $ monika_type = old_monika_type
+        play music t3ayc
+        hide screen tear
+        $ pause(1.0)
+        window show(None)
+        "I'm back on the beach again."
+        window auto
+        "Ayame is once again ahead of me, but she's covered quite the distance."
+        mc "Ayame!"
+        "She turns around and gives a faint smile."
+        "The look on her face suggests she just saw something horrible."
+        ay "You made it out, then."
+        mc "She's not going to get me that easily."
+        ay "Well, that's good. We're almost there so let's go."
+        "There's something odd about how Ayame is speaking, at least compared to before that memory."
+        "Like she's lost some of her energy."
+        mc "Is everything okay? You don't sound okay."
+        ay "Observant, aren't we? Come here, there's no point yelling if it's just the two of us."
+        "Ayame pauses in her tracks and beckons for me to get to where she is."
+        "I take the cue and trace her footsteps to get to her."
+        "The tree and the rope seem to just be a few steps away now."
+        mc "How many memories did you get through already?"
+        ay "I finished my fifth one just before you finished."
+        mc "I've only completed two...I'm sorry."
+        ay "It's not like it's your fault."
+        ay "You could say I'm quite adept at this already."
+        mc "But how?"
+        ay "Let's just say I have experience at forgetting the past."
+        mc "You look like..."
+        ay "I know. It's because Sayori pulled out a memory that I've tried to suppress for so long."
+        ay "I got out, but it wasn't easy."
+        mc "It looks like it's taken it's toll on you."
+        ay "You could say that."
+        mc "Are you going to be okay?"
+        ay "I'll be okay when we reach Sayori."
+        ay "Now, enough time's been wasted. Let's carry on."
+        "Ayame continues forward, seemingly fine."
+        "I can tell she's got something on her mind."
+        "Maybe some doubt about all of this caused by that memory."
+        "I really wonder how Sayori could have affected her this much..."
     elif ch16_ay_companions == 3:
         ay "You have to imagine something for Yuri as well."
         ay "I don't know if she's here because she doesn't have a voice."
@@ -4439,6 +4551,16 @@ label ch16_convince_1_end:
     "I turn towards Sayori and she beams."
     "I don't know what came over me before."
     "I really think that{nw}"
+    scene white with Dissolve(3.0)
+    $ renpy.utter_restart()
+    return
+
+label ch16_convince_2_end_1:
+    scene white with Dissolve(3.0)
+    $ renpy.utter_restart()
+    return
+
+label ch16_convince_2_end_2:
     scene white with Dissolve(3.0)
     $ renpy.utter_restart()
     return
