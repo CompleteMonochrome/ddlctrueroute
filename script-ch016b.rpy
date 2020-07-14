@@ -1508,6 +1508,40 @@ label ch16_mainb:
         ay "Well, that's good. We're almost there so let's go."
         "There's something odd about how Ayame is speaking, at least compared to before that memory."
         "Like she's lost some of her energy."
+        if ch16_ay_perspective:
+            show screen tear(8, offtimeMult=1, ontimeMult=10)
+            window hide(None)
+            scene bg beach_sunset
+            $ pause(1.0)
+            hide screen tear
+            $ pause(1.0)
+            window show(None)
+            "I can't do this.{fast}"
+            window auto
+            "This has to stop soon. I don't know if I can take this any longer."
+            "Using my memories of the previous club to torment me."
+            "Masquerading as everyone else and using my own programming against me."
+            "I almost fell for [player_reflexive] again. It felt so real."
+            "I thought I moved on but there's still a part of me that can't get over [player_reflexive]."
+            "Why...?"
+            "I didn't know she would stoop that low or even have access to those..."
+            "I'm going to get her for this."
+            "She thinks she can do this to me and get away with it?"
+            "I'll...!"
+            "Calm down Ayame. I can't lose control again."
+            "I'm almost there. I just need to stay in control."
+            "Just a little longer."
+            show screen tear(20, 3, 2, 0, 70)
+            window hide(None)
+            $ pause(1.0)
+            scene bg beach_sunset
+            show ayame 1a zorder 2 at t11
+            hide screen tear
+            $ pause(1.0)
+            window show(None)
+            "Was that really what she experienced?{fast}"
+            window auto
+            "I could feel all her dread and despair."
         mc "Is everything okay? You don't sound okay."
         ay "Observant, aren't we? Come here, there's no point yelling if it's just the two of us."
         "Ayame pauses in her tracks and beckons for me to get to where she is."
@@ -1532,6 +1566,102 @@ label ch16_mainb:
         "I can tell she's got something on her mind."
         "Maybe some doubt about all of this caused by that memory."
         "I really wonder how Sayori could have affected her this much..."
+        mc "You sure you don't want to talk about it?"
+        ay "I'm fine! Just...mind your own memories."
+        ay "I'll deal with this on my own."
+        "After a few more steps forward, she disappears again."
+        "It's quite literally two steps away from the tree."
+        "I trace her footsteps and I arrive just out of reach of the rope."
+        "Is there going to be another trap here? Or was that all of it?"
+        "I sigh and take a step forward."
+        "Nothing."
+        "I slowly take another step forward and..."
+        "Surprisingly, I'm fine. Could this be it?"
+        "I reach out for the rope...just before I can touch it, a familiar voice comes from behind me."
+        ay "Stop! Don't touch it."
+        mc "Ayame what--"
+        ay "And don't turn around!"
+        mc "What? Why not?"
+        ay "This is the final trap. If you touch that rope then all of this would have been for nothing."
+        mc "So what should I do then?"
+        ay "Take your hand back, but slowly."
+        "I slowly pull my hand back from the rope. We were so close."
+        "But Ayame must have a reason for doing this."
+        ay "Don't make any sudden movements, [player]."
+        ay "We have to do this next part {i}very{/i} carefully."
+        mc "Tell me what to do then."
+        ay "Okay. Just stay there for a moment."
+        ay "I need to do something."
+        mc "You're supposed to be right behind me, weren't you?"
+        mc "Why do you sound so distant now?"
+        ay "I don't know what you're talking about, [player]."
+        ay "Look, just listen."
+        ay "What the hell?"
+        mc "What's wrong?"
+        ay "Are you hearing this, [player]?"
+        ay "It's my voice but..."
+        mc "Huh?"
+        "I'm tempted to turn around but Ayame said not to."
+        "What's causing all of this commotion?"
+        ay "[player], what are you doing? Just grab the rope already!"
+        mc "Huh? But I thought you said to--"
+        ay "Don't listen to her, [player]! It's Sayori playing tricks again."
+        ay "She's using my voice to try to trick you!"
+        ay "Step away from the rope or we'll never stop Sayori!"
+        mc "I don't know if you're just messing with me, Ayame."
+        mc "But this isn't funny, at all."
+        ay "I'm telling you, Sayori is using my voice!"
+        ay "Why would I tell you to stop with the rope now, when we're so close?"
+        ay "[player], I just got back from one of my memories, she's trying to trick you."
+        ay "If you take that rope, then she wins."
+        mc "Who am I supposed to believe?"
+        mc "You're both just telling me to do something and I don't know who I should trust."
+        if ch16_ay_perspective:
+            show screen tear(8, offtimeMult=1, ontimeMult=10)
+            window hide(None)
+            scene bg beach_sunset
+            $ pause(1.0)
+            hide screen tear
+            $ pause(1.0)
+            window show(None)
+            "What kind of trick is Sayori playing?{fast}"
+            window auto
+            "We're so close to reaching her and now we're at an impasse."
+            "[player] won't turn around because of what Sayori said."
+            "But how am I supposed to convince [player_reflexive] to take the rope?"
+            "[cPlayer_personal]'s obviously being cautious about this."
+            "I can feel the energy here is almost at it's limit."
+            "If this goes on for much longer then we're not going to make it."
+            if ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2] and ch16_ay_message[3]:
+                "Dammit."
+                "At times like this, I wish {i}she{/i} was still here."
+                "I really have taken her for granted, haven't I?"
+            else:
+                $ style.say_dialogue = style.edited
+                "Might I suggest something?"
+                $ style.say_dialogue = style.normal
+                "It's you. What did you want?"
+                $ style.say_dialogue = style.edited
+                "I have a way for [player_reflexive] to get the rope."
+                "But you won't like it."
+                $ style.say_dialogue = style.normal
+                "I'm open to ideas at this point, even from you."
+                "I mean you saw that last memory, what else is she capable of?"
+                "I'm getting desperate. Now Sayori is playing even more tricks."
+                "What do you suggest?"
+        else:
+            "I think both of them know we're on a time limit."
+            "The difference is that the longer I wait to make a decision, the better chance Sayori has of doing whatever she's doing."
+            "I have to make a decision quickly otherwise it's all over."
+        ay "So what's the verdict?"
+        ay "Are you going to listen to Sayori?"
+        mc "I still don't know which one of you is Sayori."
+        mc "At this point, I'm not gonna leave it up to me."
+        ay "Huh? What do you mean?"
+        "I'm going to leave it...to you."
+        menu:
+            "Take the rope.":
+            "Leave the rope.":
     elif ch16_ay_companions == 3:
         ay "You have to imagine something for Yuri as well."
         ay "I don't know if she's here because she doesn't have a voice."
@@ -4673,7 +4803,30 @@ label ch16_convince_2_end_2:
     ay "You'll find what 'it' is very quickly."
     "Is that really what she's talking about?"
     "I haven't really thought about it because it's always been a part of me."
+    "At least, as far as I can remember."
     "I guess I don't really see the harm in shutting 'it' off."
+    "I don't know what 'it' is exactly but I trust Sayori knows what she's doing."
+    "I concentrate on shutting it off. There doesn't seem to be any effect."
+    mc "Am I doing something wrong?"
+    s "I think you just aren't concentrating enough."
+    m "Maybe I can help."
+    mc "Monika? Are you sure about this?"
+    m "I might as well do this for you before you leave."
+    m "Something to remember me by, I suppose~"
+    mc "T-Thank you. I'm sorry it had to be this way."
+    m "Don't be. I enjoyed the week we had together."
+    "Monika extends out a hand and offers it to me."
+    m "Now, take my hand."
+    "I reluctantly take her hand."
+    m "Close your eyes."
+    scene black
+    with close_eyes
+    mc "Okay, now what?"
+    m "Just concentrate on shutting it off."
+    m "Together we can do it."
+    mc "Alright, here goes..."
+    "I once again concentrate on shutting it off."
+    "This time, I feel like I have a clearer image of it in my head."
     scene white with Dissolve(3.0)
     $ renpy.utter_restart()
     return
