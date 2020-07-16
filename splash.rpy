@@ -807,6 +807,8 @@ label after_load:
         $ ch16_play_convince = False
     if not hasattr(store,'ch16_ay_companions'):
         $ ch16_ay_companions = 0
+    if not hasattr(store,'ch16_ay_gave_control'):
+        $ ch16_ay_gave_control = False
     if not hasattr(store, 'chapter_names'):
         $ chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","Inauguration Day","???","???","???","???"]
     if not hasattr(store, 'special_chapter'):

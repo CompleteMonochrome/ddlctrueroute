@@ -1529,8 +1529,9 @@ label ch16_mainb:
             "She thinks she can do this to me and get away with it?"
             "I'll...!"
             "Calm down Ayame. I can't lose control again."
-            "I'm almost there. I just need to stay in control."
-            "Just a little longer."
+            "I'm almost there. I just need to stay in control of myself."
+            "Hold on just a little bit longer."
+            "Just a little longer, Ayame..."
             show screen tear(20, 3, 2, 0, 70)
             window hide(None)
             $ pause(1.0)
@@ -1603,6 +1604,7 @@ label ch16_mainb:
         mc "Huh?"
         "I'm tempted to turn around but Ayame said not to."
         "What's causing all of this commotion?"
+        "Why can't the Ayame who wants the rope just come over here and get it?"
         ay "[player], what are you doing? Just grab the rope already!"
         mc "Huh? But I thought you said to--"
         ay "Don't listen to her, [player]! It's Sayori playing tricks again."
@@ -1627,15 +1629,34 @@ label ch16_mainb:
             "What kind of trick is Sayori playing?{fast}"
             window auto
             "We're so close to reaching her and now we're at an impasse."
+            ay "You don't know who to trust, do you?"
+            s "Which voice is really me and which one is actually Sayori?"
+            "She's quite the actor, isn't she?"
+            mc "I don't. I don't know why one of you hasn't either tried to stop me or grab the rope already."
+            "If I make one false move, then I might trigger another trap."
+            ay "It's complicated."
+            "And by the time I get out of it, it could be all over already."
             "[player] won't turn around because of what Sayori said."
             "But how am I supposed to convince [player_reflexive] to take the rope?"
             "[cPlayer_personal]'s obviously being cautious about this."
             "I can feel the energy here is almost at it's limit."
             "If this goes on for much longer then we're not going to make it."
+            "My plans will be undone."
+            "I'm so close! I can't have made it this far for nothing."
+            "I have to do something otherwise all those years spent planning will be wasted."
             if ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2] and ch16_ay_message[3]:
                 "Dammit."
                 "At times like this, I wish {i}she{/i} was still here."
                 "I really have taken her for granted, haven't I?"
+                "She would have said something smart."
+                "A plan or something that I could use to get through this."
+                "Or at least someone I can talk to that won't think I'm crazy."
+                "Imagine if I told [player] what I saw and what I'm thinking right now."
+                "Not like it would matter anyway, Sayori is using my voice to trick [player_reflexive]."
+                "I just don't know what I can possibly say to convince [player_reflexive]."
+                "I suppose there's only one thing to do then."
+                "Rely on the chance that [player] will choose the rope."
+                "Because if not...then I guess it's game over."
             else:
                 $ style.say_dialogue = style.edited
                 "Might I suggest something?"
@@ -1649,19 +1670,145 @@ label ch16_mainb:
                 "I mean you saw that last memory, what else is she capable of?"
                 "I'm getting desperate. Now Sayori is playing even more tricks."
                 "What do you suggest?"
+                $ style.say_dialogue = style.edited
+                "I'll need control, if just for a second."
+                "Trust me on this, I won't let you down."
+                $ style.say_dialogue = style.normal
+                "Absolutely not. The last time that happened you messed up my life."
+                "I still can't look them in the eye even to this day."
+                $ style.say_dialogue = style.edited
+                "That memory was fake. You know it. You could have started straight at them."
+                "They wouldn't have known any better."
+                "We may not always see eye to eye, Ayame."
+                "But you have to admit, I've always had our interests at heart."
+                $ style.say_dialogue = style.normal
+                "In your twisted way, I suppose. I still don't know about this."
+                $ style.say_dialogue = style.edited
+                "Be smarter than this, Ayame. I know you're capable of more critical thought than that."
+                "You know that [player] can tell who I am."
+                "If you don't give me control then you're relying on the chance that [player] will make the right decision."
+                "Are you willing to risk that?"
+                "If [player_personal] can identify me, then [player_personal]'ll know for sure to grab the rope."
+                $ style.say_dialogue = style.normal
+                "I know you're right but..."
+                "I suppose there's really no way out of this, is there?"
+                "Those really are my only two options."
+                if ch16_ay_decision_count > 0:
+                    menu:
+                        "I guess I should..."
+                        "Trust the other me.":
+                            $ ch16_ay_decision_count -= 1
+                            $ ch16_ay_gave_control = True
+                            "A jolt goes through my body. I must be losing it at this point."
+                            "Against all common sense, I'm trusting the other me."
+                            "I hope I know what I'm doing."
+                            $ style.say_dialogue = style.edited
+                            "What did I tell you, Ayame?"
+                            "I have our interests at heart."
+                            $ style.say_dialogue = style.normal
+                            "You don't have a heart."
+                            $ style.say_dialogue = style.edited
+                            "Hah, I suppose I don't. That doesn't mean I don't care for you."
+                            "After all, if Sayori succeeds, I'm in trouble too."
+                            "Just give me control already, you won't regret this."
+                            $ style.say_dialogue = style.normal
+                            "I can already tell this was a big mistake."
+                            "But I can't refuse."
+                            $ style.say_dialogue = style.edited
+                            "Good...now, sit back and enjoy the show."
+                        "Not trust the other me.":
+                            $ ch16_ay_decision_count -= 1
+                            "I feel an odd sensation go through my artificial body."
+                            "A sensation that's telling me that the other me isn't trustworthy."
+                            $ style.say_dialogue = style.edited
+                            "Quite foolish of you, I must say."
+                            "But not unexpected, I guess I will just watch us fade away from the sideline."
+                            $ style.say_dialogue = style.normal
+                            "I appreciate the vote of confidence..."
+                        "Make my own choice.":
+                            "I know better than to give you control again."
+                            "Following this path can only lead to ruin like it did before."
+                            $ style.say_dialogue = style.edited
+                            "Quite foolish of you, I must say."
+                            "But not unexpected, I guess I will just watch us fade away from the sideline."
+                            $ style.say_dialogue = style.normal
+                            "I appreciate the vote of confidence..."
+                else:
+                    "But I know better than to give you control again."
+                    "Following this path can only lead to ruin like it did before."
+                    $ style.say_dialogue = style.edited
+                    "Quite foolish of you, I must say."
+                    "But not unexpected, I guess I will just watch us fade away from the sideline."
+                    $ style.say_dialogue = style.normal
+                    "I appreciate the vote of confidence..."
+            show screen tear(20, 3, 2, 0, 70)
+            window hide(None)
+            $ pause(1.0)
+            scene bg beach_sunset
+            show ayame 1a zorder 2 at t11
+            hide screen tear
+            $ pause(1.0)
+            window show(None)
+            "That's it.{fast}"
+            window auto
+            "Ayame is the one who wants me to grab the rope."
+            "But...does she really have my best interests?"
+            "She seems conflicted somehow. As if she's up to something."
+            "What 'plan' does she have in store?"
+            "Could it be worse than what Sayori is going to do?"
+            "I don't know about this..."
         else:
             "I think both of them know we're on a time limit."
             "The difference is that the longer I wait to make a decision, the better chance Sayori has of doing whatever she's doing."
             "I have to make a decision quickly otherwise it's all over."
+            ay "You don't know who to trust, do you?"
+            ay "Which voice is really me and which one is actually Sayori?"
+            mc "I don't. I don't know why one of you hasn't either tried to stop me or grab the rope already."
+            ay "It's complicated."
+        mc "I don't know the right choice for all of this."
+        if ch16_ay_gave_control:
+            $ style.say_dialogue = style.edited
+            ay "[player], get the rope."
+            ay "I know you can tell the difference."
+            ay "We're so close to Sayori. So close."
+            ay "You just need to get it and then we can run."
+            $ style.say_dialogue = style.normal
+            "Somehow I can easily tell which one is Sayori."
+            "She's still speaking like normal Ayame whereas Ayame is...different."
+            ay "Don't listen to her! She's tricking you!"
+            ay "If we just head back now, we can get to Sayori through the portal."
+            ay "I made a mistake thinking this was it. It's not!"
+            $ style.say_dialogue = style.edited
+            ay "Do you truly believe that?"
+            ay "Have I made any mistakes so far?"
+            ay "I've calculated everything, with a few exceptions."
+            ay "We would have never gotten this far without me."
+        else:
+            ay "[player], get the rope."
+            ay "We have to stop Sayori, we're so close!"
+            ay "Just get it, and run. That's it."
+            ay "Are you serious? Don't listen to her!"
+            ay "Don't listen to her! She's tricking you!"
+            ay "If we just head back now, we can get to Sayori through the portal."
+            ay "I made a mistake thinking this was it. It's not!"
+            ay "I don't make mistakes, [player]."
+            ay "Everything I've done has been calculated."
+            ay "Except this one! Please, listen too me!"
+        mc "This is all so confusing."
+        "Yet the clock is ticking..."
         ay "So what's the verdict?"
         ay "Are you going to listen to Sayori?"
-        mc "I still don't know which one of you is Sayori."
+        mc "I still don't know if the choice I want to make is the right one."
         mc "At this point, I'm not gonna leave it up to me."
         ay "Huh? What do you mean?"
         "I'm going to leave it...to you."
         menu:
             "Take the rope.":
+                mc "I'm taking the rope."
+                mc "I really hope that I'm making the right decision here."
             "Leave the rope.":
+                mc "I'm going to leave the rope."
+                mc "I'm hoping I made the right decision."
     elif ch16_ay_companions == 3:
         ay "You have to imagine something for Yuri as well."
         ay "I don't know if she's here because she doesn't have a voice."
