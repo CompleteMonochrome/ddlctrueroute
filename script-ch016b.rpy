@@ -1488,7 +1488,7 @@ label ch16_mainb:
         s "There's no way you'll{nw}"
         $ currentpos = get_pos()
         $ meldpos = currentpos*2
-        scene bg beach_sunset
+        scene bg beach_night
         show ayame 1a zorder 2 at i11
         $ audio.t3ayb = "<from " + str(meldpos) + " loop 9.236>mod_assets/bgm/3ay.ogg"
         $ _history_list[-1].what = "\"There's no way you'll be able to stop me or what's coming.\""
@@ -1500,6 +1500,7 @@ label ch16_mainb:
         "I'm back on the beach again."
         window auto
         "Ayame is once again ahead of me, but she's covered quite the distance."
+        "It also seems to be night already, though I don't think that much time has actually passed."
         mc "Ayame!"
         "She turns around and gives a faint smile."
         "The look on her face suggests she just saw something horrible."
@@ -1511,7 +1512,7 @@ label ch16_mainb:
         if ch16_ay_perspective:
             show screen tear(8, offtimeMult=1, ontimeMult=10)
             window hide(None)
-            scene bg beach_sunset
+            scene bg beach_night
             $ pause(1.0)
             hide screen tear
             $ pause(1.0)
@@ -1535,7 +1536,7 @@ label ch16_mainb:
             show screen tear(20, 3, 2, 0, 70)
             window hide(None)
             $ pause(1.0)
-            scene bg beach_sunset
+            scene bg beach_night
             show ayame 1a zorder 2 at t11
             hide screen tear
             $ pause(1.0)
@@ -1765,13 +1766,13 @@ label ch16_mainb:
             ay "Which voice is really me and which one is actually Sayori?"
             mc "I don't. I don't know why one of you hasn't either tried to stop me or grab the rope already."
             ay "It's complicated."
-        mc "I don't know the right choice for all of this."
+        mc "I don't know who to choose..."
         if ch16_ay_gave_control:
             $ style.say_dialogue = style.edited
             ay "[player], get the rope."
             ay "I know you can tell the difference."
             ay "We're so close to Sayori. So close."
-            ay "You just need to get it and then we can run."
+            ay "You just need to get the rope and then we can run."
             $ style.say_dialogue = style.normal
             "Somehow I can easily tell which one is Sayori."
             "She's still speaking like normal Ayame whereas Ayame is...different."
@@ -1783,6 +1784,11 @@ label ch16_mainb:
             ay "Have I made any mistakes so far?"
             ay "I've calculated everything, with a few exceptions."
             ay "We would have never gotten this far without me."
+            $ style.say_dialogue = style.normal
+            ay "That's enough. [cPlayer_personal] now knows what to do."
+            ay "I appreciate your help but I'll take it from here."
+            "It sounds like the real Ayame regained control."
+            ay "Take the rope, [player]. You know which one is the real me, don't you?"
         else:
             ay "[player], get the rope."
             ay "We have to stop Sayori, we're so close!"
@@ -1794,8 +1800,10 @@ label ch16_mainb:
             ay "I don't make mistakes, [player]."
             ay "Everything I've done has been calculated."
             ay "Except this one! Please, listen too me!"
-        mc "This is all so confusing."
+        ay "Don't listen to her!"
+        mc "I have to make a decision but I can't."
         "Yet the clock is ticking..."
+        ay "[player], you have to!"
         ay "So what's the verdict?"
         ay "Are you going to listen to Sayori?"
         mc "I still don't know if the choice I want to make is the right one."
@@ -1804,11 +1812,156 @@ label ch16_mainb:
         "I'm going to leave it...to you."
         menu:
             "Take the rope.":
-                mc "I'm taking the rope."
-                mc "I really hope that I'm making the right decision here."
+                pass
             "Leave the rope.":
-                mc "I'm going to leave the rope."
-                mc "I'm hoping I made the right decision."
+                jump ch16_convince_3_end_1
+        mc "I'm taking the rope."
+        mc "I really hope that I'm making the right decision here."
+        ay "No, you just let her win."
+        ay "Do you have any idea what you've just done?"
+        mc "I feel like one of you would have said the same thing if I didn't take the rope."
+        "I reach out and attempt to untie the rope from the tree."
+        "It takes a couple of seconds but I eventually get it."
+        "As soon as I have it, I hear a deafening screech come from behind me."
+        "I cover my ears to try to reduce the noise but there doesn't seem to be any effect."
+        "After a few seconds, the noise finally disappears."
+        mc "What the hell was that? Did I make the wrong choice?"
+        ay "No."
+        "A hand touches my shoulder and I turn my head."
+        show ayame 1a zorder 2 at t11
+        ay "We have everything we need, so let's head back."
+        ay "The energy around here seems to be reaching it's peak now."
+        ay "I don't know if there are still traps so it's safer to just go through our footsteps."
+        mc "Do you really think Sayori is going to be on the other end of this next portal?"
+        ay "I sure hope so. I don't know if I have enough resolve to continue much more."
+        "It's pretty clear that whatever Ayame went through in these traps broke her a little."
+        "I hope there isn't anything too complicated after this."
+        ay "Let's get this over with."
+        mc "I'm right behind you."
+        scene bg clearing
+        show ayame 1a zorder 2 at t11
+        with wipeleft_scene
+        "By the time we get back to the clearing, the sun managed to rise already."
+        "Time seems to be passing by very quickly right now, at least in this world."
+        "Which is probably an indication of the instability of this world."
+        ay "Quickly, place the rope around the shells."
+        ay "This should finally open the portal."
+        "I do as she says and form a circle which encloses the shells."
+        "I feel myself being pushed away from it despite there being no wind or anything."
+        "I still can't see anything but Ayame's face seems to light up."
+        ay "This is it. All that you and I have worked towards."
+        ay "Everything has been culminating to this moment."
+        ay "Once you get in, there is no turning back."
+        ay "Not until we're done."
+        menu:
+            ay "Do you understand?"
+            "Yes":
+                pass
+            "No.":
+                ay "What's there not to understand?"
+                ay "You'll be stuck there until we get an outcome."
+                ay "That means no saving, no turning back time, nothing."
+                ay "Whatever we do in there will stick with us."
+                ay "So I hope you've come prepared."
+                ay "Is that all clear now?"
+                mc "I think so."
+        ay "Good. Now let's get the {i}hell{/i} out of here before this world explodes or something."
+        ay "Hopefully this next place doesn't have any tricks."
+        ay "But who knows?"
+        ay "Do you need a minute before we go?"
+        mc "I think I might need that, yeah."
+        ay "Well, I'm going to give you a couple of seconds."
+        "Ayame takes a deep breath and looks at me."
+        "She nods and puts her hand on the ground on the middle of the portal."
+        stop music
+        label ch16_sayori_4:
+        $ persistent.autoload = "ch16_sayori_4"
+        scene bg sayori_bedroom
+        with dissolve_scene_full
+        "I seem to have arrived in Sayori's bedroom, on the floor."
+        "Everything here looks normal. The skies outside seem normal and I can even hear birds chirping."
+        "Ayame, and Sayori, don't seem to be anywhere in sight."
+        "I get up and take a look around the room."
+        "On Sayori's computer, there seems to be a document of some kind open."
+        "I take a quick glance through it, looking at the title of the document."
+        "It reads 'Inauguration Day'. Maybe it's some kind of plan she had?"
+        "It seems to be quite an extensive document..."
+        "Scrolling through it, I can see various headings that describe events that happened today."
+        if ch16_ay_drink:
+            "One of them says 'Ayame offers drink' and under it shows '[player] takes drink'."
+            "There's also events that didn't happen like '[player] rejects drink' and events that would have happened after that."
+        else:
+            "One of them says 'Ayame offers drink' and under it shows '[player] rejects drink'."
+            "There's also events that didn't happen like '[player] takes drink' and events that would have happened after that."
+        "It's like some sort of Choose Your Own Adventure book..."
+        "I keep scrolling, approaching the bottom of the document."
+        "I find a section that reads 'The Danger Arrives'."
+        "So what really is this 'danger' anyway?"
+        "I look through it, and it seems to describe the events of what just happened."
+        "Me being on the beach then waking up here, in Sayori's room."
+        show sayori 1ba zorder 2 at t11
+        s "Hello, [player]."
+        mc "Whoa!"
+        "Before I can take a good look, Sayori suddenly appears behind me and I nearly fall from the surprise."
+        "She seems to be holding a cup of coffee."
+        "Is this really Sayori? Or is this some kind of trick again?"
+        s "Don't worry, it's really me."
+        s "I've started using a lot of coffee lately because I can't really afford to catch a break."
+        s "I need to stay awake to make sure it's all going to run smoothly, you know?"
+        mc "I suppose..."
+        mc "You {i}do{/i} know why I'm here, don't you?"
+        s "I do. Before you do what you have to, can't we just relax for a little bit?"
+        s "The truth is I could end everything right now, if I really wanted to."
+        s "But since you're here now, we may as well talk, right?"
+        mc "Where are the others?"
+        s "The three of them are downstairs already."
+        s "You were the last one to wake up."
+        mc "Three of them? Not just Ayame?"
+        s "That's right, Natsuki and Yuri are here too."
+        s "After all, you did bring them with you."
+        s "What? Why are you looking at me like that?"
+        mc "Well, it's just...what you did with them before."
+        s "Do you really think I'd actually hurt them?"
+        s "I told you why I was doing this, didn't I?"
+        s "It's for their sake, because there just isn't any alternative."
+        mc "You said you've seen how this ends, haven't you?"
+        s "That's right. It isn't very pretty..."
+        s "You saw the document. I know everything that happens."
+        s "Every outcome, every word that's supposed to be said for this day."
+        s "Everything I said before, it's all been preconceived to happen already."
+        s "Including me mispronouncing 'significance' before."
+        s "Do you really think I wouldn't have done my best to act completely like Ayame?"
+        s "That's such a simple mistake to make."
+        "This is a side to Sayori that's completely new to me."
+        "Even with a smile on her face, she seems so cold. So calculating."
+        mc "So it was all an act?"
+        s "Ehehe, I guess you could say that..."
+        s "But I was just following how the timeline was supposed to play out."
+        mc "You knew I would get here then?"
+        "This can't be right."
+        s "I did, just like I know you're going to say that--."
+        mc "This must be a trick, Sayori."
+        s "It's not a trick. I've rehearsed these lines over and over."
+        s "You can check the document if you want, but you don't really do that until later."
+        s "All of this is already set to happen."
+        s "Honestly, it's all coming naturally to me but I guess that's how it was meant to play out anyway."
+        mc "So that document, it controls what happens?"
+        mc "If I change something in there..."
+        s "No, it's just the set of events that play out."
+        s "Detailing every possibility that could happen today."
+        s "You could change something in there if you wanted, but it's not going to change the future, or the past."
+        mc "That's ridiculous. This couldn't possibly..."
+        "I look back at the document and scroll down to see what happens next."
+        "Right there on the document, it says [player] looks at the document to see what happens next."
+        mc "What the..."
+        s "I told you~"
+        mc "Then what's the point? Are you meant to end everything after all?"
+        mc "Is that an event that's meant to happen?"
+        s "No. In the original timeline, I don't end our reality."
+        s "I'm too late, because of this conversation with you."
+        s "It's kind of paradoxical, isn't it?"
+        s "But I know precisely when it's going to happen and I plan to end it all before it's too late."
+        mc "Nothing I can say will convince you, will it?"
     elif ch16_ay_companions == 3:
         ay "You have to imagine something for Yuri as well."
         ay "I don't know if she's here because she doesn't have a voice."
@@ -4976,4 +5129,20 @@ label ch16_convince_2_end_2:
     "This time, I feel like I have a clearer image of it in my head."
     scene white with Dissolve(3.0)
     $ renpy.utter_restart()
+    return
+
+# Sayori convinces player not to take rope
+label ch16_convince_3_end_1:
+    mc "I'm going to leave the rope."
+    mc "I'm hoping I made the right decision."
+    ay "I'm so relieved. Now we can put this all behind us."
+    mc "What do you mean?"
+    ay "You've made a terrible mistake, [player]."
+    ay "No..."
+    "As the voice speaks, it seems to morph into Sayori's voice."
+    s "[cPlayer_personal]'s made the right decision."
+    return
+
+# Sayori convinces player not to take rope (Monika edition)
+label ch16_convince_3_end_2:
     return
