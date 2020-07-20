@@ -1872,12 +1872,20 @@ label ch16_mainb:
         mc "I think I might need that, yeah."
         ay "Well, I'm going to give you a couple of seconds."
         "Ayame takes a deep breath and looks at me."
-        "She nods and puts her hand on the ground on the middle of the portal."
+        ay "Est tempus."
+        mc "Huh?"
+        ay "Just...remember it."
+        mc "Alright then."
+        "I wonder what significance that could possibly have?"
+        "What does it even mean?"
+        "Before I can get my answer, Ayame nods and puts her hand on the ground on the middle of the portal."
         stop music
         label ch16_sayori_4:
-        $ persistent.autoload = "ch16_sayori_4"
+        # Uncomment this line after this arc is finished
+        # $ persistent.autoload = "ch16_sayori_4"
         scene bg sayori_bedroom
         with dissolve_scene_full
+        play music t18 fadein 5.0
         "I seem to have arrived in Sayori's bedroom, on the floor."
         "Everything here looks normal. The skies outside seem normal and I can even hear birds chirping."
         "Ayame, and Sayori, don't seem to be anywhere in sight."
@@ -1948,7 +1956,8 @@ label ch16_mainb:
         mc "So that document, it controls what happens?"
         mc "If I change something in there..."
         s "No, it's just the set of events that play out."
-        s "Detailing every possibility that could happen today."
+        s "Detailing every possibility that could happen today. Well, almost every possibility..."
+        s "There are some variables that could still change but not enough to warrant me changing my mind."
         s "You could change something in there if you wanted, but it's not going to change the future, or the past."
         mc "That's ridiculous. This couldn't possibly..."
         "I look back at the document and scroll down to see what happens next."
@@ -1958,10 +1967,147 @@ label ch16_mainb:
         mc "Then what's the point? Are you meant to end everything after all?"
         mc "Is that an event that's meant to happen?"
         s "No. In the original timeline, I don't end our reality."
-        s "I'm too late, because of this conversation with you."
+        s "I'm too late, I don't get to because of this conversation with you."
         s "It's kind of paradoxical, isn't it?"
         s "But I know precisely when it's going to happen and I plan to end it all before it's too late."
         mc "Nothing I can say will convince you, will it?"
+        s "What do you want me to say?"
+        s "The answer you want to hear that isn't true?"
+        s "Or the truth?"
+        s "I already told you that I made up my mind."
+        s "There's nothing that can change it now."
+        mc "You said the others are downstairs, right?"
+        s "I did. I'd call them up now if you want."
+        s "But that won't be necessary since they're about to come in anyway."
+        mc "Huh?"
+        show natsuki 1a zorder 2 at t41
+        show yuri 1a zorder 2 at t42
+        show ayame 1a zorder 2 at t43
+        show sayori 1ba zorder 2 at t44
+        "Right on cue, the three of them enter the room."
+        show yuri zorder 3 at f42
+        y "A-Are you okay? You've been out for a long time."
+        show natsuki zorder 3 at f41
+        show yuri zorder 2 at t42
+        n "About time [player_personal] woke up."
+        show natsuki zorder 2 at t42
+        show ayame zorder 3 at f43
+        ay "Calm down you two. [cPlayer_personal] just woke up."
+        show ayame zorder 2 at t43
+        mc "Natsuki...Yuri, you're okay..."
+        mc "And Ayame too. What happened to--"
+        show ayame zorder 3 at f43
+        ay "There's no point anymore. She was right."
+        show ayame zorder 2 at t43
+        mc "What? But we're right here."
+        mc "We can still--"
+        show ayame zorder 3 at f43
+        ay "She...she showed me everything, [player]."
+        ay "She was right. There really is only one way to get rid of the danger."
+        ay "You...me...all four of us couldn't do anything even if we tried."
+        ay "Even if Sayori helped us, we'd be powerless to do anything."
+        show ayame zorder 2 at t43
+        mc "Is this really the end?"
+        mc "We went through all of that, for nothing?"
+        "This can't be right. Something is very wrong here."
+        mc "No...there must be more to it than this."
+        mc "I refuse to believe this is real."
+        show ayame zorder 3 at f43
+        ay "[player], what the hell are you talking about?"
+        ay "This is it. This is what we worked towards."
+        ay "It's all over..."
+        show natsuki zorder 3 at f41
+        show ayame zorder 2 at t43
+        n "I hate to admit it after all of this but I agree with Ayame."
+        n "There's just no point anymore."
+        show natsuki zorder 2 at t41
+        show yuri zorder 3 at f42
+        y "L-Let's just accept defeat gracefully."
+        y "We really tried, but it wasn't enough."
+        show yuri zorder 2 at t42
+        show sayori zorder 3 at f44
+        s "Don't you agree it's time to stop this?"
+        s "I just want our last moments to be happy. If you think that's bad then..."
+        s "Well, I suppose I don't need you to think it's good or bad. I just need you to accept."
+        s "I'll even bring Monika here too. There's no point in fighting anymore."
+        s "It's nearly time, [player]. Time is running out..."
+        show ayame zorder 3 at f43
+        show sayori zorder 2 at t44
+        ay "I hate this as much as you, [player]."
+        ay "But she's got a point, you know..."
+        ay "You have to realize it's time."
+        show ayame zorder 2 at t43
+        mc "It's time...isn't it?"
+        "Ayame said something to me before we got here."
+        mc "Est tempus."
+        show sayori zorder 3 at f44
+        s "W-What?{nw}"
+        stop music
+        scene black
+        show mask_2
+        show mask_3
+        show room_mask as rm:
+            size (320,180)
+            pos (30,200)
+        show room_mask2 as rm2:
+            size (320,180)
+            pos (935,200)
+        play sound "mod_assets/sfx/glassbreak.ogg"
+        show bg sayori_bedroom_void
+        show ayame 1a zorder 2 at i43
+        show sayori 1ba zorder 2 at i44
+        with shatter
+        play music m1
+        "There's no more birds chirping outside."
+        "The world outside looks dark yet strangely Sayori's room remains lit normally."
+        show ayame zorder 3 at f43
+        ay "Your illusion is broken, Sayori."
+        ay "[player] realized the truth. You have to see now that your efforts are in vain."
+        ay "You have to stop this madness. There's still time."
+        ay "If not, {i}we'll{/i} have to stop you."
+        show ayame zorder 2 at t43
+        "It looks like this is the real end world."
+        "I must have been caught in one of Sayori's tricks again..."
+        show sayori zorder 3 at f44
+        s "I honestly thought I had it. I thought that would be the end."
+        s "That we could all finally go to rest."
+        s "But the two of you just want us to suffer, forever."
+        s "Why can't you understand that the danger coming is bigger than us?"
+        s "Why can't you understand that the only way to stop it is to stop this game?"
+        show ayame zorder 3 at f43
+        show sayori zorder 2 at t44
+        ay "Are you really that blind that you can't see what's in front of you right now?"
+        ay "You may have the power of the presidency Sayori, but that doesn't mean you should do everything yourself."
+        show ayame zorder 2 at t43
+        show sayori zorder 3 at f44
+        s "That's {i}exactly{/i} why I have to do everything myself."
+        s "The second I stop, everything will go wrong!"
+        s "Without any of my meddling, we would not have gone this far."
+        s "Everything would have ended on the day of the festival..."
+        show ayame zorder 3 at f43
+        show sayori zorder 2 at t44
+        ay "And look where your meddling got you, Sayori."
+        ay "I wasn't even supposed to exist in this world but because of your curiosity, I'm here."
+        ay "You brought me here. You pulled me from the deepest depths of this."
+        ay "Maybe that was an accident."
+        ay "Or maybe you subconsciously needed me to stop you."
+        show ayame zorder 2 at t43
+        show sayori zorder 3 at f44
+        s "...That's not true! You were just--"
+        show ayame zorder 3 at f43
+        show sayori zorder 2 at t44
+        ay "Are you even aware of the danger is?"
+        ay "For all your planning, I'm certain you don't know what the real danger is."
+        ay "[player], did you finish reading that document?"
+        show ayame zorder 2 at t43
+        mc "No, I didn't get to..."
+        show ayame zorder 3 at f43
+        ay "You couldn't finish it anyway. Sayori didn't complete it."
+        ay "She never went far enough to see what the danger was."
+        ay "Perhaps she was too afraid to see what would cause so much suffering."
+        ay "Answer me honestly, Sayori. Deny it if I'm wrong."
+        "Sayori says nothing."
+        ay "As I thought."
     elif ch16_ay_companions == 3:
         ay "You have to imagine something for Yuri as well."
         ay "I don't know if she's here because she doesn't have a voice."

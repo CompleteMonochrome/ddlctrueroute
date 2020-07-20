@@ -459,6 +459,7 @@ define snakes = ImageDissolve(im.Scale("mod_assets/images/menu/snakes.png", 1280
 define sunshine = ImageDissolve(im.Scale("mod_assets/images/menu/sunshine.jpg", 1280, 720), 4.0, 8)
 define glasswool = ImageDissolve(im.Scale("mod_assets/images/menu/glasswool.jpg", 1280, 720), 4.0, 8)
 define wet = ImageDissolve(im.Scale("mod_assets/images/menu/wet.jpg", 1280, 720), 4.0, 8)
+define shatter = ImageDissolve(im.Scale("mod_assets/images/menu/shatter.png", 1280, 720), 2.0, 8)
 
 define tpause = Pause(0.25)
 
