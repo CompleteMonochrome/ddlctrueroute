@@ -2107,7 +2107,88 @@ label ch16_mainb:
         ay "Perhaps she was too afraid to see what would cause so much suffering."
         ay "Answer me honestly, Sayori. Deny it if I'm wrong."
         "Sayori says nothing."
-        ay "As I thought."
+        ay "As I thought. You're too scared to see it for yourself."
+        ay "Maybe you even know what the danger actually is but are too afraid to admit it."
+        show ayame zorder 2 at t43
+        mc "What do you mean, Ayame?"
+        mc "How could Sayori know what the danger is if she hasn't seen it?"
+        show ayame zorder 3 at f43
+        ay "Go on. Why don't you tell [player_reflexive]?"
+        ay "[cPlayer_personal] deserves to know, doesn't [player_personal]?"
+        ay "After all, you're still going to end it anyway."
+        ay "So what does it matter?"
+        "Sayori remains silent."
+        ay "If you won't say it, then I will."
+        ay "The danger is--"
+        show ayame zorder 2 at t43
+        show sayori zorder 3 at f44
+        s "Okay, fine. I'll say it, Ayame."
+        s "Like you said, what does it matter, right?"
+        s "The danger is..."
+        s "It's...me."
+        show sayori zorder 2 at t44
+        mc "What?! That can't be--"
+        "Ayame smirks."
+        show sayori zorder 3 at f44
+        s "All the signs point to it."
+        s "I'm the one that's going to ruin everything and everyone."
+        s "With everything I've done, and everything I'm going to do."
+        s "Which is why I have to stop this world before I turn into that."
+        show sayori zorder 2 at t44
+        mc "But that doesn't make any sense."
+        mc "Wouldn't you ending the world in the first place to stop it, make you the danger?"
+        mc "There must be more to it than this."
+        show ayame zorder 3 at f43
+        ay "I don't think you're quite understanding it, [player]."
+        ay "If this whole world keeps going on, then it's going to break sooner or later."
+        ay "It was never meant to go this far. The cycle was meant to repeat already."
+        ay "At some point, Sayori is going to do something, whether on purpose or accident, that will trigger the world to end."
+        ay "So her thought process is..."
+        show ayame zorder 2 at t43
+        show sayori zorder 3 at f44
+        s "I just wanted everyone to be happy when it all ended."
+        s "To live their last moment doing what they wanted to be doing."
+        s "Rather than panicking and worrying in their final moments."
+        s "It has to be like this. The alternative is worse."
+        show sayori zorder 2 at t43
+        mc "But can't you keep this world going?"
+        mc "You've been doing that already, haven't you?"
+        show ayame zorder 3 at f43
+        ay "This world is limited, [player]. It was never meant to go for this long."
+        ay "At any point, it could collapse in itself and people could die a horrible death."
+        ay "Or worse, they could be corrupted into amalgamations of themselves, at which point they may be lost forever."
+        ay "I'm sure Sayori knows that."
+        ay "Ending it early can at least preserve them, in some form or another."
+        show ayame zorder 2 at t43
+        mc "There has to be another way, Sayori."
+        mc "I know you can find one, you have to!"
+        show ayame zorder 3 at f43
+        ay "I'm sure she's tried, [player]."
+        ay "It has to be her that has to end the world. At least this way, it's peaceful."
+        ay "After all, who really has the power to end this world apart from her?"
+        ay "She is the only person with that capability right now."
+        show ayame zorder 2 at t43
+        show sayori zorder 3 at f44
+        s "She's right. It has to be me."
+        s "I'm sorry I couldn't tell you earlier."
+        if sayori_date:
+            s "At the very least, we got to spend time together."
+            s "You and I...I'm sorry."
+        else:
+            s "But I didn't want to alarm you."
+        s "I just wish there was another way but I know there isn't."
+        show ayame zorder 3 at f43
+        show sayori zorder 2 at t44
+        ay "There is...an alternative, but you won't like it at all."
+        ay "I realize you don't have any reason to trust me, Sayori."
+        ay "Nor are we on the best terms exactly."
+        ay "But hear me out."
+        show ayame zorder 2 at t43
+        show sayori zorder 3 at f44
+        s "What is it?"
+        show ayame zorder 3 at f43
+        show sayori zorder 2 at t44
+        ay "You give me the presidency."
     elif ch16_ay_companions == 3:
         ay "You have to imagine something for Yuri as well."
         ay "I don't know if she's here because she doesn't have a voice."
