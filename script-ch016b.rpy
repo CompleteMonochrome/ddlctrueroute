@@ -919,16 +919,16 @@ label ch16_mainb:
         "After a moment, she walks forward."
         "And I, for better or worse, follow right behind her."
         scene bg beach_sunset
-        show ayame 1a zorder 2 at t11
+        show ayame 2n zorder 2 at t11
         with wipeleft_scene
         "By the time we make it to the beach, the sun seems to be setting."
         "I don't think that much time really passed."
         "At this point, I'm not even going to question it."
         "It's either Sayori's doing or just how this world works."
         ay "So let's find that rope."
-        ay "Wait a second."
+        ay 2m "Wait a second."
         mc "What's wrong? It should just be over here."
-        ay "I have a feeling it isn't going to be that easy."
+        ay 2a "I have a feeling it isn't going to be that easy."
         ay "Let me take the first--"
         show ayame at thide
         hide ayame
@@ -942,50 +942,50 @@ label ch16_mainb:
         ay "Stay still. Do. Not. Move."
         mc "W-What? Okay, I'm not gonna move."
         ay "I knew it couldn't have been that easy."
-        ay "How long was I gone?"
+        ay 1m "How long was I gone?"
         mc "Just a couple of seconds, why?"
         ay "It felt like a few minutes in there..."
         mc "Where did you go?"
-        ay "I was transported to a flashback of my past."
-        ay "Except, Sayori was there."
+        ay 1n "I was transported to a flashback of my past."
+        ay "Except, Sayori was there. Well, in a way."
         mc "Sayori was there?"
         ay "It was like a corrupted memory."
         ay "And I had to navigate through it to get out."
-        ay "And she tried to stop me."
+        ay 1a "And she tried to stop me."
         mc "But why? What's the point?"
         ay "I suspect it's some kind of obstacle for us."
-        ay "If you've noticed, the rope is over there."
+        ay 4f "If you've noticed, the rope is over there."
         "Ayame points in the direction of where the tree we went to earlier was."
         ay "I only took a single step and I was brought into some kind of other dimension reliving a past memory."
         mc "You think there's more of those around here?"
         mc "That Sayori set up some kind of trap or something?"
-        ay "Sayori is unpredictable right now."
+        ay 4m "Sayori is unpredictable right now."
         ay "That could have just been a one time thing."
         ay "Maybe there's all sorts of other traps laid out in the area."
         mc "So what should we do?"
         ay "I propose we walk together, one step at a time."
         ay "The sand will track our footsteps and provide a safe location to travel on when we get the rope."
         ay "Every time one of us activate a trap, the other continues."
-        ay "No exceptions."
+        ay 4a "No exceptions."
         mc "What if the other person doesn't make it back?"
-        ay "{i}No exceptions.{/i}"
+        ay "{i}No. Exceptions.{/i}"
         ay "We have to stop Sayori."
         ay "If you get the rope and I don't make it back, you need to run back and connect all the shells."
         ay "The portal should activate."
         mc "I'm not gonna leave you behind, Ayame."
-        ay "This is no time for sentiment."
+        ay 4m "This is no time for sentiment."
         ay "Look, I understand how you feel."
         ay "Let's just get through this first and see what happens, okay?"
-        ay "No point standing around here arguing something like this."
+        ay 4a "No point standing around here arguing something like this."
         mc "I suppose..."
         ay "Now, I'll move towards the rope again."
         ay "Stay close, and remember to go on without me if I disappear."
         ay "The sooner we can get to the rope, the sooner we can get to Sayori."
-        ay "With the two of us making this path, it should be a lot faster."
+        ay 2a "With the two of us making this path, it should be a lot faster."
         mc "I sure hope this works."
         ay "Me too..."
         ay "Okay, I'm going to sprint towards it."
-        ay "Here goes..."
+        ay 2m "Here goes..."
         "Ayame begins to make a dash towards it."
         show ayame at thide
         hide ayame
@@ -1025,16 +1025,16 @@ label ch16_mainb:
         s "But I caught you this time!"
         mc "What? What are you talking about?"
         mc "Sayori, we have to talk."
-        s "H-Huh? What about?"
-        s "Can't it wait? We're gonna be late for school?"
+        s 4c "H-Huh? What about?"
+        s "Actually can it wait? We're gonna be late for school!"
         mc "School? Sayori, we have more pressing matters to talk about!"
         "Sayori begins to cross the road and appears to have ignored what I'm saying."
         mc "Sayori, come back here."
-        s "Come on! Let's go!"
+        s 4q "Come on! Let's go!"
         mc "Fine, fine."
         "I follow Sayori across the street and put a hand on her shoulder."
         mc "Can we just talk for a minute?"
-        s "I agree, we need to talk about what clubs you're going to join."
+        s 4a "I agree, we need to talk about what clubs you're going to join."
         mc "Clubs? What the hell are you talking about?"
         s 5c "Eeehhhhh, don't pretend like you don't know what I'm talking about."
         s "You said you would join a club this year!"
@@ -1048,99 +1048,99 @@ label ch16_mainb:
         "Everything seems to be normal so far. How exactly is this corrupted...?"
         "What should I do? Do I just act normal?"
         "How am I supposed to get through this?"
-        s "Is something wrong, [player]?"
+        s 2c "Is something wrong, [player]?"
         s "You look like you're lost in thought."
-        s "Are you thinking of clubs to join?"
+        s 2h "Are you thinking of clubs to join?"
         "Sayori looks at me, then frowns."
-        s "No, it's not that."
+        s 2f "No, it's not that."
         s "Something must be on your mind."
         mc "I was just thinking."
-        s "Oh, about what?"
+        s 1c "Oh, about what?"
         s "You know you can tell me anything~"
         mc "I don't know how to tell you this."
-        s "Just say it, I can take it."
+        s 1d "Just say it, I can take it."
         mc "This isn't real."
-        s "What?"
+        s 1c "What do you mean?"
         mc "This is just a memory. A trap."
         s "[player], what are you talking about?"
         s "What isn't real?"
         mc "This. This street we're in. This world."
         mc "You."
         mc "None of it is real."
-        s "What are you saying?"
-        s "That I'm just a figment of your imagination?"
+        s "What are you saying? I don't understand."
+        s 1h "Am I supposed to believe that I'm just a figment of your imagination?"
         mc "Yes, that's exactly what I'm saying."
-        s "That's..."
+        s 1j "That's..."
         "Sayori begins laughing hysterically."
-        s "...a good one!"
+        s 1r "...a good one!"
         s "Who knew you could be so funny without even trying?"
         mc "Sayori, I'm serious."
-        s "Yeah, I'm sure you are."
+        s 1q "Yeah, I'm sure you are!"
         mc "No, really. None of this is real."
         mc "This whole world is fake!"
         "I shout that last part loud, I see a few heads turn my way before they go about their day."
-        s "You look like a crazy person, you know that right?"
+        s 2h "You look like a crazy person, you know that right?"
         s "Can you just calm down?"
-        s "You're scaring me a little..."
+        s "You're actually starting to scare me a little..."
         mc "I'm sorry. This is all just...all so confusing."
-        s "It's alright...I don't blame you."
+        s 2d "It's alright...I don't blame you."
         mc "What do you mean?"
-        s "You don't know?"
+        s 1b "You don't know?"
         s "People have been disappearing recently, I'm sure you've seen the news."
         mc "No? Who's gone missing?"
         "I don't remember this happening."
         "Maybe this is part of the corruption."
-        s "It started just a couple of weeks ago."
+        s 1c "It started just a couple of weeks ago."
         s "A tall girl with purple hair was the first to disappear."
         s "I think her name was--"
         mc "Yuri?"
-        s "Yeah! How did you know?"
+        s 1n "Yeah! How did you know?"
         mc "She's gone?"
-        s "Well, no one knows where she went."
+        s 1o "Well, no one knows where she went."
         s "People are saying she was kidnapped or something."
         s "She's not even the only one."
-        s "There was this cute, short girl. Natsuki...?"
+        s 1c "There was this cute, short girl. Natsuki...?"
         mc "She's gone too?!"
-        s "Y-Yeah, you sound really surprised. You must have been too busy being a NEET to see the news."
+        s 1f "Y-Yeah, you sound really surprised. You must have been too busy being a NEET to see the news."
         mc "It's just..."
-        s "Do you know these people?"
+        s 1c "Do you know these people?"
         mc "Sort of..."
-        s "Huh, that's weird."
+        s 1b "Huh, that's weird."
         s "I didn't think you'd hang around girls much, [player]."
-        s "Maybe you've grown up, and I didn't know about it."
+        s 1a "Maybe you've grown up, and I didn't know about it."
         s "Well, good for you~"
         mc "What about Monika?"
-        s "Monika?"
+        s 1c "Monika?"
         mc "Has she disappeared as well?"
         s "No...at least, I don't think so."
         s "I spoke to her just yesterday."
         mc "Ah, that's right. You two run the Literature Club, don't you?"
-        s "Literature Club? I don't know what you're talking about."
+        s 2c "Literature Club? I don't know what you're talking about."
         mc "Then how do you know Monika?"
-        s "We're in the debating club! She runs it and I'm sort of like the vice-president."
+        s 2a "We're in the debating club! She runs it and I'm sort of like the vice-president."
         mc "What? This is all wrong..."
-        s "[player]?"
+        s 2h "[player]?"
         s "What is wrong with you? I'm really worried!"
         s "You're acting really weird!"
         mc "This world isn't real."
         mc "I know it isn't."
-        s "There you go again..."
+        s 2k "There you go again..."
         s "Come on, [player]. You have to stop this."
         s "I really don't know what's gotten over you."
         s "Do you need some help?"
-        s "I just want to help you accept this reality.{nw}"
-        show yuri 1a zorder 2 at i31
+        s 1h "I just want to help you accept this reality.{nw}"
+        show yuri 1r zorder 2 at i31
         y "Don't listen to her!{nw}"
         $ _history_list.pop()
         hide yuri
-        show natsuki 1a zorder 2 at i33
+        show natsuki 1e zorder 2 at i33
         n "She's trying to trick you!{nw}"
         $ _history_list.pop()
         hide natsuki
         show screen tear(8, offtimeMult=1, ontimeMult=10)
         window hide(None)
         $ pause(1.0)
-        show sayori 1a zorder 2 at i11
+        show sayori 1h zorder 2 at i11
         hide screen tear
         $ pause(1.0)
         window show(None)
@@ -1148,14 +1148,14 @@ label ch16_mainb:
         window auto
         mc "W-What? Did you hear that?"
         mc "Natsuki and Yuri, they were behind you!"
-        s "Huh?"
+        s 1c "Huh?"
         "Sayori turns around."
-        s "There's no one there, [player]."
+        s 1h "There's no one there, [player]."
         s "I really don't know what's wrong with you but I want to help."
         s "Let's do this, together."
         $ sayori_convince = 2
         label sayori_convince_1_4:
-        show sayori 1bj
+        show sayori 1a
         menu:
             s "What do you say? Will you let me help?"
             "Yes.":
@@ -1181,13 +1181,15 @@ label ch16_mainb:
                     jump sayori_convince_1_4
         mc "I don't need your help, Sayori."
         mc "Do you know why?"
-        "Sayori frowns."
+        show sayori 1h
+        "Sayori frowns, but it doesn't seem to be a look of worry."
+        "More like...anger and frustration."
         s "Why not?"
         mc "Because I know this isn't real."
         mc "Natsuki and Yuri haven't disappeared."
         mc "Monika isn't the leader of the debate club."
         mc "She left it this year."
-        s "..."
+        s 1i "..."
         mc "I'm going to save you, Sayori."
         mc "Whatever it takes, I will save you."
         mc "Stop you from doing something you{nw}"
@@ -1196,7 +1198,7 @@ label ch16_mainb:
         window hide(None)
         $ pause(1.0)
         scene bg beach_sunset
-        show ayame 1a zorder 2 at i11
+        show ayame 4l zorder 2 at i11
         $ audio.t3ayb = "<from " + str(currentpos) + " loop 9.236>mod_assets/bgm/3ay.ogg"
         play music t3ayb
         hide screen tear
@@ -1208,33 +1210,33 @@ label ch16_mainb:
         "Ayame seems to be in front of me by a couple of steps."
         "She must have gotten back already."
         mc "I was..."
-        ay "Oh, you made it out of the corrupted memory."
+        ay 4j "Oh, you made it out of the corrupted memory."
         ay "Congratulations."
-        "Ayame seems to be indifferent to me getting out."
+        "Despite having a smile on her face, Ayame seems to be indifferent to me getting out."
         "It's like she knew I would make it."
         mc "Yeah, it wasn't as hard as I expected."
-        ay "Well, my second memory was a lot more difficult."
+        ay 4m "Well, my second memory was a lot more difficult."
         ay "I fear that as we get closer to the rope, it's only gonna become harder."
-        ay "Just stick to the truth, and you'll be fine."
+        ay 4h "Just stick to your truth, and you'll be fine."
         ay "Don't get tricked."
         mc "I thought I heard Natsuki and Yuri's voices while I was there."
         mc "They told me it was a trick..."
-        ay "Hmm...that's good. It shows that they're still here somewhere."
+        ay 4m "Hmm...that's good. It shows that they're still here somewhere."
         ay "That Sayori hasn't completely gotten rid of them."
         mc "Did you think she really would?"
-        ay "I couldn't sense their souls in this world."
+        ay 4n "I couldn't sense their souls in this world."
         ay "At least, not after you created their bodies."
         ay "I just feared the worse, that's all."
         mc "Sayori isn't that kind of person. I know it."
-        ay "You're still holding out hope for her?"
+        ay 1m "You're still holding out hope for her?"
         mc "I've got to. I don't know what I would do if she actually did something so terrible."
         ay "People change, [player]. You, of all people, should know that."
-        ay "You, who has witnessed the friendship between Yuri and Natsuki blossom."
+        ay 1a "You, who has witnessed the friendship between Yuri and Natsuki blossom."
         ay "You, who has seen the effect of poetry can have on a person."
         ay "You, who has become more capable of independent and critical thought."
         ay "Sayori isn't an exception. I can name a lot of things that have changed about her."
         mc "But how? You weren't even there at the beginning."
-        ay "I suppose that's true. It's just that she reminds me of someone."
+        ay 1n "I suppose that's true. It's just that she reminds me of someone."
         ay "Someone that{nw}"
         hide ayame at thide
         hide ayame
@@ -1266,40 +1268,41 @@ label ch16_mainb:
         show monika 1ba zorder 2 at t11
         m "Ready to start? I have all the things we need already here."
         mc "What? Monika, what are you doing here?"
-        m "Huh? You're the one who invited me here."
+        m 2bc "Huh? You're the one who invited me here."
         m "You chose to help me prepare for the festival, remember?"
         "The festival? But I didn't help Monika for that."
         mc "No...this isn't right..."
         m "What are you saying, [player]?"
         mc "We're part of the Literature Club, aren't we?"
-        m "Um...I don't know why you'd ask something like that, but yes."
-        m "Are you feeling okay?"
+        m 2bd "Um...I don't know why you'd ask something like that, but yes."
+        m 1bd "Are you feeling okay?"
         m "Maybe choosing me was a bad idea, I'm sorry."
         m "I can leave if that makes it any better."
-        m "I'm sorry for bothering you."
+        m 1bm "I'm sorry for bothering you."
         mc "Wait a second. I need to ask you something."
+        show monika 1ba
         "Monika's face lights up."
         m "Oh? Sure, I'll answer if I can."
         mc "How long have I been in the club for?"
-        m "Um...I think this is your first week, right?"
+        m 2bc "Um...I think this is your first week, right?"
         m "Unless you were a member before and I didn't know about it."
         mc "Who's the president of the Literature Club?"
         m "The president? What kind of question is that?"
         mc "Just answer it, please."
-        m "Well, it's obviously me. I thought you knew that already."
+        m 4ba "Well, it's obviously me. I thought you knew that already."
         mc "It's you? I thought it was Sayori."
-        m "She is the vice-president, maybe you had us confused."
+        m 4bc "She is the vice-president, maybe you had us confused."
         m "But I'm the one who decided to start the Literature Club along with her."
         "For some reason, what she's saying feels like the truth."
         "But all this time, I thought Sayori was the president."
         "This must be an effect of this memory."
-        m "What's wrong?"
+        m 2bf "What's wrong?"
         mc "This isn't right. You're not meant to be here."
-        m "O-Oh. I'm sorry then, I just thought that you and I could..."
+        m 2bm "O-Oh. I'm sorry then, I just thought that you and I could..."
         m "Ah well, I suppose it wasn't meant to be."
-        m "I'll see you during the festival then."
+        m 1be "I'll see you during the festival then."
         m "You don't have to do anything, I'll take care of everything."
-        m "I'm sorry once again. I'll leave now."
+        m 1bt "I'm sorry once again. I'll leave now."
         "Monika's face begins to tear up."
         "I know this world is fake but at the same time..."
         "I just can't bear to see her like this."
@@ -1390,9 +1393,9 @@ label ch16_mainb:
         "But the way she said that I'll 'be gone'...it sounds suspicious."
         s "Are you still there?"
         mc "Yeah, just give me a second."
-        show monika 1a zorder 2 at t11
+        show monika 1bn zorder 2 at t11
         m "[player], I'm sorry for eavesdropping but I couldn't help it."
-        m "Are you really thinking of leaving the club?"
+        m 1bo "Are you really thinking of leaving the club?"
         mc "Monika, I thought you left."
         m "I was about to but when I sent the text to Sayori I just didn't feel right leaving it like that."
         mc "So you decided to listen in?"
@@ -1400,20 +1403,20 @@ label ch16_mainb:
         s "Is that Monika?"
         m "It's me Sayori. Are you really just going to let [player] go like that?"
         s "It's [player_possessive] decision after all, it's not up to me."
-        m "I can't believe you'd just let someone go like that."
+        m 1bh "I can't believe you'd just let someone go like that."
         s "I'm not going to force [player_reflexive] to stay."
         s "It's not right, even if [player_possessive] state of mind isn't entirely where it should be."
         m "The ball..."
         mc "What ball? What are you talking about?"
         # This ball is the same ball that Ayame kicked to the playing field in her perspective, kind of
         ay "I'm sorry, I didn't mean to hit you, and with such force. It was an accident."
-        m "You ended up at the nurse's office after that. Knocked out cold..."
+        m 1be "You ended up at the nurse's office after that. Knocked out cold..."
         m "Do you not remember?"
         mc "No, you need to stop! This never happened!"
         s "Look, [player]. Just make up your mind."
         s "If you aren't gonna be part of the club anymore, we'll leave you alone."
         ay "And I'll make sure Monika does too."
-        m "...Please don't do this, [player]. Think about what you can accomplish with us."
+        m 1bf "...Please don't do this, [player]. Think about what you can accomplish with us."
         m "You've barely scratched the surface of our potential."
         python:
             try: os.remove(config.basedir + "/wait")
@@ -1468,11 +1471,11 @@ label ch16_mainb:
         s "What do you mean by leave this memory?"
         mc "I will save you, Sayori."
         mc "You can count on it."
-        m "[player], what's happening?"
+        m 1bc "[player], what's happening?"
         m "You said you're leaving this memory, what does that mean?"
         mc "You genuinely don't know what's happening, don't you?"
         mc "I'll save us all, Monika. You can count on it."
-        m "I don't know what you mean."
+        m 1bf "I don't know what you mean."
         s "[player], I don't need saving."
         s "You're under the impression that this isn't what I want to do."
         s "That I'm being mislead or misunderstood somehow."
@@ -1483,7 +1486,7 @@ label ch16_mainb:
         mc "You've really changed, haven't you Sayori?"
         mc "What sort of things have you seen?"
         mc "How did you end up like this?"
-        m "I'm so confused..."
+        m 1bg "I'm so confused..."
         s "Even if you do manage to get to me, [player]."
         s "There's no way you'll{nw}"
         $ currentpos = get_pos()
@@ -1828,7 +1831,7 @@ label ch16_mainb:
         mc "What the hell was that? Did I make the wrong choice?"
         ay "No."
         "A hand touches my shoulder and I turn my head."
-        show ayame 1a zorder 2 at t11
+        show ayame 1m zorder 2 at t11
         ay "We have everything we need, so let's head back."
         ay "The energy around here seems to be reaching it's peak now."
         ay "I don't know if there are still traps so it's safer to just go through our footsteps."
@@ -1836,10 +1839,10 @@ label ch16_mainb:
         ay "I sure hope so. I don't know if I have enough resolve to continue much more."
         "It's pretty clear that whatever Ayame went through in these traps broke her a little."
         "I hope there isn't anything too complicated after this."
-        ay "Let's get this over with."
+        ay 1j "Let's get this over with."
         mc "I'm right behind you."
         scene bg clearing
-        show ayame 1a zorder 2 at t11
+        show ayame 1h zorder 2 at t11
         with wipeleft_scene
         "By the time we get back to the clearing, the sun managed to rise already."
         "Time seems to be passing by very quickly right now, at least in this world."
@@ -1849,30 +1852,30 @@ label ch16_mainb:
         "I do as she says and form a circle which encloses the shells."
         "I feel myself being pushed away from it despite there being no wind or anything."
         "I still can't see anything but Ayame's face seems to light up."
-        ay "This is it. All that you and I have worked towards."
+        ay 2m "This is it. All that you and I have worked towards."
         ay "Everything has been culminating to this moment."
-        ay "Once you get in, there is no turning back."
+        ay 2l "Once you get in, there is no turning back."
         ay "Not until we're done."
         menu:
             ay "Do you understand?"
             "Yes":
                 pass
             "No.":
-                ay "What's there not to understand?"
+                ay 2a "What's there not to understand?"
                 ay "You'll be stuck there until we get an outcome."
                 ay "That means no saving, no turning back time, nothing."
                 ay "Whatever we do in there will stick with us."
                 ay "So I hope you've come prepared."
                 ay "Is that all clear now?"
                 mc "I think so."
-        ay "Good. Now let's get the {i}hell{/i} out of here before this world explodes or something."
+        ay 2m "Good. Now let's get the {i}hell{/i} out of here before this world explodes or something."
         ay "Hopefully this next place doesn't have any tricks."
         ay "But who knows?"
-        ay "Do you need a minute before we go?"
+        ay 4l "Do you need a minute before we go?"
         mc "I think I might need that, yeah."
         ay "Well, I'm going to give you a couple of seconds."
         "Ayame takes a deep breath and looks at me."
-        ay "Est tempus."
+        ay 4h "Est tempus."
         mc "Huh?"
         ay "Just...remember it."
         mc "Alright then."
@@ -1913,49 +1916,50 @@ label ch16_mainb:
         "Before I can take a good look, Sayori suddenly appears behind me and I nearly fall from the surprise."
         "She seems to be holding a cup of coffee."
         "Is this really Sayori? Or is this some kind of trick again?"
-        s "Don't worry, it's really me."
+        s 1bd "Don't worry, it's really me."
         s "I've started using a lot of coffee lately because I can't really afford to catch a break."
         s "I need to stay awake to make sure it's all going to run smoothly, you know?"
+        "She puts the coffee down on her desk."
         mc "I suppose..."
         mc "You {i}do{/i} know why I'm here, don't you?"
-        s "I do. Before you do what you have to, can't we just relax for a little bit?"
-        s "The truth is I could end everything right now, if I really wanted to."
+        s 2bb "I do. Before you do what you have to, can't we just relax for a little bit?"
+        s 2bc "The truth is I could end everything right now, if I really wanted to."
         s "But since you're here now, we may as well talk, right?"
-        mc "Where are the others?"
-        s "The three of them are downstairs already."
+        mc "Where is Ayame?"
+        s 2bd "The three of them are downstairs already."
         s "You were the last one to wake up."
         mc "Three of them? Not just Ayame?"
-        s "That's right, Natsuki and Yuri are here too."
+        s 2bc "That's right, Natsuki and Yuri are here too."
         s "After all, you did bring them with you."
         s "What? Why are you looking at me like that?"
         mc "Well, it's just...what you did with them before."
-        s "Do you really think I'd actually hurt them?"
+        s 1bj "Do you really think I'd actually hurt them?"
         s "I told you why I was doing this, didn't I?"
         s "It's for their sake, because there just isn't any alternative."
         mc "You said you've seen how this ends, haven't you?"
-        s "That's right. It isn't very pretty..."
+        s 1bk "That's right. It isn't very pretty..."
         s "You saw the document. I know everything that happens."
         s "Every outcome, every word that's supposed to be said for this day."
         s "Everything I said before, it's all been preconceived to happen already."
         s "Including me mispronouncing 'significance' before."
-        s "Do you really think I wouldn't have done my best to act completely like Ayame?"
+        s 1bh "Do you really think I wouldn't have done my best to act completely like Ayame?"
         s "That's such a simple mistake to make."
         "This is a side to Sayori that's completely new to me."
         "Even with a smile on her face, she seems so cold. So calculating."
         mc "So it was all an act?"
-        s "Ehehe, I guess you could say that..."
+        s 1bl "Ehehe, I guess you could say that..."
         s "But I was just following how the timeline was supposed to play out."
         mc "You knew I would get here then?"
         "This can't be right."
-        s "I did, just like I know you're going to say that--."
+        s 1bd "I did, just like I know you're going to say that--."
         mc "This must be a trick, Sayori."
-        s "It's not a trick. I've rehearsed these lines over and over."
+        s 1bh "It's not a trick. I've rehearsed these lines over and over."
         s "You can check the document if you want, but you don't really do that until later."
         s "All of this is already set to happen."
-        s "Honestly, it's all coming naturally to me but I guess that's how it was meant to play out anyway."
+        s 1bc "Honestly, it's all coming naturally to me but I guess that's how it was meant to play out anyway."
         mc "So that document, it controls what happens?"
         mc "If I change something in there..."
-        s "No, it's just the set of events that play out."
+        s 1bl "No, it's just the set of events that play out."
         s "Detailing every possibility that could happen today. Well, almost every possibility..."
         s "There are some variables that could still change but not enough to warrant me changing my mind."
         s "You could change something in there if you wanted, but it's not going to change the future, or the past."
@@ -1963,48 +1967,48 @@ label ch16_mainb:
         "I look back at the document and scroll down to see what happens next."
         "Right there on the document, it says [player] looks at the document to see what happens next."
         mc "What the..."
-        s "I told you~"
+        s 1bq "I told you~"
         mc "Then what's the point? Are you meant to end everything after all?"
         mc "Is that an event that's meant to happen?"
-        s "No. In the original timeline, I don't end our reality."
+        s 1bh "No. In the original timeline, I don't end our reality."
         s "I'm too late, I don't get to because of this conversation with you."
         s "It's kind of paradoxical, isn't it?"
         s "But I know precisely when it's going to happen and I plan to end it all before it's too late."
         mc "Nothing I can say will convince you, will it?"
         s "What do you want me to say?"
         s "The answer you want to hear that isn't true?"
-        s "Or the truth?"
+        s 1bk "Or the truth?"
         s "I already told you that I made up my mind."
         s "There's nothing that can change it now."
         mc "You said the others are downstairs, right?"
-        s "I did. I'd call them up now if you want."
-        s "But that won't be necessary since they're about to come in anyway."
+        s 1bc "I did. I could call them up now if you want."
+        s 1ba "But that won't be necessary since they're about to come in anyway."
         mc "Huh?"
-        show natsuki 1a zorder 2 at t41
-        show yuri 1a zorder 2 at t42
-        show ayame 1a zorder 2 at t43
+        show natsuki 1c zorder 2 at t41
+        show yuri 1h zorder 2 at t42
+        show ayame 1l zorder 2 at t43
         show sayori 1ba zorder 2 at t44
         "Right on cue, the three of them enter the room."
-        show yuri zorder 3 at f42
+        show yuri 1o zorder 3 at f42
         y "A-Are you okay? You've been out for a long time."
-        show natsuki zorder 3 at f41
+        show natsuki 1g zorder 3 at f41
         show yuri zorder 2 at t42
         n "About time [player_personal] woke up."
         show natsuki zorder 2 at t42
-        show ayame zorder 3 at f43
+        show ayame 1n zorder 3 at f43
         ay "Calm down you two. [cPlayer_personal] just woke up."
         show ayame zorder 2 at t43
         mc "Natsuki...Yuri, you're okay..."
         mc "And Ayame too. What happened to--"
-        show ayame zorder 3 at f43
+        show ayame 1g zorder 3 at f43
         ay "There's no point anymore. She was right."
         show ayame zorder 2 at t43
         mc "What? But we're right here."
         mc "We can still--"
-        show ayame zorder 3 at f43
+        show ayame 1n zorder 3 at f43
         ay "She...she showed me everything, [player]."
         ay "She was right. There really is only one way to get rid of the danger."
-        ay "You...me...all four of us couldn't do anything even if we tried."
+        ay 2n "You...me...all four of us couldn't do anything even if we tried."
         ay "Even if Sayori helped us, we'd be powerless to do anything."
         show ayame zorder 2 at t43
         mc "Is this really the end?"
@@ -2012,35 +2016,35 @@ label ch16_mainb:
         "This can't be right. Something is very wrong here."
         mc "No...there must be more to it than this."
         mc "I refuse to believe this is real."
-        show ayame zorder 3 at f43
+        show ayame 2a zorder 3 at f43
         ay "[player], what the hell are you talking about?"
         ay "This is it. This is what we worked towards."
         ay "It's all over..."
-        show natsuki zorder 3 at f41
+        show natsuki 2r zorder 3 at f41
         show ayame zorder 2 at t43
         n "I hate to admit it after all of this but I agree with Ayame."
         n "There's just no point anymore."
         show natsuki zorder 2 at t41
-        show yuri zorder 3 at f42
+        show yuri 1v zorder 3 at f42
         y "L-Let's just accept defeat gracefully."
         y "We really tried, but it wasn't enough."
         show yuri zorder 2 at t42
-        show sayori zorder 3 at f44
+        show sayori 1bd zorder 3 at f44
         s "Don't you agree it's time to stop this?"
         s "I just want our last moments to be happy. If you think that's bad then..."
         s "Well, I suppose I don't need you to think it's good or bad. I just need you to accept."
         s "I'll even bring Monika here too. There's no point in fighting anymore."
         s "It's nearly time, [player]. Time is running out..."
-        show ayame zorder 3 at f43
+        show ayame 2m zorder 3 at f43
         show sayori zorder 2 at t44
         ay "I hate this as much as you, [player]."
         ay "But she's got a point, you know..."
-        ay "You have to realize it's time."
+        ay 2n "You have to realize it's time."
         show ayame zorder 2 at t43
         mc "It's time...isn't it?"
         "Ayame said something to me before we got here."
         mc "Est tempus."
-        show sayori zorder 3 at f44
+        show sayori 1bh zorder 3 at f44
         s "W-What?{nw}"
         stop music
         scene black
@@ -2054,54 +2058,59 @@ label ch16_mainb:
             pos (935,200)
         play sound "mod_assets/sfx/glassbreak.ogg"
         show bg sayori_bedroom_void
-        show ayame 1a zorder 2 at i43
-        show sayori 1ba zorder 2 at i44
+        show ayame 2a zorder 2 at i43
+        show sayori 1bh zorder 2 at i44
         with shatter
         play music m1
         "There's no more birds chirping outside."
         "The world outside looks dark yet strangely Sayori's room remains lit normally."
         show ayame zorder 3 at f43
         ay "Your illusion is broken, Sayori."
+        ay 2f "Even to the end, you were still trying to fool us...but no more!"
         ay "[player] realized the truth. You have to see now that your efforts are in vain."
         ay "You have to stop this madness. There's still time."
         ay "If not, {i}we'll{/i} have to stop you."
         show ayame zorder 2 at t43
         "It looks like this is the real end world."
         "I must have been caught in one of Sayori's tricks again..."
-        show sayori zorder 3 at f44
+        mc "What happened to Natsuki and Yuri?"
+        mc "Where are they?"
+        show sayori 1bk zorder 3 at f44
+        s "They're...somewhere safe. I'm telling you the truth about that at least."
+        "Sayori looks at Ayame and me and sighs."
         s "I honestly thought I had it. I thought that would be the end."
         s "That we could all finally go to rest."
-        s "But the two of you just want us to suffer, forever."
+        s 1bi "But the two of you just want us to suffer. To end the world but full of conflict."
         s "Why can't you understand that the danger coming is bigger than us?"
         s "Why can't you understand that the only way to stop it is to stop this game?"
-        show ayame zorder 3 at f43
+        show ayame 2a zorder 3 at f43
         show sayori zorder 2 at t44
         ay "Are you really that blind that you can't see what's in front of you right now?"
         ay "You may have the power of the presidency Sayori, but that doesn't mean you should do everything yourself."
         show ayame zorder 2 at t43
-        show sayori zorder 3 at f44
+        show sayori 1bj zorder 3 at f44
         s "That's {i}exactly{/i} why I have to do everything myself."
         s "The second I stop, everything will go wrong!"
-        s "Without any of my meddling, we would not have gone this far."
+        s 2bk "Without any of my meddling, we would not have gone this far."
         s "Everything would have ended on the day of the festival..."
-        show ayame zorder 3 at f43
+        show ayame 4m zorder 3 at f43
         show sayori zorder 2 at t44
         ay "And look where your meddling got you, Sayori."
         ay "I wasn't even supposed to exist in this world but because of your curiosity, I'm here."
         ay "You brought me here. You pulled me from the deepest depths of this."
-        ay "Maybe that was an accident."
+        ay 4a "Maybe that was an accident."
         ay "Or maybe you subconsciously needed me to stop you."
         show ayame zorder 2 at t43
-        show sayori zorder 3 at f44
+        show sayori 2bh zorder 3 at f44
         s "...That's not true! You were just--"
-        show ayame zorder 3 at f43
+        show ayame 1f zorder 3 at f43
         show sayori zorder 2 at t44
         ay "Are you even aware of the danger is?"
-        ay "For all your planning, I'm certain you don't know what the real danger is."
+        ay "For all your planning, you must know what, or {i}who{/i}, it truly is."
         ay "[player], did you finish reading that document?"
         show ayame zorder 2 at t43
         mc "No, I didn't get to..."
-        show ayame zorder 3 at f43
+        show ayame 1a zorder 3 at f43
         ay "You couldn't finish it anyway. Sayori didn't complete it."
         ay "She never went far enough to see what the danger was."
         ay "Perhaps she was too afraid to see what would cause so much suffering."
@@ -2112,25 +2121,31 @@ label ch16_mainb:
         show ayame zorder 2 at t43
         mc "What do you mean, Ayame?"
         mc "How could Sayori know what the danger is if she hasn't seen it?"
-        show ayame zorder 3 at f43
+        show ayame 1m zorder 3 at f43
         ay "Go on. Why don't you tell [player_reflexive]?"
         ay "[cPlayer_personal] deserves to know, doesn't [player_personal]?"
         ay "After all, you're still going to end it anyway."
-        ay "So what does it matter?"
+        ay 1a "So what does it matter?"
         "Sayori remains silent."
         ay "If you won't say it, then I will."
         ay "The danger is--"
         show ayame zorder 2 at t43
-        show sayori zorder 3 at f44
+        show sayori 1bh zorder 3 at f44
         s "Okay, fine. I'll say it, Ayame."
         s "Like you said, what does it matter, right?"
-        s "The danger is..."
+        s 1bu "The danger is..."
         s "It's...me."
         show sayori zorder 2 at t44
         mc "What?! That can't be--"
-        "Ayame smirks."
+        "Tears begin to slowly drip from Sayori's face."
+        show ayame 1h
+        if ch16_ay_gave_control:
+            "Ayame smirks."
+        else:
+            "Ayame doesn't seem surprised."
         show sayori zorder 3 at f44
-        s "All the signs point to it."
+        s "I haven't reached the end. I've been too scared to..."
+        s 1bv "But all the signs point to it."
         s "I'm the one that's going to ruin everything and everyone."
         s "With everything I've done, and everything I'm going to do."
         s "Which is why I have to stop this world before I turn into that."
@@ -2138,57 +2153,69 @@ label ch16_mainb:
         mc "But that doesn't make any sense."
         mc "Wouldn't you ending the world in the first place to stop it, make you the danger?"
         mc "There must be more to it than this."
-        show ayame zorder 3 at f43
+        show ayame 1f zorder 3 at f43
         ay "I don't think you're quite understanding it, [player]."
         ay "If this whole world keeps going on, then it's going to break sooner or later."
         ay "It was never meant to go this far. The cycle was meant to repeat already."
         ay "At some point, Sayori is going to do something, whether on purpose or accident, that will trigger the world to end."
-        ay "So her thought process is..."
+        ay 1a "So her thought process is..."
         show ayame zorder 2 at t43
-        show sayori zorder 3 at f44
-        s "I just wanted everyone to be happy when it all ended."
+        "Sayori tries to wipe the tears from her face."
+        show sayori 1bk zorder 3 at f44
+        s "I-I just wanted everyone to be happy when it all ended."
         s "To live their last moment doing what they wanted to be doing."
         s "Rather than panicking and worrying in their final moments."
         s "It has to be like this. The alternative is worse."
+        s "Letting the world die, in an event that not even I could comprehend."
+        s "Is that what you want...?"
         show sayori zorder 2 at t43
         mc "But can't you keep this world going?"
         mc "You've been doing that already, haven't you?"
-        show ayame zorder 3 at f43
+        show ayame 1m zorder 3 at f43
         ay "This world is limited, [player]. It was never meant to go for this long."
         ay "At any point, it could collapse in itself and people could die a horrible death."
-        ay "Or worse, they could be corrupted into amalgamations of themselves, at which point they may be lost forever."
+        ay 1l "Or worse, they could be corrupted into amalgamations of themselves, at which point they may be lost forever."
         ay "I'm sure Sayori knows that."
         ay "Ending it early can at least preserve them, in some form or another."
         show ayame zorder 2 at t43
         mc "There has to be another way, Sayori."
         mc "I know you can find one, you have to!"
-        show ayame zorder 3 at f43
+        show ayame 1a zorder 3 at f43
         ay "I'm sure she's tried, [player]."
         ay "It has to be her that has to end the world. At least this way, it's peaceful."
         ay "After all, who really has the power to end this world apart from her?"
         ay "She is the only person with that capability right now."
         show ayame zorder 2 at t43
-        show sayori zorder 3 at f44
+        show sayori 1bf zorder 3 at f44
         s "She's right. It has to be me."
         s "I'm sorry I couldn't tell you earlier."
         if sayori_date:
-            s "At the very least, we got to spend time together."
-            s "You and I...I'm sorry."
+            s 1bd "At the very least, we got to spend time together."
+            s 1bf "You and I...I'm sorry."
         else:
             s "But I didn't want to alarm you."
-        s "I just wish there was another way but I know there isn't."
-        show ayame zorder 3 at f43
+        s 1bg "I just wish there was another way but I know there isn't."
+        s 1bu "The world has to end, one way or another...and I have to be the trigger."
         show sayori zorder 2 at t44
+        "Tears once again begin to fill Sayori's face."
+        "She really seems torn up about this."
+        "I mean, how couldn't she be? This is a tough thing to put up with all by herself."
+        "And not to mention, her friends are trying to stop her from what she thinks is right."
+        "I can only imagine how she's feeling deep down..."
+        mc "How long do we have...?"
+        "Sayori doesn't even reply. Time must be really short."
+        show ayame 1n zorder 3 at f43
         ay "There is...an alternative, but you won't like it at all."
         ay "I realize you don't have any reason to trust me, Sayori."
         ay "Nor are we on the best terms exactly."
         ay "But hear me out."
         show ayame zorder 2 at t43
-        show sayori zorder 3 at f44
+        show sayori 1bv zorder 3 at f44
         s "What is it?"
-        show ayame zorder 3 at f43
+        show ayame 1g zorder 3 at f43
         show sayori zorder 2 at t44
-        ay "You give me the presidency."
+        ay "You give me the presidency and I end it."
+        ay "You won't have to bear that responsibility. I will."
     elif ch16_ay_companions == 3:
         ay "You have to imagine something for Yuri as well."
         ay "I don't know if she's here because she doesn't have a voice."
@@ -5147,60 +5174,60 @@ label ch16_mainb:
 
 # Let Sayori 'help'
 label ch16_convince_1_end:
-    s "I'm so glad you could listen to reason, [player]."
+    s 1d "I'm so glad you could listen to reason, [player]."
     s "I was really worried for a second."
     mc "So what's the plan then?"
-    s "The plan?"
+    s 1c "The plan?"
     mc "How are you going to help me?"
-    s "Just leave it all to me."
+    s 1a "Just leave it all to me."
     s "I know what to do. Just stay here."
     mc "Stay here and do what?"
-    s "That's it, really. We're just going to stay here."
+    s 2a "That's it, really. We're just going to stay here."
     s "You and me together until the end."
     mc "Sayori, I don't..."
     "She extends her hand out. I'm compelled to grab it."
-    s "It's okay. The nightmare will be over soon."
+    s 2d "It's okay. The nightmare will be over soon."
     s "Don't you see? You're already feeling better."
     s "You can feel it, can't you?"
     s "That this is how it's meant to end."
-    s "How it has always meant to end."
+    s 2q "How it has always meant to end."
     mc "I..."
     menu:
         "I agree.":
             pass
         "No, this isn't right" if (ch16_ay_companions == 4 or ch16_ay_companions == 1 or persistent.markov_agreed):
-            s "[player], can you please just stop this nonsense?"
+            s 1i "[player], can you please just stop this nonsense?"
             s "Let's just walk to school or we're going to be late."
             mc "Late? Sayori, this doesn't make any sense."
             mc "There is no school, this is..."
             "This world is fake...isn't it?"
-            s "Are you listening to yourself?"
+            s 1h "Are you listening to yourself?"
             s "We've been going to school for the past couple of years."
             "She's...mixing the truth with lies."
             "It's becoming hard to tell what's real and what's not anymore."
-            s "How would there be no school?"
+            s 1a "How would there be no school?"
             mc "Stop it! Sayori, please! I don't want to do this."
             mc "I know that something isn't right here."
             s "[player], look me in the eyes."
             "My gaze is fixed on Sayori's face, I almost feel like I can't look away."
-            s "We've known each for years, haven't we?"
+            s 1d "We've known each for years, haven't we?"
             s "Since we were children, right?"
             s "Tell me that I'm wrong if I'm lying."
             mc "Y-You're not lying..."
     show noise zorder 100 at noise_alpha
     show vignette zorder 100 at vignetteflicker(-2.030)
-    s "There we go! You're finally getting it."
+    s 4q "There we go! You're finally getting it."
     s "Now, come on, let's get to school."
     s "We wouldn't want to be late, now would we?"
     mc "No...I guess we wouldn't."
     "Sayori and I pick up the pace towards the horizon."
     "It's unusually bright this morning, for some reason."
-    s "I'm glad you finally came back to your senses~"
+    s 3a "I'm glad you finally came back to your senses~"
     s "I was {i}really{/i} worried for you there."
     mc "Come on, Sayori. We've known each other for years."
-    s "Exactly! And this was the first time you really scared me."
+    s 3d "Exactly! And this was the first time you really scared me."
     mc "Well, you are scared easily. So I'm not surprised."
-    s "H-Hey! You don't have to be a meanie about it..."
+    s 3l "H-Hey! You don't have to be a meanie about it..."
     mc "Whatever, let's just go to school already."
     s "I couldn't agree more!"
     "The closer Sayori and I get to school, the brighter the horizon looks."
@@ -5215,7 +5242,7 @@ label ch16_convince_1_end:
 
 # Stay in the club
 label ch16_convince_2_end_1:
-    m "You're staying in the club?"
+    m 1be "You're staying in the club?"
     m "I'm so glad, I don't know what I would have done if..."
     "Monika trails off, not finishing off what she was about to say."
     s "So, you've made up your mind?"
@@ -5231,7 +5258,7 @@ label ch16_convince_2_end_1:
     mc "No...this isn't right. Something is wrong here."
     "I grab my head, the pain is becoming overwhelming."
     mc "I can't...!"
-    m "What's wrong, [player]? Are you okay?"
+    m 1bf "What's wrong, [player]? Are you okay?"
     m "Do you need me to grab some ice?"
     s "I have a feeling [player_personal]'ll be just fine, Monika."
     s "Especially now that you've decided to stay a club member, right?"
@@ -5244,7 +5271,7 @@ label ch16_convince_2_end_1:
     "I turn towards Monika who seems to be intently listening to the conversation I'm having on the phone."
     mc "I'm sorry for what I said earlier, Monika."
     mc "I don't even remember what I said but I made you leave, didn't I?"
-    m "It's okay, [player]. I know you weren't thinking straight."
+    m 1be "It's okay, [player]. I know you weren't thinking straight."
     m "Hopefully now we get back to doing it."
     s "Um...we're still here, you know."
     m "T-That's not what I meant."
@@ -5253,7 +5280,7 @@ label ch16_convince_2_end_1:
     s "Good luck with your preparations and goodbye!"
     ay "Take care."
     mc "We'll do our best, Sayori."
-    m "You can count on us to make this the best festival ever!"
+    m 3ba "You can count on us to make this the best festival ever!"
     "Sayori hangs up. The phone screen turns blank."
     m "You don't know how relieved I am to see that you've stayed."
     mc "I wasn't really going to leave the club."
@@ -5262,7 +5289,7 @@ label ch16_convince_2_end_1:
     "But at the same time, I don't think Monika is lying."
     mc "Uhh...what were we doing for preparations again?"
     mc "I may or may not have forgotten."
-    m "In that case, we may or may not be doing a special task Sayori set for us."
+    m 3bb "In that case, we may or may not be doing a special task Sayori set for us."
     m "It's weird, you'd think since I'm the president that I'd have authority over her."
     m "But I kinda just went along with it since she was so passionate about it."
     mc "What would that be exactly?"
@@ -5272,15 +5299,15 @@ label ch16_convince_2_end_1:
     "For some reason, this isn't alarming at all. I shrug at Monika."
     mc "Eh, I'm sure she knows what she's doing."
     mc "How do we go about helping her though?"
-    m "She said something about shutting 'it' off."
+    m 3bc "She said something about shutting 'it' off."
     m "Apparently whatever 'it' is will stop us if we don't shut it off."
-    m "I don't really know what that means but she said if we concentrate, we should be able to do it."
+    m 1ba "I don't really know what that means but she said if we concentrate, we should be able to do it."
     mc "Concentrate on shutting it off, okay. I have no idea what 'it' is but here goes."
     "I concentrate on shutting 'it' off. Nothing seems to happen."
     m "Maybe we need to try harder."
     "Monika extends out a hand and offers it to me."
     mc "What's this for?"
-    m "Here, take my hand. I'll help you concentrate."
+    m 1bb "Here, take my hand. I'll help you concentrate."
     "I reluctantly take her hand."
     m "Close your eyes."
     scene black
@@ -5302,7 +5329,7 @@ label ch16_convince_2_end_2:
     s "I can't say I'm really surprised."
     mc "I just want to get out of here, Sayori."
     mc "So I can move on and--"
-    m "Think about what you're doing, [player]."
+    m 1bo "T-Think about what you're doing, [player]."
     m "If you leave the club, you and I will never get to..."
     mc "What are you talking about?"
     mc "I know that this world isn't..."
@@ -5311,7 +5338,8 @@ label ch16_convince_2_end_2:
     "What was I talking about again? I can't seem to remember."
     mc "I've just made my decision to leave the club."
     mc "None of you can change my mind."
-    m "Is there really nothing I can do?"
+    m 1bf "Is there really nothing I can do to change your mind?"
+    m "There must be {i}something{/i}..."
     s "You heard [player_reflexive], Monika. There's nothing we can do."
     s "It really is a shame that this had to happen."
     ay "Quite unfortunate indeed."
@@ -5319,6 +5347,7 @@ label ch16_convince_2_end_2:
     s "Your final act while still a member of the club."
     mc "I don't consider myself a member of the club anymore, Sayori."
     mc "I've left. That's final."
+    show monika 1bg
     "Monika has a sad look on her face."
     "This must all be so sudden for her, I feel really bad."
     mc "But...I suppose I can do one last thing."
@@ -5336,14 +5365,14 @@ label ch16_convince_2_end_2:
     "I concentrate on shutting it off. There doesn't seem to be any effect."
     mc "Am I doing something wrong?"
     s "I think you just aren't concentrating enough."
-    m "Maybe I can help."
+    m 1be "Maybe I can help."
     mc "Monika? Are you sure about this?"
     m "I might as well do this for you before you leave."
     m "Something to remember me by, I suppose~"
     mc "T-Thank you. I'm sorry it had to be this way."
-    m "Don't be. I enjoyed the week we had together."
+    m 1bn "Don't be. I enjoyed the week we had together."
     "Monika extends out a hand and offers it to me."
-    m "Now, take my hand."
+    m 1bm "Now, take my hand."
     "I reluctantly take her hand."
     m "Close your eyes."
     scene black
@@ -5365,9 +5394,32 @@ label ch16_convince_3_end_1:
     ay "I'm so relieved. Now we can put this all behind us."
     mc "What do you mean?"
     ay "You've made a terrible mistake, [player]."
-    ay "No..."
+    ay "No...no...no...."
     "As the voice speaks, it seems to morph into Sayori's voice."
     s "[cPlayer_personal]'s made the right decision."
+    s "Now you can't take it back."
+    mc "Sayori? Is that you?"
+    "Oh no, what have I done?"
+    mc "I'm taking the rope, I've got it!"
+    "I reach out for the rope in front of me, but the distance between me and the tree seems to have increased."
+    "I take a few steps forward, but the closer I move, the further it appears."
+    mc "W-What's going on? Sayori, what are you doing?"
+    s "The decision is set, and now it can finally be over."
+    s "You said it yourself, you weren't going to take the rope."
+    s "Now this world is adjusting to what you said..."
+    mc "No...Sayori..."
+    mc "I take it back! I want the rope!"
+    s "It's too late. By the time it readjusts, I'll have made up my mind."
+    ay "[player], you've made a huge mistake."
+    ay "I don't make mistakes, you should have known that!"
+    s "It's over, Ayame. There's no point anymore."
+    ay "This can't be it. This can't be the end!"
+    s "Thank you. Now I can do this without as many regrets."
+    mc "W-What?"
+    s "Sayo..."
+    s "...nara...{nw}"
+    scene white with Dissolve(3.0)
+    $ renpy.utter_restart()
     return
 
 # Sayori convinces player not to take rope (Monika edition)
