@@ -4173,7 +4173,7 @@ label ch16_mainb:
                 jump ch16_convince_1_end
             "No.":
                 $ sayori_convince -= 1
-                if sayori_covince == 0:
+                if sayori_convince == 0:
                     pass
                 else:
                     $ _history_list.pop()
@@ -4593,18 +4593,16 @@ label ch16_mainb:
         "I take the cue and trace her footsteps to get to her."
         "The tree and the rope seem to just be a few steps away now."
         mc "How many memories did you get through already?"
-        ay 1l "I finished my third one just before you finished."
-        ay "I saw Monika just before she entered her third one as well."
-        mc "I've only completed two, and I was ahead of Monika...I'm sorry."
+        ay 1l "I finished my sixth one just before you finished."
+        mc "I've only completed two...I'm sorry."
         ay "It's not like it's your fault."
         ay "You could say I'm quite adept at this already."
-        ay "Monika, strangely enough, is quite fast as well."
         mc "But how?"
-        ay 1m "I can't speak for Monika but for me, let's just say I have experience at forgetting the past."
+        ay 1m "Let's just say I have experience at forgetting the past."
         mc "You look like..."
         ay "I know. It's because Sayori pulled out a memory that I've tried to suppress for so long."
         ay "I got out, but it wasn't easy."
-        mc "It looks like it's taken it's toll on you."
+        mc "It looks like it's taken its toll on you."
         ay "You could say that."
         mc "Are you going to be okay?"
         ay 1a "I'll be okay when we reach Sayori."
@@ -4793,7 +4791,6 @@ label ch16_mainb:
             window hide(None)
             $ pause(1.0)
             scene bg beach_sunset
-            show ayame 1a zorder 2 at t11
             hide screen tear
             $ pause(1.0)
             window show(None)
@@ -4846,7 +4843,7 @@ label ch16_mainb:
             ay "I made a mistake thinking this was it. It's not!"
             ay "I don't make mistakes, [player]."
             ay "Everything I've done has been calculated."
-            ay "Except this one! Please, listen too me!"
+            ay "Except this one! Please, listen to me!"
         ay "Don't listen to her!"
         mc "I have to make a decision but I can't."
         "Yet the clock is ticking..."
@@ -5069,9 +5066,9 @@ label ch16_mainb:
             show natsuki 1g zorder 3 at f41
             show yuri zorder 2 at t42
             n "About time [player_personal] woke up."
-            show natsuki zorder 2 at t42
+            show natsuki zorder 2 at t41
             show ayame 1n zorder 3 at f43
-            ay "Calm down you two. [cPlayer_personal] just woke up."
+            ay "Calm down, you two. [cPlayer_personal] just woke up."
             show ayame zorder 2 at t43
             mc "Natsuki...Yuri, you're okay..."
             mc "And Ayame too. What happened to--"
@@ -5372,7 +5369,7 @@ label ch16_mainb:
         s "It has to be like this. The alternative is worse."
         s "Letting the world die, in an event that not even I could comprehend."
         s "Is that what you want...?"
-        show sayori zorder 2 at t43
+        show sayori zorder 2 at t44
         mc "But can't you keep this world going?"
         mc "You've been doing that already, haven't you?"
         show ayame 1m zorder 3 at f43
@@ -5386,7 +5383,7 @@ label ch16_mainb:
         mc "I know you can find one, you have to!"
         show ayame 1a zorder 3 at f43
         ay "I'm sure she's tried, [player]."
-        ay "It has to be her that has to end the world. At least this way, it's peaceful."
+        ay "The world has to end, there's no stopping it. At least this way, it's peaceful."
         ay "After all, who really has the power to end this world apart from her?"
         ay "She is the only person with that capability right now."
         show ayame zorder 2 at t43
@@ -5775,7 +5772,7 @@ label ch16_mainb:
                 jump ch16_convince_1_end
             "No.":
                 $ sayori_convince -= 1
-                if sayori_covince == 0:
+                if sayori_convince == 0:
                     pass
                 else:
                     $ _history_list.pop()
@@ -6177,16 +6174,18 @@ label ch16_mainb:
         "I take the cue and trace her footsteps to get to her."
         "The tree and the rope seem to just be a few steps away now."
         mc "How many memories did you get through already?"
-        ay 1l "I finished my sixth one just before you finished."
-        mc "I've only completed two...I'm sorry."
+        ay 1l "I finished my third one just before you finished."
+        ay "I saw Monika just before she entered her third one as well."
+        mc "I've only completed two, and I was ahead of Monika...I'm sorry."
         ay "It's not like it's your fault."
         ay "You could say I'm quite adept at this already."
+        ay "Monika, strangely enough, is quite fast as well."
         mc "But how?"
-        ay 1m "Let's just say I have experience at forgetting the past."
+        ay 1m "I can't speak for Monika but for me, let's just say I have experience at forgetting the past."
         mc "You look like..."
         ay "I know. It's because Sayori pulled out a memory that I've tried to suppress for so long."
         ay "I got out, but it wasn't easy."
-        mc "It looks like it's taken it's toll on you."
+        mc "It looks like it's taken its toll on you."
         ay "You could say that."
         mc "Are you going to be okay?"
         ay 1a "I'll be okay when we reach Sayori."
@@ -6200,15 +6199,6 @@ label ch16_mainb:
         ay "I'll deal with this on my own."
         show ayame at thide
         hide ayame
-        "After a few more steps forward, she disappears again."
-        "It's quite literally two steps away from the tree."
-        "I trace her footsteps and I arrive just out of reach of the rope."
-        "Is there going to be another trap here? Or was that all of it?"
-        "I sigh and take a step forward."
-        "Nothing."
-        "I slowly take another step forward and..."
-        "Surprisingly, I'm fine. Could this be it?"
-        "I reach out for the rope...just before I can touch it, a familiar voice comes from behind me."
         "After a few more steps forward, she disappears again."
         "It's quite literally two steps away from the tree."
         "I trace her footsteps and I arrive just out of reach of the rope."
@@ -6384,7 +6374,6 @@ label ch16_mainb:
             window hide(None)
             $ pause(1.0)
             scene bg beach_sunset
-            show ayame 1a zorder 2 at t11
             hide screen tear
             $ pause(1.0)
             window show(None)
@@ -6451,7 +6440,7 @@ label ch16_mainb:
             ay "I don't make mistakes, [player]."
             ay "Everything I've done has been calculated."
             m "Don't fall for Sayori's trick. We're so close."
-            ay "Except this one! Please, listen too me!"
+            ay "Except this one! Please, listen to me!"
         ay "Don't listen to her!"
         mc "I have to make a decision but I can't."
         "Yet the clock is ticking..."
@@ -6792,7 +6781,7 @@ label ch16_mainb:
         ay "Are you even aware of the danger is?"
         ay "For all your planning, you must know what, or {i}who{/i}, it truly is."
         ay "[player], did you finish reading that document?"
-        show ayame zorder 2 at t33
+        show ayame zorder 2 at t32
         mc "No, I didn't get to..."
         show ayame 1a zorder 3 at f32
         ay "You couldn't finish it anyway. Sayori didn't complete it."
@@ -6802,7 +6791,7 @@ label ch16_mainb:
         "Sayori says nothing."
         ay "As I thought. You're too scared to see it for yourself."
         ay "Maybe you even know what the danger actually is but are too afraid to admit it."
-        show ayame zorder 2 at t33
+        show ayame zorder 2 at t32
         mc "What do you mean, Ayame?"
         mc "How could Sayori know what the danger is if she hasn't seen it?"
         show monika 1f zorder 3 at f31

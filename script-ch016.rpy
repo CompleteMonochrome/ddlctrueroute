@@ -10331,21 +10331,21 @@ label ch16_end:
                 ay "For some reason, that doesn't seem right to me."
                 ay "But I can't really argue against you."
                 ay "I don't actually know the date myself, but you seem so sure of yourself."
-                show monika 1n zorder 3 at f42
+                show monika 1n zorder 3 at f43
                 show ayame zorder 2 at t44
                 m "W-Wait, isn't that--"
                 "Monika looks at me strangely then shrugs."
                 "Did I say something wrong?"
                 m 1l "You know what, never mind."
                 m 1e "Ahaha, forget I said anything..."
-                show monika zorder 2 at t42
+                show monika zorder 2 at t43
                 show ayame 1l zorder 3 at f44
                 ay "Is something the matter with that date...?"
-                show monika 1a zorder 3 at f42
+                show monika 1a zorder 3 at f43
                 show ayame zorder 2 at t44
                 m "N-No, not at all."
                 m "Please, continue. It was rude of me to interrupt you."
-                show monika zorder 2 at t42
+                show monika zorder 2 at t43
                 show ayame 1m zorder 3 at f44
                 ay "Right then, that date you said."
             "Friday, 32 Octvember.":
@@ -22067,6 +22067,7 @@ label ch16_sayoridate:
     $ pause(3.0)
     window show(None)
     window auto
+    $ sayori_outfit = 0
     return
 
 label ch16_sayoridate_life:
