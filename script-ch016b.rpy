@@ -50,7 +50,7 @@ label ch16_mainb:
     "I have to think. There must be something I can do."
     "Maybe some place for us to be at would be a good start."
     scene bg bedroom_gray
-    play music t3ay fadein 5.0
+    play music t18 fadein 5.0
     "Okay...why is it all in black and white?"
     "Is this what this world is?"
     "Or was that because of me?"
@@ -623,7 +623,7 @@ label ch16_mainb:
         show natsuki gw_2
         show yuri gw_2
         show ayame gw_2
-        play music t6ay
+        # play music t6ay
         hide screen tear
         $ pause(0.3)
         window show(None)
@@ -1364,7 +1364,7 @@ label ch16_mainb:
         $ pause(0.3)
         show yuri gw_2
         show ayame gw_2
-        play music t6ay
+        # play music t6ay
         hide screen tear
         $ pause(0.3)
         window show(None)
@@ -2106,7 +2106,7 @@ label ch16_mainb:
         $ pause(0.3)
         show natsuki gw_2
         show ayame gw_2
-        play music t6ay
+        # play music t6ay
         hide screen tear
         $ pause(0.3)
         window show(None)
@@ -2834,7 +2834,7 @@ label ch16_mainb:
         $ pause(0.3)
         show monika gw_2
         show ayame gw_2
-        play music t6ay
+        # play music t6ay
         hide screen tear
         $ pause(0.3)
         window show(None)
@@ -3603,7 +3603,7 @@ label ch16_mainb:
         window hide(None)
         $ pause(0.3)
         show ayame gw_2
-        play music t6ay
+        # play music t6ay
         hide screen tear
         $ pause(0.3)
         window show(None)
@@ -3893,6 +3893,7 @@ label ch16_mainb:
         "What the hell happened?"
         show ayame 1a at t11
         ay "Stay still. Do. Not. Move."
+        "Ayame suddenly appears in front of me."
         mc "W-What? Okay, I'm not gonna move."
         ay "I knew it couldn't have been that easy."
         ay 1m "How long was I gone?"
@@ -4194,8 +4195,8 @@ label ch16_mainb:
         $ pause(1.0)
         scene bg beach_sunset
         show ayame 4l zorder 2 at i11
-        $ audio.t3ayb = "<from " + str(currentpos) + " loop 9.236>mod_assets/bgm/3ay.ogg"
-        play music t3ayb
+        $ audio.t18b = "<from " + str(currentpos) + " loop 4.053>mod_assets/bgm/18.ogg"
+        play music t18b
         hide screen tear
         $ pause(1.0)
         window show(None)
@@ -4266,17 +4267,16 @@ label ch16_mainb:
         "This time, I won't be tricked so easily."
         "I know Sayori won't make it easy but{nw}"
         $ currentpos = get_pos()
-        $ meldpos = currentpos/2
         $ _history_list.pop()
         scene bg bedroom
-        $ audio.t3b = "<from " + str(meldpos) + " loop 4.618>bgm/3.ogg"
-        play music t3b
+        # $ audio.t3b = "<from " + str(meldpos) + " loop 4.618>bgm/3.ogg"
+        play music t3
         "I know Sayori won't make it easy but{fast} I'm prepared."
         "At least, I think I am. The transition to this memory felt a lot more real."
         "But now to figure out what this is and get out of here as fast as possible."
         "I seem to be in my bedroom so there's a lot of possibilities as to what this could be."
         "But what is it exactly?"
-        "The door to my room opens and somebody appears in the doorway."
+        "The door to my room opens and a familiar figure appears at the doorway."
         $ old_monika_type = monika_type
         $ monika_type = 0
         show monika 1ba zorder 2 at t11
@@ -4439,8 +4439,20 @@ label ch16_mainb:
             except: pass
             try: os.remove(config.basedir + "/dont be fooled.txt")
             except: pass
-            try: renpy.file(config.basedir + "/dont be fooled.txt")
-            except: open(config.basedir + "/dont be fooled.txt", "wb").write(renpy.file("dont be fooled.txt").read())
+        if ch16_ay_companions == 4:
+            python:
+                try: renpy.file(config.basedir + "/wait")
+                except: open(config.basedir + "/wait", "wb").write(renpy.file("wait").read())
+                try: renpy.file(config.basedir + "/do nothing")
+                except: open(config.basedir + "/do nothing", "wb").write(renpy.file("do nothing").read())
+        elif ch16_ay_companions == 3:
+            python:
+                try: renpy.file(config.basedir + "/wait")
+                except: open(config.basedir + "/wait", "wb").write(renpy.file("wait").read())
+        elif ch16_ay_companions == 2:
+            python:
+                try: renpy.file(config.basedir + "/do nothing")
+                except: open(config.basedir + "/do nothing", "wb").write(renpy.file("do nothing").read())
         "This is a test, isn't it?"
         "One of them is trying to get me to leave the club, while the other is trying to get me to stay."
         "I think Sayori set this up to try to confuse me."
@@ -4448,7 +4460,7 @@ label ch16_mainb:
         "But how am I supposed to figure out what the right choice is?"
         s "Make your decision [player]."
         $ quick_menu = False
-        show screen timer_16_long_menu_skip("ch16_convince_2_true_1",_layer="timers")
+        show screen timer_16_long_menu_skip("ch16_convince_2_true_4",_layer="timers")
         menu:
             s "Are you going to stay in the club, or leave?"
             "Stay in the club.":
@@ -4459,7 +4471,7 @@ label ch16_mainb:
                 $ renpy.hide_screen("timer_16_long_menu_skip",layer="timers")
                 $ quick_menu = True
                 jump ch16_convince_2_end_2
-        label ch16_convince_2_true_1:
+        label ch16_convince_2_true_4:
         $ quick_menu = True
         $ renpy.hide_screen("timer_16_long_menu_skip",layer="timers")
         $ _history_list.pop()
@@ -4503,14 +4515,14 @@ label ch16_mainb:
         m 1bg "I'm so confused..."
         s "Even if you do manage to get to me, [player]."
         s "There's no way you'll{nw}"
-        $ currentpos = get_pos()
-        $ meldpos = currentpos*2
+        # $ currentpos = get_pos()
+        # $ meldpos = currentpos*2
         scene bg beach_night
         show ayame 1a zorder 2 at i11
-        $ audio.t3ayc = "<from " + str(meldpos) + " loop 9.236>mod_assets/bgm/3ay.ogg"
+        $ audio.t18c = "<from " + str(currentpos) + " loop 4.053>mod_assets/bgm/18.ogg"
         $ _history_list[-1].what = "\"There's no way you'll be able to stop me or what's coming.\""
         $ monika_type = old_monika_type
-        play music t3ayc
+        play music t18c
         hide screen tear
         $ pause(1.0)
         window show(None)
@@ -4972,6 +4984,14 @@ label ch16_mainb:
             s "What? Why are you looking at me like that?"
             mc "Well, it's just...what you did with them before."
             s 1bj "Do you really think I'd actually hurt her?"
+        else:
+            s 2bd "She's downstairs already."
+            s "She woke up before you did."
+            s "The others are okay too, I think."
+            s "They're still frozen."
+            s "What? Why are you looking at me like that?"
+            mc "What did you do to Ayame?"
+            s 1bj "Do you really think I'd actually hurt her? She's fine."
         s "I told you why I was doing this, didn't I?"
         s "It's for their sake, because there just isn't any alternative."
         mc "You said you've seen how this ends, haven't you?"
@@ -5020,7 +5040,10 @@ label ch16_mainb:
         s "There's nothing that can change it now."
         mc "You said the others are downstairs, right?"
         s 1bc "I did. I could call them up now if you want."
-        s 1ba "But that won't be necessary since they're about to come in anyway."
+        if ch16_ay_companions > 1:
+            s 1ba "But that won't be necessary since they're about to come in anyway."
+        else:
+            s 1ba "But that won't be necessary since she's about to come in anyway."
         mc "Huh?"
         if ch16_ay_companions == 4:
             show natsuki 1c zorder 2 at t41
@@ -5147,6 +5170,36 @@ label ch16_mainb:
             n "There's just no point anymore."
             show natsuki zorder 2 at t41
             show sayori 1bd zorder 3 at f44
+        else:
+            show ayame 1l zorder 2 at t43
+            "Right on cue, Ayame enters the room."
+            show ayame 1n zorder 3 at f43
+            ay "So...you're awake now. I hope you're okay."
+            show ayame zorder 2 at t43
+            mc "Ayame? What happened?"
+            mc "Are we still--"
+            show ayame 1g zorder 3 at f43
+            ay "There's no point anymore. She was right."
+            show ayame zorder 2 at t43
+            mc "What? But we're right here."
+            mc "We can still--"
+            show ayame 1n zorder 3 at f43
+            ay "She...she showed me everything, [player]."
+            ay "She was right. There really is only one way to get rid of the danger."
+            ay 2n "You...me...we couldn't do anything even if we tried."
+            ay "Even if Sayori helped us, we'd be powerless to do anything."
+            show ayame zorder 2 at t43
+            mc "Is this really the end?"
+            mc "We went through all of that, for nothing?"
+            "This can't be right. Something is very wrong here."
+            mc "No...there must be more to it than this."
+            mc "I refuse to believe this is real."
+            show ayame 2a zorder 3 at f43
+            ay "[player], what the hell are you talking about?"
+            ay "This is it. This is what we worked towards."
+            ay "It's all over..."
+            show ayame zorder 2 at t43
+            show sayori 1bd zorder 3 at f44
         s "Don't you agree it's time to stop this?"
         s "I just want our last moments to be happy. If you think that's bad then..."
         s "Well, I suppose I don't need you to think it's good or bad. I just need you to accept."
@@ -5156,6 +5209,8 @@ label ch16_mainb:
             s "I'll even bring Natsuki and Monika here too. There's no point in fighting anymore."
         elif ch16_ay_companions == 2:
             s "I'll even bring Yuri and Monika here too. There's no point in fighting anymore."
+        else:
+            s "I'll even bring the others here too. There's no point in fighting anymore."
         s "It's nearly time, [player]. Time is running out..."
         show ayame 2m zorder 3 at f43
         show sayori zorder 2 at t44
@@ -5198,15 +5253,22 @@ label ch16_mainb:
         if ch16_ay_companions == 4:
             mc "What happened to Natsuki and Yuri?"
             mc "Where are they?"
+            show sayori 1bk zorder 3 at f44
+            s "They're...somewhere safe. I'm telling you the truth about that at least."
         elif ch16_ay_companions == 3:
             mc "What happened to Yuri?"
             mc "Where is she?"
+            show sayori 1bk zorder 3 at f44
+            s "They're...somewhere safe. I'm telling you the truth about that at least."
         elif ch16_ay_companions == 2:
             mc "What happened to Natsuki?"
             mc "Where is she?"
-        show sayori 1bk zorder 3 at f44
-        s "They're...somewhere safe. I'm telling you the truth about that at least."
-        "Sayori looks at Ayame and me and sighs."
+            show sayori 1bk zorder 3 at f44
+            s "They're...somewhere safe. I'm telling you the truth about that at least."
+        else:
+            show sayori 1bk zorder 3 at f44
+            s "Oh no..."
+        "Sayori looks at Ayame and I and sighs."
         s "I honestly thought I had it. I thought that would be the end."
         s "That we could all finally go to rest."
         s 1bi "But the two of you just want us to suffer. To end the world but full of conflict."
@@ -5374,30 +5436,38 @@ label ch16_mainb:
         "Ayame puts a foot forward and suddenly disappears."
         mc "Ayame?"
         mc "Where did you just go?"
-        m "She just took a step forward and vanished."
+        m 2c "She just took a step forward and vanished."
         m "Maybe Sayori did something, or it's an effect of this world."
+        m 2d "Or maybe that's what the presence here is..."
         "Monika and I take a look around the area, searching for her."
         "Her footsteps are still on the sand from where she stood before."
         "What the hell happened?"
-        show ayame 1a at f21
+        show ayame 1a zorder 3 at f21
         ay "Stay still. Do. Not. Move."
+        "Suddenly, Ayame appears in front of us again."
+        show ayame zorder 2 at t21
         mc "W-What? Okay, I'm not gonna move."
+        show ayame zorder 3 at f21
         ay "I knew it couldn't have been that easy."
         show ayame zorder 2 at t21
-        show monika 1bc zorder 3 at f22
+        show monika 1c zorder 3 at f22
         m "What happened? Where did you go?"
         show ayame 1m zorder 3 at f21
         show monika zorder 2 at t22
         ay "A memory happened."
         ay "How long was I gone?"
+        show ayame zorder 2 at t21
         mc "Just a couple of seconds, why?"
+        show ayame zorder 3 at f21
         ay "It felt like a few minutes in there..."
         show ayame zorder 2 at t21
         mc "Where did you go?"
         show ayame 1n zorder 2 at f21
         ay "I was transported to a flashback of my past."
         ay "Except, Sayori was there. Well, in a way."
+        show ayame zorder 2 at t21
         mc "Sayori was there?"
+        show ayame zorder 3 at t21
         ay "It was like a corrupted memory."
         ay "And I had to navigate through it to get out."
         ay 1a "And she tried to stop me."
@@ -5722,8 +5792,8 @@ label ch16_mainb:
         $ pause(1.0)
         scene bg beach_sunset
         show ayame 4l zorder 2 at i11
-        $ audio.t3ayb = "<from " + str(currentpos) + " loop 9.236>mod_assets/bgm/3ay.ogg"
-        play music t3ayb
+        $ audio.t18b = "<from " + str(currentpos) + " loop 4.053>mod_assets/bgm/18.ogg"
+        play music t18b
         hide screen tear
         $ pause(1.0)
         window show(None)
@@ -5794,17 +5864,15 @@ label ch16_mainb:
         "This time, I won't be tricked so easily."
         "I know Sayori won't make it easy but{nw}"
         $ currentpos = get_pos()
-        $ meldpos = currentpos/2
         $ _history_list.pop()
         scene bg bedroom
-        $ audio.t3b = "<from " + str(meldpos) + " loop 4.618>bgm/3.ogg"
-        play music t3b
+        play music t3
         "I know Sayori won't make it easy but{fast} I'm prepared."
         "At least, I think I am. The transition to this memory felt a lot more real."
         "But now to figure out what this is and get out of here as fast as possible."
         "I seem to be in my bedroom so there's a lot of possibilities as to what this could be."
         "But what is it exactly?"
-        "The door to my room opens and somebody appears in the doorway."
+        "The door to my room opens and a familiar figure appears at the doorway."
         $ old_monika_type = monika_type
         $ monika_type = 0
         show monika 1ba zorder 2 at t11
@@ -5967,20 +6035,8 @@ label ch16_mainb:
             except: pass
             try: os.remove(config.basedir + "/dont be fooled.txt")
             except: pass
-        if ch16_ay_companions == 4:
-            python:
-                try: renpy.file(config.basedir + "/wait")
-                except: open(config.basedir + "/wait", "wb").write(renpy.file("wait").read())
-                try: renpy.file(config.basedir + "/do nothing")
-                except: open(config.basedir + "/do nothing", "wb").write(renpy.file("do nothing").read())
-        elif ch16_ay_companions == 3:
-            python:
-                try: renpy.file(config.basedir + "/wait")
-                except: open(config.basedir + "/wait", "wb").write(renpy.file("wait").read())
-        elif ch16_ay_companions == 2:
-            python:
-                try: renpy.file(config.basedir + "/do nothing")
-                except: open(config.basedir + "/do nothing", "wb").write(renpy.file("do nothing").read())
+            try: renpy.file(config.basedir + "/dont be fooled.txt")
+            except: open(config.basedir + "/dont be fooled.txt", "wb").write(renpy.file("dont be fooled.txt").read())
         "This is a test, isn't it?"
         "One of them is trying to get me to leave the club, while the other is trying to get me to stay."
         "I think Sayori set this up to try to confuse me."
@@ -5988,7 +6044,7 @@ label ch16_mainb:
         "But how am I supposed to figure out what the right choice is?"
         s "Make your decision [player]."
         $ quick_menu = False
-        show screen timer_16_long_menu_skip("ch16_convince_2_true_4",_layer="timers")
+        show screen timer_16_long_menu_skip("ch16_convince_2_true_1",_layer="timers")
         menu:
             s "Are you going to stay in the club, or leave?"
             "Stay in the club.":
@@ -5999,7 +6055,7 @@ label ch16_mainb:
                 $ renpy.hide_screen("timer_16_long_menu_skip",layer="timers")
                 $ quick_menu = True
                 jump ch16_convince_2_end_2
-        label ch16_convince_2_true_4:
+        label ch16_convince_2_true_1:
         $ quick_menu = True
         $ renpy.hide_screen("timer_16_long_menu_skip",layer="timers")
         $ _history_list.pop()
@@ -6043,14 +6099,12 @@ label ch16_mainb:
         m 1bg "I'm so confused..."
         s "Even if you do manage to get to me, [player]."
         s "There's no way you'll{nw}"
-        $ currentpos = get_pos()
-        $ meldpos = currentpos*2
         scene bg beach_night
         show ayame 1a zorder 2 at i11
-        $ audio.t3ayc = "<from " + str(meldpos) + " loop 9.236>mod_assets/bgm/3ay.ogg"
+        $ audio.t18c = "<from " + str(currentpos) + " loop 4.053>mod_assets/bgm/18.ogg"
         $ _history_list[-1].what = "\"There's no way you'll be able to stop me or what's coming.\""
         $ monika_type = old_monika_type
-        play music t3ayc
+        play music t18c
         hide screen tear
         $ pause(1.0)
         window show(None)
@@ -6474,7 +6528,7 @@ label ch16_mainb:
         mc "I think I might need that, yeah."
         show monika zorder 3 at f22
         m "We probably only have time for a few seconds, don't we?"
-        m "I can sense the power getting much stronger..."
+        m "I can sense the presence here getting much stronger..."
         show ayame zorder 3 at f21
         show monika zorder 2 at t22
         ay "Monika's right. We have no time to lose."
