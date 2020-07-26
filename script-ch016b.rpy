@@ -5423,7 +5423,7 @@ label ch16_mainb:
         ay "The sand will track our footsteps and provide a safe location to travel on when we get the rope."
         ay "Every time one of us activate a trap, the other continues."
         ay 4a "No exceptions."
-        show ayame zorder at t21
+        show ayame zorder 2 at t21
         show monika 1h zorder 3 at f22
         if monika_type == 0:
             m "I don't like the sound of that."
@@ -6850,10 +6850,11 @@ label ch16_mainb:
             show sayori zorder 2 at t33
             ay "You give me the presidency and I end it."
             ay "You won't have to bear that responsibility. I will."
-        else persistent.markov_agreed:
+        else:
             show monika zorder 3 at f31
             show ayame zorder 2 at t32
             m "I also have an idea, and I hope you'll listen to me, Sayori."
+            "Ayame looks mildly irritated."
             m 2e "Then you can hear Ayame's idea, and choose."
             show sayori 1bv zorder 3 at f44
             s "What is it, Monika?"
