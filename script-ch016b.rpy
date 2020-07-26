@@ -4239,6 +4239,8 @@ label ch16_mainb:
             mc "Did you think she really would?"
             ay 4n "I couldn't sense her soul in this world."
             ay "At least, not after you created her body."
+        else:
+            mc "I think I can handle myself."
         ay "I just feared the worse, that's all."
         mc "Sayori isn't that kind of person. I know it."
         ay 1m "You're still holding out hope for her?"
