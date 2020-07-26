@@ -6650,6 +6650,7 @@ label ch16_mainb:
         s "W-What?{nw}"
         stop music
         scene black
+        $ monika_type = old_monika_type
         show mask_2
         show mask_3
         show room_mask as rm:
