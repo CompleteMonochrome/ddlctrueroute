@@ -4149,16 +4149,27 @@ label ch16_mainb:
             s 1h "I just want to help you accept this reality."
         s "I really don't know what's wrong with you but I want to help."
         s "Let's do this, together."
-        $ sayori_convince = 2
+        $ sayori_convince = 4
+        $ sayori_convince_start = 4
+        if ch16_ay_companions == 4:
+            $ sayori_convince = 2
+            $ sayori_convince_start = 2
+        elif ch16_ay_companions == 3 or ch16_ay_companions == 2:
+            $ sayori_convince = 3
+            $ sayori_convince_start = 3
         label sayori_convince_1_4:
         show sayori 1a
         menu:
             s "What do you say? Will you let me help?"
             "Yes.":
                 jump ch16_convince_1_end
-            "Yes." if sayori_convince <= 1:
+            "Yes." if (sayori_convince <= 1 and sayori_convince_start == 2) or (sayori_convince <= 2 and sayori_convince_start == 3) or (sayori_convince <= 3 and sayori_convince_start == 4):
                 jump ch16_convince_1_end
-            "Yes." if sayori_convince <= 0:
+            "Yes." if (sayori_convince <= 0 and sayori_convince_start == 2) or (sayori_convince <= 1 and sayori_convince_start == 3) or (sayori_convince <= 2 and sayori_convince_start == 4):
+                jump ch16_convince_1_end
+            "Yes." if (sayori_convince <= 0 and sayori_convince_start == 3) or (sayori_convince <= 1 and sayori_convince_start == 4):
+                jump ch16_convince_1_end
+            "Yes." if sayori_convince <= 0 and sayori_convince_start == 4:
                 jump ch16_convince_1_end
             "No.":
                 $ sayori_convince -= 1
@@ -5748,12 +5759,15 @@ label ch16_mainb:
             s 1h "I just want to help you accept this reality."
         s "I really don't know what's wrong with you but I want to help."
         s "Let's do this, together."
-        $ sayori_convince = 2
-        label sayori_convince_1_4:
+        $ sayori_convince = 3
+        $ sayori_convince_start = 3
+        label sayori_convince_1_1:
         show sayori 1a
         menu:
             s "What do you say? Will you let me help?"
             "Yes.":
+                jump ch16_convince_1_end
+            "Yes." if sayori_convince <= 2:
                 jump ch16_convince_1_end
             "Yes." if sayori_convince <= 1:
                 jump ch16_convince_1_end
@@ -5773,7 +5787,7 @@ label ch16_mainb:
                     hide screen tear
                     window show(None)
                     window auto
-                    jump sayori_convince_1_4
+                    jump sayori_convince_1_1
         mc "I don't need your help, Sayori."
         mc "Do you know why?"
         show sayori 1h
