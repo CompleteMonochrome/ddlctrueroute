@@ -2011,7 +2011,7 @@ label ch4_mid_no:
     s "I...see..."
     "Sayori forces a smile."
     s "Ahaha..."
-    s "Is this what it feels like...to have be at the top and have it all taken away?"
+    s "Is this what it feels like...to be at the top and have it all taken away?"
     s "I should write a poem about this..."
     mc "Sayori--"
     s "It's okay."

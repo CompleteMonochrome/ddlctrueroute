@@ -614,7 +614,7 @@ label ch8_main:
             m 1g "Has something happened to you since then?"
             if m_appeal == 2 and did_all_tasks:
                 m 1o "There has to be..."
-                m "It has to the book..."
+                m "It has to be the book..."
             else:
                 m 1e "Maybe we don't have to worry so much."
                 m "Yuri seems to have calmed down a little."

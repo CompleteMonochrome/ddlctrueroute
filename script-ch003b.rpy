@@ -434,7 +434,7 @@ label ch3_mainc_name:
     mc "You can tell me what's on your mind."
     mc "I can help you, or at least try to."
     m "..."
-    m 1bo "Maybe I'll find the courage tell you tomorrow too."
+    m 1bo "Maybe I'll find the courage to tell you tomorrow too."
     m "I just wish I could have spent more of this weekend with you, [player]."
     m "But..."
     if help_monika != None:

@@ -3243,7 +3243,7 @@ label ch16_mainb:
         mc "No, but let's do it."
         show ayame zorder 2 at f22
         ay "Music to my ears, let's do it."
-    elif ch16_ay_companions == 0:
+    elif ch16_ay_companions <= 0:
         ay "So it's just the two of us."
         ay "Which means there's only two minds to figure out what the hell is going on here."
         mc "How did you control that thing anyway?"
@@ -3566,13 +3566,13 @@ label ch16_mainb:
         mc "What are you talking about?"
         mc "How would you even know what they represented?"
         mc "You don't know Sayori like I do."
-        n "You used to know what they represent, [player]."
-        n "You've just forgotten."
-        y "You grew up..."
-        y "You left me behind."
+        ay "You used to know what they represent, [player]."
+        ay "You've just forgotten."
+        ay "You grew up..."
+        ay "You left me behind."
         mc "What are you two talking about?"
         mc "I don't understand what's going on."
-        mc "How did I leave you behind, Yuri?"
+        mc "How did I leave you behind, Ayame?"
         "Now I know I messed something up."
         "It's like Sayori is..."
         mc "What did I forget?"
@@ -3580,9 +3580,9 @@ label ch16_mainb:
         ay "I didn't give them all back to you."
         ay "I had hopes."
         mc "Hopes? Hopes for what?"
-        n "Do you really think I didn't bring you here intentionally?"
-        n "I thought we could have stayed here forever."
-        y "We still can, [player]."
+        ay "Do you really think I didn't bring you here intentionally?"
+        ay "I thought we could have stayed here forever."
+        ay "We still can, [player]."
         mc "You three...you aren't yourselves, are you?"
         mc "Something is wrong."
         ay "It's about time you noticed."
@@ -3867,7 +3867,7 @@ label ch16_mainb:
         ay 3m "Ready to go then?"
         mc "No, but let's do it."
         ay "Music to my ears, let's do it."
-    if ch16_ay_companions == 4 or ch16_ay_companions == 3 or ch16_ay_companions == 2 or ch16_ay_companions == 0:
+    if ch16_ay_companions == 4 or ch16_ay_companions == 3 or ch16_ay_companions == 2 or ch16_ay_companions <= 0:
         "Ayame timidly takes a few steps forward before taking a deep inhale."
         "After a moment, she walks forward."
         "And I, for better or worse, follow right behind her."
@@ -5417,6 +5417,33 @@ label ch16_mainb:
         show sayori zorder 2 at t44
         ay "You give me the presidency and I end it."
         ay "You won't have to bear that responsibility. I will."
+        ay "I'll save you the pain of having to go through it."
+        show ayame zorder 2 at t43
+        "Sayori looks at Ayame, likely dumbfounded at the suggestion."
+        "I'm surprised too. What is she thinking?"
+        show sayori zorder 3 at f44
+        s "A-Ayame, you know I can't do that."
+        s "Firstly, there's no way I would place that kind of burden on you."
+        s "That's way too much for anyone to undergo but for me..."
+        s "Well, I've already made my peace. I know this is something that needs to be done.."
+        show ayame zorder 3 at f43
+        show sayori zorder 2 at t44
+        ay "The difference is that I'm willing to do it without hesitation."
+        ay "Whereas you...you're obviously still conflicted."
+        ay "This is something that you're clearly not ready to go ahead with."
+        ay "I've been something like this already"
+        show ayame zorder 2 at t43
+        show sayori zorder 3 at f44
+        s "Even if that were true, and I'm not saying it is..."
+        s "I don't know if those are really your intentions."
+        s "I've never given you the presidency in any case, Ayame."
+        s "Because if I did, then I wouldn't be able to go back and reset everything."
+        show ayame zorder 3 at f43
+        show sayori zorder 2 at t44
+        ay "In all the times you've seen these events, you never gave me the presidency?"
+        "Ayame gives a reassuring smile."
+        ay "Well, I can see why you're taking precautions."
+        ay "You don't have a reason to trust me, that's true."
     else:
         "Ayame timidly takes a few steps forward before taking a deep inhale."
         "After a moment, she walks forward."

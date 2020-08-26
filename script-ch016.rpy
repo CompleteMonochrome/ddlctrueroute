@@ -12909,8 +12909,8 @@ label ch16_end:
                         mc "Until Sayori...?"
                         ay 2f "Look, forget it."
                         ay "I'm sorry I asked if you wanted one."
-                        ay "I guess I should have known better than to try something so dumb as to offer a drink."
-                        mc 2l "Ayame, wait a second..."
+                        ay 2l "I guess I should have known better than to try something so dumb as to offer a drink."
+                        mc "Ayame, wait a second..."
                         ay "The three of you..."
                         ay "Something is going on, and I'm going to get to the bottom of it."
                         ay 2m "It's preventing me from doing what I want to do."
@@ -16253,7 +16253,7 @@ label ch16_end:
                     mc "But we're going to be walking there, aren't we?"
                     mc "It's not like you're going to lose sight of me."
                     ay 1h "Once you think about Natsuki's house and turn that corner..."
-                    "Natsuki points to the street corner where she appeared from moments before."
+                    "Ayame points to the corner of two street's intersection."
                     ay "You'll end up at Natsuki's house, assuming it exists in this fragmented world."
                     mc "How--"
                     ay 1b "It's best not to worry about these things."
@@ -16306,7 +16306,7 @@ label ch16_end:
                     window show(None)
                     "Thinking about going inside immediately brings me inside Natsuki's house."
                     window auto
-                    "I see that Natsuki is outside still, looking at me with a smile on her face."
+                    "I see that Ayame is outside still, looking at me with a smile on her face."
                     "She steps into the house after me."
                     show ayame 1a zorder 2 at t11
                     ay "You don't have to do that every time you wanna get somewhere, you know."
@@ -17072,7 +17072,7 @@ label ch16_end:
                     show ayame zorder 2 at t33
                     n "What's [player_personal] gonna do?"
                     n "If the two of us couldn't do it and you can't use...whatever the hell that was to do it..."
-                    n "Then what could [player] accomplish that we can't?"
+                    n "Then what could [player] alone accomplish that we can't?"
                     show natsuki zorder 2 at t31
                     show ayame 4m zorder 3 at f33
                     ay "I can't be certain but I think that [player] is the only one who can go past those measures."
@@ -19322,8 +19322,8 @@ label ch16_end:
             show natsuki 1c zorder 3 at f31
             show ayame zorder 2 at t33
             n "What's [player_personal] gonna do?"
-            n "If the two of us couldn't do it and you can't use...whatever the hell that was to do it..."
-            n "Then what could [player] accomplish that we can't do together?"
+            n "If the four of us couldn't do it and you can't use...whatever the hell that was to do it..."
+            n "Then what could [player] alone accomplish that we can't do together?"
             show natsuki zorder 2 at t31
             show ayame 4m zorder 3 at f33
             ay "I can't be certain but I think that [player] is the only one who can go past those measures."
@@ -19456,7 +19456,7 @@ label ch16_end:
             "Ayame puts a hand out into the air."
             "She closes her eyes as if she's focusing intently on what's in front of her."
             "She breathes in and as she does, it's as if all other sound is drowned out."
-            "She opens here eyes and looks at the three of us and smiles."
+            "She opens her eyes and looks at the three of us and smiles."
             ay 4m "Are you all ready?"
             show natsuki 1g zorder 3 at f31
             show ayame zorder 2 at t33
@@ -21138,7 +21138,7 @@ label ch16_sayoridate:
             "Waiter" "\"As you wish.\""
             "The waiter approaches the counter and points to our table."
             "Though we're the only ones in here so he probably didn't need to do that."
-            "The employee at the counter hands the bill to the water and smiles."
+            "The employee at the counter hands the bill to the waiter and smiles."
             "He takes a look at the bill and his eyes open wide."
             "Suddenly, the smug look on his face returns and he quickly walks back to us."
             "Do these guys find enjoyment in this or something...?"
@@ -21479,7 +21479,7 @@ label ch16_sayoridate:
                     scene bg tree_day
                     show sayori 1ba zorder 2 at t11
                     with open_eyes
-                    "I open my eyes and see Sayori sitting in front me where was was originally."
+                    "I open my eyes and see Sayori sitting in front me where she was originally."
                     "She's eating her burrito as if nothing happened and staring into the distance."
                     "The pies seem to be unwrapped and ready to eat too, there's already a few slices I can see cut off."
                     mc "So am I going to get an answer to what you just did?"
