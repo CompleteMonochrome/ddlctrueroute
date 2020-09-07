@@ -151,7 +151,7 @@ label ch5_mainb:
     hide yuri
     "Yuri takes the box of decorations and starts putting them up around the clubroom."
     if ch4_name == "Natsuki":
-        "Before long, you can start to the feel the atmosphere she's created for us."
+        "Before long, you can start to feel the atmosphere she's created for us."
     else:
         "Before long, you can start to feel the atmosphere we created come to life."
     if ch4_name == "Natsuki":
@@ -855,7 +855,7 @@ label ch5_mainc:
     hide yuri
     "Yuri takes the box of decorations and starts putting them up around the clubroom."
     if ch4_name == "Natsuki":
-        "Before long, you can start to the feel the atmosphere she's created for us."
+        "Before long, you can start to feel the atmosphere she's created for us."
     else:
         "Before long, you can start to feel the atmosphere we created come to life."
     if ch4_name == "Natsuki":

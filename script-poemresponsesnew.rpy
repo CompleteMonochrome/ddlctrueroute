@@ -1913,7 +1913,7 @@ label ch14_m_end:
         m 1e "I'll leave that up to you."
         m "You certainly have a solid interpretation though."
         m "Whether that was my intention or not is irrelevant."
-        mc "I suppose that's what make a poem abstract."
+        mc "I suppose that's what makes a poem abstract."
         m 1a "I like to think of it as what makes an abstract poem good."
         mc "I see..."
         m 3b "Anyway, here's Monika's Writing Tip of the Day!"

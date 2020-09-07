@@ -1802,7 +1802,7 @@ label ch12_play:
         m "I guess you could say it's just a feeling."
     else:
         m 1d "Not really, Yuri..."
-        m "And I don't really plan on continue our acquaintance."
+        m "And I don't really plan on continuing our acquaintance."
     show monika zorder 2 at t41
     show natsuki 1g zorder 3 at f42
     n "H-How do you know she's even here, dad?"
@@ -1828,7 +1828,7 @@ label ch12_play:
     show yuri 3pt zorder 3 at f44
     show dadsuki zorder 2 at t43
     "Yuri starts tugging at me."
-    y "{i}(Do you know what who they're talking about?){/i}"
+    y "{i}(Do you know who they're talking about?){/i}"
     y "{i}(I'm a little confused about this whole situation...){/i}"
     show natsuki 2u zorder 3 at f42
     show yuri zorder 2 at t44
@@ -2590,7 +2590,7 @@ label ch12_harukiplace:
             d "It's something I haven't felt for a long time."
             d 1n "It makes me feel like I could do anything for you..."
             d "...and for Natsuki."
-            d "Despite it's warmth, it almost feels like...a scary feeling."
+            d "Despite its warmth, it almost feels like...a scary feeling."
             d 1k "It's like if anyone hurt either of you..."
             d "...well, it would hurt me too..."
             show momsuki 1h zorder 3 at f51
@@ -2739,7 +2739,7 @@ label ch12_harukiplace:
             mo "Natsuki deserves to hear too."
             show momsuki zorder 2 at t41
             show dadsuki 1e zorder 3 at f43
-            d "And what of the rest of them?"
+            d "And what about the rest of them?"
             show momsuki 1h zorder 3 at f41
             show dadsuki zorder 2 at t43
             mo "I'm not liking what I'm hearing, Yasuhiro."
@@ -2752,7 +2752,7 @@ label ch12_harukiplace:
             d "Life's been terrible ever since you left me."
             show momsuki 1e zorder 3 at f41
             show dadsuki zorder 2 at t43
-            mo "And who's fault do you suppose that is?"
+            mo "And whose fault do you suppose that is?"
             mo "Have you ever considered that you made my life terrible, Yasuhiro?"
             show momsuki zorder 2 at t41
             show dadsuki 1a zorder 3 at f43
@@ -3635,7 +3635,7 @@ label ch12_harukinoplace:
         d "...I'll never know."
         d "So..."
         d "Please, go on."
-        d "And smile, if not for me...for your mother. In hopes that that she is watching from wherever she is now."
+        d "And smile, if not for me...for your mother. In hopes that she is watching from wherever she is now."
         "Natsuki doesn't react."
         d "That's how it is...?"
         d "I guess I deserve this."

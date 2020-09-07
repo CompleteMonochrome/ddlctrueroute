@@ -138,7 +138,7 @@ label ch13_main:
     "There was more we could talk about and it made the journey less boring."
     "I wonder what final preparations Sayori is doing."
     "It must be something for the club."
-    "Still, having this time for myself let's me think about what I've done."
+    "Still, having this time for myself lets me think about what I've done."
     "All the decisions I've made in the past and how I could have changed them."
     scene bg class_day
     with wipeleft_scene
@@ -1734,7 +1734,7 @@ label ch13_end_monika:
     show yuri zorder 3 at f31
     show sayori zorder 2 at t32
     if yuri_date:
-        y 3pf "Ah, I thought Monika would need the most help out of all of us."
+        y 3pf "Ah, I thought Monika would need the least help out of all of us."
         y "But it is your decision after all, [player]."
         y 3ps "I trust you know what you're doing."
         y "I can handle the atmosphere myself."
@@ -3127,7 +3127,7 @@ label ch13_exclusive_natsuki:
         show natsuki 1ba zorder 2 at t11
         with wipeleft_scene
         "We go back to Natsuki's room and go to her desk."
-        "I didn't notice it before but there is stacks of book there."
+        "I didn't notice it before but there are stacks of book there."
         "They certainly weren't there when I first visited a few days ago."
         n "There's a lot of manga here."
         n "I'm sure you'll find a couple that you like."
@@ -3467,7 +3467,7 @@ label ch13_exclusive_natsuki:
         n "Why are you here?"
         "What's with this aggression coming from Natsuki?"
         "I thought she'd be happy to have her dad around but..."
-        "It's almost like she's in a worst mood than before her dad became a better person."
+        "It's almost like she's in a worse mood than before her dad became a better person."
         n 2bg "Well?"
         n "If you aren't gonna say anything, then you can leave."
         mc "What's wrong, Natsuki?"
@@ -3766,7 +3766,7 @@ label ch13_exclusive_natsuki:
             d 1i "It'll be better next time."
             show dadsuki zorder 2 at t21
             mc "Ah, no problem."
-            mc "I'm used to a mess like this hanging out with Sayori so much."
+            mc "I'm used to a mess like this after hanging out with Sayori so much."
             "Yasuhiro shows a small smile and then looks at the list."
             show dadsuki zorder 3 at f21
             d "I'll make sure to get everything on this list, Natsuki."
@@ -4109,7 +4109,7 @@ label ch13_exclusive_natsuki:
             n 1bs "What did you see anyway?"
             n "Under the bed, I mean."
             mc "I don't know..."
-            mc "There was tally marks and..."
+            mc "There were tally marks and..."
             mc "That was it."
             "Why did I just lie?"
             n 1bk "Tally marks? That's weird."
@@ -4231,7 +4231,7 @@ label ch13_exclusive_natsuki:
         n 1bd "It's an air freshener!"
         mc "It doesn't look like one."
         n 1be "Well, that's because it's not your normal air freshener!"
-        n "You leave it in a room and let it work it's magic."
+        n "You leave it in a room and let it work its magic."
         n "Then you come back after a while and the smell should be good!"
         mc "That's certainly interesting."
         mc "I didn't think your dad would be the type to be leaving those type of things around."
@@ -4462,7 +4462,7 @@ label ch13_exclusive_natsuki:
             mc "There's also some writing that I can't really read."
             "Natsuki looks at the writing for a moment."
             n 5bm "Yeah, I can't read that either."
-            mc "Is it your Yasuhiro's handwriting?"
+            mc "Is it Yasuhiro's handwriting?"
             n "It kinda looks like it."
             n "But I'm not sure."
             mc "Well, he was the only one in here, right?"
@@ -5335,7 +5335,7 @@ label ch13_exclusive_monika:
         show monika 1a zorder 2 at t11
         m "Sorry for making you go all this way just to help me, [player]."
         m 2e "To be honest, we could have gone to your house but..."
-        m "I wanted to get some practice in for the piece I'm going to play."
+        m "I wanted to get some practice for the piece I'm going to play."
         m "I hope you don't mind too much!"
         mc "Ah, no, that's fine."
         mc "After all, I'm the one helping you."
@@ -5512,7 +5512,7 @@ label ch13_exclusive_monika:
         mc "What about you?"
         m 1a "Well, since I'm home I might as well make myself comfortable."
         m "I'm going to go change into some different clothes."
-        m "Can you go downstairs and search for some books you want want to bring in?"
+        m "Can you go downstairs and search for some books you want to bring in?"
         m 1b "There's a pretty big bookshelf downstairs."
         m "It's got plenty of books you could bring tomorrow."
         m "I'm sure you can manage to find something that you like."
@@ -5531,7 +5531,7 @@ label ch13_exclusive_monika:
         "What should I choose though?"
         "I guess an even spread of manga and novels would do."
         "That way I don't look bias one way or another...but there's not really many interesting choices in terms of manga."
-        "Monika has several ones they go to the first or second volume only."
+        "Monika has several ones but they go to the first or second volume only."
         "I decide to take volume one of a manga that has been adapted to an anime and another manga that I've read the first couple of volumes for."
         "I also grab the two most popular novels I know of from the shelf."
         mc "This should do..."
@@ -5877,7 +5877,7 @@ label ch13_exclusive_monika:
         hide monika
         "What was that?"
         "It was like she read my mind..."
-        "If I had known she would have taken offense to something like that I never would have thought about it in the first place."
+        "If I had known she would have taken offense to something like that, I never would have thought about it in the first place."
         "Well, it's too late for that now..."
         "The only thing I can do is hope this doesn't ruin the preparations tonight."
         scene bg m_bedroom_day with wipeleft_scene
@@ -6171,7 +6171,7 @@ label ch13_exclusive_monika:
         m "Just something about finding true love and..."
         m "...well, it just gets me interested in the story."
         mc "I see..."
-        mc "We all have our preferences, it would be wrong me to judge you based on yours."
+        mc "We all have our preferences, it would be wrong of me to judge you based on yours."
         mc "I'm sure your choices are great, Monika."
         m 3ba "That's up to everyone else to decide."
         m "Anyway...!"
@@ -6295,7 +6295,7 @@ label ch13_exclusive_monika:
         m 2bm "They're all actually a romantic adventure, which isn't what I'd normally prefer..."
         m 2bn "Things have just been kinda weird lately. You understand, right?"
         mc "I guess..."
-        mc "I mean we all have our preferences, it would be wrong me to judge you based on yours."
+        mc "I mean we all have our preferences, it would be wrong of me to judge you based on yours."
         mc "I'm sure your choices are great, Monika."
         m 2ba "That's up to everyone else to decide."
         m "Anyway...!"
@@ -6921,7 +6921,7 @@ label ch13_exclusive_sayori:
     scene bg house
     with wipeleft_scene
     "We finally arrive at Sayori's house."
-    "It didn't really matter who's house we did the preparations at but Sayori is the one I'm helping and not the other way around."
+    "It didn't really matter whose house we did the preparations at but Sayori is the one I'm helping and not the other way around."
     "It feels good to be here with just the two of us again."
     "I feel like it's been a long time since the last time..."
     "It was during the first week, wasn't it?"
@@ -6974,7 +6974,7 @@ label ch13_exclusive_sayori:
     s 1d "I'm just making a call to try to get our club in for Inauguration Day."
     s "Just get started on the list."
     mc "Alright..."
-    s 1o "Now who's idea was the whole day again...?"
+    s 1o "Now whose idea was the whole day again...?"
     s "I'll have to make a promise if he's gonna properly consider our club."
     show sayori at lhide
     hide sayori
@@ -8421,7 +8421,7 @@ label ch13_natsukidate:
     "Natsuki doesn't seem to want to admit it."
     "She seems pretty hungry right now."
     "I did say we were going to have something to eat while we're here."
-    "I guess now is a good a time as any."
+    "I guess now is as good a time as any."
     mc "Well..."
     mc "I know this place we could go to."
     mc "They have some really nice desserts."
@@ -8705,7 +8705,7 @@ label ch13_natsukidate:
     mc "Doesn't seem familiar to me."
     n "Hmm...how do you think it's spelled?"
     mc "If I had to guess..."
-    "I take out a pen from my pocket and write it down the spelling on a tissue."
+    "I take out a pen from my pocket and write down the spelling on a tissue."
     "I give the tissue to Natsuki."
     n 2bj "Maybe if we rearrange the letters."
     mc "That's a really random idea."
@@ -8864,7 +8864,7 @@ label ch13_natsukidate:
     mc "I guess that's it."
     mc "Shall we head back?"
     "Natsuki stands up."
-    n 1ba "Let's."
+    n 1ba "Let's go."
     scene bg city_sunset with wipeleft_scene
     "Natsuki and I walk around the city back to the store."
     "The walk feels longer than from when we walked to that place we ate at."

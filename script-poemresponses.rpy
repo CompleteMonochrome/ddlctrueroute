@@ -2741,7 +2741,7 @@ label m_monika_2:
     $ monika_appeal[1] = True
     m 2d "This..."
     m 1a "Your writing is certainly improving, at least in my opinion."
-    m 4c "It's starting to feel like your actively trying to write abstract poems."
+    m 4c "It's starting to feel like you're actively trying to write abstract poems."
     mc "Well, I did put a bit more time to try to make it more abstract."
     m 2a "What's inspiring you to write like this?"
     m 5 "It isn't me, is it?"

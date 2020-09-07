@@ -3969,8 +3969,8 @@ label ch16_main:
         show yuri 4pa zorder 3 at f22
         y "I..."
         y "I did."
-        y "The doll is special in that it can move on it's own and emit sound."
-        y 4pb "I put it into a foam box to keep it safe and I suppose it somehow activated on it's own and started moving."
+        y "The doll is special in that it can move on its own and emit sound."
+        y 4pb "I put it into a foam box to keep it safe and I suppose it somehow activated on its own and started moving."
         y "That's probably where the foam rubbing together sound came from."
         show yuri zorder 2 at t22
         mc "Well, what about the screeching?"
@@ -18620,7 +18620,7 @@ label ch16_end:
             mc "I got them into this mess and I'm doing nothing to help."
             mc "Not to mention we made a detour to your house that I still don't know the reason for."
             ay 1n "I'm not sure myself...it's like a thought in the back of my head told me to lead you here."
-            ay "But now that I have, it's seems like the right thing to do."
+            ay "But now that I have, it seems like the right thing to do."
             ay "Because Yuri and Natsuki were going to go here anyway..."
             ay 1m "...How do I know that for sure?"
             ay 1n "I don't get it. Just disregard what I'm saying."
@@ -21009,7 +21009,7 @@ label ch16_sayoridate:
             s 1bd "That's a good point. That poor chef..."
             s "I guess you can take this time to get to know me."
             s 1bb "You know, before we actually met."
-            s "This is a good a time as any, right?"
+            s "This is as good a time as any, right?"
             "The memories of Sayori that I have are still pretty clear to me."
             "But this will be a good chance for you to learn more about her."
             s 1bc "I guess I should start from the beginning."

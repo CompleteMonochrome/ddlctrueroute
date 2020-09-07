@@ -410,7 +410,7 @@ label ch3_start_monika:
     show monika 1h zorder 2 at t22
     "I'm feeling a bit anxious, but I should wait until Monika finishes with her."
     "Just so I don't accidentally make things worse."
-    "I trust Monika knows what shes doing."
+    "I trust Monika knows what she's doing."
     "She is the president and one of Sayori's friends after all."
     "Though Sayori looks really upset, almost as if shes holding back tears."
     "After a short while, Monika gets up."
@@ -548,7 +548,7 @@ label ch3_start_monikab:
     show monika 1h zorder 2 at t22
     "I'm feeling a bit anxious, but I should wait until Monika finishes with her."
     "Just so I don't accidentally make things worse."
-    "I trust Monika knows what shes doing."
+    "I trust Monika knows what she's doing."
     "She is the president and one of Sayori's friends after all."
     "Though Sayori looks really upset, almost as if shes holding back tears."
     "After a short while, Monika gets up."

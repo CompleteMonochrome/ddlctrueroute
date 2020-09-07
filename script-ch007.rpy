@@ -920,7 +920,7 @@ label ch7_main:
     show monika 2f zorder 3 at f42
     m "Natsuki, you know that's not true."
     m "We do care about you."
-    m 2e "We just think the Yuri would be most suited to be a certain character."
+    m 2e "We just think that Yuri would be most suited to be a certain character."
     m "So please don't take this the wrong way..."
     show monika zorder 2 at t42
     show sayori 1q zorder 3 at f43

@@ -5444,6 +5444,49 @@ label ch16_mainb:
         "Ayame gives a reassuring smile."
         ay "Well, I can see why you're taking precautions."
         ay "You don't have a reason to trust me, that's true."
+        ay "But I'll ask you something, Sayori."
+        ay "Are you willing to take the chance?"
+        show ayame zorder 2 at t43
+        show sayori zorder 3 at f44
+        s "The chance? The chance for what?"
+        show ayame zorder 3 at f43
+        show sayori zorder 2 at t44
+        ay "Consider this..."
+        ay "I came all the way from the past up to this point."
+        ay "I survived this long. I've seen things no one should ever have to see."
+        ay "I've lived my life..."
+        ay "Wouldn't you rather spend the final moments of the world living yours?"
+        ay "Rather than have the burden of the presidency."
+        ay "You won't have to guilty in your final moments."
+        ay "It's a chance to be free."
+        show ayame zorder 2 at t43
+        show sayori zorder 3 at f44
+        s "..."
+        "Sayori averts her eyes."
+        s "It's not worth it, Ayame. It's such a minor thing, I--"
+        show ayame zorder 3 at f43
+        show sayori zorder 2 at t44
+        ay "Why must you always put the happiness of others above your own?"
+        ay "Have you ever thought to consider the damage it's doing to you?"
+        ay "You probably don't think it, but you deserve to be selfish."
+        ay "You deserve to be happy."
+        ay "Don't you agree, [player]?"
+        show ayame zorder 2 at t43
+        mc "She's right. You don't have to be the one responsible."
+        show sayori zorder 3 at f44
+        s "What difference does it make?"
+        s "The end result is still the same."
+        show ayame zorder 3 at f43
+        show sayori zorder 2 at t44
+        ay "And yet, here we are. You're being offered the chance to relieve yourself of the burden."
+        ay "And you won't do it..."
+        ay "There's another reason, isn't there?"
+        ay "There has to be."
+        show ayame zorder 2 at t43
+        show sayori zorder 3 at f44
+        s "Of course there is."
+        s "You have no idea how much I want to free myself from this."
+        s "But I can't."
     else:
         "Ayame timidly takes a few steps forward before taking a deep inhale."
         "After a moment, she walks forward."

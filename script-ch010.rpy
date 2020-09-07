@@ -166,7 +166,7 @@ label ch10_main:
         s 1bk "I felt like that before..."
         s "Sometimes..."
         s "I still do."
-        s "Like that feelings you put inside me ages ago are still there."
+        s "Like those feelings you put inside me ages ago are still there."
         s 1bd "But anyway..."
         s "I can understand if you don't want to talk about it."
         show sayori zorder 2 at t21
@@ -875,7 +875,7 @@ label ch10_nat_house:
                     "After making it through the bottles again, I take a sigh of relief."
                     "I wonder if the smell of alcohol is on me..."
                     "She'll probably say something about that..."
-                    "I shouldn't have gone done here, it's just a messy living room."
+                    "I shouldn't have gone down here, it's just a messy living room."
                     "They'll probably clean that up at some point."
             "I make sure everything is left as it was before I entered the room."
             "After I'm certain, I decide to head back to Natsuki's room."
