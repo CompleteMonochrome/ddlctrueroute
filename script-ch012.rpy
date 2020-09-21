@@ -741,7 +741,7 @@ label ch12_play:
     show sayori 1a zorder 2 at t11
     s "Alright, everybody!"
     s "I hope you all enjoyed our little poem sharing time."
-    s 1d "I know it kinda rather short but I hope you guys still find these little times to talk with each other fun."
+    s 1d "I know it's kinda short but I hope you guys still find these little times to talk with each other fun."
     s 4q "I know I do!"
     show yuri 1k zorder 3 at f21
     show sayori zorder 2 at t22

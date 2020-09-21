@@ -59,7 +59,10 @@ label ch16_mainb:
     "Maybe this world is just another copy?"
     "Sayori wouldn't make it that easy, would she?"
     "Okay, I can do this."
-    "I was alone before, I can regroup with them again."
+    if ch16_ay_companions <= 0:
+        "I was alone before, I can regroup with her again."
+    else:
+        "I was alone before, I can regroup with them again."
     "How many times are we going to go through this to get to Sayori?"
     "We have to be getting closer."
     ay "We are getting closer."
@@ -201,7 +204,7 @@ label ch16_mainb:
         n "What the{fast} hell is this?"
         window auto
         "Natsuki's figure starts to move a bit more naturally now."
-        "I guess whatever Ayame did work."
+        "I guess whatever Ayame did worked."
         "But now Natsuki's face is shadowed too."
         "What is going on...?"
         ay "There it is again..."
@@ -226,8 +229,8 @@ label ch16_mainb:
         window show(None)
         y "I-I'm here.{fast} At least, I think I am."
         window auto
-        "Yuri figure raises one of it's hand and tries to wave."
-        "Her face, like I expected, started became shadowed too."
+        "Yuri figure raises one of its hand and tries to wave."
+        "Her face, like I expected, started to become shadowed too."
         ay "{i}(There it is again...){/i}"
         y "What are we doing here?"
         ay "Have you forgotten what we're meant to be doing?"
@@ -274,7 +277,7 @@ label ch16_mainb:
         ay "You said that you had adventures with her, didn't you?"
         ay "Then maybe..."
         "My adventures with Sayori..."
-        "Go back. Remember the good times because the world will end...why am I the only one that can remember that those whispers?"
+        "Go back. Remember the good times because the world will end...why am I the only one that can remember those whispers?"
         "The others forgot about it already, somehow."
         "Yet it's still clear in my head."
         "What was one of our first adventures?"
@@ -308,7 +311,7 @@ label ch16_mainb:
         ay "Who knows? This was up to [player]'s imagination after all."
         mc "We should be fine..."
         "I think."
-        ay "Daylights burning, let's go."
+        ay "Daylight's burning, let's go."
         scene bg beach_day
         show natsuki gw_2_blur zorder 2 at t31
         show ayame gw_2_blur zorder 2 at t32
@@ -344,7 +347,7 @@ label ch16_mainb:
         mc "I suppose."
         ay "Was there any location of signif--"
         "Ayame suddenly cuts herself off."
-        "It's as if she's doesn't know the word she's trying to say."
+        "It's as if she doesn't know the word she's trying to say."
         ay "How do you say that word? S-Signifidance? N-No...significance. There."
         ay "Any locations of significance around here?"
         mc "Just a couple. There was this tree for one..."
@@ -356,7 +359,7 @@ label ch16_mainb:
         "We were a lot lighter back then."
         ay "I see..."
         "Ayame places a hand on the rope."
-        "She looks up at to the canopy of the tree."
+        "She looks up at the canopy of the tree."
         ay "I can imagine the two of you climbing up to the top."
         ay "Seeing who could do it faster."
         ay "That's what it looks like since all these distinct markings are here."
@@ -421,7 +424,7 @@ label ch16_mainb:
         s "I'm gonna get in so much trouble for this..."
         mc "You'll get over it."
         scene white with dissolve_cg
-        scene bg beach_day_gray
+        scene bg beach_day
         show natsuki gw_2_blur zorder 2 at t31
         show ayame gw_2_blur zorder 2 at t32
         show yuri gw_2_blur zorder 2 at t33
@@ -434,7 +437,7 @@ label ch16_mainb:
         "Was Sayori being older in my memory a result of this new world we're in?"
         "Was that memory even real? It sure {i}felt{/i} real but..."
         "I have so many questions. It's so frustrating not being able to get them answered."
-        "I'll just have to ask Sayori myself when I see here."
+        "I'll just have to ask Sayori myself when I see her."
         mc "What were we doing again?"
         ay "You were bringing us to the next place you think is important around here."
         y "Where's the next location, [player]?"
@@ -659,12 +662,12 @@ label ch16_mainb:
         "Ayame's face suddenly becomes hidden again."
         ay "You think I haven't considered that, [player]?"
         ay "Do you think I'm doing this without thinking?"
-        ay "That I'm somehow mislead in my thinking?"
+        ay "That I'm somehow misled in my thinking?"
         ay "I've thought about this for a long time."
         ay "It's...{nw}"
         y "...the...{nw}"
         n "...only way."
-        mc "That can't be true Sayori."
+        mc "That can't be true, Sayori."
         mc "There's always another way."
         ay "Do you truly believe that?"
         mc "Of course I do. We always manage to get through these things, Sayori."
@@ -676,7 +679,7 @@ label ch16_mainb:
         ay "Without me, the world would have already ended."
         ay "This whole game would have already ended."
         ay "All I'm doing is delaying the inevitable."
-        ay "It's all going to come to and end, one way or another."
+        ay "It's all going to come to an end, one way or another."
         mc "Is that really what you believe?"
         ay "Yes, it is."
         mc "Not you, Sayori."
@@ -735,7 +738,7 @@ label ch16_mainb:
             mc "Learn what, exactly?"
             ay 1j "I know where we have to go to get to the next world Sayori's conjured up."
             ay "And I have a feeling that this time, a certain someone will be waiting for us on the other side."
-            ay "I {i}stop{/i} you, Sayori. Whatever it takes."
+            ay "I will {i}stop{/i} you, Sayori. Whatever it takes."
         else:
             $ style.say_dialogue = style.edited
             ay "Y-You..."
@@ -764,7 +767,9 @@ label ch16_mainb:
             ay "Which means, you know what we're capable of."
             ay "We were just biding our time."
             ay "Now, we have everything we need."
+            $ style.say_dialogue = style.normal
             mc "Everything you need for what?"
+            $ style.say_dialogue = style.edited
             ay "To get to the next world Sayori made to protect herself."
             ay 1p "And when we get there, we'll--"
             $ style.say_dialogue = style.normal
@@ -969,7 +974,7 @@ label ch16_mainb:
         "Yuri's voice echoes in my head."
         "It sounds like it's coming from Yuri though."
         "At the same time, Yuri starts to move a bit more naturally now."
-        "I guess whatever Ayame did work."
+        "I guess whatever Ayame did worked."
         y "Why do I feel so...different?"
         "Yuri raises one of her hands and tries to wave."
         mc "Well..."
@@ -1067,7 +1072,7 @@ label ch16_mainb:
         ay "Who knows? This was up to [player]'s imagination after all."
         mc "We should be fine..."
         "I think."
-        ay "Daylights burning, let's go."
+        ay "Daylight's burning, let's go."
         scene bg beach_day
         show ayame gw_2_blur zorder 2 at t21
         show yuri gw_2_blur zorder 2 at t22
@@ -1101,11 +1106,11 @@ label ch16_mainb:
         mc "I suppose."
         ay "Was there any location of signif--"
         "Ayame suddenly cuts herself off."
-        "It's as if she's doesn't know the word she's trying to say."
+        "It's as if she doesn't know the word she's trying to say."
         ay "How do you say that word? S-Signifidance? N-No...significance. There."
         ay "Any locations of significance around here?"
         mc "Just a couple. There was this tree for one..."
-        "I lead the three of them to one of the trees."
+        "I lead the two of them to one of the trees."
         "It has a rope attached to it already."
         "Sayori and I would always bring one along every time we went here."
         "It was just for climbing and swinging on this tree."
@@ -1113,7 +1118,7 @@ label ch16_mainb:
         "We were a lot lighter back then."
         ay "I see..."
         "Ayame places a hand on the rope."
-        "She looks up at to the canopy of the tree."
+        "She looks up at the canopy of the tree."
         ay "I can imagine the two of you climbing up to the top."
         ay "Seeing who could do it faster."
         ay "That's what it looks like since all these distinct markings are here."
@@ -1177,7 +1182,7 @@ label ch16_mainb:
         s "I'm gonna get in so much trouble for this..."
         mc "You'll get over it."
         scene white with dissolve_cg
-        scene bg beach_day_gray
+        scene bg beach_day
         show ayame gw_2_blur zorder 2 at t21
         show yuri gw_2_blur zorder 2 at t22
         with dissolve_scene_full
@@ -1189,7 +1194,7 @@ label ch16_mainb:
         "Was Sayori being older in my memory a result of this new world we're in?"
         "Was that memory even real? It sure {i}felt{/i} real but..."
         "I have so many questions. It's so frustrating not being able to get them answered."
-        "I'll just have to ask Sayori myself when I see here."
+        "I'll just have to ask Sayori myself when I see her."
         mc "What were we doing again?"
         ay "You were bringing us to the next place you think is important around here."
         y "Where's the next location, [player]?"
@@ -1400,12 +1405,12 @@ label ch16_mainb:
         "Ayame's face suddenly becomes hidden again."
         ay "You think I haven't considered that, [player]?"
         ay "Do you think I'm doing this without thinking?"
-        ay "That I'm somehow mislead in my thinking?"
+        ay "That I'm somehow misled in my thinking?"
         ay "I've thought about this for a long time."
         ay "It's...{nw}"
         y "...the...{nw}"
         ay "...only way."
-        mc "That can't be true Sayori."
+        mc "That can't be true, Sayori."
         mc "There's always another way."
         ay "Do you truly believe that?"
         mc "Of course I do. We always manage to get through these things, Sayori."
@@ -1417,7 +1422,7 @@ label ch16_mainb:
         ay "Without me, the world would have already ended."
         ay "This whole game would have already ended."
         ay "All I'm doing is delaying the inevitable."
-        ay "It's all going to come to and end, one way or another."
+        ay "It's all going to come to an end, one way or another."
         mc "Is that really what you believe?"
         ay "Yes, it is."
         mc "Not you, Sayori."
@@ -1428,7 +1433,7 @@ label ch16_mainb:
         mc "Are you really going to give up so easily?"
         y "What are you playing at, [player]?"
         y "It's not going to work."
-        mc "I know the three of you are still here."
+        mc "I know the two of you are still here."
         y "They're gone."
         y "They never made it to this world, [player]."
         "That's not true at all."
@@ -1464,7 +1469,7 @@ label ch16_mainb:
             "Her face is clear again."
             "This time, her eyes look normal."
             mc "Ayame?"
-            n "W-What?"
+            y "W-What?"
             y "H-How did you break free? That's impossible!"
             ay 1f "Sayori."
             ay "Did you really think it would be that easy?"
@@ -1476,7 +1481,7 @@ label ch16_mainb:
             mc "Learn what, exactly?"
             ay 1j "I know where we have to go to get to the next world Sayori's conjured up."
             ay "And I have a feeling that this time, a certain someone will be waiting for us on the other side."
-            ay "I {i}stop{/i} you, Sayori. Whatever it takes."
+            ay "I will {i}stop{/i} you, Sayori. Whatever it takes."
         else:
             $ style.say_dialogue = style.edited
             ay "Y-You..."
@@ -1505,7 +1510,9 @@ label ch16_mainb:
             ay "Which means, you know what we're capable of."
             ay "We were just biding our time."
             ay "Now, we have everything we need."
+            $ style.say_dialogue = style.normal
             mc "Everything you need for what?"
+            $ style.say_dialogue = style.edited
             ay "To get to the next world Sayori made to protect herself."
             ay 1p "And when we get there, we'll--"
             $ style.say_dialogue = style.normal
@@ -1560,7 +1567,7 @@ label ch16_mainb:
         with wipeleft_scene
         "We arrive at the clearing."
         "Ayame looks back from where we came from."
-        "There doesn't seem to be a trace of either of Yuri."
+        "There doesn't seem to be a trace of Yuri."
         mc "What are we doing here, Ayame?"
         mc "What is Sayori doing?"
         ay 1m "This is where the portal actually is."
@@ -1678,7 +1685,7 @@ label ch16_mainb:
         "A few moments pass and the figure resembling Natsuki begins to move."
         "She must have figured out what to do."
         "Its movements are almost robotic."
-        "I wonder why it's movements are so different to Ayame's."
+        "I wonder why its movements are so different to Ayame's."
         mc "Are you okay, Natsuki?"
         mc "I didn't mess anything up did I?"
         "Natsuki looks at me."
@@ -1706,7 +1713,7 @@ label ch16_mainb:
         "Natsuki's voice echoes in my head."
         "It sounds like it's coming from Natsuki though."
         "At the same time, Natsuki starts to move a bit more naturally now."
-        "I guess whatever Ayame did work."
+        "I guess whatever Ayame did worked."
         n "What's happening? Why do I feel like this?"
         mc "Well..."
         n "You don't sound like you know."
@@ -1773,13 +1780,13 @@ label ch16_mainb:
         ay "You said that you had adventures with her, didn't you?"
         ay "Then maybe..."
         "My adventures with Sayori..."
-        "Remember the good times...why am I the only one that can remember that those whispers?"
+        "Go back. Remember the good times...why am I the only one that can remember those whispers?"
         "The others forgot about it already, somehow."
         "Yet it's still clear in my head."
         "What was one of our first adventures?"
         "My head is filled with all of these memories that I didn't know existed."
         "Yet one seems to stand out..."
-        mc "Remember the good times because the world will end."
+        mc "Go back. Remember the good times."
         "I say that without even thinking and suddenly the room begins to shake."
         n "Look outside!"
         "Natsuki points out the window and it appears that some sort of beach is forming."
@@ -1805,7 +1812,7 @@ label ch16_mainb:
         ay "Who knows? This was up to [player]'s imagination after all."
         mc "We should be fine..."
         "I think."
-        ay "Daylights burning, let's go."
+        ay "Daylight's burning, let's go."
         scene bg beach_day
         show ayame gw_2_blur zorder 2 at t21
         show natsuki gw_2_blur zorder 2 at t22
@@ -1839,7 +1846,7 @@ label ch16_mainb:
         mc "I suppose."
         ay "Was there any location of signif--"
         "Ayame suddenly cuts herself off."
-        "It's as if she's doesn't know the word she's trying to say."
+        "It's as if she doesn't know the word she's trying to say."
         ay "How do you say that word? S-Signifidance? N-No...significance. There."
         ay "Any locations of significance around here?"
         mc "Just a couple. There was this tree for one..."
@@ -1851,7 +1858,7 @@ label ch16_mainb:
         "We were a lot lighter back then."
         ay "I see..."
         "Ayame places a hand on the rope."
-        "She looks up at to the canopy of the tree."
+        "She looks up at the canopy of the tree."
         ay "I can imagine the two of you climbing up to the top."
         ay "Seeing who could do it faster."
         ay "That's what it looks like since all these distinct markings are here."
@@ -1915,7 +1922,7 @@ label ch16_mainb:
         s "I'm gonna get in so much trouble for this..."
         mc "You'll get over it."
         scene white with dissolve_cg
-        scene bg beach_day_gray
+        scene bg beach_day
         show ayame gw_2_blur zorder 2 at t21
         show natsuki gw_2_blur zorder 2 at t22
         with dissolve_scene_full
@@ -1927,7 +1934,7 @@ label ch16_mainb:
         "Was Sayori being older in my memory a result of this new world we're in?"
         "Was that memory even real? It sure {i}felt{/i} real but..."
         "I have so many questions. It's so frustrating not being able to get them answered."
-        "I'll just have to ask Sayori myself when I see here."
+        "I'll just have to ask Sayori myself when I see her."
         mc "What were we doing again?"
         ay "You were bringing us to the next place you think is important around here."
         n "Where to next?"
@@ -2074,7 +2081,7 @@ label ch16_mainb:
         n "You left me behind."
         mc "What are you two talking about?"
         mc "I don't understand what's going on."
-        mc "How did I leave you behind, Yuri?"
+        mc "How did I leave you behind, Natsuki?"
         "Now I know I messed something up."
         "It's like Sayori is..."
         mc "What did I forget?"
@@ -2142,12 +2149,12 @@ label ch16_mainb:
         "Ayame's face suddenly becomes hidden again."
         ay "You think I haven't considered that, [player]?"
         ay "Do you think I'm doing this without thinking?"
-        ay "That I'm somehow mislead in my thinking?"
+        ay "That I'm somehow misled in my thinking?"
         ay "I've thought about this for a long time."
         ay "It's...{nw}"
         n "...the...{nw}"
         ay "...only way."
-        mc "That can't be true Sayori."
+        mc "That can't be true, Sayori."
         mc "There's always another way."
         ay "Do you truly believe that?"
         mc "Of course I do. We always manage to get through these things, Sayori."
@@ -2159,7 +2166,7 @@ label ch16_mainb:
         ay "Without me, the world would have already ended."
         ay "This whole game would have already ended."
         ay "All I'm doing is delaying the inevitable."
-        ay "It's all going to come to and end, one way or another."
+        ay "It's all going to come to an end, one way or another."
         mc "Is that really what you believe?"
         ay "Yes, it is."
         mc "Not you, Sayori."
@@ -2170,7 +2177,7 @@ label ch16_mainb:
         mc "Are you really going to give up so easily?"
         n "What are you playing at, [player]?"
         n "It's not going to work."
-        mc "I know the three of you are still here."
+        mc "I know the two of you are still here."
         n "They're gone."
         n "They never made it to this world, [player]."
         "That's not true at all."
@@ -2207,7 +2214,7 @@ label ch16_mainb:
             "This time, her eyes look normal."
             mc "Ayame?"
             n "W-What?"
-            y "H-How did you break free? That's impossible!"
+            n "H-How did you break free? That's impossible!"
             ay 1f "Sayori."
             ay "Did you really think it would be that easy?"
             ay "You know my history, don't you?"
@@ -2218,7 +2225,7 @@ label ch16_mainb:
             mc "Learn what, exactly?"
             ay 1j "I know where we have to go to get to the next world Sayori's conjured up."
             ay "And I have a feeling that this time, a certain someone will be waiting for us on the other side."
-            ay "I {i}stop{/i} you, Sayori. Whatever it takes."
+            ay "I will {i}stop{/i} you, Sayori. Whatever it takes."
         else:
             $ style.say_dialogue = style.edited
             ay "Y-You..."
@@ -2247,7 +2254,9 @@ label ch16_mainb:
             ay "Which means, you know what we're capable of."
             ay "We were just biding our time."
             ay "Now, we have everything we need."
+            $ style.say_dialogue = style.normal
             mc "Everything you need for what?"
+            $ style.say_dialogue = style.edited
             ay "To get to the next world Sayori made to protect herself."
             ay 1p "And when we get there, we'll--"
             $ style.say_dialogue = style.normal
@@ -2440,7 +2449,7 @@ label ch16_mainb:
         show ayame zorder 2 at t22
         m "This is certainly an interesting turn of events."
         "Monika's voice echoes in my head."
-        "I guess whatever Ayame did work."
+        "I guess whatever Ayame did worked."
         m "So do you mind telling me what we're doing in [player]'s room?"
         ay "Have you forgotten what we're meant to be doing?"
         m "I know perfectly well what we're doing, Ayame."
@@ -2524,7 +2533,7 @@ label ch16_mainb:
         ay "Who knows? This was up to [player]'s imagination after all."
         mc "We should be fine..."
         "I think."
-        ay "Daylights burning, let's go."
+        ay "Daylight's burning, let's go."
         scene bg beach_day
         show monika gw_2_blur zorder 2 at t21
         show ayame gw_2_blur zorder 2 at t22
@@ -2558,7 +2567,7 @@ label ch16_mainb:
         mc "I suppose."
         ay "Was there any location of signif--"
         "Ayame suddenly cuts herself off."
-        "It's as if she's doesn't know the word she's trying to say."
+        "It's as if she doesn't know the word she's trying to say."
         ay "How do you say that word? S-Signifidance?"
         m "I believe the word you're looking for is 'significance'."
         ay "R-Right, significance."
@@ -2572,7 +2581,7 @@ label ch16_mainb:
         "We were a lot lighter back then."
         ay "I see..."
         "Ayame places a hand on the rope."
-        "She looks up at to the canopy of the tree."
+        "She looks up at the canopy of the tree."
         ay "I can imagine the two of you climbing up to the top."
         ay "Seeing who could do it faster."
         ay "That's what it looks like since all these distinct markings are here."
@@ -2641,7 +2650,7 @@ label ch16_mainb:
         s "I'm gonna get in so much trouble for this..."
         mc "You'll get over it."
         scene white with dissolve_cg
-        scene bg beach_day_gray
+        scene bg beach_day
         show monika gw_2_blur zorder 2 at t21
         show ayame gw_2_blur zorder 2 at t22
         with dissolve_scene_full
@@ -2653,7 +2662,7 @@ label ch16_mainb:
         "Was Sayori being older in my memory a result of this new world we're in?"
         "Was that memory even real? It sure {i}felt{/i} real but..."
         "I have so many questions. It's so frustrating not being able to get them answered."
-        "I'll just have to ask Sayori myself when I see here."
+        "I'll just have to ask Sayori myself when I see her."
         mc "What were we doing again?"
         ay "You were bringing us to the next place you think is important around here."
         m "Is there any other place or was this it?"
@@ -2810,7 +2819,7 @@ label ch16_mainb:
         ay "I had hopes."
         mc "Hopes? Hopes for what?"
         m "You were brought here intentionally, [player]."
-        m "She thought you the two of you could have stayed here, forever."
+        m "She thought the two of you could have stayed here, forever."
         m "She still thinks you can."
         "She...?"
         mc "You two...you aren't yourselves, are you?"
@@ -2871,13 +2880,13 @@ label ch16_mainb:
         "Ayame's face suddenly becomes hidden again."
         ay "You think I haven't considered that, [player]?"
         ay "Do you think I'm doing this without thinking?"
-        ay "That I'm somehow mislead in my thinking?"
+        ay "That I'm somehow misled in my thinking?"
         ay "I've thought about this for a long time."
         ay "It's...{nw}"
         m gw_2_blur "...the only way."
         "Monika's face becomes hidden too."
         "Is something happening?"
-        mc "That can't be true Sayori."
+        mc "That can't be true, Sayori."
         mc "There's always another way."
         ay "Do you truly believe that?"
         mc "Of course I do. We always manage to get through these things, Sayori."
@@ -2890,7 +2899,7 @@ label ch16_mainb:
         ay "Without me, the world would have already ended."
         ay "This whole game would have already ended."
         ay "All I'm doing is delaying the inevitable."
-        ay "It's all going to come to and end, one way or another."
+        ay "It's all going to come to an end, one way or another."
         mc "Is that really what you believe?"
         ay "Yes, it is."
         mc "Not you, Sayori."
@@ -3276,7 +3285,7 @@ label ch16_mainb:
         ay "Does that mean anything?"
         mc "I don't know. It just ended up that way."
         ay "I see."
-        ay "This world, dimension or whatever it is definitely different to what you're used to."
+        ay "This world, dimension or whatever is definitely different to what you're used to."
         ay "We're going to need to get creative if we're going to get to Sayori."
         mc "I'm confused."
         ay "I'm not entirely sure, but it seems like you can create whatever you want with just a thought."
@@ -3330,7 +3339,7 @@ label ch16_mainb:
         ay "Who knows? This was up to your imagination after all."
         mc "O-Oh. Then we should be fine..."
         "I think."
-        ay "If you say so. Daylights burning, let's go."
+        ay "If you say so. Daylight's burning, let's go."
         scene bg beach_day
         show ayame gw_2_blur zorder 2 at t11
         with wipeleft_scene
@@ -3360,7 +3369,7 @@ label ch16_mainb:
         mc "I suppose."
         ay "Was there any location of signif--"
         "Ayame suddenly cuts herself off."
-        "It's as if she's doesn't know the word she's trying to say."
+        "It's as if she doesn't know the word she's trying to say."
         ay "How do you say that word? S-Signifidance? N-No...significance. There."
         ay "Any locations of significance around here?"
         mc "Just a couple. There was this tree for one..."
@@ -3372,7 +3381,7 @@ label ch16_mainb:
         "We were a lot lighter back then."
         ay "I see..."
         "Ayame places a hand on the rope."
-        "She looks up at to the canopy of the tree."
+        "She looks up at the canopy of the tree."
         ay "I can imagine the two of you climbing up to the top."
         ay "Seeing who could do it faster."
         ay "That's what it looks like since all these distinct markings are here."
@@ -3428,18 +3437,18 @@ label ch16_mainb:
         s "I'm gonna get in so much trouble for this..."
         mc "You'll get over it."
         scene white with dissolve_cg
-        scene bg beach_day_gray
+        scene bg beach_day
         show ayame gw_2_blur zorder 2 at t11
         with dissolve_scene_full
         $ style.say_window = style.window
-        n "Are you there?"
+        ay "Are you there?"
         mc "H-Huh?"
-        n "You looked like you were daydreaming."
+        ay "You looked like you were daydreaming."
         mc "I was just remembering something, sorry."
         "Was Sayori being older in my memory a result of this new world we're in?"
         "Was that memory even real? It sure {i}felt{/i} real but..."
         "I have so many questions. It's so frustrating not being able to get them answered."
-        "I'll just have to ask Sayori myself when I see here."
+        "I'll just have to ask Sayori myself when I see her."
         mc "What were we doing again?"
         ay "You were bringing me to the next place you think is important around here."
         mc "Oh, right...it should be just over here."
@@ -3557,7 +3566,7 @@ label ch16_mainb:
         ay "Treasure, right?"
         "What's going on? Something isn't right here."
         "I know it."
-        "I had my suspicions even before I took them to the clearing."
+        "I had my suspicions even before I took her to the clearing."
         "It's like she's being affected by something, somehow."
         mc "R-Right, they need treasure but..."
         ay "How could you not have figured it out already, [player]?"
@@ -3570,7 +3579,7 @@ label ch16_mainb:
         ay "You've just forgotten."
         ay "You grew up..."
         ay "You left me behind."
-        mc "What are you two talking about?"
+        mc "What are you talking about?"
         mc "I don't understand what's going on."
         mc "How did I leave you behind, Ayame?"
         "Now I know I messed something up."
@@ -3583,10 +3592,10 @@ label ch16_mainb:
         ay "Do you really think I didn't bring you here intentionally?"
         ay "I thought we could have stayed here forever."
         ay "We still can, [player]."
-        mc "You three...you aren't yourselves, are you?"
+        mc "You...you're not acting like Ayame."
         mc "Something is wrong."
         ay "It's about time you noticed."
-        ay "You haven't wondered why you can't see our faces?"
+        ay "You haven't wondered why you can't see my face?"
         mc "I...just thought it was part of this world."
         mc "Like one of the side effects or something."
         mc "Am I wrong?"
@@ -3615,7 +3624,7 @@ label ch16_mainb:
         "It's almost the same color as..."
         mc "S-Sayori? What do you mean?"
         ay "Oh, come on. It's pretty obvious."
-        ay "I've taken over the bodies you created for them."
+        ay "I've taken over the body you created for her."
         ay "I know you saw what happened at the beginning."
         ay "Why they're all glitched out like this, [player]."
         ay "Did you really not pay attention?"
@@ -3639,10 +3648,10 @@ label ch16_mainb:
         "Ayame's face suddenly becomes hidden again."
         ay "You think I haven't considered that, [player]?"
         ay "Do you think I'm doing this without thinking?"
-        ay "That I'm somehow mislead in my thinking?"
+        ay "That I'm somehow misled in my thinking?"
         ay "I've thought about this for a long time."
         ay "It's...the only way."
-        mc "That can't be true Sayori."
+        mc "That can't be true, Sayori."
         mc "There's always another way."
         ay "Do you truly believe that?"
         mc "Of course I do. We always manage to get through these things, Sayori."
@@ -3654,7 +3663,7 @@ label ch16_mainb:
         ay "Without me, the world would have already ended."
         ay "This whole game would have already ended."
         ay "All I'm doing is delaying the inevitable."
-        ay "It's all going to come to and end, one way or another."
+        ay "It's all going to come to an end, one way or another."
         mc "Is that really what you believe?"
         ay "Yes, it is."
         mc "Not you, Sayori."
@@ -3668,7 +3677,7 @@ label ch16_mainb:
         ay "She's gone!"
         ay "I never made it to this world, [player]."
         "That's not true at all."
-        "I could feel them here before...when their faces weren't blurred."
+        "I could feel her here before...when her faces wasn't blurred."
         "Is that when it happened?"
         "Wait...did she say {i}I{/i}?"
         "She must be fighting back somehow."
@@ -3714,7 +3723,7 @@ label ch16_mainb:
             mc "Learn what, exactly?"
             ay 1j "I know where we have to go to get to the next world Sayori's conjured up."
             ay "And I have a feeling that this time, a certain someone will be waiting for us on the other side."
-            ay "I {i}stop{/i} you, Sayori. Whatever it takes."
+            ay "I will {i}stop{/i} you, Sayori. Whatever it takes."
         else:
             $ style.say_dialogue = style.edited
             ay "Y-You..."
@@ -3744,7 +3753,9 @@ label ch16_mainb:
             ay "Which means, you know what we're capable of."
             ay "We were just biding our time."
             ay "Now, we have everything we need."
+            $ style.say_dialogue = style.normal
             mc "Everything you need for what?"
+            $ style.say_dialogue = style.edited
             ay "To get to the next world Sayori made to protect herself."
             ay 1p "And when we get there, we'll--"
             $ style.say_dialogue = style.normal
@@ -3919,7 +3930,7 @@ label ch16_mainb:
         mc "So what should we do?"
         ay "I propose we walk together, one step at a time."
         ay "The sand will track our footsteps and provide a safe location to travel on when we get the rope."
-        ay "Every time one of us activate a trap, the other continues."
+        ay "Every time one of us activates a trap, the other continues."
         ay 4a "No exceptions."
         mc "What if the other person doesn't make it back?"
         ay "{i}No. Exceptions.{/i}"
@@ -4336,7 +4347,7 @@ label ch16_mainb:
         m "Goodbye~"
         show monika at thide
         hide monika
-        "Is that it? Is that the memory over?"
+        "Is that it? Is the memory over?"
         "Why am I not out of this yet?"
         "I lay down on my bed and stare at the ceiling."
         "There must be something I'm missing still."
@@ -4685,11 +4696,11 @@ label ch16_mainb:
             "[player] won't turn around because of what Sayori said."
             "But how am I supposed to convince [player_reflexive] to take the rope?"
             "[cPlayer_personal]'s obviously being cautious about this."
-            "I can feel the energy here is almost at it's limit."
+            "I can feel the energy here is almost at its limit."
             "If this goes on for much longer then we're not going to make it."
             "My plans will be undone."
             "I'm so close! I can't have made it this far for nothing."
-            "I have to do something otherwise all those years spent planning will be wasted."
+            "I have to do something, otherwise all those years spent planning will be wasted."
             if ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2] and ch16_ay_message[3]:
                 "Dammit."
                 "At times like this, I wish {i}she{/i} was still here."
@@ -4762,6 +4773,7 @@ label ch16_mainb:
                             "But I can't refuse."
                             $ style.say_dialogue = style.edited
                             "Good...now, sit back and enjoy the show."
+                            $ style.say_dialogue = style.normal
                         "Not trust the other me.":
                             $ ch16_ay_decision_count -= 1
                             "I feel an odd sensation go through my artificial body."
@@ -4874,7 +4886,7 @@ label ch16_mainb:
         "A hand touches my shoulder and I turn my head."
         show ayame 1m zorder 2 at t11
         ay "We have everything we need, so let's head back."
-        ay "The energy around here seems to be reaching it's peak now."
+        ay "The energy around here seems to be reaching its peak now."
         ay "I don't know if there are still traps so it's safer to just go through our footsteps."
         mc "Do you really think Sayori is going to be on the other end of this next portal?"
         ay "I sure hope so. I don't know if I have enough resolve to continue much more."
@@ -5010,7 +5022,7 @@ label ch16_mainb:
         s "Every outcome, every word that's supposed to be said for this day."
         s "Everything I said before, it's all been preconceived to happen already."
         s "Including me mispronouncing 'significance' before."
-        s 1bh "Do you really think I wouldn't have done my best to act completely like Ayame?"
+        s 1bh "Do you really think I wouldn't have done my best to act completely like Ayame and not mess up that word?"
         s "That's such a simple mistake to make."
         "This is a side to Sayori that's completely new to me."
         "Even with a smile on her face, she seems so cold. So calculating."
@@ -5048,11 +5060,13 @@ label ch16_mainb:
         s 1bk "Or the truth?"
         s "I already told you that I made up my mind."
         s "There's nothing that can change it now."
-        mc "You said the others are downstairs, right?"
-        s 1bc "I did. I could call them up now if you want."
         if ch16_ay_companions > 1:
+            mc "You said the others are downstairs, right?"
+            s 1bc "I did. I could call them up now if you want."
             s 1ba "But that won't be necessary since they're about to come in anyway."
         else:
+            mc "You said the she's downstairs, right?"
+            s 1bc "I did. I could call her up now if you want."
             s 1ba "But that won't be necessary since she's about to come in anyway."
         mc "Huh?"
         if ch16_ay_companions == 4:
@@ -5182,6 +5196,7 @@ label ch16_mainb:
             show sayori 1bd zorder 3 at f44
         else:
             show ayame 1l zorder 2 at t43
+            show sayori zorder 2 at t44
             "Right on cue, Ayame enters the room."
             show ayame 1n zorder 3 at f43
             ay "So...you're awake now. I hope you're okay."
@@ -5269,12 +5284,12 @@ label ch16_mainb:
             mc "What happened to Yuri?"
             mc "Where is she?"
             show sayori 1bk zorder 3 at f44
-            s "They're...somewhere safe. I'm telling you the truth about that at least."
+            s "She's...somewhere safe. I'm telling you the truth about that at least."
         elif ch16_ay_companions == 2:
             mc "What happened to Natsuki?"
             mc "Where is she?"
             show sayori 1bk zorder 3 at f44
-            s "They're...somewhere safe. I'm telling you the truth about that at least."
+            s "She's...somewhere safe. I'm telling you the truth about that at least."
         else:
             show sayori 1bk zorder 3 at f44
             s "Oh no..."
@@ -5571,7 +5586,7 @@ label ch16_mainb:
         mc "So what should we do?"
         ay "I propose we walk together, one step at a time."
         ay "The sand will track our footsteps and provide a safe location to travel on when we get the rope."
-        ay "Every time one of us activate a trap, the other continues."
+        ay "Every time one of us activates a trap, the others continue."
         ay 4a "No exceptions."
         show ayame zorder 2 at t21
         show monika 1h zorder 3 at f22
@@ -6002,7 +6017,7 @@ label ch16_mainb:
         m "Goodbye~"
         show monika at thide
         hide monika
-        "Is that it? Is that the memory over?"
+        "Is that it? Is the memory over?"
         "Why am I not out of this yet?"
         "I lay down on my bed and stare at the ceiling."
         "There must be something I'm missing still."
@@ -6338,11 +6353,11 @@ label ch16_mainb:
             "[player] won't turn around because of what Sayori said."
             "But how am I supposed to convince [player_reflexive] to take the rope?"
             "[cPlayer_personal]'s obviously being cautious about this."
-            "I can feel the energy here is almost at it's limit."
+            "I can feel the energy here is almost at its limit."
             "If this goes on for much longer then we're not going to make it."
             "My plans will be undone."
             "I'm so close! I can't have made it this far for nothing."
-            "I have to do something otherwise all those years spent planning will be wasted."
+            "I have to do something, otherwise all those years spent planning will be wasted."
             if ch16_ay_message[0] and ch16_ay_message[1] and ch16_ay_message[2] and ch16_ay_message[3]:
                 "Dammit."
                 "At times like this, I wish {i}she{/i} was still here."
@@ -6415,6 +6430,7 @@ label ch16_mainb:
                             "But I can't refuse."
                             $ style.say_dialogue = style.edited
                             "Good...now, sit back and enjoy the show."
+                            $ style.say_dialogue = style.normal
                         "Not trust the other me.":
                             $ ch16_ay_decision_count -= 1
                             "I feel an odd sensation go through my artificial body."
@@ -6542,7 +6558,7 @@ label ch16_mainb:
         show ayame 1m zorder 2 at f21
         show monika 1d zorder 2 at t22
         ay "We have everything we need, so let's head back."
-        ay "The energy around here seems to be reaching it's peak now."
+        ay "The energy around here seems to be reaching its peak now."
         ay "I don't know if there are still traps so it's safer to just go through our footsteps."
         show ayame zorder 2 at t21
         show monika 1h zorder 3 at f22
@@ -6674,7 +6690,7 @@ label ch16_mainb:
         s "Every outcome, every word that's supposed to be said for this day."
         s "Everything I said before, it's all been preconceived to happen already."
         s "Including me mispronouncing 'significance' before."
-        s 1bh "Do you really think I wouldn't have done my best to act completely like Ayame?"
+        s 1bh "Do you really think I wouldn't have done my best to act completely like Ayame and not mess up that word?"
         s "That's such a simple mistake to make."
         "This is a side to Sayori that's completely new to me."
         "Even with a smile on her face, she seems so cold. So calculating."
@@ -6738,7 +6754,7 @@ label ch16_mainb:
         show ayame 1n zorder 3 at f32
         ay "She...she showed me everything, [player]."
         ay "She was right. There really is only one way to get rid of the danger."
-        ay 2n "You...me...all four of us couldn't do anything even if we tried."
+        ay 2n "You...me...all three of us couldn't do anything even if we tried."
         ay "Even if Sayori helped us, we'd be powerless to do anything."
         show monika 1m zorder 3 at f31
         show ayame zorder 2 at t32
@@ -7034,9 +7050,9 @@ label ch16_convince_1_end:
             s 1a "How would there be no school?"
             mc "Stop it! Sayori, please! I don't want to do this."
             mc "I know that something isn't right here."
-            s "[player], look me in the eyes."
+            s "[player], look me in the eye."
             "My gaze is fixed on Sayori's face, I almost feel like I can't look away."
-            s 1d "We've known each for years, haven't we?"
+            s 1d "We've known each other for years, haven't we?"
             s "Since we were children, right?"
             s "Tell me that I'm wrong if I'm lying."
             mc "Y-You're not lying..."

@@ -595,7 +595,7 @@ label yuri_exclusive_3:
     play music t6say fadeout 1
     scene bg corridor
     with wipeleft_scene
-    "I make my way out the clubroom and see Sayori talking to some people."
+    "I make my way out of the clubroom and see Sayori talking to some people."
     show sayori 4d zorder 2 at t11
     s "Hi [player]~"
     s "Where are you going?"
@@ -629,9 +629,9 @@ label yuri_exclusive_3:
         y "I'm sorry about earlier..."
         y "I don't know what came over me."
     elif sayori_confess:
-        y "I thought you were going to be spending time with Sayori."
+        y "I thought you were going to be spend time with Sayori."
     else:
-        y "I thought you'd be going to be time with Natsuki."
+        y "I thought you'd be going to be spend time with Natsuki."
     y 1h "But if you still want to spend time with me..."
     y "Well, I can't really stop you."
     mc "Am I that unlikeable?"
@@ -712,7 +712,7 @@ label yuri_exclusive_3:
         "Yuri pulls out a pocket knife."
         "The knife is strangely beautiful."
     "The golden handle has an intricate pattern of chains etched into it."
-    "The blade itself is a careful mix orange and red."
+    "The blade itself is a careful mix of orange and red."
     mc "That's..."
     mc "Pretty cool!"
     y 4b "Eh...?"

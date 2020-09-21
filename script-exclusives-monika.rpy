@@ -83,7 +83,7 @@ label monika_exclusive_1:
     with close_eyes
     "I find myself smiling."
     "I rarely talked to Monika but she seems really passionate for this."
-    "Maybe thats part of her personality."
+    "Maybe that's part of her personality."
     "I can't but help but admire the lengths she would go to for this club."
     "There was no way I could get to know her before."
     "She was leagues above me."
@@ -409,7 +409,7 @@ label monika_exclusive_2:
     "She clutches her forehead."
     show monika 4r zorder 3 at f21
     show sayori zorder 2 at t22
-    m "Be careful you don't hurt yourself Sayori!"
+    m "Be careful. You don't want to hurt yourself, Sayori!"
     show monika zorder 2 at t21
     show sayori zorder 3 at f22
     s "Uuuu..."
@@ -873,7 +873,7 @@ label monika_exclusive_4:
     m 1bh "I disagree."
     m 1be "Doing this chapter could be quite good for the club..."
     mc "Monika..."
-    mc "I don't think Sayori and Yuri are going to want to play people who kill themselves..."
+    mc "I don't think Sayori and Yuri are going to want to play as people who kill themselves..."
     mc "Besides, I doubt anyone will like this chapter..."
     m 1bg "You'd be surprised, [player]..."
     m 1be "This chapter might just do it."

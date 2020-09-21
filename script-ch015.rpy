@@ -1097,7 +1097,7 @@ label ch15_main:
     s 1b "Anything could happen."
     s "I guess it's up to us to decide just how well it goes."
     s "If it's a terrible mess or an exceptional debut for the club."
-    s 3a "Either way, I have a feeling it's going to be something people will be taking about for a while."
+    s 3a "Either way, I have a feeling it's going to be something people will be talking about for a while."
     show sayori zorder 2 at t42
     show natsuki 4c zorder 3 at f43
     n "I wonder what all the other clubs are gonna be doing."

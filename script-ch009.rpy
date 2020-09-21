@@ -1349,7 +1349,7 @@ label ch9_yuridate:
     mc "I wrote it thinking about something really important to me."
     "We stop at a nearby bench before I open my bag."
     "I grab the poem from my bag and hand it to Yuri."
-    "She takes a moment to read it"
+    "She takes a moment to read it."
     y 2po "Oh..."
     y "I don't know what to say..."
     y "No one has ever done this for me before."

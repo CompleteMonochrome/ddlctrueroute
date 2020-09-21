@@ -230,7 +230,7 @@ Can I still rectify my actions?
 Brandishing the knife, I step outside.
 It looks upon me with innocent eyes.
 What do I do?
-Shall I blemish it further, making it stick to it's bad habits?
+Shall I blemish it further, making it stick to its bad habits?
 Shall I rectify myself and force it to adapt?
 The temptation flow strong through my veins...
 It feeds."""
@@ -415,7 +415,7 @@ For all eternity.
 The influence of darkness overbearing
 Every step, another weight on my shoulders
 How was I to traverse through the darkness alone?
-But I wasnt alone
+But I wasn't alone
 The ghost guided my way for so long
 And I never realized.
 
@@ -1047,7 +1047,7 @@ But when we go down, why do we frown?
 A slide is supposed to be happy
 So why do I frown?
 
-Maybe its missing a key.
+Maybe it's missing a key.
 The key to make the slide happy.
 But I try and try and no matter what I do,
 All I can see are mouths pointing down.
@@ -1791,7 +1791,7 @@ I am determined."""
     title = "Replaceable",
     text = """\
 When a tool breaks
-It's purpose is diminished.
+Its purpose is diminished.
 It becomes rubbish
 
 Something for the bin.
@@ -1996,7 +1996,7 @@ Still within,
     A state of limbo.
 
 Everything that will happen
-Its all,
+It's all,
 
     Set into place.
 
@@ -2125,7 +2125,7 @@ Will I be in an empty space forever?
 And that hole.
 Why does it fade?
 It should be getting larger
-    Yet its smaller than ever.
+    Yet it's smaller than ever.
 Is this what I think?
 
 Windows are not mirrors

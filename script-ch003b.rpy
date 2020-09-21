@@ -151,7 +151,7 @@ label ch3_mainc_name:
     stop music fadeout 2.0
     scene bg house
     with wipeleft_scene
-    "I knock the door, before letting myself in."
+    "I knock on the door, before letting myself in."
     "Again, we used to play so often that we've made it a habit of simply entering each other's houses like we were family."
     "Besides..."
     "I think Monika's already here since the door is already open."

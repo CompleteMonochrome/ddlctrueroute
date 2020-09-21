@@ -2361,7 +2361,7 @@ label ch14_end:
         show sayori zorder 2 at t42
         mc "Sayori..."
         mc "I'm sorry I messed up, I really am."
-        mc "I didn't meant to upset anyone."
+        mc "I didn't mean to upset anyone."
         show sayori 1g zorder 3 at f42
         s "Just forget about it, [player]."
         s "Everyone else will, after all."
@@ -2744,7 +2744,7 @@ label ch14_end:
         m "Sayori is probably talking about voting on the books."
         m "If we voted as we are now, we'd probably get five votes on five different books."
         m 3b "In that case, there would be no winner at all."
-        m "There are a few days we could deal with it."
+        m "There are a few ways we could deal with it."
         m "I think the one Sayori is thinking of is narrowing down the book list."
     else:
         show monika 3c zorder 3 at f44

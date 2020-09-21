@@ -204,7 +204,7 @@ label giftexchange_natsuki:
     mc "Are you gonna open it?"
     n 1chh "I haven't decided yet."
     "Natsuki eyes the present."
-    "Her face give all the signs that she's excited to open it."
+    "Her face gives all the signs that she's excited to open it."
     n 1chf "Ah!"
     n "Alright, fine."
     n "You've got me curious."
@@ -614,7 +614,7 @@ label gift_manga_n:
     "I stand in silence as Natsuki reads the first few pages."
     n 2chh "What is up with this art style?"
     mc "I thought the same thing."
-    mc "Maybe it's part of it's charm or something?"
+    mc "Maybe it's part of its charm or something?"
     n 1chi "Well, whatever."
     mc "You don't look impressed."
     n 1chg "I've read the first few pages."
@@ -656,7 +656,7 @@ label gift_knife_y:
     $ christmas_approval += 1
     y 2chf "Is this...some sort of knife?"
     mc "Yes, I think it is."
-    "Yuri takes it out of it's scabbard."
+    "Yuri takes it out of its scabbard."
     y 2chj "Wow."
     "She places her finger on the tip of the knife."
     "A bit of blood comes out from her finger."
@@ -1416,13 +1416,13 @@ label christmas_chapter:
     cl 1chb "Charming, charismatic, beautiful."
     cl "She's a wonderful person."
     cl "She's also a very special person."
-    cl 1chc "Not to just to you but..."
+    cl 1chc "Not just to you but..."
     cl 1chd "N-Never mind."
     cl 1chi "Just don't mess this up, okay?!"
     "The man drops the bag and grabs my shoulders and begins frantically shaking me."
     mc "Alright, whatever!"
     mc "Just stop shaking me around and let go of me!"
-    "I push his hands off of my shoulders and he Immediately picks up the plastic bag as if nothing happened."
+    "I push his hands off of my shoulders and he immediately picks up the plastic bag as if nothing happened."
     mc "Don't worry, I don't want to mess any of this up."
     mc "Why I'm taking suggestions from a stranger who knows way more than he should is beyond me."
     cl 1chb "Same."
@@ -1857,7 +1857,7 @@ label christmas_chapter:
     mc "Is something wrong?"
     show monika 2chd zorder 3 at f53
     m "Well...no."
-    m 1che "It's just that it feels like its been a while since I've addressed the club like this."
+    m 1che "It's just that it feels like it's been a while since I've addressed the club like this."
     show natsuki 1chg zorder 3 at f51
     show monika zorder 2 at t53
     n "What are you talking about?"
@@ -2377,7 +2377,7 @@ label christmas_chapter:
         show sayori 2chr zorder 3 at f52
         show yuri zorder 2 at t55
         s "Ahaha, Yuri!"
-        s "That's sounds like something Natsuki would have said."
+        s "That sounds like something Natsuki would have said."
         show natsuki 2cho zorder 3 at f51
         show sayori zorder 2 at t52
         n "Hey! What's {i}that{/i} supposed to mean?"

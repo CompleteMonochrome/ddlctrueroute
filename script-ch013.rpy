@@ -1511,7 +1511,7 @@ label ch13_end:
             m "You'll get my book list tomorrow as well."
         elif monika_type == 1 and ch12_markov_agree:
             show monika 2a zorder 3 at f22
-            m "I'll get some practice in for Friday."
+            m "I'll get some practice for Friday."
             m "You can expect my book choices in by tomorrow as well."
         else:
             show monika 2a zorder 3 at f22
@@ -3604,7 +3604,7 @@ label ch13_exclusive_natsuki:
         "The events in the last few weeks have been pretty...exciting."
         "Wishing for something normal isn't so bad."
         # Check if player can go on date with Natsuki
-        if n_appeal >= 4 and n_appealS >= 1:
+        if n_appeal >= 4 and n_appealS >= 1 and ((sayori_dumped and sayori_confess) or not sayori_confess):
             "That is kind of a problem though."
             "I had other plans with her."
             "She said she wanted to go outside."
@@ -5358,7 +5358,7 @@ label ch13_exclusive_monika:
         m "I hope it's not too much of a problem."
         mc "Not at all..."
         m 2c "We could have done this at your house but..."
-        m 2e "...I'd like to get some practice in tonight."
+        m 2e "...I'd like to get some practice tonight."
         mc "It's fine, don't worry about it."
         m 5a "Thanks, [player]~"
         m "It really isn't too far now."
@@ -5988,13 +5988,13 @@ label ch13_exclusive_monika:
             m "So...let's get started."
             m "As you already know..."
             m 1b "This book isn't just another book."
-            m "Within in, I've stored a part of myself so that people who read it will..."
+            m "Within it, I've stored a part of myself so that people who read it will..."
             m 3a "Well...let's say they won't be themselves anymore."
             m "You probably already know what I'm talking about, don't you?"
             m 3b "You've realized that I'm not really Monika."
             m "I'm just gonna guess that Sayori knows about this book."
             m 3c "One of the copies I made...well, it's gone."
-            m 1h "Or at least, I can't feel it's existence anymore."
+            m 1h "Or at least, I can't feel its existence anymore."
             m "That doesn't really matter."
             m "What does, is that we still have two copies that we can use."
             m 1i "The one I'm holding...which belonged to [player]."

@@ -610,12 +610,12 @@ label christmas2_chapter:
     show monika 3a zorder 3 at f51
     show sayori zorder 2 at t52
     m "I guess that's it! The last meeting of me as the president is officially over."
-    m 3b "When I all see you next, I hope you've made an effort to celebrate this festive season."
+    m 3b "When I see you all next, I hope you've made an effort to celebrate this festive season."
     m "Meeting adjourned!"
     m 3l "...I always wanted to say that, but it always felt so cheesy."
     show monika zorder 2 at t51
     show ayame 1h zorder 3 at f55
-    ay "Well, what better time to say it then at your last meeting as president?"
+    ay "Well, what better time to say it than at your last meeting as president?"
     show monika 1a zorder 3 at f51
     show ayame zorder 2 at t55
     m "My thoughts exactly, Ayame."
@@ -801,7 +801,7 @@ label christmas2_chapter:
     else:
         "I thought the last time I met him would be the last I would see of him."
         "But clearly not."
-        "Are him and I connected somehow?"
+        "Are he and I connected somehow?"
         "...No, that's ridiculous."
         "He's just a weird guy that just happens to be at the wrong place at the right time."
     "Judging by the way he was talking, it's almost definite that I'll see him tomorrow."
@@ -852,7 +852,6 @@ label christmas2_chapter:
     window show(None)
     m "Perhaps it would be easier if I show myself.{fast}"
     window auto
-    m "Perhaps it would be easier if I show myself."
     m 1be "Right now, we're in the transition process of the presidency."
     m "It won't be long now until you become the president of the Literature Club."
     mc "I don't understand what's going on."
@@ -1037,7 +1036,7 @@ label christmas2_chapter:
     cl 5chf "You don't need me to tell you that."
     cl "And...right on queue."
     show ayame 1bj zorder 3 at f33
-    ay "[player]? And whos this?"
+    ay "[player]? And who's this?"
     "Ayame approaches me carrying some shopping bags."
     "She sees me look at them and laughs."
     ay 2bh "Oh, don't worry about these. These are for something else."
@@ -1050,7 +1049,7 @@ label christmas2_chapter:
     cl "Me? I don't believe we've had the pleasure of meeting."
     cl 5chd "But sadly, we'll have to get better acquainted at some other time."
     cl "As I am afraid I have run my course."
-    cl 5chb "Fare the well, maiden."
+    cl 5chb "Fare thee well, maiden."
     show mysteriousclerk at thide
     hide mysteriousclerk
     "[cl_name] quickly leaves the scene."
@@ -1448,7 +1447,7 @@ label christmas2_chapter:
     mc "You sure are full of surprises, aren't you?"
     ay 2m "I try to be. Just like today seems to be."
     ay 2j "I mean...snow? Seriously?"
-    ay "That's something I never would thought I'd see here."
+    ay "That's something I never would have thought I'd see here."
     ay "I've been overseas and seen it, but to be home and witness it for myself..."
     ay 2d "Let's just say it seems nothing short of a miracle."
     mc "It does seem something like that, doesn't it?"
@@ -1507,7 +1506,7 @@ label christmas2_chapter:
     "She takes the little miniature I made of her and hugs it."
     m 1l "It's so adorable. It's like a tiny version of me."
     m 1k "I love it. Thank you so much."
-    mc "There was two ways I thought that would go."
+    mc "There were two ways I thought that would go."
     mc "You would either love it or be really creeped out by it."
     mc "I'm so glad it wasn't the creeped out option."
     m 3a "Don't worry, this is amazing. I'll cherish this gift forever."

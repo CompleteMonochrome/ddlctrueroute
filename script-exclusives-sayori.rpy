@@ -596,12 +596,12 @@ label sayori_exclusive_3:
     m "Try to have some fun, okay?"
     show monika at thide
     hide monika
-    "Monika smiles sweetly and walks out the clubroom."
+    "Monika smiles sweetly and walks out of the clubroom."
     "I hear Monika and Sayori chat briefly before Monika heads off."
     play music t6say fadeout 1
     scene bg corridor
     with wipeleft_scene
-    "I go out the clubroom and see Sayori talking to a dozen or so people."
+    "I go out of the clubroom and see Sayori talking to a dozen or so people."
     show sayori 4d zorder 2 at t11
     s "Hi [player]~"
     s "Where are you going?"
@@ -838,7 +838,7 @@ label sayori_exclusive_4:
     s 1bf "It's like I have to manage everything..."
     s "Because if I don't, then someone is gonna mess up."
     s 1bh "And I'll feel bad because I didn't do anything to help them."
-    s "You can't imagine what that feels like [player]."
+    s "You can't imagine what that feels like, [player]."
     mc "I guess I can't."
     if sayori_confess:
         mc "But you're really important to me, so the least I can do is try to understand."

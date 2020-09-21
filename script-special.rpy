@@ -208,7 +208,7 @@ label special_chapter:
     s "We're going to sneak into her house and--"
     show sayori zorder 2 at t32
     mc "Are you crazy, Sayori?"
-    mc "I know you and Monika and close because you're the vice president and everything but..."
+    mc "I know you and Monika are close because you're the vice president and everything but..."
     mc "Isn't that crossing some kind of line?"
     show sayori 1bl zorder 3 at f32
     s "Just hear me out, okay?"

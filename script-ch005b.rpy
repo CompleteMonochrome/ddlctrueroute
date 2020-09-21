@@ -44,6 +44,7 @@ label ch5_mainb:
     $ chances = 3
 
     python:
+        renpy.store.save_name = chapter_names[chapter]
         renpy.take_screenshot()
         renpy.save("1-1")
     "It's the day of the festival."

@@ -656,7 +656,7 @@ label natsuki_exclusive_3:
     play music t6say fadeout 1
     scene bg corridor
     with wipeleft_scene
-    "I make my way out the clubroom and see Sayori talking to some people."
+    "I make my way out of the clubroom and see Sayori talking to some people."
     show sayori 4d zorder 2 at t11
     s "Hi [player]~"
     s "Where are you going?"
@@ -677,7 +677,7 @@ label natsuki_exclusive_3:
     "I give her a wave before trying to find the food stalls."
     scene bg gym
     with wipeleft_scene
-    "Well, the smell of food lead me to the gym."
+    "Well, the smell of food led me to the gym."
     "This is a really strange spot to be putting food stalls."
     "They must be doing it to guilt people into joining sports clubs."
     "I notice Natsuki arguing with one of the people at a stall."
@@ -760,7 +760,7 @@ label natsuki_exclusive_3:
     n 4s "[player]..."
     mc "Sorry, I didn't know if you'd like it."
     mc "So I took a wild guess..."
-    mc "But the strawberries in it reminded of you."
+    mc "But the strawberries in it reminded me of you."
     n 3u "This is..."
     n "Y-You didn't have to spend so much for me..."
     n "Now you're making me feel bad about it..."
@@ -793,7 +793,7 @@ label natsuki_exclusive_3:
     n "We have food in the Literature Club, don't we?"
     n "The cupcakes and..."
     n "Umm..."
-    "There wasn't actually that many cupcakes to begin with - only two trays worth."
+    "There weren't actually that many cupcakes to begin with - only two trays worth."
     "Now that Sayori's giving people two each to bribe them into visiting the club..."
     "I don't think there will be any left."
     "But I play along with Natsuki, it's easier that way."
