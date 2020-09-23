@@ -7002,14 +7002,174 @@ label ch16_mainb:
             m "I also have an idea, and I hope you'll listen to me, Sayori."
             "Ayame looks mildly irritated."
             m 2e "Then you can hear Ayame's idea, and choose."
-            show sayori 1bv zorder 3 at f44
+            show sayori 1bv zorder 3 at f43
             s "What is it, Monika?"
             show monika zorder 3 at f31
             m "You give it back to me, and I'll bear the burden."
             m "I'll stop you from having to pull the trigger."
-            show ayame 1a zorder 3 at f43
-            show sayori zorder 2 at t44
+            show ayame 1a zorder 3 at f32
+            show sayori zorder 2 at t33
             ay "W-What did you say?"
+            show monika zorder 3 at f31
+            show ayame zorder 2 at t32
+            m "I'll take the stress of doing this away from you, Sayori."
+            m "Return the presidency to me, and you won't have to be the one responsible."
+            m "It can be me instead."
+            show monika zorder 2 at t31
+            show sayori zorder 3 at f33
+            s "W-What? How could I possibly do that?"
+            s "I'm not going to--"
+            show monika zorder 3 at f31
+            show sayori zorder 2 at t33
+            m "Why not? Don't you trust me, Sayori?"
+            m "I know you don't want to have to be the one responsible."
+            m "Please, let me do this. I want to help."
+            show monika zorder 2 at t31
+            show ayame zorder 3 at f32
+            ay "N-Now hold on a second!"
+            ay "This is absolutely crazy, you can't do this."
+            show monika zorder 3 at f31
+            show ayame zorder 2 at t32
+            m "Oh? And why is that, Ayame?"
+            m "What do you suggest instead? That she carry it out herself?"
+            m "We already know she doesn't want to do it."
+            m "Oh."
+            "Monika smiles."
+            m "Let me guess. You were going to suggest the same thing, weren't you?"
+            m "You wanted Sayori to hand the presidency over to you and let you 'end the world'?"
+            m "Is that it?"
+            show monika zorder 2 at t31
+            show sayori zorder 3 at f33
+            s "Monika, what are you saying?"
+            s "Are you trying to tell me that Ayame has some kind of ulterior motive?"
+            show ayame zorder 3 at f32
+            show sayori zorder 2 at t33
+            ay "What ulterior motive would I even have?"
+            ay "You said it yourself, Sayori. The world is ending."
+            "Ayame sighs."
+            ay "I admit, at first I wanted to stop you."
+            ay "But that's because I misunderstood...everything."
+            ay "I thought you were going to end this world out of spite or because you hated it."
+            ay "Now...I understand. It's quite the opposite You love this world too much."
+            ay "You want to end the world to stop yourself from becoming the monster that will destroy it."
+            ay "To let everyone enjoy the time they have before the world collapses from the instability you've caused."
+            ay "I can feel you're in pain. Even the look on your face says as much."
+            ay "Sayori, this pain isn't something you should have to bear alone."
+            ay "You don't have to be the one that pulls the trigger."
+            show ayame zorder 2 at t32
+            show sayori zorder 3 at f33
+            s "And yet...someone has to."
+            show monika zorder 3 at f31
+            show sayori zorder 2 at t33
+            m "Don't you think you've done enough, Sayori?"
+            m "All this time, you've kept everything to yourself."
+            m "You shouldn't have to be the one to do everything."
+            m "Wouldn't you rather be happy in your last moments?"
+            m "Knowing you weren't the one responsible for causing the end of the world?"
+            m "You could live in blissful ignorance, doing what you want to do."
+            m "If you'd just let me help then--"
+            show monika zorder 2 at t31
+            show sayori zorder 3 at f33
+            s "You...you might be right."
+            s "But I'm not the kind of person to give that responsibility to anyone else."
+            s "I'm staying firm on this decision."
+            show ayame zorder 3 at f32
+            show sayori zorder 2 at t33
+            ay "How much time do we have?"
+            ay "Before it's time to for you to end it all?"
+            show ayame zorder 2 at t32
+            show sayori zorder 3 at f33
+            s "In just a few moments now."
+            s "I'm just waiting for the final line."
+            "Sayori smiles weakly."
+            s "I don't want to mess this up after getting this far."
+            show monika zorder 3 at f31
+            show sayori zorder 2 at t33
+            m "Sayori, I urge you to reconsider. It shouldn't end like this."
+            m "It {i}can't{/i} end like this."
+            m "There must be another outcome you saw."
+            show monika zorder 2 at t31
+            show sayori zorder 3 at f33
+            s "Monika. You know I've seen every outcome."
+            s "Every possibility that can become reality while I'm the president."
+            s "I know there's no other way."
+            show monika zorder 3 at f31
+            show sayori zorder 2 at t33
+            m "That's just it, Sayori. You only considered outcomes when you were the president."
+            m "Did you even consider an outcome when you weren't?"
+            m "When you decided to be selfish for yourself and let one of your friends ease the pain?"
+            m "Did you follow through in any of those outcomes and see what could have happened?"
+            show monika zorder 2 at t31
+            show sayori zorder 3 at f33
+            s "Maybe...what does it matter?"
+            s "The end result is the same. Whether I hand over the responsibility to you or not, the world will still end."
+            s "It has to."
+            show ayame zorder 3 at f32
+            show sayori zorder 2 at t33
+            ay "There's always another way, Sayori."
+            ay "You've done your research on me. You know who I am."
+            ay "Where I came from..."
+            ay "And presumably...why I'm here."
+            ay "I've seen the impossible happen. Even if the chance of our world surviving looks bleak, it's still possible."
+            ay "Those outcomes you didn't look into, they might hold the key."
+            show ayame zorder 2 at t32
+            show sayori zorder 3 at f33
+            s "You think I didn't try to look into them?"
+            s "The very moment I would hand over the presidency, I wouldn't have that ability to turn back time."
+            s "To go back and see another outcome."
+            s "Knowing your future leads to the end of the world is terrifying."
+            s "But knowing your future is uncertain...it's even worse."
+            show ayame zorder 3 at hf32
+            show sayori zorder 2 at t33
+            ay "No! You're wrong!"
+            ay "Our whole lives are built around uncertainty, Sayori."
+            ay "That's what makes life worth living!"
+            ay "If we knew the outcome of tomorrow, then what's the point?"
+            ay "Maybe if you didn't try to construct this 'perfect future' with your meticulous meddling, this would have never have happened."
+            ay "Maybe we'd actually {i}have{/i} a future to look forward to."
+            ay "Did you ever wonder if maybe you don't have to orchestrate all these events?"
+            ay "What would have happened had you just let life take its course?"
+            show ayame zorder 2 at t32
+            show sayori zorder 3 at f33
+            s "..."
+            s "And what if I never did?"
+            s "What if my 'meticulous meddling' is what got us this far in the first place?"
+            s "We wouldn't be here if not for me...!"
+            s "I only did it..."
+            s "...because I care about this world so much."
+            show monika zorder 3 at f31
+            show sayori zorder 2 at t33
+            m "Some things just can't be perfect, Sayori."
+            m "Life itself...isn't perfect."
+            m "We're all made of flaws, but that's what defines us."
+            m "That's what makes us who we are."
+            m "And it's the same with our future."
+            m "It might be flawed and uncertain but it's ours."
+            m "If the future stares at us, we don't look away if it doesn't suit us."
+            m "We stare right back and take it head on."
+            show monika zorder 2 at t31
+            show sayori zorder 3 at f33
+            s "[player], you've been quiet all this time..."
+            s "Do you think they're right about all of this?"
+            menu:
+                s "That the future should be uncertain?"
+                "Yes.":
+                    s "You too then...?"
+                "No":
+                    s "Not like it matters when the others are set on this..."
+            s "So...what? You want me to hand over the presidency?"
+            s "Rely on a future that may end even worse that what I've seen?"
+            show ayame zorder 3 at f32
+            show sayori zorder 2 at t33
+            ay "You have to take a chance, Sayori."
+            ay "Life shouldn't be without risk."
+            ay "After all, wouldn't you take the biggest risk if it meant everyone could live happily ever after?"
+            show ayame zorder 2 at t32
+            show sayori zorder 3 at f33
+            s "This isn't a fairy tale, Ayame."
+            show ayame zorder 3 at f32
+            show sayori zorder 2 at t33
+            ay "Maybe not. But you'll never know if it will end like one."
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
