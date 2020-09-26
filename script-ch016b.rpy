@@ -5472,7 +5472,7 @@ label ch16_mainb:
         ay "I've lived my life..."
         ay "Wouldn't you rather spend the final moments of the world living yours?"
         ay "Rather than have the burden of the presidency."
-        ay "You won't have to guilty in your final moments."
+        ay "You won't have to be guilty in your final moments."
         ay "It's a chance to be free."
         show ayame zorder 2 at t43
         show sayori zorder 3 at f44
@@ -7050,7 +7050,7 @@ label ch16_mainb:
             ay "I admit, at first I wanted to stop you."
             ay "But that's because I misunderstood...everything."
             ay "I thought you were going to end this world out of spite or because you hated it."
-            ay "Now...I understand. It's quite the opposite You love this world too much."
+            ay "Now...I understand. It's quite the opposite. You love this world too much."
             ay "You want to end the world to stop yourself from becoming the monster that will destroy it."
             ay "To let everyone enjoy the time they have before the world collapses from the instability you've caused."
             ay "I can feel you're in pain. Even the look on your face says as much."
@@ -7076,7 +7076,7 @@ label ch16_mainb:
             show ayame zorder 3 at f32
             show sayori zorder 2 at t33
             ay "How much time do we have?"
-            ay "Before it's time to for you to end it all?"
+            ay "Before it's time for you to end it all?"
             show ayame zorder 2 at t32
             show sayori zorder 3 at f33
             s "In just a few moments now."
@@ -7158,7 +7158,7 @@ label ch16_mainb:
                 "No":
                     s "Not like it matters when the others are set on this..."
             s "So...what? You want me to hand over the presidency?"
-            s "Rely on a future that may end even worse that what I've seen?"
+            s "Rely on a future that may end even worse than what I've seen?"
             show ayame zorder 3 at f32
             show sayori zorder 2 at t33
             ay "You have to take a chance, Sayori."
@@ -7170,6 +7170,171 @@ label ch16_mainb:
             show ayame zorder 3 at f32
             show sayori zorder 2 at t33
             ay "Maybe not. But you'll never know if it will end like one."
+            ay "Especially if you've already limited yourself to the futures you saw."
+            ay "Don't you want to at least give them a chance?"
+            show ayame zorder 2 at t32
+            show sayori zorder 3 at f33
+            s "It's not worth the risk. What if it ends up being worse?"
+            s "What if we all end up suffering more because of it?"
+            s "The world will still end, sooner or later."
+            s "I've already thought about this, there's no--"
+            show monika zorder 3 at f31
+            show sayori zorder 2 at t33
+            m "That's ridiculous, Sayori. You have to take a risk sometimes."
+            m "What it seems to me is that you're depriving us of our future."
+            show monika zorder 2 at t31
+            show sayori zorder 3 at f33
+            s "Maybe. But our future is bleak, no matter how you look at it."
+            s "So why bother seeing it?"
+            show monika zorder 3 at f31
+            show sayori zorder 2 at t33
+            m "Because it's not your right to take it away from me."
+            m "I mean...from us."
+            show monika zorder 2 at t31
+            show sayori zorder 3 at f33
+            s "So that's it, is it?"
+            s "You didn't really want to save me from the burden of having to do it."
+            s "You just wanted to live on. You wanted to trick me."
+            s "Though I guess I shouldn't be so surprised. I knew this is how it could turn out."
+            show monika zorder 3 at f31
+            show sayori zorder 2 at t33
+            m "N-No, I..."
+            m "...I just..."
+            show monika zorder 2 at t31
+            show ayame zorder 3 at f32
+            ay "She has a point, you know. Maybe approaching it with false pretenses was wrong but..."
+            ay "There's nothing wrong with wanting to live."
+            ay "In her shoes, I would try to do the same thing."
+            show ayame zorder 2 at t32
+            show sayori zorder 3 at f33
+            s "I could just end it all now."
+            s "And I wouldn't have to feel so conflicted about all of this."
+            show monika zorder 3 at f31
+            show sayori zorder 2 at t33
+            m "But you won't, will you?"
+            m "At least, not until the time is right."
+            m "Is there really nothing I can say or do to change your mind?"
+            show monika zorder 2 at t31
+            show sayori zorder 3 at f33
+            if sayori_personality < 2:
+                s "Why do the two of you have to make this so difficult?"
+                s "Even though I already know how this goes, it's still so hard..."
+                s "I'll admit. There is a part of me that wants to do this."
+                s "That wants to hand over this responsibility and see the uncertain future you two are talking about."
+                s "But..."
+                show ayame zorder 3 at f32
+                show sayori zorder 2 at t33
+                ay "But...?"
+                show ayame zorder 2 at t32
+                show sayori zorder 3 at f33
+                s "It sounds selfish, but I'll miss being able to do these things."
+                s "To be able to look ahead and make things right."
+                s "To make these days and know that I was the reason people could smile."
+                s "I never asked for this responsibility...I wanted nothing to do with it."
+                s "Monika, when you first disappeared and this power came over to me, I was confused."
+                s "Then...I was angry. Angry that you gave {i}me{/i} this responsibility."
+                s "Angry that you gave up your own life to save mine."
+                s "I didn't think my life was worth yours, Monika."
+                s "I hated that you did that for someone like me."
+                show monika zorder 3 at f31
+                show sayori zorder 2 at t33
+                m "Sayori, I..."
+                m "I had no idea."
+                show monika zorder 2 at t31
+                show sayori zorder 3 at f33
+                s "But when you came back, that all changed."
+                s "I saw it as a new chance. A way to make things right."
+                s "A way to let everyone else experience what I did."
+                s "To get their happy ending."
+                s "But now, I won't be able to do that."
+                s "I'll have to give it up for a future that may end up the same way anyway."
+                show ayame zorder 3 at f32
+                show sayori zorder 2 at t33
+                ay "You've already achieved that, haven't you?"
+                ay "It's time to rest and pass on the responsibility."
+                show ayame zorder 2 at t32
+                show sayori zorder 3 at f33
+                s "Maybe you're right."
+                s "It's just that after having this much control over everything..."
+                s "Losing it all is so scary."
+                show monika zorder 3 at f31
+                show sayori zorder 2 at t33
+                m "You just need to have some faith, Sayori."
+                m "Faith that I'll get us through this uncertain future."
+                show monika zorder 2 at t31
+                show sayori zorder 3 at f33
+                s "I guess you're right, Monika..."
+                show ayame zorder 3 at f32
+                show sayori zorder 2 at t33
+                ay "Wait a second, Sayori."
+                ay "Are you absolutely sure about this?"
+                ay "D"
+            else:
+                s "I've really thought about this."
+                s "I just can't trust any of you to stay on the right path."
+                s "If I actually handed over the presidency, I don't know what you'll do."
+                s "This is the only way."
+                show ayame zorder 3 at f32
+                show sayori zorder 2 at t33
+                ay "Well, I guess this is how it all ends then."
+                ay "Part of me is finally grateful that it's finally all over."
+                if ch16_ay_gave_control:
+                    ay "But another part of me is--"
+                    $ pause(1.0)
+                    $ style.say_dialogue = style.edited
+                    ay "No."
+                    ay "I refuse."
+                    $ style.say_dialogue = style.normal
+                    show ayame zorder 2 at t32
+                    show sayori zorder 3 at f33
+                    s "Ah, that's right. You gave her control, didn't you?"
+                    s "At least in this series of events."
+                    s "I'm sorry, Ayame."
+                    show ayame zorder 3 at f32
+                    show sayori zorder 2 at t33
+                    $ style.say_dialogue = style.edited
+                    ay "You won't stop me here, Sayori."
+                    ay "I will get that power, one way or another."
+                    $ style.say_dialogue = style.normal
+                    "Ayame grabs Sayori and pins her against the wall."
+                    "Sayori just closes her eyes."
+                    $ style.say_dialogue = style.edited
+                    ay "You're going to give me that power."
+                    ay "Whether you like it or not."
+                    $ style.say_dialogue = style.normal
+                    show monika zorder 3 at f31
+                    show ayame zorder 2 at t32
+                    m "A-Ayame, what are you doing?"
+                    show monika zorder 2 at t31
+                    show sayori zorder 3 at f33
+                    s "I'm sorry, Ayame."
+                    s "I already told you, I've seen all the outcomes."
+                    s "I came prepared for this."
+                    s "She's trying to take the power from me forcefully."
+                    s "But it won't work."
+                    show ayame zorder 3 at f31
+                    show sayori zorder 2 at t33
+                    $ style.say_dialogue = style.edited
+                    ay "You greatly underestimate my capabilities, Sayori."
+                    ay "You there. Hold her still."
+                    show ayame zorder 2 at t31
+                    $ style.say_dialogue = style.normal
+                    "Ayame looks at my direction."
+                    if ch16_ay_drink:
+                        "I feel an odd sensation take over my body."
+                        mc "H-Huh?"
+                    else:
+                        "I look behind me to see who she's talking to."
+                        "But there's no one there."
+                else:
+                    ay "But another part of me is filled with anger."
+                    ay "Anger that I couldn't finally achieve my goal."
+                    ay "But the alternative seems a lot worse anyway."
+                    ay "So I guess I'll have to be content in my final moments, won't I?"
+                    show monika zorder 3 at f31
+                    show ayame zorder 2 at t32
+                    m "Is this really how it ends?"
+                call ch16_sayori_president
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return

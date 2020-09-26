@@ -238,7 +238,7 @@ label ch5_mainb:
     show sayori 1u zorder 2 at t11
     "I don't recognize the handwriting and bits of it seem to be missing."
     mc "Sayori?"
-    mc "Who's poem is this?"
+    mc "Whose poem is this?"
     mc "It doesn't look like yours, Natsuki's or Yuri's handwriting."
     mc "And the style doesn't seem like anything I recognize."
     s "You don't remember, do you?"
