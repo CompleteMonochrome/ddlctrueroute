@@ -12,3 +12,6 @@ label ch16_markov_president:
 
 label ch16_sayori_president:
     return
+
+label ch16_mc_president:
+    return

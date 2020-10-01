@@ -2911,7 +2911,7 @@ label ch16_mainb:
         mc "To stop her from going through with this."
         mc "Are the two of you really going to give up so easily?"
         ay "...You know there's no reaching her."
-        if monika_type == 0:
+        if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
             m "I...can't take this any longer!"
         else:
             m "Pathetic."
@@ -6855,7 +6855,7 @@ label ch16_mainb:
         s "...That's not true! You were just--"
         show monika 2o zorder 3 at f31
         show sayori zorder 2 at t33
-        if monika_type == 0:
+        if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
             m "Sayori, you know this isn't right."
             m "I know deep down, you know there's another way."
             m "A better way."
@@ -6929,7 +6929,7 @@ label ch16_mainb:
         ay 1a "So her thought process is..."
         show monika zorder 3 at f31
         show ayame zorder 2 at t32
-        if monika_type == 0:
+        if monika_type == 0 or (monika_type == 1 and ch12_markov_agree):
             m 1p "It's flawed but she's just trying to look out for us."
             m "I can't entirely blame her for her actions."
             if persistent.markov_agreed:
@@ -7268,7 +7268,113 @@ label ch16_mainb:
                 show sayori zorder 2 at t33
                 ay "Wait a second, Sayori."
                 ay "Are you absolutely sure about this?"
-                ay "D"
+                ay "Do you know what it is you're actually doing?"
+                ay "You're giving over complete control of this world...to Monika."
+                show ayame zorder 2 at t32
+                show sayori zorder 3 at f33
+                s "I'm not completely sure about this..."
+                s "But Monika has been the president before."
+                s "She was the one before me."
+                show ayame zorder 3 at f32
+                show sayori zorder 2 at t33
+                ay "And how did that turn out?"
+                ay "She transferred the presidency over to you because of what she did."
+                ay "What makes you think she won't do something like that again in the future?"
+                show ayame zorder 2 at t32
+                show sayori zorder 3 at f33
+                s "What are you suggesting, Ayame?"
+                show monika zorder 3 at f31
+                show sayori zorder 2 at t33
+                m "Now hold on a second, Sayori."
+                if monika_type == 0 and not persistent.markov_agreed:
+                    m "I've changed. You know that."
+                    m "If you truly believe that this is the right way forward..."
+                    m "...then I'll accept the presidency."
+                    m "But ultimately, I'll leave the decision to you."
+                    m "I know you'll do the right thing."
+                elif (monika_type == 1 and ch12_markov_agree) or (monika_type == 0):
+                    m "Sayori, you know me better than that."
+                    m "You can trust me, can't you?"
+                    m "After all we've been through together, I'm surprised you're having second thoughts."
+                    m "If you do hand over the presidency to me, I won't repeat those mistakes."
+                    m "I know I can do better!"
+                else:
+                    m "Are you really going to listen to what Ayame is going to say?"
+                    m "You know as well as I that she can't be trusted."
+                    m "We haven't even known her that long."
+                show monika zorder 2 at t31
+                show sayori zorder 3 at f33
+                s "Even so...I want to hear what she has to say."
+                show ayame zorder 3 at f32
+                show sayori zorder 2 at t33
+                ay "Now you might not like this."
+                ay "But please, consider it before you rule it out."
+                ay "I'm asking you to pass the presidency to me."
+                show monika zorder 3 at f31
+                show ayame zorder 2 at t32
+                if monika_type == 0 and not persistent.markov_agreed:
+                    m "I feel kind of uneasy about that."
+                    m "I just don't know what your intentions are, Ayame."
+                    m "You seem like a nice person but...you could be hiding something under all of that."
+                    m "You're asking for a whole lot of trust that I don't think you've earned."
+                    m "Not long ago, you made it your goal to stop Sayori no matter the cost."
+                    m "Perhaps I'm wrong and there's something I don't know that Sayori does."
+                    m "I just thought I'd give you my thoughts on this matter, Sayori."
+                    m "But as I said, if you think it's the right decision, Sayori, I'll trust you."
+                elif (monika_type == 1 and ch12_markov_agree) or (monika_type == 0):
+                    m "Forgive me if I sound cynical, but are you serious?"
+                    m "You're asking Sayori to put a lot of trust in you."
+                    m "You've not done much to earn it, if you want me to be honest."
+                    m "In fact, were you not doing everything in your power to stop Sayori?"
+                    m "I just think Ayame isn't the best choice here, Sayori."
+                else:
+                    m "You're not serious, are you?"
+                    m "I can't believe you have the gall to even suggest that."
+                    m "What have you done to {i}deserve{/i} that, Ayame?"
+                    m "You were trying your hardest to stop Sayori and now you're asking her to hand over that kind of power to you?"
+                    m "You must be crazy."
+                show monika zorder 2 at t31
+                show ayame zorder 3 at f32
+                ay "You and I were both trying to stop Sayori."
+                ay "For the sake of this world."
+                ay "You may not trust me, Sayori but you know my history."
+                ay "You know what I'm capable of doing and what I've been through."
+                ay "The future will be safe in my hands, which is more than I can say for Monika."
+                show ayame zorder 2 at t32
+                show sayori zorder 3 at f33
+                s "What are you trying to say?"
+                show ayame zorder 3 at f32
+                show sayori zorder 2 at t33
+                ay "I'm not sure if you're being oblivious on purpose or if you really don't know."
+                ay "Surely you can see that Monika cannot be trusted."
+                ay "Not with the presidency and certainly not our future."
+                show monika zorder 3 at f31
+                show ayame zorder 2 at t32
+                if monika_type == 0 and not persistent.markov_agreed:
+                    m "Oh...and why is that?"
+                else:
+                    m "That's quite the accusation."
+                show monika zorder 2 at t31
+                show ayame zorder 3 at f32
+                ay "I know you've read that book, Monika."
+                ay "I know that once you've been corrupted by it, there's no going back."
+                menu:
+                    "Who should get the presidency?"
+                    "Me." if sayori_date and sayori_personality == 0 and not persistent.markov_agreed:
+                        call ch16_mc_president
+                    "Monika." if not persistent.markov_agreed:
+                        if monika_type == 0 and not persistent.markov_agreed:
+                            call ch16_monika_president
+                        elif (monika_type == 1 and ch12_markov_agree):
+                            call ch16_markov_president
+                        else:
+                            call ch16_markov_president
+                    "Ayame." if not persistent.markov_agreed:
+                        if ch16_ay_gave_control:
+                            call ch16_old_ayame_president
+                        else:
+                    "Sayori." if not persistent.markov_agreed:
+                        call ch16_sayori_president
             else:
                 s "I've really thought about this."
                 s "I just can't trust any of you to stay on the right path."
@@ -7323,6 +7429,7 @@ label ch16_mainb:
                     if ch16_ay_drink:
                         "I feel an odd sensation take over my body."
                         mc "H-Huh?"
+                        call ch16_old_ayame_president
                     else:
                         "I look behind me to see who she's talking to."
                         "But there's no one there."
@@ -7407,14 +7514,14 @@ label ch16_mainb:
                         "Monika is now directly behind Sayori."
                         "Sayori seems to have no idea and is still looking out the window."
                         "Monika takes out the shiny object from behind her."
-                        "I can see it clearly now. It's a knife."
+                        "I can see it clearly now. It's like a small knife, like some sort of shiv."
                         "But...what is she planning to do with it?"
                         show sayori zorder 3 at f33
                         s "There was a future where Ayame wasn't the problem."
                         s "It just seemed so out of place and I couldn't really believe it."
                         s "Where instead, the real problem was--"
                         show sayori zorder 2 at t33
-                        "Sayori is suddenly interrupted when Monika takes the knife and puts it into Sayori's back."
+                        "Sayori is suddenly interrupted when Monika takes the shiv and puts it into Sayori's back."
                         "What the hell?! Did Monika really just do that?!"
                         show monika zorder 2 at t32
                         show sayori zorder 3 at f33
@@ -7424,7 +7531,7 @@ label ch16_mainb:
                         m "You should have sensed something was wrong, Sayori."
                         "Monika's eyes turn a deep red."
                         "It's like she's thirsting for blood."
-                        "She twists the knife deeper into Sayori's back."
+                        "She twists the shiv deeper into Sayori's back."
                         m "You should realized that anything is a possibility."
                         show monika zorder 2 at t32
                         show sayori at thide
@@ -7453,6 +7560,21 @@ label ch16_mainb:
                         "She closes her eyes and takes deep breaths."
                         "Sayori is just there, on the floor motionless."
                         "I'm powerless to do anything."
+                        "But what is Monika even doing?"
+                        "Whatever it is, it doesn't look good. Not at all."
+                        "She's not going to kill Sayori...is she?"
+                        "Monika looks at my face and sees the look on my face."
+                        m "Oh, don't be ridiculous."
+                        m "I wouldn't kill Sayori, at least not yet."
+                        m "I need to take what's mine first."
+                        m "And what would that be?"
+                        m "Well, you're about to find out."
+                        "I can slowly feel myself regaining control of my body."
+                        "If I try hard enough, I can just move my fingers."
+                        if persistent.markov_agreed:
+                            call ch16_markov_president
+                        else:
+                            call ch16_sayori_president
                 else:
                     ay "But another part of me is filled with anger."
                     ay "Anger that I couldn't finally achieve my goal."
@@ -7462,7 +7584,8 @@ label ch16_mainb:
                     show ayame zorder 2 at t32
                     m "Is this really how it ends?"
                     m "This can't be it, can it?"
-                call ch16_sayori_president
+                    if
+                    call ch16_sayori_president
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     return
