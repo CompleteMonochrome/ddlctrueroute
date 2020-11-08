@@ -7375,7 +7375,6 @@ label ch16_mainb:
                 s "That doesn't make any sense..."
                 s "I read it myself but..."
                 show ayame zorder 3 at f32
-<<<<<<< HEAD
                 show sayori zorder 2 at t33
                 ay "What?!"
                 ay "Tell me you didn't just say that."
@@ -7450,8 +7449,6 @@ label ch16_mainb:
                 "The three of them turn towards me."
                 show monika zorder 3 at f31
                 m "Ah, of course."
-=======
->>>>>>> 796bae27d70a76fd03f9313a71b2e172648393f7
                 menu:
                     "Who should get the presidency?"
                     "Me." if sayori_date and sayori_personality == 0 and not persistent.markov_agreed:
@@ -7573,7 +7570,6 @@ label ch16_mainb:
                         show ayame zorder 3 at f32
                         ay "That's what I thought."
                         ay "Now, let me finish here and then we can go."
-<<<<<<< HEAD
                         show ayame zorder 2 at t32
                         "My body is still frozen in place."
                         "Monika looks at Ayame and nods solemnly."
@@ -7584,8 +7580,6 @@ label ch16_mainb:
                         show ayame zorder 3 at f32
                         ay "It's almost done."
                         ay "Soon, it will be all mine."
-=======
->>>>>>> 796bae27d70a76fd03f9313a71b2e172648393f7
                         call ch16_old_ayame_president
                     else:
                         "I look behind me to see who she's talking to."
@@ -7731,12 +7725,8 @@ label ch16_mainb:
                         "But the rest of my body is still frozen."
                         "Monika releases Sayori's head and walks over to me."
                         m "I've waited so, so long for this moment."
-<<<<<<< HEAD
                         m "For the moment when I can finally take what is rightfully mine."
 
-=======
-                        m "Where I can finally"
->>>>>>> 796bae27d70a76fd03f9313a71b2e172648393f7
                         if persistent.markov_agreed:
                             call ch16_markov_president
                         else:
