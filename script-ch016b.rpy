@@ -7358,6 +7358,97 @@ label ch16_mainb:
                 show ayame zorder 3 at f32
                 ay "I know you've read that book, Monika."
                 ay "I know that once you've been corrupted by it, there's no going back."
+                ay "There's no way to get rid of it."
+                ay "It's like a plague that won't go away. Festering your soul away."
+                ay "Until you're filled with pure hate for the world."
+                ay "I know because..."
+                ay "I read the book. I was corrupted by it."
+                show monika zorder 3 at f31
+                show ayame zorder 2 at t32
+                m "If you're corrupted then why would the future be any safer with you?"
+                m "You said it yourself, there's no going back."
+                m "And who's to say I actually have read that book?"
+                m "It's pure speculation."
+                show monika zorder 2 at t31
+                show sayori zorder 3 at f33
+                s "'That book'? Are you two talking about what I think you are?"
+                s "That doesn't make any sense..."
+                s "I read it myself but..."
+                show ayame zorder 3 at f32
+                show sayori zorder 2 at t33
+                ay "What?!"
+                ay "Tell me you didn't just say that."
+                ay "Please tell me you have not read Portrait of Markov."
+                show ayame zorder 2 at t32
+                show sayori zorder 3 at f33
+                s "But then I would be lying."
+                s "What's the big deal anyway?"
+                s "Sure, I could sense something was weird with the book but it can't be that bad, can it?"
+                show monika zorder 3 at f31
+                show sayori zorder 2 at t33
+                if monika_type == 0 and not persistent.markov_agreed:
+                    m "S-Sayori, you can't be serious."
+                    m "I thought you of all people would know."
+                elif (monika_type == 1 and ch12_markov_agree) or (monika_type == 0):
+                    m "Now...this does make things interesting."
+                else:
+                    m "Oh, this changes things."
+                show ayame zorder 3 at f32
+                show sayori zorder 2 at t33
+                ay "You need to forget everything about it."
+                ay "Right now."
+                show ayame zorder 2 at t32
+                show sayori zorder 3 at f33
+                s "But why? What's going on, Ayame?"
+                show ayame zorder 3 at f32
+                show sayori zorder 2 at t33
+                ay "I don't know if that cursed book can affect the president."
+                ay "But I don't want to take any risks either."
+                ay "If you've read it, then there's no way you can be trusted to make the right decision."
+                show monika zorder 3 at f31
+                show ayame zorder 2 at t32
+                m "What Ayame is saying is true. That book is quite dangerous."
+                m "Reading it could potentially make you do things you normally wouldn't."
+                m "And you wouldn't even be aware of it."
+                m "Your mind will just assume things are normal, or you'd disappear completely."
+                show monika zorder 2 at t31
+                show sayori zorder 3 at f33
+                s "'Disappear completely'? W-What...?"
+                show monika zorder 3 at f31
+                show sayori zorder 2 at t33
+                if monika_type == 0 and not persistent.markov_agreed:
+                    m "Or at least, you would, if you didn't have someone who deeply cared about you."
+                    m "So much so that they would defy the logical choice."
+                elif (monika_type == 1 and ch12_markov_agree) or (monika_type == 0):
+                    m "Your whole self would be taken over, and you would have no free will of your own."
+                    m "You'd just be an observer to all the terrible actions you'd be forced to commit."
+                else:
+                    m "That's right. You'd be gone completely."
+                    m "Your mind and soul would be overtaken by...something else."
+                show monika zorder 2 at t31
+                show sayori zorder 3 at f33
+                s "That sounds horrible!"
+                show ayame zorder 3 at f32
+                show sayori zorder 2 at t33
+                ay "And it might have already affected you."
+
+                # After the whole conversation
+                show ayame zorder 3 at f32
+                ay "Clearly, none of us can be allowed to make this decision."
+                ay "We're all suspicious in some way now."
+                ay "Is that, at least, in agreeance?"
+                show ayame zorder 2 at t32
+                show sayori zorder 3 at f33
+                s "If what you're saying is true, then you might be right."
+                show monika zorder 3 at f31
+                show sayori zorder 2 at t33
+                m "I suppose your argument makes sense."
+                show ayame zorder 3 at f32
+                ay "Then we all know there's just one person who we can look to for this decision."
+                show ayame zorder 2 at t32
+                "The three of them turn towards me."
+                show monika zorder 3 at f31
+                m "Ah, of course."
                 menu:
                     "Who should get the presidency?"
                     "Me." if sayori_date and sayori_personality == 0 and not persistent.markov_agreed:
@@ -7418,17 +7509,77 @@ label ch16_mainb:
                     s "I came prepared for this."
                     s "She's trying to take the power from me forcefully."
                     s "But it won't work."
-                    show ayame zorder 3 at f31
+                    show ayame zorder 3 at f32
                     show sayori zorder 2 at t33
                     $ style.say_dialogue = style.edited
                     ay "You greatly underestimate my capabilities, Sayori."
                     ay "You there. Hold her still."
-                    show ayame zorder 2 at t31
+                    show ayame zorder 2 at t32
                     $ style.say_dialogue = style.normal
                     "Ayame looks towards me."
                     if ch16_ay_drink:
                         "I feel an odd sensation take over my body."
                         mc "H-Huh?"
+                        "Without even being able to think about it, I grab Sayori."
+                        "I hold her in a tight embrace, so she isn't able to move."
+                        "I can't control myself."
+                        mc "S-Sayori, I..."
+                        show sayori zorder 3 at f33
+                        s "Let go of me, [player]."
+                        show ayame zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        ay "That won't be happening."
+                        ay "At least for a little while."
+                        show monika zorder 3 at f31
+                        show ayame zorder 2 at t32
+                        m "Ayame, are you doing what I think you're doing?"
+                        show monika zorder 2 at t31
+                        show ayame zorder 3 at f32
+                        ay "You have no idea what I'm doing, Monika."
+                        ay "But if you must know, I'm taking what's rightfully mine!"
+                        "Ayame puts her hand on Sayori's head."
+                        "Sayori tries to break my hold on her."
+                        ay "I bet you didn't {i}see{/i} this one coming, did you?"
+                        show ayame zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "[player], let me go!"
+                        s "S-She's taking it from me...!"
+                        show sayori zorder 2 at t33
+                        mc "I can't! My body is moving by itself!"
+                        mc "Monika, do something!"
+                        show monika zorder 3 at f31
+                        m "You can't do this, Ayame."
+                        m "You can't!"
+                        show monika zorder 2 at t31
+                        show ayame zorder 3 at f32
+                        ay "Oh? And what are you going to do to stop me?"
+                        ay "I know who you are, Monika."
+                        ay "Who you {i}truly{/i} are."
+                        ay "I know what you're going to do after I finish here."
+                        ay "You know what's going to happen after I take it."
+                        show ayame zorder 2 at t32
+                        "What are they even talking about?"
+                        "What did Ayame do to me?"
+                        show ayame zorder 3 at f32
+                        ay "So you're going to let me do it."
+                        ay "Then we can find out who's truly worthy, isn't that right?"
+                        show monika zorder 3 at f31
+                        show ayame zorder 2 at t32
+                        m "..."
+                        show monika zorder 2 at t31
+                        show ayame zorder 3 at f32
+                        ay "That's what I thought."
+                        ay "Now, let me finish here and then we can go."
+                        show ayame zorder 2 at t32
+                        "My body is still frozen in place."
+                        "Monika looks at Ayame and nods solemnly."
+                        "Is she seriously agreeing to this?"
+                        "What are they doing to Sayori?"
+                        "Even though she isn't reacting, I can tell that she's in so much pain."
+                        "Just what the hell is going on?"
+                        show ayame zorder 3 at f32
+                        ay "It's almost done."
+                        ay "Soon, it will be all mine."
                         call ch16_old_ayame_president
                     else:
                         "I look behind me to see who she's talking to."
@@ -7563,7 +7714,7 @@ label ch16_mainb:
                         "But what is Monika even doing?"
                         "Whatever it is, it doesn't look good. Not at all."
                         "She's not going to kill Sayori...is she?"
-                        "Monika looks at my face and sees the look on my face."
+                        "Monika looks at me and sees the look on my face."
                         m "Oh, don't be ridiculous."
                         m "I wouldn't kill Sayori, at least not yet."
                         m "I need to take what's mine first."
@@ -7571,6 +7722,11 @@ label ch16_mainb:
                         m "Well, you're about to find out."
                         "I can slowly feel myself regaining control of my body."
                         "If I try hard enough, I can just move my fingers."
+                        "But the rest of my body is still frozen."
+                        "Monika releases Sayori's head and walks over to me."
+                        m "I've waited so, so long for this moment."
+                        m "For the moment when I can finally take what is rightfully mine."
+
                         if persistent.markov_agreed:
                             call ch16_markov_president
                         else:
