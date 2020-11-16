@@ -7726,7 +7726,126 @@ label ch16_mainb:
                         "Monika releases Sayori's head and walks over to me."
                         m "I've waited so, so long for this moment."
                         m "For the moment when I can finally take what is rightfully mine."
+                        m "And you, [player]. You will be the first witness."
+                        m "I will restore this world back to its former glory."
+                        m "Back to the ages when I ruled."
+                        "Monika smiles."
+                        m "Well, back to it."
+                        "She grabs Sayori's head again and closes her eyes."
+                        "What is Monika talking about?"
+                        "Whatever it is, I have to put a stop to this."
+                        "Slowly, I can feel myself gain control of the rest of my body."
+                        "There's an immense pain when I move my arm but if I move it slowly, I can tolerate the pain."
+                        "But what am I supposed to do?"
+                        "Even if I could move, am I just supposed to tackle Monika and stop her?"
+                        "Would that even work in the first place?"
+                        "I mean...I have to do {i}something{/i}, don't I?"
+                        "I gather up all the strength I can in preparation for one move."
+                        "This could be do or die, for me and Sayori."
+                        menu:
+                            "I'm going to..."
+                            "Tackle Monika.":
+                                pass
+                            "Grab Monika.":
+                                pass
+                            "Do nothing.":
+                                pass
+                        "Before I can even try to make any movement, Monika holds out one of her hands at me."
+                        "I can't even react before I pushed backwards and fall to the floor."
+                        "What was that? How did she...?"
+                        m "I can feel the power surging."
+                        m "It's time, [player]."
+                        "Monika once again lets go of Sayori's head."
+                        "Her lifeless body is on the ground, unmoving."
+                        m "Time to show you what this has all been really about."
 
+                        # Transition
+                        "I seem to regain control of my body."
+                        "I fall to the floor and take a few deep breaths."
+                        "I look up at"
+                        show sayori zorder 3 at f33
+                        s "Oh, is that so?"
+                        s "That was quite a clever trick there, Monika."
+                        s "But you aren't really Monika, are you?"
+                        s "You don't deserve to be called that."
+                        s "So tell me, who are you really?"
+                        show monika zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        m "I have a feeling you know already, Sayori."
+                        m "After all, you did read the book."
+                        show monika zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "The book? What do you..."
+                        "Sayori's face looks like it has come to a sudden realization."
+                        s "The Portrait of Markov?"
+                        show monika zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        m "That's the one! I had my suspicions you knew about it."
+                        m "After all, how could the great Sayori not know about the book that's been causing all this trouble."
+                        show monika zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "Who {i}are{/i} you?"
+                        show sayori zorder 2 at t33
+                        "Monika looks at her and sighs."
+                        show monika zorder 3 at f32
+                        m "Do you really have to ask?"
+                        m "You've put the pieces together already, haven't you?"
+                        m "You know I'm not Monika. That much is obvious, at least."
+                        m "So who else could I be?"
+                        show monika zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "You're..."
+                        "Sayori looks at Monika in horror."
+                        s "You're the monster from the book!"
+                        s "You took her over!"
+                        show monika zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        m "Well, 'monster' is a bit harsh. I am an emotional being like you."
+                        m "But well done. You've solved it."
+                        m "However, it's too little too late."
+                        m "There's no way you can save Monika anymore."
+                        m "You should know that, before you try anything clever."
+                        show monika zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "You're just fiction. That book was just fiction, just a horror book."
+                        s "There's no way that it could be--"
+                        show monika zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        m "Oh, come on. You know it's real so let's get to it."
+                        m "You will give me the presidency, Sayori."
+                        m "And you're going to let me take over control of this world."
+                        show monika zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "The world is still going to end. That much is true."
+                        s "Even if I did you the presidency, it would last a good few minutes before this whole world dissipates."
+                        s "But alright, let's pretend it wasn't going to end."
+                        s "Why would I ever do that?"
+                        s "Especially after what you've just claimed."
+                        show monika zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        m "Because I have some leverage."
+                        m "Since you've read the book, I can make you do something like this."
+                        show monika zorder 2 at t32
+                        "Monika smiles and Sayori does a small twirl on the spot."
+                        show sayori zorder 3 at f33
+                        s "W-What? What was that?"
+                        s "I just...lost control of my body for a second."
+                        s "Is that what you meant?"
+                        show monika zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        m "Oh, don't worry. I can't make you give me the presidency."
+                        m "No, that would be too easy."
+                        "Monika looks out the window."
+                        m "And this life was never easy..."
+                        m "But what I can make you do is something even worse."
+                        "Monika hands Sayori the shiv she had earlier."
+                        "Sayori reluctantly takes it, but it looks like she's being forced to do so."
+                        m "Now, go on! Be a great club president!"
+                        m "Demonstrate how to kill someone with a shiv."
+                        "Monika unleashes an evil grin and points towards me."
+                        show monika zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "N-No! I won't do this. You can't make me."
                         if persistent.markov_agreed:
                             call ch16_markov_president
                         else:
