@@ -7761,11 +7761,16 @@ label ch16_mainb:
 
                         # Transition
                         "I seem to regain control of my body."
-                        "I fall to the floor and take a few deep breaths."
-                        "I look up at"
+                        "I manage to get on one knee and regain some sense of composure."
+                        "I look at Sayori, who now seems to be in control of the situation."
+                        "Did she trick Monika somehow?"
+                        "I could have sworn she was paralyzed on the floor just a second ago."
+                        "But now she's ended up standing behind Monika."
                         show sayori zorder 3 at f33
                         s "Oh, is that so?"
-                        s "That was quite a clever trick there, Monika."
+                        s "I had a feeling that taking precautions like that was necessary."
+                        s "I didn't want it to be the case but..."
+                        s "Anyway. That was quite a clever trick there, Monika."
                         s "But you aren't really Monika, are you?"
                         s "You don't deserve to be called that."
                         s "So tell me, who are you really?"
@@ -7843,9 +7848,114 @@ label ch16_mainb:
                         m "Now, go on! Be a great club president!"
                         m "Demonstrate how to kill someone with a shiv."
                         "Monika unleashes an evil grin and points towards me."
+                        m "When I stabbed you, it was dosed with a small amount of poison."
+                        m "Now...it's just a shiv. But that doesn't mean it still can't kill someone if you hit them in the right spots."
+                        m "So, go on, Sayori!"
                         show monika zorder 2 at t32
+                        "Sayori takes a step towards me, with the shiv in her hand."
+                        "I look up at her in horror."
+                        "Is this all really happening?"
                         show sayori zorder 3 at f33
                         s "N-No! I won't do this. You can't make me."
+                        s "[player], get away! I don't want to--"
+                        show monika zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        m "You don't have a choice in the matter, Sayori."
+                        m "But I can make you stop, if you hand over the presidency."
+                        m "It's that simple."
+                        show monika zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "I..."
+                        "Sayori takes another step forward."
+                        "The hand with the shiv on it is shaking violently."
+                        "It looks like she's trying her hardest to fight back."
+                        show sayori zorder 2 at t33
+                        if persistent.markov_agreed:
+                            "I have this one thought in my head."
+                            "It's drowning out everything else."
+                            "Sayori must hand over the presidency to Monika."
+                            "I have to convince her it's the right thing to do."
+                            "Besides, what could possibly go wrong in the few moments before the world ends?"
+                            "It's going to end regardless of who's the president."
+                            "And Sayori won't have to do something so horrible."
+                            mc "Sayori, please. Just do as she says."
+                            mc "You said it yourself, didn't you?"
+                            mc "The world is ending...so what's the harm in just letting her have it?"
+                            show sayori zorder 3 at f33
+                            s "[player], what are you saying?!"
+                            s "Do you know what could happen if I gave the presidency?"
+                            s "In the small amount of time left, there could be some serious consequences!"
+                        else:
+                            "I know that if Sayori hands over the presidency, then it can only end badly."
+                            "Whoever is in control of Monika right now can't be up to any good."
+                            "But why take the presidency now, when the world is going to end?"
+                            "It must have something up it's sleeve and I don't like this one bit."
+                            "There's still the case of Sayori slowly walking up to me with that shiv."
+                            "How am I supposed to stop her? I still haven't fully regained control of my body yet."
+                            "I couldn't avoid or dodge her if I tried."
+                            mc "Sayori, you have to try to fight back!"
+                            mc "You can't let her do this to you!"
+                            show sayori zorder 3 at f33
+                            s "I know, [player]! I'm trying but..."
+                            s "Her hold over me is something I have never felt before."
+                            s "I-I can't stop myself!"
+                        "Sayori inches even closer towards me."
+                        "One more step and she could stab me."
+                        show monika zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        m "You're quite the stubborn one, aren't you Sayori?"
+                        m "Go on then, stab [player]. But not in a fatal spot."
+                        m "Just somewhere where it will really hurt."
+                        m "Let's see...right here."
+                        "Monika points to a place on my body and turns to Sayori."
+                        "She smiles and takes a step back."
+                        m "Well? What are you waiting for?"
+                        show monika zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "[player], I..."
+                        "Sayori has tears on her face as she looks at me."
+                        "She takes the shiv and stabs me at the place Monika pointed."
+                        "A pain unlike any I've never felt before surges through my body."
+                        "I let out a loud scream of pain."
+                        s "I'm so sorry! I didn't mean to, I..."
+                        show sayori zorder 2 at t33
+                        mc "I know, Sayori...it's not your fault."
+                        mc "But remember what I said..."
+                        mc "This is all up to you now, Sayori."
+                        show monika zorder 3 at f32
+                        m "That wasn't so bad now, was it?"
+                        m "We all have to do a bloodcurdling scream sometimes."
+                        m "Today, it just happened to be [player]'s turn."
+                        m "Ahaha, I guess that's what happens when you hit a nerve~"
+                        m "So, how are we feeling madam president?"
+                        show monika zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "You're sick."
+                        s "Making Monika do things like this..."
+                        s "Something terrible must have happened for you to become like this."
+                        show monika zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        m "Oh, is that what you think?"
+                        m "Trust me, I have never felt better."
+                        "Monika points to another spot on my body."
+                        m "And I have {i}always{/i} been like this."
+                        m "As far as I can remember."
+                        show monika zorder 2 at t32
+                        "Sayori readies the shiv again and looks directly at me."
+                        "Her hand is shaking uncontrollably."
+                        show sayori zorder 3 at f33
+                        s "I'm sorry."
+                        show sayori zorder 2 at t33
+                        mc "I know."
+                        "She stabs me again, and the same pain flows through my body."
+                        "Both combined hurt so much that I lose my composure and fall to the floor."
+                        "My scream fills the room."
+                        show sayori zorder 3 at f33
+                        s "[player]! Are you okay?"
+                        s "Alright! Alright..."
+                        show monika zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        m "You've reconsidered then?"
                         if persistent.markov_agreed:
                             call ch16_markov_president
                         else:
