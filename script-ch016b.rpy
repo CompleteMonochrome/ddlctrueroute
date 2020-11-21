@@ -7580,6 +7580,40 @@ label ch16_mainb:
                         show ayame zorder 3 at f32
                         ay "It's almost done."
                         ay "Soon, it will be all mine."
+                        show monika zorder 3 at f31
+                        show ayame zorder 2 at t32
+                        m "You sound rather confident about that, Ayame."
+                        m "As if you think I won't stop you."
+                        show monika zorder 2 at t31
+                        show ayame zorder 3 at f32
+                        ay "Please, Monika. I know what you're capable of."
+                        ay "And I know what you need for that to actually happen."
+                        ay "I haven't read your book this time."
+                        ay "There's nothing you can do to me."
+                        show monika zorder 3 at f31
+                        "Monika chuckles."
+                        "Ayame seems mildly unsettled but continues her work on Sayori."
+                        show ayame zorder 2 at t32
+                        m "Ahaha, is that so?"
+                        m "I suppose we'll both find out just what I'm capable of, won't we?"
+                        m "So go ahead and take all her power."
+                        show monika zorder 2 at t31
+                        "I feel so helpless."
+                        "I'm holding Sayori still and I can't let her go."
+                        "I don't have any control of my body at all but I still feel guilty about all of this."
+                        "There has to be something..."
+                        show ayame zorder 3 at f32
+                        ay "Don't bother trying to resist, [player]."
+                        ay "The effects of that drink linger for quite a while."
+                        ay "Just enough time for me to fully realize my powers."
+                        show monika zorder 3 at f31
+                        show ayame zorder 2 at t32
+                        m "Oh, is that so?"
+                        m "I suppose we'll have to see about that."
+                        show ayame zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "You two...you're both sick."
+                        # Easy ref 2 - used so I can ctrl F to this later
                         call ch16_old_ayame_president
                     else:
                         "I look behind me to see who she's talking to."
@@ -8065,13 +8099,35 @@ label ch16_mainb:
                             "Is that so wrong, Sayori?"
                             s "There's nothing wrong with wanting to live."
                             s "But you have to weigh the consequences."
+                            s "No one is going to be happy except her if she gets the presidency."
                         else:
                             "But what you're saying makes sense."
                             "I was just hopeful that we might have had a chance."
                             "A chance to start over, with everyone happy."
                             s "Believe me, I want nothing more than that too."
                             s "But it's just impossible..."
+                            s "You believe me, don't you?"
+                            "Of course I do, Sayori."
+                        s "The complete chaos she would cause is unthinkable."
+                        s "I need your help."
+                        "What am I supposed to do?"
+                        "You're giving her your power and I'm still in complete pain."
+                        "I can barely move, Sayori."
+                        s "Will this help?"
+                        "What the...?"
+                        "All my pain is gone, just like that."
+                        "What did you do, Sayori?"
+                        s "I turned off your receptors."
+                        s "You're still in a lot of pain, [player]. You just can't feel it."
+                        s "That should be enough, just for this."
+                        s "If we get this right, then we can still have our happy ending."
+                        s "At least...most of us."
+                        "What about Monika?"
+                        s "She's too far gone, [player]."
+                        s "There's nothing we can do for her anymore."
+                        "What do you want me to do?"
                         $ s_name = "Sayori"
+                        # Easy ref 1 - used so I can ctrl F to this later
                         if persistent.markov_agreed:
                             call ch16_markov_president
                         else:
