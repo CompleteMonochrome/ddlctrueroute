@@ -7613,6 +7613,38 @@ label ch16_mainb:
                         show ayame zorder 2 at t32
                         show sayori zorder 3 at f33
                         s "You two...you're both sick."
+                        s "How could I not have spotted this earlier?"
+                        s "I'm sorry...I should have realized."
+                        show ayame zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        ay "I don't need your sympathy, Sayori."
+                        ay "I don't need anyone."
+                        show ayame zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "What about the other Ayame?"
+                        s "The one who...who didn't want this?"
+                        "Sayori struggles to speak. Her voice is getting weaker by the moment."
+                        s "The one who just wanted to help."
+                        s "Doesn't she deserve better?"
+                        s "After all, you're the reason she's gone now."
+                        s "Or maybe you never cared about her at all and you were just using her."
+                        s "In which case, you're worse than I thought."
+                        show ayame zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        ay "H-How dare you?"
+                        ay "You don't know our story. What we went through to get this far."
+                        show ayame zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "You mean, what {i}you{/i} went through to get this far."
+                        s "She was just another obstacle you had to cross."
+                        "Ayame hand shakes a little bit. She glares at Sayori."
+                        "I can feel myself tighten my grip on Sayori as she does so."
+                        s "You know I'm right, don't you?"
+                        s "That's why you're--"
+                        s "AAAAAAAAAAAAAAAAAHHHH!!!"
+                        show ayame zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        ay "Stop talking."
                         # Easy ref 2 - used so I can ctrl F to this later
                         call ch16_old_ayame_president
                     else:
@@ -8141,7 +8173,85 @@ label ch16_mainb:
                     show ayame zorder 2 at t32
                     m "Is this really how it ends?"
                     m "This can't be it, can it?"
-                    if
+                    m "This {i}can't{/i} be the end."
+                    m "I've gotten so close, it can't end here."
+                    if persistent.markov_agreed:
+                        m "I refuse to believe that this is it."
+                        m "There has to be {i}something{/i} I can do."
+                        m "Maybe I can make [player] do..."
+                        show monika zorder 2 at t31
+                        show sayori zorder 3 at f33
+                        s "I don't think [player] will be doing anything."
+                        S "I told you, I thought about this, didn't I?"
+                        s "The moment you try anything, I can end it all."
+                        s "I'm not going to give you any chances."
+                    else:
+                        m "And yet, I know what you're saying is tree."
+                        m "Why do I feel so powerless to stop you?"
+                        m "I know that anything I can do right now won't be enough."
+                        m "I was so close...!"
+                        show monika zorder 2 at t31
+                        show sayori zorder 3 at f33
+                        s "I'm sorry, but whatever you had plan isn't going to happen."
+                        s "This is it. There's nothing the two of you can do now."
+                        s "Or [player], for that matter."
+                        s "The rest of the events in this time have already been set in motion."
+                        s "And even if they hadn't, any sudden moves and I'll end it all here."
+                    s "So go ahead and try something."
+                    s "But if you take one step closer towards me, you're getting frozen."
+                    s "And you won't be able to experience the end."
+                    show monika zorder 3 at f31
+                    show sayori zorder 2 at t33
+                    m "Sayori, you have to listen to me."
+                    m "This is wrong. You and I both know that."
+                    "Monika puts a foot forward."
+                    "Sayori immediately places her full attention towards Monika."
+                    m "You can't just--"
+                    "Monika freezes in place, halfway through her current motion."
+                    "Sayori stares at her intently for just a moment."
+                    show monika at thide
+                    hide monika
+                    "Suddenly, Monika disappears."
+                    show ayame zorder 3 at f32
+                    show sayori zorder 2 at t33
+                    ay "What did you do to her, Sayori?"
+                    show ayame zorder 2 at t32
+                    show sayori zorder 3 at f33
+                    s "I put her into stasis. She won't be able to do anything until it's all over."
+                    s "I was serious when I said what I said, Ayame."
+                    s "If you don't want to witness the end too, just make a sudden move."
+                    s "But we don't have a whole lot of time so regardless, I'll be putting you on stasis soon."
+                    show ayame zorder 3 at f32
+                    show sayori zorder 2 at t33
+                    ay "I just have one question."
+                    ay "If you'd permit it, that is."
+                    show ayame zorder 2 at t32
+                    show sayori zorder 3 at f33
+                    s "Go ahead. I might answer it, or I might not."
+                    s "I don't have to tell you anything, after all."
+                    show ayame zorder 3 at f32
+                    show sayori zorder 2 at t33
+                    ay "Why couldn't you trust us?"
+                    ay "I mean I suppose you could have known about our true intentions."
+                    ay "Which may or may not have been for the greater good..."
+                    ay "There has to have been something else."
+                    ay "You just don't seem like the kind of person to not trust us."
+                    show ayame zorder 2 at t32
+                    "Sayori sighs."
+                    show sayori zorder 3 at f33
+                    s "To be honest, if the circumstances were different, I might have trusted you."
+                    s "I might have been naïve enough to give up the presidency."
+                    s "But certain things happened that just brought me to realize a certain reality."
+                    show ayame zorder 3 at f32
+                    show sayori zorder 2 at t33
+                    ay "And what would that be?"
+                    ay "The world is going to end anyway, so you may as well tell me, right?"
+                    show ayame zorder 2 at t32
+                    show sayori zorder 3 at f33
+                    s "I suppose there's no harm in telling you."
+                    s "I'm just going to take a step back, in case you try something."
+
+                    # Easy ref 3 - used so I can ctrl F to this later
                     call ch16_sayori_president
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
