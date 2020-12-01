@@ -8250,7 +8250,157 @@ label ch16_mainb:
                     show sayori zorder 3 at f33
                     s "I suppose there's no harm in telling you."
                     s "I'm just going to take a step back, in case you try something."
-
+                    "Sayori steps backwards and collides with me."
+                    s "Ehehe, oops."
+                    "She turns around and smiles weakly at me before turning back to Ayame."
+                    s "Go ahead and ask your question."
+                    s "But remember what I said."
+                    s "Any sudden moves and it's all over for you."
+                    show ayame zorder 3 at f32
+                    show sayori zorder 2 at t33
+                    ay "I'll be standing right here."
+                    ay "Now, I'd like to hear your response."
+                    show ayame zorder 2 at t32
+                    show sayori zorder 3 at f33
+                    s "I've...seen things, Ayame. Things that should never have to be seen."
+                    s "Things that if you've seen you would understand why I'm doing this."
+                    s "No one should have to witness what I have."
+                    show ayame zorder 3 at f32
+                    show sayori zorder 2 at t33
+                    ay "But that's not entirely it, is it?"
+                    ay "You could have handled that."
+                    ay "Because if you can control it, then you don't have to be worried about it."
+                    ay "There must be some other reason."
+                    ay "Something that you couldn't control."
+                    ay "Something that truly made realize that this world is rotten."
+                    ay "What was that, exactly?"
+                    show ayame zorder 2 at t32
+                    show sayori zorder 3 at f33
+                    s "...Ayame--"
+                    show ayame zorder 3 at f32
+                    show sayori zorder 2 at t33
+                    ay "Of course, you don't have to tell me."
+                    ay "But with how trusting you are, what caused you to turn out like this?"
+                    ay "Or...who?"
+                    "Ayame smirks."
+                    ay "I'm just really curious, so I hope you'll tell me in these final moments."
+                    show ayame zorder 2 at t32
+                    show sayori zorder 3 at f33
+                    s "There is no harm in doing it, is there?"
+                    s "And I feel like I need to tell...someone."
+                    s "So, fine. If you must know..."
+                    "Sayori looks towards me."
+                    s "I suppose the main reason is because of [player]."
+                    show sayori zorder 2 at t33
+                    mc "What? Me?"
+                    show ayame zorder 3 at f32
+                    ay "And there it is."
+                    show ayame zorder 2 at t32
+                    mc "Sayori, what are you talking about?"
+                    mc "How did this all come down to me?"
+                    show sayori zorder 3 at f33
+                    s "Do you really not know, [player]?"
+                    s "I suppose you couldn't really have realized."
+                    s "But the decisions you made, that's one made {i}me{/i} realize."
+                    s "All it takes is one person. One person doing the wrong thing."
+                    s "It can such an effect on someone, you know?"
+                    s "All I wanted was to make everyone happy."
+                    s "Yet..."
+                    show ayame zorder 3 at f32
+                    show sayori zorder 2 at t33
+                    ay "Yet because of some things that were just out of your control..."
+                    show ayame zorder 2 at t32
+                    show sayori zorder 3 at f33
+                    s "It became so much more difficult than it should have been."
+                    s "The things I had to do just to make sure things played out alright..."
+                    s "It made me realize that if anyone else could make these kind of decisions..."
+                    s "Then no one would be safe."
+                    s "No one would get their happy ending."
+                    show ayame zorder 3 at f32
+                    show sayori zorder 2 at t33
+                    ay "So you just want the power, is that it?"
+                    ay "You don't think anyone else is worthy of it?"
+                    show ayame zorder 2 at t32
+                    show sayori zorder 3 at f33
+                    s "Careful, Ayame."
+                    s "You don't want to end up like Monika, do you?"
+                    show ayame zorder 3 at f32
+                    show sayori zorder 2 at t33
+                    ay "I haven't made a single move, Sayori."
+                    ay "That was your condition for putting me in stasis, right?"
+                    if ch16_ay_drink:
+                        ay "However, you never said anything about [player] making a move."
+                        show ayame zorder 2 at t32
+                        "Ayame points at me and I feel an odd sensation take over my body."
+                        show sayori zorder 3 at f33
+                        s "What are you--"
+                        show sayori zorder 2 at t33
+                        "Before Sayori can finish what she's saying, I grab her and hold her in place."
+                        "I simply can't control myself, it's like my body is moving on its own."
+                        mc "S-Sayori!"
+                        "It seems like I can still control what I say."
+                        "But my body isn't responding to anything I want it to."
+                        show sayori zorder 3 at f33
+                        s "Let go of me, [player]!"
+                        show sayori zorder 2 at t33
+                        mc "This isn't me! I'm not doing this."
+                        show ayame zorder 3 at f32
+                        ay "This is the only thing I have left."
+                        ay "My last desperate attempt to save this world."
+                        ay "If this fails, then I suppose that's it."
+                        ay "So, let's see what you have, Sayori."
+                        "Ayame puts her hand on Sayori's face."
+                        "I can't see anything happen but I can feel some kind of force in the air."
+                        "What is Ayame doing?"
+                        ay "If this works, then I can save the world."
+                        ay "And if not.."
+                        ay "Well, I suppose I can say I tried my best."
+                        show ayame zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "Do you...truly think you're saving the world, Ayame?"
+                        "Sayori sounds like she's struggling to maintain consciousness."
+                        "It's almost like she's being drained, somehow."
+                        s "Even...if you got the presidency, there's no guarantee you'd save the world."
+                        s "This world is doomed, you and I both know it."
+                        show ayame zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        ay "There's always a chance, Sayori."
+                        show ayame zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "Even if that's true..."
+                        "Sayori breaks my hold on her and I fall to the floor."
+                        "Ayame gets pushed away in the process."
+                        "It's like some sort of shockwave just came from Sayori."
+                        s "I'm afraid you won't have the chance to try it."
+                        show ayame zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        ay "I see."
+                        "Ayame begins laughing."
+                        ay "I tried my best. I really did."
+                        ay "Well done, Sayori. I hope--"
+                        "Before Ayame can finish her sentence, she is frozen in place."
+                        show ayame at thide
+                        hide ayame
+                        "In an instant, Ayame disappears from sight."
+                    else:
+                        ay "But I suppose I might as well say it."
+                        ay "You answered my question, and I can end it here knowing I did everything I could."
+                        show ayame zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "What do you mean by that?"
+                        show ayame zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        ay "It means that I've right out of options."
+                        "Ayame looks at me and sighs."
+                        ay "You've done everything right it seems."
+                        ay "Not even my most desperate plan would work at this stage."
+                        ay "So, I give up."
+                        "Ayame shrugs."
+                        ay "You win, Sayori."
+                        ay "You can put me in stasis, if you want."
+                        ay "Not that it makes much of a difference."
+                        ay "I'll accept whatever fate you have in store for me."
+                        ay "Not like I can do much about it at this point, anyhow."
                     # Easy ref 3 - used so I can ctrl F to this later
                     call ch16_sayori_president
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
