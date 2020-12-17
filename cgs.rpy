@@ -253,6 +253,39 @@ image m_cg1_exp2:
 image sunset_cg1_bg:
     "mod_assets/images/cg/cg1_bg.png"
 
+image shared_cg1_base:
+    "mod_assets/images/cg/shared_cg1_base.png"
+image shared_cg1_rays_1:
+    "mod_assets/images/cg/shared_cg1_rays_1.png"
+image shared_cg1_rays_2:
+    "mod_assets/images/cg/shared_cg1_rays_2.png"
+image shared_cg1_rays_3:
+    "mod_assets/images/cg/shared_cg1_rays_3.png"
+image shared_cg1_rays_back:
+    "mod_assets/images/cg/shared_cg1_rays_back.png"
+image shared_cg1_rays_front:
+    "mod_assets/images/cg/shared_cg1_rays_front.png"
+image shared_cg1_ay_1:
+    "mod_assets/images/cg/shared_cg1_ay_1.png"
+image shared_cg1_ay_2:
+    "mod_assets/images/cg/shared_cg1_ay_2.png"
+image shared_cg1_m_1:
+    "mod_assets/images/cg/shared_cg1_m_1.png"
+image shared_cg1_m_2:
+    "mod_assets/images/cg/shared_cg1_m_2.png"
+image shared_cg1_m_3:
+    "mod_assets/images/cg/shared_cg1_m_3.png"
+image shared_cg1_n_1:
+    "mod_assets/images/cg/shared_cg1_n_1.png"
+image shared_cg1_n_2:
+    "mod_assets/images/cg/shared_cg1_n_2.png"
+image shared_cg1_n_3:
+    "mod_assets/images/cg/shared_cg1_n_3.png"
+image shared_cg1_y_1:
+    "mod_assets/images/cg/shared_cg1_y_1.png"
+image shared_cg1_y_2:
+    "mod_assets/images/cg/shared_cg1_y_2.png"
+
 image s_kill_bg:
     subpixel True
     "images/cg/s_kill_bg.png"

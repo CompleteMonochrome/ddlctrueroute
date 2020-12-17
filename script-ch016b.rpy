@@ -7431,6 +7431,76 @@ label ch16_mainb:
                 show ayame zorder 3 at f32
                 show sayori zorder 2 at t33
                 ay "And it might have already affected you."
+                ay "You have, after all, read the book."
+                ay "Maybe the book is the reason you're doing this in the first place."
+                ay "Making a completely rash decision like this."
+                ay "It's not like you."
+                show ayame zorder 2 at t32
+                show sayori zorder 3 at f33
+                s "I've changed Ayame."
+                show ayame zorder 3 at f32
+                show sayori zorder 2 at t33
+                ay "That's exactly what I'm saying!"
+                ay "You {i}have{/i} changed, Sayori."
+                ay "How can you be so sure that it's the real you doing this?"
+                ay "And not the you that's been corrupted by the book."
+                show monika zorder 3 at f31
+                show ayame zorder 2 at t32
+                m "Ayame is right, Sayori."
+                m "You could already be affected by it and not even know it."
+                m "There's no way to prove that you're not."
+                m "Everything you've been saying right now could be as a result of that."
+                show monika zorder 2 at t31
+                show sayori zorder 3 at f33
+                s "I'm telling you, I'm fine."
+                s "I changed before that book."
+                s "I knew that I was going to end this world."
+                s "I looked into the future before I read the book and..."
+                "A look of uncertainty appears on Sayori's face."
+                s "At least...I think I did."
+                show monika zorder 3 at f31
+                show sayori zorder 2 at t33
+                m "You're not even sure anymore, are you?"
+                m "Sayori, you should really think about this."
+                m "Have you been doing things recently that you normally wouldn't be?"
+                m "Even if you have changed, surely you've noticed {i}something{/i} wrong."
+                m "Something that you wouldn't do no matter what."
+                show monika zorder 2 at t31
+                show sayori zorder 3 at f33
+                s "You're just saying things to make me doubt myself."
+                s "I'm not going to change my mind."
+                s "No matter what the two of you say."
+                show ayame zorder 3 at f32
+                show sayori zorder 2 at t33
+                ay "Ask yourself, Sayori."
+                ay "Do you really want to be doing this?"
+                ay "Ending the world, that's not something you want to do, is it?"
+                ay "I bet you never really thought about it until recently."
+                ay "Around the time you read the book."
+                ay "In fact, I bet you can't even remember when you read the book."
+                ay "Isn't that right?"
+                show ayame zorder 2 at t32
+                show sayori zorder 3 at f33
+                s "As a matter of fact, I {i}do{/i} remember."
+                s "It was the day after Yuri's play."
+                s "I remember reading some of the book."
+                s "There was just something about it that was so...enthralling."
+                s "Like I couldn't stop reading it."
+                s "The story wasn't even particularly interesting, but..."
+                show monika zorder 3 at f31
+                show sayori zorder 2 at t33
+                m "That's right. The book will draw your attention."
+                m "It will make you obsessed with it."
+                m "Until there's no sense of logic left in your mind."
+                m "And the only thing is some lingering thought."
+                m "And it dominates you. It controls you."
+                m "And you won't even realize it."
+                show monika zorder 2 at t31
+                show ayame zorder 3 at f32
+                ay "If you're affected by it, even a little..."
+                ay "Then these decisions you're making may not be your own."
+                ay "It might not have been what you truly wanted."
+
 
                 # After the whole conversation
                 show ayame zorder 3 at f32
@@ -7464,6 +7534,7 @@ label ch16_mainb:
                         if ch16_ay_gave_control:
                             call ch16_old_ayame_president
                         else:
+                            call ch16_ayame_president
                     "Sayori." if not persistent.markov_agreed:
                         call ch16_sayori_president
             else:
@@ -8374,14 +8445,38 @@ label ch16_mainb:
                         s "I'm afraid you won't have the chance to try it."
                         show ayame zorder 3 at f32
                         show sayori zorder 2 at t33
-                        ay "I see."
+                        ay "You prepared something beforehand. I see."
                         "Ayame begins laughing."
                         ay "I tried my best. I really did."
+                        ay "But you said it yourself, you've seen the future."
                         ay "Well done, Sayori. I hope--"
                         "Before Ayame can finish her sentence, she is frozen in place."
                         show ayame at thide
                         hide ayame
                         "In an instant, Ayame disappears from sight."
+                        "I begin to regain control of my body again."
+                        "I can't help but take a few deep breaths as I move my arms around again."
+                        s "She's gone now. It's okay, [player]."
+                        mc "What...was that?"
+                        s "She took control of your body, only for a moment."
+                        s "She tried to make you hold me still to steal the presidency by force."
+                        s "But I already knew she was going to do that."
+                        mc "You did?"
+                        s "Well...not exactly."
+                        s "I knew this could go a few ways."
+                        s "So I prepared for the most likely outcomes."
+                        s "One of them was this."
+                        mc "Most likely outcomes?"
+                        s "I told you I could see into the future, right?"
+                        s "I knew this was one of the things that could have happened."
+                        s "I knew that Ayame was going to use you to get to me."
+                        s "But it didn't matter, because I already knew she was going to."
+                        s "I made sure to have a backup plan in case she would try anything."
+                        mc "And that's how you broke free?"
+                        s "Exactly."
+                        s "And now that she's gone, there's no one left to stop me from saving the world."
+                        "But is she really saving the world?"
+                        "I guess that's not up to me, is it?"
                     else:
                         ay "But I suppose I might as well say it."
                         ay "You answered my question, and I can end it here knowing I did everything I could."
@@ -8390,7 +8485,7 @@ label ch16_mainb:
                         s "What do you mean by that?"
                         show ayame zorder 3 at f32
                         show sayori zorder 2 at t33
-                        ay "It means that I've right out of options."
+                        ay "It means that I've ran out of options."
                         "Ayame looks at me and sighs."
                         ay "You've done everything right it seems."
                         ay "Not even my most desperate plan would work at this stage."
@@ -8400,7 +8495,49 @@ label ch16_mainb:
                         ay "You can put me in stasis, if you want."
                         ay "Not that it makes much of a difference."
                         ay "I'll accept whatever fate you have in store for me."
-                        ay "Not like I can do much about it at this point, anyhow."
+                        ay "Not like I can do much about it at this point, anyway."
+                        show ayame zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "You're just giving up then?"
+                        s "No random plan to try to steal the presidency in the final moments?"
+                        show ayame zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        ay "I told you, I'm out of options."
+                        ay "And besides, you said you've seen the future."
+                        ay "Anything I do, you already know how to respond to."
+                        ay "Isn't that right?"
+                        show ayame zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "So you have been paying attention."
+                        s "Maybe if Monika was too, she wouldn't be gone right now."
+                        "Sayori beams."
+                        s "You can stay here."
+                        s "It's not like you can cause any harm anyway."
+                        s "As long as we have that understanding, I don't see why I would need to send you away."
+                        show ayame zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        ay "Do as you wish, Sayori."
+                        ay "I'll just...be over here."
+                        "Ayame gets on the ground and just stares out the window."
+                        ay "While I await our inevitable fate."
+                        show ayame at thide
+                        hide ayame
+                        s "Suit yourself."
+                    s "So this is it then, [player]."
+                    s "The world is about to end."
+                    s "In just a few short moments, the world is gonna be over."
+                    s "How are you feeling?"
+                    mc "I don't know about this, Sayori."
+                    mc "Are you really sure this is the way to go about this?"
+                    mc "Ending the world seems...drastic."
+                    s "It's the only way, [player]."
+                    s "It's going to end regardless, I already told you that."
+                    s "So I froze people in a moment they would be happy."
+                    s "To preserve those feelings."
+                    s "So that they would be happy when the world ended."
+                    mc "But they wouldn't be happy if they really knew what was coming, would they?"
+                    mc "If they knew that their world was about to end..."
+                    s "And that's why I had to stop it at that moment in time."
                     # Easy ref 3 - used so I can ctrl F to this later
                     call ch16_sayori_president
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())

@@ -6868,15 +6868,29 @@ label ch15_mall_shared:
     show monika 2ba zorder 3 at f42
     m "You're right."
     m "So...now that we're here."
-    # Sunset CG thats really bad rip
-    scene sunset_cg1_bg with dissolve_cg
+    # Sunset CG thats now pretty good!!!
+    scene shared_cg1_base
+    show shared_cg1_rays_back zorder 2
+    show shared_cg1_n_1 zorder 3
+    if monika_type == 1 and ch12_markov_agree:
+        show shared_cg1_m_3 zorder 3
+    else:
+        show shared_cg1_m_1 zorder 3
+    show shared_cg1_ay_1 zorder 3
+    show shared_cg1_y_1 zorder 3
+    show shared_cg1_rays_front zorder 10
+    with dissolve_cg
     play music t10 fadeout 2.0
     m "Let's reflect about the club as we stare into the sunset."
     m "Does anyone want to start us off?"
-    "..."
+    "No one steps up."
     m "No?"
     m "Ahaha, then I suppose I'll take the responsibility."
     if monika_type == 0 or (ch12_markov_agree and monika_type == 1):
+        if not (monika_type == 1 and ch12_markov_agree):
+            show shared_cg1_m_2 zorder 3 at cgfade
+            show shared_cg1_m_1 at cgfade
+            hide shared_cg1_m_1
         m "My time in the club has been pretty amazing so far."
         m "Starting it with Sayori and meeting all of you has been one of the best decisions of my life."
         m "It's been a really fun experience to get to know each of you."
@@ -6899,6 +6913,9 @@ label ch15_mall_shared:
         m "But it's like he's been here {i}since{/i} the beginning."
         m "The beginning of everything important anyway."
     elif monika_type == 1:
+        show shared_cg1_m_2 zorder 3 at cgfade
+        show shared_cg1_m_1 at cgfade
+        hide shared_cg1_m_1
         m "The time in the club, for me at least, has been really enlightening."
         m "From the start, I didn't really know what entirely was going on."
         m "This time around, I mean."
@@ -6919,6 +6936,9 @@ label ch15_mall_shared:
         m "I'm glad he joined at the beginning of everything important."
         m "If he didn't, I don't know where I'd be right now."
     else:
+        show shared_cg1_m_2 zorder 3 at cgfade
+        show shared_cg1_m_1 at cgfade
+        hide shared_cg1_m_1
         m "I can't really say much about the club."
         m "I can only assume it's been quite the place to be."
         m "With all the events that have been happening..."
@@ -6937,6 +6957,9 @@ label ch15_mall_shared:
     "Did everything important start when I joined the club?"
     "But I was just another member..."
     "They would have done fine if Sayori never brought me along."
+    show shared_cg1_n_2 zorder 3 at cgfade
+    show shared_cg1_n_1 at cgfade
+    hide shared_cg1_n_1
     n "Right..."
     n "Well, if we're just gonna stand here and do nothing."
     n "I might as well say something."
@@ -7004,6 +7027,9 @@ label ch15_mall_shared:
     m "She's still a little shy when it comes to sharing her thoughts."
     y "N-No, it's not that."
     y "I'm just...thinking."
+    show shared_cg1_y_2 zorder 3 at cgfade
+    show shared_cg1_y_1 at cgfade
+    hide shared_cg1_y_1
     y "The club started off as a sort of...distraction."
     y "For myself."
     y "It was something selfish, to try and improve myself as a person."
@@ -7112,6 +7138,9 @@ label ch15_mall_shared:
     ay "I'm really, truly sorry."
     mc "It's...fine."
     mc "Don't worry about it."
+    show shared_cg1_ay_2 zorder 3 at cgfade
+    show shared_cg1_ay_1 at cgfade
+    hide shared_cg1_ay_1
     ay "T-Thanks for sharing your experience."
     ay "All of you."
     ay "It really helped me learn a lot."
@@ -7123,6 +7152,12 @@ label ch15_mall_shared:
     m "We're not going to ask you to take any responsibility."
     n "Yeah, just sit back and watch."
     n "You'll see."
+    "Ayame simply smiles at Natsuki and stares at the sunset."
+    "For a while, the five of us just stand in silence."
+    "Reflecting on what everyone had to say, I suppose..."
+    "Suddenly, a strange thought crosses my head."
+    "With Ayame joining the club, it should be a new beginning."
+    "So why does it feel like the beginning of the end...?"
     scene bg marina_sunset
     show natsuki 1ba zorder 2 at t41
     show monika 1ba zorder 2 at t42
@@ -7132,8 +7167,8 @@ label ch15_mall_shared:
     play music t3 fadeout 2.0
     "Ayame takes a step back, turning away from the sunset."
     show ayame 1bj zorder 3 at f43
-    ay "No, you'll see."
-    ay "I should be going now."
+    ay "You're wrong, you know. You'll be the one that's going to see."
+    ay "Anyway, I should be going now."
     ay 2bd "Thank you all again."
     "Ayame bows her head."
     ay "It was wonderful spending this time with you."
