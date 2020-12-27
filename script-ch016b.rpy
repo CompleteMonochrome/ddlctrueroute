@@ -7500,27 +7500,138 @@ label ch16_mainb:
                 ay "If you're affected by it, even a little..."
                 ay "Then these decisions you're making may not be your own."
                 ay "It might not have been what you truly wanted."
-
-
-                # After the whole conversation
+                show ayame zorder 2 at t32
+                show sayori zorder 3 at f33
+                s "Both of you really seem to be serious about this."
+                s "Either you're telling me the truth..."
+                s "...or you're trying to take advantage of me."
+                s "Maybe both."
+                show ayame zorder 3 at f32
+                show sayori zorder 2 at t33
+                ay "If I'm being honest, then yes."
+                ay "I am trying to make you see reason here, after all."
+                ay "But I'm not lying when I say that the book could be affecting you in subtle ways."
+                ay "Even right now, it could be stopping you from trusting us."
+                ay "Deep down, you know I'm telling the truth."
+                show monika zorder 3 at f31
+                show ayame zorder 2 at t32
+                if monika_type == 0 and not persistent.markov_agreed:
+                    m "All I want is for you to make the right decision, Sayori."
+                    m "If this is really what you wanted..."
+                    m "...then at least I know you're doing it because you're you."
+                    m "And not because you're being influenced by something evil."
+                    m "It's just that this isn't something Sayori would do."
+                    m "Though I suppose it's entirely possible that this could really be you."
+                    m "But with the book involved, I doubt that you're of the right mind."
+                    m "That's why I'm trying to stop you from doing this."
+                    m "The fact that I don't really want the world to end helps too..."
+                elif (monika_type == 1 and ch12_markov_agree) or (monika_type == 0):
+                    m "I just don't want you to end this world, Sayori."
+                    m "I always considered you one of my friends since we started this club together."
+                    m "Which means, I know that this isn't something you wouldn't do."
+                    m "And believe me when I say that I know people change."
+                    m "But to the extent you'd do something so extreme such as end this world?"
+                    m "It's just extremely unlikely of you to have changed that much."
+                    m "Maybe I'm saying that because I don't want the world to end like this."
+                    m "But is that so wrong?"
+                else:
+                    m "None of us here want you to end the world, Sayori."
+                    m "You know that you don't want to do it too."
+                    m "If what Ayame is saying is right, then you can feel it too, can't you?"
+                    m "There shouldn't be any doubt in your mind when you're doing something like this."
+                    m "But from what I can sense from you..."
+                    m "You are completely plagued with doubt. You know that this probably isn't the best decision."
+                    m "You just think that because you've planned this for a while, that it's the right thing to do."
+                    m "It isn't, Sayori. The real you wouldn't even think of doing something so terrible like ending the world."
+                    m "Think about very carefully, Sayori. You are clearly being influenced by something else."
+                show monika zorder 2 at t31
+                "Sayori's expression slowly changes and a frown appears on her face."
+                "Ayame and Monika both make good points. This really isn't something I think Sayori would do."
+                "Sayori doesn't seem as confident and certain as before."
+                "Did they really get through to her?"
+                show sayori zorder 3 at f33
+                s "I...I don't know anymore."
+                s "[player], I'm sorry."
+                show sayori zorder 2 at t33
+                mc "Huh? For what?"
+                show sayori zorder 3 at f33
+                s "I haven't been fair to you."
+                s "After all you've done for me...I..."
+                s "I should have known better."
+                "Sayori avoids our eyes."
+                s "Maybe I really am affected by something else."
+                s "Something that made me think of doing such terrible things."
+                s "Why couldn't I see it before?"
+                s "I should have tried harder to realize what was happening."
+                s "Especially since you tried so hard to help me, [player]."
+                s "I've been completely blind. Blind to what has been causing me to make such awful decisions."
+                s "But now I can see that you all just care about me and this place."
+                s "I'm so sorry..."
+                show sayori zorder 2 at t33
+                "Sayori begins to break down into tears."
+                "Does this mean that she's not going to the end the world?"
+                "At least...not yet."
+                "The world was going to end anyway, right?"
+                "But maybe we can all come up with a way to stop it."
+                "A way to keep this world going."
+                show monika zorder 3 at f31
+                if (monika_type == 1 and ch12_markov_agree) or (monika_type == 0):
+                    m "Pull yourself together, Sayori."
+                    "Monika puts an arm around Sayori."
+                    m "You're the president of the Literature Club, you know."
+                    m "You have to be stronger than this."
+                else:
+                    m "Sayori, you need to compose yourself."
+                    m "You're the president of the club, you know."
+                show monika zorder 2 at t31
+                show sayori zorder 3 at f33
+                s "Y-You're right."
+                "Sayori wipes her face and looks towards us."
+                s "What should I do then?"
+                s "I didn't see this outcome ever happening in the times I did this..."
+                s "It just seemed so unlikely and depended so much on {i}someone{/i} doing the right thing."
+                s "I don't know what to do..."
+                s "I haven't been this uncertain for a while."
+                show monika zorder 3 at f31
+                show sayori zorder 2 at t33
+                m "We need to think about this carefully."
+                m "None of us want the world to end right now, do we?"
+                m "Then any one of us could lead us to this new world we're looking for."
+                show monika zorder 2 at t31
                 show ayame zorder 3 at f32
                 ay "Clearly, none of us can be allowed to make this decision."
                 ay "We're all suspicious in some way now."
                 ay "Is that, at least, in agreeance?"
                 show ayame zorder 2 at t32
                 show sayori zorder 3 at f33
-                s "If what you're saying is true, then you might be right."
+                s "If what you were saying was true, then you might be right."
+                s "All of us are affected in some way."
                 show monika zorder 3 at f31
                 show sayori zorder 2 at t33
                 m "I suppose your argument makes sense."
                 show ayame zorder 3 at f32
-                ay "Then we all know there's just one person who we can look to for this decision."
+                ay "We're all biased towards ourselves."
+                ay "In your own minds, you probably think that you're the one who deserves the presidency."
+                ay "Who deserves to be the one to save this world."
+                show ayame zorder 2 at t32
+                show sayori zorder 3 at f33
+                s "I'm not so sure about that anymore..."
+                s "I think the only thing I can do is end this world."
+                s "And that's a decision I'm now prepared to make if I still have this power."
+                s "I'm just not sure if it's the right decision."
+                show ayame zorder 3 at f32
+                ay "So you're looking for someone to validate your choice, is that it?"
+                ay "So you can be certain that ending the world here is the right thing to do?"
+                ay "If that's the case, then we all know there's just one person who we can look to for this decision."
                 show ayame zorder 2 at t32
                 "The three of them turn towards me."
                 show monika zorder 3 at f31
                 m "Ah, of course."
+                "Monika smiles weakly."
+                m "[player], it looks like you have all the power."
+                m "The power to end or save this world."
                 menu:
-                    "Who should get the presidency?"
+                    m "So who should get the presidency?"
                     "Me." if sayori_date and sayori_personality == 0 and not persistent.markov_agreed:
                         call ch16_mc_president
                     "Monika." if not persistent.markov_agreed:
