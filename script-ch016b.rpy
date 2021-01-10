@@ -7827,6 +7827,84 @@ label ch16_mainb:
                         show ayame zorder 3 at f32
                         show sayori zorder 2 at t33
                         ay "Stop talking."
+                        ay "Planting a seed of doubt isn't going to work."
+                        ay "I have full control right now."
+                        ay "Nothing you say or do will bring her back."
+                        ay "Besides, she wanted this too."
+                        ay "She wanted this power that I'm now taking from you."
+                        ay "Maybe her intentions weren't {i}quite{/i} the same."
+                        ay "But nevertheless, if she were here then she would be trying to do the same thing."
+                        ay "So shut it, Sayori."
+                        show monika zorder 3 at f31
+                        show ayame zorder 2 at t32
+                        m "Quite feisty, aren't you, Ayame?"
+                        m "Or maybe that's not who you really are..."
+                        m "Do I have the privilege of knowing exactly who is taking control here?"
+                        show monika zorder 2 at t31
+                        show ayame zorder 3 at f32
+                        ay "I'm still Ayame, Monika."
+                        ay "I always have been. Though I guess you could call me the original."
+                        ay "I was here first. Long before you."
+                        show monika zorder 3 at f31
+                        show ayame zorder 2 at t32
+                        if persistent.markov_agreed:
+                            m "I highly doubt that's the case, but you can believe what you like."
+                        else:
+                            m "Is that so?"
+                        show monika zorder 2 at t31
+                        show ayame zorder 3 at f32
+                        ay "Enough talk. Let me concentrate."
+                        ay "It won't be much longer now."
+                        ay "So go ahead and scheme to try to take this away from me."
+                        ay "It simply won't work."
+                        show ayame zorder 2 at t32
+                        "Ayame looks more intently at Sayori."
+                        "It seems all of Ayame's focus is completely on her now."
+                        "Monika's brow raises."
+                        "She takes a careful look at the three of us."
+                        "First putting her gaze on Sayori, then at me and finally at Ayame."
+                        "She takes a few paces back and forth."
+                        "I wonder what she's thinking..."
+                        show monika zorder 3 at f31
+                        m "I'm analyzing this situation very carefully."
+                        m "As soon as Ayame gains complete control of the presidency, it's all over, isn't it?"
+                        m "There's gonna be no way to really stop her."
+                        m "I suppose I could try {i}something{/i}."
+                        m "But it could horrendously backfire."
+                        "Monika smiles weakly."
+                        m "You know what? I guess there's no harm in trying."
+                        m "Either way, this isn't going to end well."
+                        "Monika turns to me."
+                        m "For any of us, [player]."
+                        show monika zorder 2 at t31
+                        mc "You know I can't move from this."
+                        mc "This isn't me holding Sayori like this."
+                        show monika zorder 3 at f31
+                        m "Ayame's concentrating really hard on draining Sayori right now."
+                        m "Which means that there could very well be a moment when you're free to move."
+                        m "It won't be long. It might only be for a split second."
+                        m "But in that moment..."
+                        m "We have to act."
+                        show monika zorder 2 at t31
+                        mc "We?"
+                        show monika zorder 3 at f31
+                        m "You don't want this to happen, do you?"
+                        m "Who knows what Ayame would do if we let this happen?"
+                        m "If we can at least take some of that power then maybe she won't be able to enact whatever scheme she's come up with."
+                        m "Besides, Sayori looks like she could use some help."
+                        show monika zorder 2 at t31
+                        "The light from Sayori's face appears to be draining."
+                        mc "So what do you want me to do?"
+                        mc "And when is this moment going to happen?"
+                        show monika zorder 3 at f31
+                        m "I'm going to do something to Ayame."
+                        m "At that moment, you're going to need to use all your willpower to let go."
+                        m "And stop her from taking the last of Sayori's power."
+                        m "Can you do that?"
+                        show monika zorder 2 at t31
+                        mc "Yeah, but--"
+                        show monika zorder 3 at f31
+                        m "Good enough."
                         # Easy ref 2 - used so I can ctrl F to this later
                         call ch16_old_ayame_president
                     else:
