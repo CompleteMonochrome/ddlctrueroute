@@ -7824,8 +7824,10 @@ label ch16_mainb:
                         s "You know I'm right, don't you?"
                         s "That's why you're--"
                         s "AAAAAAAAAAAAAAAAAHHHH!!!"
-                        show ayame zorder 3 at f32
                         show sayori zorder 2 at t33
+                        "Sayori's head drops."
+                        "It looks like she's fallen unconscious or something..."
+                        show ayame zorder 3 at f32
                         ay "Stop talking."
                         ay "Planting a seed of doubt isn't going to work."
                         ay "I have full control right now."
@@ -7835,8 +7837,10 @@ label ch16_mainb:
                         ay "Maybe her intentions weren't {i}quite{/i} the same."
                         ay "But nevertheless, if she were here then she would be trying to do the same thing."
                         ay "So shut it, Sayori."
-                        show monika zorder 3 at f31
                         show ayame zorder 2 at t32
+                        "Sayori doesn't reply. It seems like whatever Ayame did must have knocked her out."
+                        "I hope she's okay..."
+                        show monika zorder 3 at f31
                         m "Quite feisty, aren't you, Ayame?"
                         m "Or maybe that's not who you really are..."
                         m "Do I have the privilege of knowing exactly who is taking control here?"
@@ -7899,31 +7903,91 @@ label ch16_mainb:
                         show monika zorder 3 at f31
                         m "I'm going to do something to Ayame."
                         m "At that moment, you're going to need to use all your willpower to let go."
-                        m "And stop her from taking the last of Sayori's power."
+                        m "That will stop her from taking the last of Sayori's power."
                         m "Can you do that?"
                         show monika zorder 2 at t31
                         mc "Yeah, but--"
                         show monika zorder 3 at f31
                         m "Good enough."
+                        m "Now, wait for it..."
+                        "Is this plan really going to work?"
+                        m "Almost, [player]..."
+                        "This just seems like a last ditch effort."
+                        "It might even make things worse."
+                        "I hope Monika knows what she's doing."
+                        m "And..."
+                        m "...now!"
+                        "I can feel my arms loosen a bit."
+                        "I immediately I try to force my arms off Sayori."
+                        "It takes all my will but I manage to loosen my grip a little bit."
+                        show sayori at thide
+                        hide sayori
+                        "Sayori falls to the ground but Ayame is still concentrating on her."
+                        "Her hand follows Sayori's movement to the ground."
+                        "It seems Ayame is completely ignoring us."
+                        m "That's it! Now to deal with Ayame."
+                        m "[player], quickly! We have to--"
+                        show ayame zorder 3 at f32
+                        ay "It's already too late."
+                        ay "Perhaps if you enacted your plan just a moment earlier."
+                        ay "But I have it all, Monika."
+                        ay "I have the full power of the presidency now."
+                        ay "And it's even better than I imagined."
+                        "An evil grin forms across Ayame's face."
+                        "I don't know what she's thinking now but it can't be good."
+                        ay "Finally...this world is mine."
+                        show monika zorder 3 at f31
+                        show ayame zorder 2 at t32
+                        m "You sound so sure about that, Ayame."
+                        show monika zorder 2 at t31
+                        show ayame zorder 3 at f32
+                        ay "You couldn't possibly do anything to me anymore."
+                        ay "With just a snap of my fingers I could make you disappear."
+                        show ayame zorder 2 at t32
+                        show sayori 1a zorder 3 at f33
+                        s "A-Ayame, you can't do this."
+                        s "Please, think about this."
+                        show ayame zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        ay "I'm surprised you're still conscious after all that."
+                        ay "You're quite resilient, Sayori."
+                        ay "Too bad that it won't mean anything once I have my way."
+                        show ayame zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "P-Please..."
+                        show monika zorder 3 at f31
+                        show sayori zorder 2 at t33
+                        m "You're forgetting something, Ayame."
+                        m "You may have the power of the presidency, but that doesn't mean you know how to use it."
+                        show monika zorder 2 at t31
+                        show ayame zorder 3 at f32
+                        ay "Can't be that hard, can it?"
+                        ay "I imagine it's simply..."
+                        "Ayame closes her eyes and suddenly..."
+                        scene bg school_secluded
+                        show monika zorder 2 at t31
+                        show ayame zorder 3 at f32
+                        "...we are at the school."
+                        ay "Excellent. Now all I have to do is enact my plan."
                         # Easy ref 2 - used so I can ctrl F to this later
                         call ch16_old_ayame_president
                     else:
                         "I look behind me to see who she's talking to."
                         "But there's no one there."
                         mc "Who are you talking to?"
-                        show ayame zorder 3 at f31
+                        show ayame zorder 3 at f32
                         $ style.say_dialogue = style.edited
                         ay "The drink..."
                         ay "Dammit! No, it can't end like this!"
                         ay "Not when I have struggled to get this far!"
                         ay "There's just one thing left that I can do."
-                        show ayame zorder 2 at t31
+                        show ayame zorder 2 at t32
                         $ style.say_dialogue = style.normal
                         show sayori zorder 3 at f33
                         s "I'm sorry, Ayame. I should have done more to stop her from taking over."
                         s "That angry, evil, scheming part of you that I could sense when we first met..."
                         s "I'll make sure you live out the last moments of this world in peace."
-                        show ayame zorder 3 at f31
+                        show ayame zorder 3 at f32
                         show sayori zorder 2 at t33
                         $ style.say_dialogue = style.edited
                         ay "No, damn you!"
@@ -7937,25 +8001,25 @@ label ch16_mainb:
                         show sayori zorder 3 at f33
                         s "I had to do it to her."
                         s "At least this way, she can be at peace."
-                        show monika zorder 3 at f32
+                        show monika zorder 3 at f31
                         show sayori zorder 2 at t33
                         m "Where did you take her?"
-                        show monika zorder 2 at t32
+                        show monika zorder 2 at t31
                         show sayori zorder 3 at f33
                         s "Nowhere you'll need to concern yourself about."
                         s "Just a few more moments now."
                         "Sayori walks over to the window."
                         "She stares at the nothingness outside."
                         s "And then...it'll all be over."
-                        show monika zorder 3 at f32
+                        show monika zorder 3 at f31
                         show sayori zorder 2 at t33
                         m "I guess it's come to this, hasn't it?"
                         m "There's really just one last thing I can do."
                         m "I wouldn't call it one of my finest ideas but..."
-                        show monika zorder 2 at t32
+                        show monika zorder 2 at t31
                         show sayori zorder 3 at f33
                         s "And what could you mean by that?"
-                        show monika zorder 3 at f32
+                        show monika zorder 3 at f31
                         show sayori zorder 2 at t33
                         m "You don't know?"
                         "Monika pulls something out of her pocket."
@@ -7967,27 +8031,27 @@ label ch16_mainb:
                         "She puts a finger to her lips, signaling me to keep quiet."
                         "I suddenly find myself unable to move. It's like I'm frozen in place."
                         "Monika begins slowly moving towards Sayori."
-                        show monika zorder 2 at t32
+                        show monika zorder 2 at t31
                         show sayori zorder 3 at f33
                         s "I did. I saw through all of the futures."
                         s "When I had to remove Ayame, I didn't have to look much further."
                         s "I knew after she was gone, that was it. I was free to end the world."
                         s "Except..."
-                        show monika zorder 3 at f32
+                        show monika zorder 3 at f31
                         show sayori zorder 2 at t33
                         m "Except...?"
                         "Monika stops her movement and puts the shiny object behind her."
                         "I try to say something but my mouth won't open."
                         "I'm just left standing here, helplessly."
                         m "Was there something else stopping you?"
-                        show monika zorder 2 at t32
+                        show monika zorder 2 at t31
                         show sayori zorder 3 at f33
                         s "Well, there was something odd about some of the futures I saw."
                         s "Something that just didn't make any sense."
-                        show monika zorder 3 at f32
+                        show monika zorder 3 at f31
                         show sayori zorder 2 at t33
                         m "Oh? Do go on."
-                        show monika zorder 2 at t32
+                        show monika zorder 2 at t31
                         "Monika is now directly behind Sayori."
                         "Sayori seems to have no idea and is still looking out the window."
                         "Monika takes out the shiny object from behind her."
@@ -8000,17 +8064,17 @@ label ch16_mainb:
                         show sayori zorder 2 at t33
                         "Sayori is suddenly interrupted when Monika takes the shiv and puts it into Sayori's back."
                         "What the hell?! Did Monika really just do that?!"
-                        show monika zorder 2 at t32
+                        show monika zorder 2 at t31
                         show sayori zorder 3 at f33
                         s "Y-You..."
-                        show monika zorder 3 at f32
+                        show monika zorder 3 at f31
                         show sayori zorder 2 at t33
                         m "You should have sensed something was wrong, Sayori."
                         "Monika's eyes turn a deep red."
                         "It's like she's thirsting for blood."
                         "She twists the shiv deeper into Sayori's back."
                         m "You should realized that anything is a possibility."
-                        show monika zorder 2 at t32
+                        show monika zorder 2 at t31
                         show sayori at thide
                         hide sayori
                         "Sayori collapses to the floor."
