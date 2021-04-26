@@ -8534,6 +8534,8 @@ label ch16_mainb:
                                     "Monika is going to finish with Sayori and the world will be as it should be."
                                     "Everyone will live."
                                     "And everyone will be subject to the new world."
+                                    "I don't see anything wrong with this."
+                                    "This is the right thing to do."
                         else:
                             menu:
                                 "I'm going to..."
@@ -8542,16 +8544,25 @@ label ch16_mainb:
                                     "I don't want this world to end."
                                     "I want to keep living, even if it means dealing with whatever is controlling Monika."
                                     "There must be some way to stop her eventually, right?"
+                                    "Even if this thing became something that has power over the world."
+                                    "They wouldn't be unstoppable...would they?"
                                 "Step in front of Sayori.":
                                     "I don't know if this is a good idea but it's something."
                                     "With all of my strength, I move Sayori out of the way and take her place."
                                     "Sayori falls to the floor and a surprised look appears on Monika's face."
                                     "I can feel my energy being drained and I'd probably be in incredible pain right now if it weren't for Sayori."
                                     "I manage to give a small grin to Monika."
+                                    "She looks at me with a look of surprise."
+                                    "I don't think she expected me to do something so brave."
+                                    "Or so reckless..."
                                 "Shake Monika.":
                                     "With all of my strength, I manage to get off the ground and grab onto Monika's arm in one movement."
                                     "I manage to shake her, just a little bit."
                                     "But enough to break her concentration."
+                                    "She pays no attention to me. Or at least, that's what I thought."
+                                    "Suddenly, the expression on her face changes."
+                                    "First to one of surprise, then one of anger."
+                                    "What have I done?"
                         $ s_name = "Sayori"
                         # Easy ref 1 - used so I can ctrl F to this later
                         if persistent.markov_agreed:

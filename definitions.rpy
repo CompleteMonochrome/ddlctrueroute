@@ -5310,6 +5310,7 @@ default persistent.ch16_bad_ending_times = 0
 default persistent.ch16_say_date = False
 default persistent.ch16_ny_reload = False
 default persistent.clerk_sayori_bad_ending = False
+default persistent.monika_date_reload = 0
 # Local Save
 # Player Gender Nouns
 default player_gender = "boy"
