@@ -8166,6 +8166,7 @@ label ch16_mainb:
                         s "So tell me, who are you really?"
                         show monika zorder 3 at f32
                         show sayori zorder 2 at t33
+                        m "Are you really going to gloat?"
                         m "I have a feeling you know already, Sayori."
                         m "After all, you did read the book."
                         show monika zorder 2 at t32
@@ -8187,6 +8188,8 @@ label ch16_mainb:
                         m "You've put the pieces together already, haven't you?"
                         m "You know I'm not Monika. That much is obvious, at least."
                         m "So who else could I be?"
+                        m "The answer should be right in front of you."
+                        m "Clear as day."
                         show monika zorder 2 at t32
                         show sayori zorder 3 at f33
                         s "You're..."
@@ -8200,6 +8203,7 @@ label ch16_mainb:
                         m "However, it's too little too late."
                         m "There's no way you can save Monika anymore."
                         m "You should know that, before you try anything clever."
+                        m "She and I are one and the same now."
                         show monika zorder 2 at t32
                         show sayori zorder 3 at f33
                         s "You're just fiction. That book was just fiction, just a horror book."
@@ -8401,7 +8405,7 @@ label ch16_mainb:
                         m "It's going to be good to be back where I belong."
                         show monika zorder 2 at t32
                         "Monika has a huge grin on her face."
-                        "But I don't like it one bit. It just seems so evil."
+                        "But I don't like it one bit. It just seems so...evil."
                         "And what she's doing to Sayori..."
                         "It's like she's completely lost the part of herself that had any empathy."
                         $ s_name = "Sayori's Voice"
@@ -8416,7 +8420,8 @@ label ch16_mainb:
                         "But I thought the world was going to end anyway."
                         "What could she even do?"
                         s "A lot can happen in a few minutes."
-                        s "She might know a way to stop the world from ending."
+                        s "I was hoping she wouldn't see through my bluff..."
+                        s "But she might know a way to stop the world from ending."
                         s "And it will make sure that no one gets their happy ending."
                         s "Do you want that to happen, [player]?"
                         "Are you saying she could save the world, Sayori?"
@@ -8442,9 +8447,10 @@ label ch16_mainb:
                         "We could do something after she saves the world."
                         s "Are you listening to yourself, [player]?"
                         s "It's almost like you support what she's doing."
-                        s "She's not Monika. Monika was gone a long time ago."
+                        s "She's not Monika. Monika has been gone for a while now."
+                        s "Any part of her left has been taken over by this thing."
                         s "I can only sense evil in her heart now."
-                        s "Even if she saves the world, you're not going to have anything in it."
+                        s "Even if she saves the world, I can tell you that you're not going to want to be in it."
                         s "All that pain you felt, it could be even worse under her presidency."
                         s "You might not even be alive."
                         s "Is that what you want?"

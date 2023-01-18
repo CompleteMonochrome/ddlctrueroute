@@ -194,6 +194,13 @@ init python:
                             "achieved": False,
                             "hidden": False
                             }
+        persistent.achievements_dict["*Timeless Classic*"] = {"type": 0,
+                            "title": "Timeless Classic",
+                            "text": "Go on a \"date\" with Ayame.",
+                            "icon": "mod_assets/gui/achievements/achmonikasreality.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
         persistent.achievements_dict["*Okay, Everyone!*"] = {"type": 0,
                             "title": "Okay, Everyone!",
                             "text": "Go on a date with everyone.",
@@ -414,6 +421,62 @@ init python:
         persistent.achievements_dict["*Is This The Right Mod?*"] = {"type": 0,
                             "title": "Is This The Right Mod?",
                             "text": "Play Monika After Story.",
+                            "icon": "mod_assets/gui/achievements/achmas.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*A Long Time Coming*"] = {"type": 0,
+                            "title": "A Long Time Coming",
+                            "text": "Finish True Route.",
+                            "icon": "mod_assets/gui/achievements/achmas.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
+        persistent.achievements_dict["*Once Again*"] = {"type": 0,
+                            "title": "Once Again",
+                            "text": "Finish True Route with True Monika as the president.",
+                            "icon": "mod_assets/gui/achievements/achmas.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*At Long Last*"] = {"type": 0,
+                            "title": "At Long Last",
+                            "text": "Finish True Route with Evil Monika as the president.",
+                            "icon": "mod_assets/gui/achievements/achmas.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*Unlimited Strawberries*"] = {"type": 0,
+                            "title": "Unlimited Strawberries",
+                            "text": "Finish True Route with True Sayori as the president.",
+                            "icon": "mod_assets/gui/achievements/achmas.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*For The Good Of All*"] = {"type": 0,
+                            "title": "For The Good Of All",
+                            "text": "Finish True Route with Sayori as the president.",
+                            "icon": "mod_assets/gui/achievements/achmas.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*The Plan Revealed*"] = {"type": 0,
+                            "title": "The Plan Revealed",
+                            "text": "Finish True Route with True Ayame as the president.",
+                            "icon": "mod_assets/gui/achievements/achmas.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*Welcome To The Book Club!*"] = {"type": 0,
+                            "title": "Welcome To The Book Club!",
+                            "text": "Finish True Route with Ayame as the president.",
+                            "icon": "mod_assets/gui/achievements/achmas.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*It's Up To Me*"] = {"type": 0,
+                            "title": "It's Up To Me",
+                            "text": "Finish True Route with the player as the president.",
                             "icon": "mod_assets/gui/achievements/achmas.png",
                             "achieved": False,
                             "hidden": True

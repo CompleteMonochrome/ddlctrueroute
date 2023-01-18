@@ -13,10 +13,28 @@ label female_pronouns:
     $ cPlayer_reflexive = player_reflexive.capitalize()
     return
 
+# This requires a lot more work than simple word swaps
+label nonbinary_pronouns:
+    $ player_gender = "girl"
+    $ cPlayer_gender = player_gender.capitalize()
+    $ player_other = "lady"
+    $ cPlayer_other = player_other.capitalize()
+    $ player_casual = "girl"
+    $ cPlayer_casual = player_casual.capitalize()
+    $ player_personal = "she"
+    $ cPlayer_personal = player_personal.capitalize()
+    $ player_possessive = "her"
+    $ cPlayer_possessive = player_possessive.capitalize()
+    $ player_reflexive = "her"
+    $ cPlayer_reflexive = player_reflexive.capitalize()
+    return
+
 label choose_start:
     # Check player gender after input
-    if persistent.player_female:
+    if persistent.player_pronouns == 1:
         call female_pronouns
+    elif persistent.player_pronouns == 2:
+        call nonbinary_pronouns
 
     python:
         import datetime

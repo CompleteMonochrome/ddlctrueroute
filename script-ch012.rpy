@@ -870,9 +870,10 @@ label ch12_play:
         show monika zorder 3 at f21
         show yuri zorder 2 at t22
         if monika_type == 0:
-            m 1e "I feel the same, Yuri."
-            m "Bye, Yuri."
-            m "[player] and I might take a little while, we need to talk for a little bit."
+            m 1e "I feel the same but I'm sure we'll be okay."
+            "Monika turns towards me."
+            m "We'll see you there, Yuri."
+            m "[player] and I might take a little while, we need to talk for a moment."
         else:
             m 1a "Mhm."
             m "I'll see you at the gym, Yuri."

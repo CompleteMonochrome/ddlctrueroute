@@ -436,13 +436,15 @@ init -1 python:
         persistent.playername = player
         renpy.hide_screen("name_input")
         if persistent.prompt_info:
-            renpy.show_screen("gender_input", message="What pronouns would you like to use?", male_action=Function(CheckPronouns, label=label, female=False), female_action=Function(CheckPronouns, label=label, female=True))
+            renpy.show_screen("gender_input", message="What pronouns would you like to use?", male_action=Function(CheckPronouns, label=label, pronouns=0), female_action=Function(CheckPronouns, label=label, pronouns=1))
+            # , nonbinary_action=Function(CheckPronouns, label=label, pronouns=2))
         else:
             renpy.jump_out_of_context(label)
 
-    def CheckPronouns(label, female):
+    # Pronouns: 0 - Male, 1 - Female, 2 - Non-binary
+    def CheckPronouns(label, pronouns):
         renpy.hide_screen("gender_input")
-        persistent.player_female = female
+        persistent.player_pronouns = pronouns
         renpy.jump_out_of_context(label)
 
     def HideConfirmThenName(goto="choose_start"):

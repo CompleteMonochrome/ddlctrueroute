@@ -2,6 +2,49 @@
 # Possibly will release as an individual option in custom start if I can't
 # finish the story in a decent amount of time
 label ch1x_monikadate:
+    scene bg class_day
+    play music t1
+    show monika 1a zorder 2 at t11
+    "I can feel my heart pounding against my chest."
+    "I'm not sure I processed those words correctly."
+    "She couldn't have possibly said what she just said, could she?"
+    "It's a dumb question, but I have to ask her."
+    mc "A date?"
+    "I look behind me and there's no one there."
+    mc "Did I hear that correctly?"
+    mc "You're asking me out on a date."
+    m "Um..."
+    "Monika smiles."
+    m 1b "Yeah, that's right!"
+    m "Is there something wrong with that?"
+    mc "N-No, it's just...I don't know what to say."
+    m "Well...a yes would be ideal."
+    m "That is, if you're interested. I wouldn't want to make you go, if that's not what you want to do."
+    menu:
+        m "So do you want to go on a date with me?"
+        "Yes.":
+            pass
+        "Of course!":
+            pass
+        "No." if not persistent.markov_agreed:
+            m "Oh..."
+            m "I'm sorry. I thought..."
+            m "I...I need to go. I'll see you tomorrow."
+            mc "Monika wait--"
+            show monika at thide
+            hide monika
+            "Before I can tell her to stop, she walks away from me."
+            "She increases her pace and has her head down as she walks down the hallway."
+            "Was that a mistake...?"
+            "Monika is a great person but I'm just not interested in her."
+            "I don't even know where this came from all of a sudden."
+    m "That's great! I was hoping you would."
+    show sayori 1a zorder 3 at f21
+    show monika zorder 2 at t22
+    s "Hey, [player]! I--"
+    "Sayori notices that Monika is in the room with us."
+    "She looks back and forth between Monika and I a few times."
+    "It looks like she's slowly coming to a realization."
     $ monika_outfit = 1
     $ persistent.monika_date_reload = 0
     # Placeholder scene
@@ -95,9 +138,10 @@ label ch1x_monikadate_normal:
     menu:
         m "Can you promise me that?"
         "Yes.":
-            m "Thank you. Maybe "
+            m "Thank you. Maybe at the end I'll have a nice surprise for you."
         "No.":
-
+            m "Oh..."
+            "A frown starts to form on Monika's face, but she quickly changes it to a smile."
     return
 
 label ch1x_monikadate_markov:

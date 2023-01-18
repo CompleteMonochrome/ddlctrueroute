@@ -646,7 +646,7 @@ label after_load:
     # For some reason we need to set these
     if not hasattr(store, 'player_gender'):
         # If you don't have the gender, you clearly don't have the rest
-        if persistent.player_female:
+        if persistent.player_pronouns == 1:
             $ player_gender = "girl"
             $ player_other = "lady"
             $ player_casual = "girl"

@@ -25,7 +25,7 @@ label start:
     $ config.allow_skipping = True
 
     # Check player gender after input
-    if persistent.player_female:
+    if persistent.player_pronouns == 1:
         call female_pronouns
 
     if persistent.playthrough == 0:
