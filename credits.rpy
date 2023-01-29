@@ -826,4 +826,9 @@ label credits2:
         else:
             call screen dialog(message="Error: Script file is missing or corrupt.\nPlease reinstall the game.", ok_action=Quit(confirm=False))
         return
+
+label credits_trueroute:
+    scene black
+    $ get_achievement("*A Long Time Coming*")
+    return
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

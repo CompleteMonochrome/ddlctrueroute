@@ -31,8 +31,30 @@ label ch7_main:
     show sayori zorder 2 at t21
     show monika zorder 3 at f22
     m 1f "Yeah..."
+    m "How did you know that anyway?"
     show sayori zorder 3 at f21
     show monika zorder 2 at t22
+    s "I heard you talking about wanting to help them overcome their issues."
+    s "To be honest, I didn't even know they had those kind of issues."
+    s "But after looking into it, it turns our you're right."
+    s "They both have horrible things they are hiding from everyone."
+    s "I can't believe I couldn't see it...some friend I am, right?"
+    show sayori zorder 2 at t21
+    show monika zorder 3 at f22
+    m "There's no way you could have known that anyway, Sayori."
+    m "Those issues are deeply rooted within the fabric of their being."
+    m "They wouldn't have been obvious if you and I didn't already know about them."
+    show sayori zorder 3 at f21
+    show monika zorder 2 at t22
+    s "I don't fully understand what you're saying, Monika."
+    s "I want to help them, they're my friends and they don't deserve to be sad like that."
+    show sayori zorder 2 at t21
+    show monika zorder 3 at f22
+    m "...What are you planning, Sayori?"
+    m "I was going to take it slow with them and help them get over it naturally, but it seems like you have other ideas."
+    show sayori zorder 3 at f21
+    show monika zorder 2 at t22
+    s "You'll find out soon enough. Anyway, there's no time for that."
     s 1g "This is going to be short because today is super important."
     s "We're gonna read more of the novel in the club."
     s 1h "Then we're gonna organize who plays what character for the play."
@@ -53,9 +75,13 @@ label ch7_main:
     s 1d "So it's got a completely different story, relating to her."
     show sayori zorder 2 at t21
     show monika zorder 3 at f22
-    m 1a "That's really clever Sayori."
-    m "I don't fully understand your plan here..."
-    m 1e "But I know that making you president was a good idea."
+    m 1a "I don't fully understand your plan here..."
+    m 1e "I know you have good intentions but please be careful, Sayori."
+    m "Some things just can't be solved the way you think they can be."
+    m 1a "People are complicated, you know?"
+    m 1e "That said, I know that making you president was a good idea."
+    m "Whatever your plan is, I'll go along with it."
+    m "I'm sure they'll be better off for it."
     show sayori zorder 3 at f21
     show monika zorder 2 at t22
     s "Thanks Monika..."
@@ -150,9 +176,11 @@ label ch7_main:
     show sayori zorder 2 at t21
     show monika zorder 3 at f22
     m 1f "Ah, so you know about the favor I asked [player_reflexive] to do?"
+    m "I guess there's no hiding anything from you, is there?"
     show sayori zorder 3 at f21
     show monika zorder 2 at t22
-    s 1g "That's right."
+    s "I-It's not like that. I was trying to figure out some things and it just happened like that..."
+    s 1g "But that's right, I know about the favor."
     show sayori zorder 2 at t21
     show monika zorder 3 at f22
     m "Well..."
@@ -241,6 +269,10 @@ label ch7_main:
     m 1j "Well...we know better."
     m 1h "I know she's doing everything she can for her friends..."
     m "But do you think maybe she'll end up hurting everyone else in the process?"
+    m "I'm still believe that change, especially the issues that Yuri and Natsuki are dealing with, should be natural."
+    m "It can't be forced onto someone by changing who they are."
+    m "Because at that point, are they really the same person anymore?"
+    m "I don't know, I just think that's the path Sayori is going to follow."
     m 1l "Ah..."
     m "I've spoken for too long."
     m 1m "You're probably gonna end up late for school."
@@ -285,6 +317,10 @@ label ch7_main:
     mc "Well, you got me there."
     mc "I didn't exactly have the best night with everything I had to do."
     mc "Write a poem...read two different books..."
+    mc "And I just couldn't get out of bed this morning."
+    mc "It's like I was just physically stuck there for a while."
+    s 1a "You sure you just weren't being lazy this morning?"
+    mc "Yeah, whatever..."
     s 1g "You read some of that other book at least, right?"
     mc "Yeah...some."
     s 1d "Well, that's all I can ask for!"

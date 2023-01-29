@@ -5663,7 +5663,8 @@ label ch16_main:
             m 1a "I've already come up with something, but it's going to take a while to get ready."
             m "Which is why I need a distraction."
             m "I just need to figure out a discreet way to dispose of the body."
-            m 1h "I can't just delete her."
+            m 1e "I'm just kidding! I'm not going to kill her or anything."
+            m 1h "But I can't just delete her."
             m "Not yet anyway."
             m "Ayame is only one of our problems though."
             m "There's still the main problem."
@@ -5698,6 +5699,7 @@ label ch16_main:
             m 1l "Or Monika is being a terrible influence on me."
             m 1m "Yet all you've done..."
             m "Everything you've done for me..."
+            $ get_achievement("*Dark Side*")
             m "It just makes me love you more."
             m "I'm sure it might have started off as Monika's feelings."
             m 1e "But they're mine now."

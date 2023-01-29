@@ -5311,6 +5311,11 @@ default persistent.ch16_say_date = False
 default persistent.ch16_ny_reload = False
 default persistent.clerk_sayori_bad_ending = False
 default persistent.monika_date_reload = 0
+default persistent.true_sayori_bonus = False
+default persistent.true_monika_bonus = False
+default persistent.love_markov_bonus = False
+default persistent.ayame_bonus = False
+default persistent.mc_bonus = False
 # Local Save
 # Player Gender Nouns
 default player_gender = "boy"

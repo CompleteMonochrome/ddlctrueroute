@@ -7647,7 +7647,10 @@ label ch16_mainb:
                         else:
                             call ch16_ayame_president
                     "Sayori." if not persistent.markov_agreed:
-                        call ch16_sayori_president
+                        if sayori_date:
+                            call ch16_true_sayori_president
+                        else:
+                            call ch16_sayori_president
             else:
                 s "I've really thought about this."
                 s "I just can't trust any of you to stay on the right path."
@@ -8551,6 +8554,8 @@ label ch16_mainb:
                                     "Something does seem wrong about this now that I think about it."
                                     "But I shouldn't stop Monika."
                                     "She's doing the right thing."
+                                    "That's right."
+                                    "I only need to listen to her."
                         else:
                             menu:
                                 "I'm going to..."
@@ -8970,7 +8975,7 @@ label ch16_mainb:
                     call ch16_sayori_president
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
-    return
+    jump credits_trueroute
 
 # Let Sayori 'help'
 label ch16_convince_1_end:
