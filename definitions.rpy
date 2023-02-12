@@ -5316,6 +5316,7 @@ default persistent.true_monika_bonus = False
 default persistent.love_markov_bonus = False
 default persistent.ayame_bonus = False
 default persistent.mc_bonus = False
+default persistent.strawberry_usage = 0
 # Local Save
 # Player Gender Nouns
 default player_gender = "boy"
