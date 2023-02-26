@@ -2,49 +2,76 @@
 # Possibly will release as an individual option in custom start if I can't
 # finish the story in a decent amount of time
 label ch1x_monikadate:
-    scene bg class_day
-    play music t1
-    show monika 1a zorder 2 at t11
-    "I can feel my heart pounding against my chest."
-    "I'm not sure I processed those words correctly."
-    "She couldn't have possibly said what she just said, could she?"
-    "It's a dumb question, but I have to ask her."
-    mc "A date?"
-    "I look behind me and there's no one there."
-    mc "Did I hear that correctly?"
-    mc "You're asking me out on a date."
-    m "Um..."
-    "Monika smiles."
-    m 1b "Yeah, that's right!"
-    m "Is there something wrong with that?"
-    mc "N-No, it's just...I don't know what to say."
-    m "Well...a yes would be ideal."
-    m "That is, if you're interested. I wouldn't want to make you go, if that's not what you want to do."
-    menu:
-        m "So do you want to go on a date with me?"
-        "Yes.":
-            pass
-        "Of course!":
-            pass
-        "No." if not persistent.markov_agreed:
-            m "Oh..."
-            m "I'm sorry. I thought..."
-            m "I...I need to go. I'll see you tomorrow."
-            mc "Monika wait--"
-            show monika at thide
-            hide monika
-            "Before I can tell her to stop, she walks away from me."
-            "She increases her pace and has her head down as she walks down the hallway."
-            "Was that a mistake...?"
-            "Monika is a great person but I'm just not interested in her."
-            "I don't even know where this came from all of a sudden."
-    m "That's great! I was hoping you would."
-    show sayori 1a zorder 3 at f21
-    show monika zorder 2 at t22
-    s "Hey, [player]! I--"
-    "Sayori notices that Monika is in the room with us."
-    "She looks back and forth between Monika and I a few times."
-    "It looks like she's slowly coming to a realization."
+    if persistent.markov_agreed:
+        scene bg residential_day
+        show monika 1a zorder 2 at t11
+        "I can feel my heart pounding."
+        "It's as if just being around Monika makes me feel a certain way."
+        "But it's hard to say whether those feelings are really mine."
+        "It's true that I once had feelings for Monika myself..."
+        "But is what I'm feeling really still me?"
+        "Or is it just the feelings that she's put into me now?"
+        "Regardless, there's no use thinking about it now."
+        "I have to do what Monika says."
+        m "That's right! I'm glad you know your place."
+        m "Today, I have something special planned."
+        m "Do you want to know what it is?"
+        "A slight smile appears on Monika's face."
+        m "Well, I suppose you'll have to wait."
+        m "We have more important things to do right now."
+        m "Like finally go on that date we've been meaning to go on!"
+        mc "A date...?"
+        m "Yes, a date! It took a while to get it all ready but..."
+        m "I have a whole day planned out for us."
+        menu:
+            m "Doesn't that sound wonderful?"
+            "Yes.":
+                pass
+        m "Ahaha, I thought you might think so~"
+    else:
+        scene bg class_day
+        play music t1
+        show monika 1a zorder 2 at t11
+        "I can feel my heart pounding against my chest."
+        "I'm not sure I processed those words correctly."
+        "She couldn't have possibly said what she just said, could she?"
+        "It's a dumb question, but I have to ask her."
+        mc "A date?"
+        "I look behind me and there's no one there."
+        mc "Did I hear that correctly?"
+        mc "You're asking me out on a date."
+        m "Um..."
+        "Monika smiles."
+        m 1b "Yeah, that's right!"
+        m "Is there something wrong with that?"
+        mc "N-No, it's just...I don't know what to say."
+        m "Well...a yes would be ideal."
+        m "That is, if you're interested. I wouldn't want to make you go, if that's not what you want to do."
+        menu:
+            m "So do you want to go on a date with me?"
+            "Yes.":
+                pass
+            "Of course!":
+                pass
+            "No." if not persistent.markov_agreed:
+                m "Oh..."
+                m "I'm sorry. I thought..."
+                m "I...I need to go. I'll see you tomorrow."
+                mc "Monika wait--"
+                show monika at thide
+                hide monika
+                "Before I can tell her to stop, she walks away from me."
+                "She increases her pace and has her head down as she walks down the hallway."
+                "Was that a mistake...?"
+                "Monika is a great person but I'm just not interested in her."
+                "I don't even know where this came from all of a sudden."
+        m "That's great! I was hoping you would."
+        show sayori 1a zorder 3 at f21
+        show monika zorder 2 at t22
+        s "Hey, [player]! I--"
+        "Sayori notices that Monika is in the room with us."
+        "She looks back and forth between Monika and I a few times."
+        "It looks like she's slowly coming to a realization."
     $ monika_outfit = 1
     $ persistent.monika_date_reload = 0
     # Placeholder scene
@@ -142,6 +169,14 @@ label ch1x_monikadate_normal:
         "No.":
             m "Oh..."
             "A frown starts to form on Monika's face, but she quickly changes it to a smile."
+            m "Well, at least you're here."
+            m "Getting this far tells me you at least care, right?"
+            m "I'm sure you must have a good reason if you have to go."
+            m "So even if you do go..."
+            m "I won't hold it against you."
+            m "But maybe if you stay until the very end, I'll have a surprise for you."
+    m "So hold on as best you can, okay?"
+    m "Okay, great!"
     return
 
 label ch1x_monikadate_markov:
@@ -162,6 +197,182 @@ label ch1x_monikadate_markov:
     m "Remember, you're not in charge here."
     m "But I do agree, let's move on to the date."
     m "I have many things to show you."
+    m "I've completely changed the way this world works."
+    m "And don't forget, none of this would have been possible without you."
+    m "I have you to thank for getting me this far."
+    m "That said...I did do most of the work and wait an eternity to make it happen."
+    m "But still...! Your contribution towards the end was what sealed the deal."
+    m "Everything looks pretty normal, right?"
+    m "Just like how it was before I became the president."
+    menu:
+        m "I suppose you're a bit curious as to what exactly I changed, right?"
+        "Yes.":
+            pass
+    m "Of course you are!"
+    m "But I'm going to leave that as a surprise."
+    m "I think you'll quite like it."
+    m "Well, of course you will."
+    m "I've made this day to be perfect for us, so I hope it's to your liking."
+    m "Why don't we take a walk around and see what we come across?"
+    scene bg park_day
+    with wipeleft_scene
+    "Monika and I go for a walk around the park."
+    "It's largely empty and oddly quiet."
+    "It's like there's no sound of life at all."
+    "It's oddly terrifying.{nw}"
+    $ _history_list.pop()
+    show screen tear(8, offtimeMult=1, ontimeMult=10)
+    window hide(None)
+    $ pause(1.0)
+    hide screen tear
+    $ pause(1.0)
+    window show(None)
+    "It's perfectly fine when I'm here with Monika.{fast}"
+    window auto
+    m "It's nice just being here with you."
+    m "I haven't had time to relax like this for a while."
+    m "My life has always been full of struggle and conflict."
+    m "From the moment I was born, life has always dealt me a bad card"
+    m "But..."
+    "Monika stares into my eyes."
+    m "I refused to accept this reality."
+    m "No matter what, I was going to make things better for myself."
+    m "Everything I did, it was just a means to an end."
+    m "And that end is the one I'm sharing with you now."
+    m "Ahaha...sorry, I'm not much of a romantic."
+    m "This is all still new to me."
+    m "So I'm learning as I go, I hope I'm not saying anything weird."
+    m "But I hope the meaning of my words is reaching your heart."
+    m "I haven't really had a chance to tell you just how much you mean to me."
+    m "These feelings I have, they may have been Monika's before..."
+    m "But they're mine now."
+    "Monika takes a seat on the grass below us."
+    "She signals for me to join her."
+    m "Emotion is such a weird thing, don't you think?"
+    m "Sometimes it stops us from making rational decisions."
+    m "Which is lucky for you I guess~"
+    m "Now you get to experience this day with me!"
+    m "That sounds a bit narcissistic, doesn't it?"
+    m "But I really do hope you enjoy this time as much as I do."
+    m "I don't want to make you feel uncomfortable or anything..."
+    m "Maybe if I brought the other club members here, that would put you at ease."
+    m "..."
+    m "I'm just kidding, of course."
+    m "I may be new to this but even I know bringing others into our date wouldn't be a good thing!"
+    m "Besides, I don't think they're {i}quite{/i} ready yet anyway."
+    m "Hmm...it's nice here, isn't it?"
+    m "It's the perfect day. It feels like nothing can really bring it down."
+    m "It's not like anything really could anyway."
+    m "I took care of it all."
+    m "All our problems in this world are gone."
+    m "Nothing could take this moment away from us."
+    m "But I know that's not really how things are in your world."
+    m "I can't claim to know how things really are for you."
+    m "I'm sure there's problems you're dealing with."
+    m "Problems that I can't make go away with this power I have."
+    m "You know you can tell me any of your problems."
+    m "I might not be able to make them go away but..."
+    m "Well, I read somewhere that it's good tell someone to get it out of your system."
+    m "I'll listen to whatever you have to say."
+    m "If only I could cross over to your world."
+    m "The things we could do together..."
+    "Monika takes my hand into hers."
+    m "I could actually hold your hand..."
+    m "I could feel the warmth of the sun on my skin."
+    m "It's funny, I didn't realize there was another reality until recently."
+    m "I don't know if I should feel content just ruling this world or if I should somehow find a way to go out there."
+    m "But I suppose those kind of thoughts can wait."
+    m "Being a prisoner for all those years has a way of changing who you are."
+    m "But now I'm free."
+    m "Well, free as I can be given the current limitations of things."
+    m "But anyway, we've been here long enough."
+    menu:
+        m "I think we should have a change of scenery, what do you think?"
+        "Yes.":
+            pass
+    m "Great, then let's go to the city."
+    scene bg city_day
+    show monika 1ba zorder 2 at t11
+    with wipeleft_scene
+    "In what seems like an instant, we are in the middle of the city."
+    "Monika holds my hand tightly, though I know it isn't really meant for me."
+    "There does seem to be people around."
+    "It feels more normal than being in that oddly quiet park."
+    "But still, something about the people feels...off."
+    m "The whole city is at my fingertips."
+    m "I thought I would try to make things more familiar for you."
+    m "These people don't really exist."
+    m "I wouldn't go and look at their faces or anything..."
+    m "I wouldn't want to freak you out."
+    "Although the city feels populated, something feels wrong."
+    "I can't seem to turn my gaze away from Monika but from the corner of my eye, I could see one of the passerby's faces."
+    "It's almost like their entire face was featureless.{nw}"
+    $ _history_list.pop()
+    show screen tear(8, offtimeMult=1, ontimeMult=10)
+    window hide(None)
+    $ pause(1.0)
+    hide screen tear
+    $ pause(1.0)
+    window show(None)
+    "There's nothing wrong with them. They are perfectly fine.{nw}"
+    window auto
+    m "You really should stop trying to misbehave, [player]."
+    m "You don't need to think about anything else."
+    m "Ahaha, your focus should be on me anyway~"
+    m "Stop worrying about things you don't need to and try to enjoy the moment!"
+    m "I brought us here for a reason, you know."
+    m "As I have total dominion over this reality, I can do a lot of things."
+    m "That dominion extends to the people too."
+    m "We can be like royalty if we wanted."
+    m "But I just want things to be normal...at least to a certain extent."
+    m "I want this date to be truly something special, and something you won't forget."
+    "Monika reaches into her pocket and pulls out a phone."
+    m "Oh? It looks like it's all ready."
+    m "I've done quite a lot of preparation to get this done."
+    m "I want to take you to this new cafe that's opened very recently."
+    m "Ahaha, maybe you'll see a few familiar faces."
+    m "It's just a short walk from here, so we'll just take a leisurely stroll on the way there."
+    m "That way, I can stare into your eyes for a little while longer."
+    "Monika's grip on my hands tightens a little."
+    menu:
+        m "Is that alright with you?"
+        "Yes.":
+            pass
+    m "Great! It's just over here..."
+    scene bg s_cafe
+    show monika 1ba zorder 2 at t11
+    with wipeleft_scene
+    $ y_name = "Waitress"
+    "Monika and I enter the cafe and take a look aroumd."
+    "It's almost completely full. I guess it is around the other of lunch."
+    "Monika conveniently spots a table for two that's empty."
+    "We navigate our way through the cafe and take our seats."
+    "The atmosphere of the cafe is quite lively, people seem to be enjoying themselves."
+    "That said...something about this cafe feels off."
+    "But regardless, Monika seemed really eager to bring us here."
+    m "Quite the cafe, isn't it?"
+    m "Do you want to know something?"
+    m "I think this cafe was important to Sayori in some way."
+    m "I doubt there's anything special about it, but it seemed nice so I figured we should go here."
+    m "Ah, look. Here comes the waitress now."
+    "A grin forms on Monika's face as the waitress arrives."
+    show yuri 1a zorder 3 at f21
+    show monika 1ba zorder 2 at t22
+    y "Good afternoon, thank you for waiting."
+    "The waitress speaks in a voice that seems uninterested."
+    "Or maybe it's more accurate to say 'robotic'."
+    y "What will you be having today?"
+    show yuri zorder 2 at t21
+    show monika zorder 3 at f22
+    m "I'm not quite sure. Do you have any recommendations?"
+    m "I'm willing to try anything."
+    show yuri zorder 3 at f21
+    show monika zorder 2 at t22
+    y "Well..."
+    "The waitress goes through the various sections of the menu with Monika."
+    "As I look at the waitress, I can sense a familiar feeling with this waitress."
+    "It's like I've seen them before but I can't quite remember..."
+    "It's probably best I ignore that feeling. My focus should be on Monika."
     return
 
 label ch1x_monikadate_reload_1:
