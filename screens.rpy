@@ -501,6 +501,14 @@ init -501 screen navigation():
                                     false=Start("choose_start")),
                                 no_action=Hide("confirm")),
                             false=Function(HideConfirmThenName)) text_outlines customstartoutlines text_hover_outlines customstarthover_outlines text_insensitive_outlines customstartinsensitive_outlines
+                        if persistent.main_story_finished:
+                            textbutton _("Bonus Days") action If(persistent.playername,
+                            true=Show(screen="confirm", message="Are you sure you want to see a bonus day?",
+                                yes_action=If(persistent.prompt_info,
+                                    true=Function(HideConfirmThenName),
+                                    false=Start("choose_bonus_day")),
+                                no_action=Hide("confirm")),
+                            false=Function(HideConfirmThenName)) text_outlines customstartoutlines text_hover_outlines customstarthover_outlines text_insensitive_outlines customstartinsensitive_outlines
                         textbutton _("Achievements") action [ShowMenu("achievements"), SensitiveIf(renpy.get_screen("achievements") == None)]
 
             else:

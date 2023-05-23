@@ -7636,6 +7636,11 @@ label ch16_mainb:
                         call ch16_mc_president
                     "Monika." if not persistent.markov_agreed:
                         if monika_type == 0 and not persistent.markov_agreed:
+                            m "You want me to have the presidency?"
+                            m "Are you sure that's a good idea?"
+                            m "I mean...I'm just not sure it's the best idea."
+                            m "You know how it was before."
+                            m "You had to save me and everyone else before I did something reckless."
                             call ch16_monika_president
                         elif (monika_type == 1 and ch12_markov_agree):
                             call ch16_markov_president
@@ -8973,6 +8978,22 @@ label ch16_mainb:
                     s "No. There isn't."
                     # Easy ref 3 - used so I can ctrl F to this later
                     call ch16_sayori_president
+    # Check save time of oldest save and give the player a bonus cutscene for their wait
+    $ oldest_save_time = get_oldest_save()
+    python:
+        import datetime
+        epoch_2022 = datetime.datetime(2022, 1, 1, 0, 0, 0).strftime('%s')
+        epoch_2021 = datetime.datetime(2021, 1, 1, 0, 0, 0).strftime('%s')
+        epoch_2020 = datetime.datetime(2020, 1, 1, 0, 0, 0).strftime('%s')
+        epoch_2019 = datetime.datetime(2019, 1, 1, 0, 0, 0).strftime('%s')
+    if oldest_save_time < epoch_2019:
+        cl "Wow, you truly have been waiting a long time."
+    elif oldest_save_time < epoch_2020:
+        cl "You've been waiting a long time, haven't you?"
+    elif oldest_save_time < epoch_2021:
+        cl "This has been quite some time coming, hasn't it?"
+    elif oldest_save_time < epoch_2022:
+        cl "So it's time to conclude this, isn't it?"
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     jump credits_trueroute

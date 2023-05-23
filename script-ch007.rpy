@@ -181,10 +181,15 @@ label ch7_main:
     show monika zorder 2 at t22
     s "I-It's not like that. I was trying to figure out some things and it just happened like that..."
     s 1g "But that's right, I know about the favor."
+    s "It's a good idea. I think it's already her second time going over the book."
+    s "Who knows how badly she's been affected by whatevers written inside it now."
     show sayori zorder 2 at t21
     show monika zorder 3 at f22
-    m "Well..."
-    m 1e "I'm glad we're on the same page then."
+    m "I didn't realize she went through it once already."
+    m "We better act soon."
+    m "There's something about that book that's bothering me but I can't quite figure out what."
+    m "Or maybe I'm just thinking about it too much..."
+    m 1e "In any case, I'm glad we're on the same page."
     show sayori zorder 3 at f21
     show monika zorder 2 at t22
     s 1d "[player]..."
@@ -389,9 +394,14 @@ label ch7_main:
     y "..."
     y 3g "I thought you forgot about that..."
     y "...I've already finished reading it."
-    mc "Well, that's okay."
-    mc "It just means we can talk about the book."
-    y 3h "That..."
+    y "Actually, I suppose it's more accurate to say I've finished rereading it."
+    mc "You've read this book before?"
+    y "Ah...well, I just enjoy it a lot."
+    y "I wanted to share it with you because the story was so captivating to me."
+    y "S-Sorry I didn't say that sooner."
+    mc "Well, that's okay. I'm just glad you shared it with me."
+    mc "And besides, it just means we can talk about the book since you're basically an expert on it."
+    y 3h "I don't know about being an expert but talking about it..."
     y 3i "That would be nice..."
     y 3f "But why are you spending time with me now...?"
     y "It's lunch...shouldn't you be out with your friends?"

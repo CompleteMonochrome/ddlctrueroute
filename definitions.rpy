@@ -191,6 +191,12 @@ init python:
         _windows_hidden = True
         renpy.pause(time)
         _windows_hidden = False
+    def get_oldest_save():
+        oldest_save = 0
+        for savegame in renpy.list_saved_games(fast=False):
+            if(savegame[3] > oldest_save):
+                oldest_save = savegame[3]
+        return oldest_save
 
 
 
@@ -5317,6 +5323,7 @@ default persistent.love_markov_bonus = False
 default persistent.ayame_bonus = False
 default persistent.mc_bonus = False
 default persistent.strawberry_usage = 0
+default persistent.main_story_finished = False
 # Local Save
 # Player Gender Nouns
 default player_gender = "boy"
