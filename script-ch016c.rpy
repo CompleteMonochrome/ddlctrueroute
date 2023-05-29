@@ -115,7 +115,10 @@ label ch16_ayame_president:
     ay "It won't go to waste. I'll make sure of it."
     $ get_achievement("*Welcome To The Book Club!*")
     # Unlock Ayame bonus day
-    $ persistent.old_ayame_bonus = True
+    if not persistent.ayame_bonus:
+            $ renpy.call_screen("dialog", "You have unlocked a bonus day! Access it through the main menu.", ok_action=Return())
+            $ persistent.ayame_bonus = True
+            $ persistent.any_bonus_day = True
     return
 
 label ch16_old_ayame_president:
@@ -319,14 +322,20 @@ label ch16_monika_president:
     m "There's finally nothing standing in our way."
     m "You'll be with me forever, won't you?"
     # Unlock True Monika bonus day
-    $ persistent.true_monika_bonus = True
+    if not persistent.true_monika_bonus:
+            $ renpy.call_screen("dialog", "You have unlocked a bonus day! Access it through the main menu.", ok_action=Return())
+            $ persistent.true_monika_bonus = True
+            $ persistent.any_bonus_day = True
     return
 
 label ch16_markov_president:
 
     if monika_type == 1 and ch12_markov_agree:
         # Unlock evil Monika loving player bonus day
-        $ persistent.love_markov_bonus = True
+        if not persistent.love_markov_bonus:
+            $ renpy.call_screen("dialog", "You have unlocked a bonus day! Access it through the main menu.", ok_action=Return())
+            $ persistent.love_markov_bonus = True
+            $ persistent.any_bonus_day = True
     else:
         m "Ahaha."
     $ get_achievement("*At Long Last*")
@@ -419,7 +428,10 @@ label ch16_true_sayori_president:
     s "Finally..."
     $ get_achievement("*Unlimited Strawberries*")
     # Unlock True Sayori bonus day
-    $ persistent.true_sayori_bonus = True
+    if not persistent.true_sayori_bonus:
+        $ renpy.call_screen("dialog", "You have unlocked a bonus day! Access it through the main menu.", ok_action=Return())
+        $ persistent.true_sayori_bonus = True
+        $ persistent.any_bonus_day = True
     return
 
 label ch16_sayori_president:
@@ -713,7 +725,10 @@ label ch16_mc_president:
     "And now I understand them."
     $ get_achievement("*It's Up To Me*")
     # Unlock MC bonus day
-    $ persistent.mc_bonus = True
+    if not persistent.mc_bonus:
+        $ renpy.call_screen("dialog", "You have unlocked a bonus day! Access it through the main menu.", ok_action=Return())
+        $ persistent.mc_bonus = True
+        $ persistent.any_bonus_day = True
     return
 
 label ch16_try_delete_ayame_1:
@@ -725,4 +740,35 @@ label ch16_try_delete_ayame_1:
     return
 
 label ch16_try_delete_ayame_1:
+    return
+
+# Give the player a chance to undo Markov's influence on Monika to make sure bonus day is unlockable.
+# This is only encounterable if Monika is herself currently, which means he is never encountered
+# outside of Natsuki's date.
+label ch16_attemp_restore_monika:
+    show mysteriousclerk 1a zorder 2 at t11
+    cl "I told you to save her, didn't I?"
+    mc "What? Where am I?"
+    cl "Did I? I don't remember."
+    cl "Maybe some other version of me did."
+    cl "Regardless, she's in deep trouble with the current state she's in."
+    cl "But I know a way we can try to fix her."
+    mc "Slow down! What are you talking about?"
+    mc "I don't even know who you are."
+    cl "Look, there's no time to explain."
+    cl "Just listen to me and follow my instructions carefully."
+    cl "Are you listening over there?"
+    cl "Nod your head if you can."
+    "This guy is crazy."
+    "Who the hell is he?"
+    "He feels oddly familiar though."
+    "I don't know why."
+    cl "Ugh, just make [player_reflexive] nod already."
+    menu:
+        cl "Here, I'll make it easy for you."
+        "Nod.":
+            pass
+    cl "Great, so you can hear me."
+    cl ""
+    $ get_achievement("*Naomik*")
     return

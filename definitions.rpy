@@ -1083,6 +1083,116 @@ image sayori g1:
     pause 0.1
     "sayori 1k"
 
+# Corrupted Sayori
+image sayori 1ga = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/a.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 1gb = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/b.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 1gc = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/c.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 1gd = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/d.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 1ge = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/e.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 1gf = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/f.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 1gg = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/g.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 1gh = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/h.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 1gi = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/i.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 1gj = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/j.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 1gk = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/k.png", (0, 0), "mod_assets/images/sayori/eyes2.png")
+image sayori 1gl = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/l.png", (0, 0), "mod_assets/images/sayori/eyes2.png")
+image sayori 1gm = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/m.png", (0, 0), "mod_assets/images/sayori/eyes3.png")
+image sayori 1gn = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/n.png", (0, 0), "mod_assets/images/sayori/eyes3.png")
+image sayori 1go = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/o.png", (0, 0), "mod_assets/images/sayori/eyes3.png")
+image sayori 1gp = "sayori 1p"
+image sayori 1gq = "sayori 1q"
+image sayori 1gr = "sayori 1r"
+image sayori 1gs = "sayori 1s"
+image sayori 1gt = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/t.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 1gu = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/u.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 1gv = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/v.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 1gw = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/w.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 1gx = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/x.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 1gy = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/y.png", (0, 0), "mod_assets/images/sayori/eyes2.png")
+
+image sayori 2ga = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/a.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 2gb = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/b.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 2gc = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/c.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 2gd = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/d.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 2ge = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/e.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 2gf = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/f.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 2gg = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/g.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 2gh = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/h.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 2gi = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/i.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 2gj = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/j.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 2gk = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/k.png", (0, 0), "mod_assets/images/sayori/eyes2.png")
+image sayori 2gl = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/l.png", (0, 0), "mod_assets/images/sayori/eyes2.png")
+image sayori 2gm = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/m.png", (0, 0), "mod_assets/images/sayori/eyes3.png")
+image sayori 2gn = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/n.png", (0, 0), "mod_assets/images/sayori/eyes3.png")
+image sayori 2go = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/o.png", (0, 0), "mod_assets/images/sayori/eyes3.png")
+image sayori 2gp = "sayori 2p"
+image sayori 2gq = "sayori 2q"
+image sayori 2gr = "sayori 2r"
+image sayori 2gs = "sayori 2s"
+image sayori 2gt = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/t.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 2gu = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/u.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 2gv = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/v.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 2gw = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/w.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 2gx = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/x.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 2gy = im.Composite((960, 960), (0, 0), "sayori/1l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/y.png", (0, 0), "mod_assets/images/sayori/eyes2.png")
+
+image sayori 3ga = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/a.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 3gb = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/b.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 3gc = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/c.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 3gd = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/d.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 3ge = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/e.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 3gf = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/f.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 3gg = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/g.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 3gh = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/h.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 3gi = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/i.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 3gj = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/j.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 3gk = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/k.png", (0, 0), "mod_assets/images/sayori/eyes2.png")
+image sayori 3gl = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/l.png", (0, 0), "mod_assets/images/sayori/eyes2.png")
+image sayori 3gm = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/m.png", (0, 0), "mod_assets/images/sayori/eyes3.png")
+image sayori 3gn = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/n.png", (0, 0), "mod_assets/images/sayori/eyes3.png")
+image sayori 3go = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/o.png", (0, 0), "mod_assets/images/sayori/eyes3.png")
+image sayori 3gp = "sayori 3p"
+image sayori 3gq = "sayori 3q"
+image sayori 3gr = "sayori 3r"
+image sayori 3gs = "sayori 3s"
+image sayori 3gt = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/t.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 3gu = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/u.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 3gv = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/v.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 3gw = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/w.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 3gx = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/x.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 3gy = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/1r.png", (0, 0), "sayori/y.png", (0, 0), "mod_assets/images/sayori/eyes2.png")
+
+image sayori 4ga = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/a.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 4gb = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/b.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 4gc = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/c.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 4gd = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/d.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 4ge = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/e.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 4gf = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/f.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 4gg = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/g.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 4gh = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/h.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 4gi = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/i.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 4gj = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/j.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 4gk = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/k.png", (0, 0), "mod_assets/images/sayori/eyes2.png")
+image sayori 4gl = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/l.png", (0, 0), "mod_assets/images/sayori/eyes2.png")
+image sayori 4gm = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/m.png", (0, 0), "mod_assets/images/sayori/eyes3.png")
+image sayori 4gn = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/n.png", (0, 0), "mod_assets/images/sayori/eyes3.png")
+image sayori 4go = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/o.png", (0, 0), "mod_assets/images/sayori/eyes3.png")
+image sayori 4gp = "sayori 4p"
+image sayori 4gq = "sayori 4q"
+image sayori 4gr = "sayori 4r"
+image sayori 4gs = "sayori 4s"
+image sayori 4gt = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/t.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 4gu = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/u.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 4gv = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/v.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 4gw = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/w.png", (0, 0), "mod_assets/images/sayori/eyes4.png")
+image sayori 4gx = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/x.png", (0, 0), "mod_assets/images/sayori/eyes1.png")
+image sayori 4gy = im.Composite((960, 960), (0, 0), "sayori/2l.png", (0, 0), "sayori/2r.png", (0, 0), "sayori/y.png", (0, 0), "mod_assets/images/sayori/eyes2.png")
+
+image sayori 5ga = im.Composite((960, 960), (0, 0), "sayori/3a.png", (0,0), "mod_assets/images/sayori/eyes5.png")
+image sayori 5gb = im.Composite((960, 960), (0, 0), "sayori/3b.png", (0,0), "mod_assets/images/sayori/eyes6.png")
+image sayori 5gc = im.Composite((960, 960), (0, 0), "sayori/3c.png", (0,0), "mod_assets/images/sayori/eyes5.png")
+image sayori 5gd = im.Composite((960, 960), (0, 0), "sayori/3d.png", (0,0), "mod_assets/images/sayori/eyes6.png")
+
 image natsuki 11 = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/1t.png")
 image natsuki 1a = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/a.png")
 image natsuki 1b = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/b.png")
@@ -1502,6 +1612,145 @@ image natsuki vomit = "natsuki/vomit.png"
 image n_blackeyes = "images/natsuki/blackeyes.png"
 image n_eye = "images/natsuki/eye.png"
 
+# Corrupted Natsuki
+image natsuki 1ga = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/a.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 1gb = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/b.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 1gc = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/c.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 1gd = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/d.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 1ge = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/e.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 1gf = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/f.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 1gg = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/g.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 1gh = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/h.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 1gi = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/i.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 1gj = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/j.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 1gk = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/k.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 1gl = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/l.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 1gm = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/m.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 1gn = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/n.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 1go = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/o.png", (0.0), "mod_assets/images/natsuki/eyes2.png")
+image natsuki 1gp = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/p.png", (0.0), "mod_assets/images/natsuki/eyes2.png")
+image natsuki 1gq = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/q.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 1gr = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/r.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 1gs = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/s.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 1gt = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/t.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 1gu = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/u.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 1gv = "natsuki 1v"
+image natsuki 1gw = "natsuki 1w"
+image natsuki 1gx = "natsuki 1x"
+image natsuki 1gy = "natsuki 1y"
+image natsuki 1gz = "natsuki 1z"
+
+image natsuki 2ga = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/a.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 2gb = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/b.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 2gc = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/c.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 2gd = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/d.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 2ge = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/e.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 2gf = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/f.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 2gg = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/g.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 2gh = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/h.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 2gi = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/i.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 2gj = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/j.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 2gk = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/k.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 2gl = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/l.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 2gm = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/m.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 2gn = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/n.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 2go = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/o.png", (0.0), "mod_assets/images/natsuki/eyes2.png")
+image natsuki 2gp = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/p.png", (0.0), "mod_assets/images/natsuki/eyes2.png")
+image natsuki 2gq = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/q.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 2gr = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/r.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 2gs = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/s.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 2gt = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/t.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 2gu = im.Composite((960, 960), (0, 0), "natsuki/1l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/u.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 2gv = "natsuki 2v"
+image natsuki 2gw = "natsuki 2w"
+image natsuki 2gx = "natsuki 2x"
+image natsuki 2gy = "natsuki 2y"
+image natsuki 2gz = "natsuki 2z"
+
+image natsuki 3ga = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/a.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 3gb = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/b.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 3gc = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/c.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 3gd = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/d.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 3ge = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/e.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 3gf = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/f.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 3gg = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/g.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 3gh = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/h.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 3gi = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/i.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 3gj = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/j.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 3gk = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/k.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 3gl = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/l.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 3gm = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/m.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 3gn = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/n.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 3go = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/o.png", (0.0), "mod_assets/images/natsuki/eyes2.png")
+image natsuki 3gp = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/p.png", (0.0), "mod_assets/images/natsuki/eyes2.png")
+image natsuki 3gq = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/q.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 3gr = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/r.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 3gs = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/s.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 3gt = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/t.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 3gu = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/1r.png", (0, 0), "natsuki/u.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 3gv = "natsuki 3v"
+image natsuki 3gw = "natsuki 3w"
+image natsuki 3gx = "natsuki 3x"
+image natsuki 3gy = "natsuki 3y"
+image natsuki 3gz = "natsuki 3z"
+
+image natsuki 4ga = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/a.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 4gb = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/b.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 4gc = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/c.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 4gd = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/d.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 4ge = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/e.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 4gf = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/f.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 4gg = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/g.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 4gh = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/h.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 4gi = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/i.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 4gj = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/j.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 4gk = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/k.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 4gl = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/l.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 4gm = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/m.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 4gn = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/n.png", (0.0), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 4go = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/o.png", (0.0), "mod_assets/images/natsuki/eyes2.png")
+image natsuki 4gp = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/p.png", (0.0), "mod_assets/images/natsuki/eyes2.png")
+image natsuki 4gq = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/q.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 4gr = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/r.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 4gs = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/s.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 4gt = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/t.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 4gu = im.Composite((960, 960), (0, 0), "natsuki/2l.png", (0, 0), "natsuki/2r.png", (0, 0), "natsuki/u.png", (0.0), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 4gv = "natsuki 4v"
+image natsuki 4gw = "natsuki 4w"
+image natsuki 4gx = "natsuki 4x"
+image natsuki 4gy = "natsuki 4y"
+image natsuki 4gz = "natsuki 4z"
+
+image natsuki 5ga = im.Composite((960, 960), (18, 22), "natsuki/a.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 5gb = im.Composite((960, 960), (18, 22), "natsuki/b.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 5gc = im.Composite((960, 960), (18, 22), "natsuki/c.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 5gd = im.Composite((960, 960), (18, 22), "natsuki/d.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 5ge = im.Composite((960, 960), (18, 22), "natsuki/e.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 5gf = im.Composite((960, 960), (18, 22), "natsuki/f.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 5gg = im.Composite((960, 960), (18, 22), "natsuki/g.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 5gh = im.Composite((960, 960), (18, 22), "natsuki/h.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 5gi = im.Composite((960, 960), (18, 22), "natsuki/i.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 5gj = im.Composite((960, 960), (18, 22), "natsuki/j.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 5gk = im.Composite((960, 960), (18, 22), "natsuki/k.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 5gl = im.Composite((960, 960), (18, 22), "natsuki/l.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 5gm = im.Composite((960, 960), (18, 22), "natsuki/m.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 5gn = im.Composite((960, 960), (18, 22), "natsuki/n.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes1.png")
+image natsuki 5go = im.Composite((960, 960), (18, 22), "natsuki/o.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes2.png")
+image natsuki 5gp = im.Composite((960, 960), (18, 22), "natsuki/p.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes2.png")
+image natsuki 5gq = im.Composite((960, 960), (18, 22), "natsuki/q.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 5gr = im.Composite((960, 960), (18, 22), "natsuki/r.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 5gs = im.Composite((960, 960), (18, 22), "natsuki/s.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 5gt = im.Composite((960, 960), (18, 22), "natsuki/t.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 5gu = im.Composite((960, 960), (18, 22), "natsuki/u.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 5gv = im.Composite((960, 960), (18, 22), "natsuki/u.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 5gw = im.Composite((960, 960), (18, 22), "natsuki/u.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 5gx = im.Composite((960, 960), (18, 22), "natsuki/u.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 5gy = im.Composite((960, 960), (18, 22), "natsuki/u.png", (0, 0), "natsuki/3.png", (18,22), "mod_assets/images/natsuki/eyes3.png")
+image natsuki 5gv = "natsuki 5v"
+image natsuki 5gw = "natsuki 5w"
+image natsuki 5gx = "natsuki 5x"
+image natsuki 5gy = "natsuki 5y"
+image natsuki 5gz = "natsuki 5z"
 
 image yuri 1 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/a.png")
 image yuri 2 = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/a.png")
@@ -2059,6 +2308,79 @@ image yuri dragon:
     time 0.55
     xoffset 0
     "yuri 3"
+
+# Corrupted Yuri
+image yuri 1ga = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/a.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 1gb = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/b.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 1gc = "yuri 1c"
+image yuri 1gd = "yuri 1d"
+image yuri 1ge = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/e.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 1gf = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/f.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 1gg = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/g.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 1gh = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/h.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 1gi = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/i.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 1gj = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/j.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 1gk = "yuri 1k"
+image yuri 1gl = "yuri 1l"
+image yuri 1gm = "yuri 1m"
+image yuri 1gn = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/n.png", (0, 0), "mod_assets/images/yuri/eyes3.png")
+image yuri 1go = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/o.png", (0, 0), "mod_assets/images/yuri/eyes4.png")
+image yuri 1gp = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/p.png", (0, 0), "mod_assets/images/yuri/eyes3.png")
+image yuri 1gq = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/q.png", (0, 0), "mod_assets/images/yuri/eyes4.png")
+image yuri 1gr = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/r.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 1gs = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/s.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 1gt = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/t.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 1gu = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/u.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 1gv = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/1r.png", (0, 0), "yuri/v.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 1gw = "yuri 1w"
+
+image yuri 2ga = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/a.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 2gb = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/b.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 2gc = "yuri 2c"
+image yuri 2gd = "yuri 2d"
+image yuri 2ge = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/e.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 2gf = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/f.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 2gg = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/g.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 2gh = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/h.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 2gi = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/i.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 2gj = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/j.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 2gk = "yuri 2k"
+image yuri 2gl = "yuri 2l"
+image yuri 2gm = "yuri 2m"
+image yuri 2gn = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/n.png", (0, 0), "mod_assets/images/yuri/eyes3.png")
+image yuri 2go = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/o.png", (0, 0), "mod_assets/images/yuri/eyes4.png")
+image yuri 2gp = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/p.png", (0, 0), "mod_assets/images/yuri/eyes3.png")
+image yuri 2gq = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/q.png", (0, 0), "mod_assets/images/yuri/eyes4.png")
+image yuri 2gr = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/r.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 2gs = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/s.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 2gt = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/t.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 2gu = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/u.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 2gv = im.Composite((960, 960), (0, 0), "yuri/1l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/v.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 2gw = "yuri 2w"
+
+image yuri 3ga = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/a.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 3gb = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/b.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 3gc = "yuri 3c"
+image yuri 3gd = "yuri 3d"
+image yuri 3ge = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/e.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 3gf = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/f.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 3gg = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/g.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 3gh = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/h.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 3gi = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/i.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 3gj = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/j.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 3gk = "yuri 3k"
+image yuri 3gl = "yuri 3l"
+image yuri 3gm = "yuri 3m"
+image yuri 3gn = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/n.png", (0, 0), "mod_assets/images/yuri/eyes3.png")
+image yuri 3go = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/o.png", (0, 0), "mod_assets/images/yuri/eyes4.png")
+image yuri 3gp = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/p.png", (0, 0), "mod_assets/images/yuri/eyes3.png")
+image yuri 3gq = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/q.png", (0, 0), "mod_assets/images/yuri/eyes4.png")
+image yuri 3gr = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/r.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 3gs = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/s.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 3gt = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/t.png", (0, 0), "mod_assets/images/yuri/eyes1.png")
+image yuri 3gu = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/u.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 3gv = im.Composite((960, 960), (0, 0), "yuri/2l.png", (0, 0), "yuri/2r.png", (0, 0), "yuri/v.png", (0, 0), "mod_assets/images/yuri/eyes2.png")
+image yuri 3gw = "yuri 3w"
 
 # School Clothes Monika
 image monika 1 = im.Composite((960, 960), (0, 0), "monika/1l.png", (0, 0), "monika/1r.png", (0, 0), "monika/a.png")
@@ -4053,6 +4375,111 @@ image ayame 5q = ConditionSwitch("ayame_school_outfit == 1", "ayame 5leaderq", "
 image ayame 5r = ConditionSwitch("ayame_school_outfit == 1", "ayame 5leaderr", "True", "ayame 5schoolr")
 image ayame 5s = ConditionSwitch("ayame_school_outfit == 1", "ayame 5leaders", "True", "ayame 5schools")
 
+# Corrupted Ayame
+image ayame 1ga = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/ga.png")
+image ayame 1gb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gb.png")
+image ayame 1gc = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gc.png")
+image ayame 1gd = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gd.png")
+image ayame 1ge = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/ge.png")
+image ayame 1gf = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gf.png")
+image ayame 1gg = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gg.png")
+image ayame 1gh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gh.png")
+image ayame 1gi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gi.png")
+image ayame 1gj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gj.png")
+image ayame 1gk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gk.png")
+image ayame 1gl = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gl.png")
+image ayame 1gm = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gm.png")
+image ayame 1gn = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gn.png")
+image ayame 1go = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/go.png")
+image ayame 1gp = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gp.png")
+image ayame 1gq = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gq.png")
+image ayame 1gr = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gr.png")
+image ayame 1gs = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/1lr.png", (0, 0), "mod_assets/images/ayame/gs.png")
+
+image ayame 2ga = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/ga.png")
+image ayame 2gb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gb.png")
+image ayame 2gc = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gc.png")
+image ayame 2gd = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gd.png")
+image ayame 2ge = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/ge.png")
+image ayame 2gf = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gf.png")
+image ayame 2gg = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gg.png")
+image ayame 2gh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gh.png")
+image ayame 2gi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gi.png")
+image ayame 2gj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gj.png")
+image ayame 2gk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gk.png")
+image ayame 2gl = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gl.png")
+image ayame 2gm = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gm.png")
+image ayame 2gn = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gn.png")
+image ayame 2gn = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gn.png")
+image ayame 2go = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/go.png")
+image ayame 2gp = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gp.png")
+image ayame 2gq = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gq.png")
+image ayame 2gr = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gr.png")
+image ayame 2gs = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/2lr.png", (0, 0), "mod_assets/images/ayame/gs.png")
+
+image ayame 3ga = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/ga.png")
+image ayame 3gb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gb.png")
+image ayame 3gc = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gc.png")
+image ayame 3gd = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gd.png")
+image ayame 3ge = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/ge.png")
+image ayame 3gf = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gf.png")
+image ayame 3gg = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gg.png")
+image ayame 3gh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gh.png")
+image ayame 3gi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gi.png")
+image ayame 3gj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gj.png")
+image ayame 3gk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gk.png")
+image ayame 3gl = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gl.png")
+image ayame 3gm = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gm.png")
+image ayame 3gn = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gn.png")
+image ayame 3gn = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gn.png")
+image ayame 3go = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/go.png")
+image ayame 3gp = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gp.png")
+image ayame 3gq = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gq.png")
+image ayame 3gr = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gr.png")
+image ayame 3gs = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/3lr.png", (0, 0), "mod_assets/images/ayame/gs.png")
+
+image ayame 4ga = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/ga.png")
+image ayame 4gb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gb.png")
+image ayame 4gc = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gc.png")
+image ayame 4gd = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gd.png")
+image ayame 4ge = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/ge.png")
+image ayame 4gf = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gf.png")
+image ayame 4gg = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gg.png")
+image ayame 4gh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gh.png")
+image ayame 4gi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gi.png")
+image ayame 4gj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gj.png")
+image ayame 4gk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gk.png")
+image ayame 4gl = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gl.png")
+image ayame 4gm = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gm.png")
+image ayame 4gn = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gn.png")
+image ayame 4gn = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gn.png")
+image ayame 4go = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/go.png")
+image ayame 4gp = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gp.png")
+image ayame 4gq = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gq.png")
+image ayame 4gr = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gr.png")
+image ayame 4gs = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/4lr.png", (0, 0), "mod_assets/images/ayame/gs.png")
+
+image ayame 5ga = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/ga.png")
+image ayame 5gb = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gb.png")
+image ayame 5gc = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gc.png")
+image ayame 5gd = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gd.png")
+image ayame 5ge = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/ge.png")
+image ayame 5gf = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gf.png")
+image ayame 5gg = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gg.png")
+image ayame 5gh = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gh.png")
+image ayame 5gi = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gi.png")
+image ayame 5gj = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gj.png")
+image ayame 5gk = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gk.png")
+image ayame 5gl = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gl.png")
+image ayame 5gm = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gm.png")
+image ayame 5gn = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gn.png")
+image ayame 5gn = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gn.png")
+image ayame 5go = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/go.png")
+image ayame 5gp = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gp.png")
+image ayame 5gq = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gq.png")
+image ayame 5gr = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gr.png")
+image ayame 5gs = im.Composite((960, 960), (0, 0), "mod_assets/images/ayame/5lr.png", (0, 0), "mod_assets/images/ayame/gs.png")
+
 # Christmas Event Exclusive
 # Sayori Christmas
 image sayori 1cha = im.Composite((960, 960), (0, 0), "sayori/1bl.png", (0, 0), "sayori/1br.png", (0, 0), "sayori/a.png", (0, 0), "mod_assets/images/sayori/hats/santahat.png")
@@ -5085,22 +5512,22 @@ image monika 1a_gray_hair = im.Grayscale("mod_assets/images/monika/preset/1ha.pn
 image monika 1a_gray = ConditionSwitch("monika_type == 1 and ch12_markov_agree", "monika 1a_gray_hair", "True", "monika 1a_gray_norm")
 
 # Glitch Figures
-image natsuki gw_1 = "mod_assets/images/natsuki/g1.png"
-image natsuki gw_1_blur = "mod_assets/images/natsuki/g1_blur.png"
-image natsuki gw_2 = "mod_assets/images/natsuki/g2.png"
-image natsuki gw_2_blur = "mod_assets/images/natsuki/g2_blur.png"
-image natsuki gw_2_gray = im.Grayscale("mod_assets/images/natsuki/g2.png")
-image natsuki gw_2_gray_blur = im.Grayscale("mod_assets/images/natsuki/g2_blur.png")
+image natsuki gw_1 = "natsuki/1.png"
+image natsuki gw_1_blur = "natsuki/1_blur.png"
+image natsuki gw_2 = "natsuki/2.png"
+image natsuki gw_2_blur = "natsuki/2_blur.png"
+image natsuki gw_2_gray = im.Grayscale("natsuki/2.png")
+image natsuki gw_2_gray_blur = im.Grayscale("natsuki/2_blur.png")
 image natsuki gw_2_gray_color:
-    im.Grayscale("mod_assets/images/natsuki/g2.png")
+    im.Grayscale("natsuki/2.png")
     3.0
-    "mod_assets/images/natsuki/g2.png" with Dissolve(1.5)
+    "natsuki/2.png" with Dissolve(1.5)
 image natsuki gw_2_gray_color_blur:
-    im.Grayscale("mod_assets/images/natsuki/g2_blur.png")
+    im.Grayscale("natsuki/2_blur.png")
     3.0
-    "mod_assets/images/natsuki/g2_blur.png" with Dissolve(1.5)
-image natsuki gw_3 = "mod_assets/images/natsuki/g3.png"
-image natsuki gw_3_blur = "mod_assets/images/natsuki/g3_blur.png"
+    "natsuki/2_blur.png" with Dissolve(1.5)
+image natsuki gw_3 = "natsuki/3.png"
+image natsuki gw_3_blur = "natsuki/3_blur.png"
 image yuri gw_1 = "mod_assets/images/yuri/g1.png"
 image yuri gw_1_blur = "mod_assets/images/yuri/g1_blur.png"
 image yuri gw_2 = "mod_assets/images/yuri/g2.png"
@@ -5298,7 +5725,7 @@ default persistent.y_playday = [False,False]
 default persistent.n_playday = [False,False,False,False,False,False]
 default persistent.natsuki_house = [False, False, False, False]
 default persistent.arc_clear = [False,False,False,False,False]
-default persistent.arc_names = ["Book of Despair","Second Chance","Inauguration Day","---","---"]
+default persistent.arc_names = ["Book of Despair","Second Chance","Inauguration Day","New Timelines","Finale"]
 default persistent.markov_agreed = False
 default persistent.did_special_event = False
 default persistent.did_return_event = False
@@ -5317,11 +5744,13 @@ default persistent.ch16_say_date = False
 default persistent.ch16_ny_reload = False
 default persistent.clerk_sayori_bad_ending = False
 default persistent.monika_date_reload = 0
+default persistent.any_bonus_day = False
 default persistent.true_sayori_bonus = False
 default persistent.true_monika_bonus = False
 default persistent.love_markov_bonus = False
 default persistent.ayame_bonus = False
 default persistent.mc_bonus = False
+default persistent.bonus_days_completed = [False, False, False, False, False]
 default persistent.strawberry_usage = 0
 default persistent.main_story_finished = False
 # Local Save
@@ -5455,7 +5884,11 @@ default ch16_ay_companions = 0
 default ch16_ay_gave_control = False
 default ch16_end_part = False
 default ch16_play_convince = False
-default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","Inauguration Day","???","???","???","???"]
+default chapter_names = ["An Ordinary Day","The Literature Club","The Meeting","You Three","Before The Festival","The Festival","A New Beginning","Portrait of Markov","The Play","Familiar Face","What's Wrong?","Before the Storm","A New Play","Preparations","Bring Your Book!","A Dilemma","How Did You Do That?","Inauguration Day"]
+default bonus_chapter_names = ["Renewed Hope", "Presidential Reinstatement", "Toxic Love", "The Book Club", "Newfound Purpose", "Finale"]
+default bonus_chapter_active = False
+default bonus_chapter = 0
+default corrupted_timeline = False
 default return_chapter = False
 default special_chapter = False
 default christmas_chapter = False

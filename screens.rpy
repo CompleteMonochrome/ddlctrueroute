@@ -501,7 +501,7 @@ init -501 screen navigation():
                                     false=Start("choose_start")),
                                 no_action=Hide("confirm")),
                             false=Function(HideConfirmThenName)) text_outlines customstartoutlines text_hover_outlines customstarthover_outlines text_insensitive_outlines customstartinsensitive_outlines
-                        if persistent.main_story_finished:
+                        if persistent.arc_clear[0] or persistent.any_bonus_day:
                             textbutton _("Bonus Days") action If(persistent.playername,
                             true=Show(screen="confirm", message="Are you sure you want to see a bonus day?",
                                 yes_action=If(persistent.prompt_info,
@@ -908,6 +908,8 @@ init -1 python:
                     renpy.store.save_name = "Festive Season"
                 elif special_chapter:
                     renpy.store.save_name = "Special Day"
+                elif bonus_chapter_active:
+                    renpy.store.save_name = bonus_chapter_names[bonus_chapter]
                 else:
                     renpy.store.save_name = chapter_names[chapter]
             return FileAction(name)
