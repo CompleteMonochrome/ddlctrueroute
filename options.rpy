@@ -164,6 +164,7 @@ define config.gl_test_image = "white"
 #define config.gl_resize = False
 
 init python:
+    config.developer = True
     if len(renpy.loadsave.location.locations) > 1: del(renpy.loadsave.location.locations[1])
     renpy.game.preferences.pad_enabled = False
     def replace_text(s):

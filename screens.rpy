@@ -866,14 +866,38 @@ init -501 screen save() tag menu:
 init -501 screen load() tag menu:
 
 
-
-    use file_slots(_("Load"))
+    if ch16_end_part and ch16_saving_monika:
+        use fake_slots()
+    else:
+        use file_slots(_("Load"))
 
 init -1 python:
+    def FileMonikaName(name, page=None, **kwargs):
+        if name == 1:
+            return "Save Monika"
+        elif name == 2:
+            return "Save Monika"
+        elif name == 3:
+            return "Save Monika"
+
+    def FileActionMonika(name, page=None, **kwargs):
+        if name == 1 and not ch16_saved_monika[0]:
+            renpy.jump_out_of_context("ch16_monika_save_1")
+        elif name == 2 and not ch16_saved_monika[1]:
+            renpy.jump_out_of_context("ch16_monika_save_2")
+        elif name == 3 and not ch16_saved_monika[2]:
+            renpy.jump_out_of_context("ch16_monika_save_3")
+        else:
+            return Show(screen="dialog", message="Now is not the time for that.", ok_action=Hide("dialog"))
+
     def FileActionMod(name, page=None, **kwargs):
         if persistent.playthrough == 1 and not persistent.deleted_saves and renpy.current_screen().screen_name[0] == "load" and FileLoadable(name):
             return Show(screen="dialog", message="File error: \"characters/sayori.chr\"\n\nThe file is missing or corrupt.",
                 ok_action=Show(screen="dialog", message="The save file is corrupt. Starting a new game.", ok_action=Function(renpy.full_restart, label="start")))
+
+        # Saving Monika Chapter 16
+        elif persistent.playthrough == 0 and ch16_end_part and ch16_saving_monika and renpy.current_screen().screen_name[0] == "load":
+            return Show(screen="dialog", message="Test test test", ok_action=Hide("dialog"))
 
         # Monika Missing Chapter 5b
         elif persistent.playthrough == 0 and not persistent.deleted_saves and renpy.current_screen().screen_name[0] == "load" and FileLoadable(name) and persistent.monika_gone and not canload_ch5b:
@@ -991,6 +1015,83 @@ init -501 screen file_slots(title):
 
 
                 for page in range(1, 20):
+                    textbutton "[page]" action FilePage(page)
+
+# Custom Mod Load Screen
+init -501 screen fake_slots():
+
+    default page_name_value = FilePageNameInputValue()
+
+    use game_menu("Load"):
+
+        fixed:
+
+
+
+            order_reverse True
+
+
+
+            button:
+                style "page_label"
+
+
+                xalign 0.5
+
+
+                text "Save Her":
+                    style "page_label_text"
+                    
+
+
+            grid 3 1:
+                style_prefix "slot"
+
+                xalign 0.5
+                yalign 0.5
+
+                spacing gui.slot_spacing
+
+                for i in range(3 * 1):
+
+                    $ slot = i + 1
+
+                    button:
+                        action FileActionMonika(slot)
+
+                        has vbox
+
+                        if slot == 1 or (slot == 2 and ch16_saved_monika[0]) or (slot == 3 and ch16_saved_monika[1]):
+                            add Image("mod_assets/gui/monika_save_{0}.png".format(slot), xalign=0.5, yalign=1.0)
+                        else:
+                            add Image("mod_assets/gui/monika_save_locked.png", xalign=0.5, yalign=1.0)
+
+                        if persistent.name_saves:
+                            text FileMonikaName(slot):
+                                style "slot_name_text"
+                            text "??/??/????, ??:??":
+                                style "slot_time_text"
+                        else:
+                            text "???, ??? ?? ????, ??:??":
+                                style "slot_time_text"
+
+
+            hbox:
+                style_prefix "page"
+
+                xalign 0.5
+                yalign 1.0
+
+                spacing gui.page_spacing
+
+
+
+
+
+
+
+
+                for page in range(1, 1):
                     textbutton "[page]" action FilePage(page)
 
 

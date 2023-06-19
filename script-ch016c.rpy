@@ -116,9 +116,9 @@ label ch16_ayame_president:
     $ get_achievement("*Welcome To The Book Club!*")
     # Unlock Ayame bonus day
     if not persistent.ayame_bonus:
-            $ renpy.call_screen("dialog", "You have unlocked a bonus day! Access it through the main menu.", ok_action=Return())
-            $ persistent.ayame_bonus = True
-            $ persistent.any_bonus_day = True
+        $ renpy.call_screen("dialog", "You have unlocked a bonus day! Access it through the main menu.", ok_action=Return())
+        $ persistent.ayame_bonus = True
+        $ persistent.any_bonus_day = True
     return
 
 label ch16_old_ayame_president:
@@ -739,13 +739,13 @@ label ch16_try_delete_ayame_1:
     ay "You can try all you like. I'm not going to disappear from a simple trick like that."
     return
 
-label ch16_try_delete_ayame_1:
+label ch16_try_delete_ayame_2:
     return
 
 # Give the player a chance to undo Markov's influence on Monika to make sure bonus day is unlockable.
 # This is only encounterable if Monika is herself currently, which means he is never encountered
 # outside of Natsuki's date.
-label ch16_attemp_restore_monika:
+label ch16_attempt_restore_monika:
     show mysteriousclerk 1a zorder 2 at t11
     cl "I told you to save her, didn't I?"
     mc "What? Where am I?"
@@ -769,6 +769,224 @@ label ch16_attemp_restore_monika:
         "Nod.":
             pass
     cl "Great, so you can hear me."
-    cl ""
+    cl "Look, I know you don't really want Monika on this path."
+    cl "Despite all of your work to keep her as she is, she's been consumed by that evil promise you made."
+    cl "And there's no easy way to break her out of this."
+    mc "What are you even saying?"
+    mc "Is there something wrong with Monika?"
+    cl "You can't be that dense, can you?"
+    cl "Oh, what am I saying? Of course you can."
+    cl "But I mean, really. What were you thinking when you accepted that offer?"
+    cl "Maybe you weren't thinking."
+    cl "To be honest, if that's the case, I don't know what's worse."
+    cl "...Or maybe you were just curious."
+    cl "I don't know if you've ever heard the saying \"cuirousity killed the cat\"."
+    cl "I understand you want to explore this world."
+    cl "More than anyone, I understand how you feel."
+    cl "But sometimes, it's just not worth it."
+    cl "We have to set things right, no matter what it takes."
+    "It sounds like he's convinced something is wrong with Monika."
+    "I don't get the feeling he's lying but there's something about him..."
+    "Like he's got some other reason for helping me."
+    cl "Are you going to help me?"
+    cl "I won't be able to do this by myself."
+    cl "And if you really care about her, you will help me."
+    menu:
+        cl "So are you going to help me?"
+        "Yes.":
+            pass
+        "No.":
+            "I don't want to help this guy."
+            "There's nothing wrong with Monika, he must be making this all up."
+            mc "I don't want to help you."
+            "The man looks at me with a disappointed look on his face."
+            cl "You know, I would say I'm surprised, but I'm not."
+            cl "If you really don't think something is wrong with Monika, then you need to open your eyes."
+            cl "But if you're here just because you're curious to see what happens..."
+            cl "Well...remember that saying. That's all."
+            cl "I can't say I didn't try."
+            mc "Wait...who are you?"
+            cl "I don't have to answer that question."
+            cl "You won't be seeing me again. At least not on this timeline."
+            cl "Goodbye, [player]."
+            show mysteriousclerk at thide
+            hide mysteriousclerk
+            "He disappears as quickly as he appeared."
+            "Just who was that guy?"
+            "And why did I feel so strange around him?"
+            "I don't have time to think about this now."
+            "I have to get back to what I was doing."
+            return
+    mc "If it's for Monika, then I'll help you."
+    mc "But I still don't know what you want from me."
+    cl "I'm glad you could see reason."
+    cl "I already told you, I need your help."
+    cl "If I could have done this myself, I wouldn't have asked you."
+    cl "But I'm not the main character of this world."
+    cl "That's you."
+    mc "Main character? What are you talking about?"
+    mc "There isn't anything special about me."
+    mc "I feel like I'm just caught up in whatever is going on."
+    cl "Hah. You really are just like how I was."
+    cl "Think about it, [player]. If you weren't special then I wouldn't be talking to you right now."
+    cl "And you certainly wouldn't be one of the only people able to move around in this world."
+    cl "You might not think you're special but you certainly are."
+    cl "And you have the ability to save Monika."
+    mc "How do we save her?"
+    if ch12_outcome == 3 or ch12_outcome == 1:
+        cl "Do you remember how you saved Natsuki's mother?"
+        cl "Haruki...I'm sorry for what happened."
+        mc "You know Natsuki's mum?"
+    cl "It's a complicated process."
+    cl "But just follow along, okay?"
+    cl "We don't really have the time to waste."
+    cl "Follow me."
+    mc "To where? There's nothing around us."
+    cl "Not where but when."
+    cl "We need to go back to when Monika wasn't corrupted by that evil thing."
+    cl "We need to stop her from getting influenced by it as much as possible."
+    mc "How are we going to do that exactly?"
+    mc "You said you need me but I don't know how to do any of that."
+    cl "Well, I was half telling the truth."
+    cl "You out there."
+    cl "Yes you, the one watching from beyond the screen."
+    $ ch16_saving_monika = True
+    cl "You know what to do, don't you?"
+    cl "Well, if you don't...I've enabled the ability to use strawberries."
+    cl "So, you know..."
+    cl "Get to it."
+    cl "I'll just wait for you to do it..."
+    cl "Any time now..."
+    cl "Look, I have nothing to say to you if you don't do it now."
+    cl "Guess we'll just sit here...wasting time..."
+    cl "In silence..."
+    label ch16_clerk_wait_0:
+    cl "..."
+    jump ch16_clerk_wait_0
+    label ch16_after_monika_save_1:
+    label ch16_after_monika_save_2:
+    label ch16_after_monika_save_3:
     $ get_achievement("*Naomik*")
+    return
+
+label ch16_monika_save_1:
+    $ monika_type = 0
+    scene bg mall_interior
+    with open_eyes
+    play music t6 fadein 5.0
+    "Where am I?"
+    "I'm at...the mall? Everything seems to be normal."
+    "There's people walking around like nothing is wrong."
+    "Wasn't the world meant to be ending just a few moments ago?"
+    cl "Don't panic, but I'm in your head."
+    "What the? Is that the weird man from before?"
+    cl "Okay, firstly that was rude."
+    cl "But yes, it's me. I can't interact with the world like you can."
+    cl "After all, you're the one who ate the strawberry."
+    cl "This was when Monika first bought the book that influenced her."
+    cl "We need to stop her before she makes a huge mistake."
+    mc "How am I going to do that?"
+    cl "You don't need to speak out loud."
+    cl "I can hear your thoughts, remember?"
+    cl "All you have to do is try to--"
+    show monika 1a zorder 2 at t11
+    m "[player]?"
+    "Monika appears in front of me. She seems...normal?"
+    cl "Of course she's normal, you fool."
+    cl "I told you already this is when Monika first bought the book."
+    m "What are you doing here?"
+    mc "Oh, you know...just hanging around."
+    m "Right..."
+    "Monika seems to be carrying a paper bag around."
+    "From what I can tell, it's from one of the book stores around the mall."
+    "Is that what I think it is?"
+    mc "What do you have there?"
+    "I point towards the bag she's holding."
+    m "Oh, this? It's...just a book."
+    cl "This is your chance. Convince her not to read it!"
+    cl "You can do it!"
+    mc "I know!"
+    m "Ahaha, well, why did you ask then?"
+    mc "Sorry, I wasn't speaking to...never mind."
+    "Just leave this to me."
+    m "Is everything okay, [player]?"
+    m "You seem troubled for some reason."
+    mc "Monika, you shouldn't read that book."
+    m "What? You don't even know what book I bought."
+    menu:
+        mc "You bought..."
+        "The Portrait of Markov.":
+            jump ch16_monika_save_1_success
+        "What do you think you're doing?" if ch12_markov_agree:
+            pass
+        "We made a deal." if ch12_markov_agree:
+            pass
+        "Sweet Oppression":
+            pass
+        "Literary Works of Nad Tolvasa.":
+            pass
+    m "Um...no. That's not it."
+    m "Anyway, it was nice seeing you, [player]."
+    m "I should really get going, I have lots to do tonight."
+    m "Make sure to write a nice poem~"
+    cl "What the hell?"
+    cl "What is wrong with you?"
+    cl "Now there's no way we can save her."
+    cl "Look, this was our only chance and it's ruined."
+    return
+
+label ch16_monika_save_2:
+    return
+
+label ch16_monka_save_3:
+    return
+
+label ch16_monika_save_1_success:
+    m "How could you have possibly known that?"
+    m "Did Sayori put you up to this?"
+    mc "No, Sayori definitely didn't do this."
+    mc "Look, Monika, you can't read that book."
+    mc "Plase, just listen to me."
+    m "[player]..."
+    mc "I'm just trying to look out for you."
+    mc "There's something about that book. Something evil."
+    mc "It's going to change who you are."
+    m "Just from reading a fictional story?"
+    m "I doubt reading a fictional tale, no matter how evil, is going to change me."
+    mc "You won't be the real Monika anymore!"
+    mc "Just get rid of it. Trust me."
+    m "But..."
+    mc "Please, Monika."
+    m "Okay."
+    "Monika takes the book out of the bag and shows it to me."
+    "It's just like the copy that Yuri gave me."
+    m "I'm going to throw it away."
+    "She walks over to the closest bin and throws the book into it."
+    "She looks over to me and gives me a reassurring smile."
+    "It feels like a huge weight has been lifted off my shoulders."
+    m "What do you know about that book, [player]?"
+    m "I was going to use it to try to understand Yuri better but..."
+    mc "There's some evil force or--"
+    cl "Ah, ah. You can't tell her these things."
+    cl "We've already changed too much, we can't change the timeline too much or we'll end up somewhere else entirely."
+    m "An evil force?"
+    mc "I can't say any more, I'm sorry."
+    m "There's something different about you, [player]."
+    m "Some determination I haven't seen from you."
+    m "It..suits you."
+    m "Well...I better get going. I'll see you tomorrow, [player]~"
+    show monika at lhide
+    hide monika
+    mc "Yeah..."
+    "Monika starts making her way out of the mall."
+    cl "You did good."
+    "Are we done? Is she going to go back to normal?"
+    cl "Not yet. We may have stopped her from reading the book but we're not finished yet."
+    "What else do we need to do?"
+    cl "Eat the next strawberry and see."
+    cl "Go on..."
+    cl "Now..."
+    label ch16_clerk_wait_2:
+    cl "..."
+    jump ch16_clerk_wait_2
     return

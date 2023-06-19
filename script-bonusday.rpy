@@ -1,4 +1,6 @@
 label choose_bonus_day:
+    $ quick_menu = False
+    play music mend fadeout 1.5
     # Check player gender after input
     if persistent.player_pronouns == 1:
         call female_pronouns
@@ -16,43 +18,43 @@ label special_day:
     "Warning: These days were meant to be played during a certain time period."
     "Some of the events that happen may not make sense when played outside their time period."
     menu:
-        "Choose Special Day":
-            "First Christmas Event." if persistent.arc_clear[0]:
-                show screen tear(20, 0.1, 0.1, 0, 40)
-                $ pause(0.25)
-                $ christmas_chapter = True
-                $ s_name = "Sayori"
-                stop music
-                $ renpy.save_persistent()
-                stop sound
-                jump christmas_chapter
-            "Second Christmas Event." if persistent.arc_clear[0]:
-                show screen tear(20, 0.1, 0.1, 0, 40)
-                $ pause(0.25)
-                $ christmas_chapter = True
-                $ s_name = "Sayori"
-                stop music
-                $ renpy.save_persistent()
-                stop sound
-                jump christmas2_chapter
-            "Special Day." if persistent.arc_clear[0]:
-                show screen tear(20, 0.1, 0.1, 0, 40)
-                $ pause(0.25)
-                $ christmas_chapter = True
-                $ s_name = "Sayori"
-                stop music
-                $ renpy.save_persistent()
-                stop sound
-                jump special_chapter
-            "Return Day" if persistent.arc_clear[1]:
-                show screen tear(20, 0.1, 0.1, 0, 40)
-                $ pause(0.25)
-                $ christmas_chapter = True
-                $ s_name = "Sayori"
-                stop music
-                $ renpy.save_persistent()
-                stop sound
-                jump return_chapter
+        "Choose Special Day"
+        "First Christmas Event." if persistent.arc_clear[0] == True:
+            show screen tear(20, 0.1, 0.1, 0, 40)
+            $ pause(0.25)
+            $ christmas_chapter = True
+            $ s_name = "Sayori"
+            stop music
+            $ renpy.save_persistent()
+            stop sound
+            jump christmas_chapter
+        "Second Christmas Event." if persistent.arc_clear[0] == True:
+            show screen tear(20, 0.1, 0.1, 0, 40)
+            $ pause(0.25)
+            $ christmas_chapter = True
+            $ s_name = "Sayori"
+            stop music
+            $ renpy.save_persistent()
+            stop sound
+            jump christmas2_chapter
+        "Special Day." if persistent.arc_clear[0] == True:
+            show screen tear(20, 0.1, 0.1, 0, 40)
+            $ pause(0.25)
+            $ christmas_chapter = True
+            $ s_name = "Sayori"
+            stop music
+            $ renpy.save_persistent()
+            stop sound
+            jump special_chapter
+        "Return Day" if persistent.arc_clear[1] == True:
+            show screen tear(20, 0.1, 0.1, 0, 40)
+            $ pause(0.25)
+            $ christmas_chapter = True
+            $ s_name = "Sayori"
+            stop music
+            $ renpy.save_persistent()
+            stop sound
+            jump return_chapter
 
 label new_timelines:
     $ bonus_chapter_active
@@ -71,7 +73,7 @@ label new_timelines:
         "Monika." if persistent.true_monika_bonus or persistent.love_markov_bonus:
             if persistent.true_monika_bonus and persistent.love_markov_bonus:
                 menu:
-                    "With the book's influence?":
+                    "With the book's influence?"
                     "Yes.":
                         $ bonus_chapter = 1
                         jump ch_monika_bonus
