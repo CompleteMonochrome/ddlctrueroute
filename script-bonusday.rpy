@@ -78,7 +78,7 @@ label special_day:
             $ renpy.save_persistent()
             stop sound
             jump special_chapter
-        "Return Day" if persistent.arc_clear[1] == True:
+        "Return Day":
             if not persistent.arc_clear[1]:
                 "This day was meant to be played after clearing the [persistent.arc_names[1]] arc."
                 menu:
@@ -95,7 +95,7 @@ label special_day:
             $ renpy.save_persistent()
             stop sound
             jump return_chapter
-        "Valentines Day." if persistent.arc_clear[0] == True:
+        "Valentine's Day.":
             if not persistent.arc_clear[1]:
                 "This day was meant to be played after clearing the [persistent.arc_names[1]] arc."
                 menu:

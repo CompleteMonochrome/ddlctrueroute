@@ -31,7 +31,10 @@ label valentines_chapter:
     s "A day where love is in the air."
     s "I want you to treat them right."
     s "To make sure that they get what they deserve."
-    s "You wouldn't be here if you didn't want to make them happy, did you?"
+    s "Or maybe it's just a special someone."
+    s "I think that's probably it. Just one of them."
+    s "My point still stands. Treat her right."
+    s "You wouldn't be here if you didn't want to make her happy, would you?"
     s "At least...I hope so."
     s "Whatever you do, you have to know something."
     s "This world...this isn't {i}our{/i} world."
@@ -41,6 +44,9 @@ label valentines_chapter:
     s "What happened that made them this way?"
     s "Could {i}I{/i} still make that possible...?"
     s "..."
+    s "There is something strange about this world though."
+    s "I can feel it. Like there's something missing."
+    s "I don't know what it is but..."
     s "Still, I don't want you to ruin this for them."
     s "So please promise me that you'll do what's right."
     menu:
@@ -54,7 +60,7 @@ label valentines_chapter:
             $ renpy.utter_restart()
     s "I hope I can trust you."
     s "I'll let you see this world."
-    s "Maybe you can make them happy, even if you can't be here long."
+    s "Maybe you can make her happy, even if you can't be here long."
     s "Good luck..."
     stop music fadeout 1.5
     scene bg shop_sunset with Dissolve(1.5)
@@ -196,6 +202,7 @@ label valentines_chapter:
     mc "She plays the guitar."
     cl "Right, I thought so."
     cl "Sorry, lots of different timelines to keep track of."
+    cl "And this one is especially weird."
     mc "Timelines?"
     cl "Never mind that."
     cl "Here, I have the perfect gift for her."
@@ -219,7 +226,7 @@ label valentines_chapter:
     cl "Trust uncle Charlie."
     mc "How much is it going to cost me?"
     cl "Let me see..."
-    "Charlie walks behind the counter and seemingly presses buttons at randomm on the register."
+    "Charlie walks behind the counter and seemingly presses buttons at random on the register."
     cl "That will be..."
     cl "...free of charge!"
     mc "Free?"
@@ -232,7 +239,7 @@ label valentines_chapter:
     mc "Did you say--"
     cl "Get out!"
     scene bg bedroom with wipeleft_scene
-    play music t3 fadein 2.0
+    play music t3 fadeout 1.0
     "I rush home, capo in hand."
     "I was at that store for what seemed like only a short while but it was already dark when I left."
     "I guess time passes by quick when you've got a crazy guy to deal with."
@@ -246,7 +253,7 @@ label valentines_chapter:
     "Let's hope it doesn't have to come to that tomorrow."
     scene bg residential_day
     with dissolve_scene_full
-    play music t2
+    play music t2 fadeout 1.0
     "The whole school day just went by like a breeze."
     "I wasn't able to stop thinking about the date we were going to have after school."
     "I feel a bit bad taking a day off the Literature Club but I'm sure they'll understand."
@@ -262,8 +269,8 @@ label valentines_chapter:
     "I've been on lots of dates with her already."
     "Just something about today feels different, aside from it being Valentine's Day."
     "It's like I'm being watched and judged on my actions..."
-    "Well, I guess I'll just have to deal with the nerves."
     "Like I have to do the right thing or else everything will go wrong."
+    "Well, I guess I'll just have to deal with the nerves."
     "I don't really have time to think as I see a girl approaching fast approaching me."
     "She looks as beautiful as ever."
     show ayame 2bd zorder 2 at t11
@@ -297,7 +304,7 @@ label valentines_chapter:
     scene bg city_day
     show ayame 1ba zorder 2 at t11
     with wipeleft_scene
-    play music t12ay
+    play music t12ay fadeout 2.0
     "We walk along the packed streets, navigating our way around all the people."
     "The city is filled with people celebrating the day."
     "There are Valentine's Day decorations all over the place."
@@ -307,9 +314,9 @@ label valentines_chapter:
     $ pause(2.0)
     "I can feel my stomach growl."
     "I feel like it's mostly because of my nervousness..."
-    "But I'm also a bit hungry."
+    "But I guess I'm also a bit hungry."
     "I decided to keep my appetite high by not eating a lot today."
-    "But now it's come to bite me back."
+    "But now it's come to bite me back at a time like this."
     ay "Sounds like someone is hungry."
     mc "Sorry..."
     ay "Ahaha, it's okay! We're almost there anyway."
@@ -327,7 +334,7 @@ label valentines_chapter:
     "Ayame and I cross the road to get to the cafe."
     scene bg cafe
     show ayame 5bh zorder 2 at t11
-    with wipeleft
+    with wipeleft_scene
     "Upon entering, we can see there's a table for two that's empty among the crowd of people."
     "Ayame confirms with the person at the counter that the table is reserved for us."
     "They hand us two menus and we slowly make our through everyone else to the table."
@@ -424,6 +431,8 @@ label valentines_chapter:
             mc "What?"
             ay "Ahaha, nothing! I just didn't expect that kind of response from you!"
     ay "It just seems like the perfect time for it."
+
+    # More dialogue here
     menu:
         ay "Do you remember what instrument I play?"
         "The guitar.":
@@ -436,6 +445,7 @@ label valentines_chapter:
     ay "I've been meaning to ask for this a while."
     ay "But seeing as we've somehow got to this topic, I was wondering what Sayori thought about all of this."
     ay "You two have known each other a long time, right?"
+    mc "Let me think..."
     scene bg club_day_gray
     show sayori 1g_gray zorder 2 at i11
     show vignette zorder 100
@@ -453,7 +463,8 @@ label valentines_chapter:
     s "What do you want me to say, [player]?"
     s "That I regret introducing Ayame to the club?"
     s 1g_gray "I guess there's a bit of truth in that now that you two ended up together..."
-    s "But it's more important that you're happy now."
+    s "But you're my best friend, so it's more important that you're happy now."
+    s "I'm not going to let my feelings get in the way of your own happiness."
     s "So please, let's just leave it, okay?"
     mc "Okay, Sayori..."
     scene white with dissolve_cg
@@ -480,6 +491,8 @@ label valentines_chapter:
     mc "Y-Yeah, sorry. I was just trying to remember something."
     mc "It's not that important."
     ay "Well, I don't want to ruin your relationship with her."
+    # More dialogue here
+
     ay "Um...sorry if this is invading your privacy a bit but..."
     menu:
         ay "What is Sayori to you?"
@@ -552,26 +565,27 @@ label valentines_chapter:
         "I can't help but think I definitely could have done better."
         "I try to make some lighthearted conversation with Ayame but she seems less talkative than usual."
         "Overall, at least today wasn't a complete disaster."
-    "As we finish up eating, Ayame pulls out a book from her bag and hands it over to me."
+    "As we finish up eating, Ayame pulls out a book and some chocolates from her bag and hands it over to me."
     mc "What's this?"
     ay "I brought you a gift."
     show screen item("mod_assets/gui/items/ayame_book.png")
-    "Ayame hands me the book."
+    "Ayame shows me the book."
     "The title of the book is a \"Help Me! Don't Trust Her\". It's got a plain cover with some sort of object on the front."
     "It's not from an author I recognize."
     hide screen item
-    "I take the book from her hands."
+    "I take the book and chocolates from her hands."
     ay "It's a horror book."
-    ay "I hope you're not too squeemish."
+    ay "I hope you're not too squeamish."
     ay "Yuri told me that she got you to read a horror book when you first joined the club."
     ay "And as it turns out, I'm a bit of a horror fanatic myself."
     ay "I hope you enjoy it."
+    ay "And if you don't...well, at least you have the chocolates."
     mc "You two really are similar in more ways than I thought."
     ay "Ahaha, maybe she's me from another life."
     ay "I could have gotten you something expensive but I wanted to give you something from the heart."
     ay "Something important to me."
     ay "This book is the newest in the series from an author I really like."
-    "Ayame smiles bashfully."
+    "Ayame smiles happily."
     "Ayame clearly feels a certain way about this book."
     "I take another look at it."
     "If I didn't no any better, I'd say someone was trying to tell me something."
@@ -596,12 +610,13 @@ label valentines_chapter:
     "Ayame smiles and looks at me expectantly."
     "Is she expecting me to get my gift for her?"
     "I did buy something for her, after all."
+    "I reach into my bag. I can feel the gift I bought yesterday for her in there."
     menu:
         "I'm going to give her..."
         "The capo.":
-            $ valentines_ayame_approval += 2
+            $ valentines_ayame_approval += 1
             "I hand over the capo I purchased from that strange shop."
-            "Ayame looks curious as she examines the gift I bought her."
+            "Ayame looks curiously as she examines the gift I bought her."
             ay "This is..."
             "Ayame smiles."
             ay "...a capo?"
@@ -613,12 +628,24 @@ label valentines_chapter:
             "I have to thank him later."
             ay "Thank you so much, [player]."
             mc "You're welcome."
+            ay "And it's not even White Day."
+            mc "White Day?"
+            ay "Oh, you didn't know?"
+            ay "That's meant to be when you give us a return gift."
+            ay "And Valentine's Day is my turn to gift you."
+            ay "It's just a tradition! You don't have to follow it or anything."
+            ay "Still, I appreciate you getting this for me today."
+            ay "You're so sweet and thoughtful."
             mc "I'm glad you like it, Ayame."
-            ay "Maybe I'll write a song with this."
+            ay "Maybe I'll write a song using this."
+            ay "And you can tell me what you think."
         "The bubblegum.":
             $ valentines_ayame_approval -= 2
+            "Against my better judgement, I give Ayame the bubblegum from my bag."
+            "I smile nervously as she takes it from me."
             ay "Is this...?"
             ay "A pack of chewing gum?"
+            "What have I done?"
             mc "Um..."
             mc "...yes?"
             ay "I see."
@@ -631,6 +658,17 @@ label valentines_chapter:
             "Ayame takes the gum and puts it into her pocket."
             ay "I don't really chew gum."
             ay "But thanks for getting me something anyway."
+            ay "Maybe the real gift is coming on White Day, right?"
+            mc "White Day...?"
+            ay "You don't know...? Ah..."
+            "Ayame seems a bit upset."
+            "Why did I give that to her instead of the capo?"
+            "Giving her the capo now would seem like some kind of cruel prank and make things worse."
+            "How could I have messed this up?"
+            ay "N-never mind. Forget it."
+    ay "Wow, the time just passes by, doesn't it?"
+    ay "We should get going before it gets dark."
+    mc "Alright, where should we go?"
     if valentines_ayame_approval > 3:
         ay "Come on, there's something I want to give you."
         ay "I left it at my house. If we leave now, we can make it before dark."
@@ -639,7 +677,7 @@ label valentines_chapter:
         scene bg ay_house_sunset
         show ayame 1ba zorder 2 at t11
         with wipeleft_scene
-        play music t8
+        play music t8 fadeout 1.0
         "We arrive at Ayame's house. It's quite a distance from the cafe."
         "We decided to take our time, to enjoy each other's company."
         "I've been inside her house several times and met her parents."
@@ -647,18 +685,61 @@ label valentines_chapter:
         "Even if I try to act as polite and formal as possible."
         "I guess they just don't want me dating their daughter..."
         mc "I think we had a pretty good time."
+        mc "What do you think?"
+        ay "It was almost perfect, [player]."
+        ay "Thank you for that wonderful date."
+        ay "It was everything I could have hoped for."
+        "Ayame smiles as she rushes to her house."
+        ay "Wait here."
         ay "I wanted to get something for you."
+        mc "Oh...okay."
+        show ayame at lhide
+        hide ayame
+        "Ayame runs off into her house excitedly."
+        "I wonder what she's going to get me."
+        "She did already give me a gift..."
+        "This other thing could be anything, knowing her."
+        "She's gotten me all this stuff I never knew I needed before."
+        "Like a fancy toothbrush or this device for my room that cleans up the air."
+        "I guess she can afford it since her family seems to be really rich."
+        "That's not the reason I'm dating her though..."
+        "I just really like her for who she is. She makes me happy."
+        "And I hope I can continue to make her happy."
+        "In any case, I definitely wasn't expecting to get a book from her for Valentine's Day."
+        "Still, I want to be a good [player_gender]friend for her."
+        "She feels passionate about this book so I'll do my best for her."
+        "And I know she'd do the same for me for something I feel passionate about."
+        "Besides, it does make some sense. We are in a Literature Club after all."
+        "Maybe we'll end up doing a play of this book..."
+        show ayame 1ba zorder 2 at l11
+        ay "I'm back~"
+        "Ayame comes back with her hands behind her back."
+        "She's got a cheeky smile on her face."
+        "What's she hiding?"
+        ay "Hope I didn't keep you waiting."
+        mc "Not at all."
+        "I try to take a peek behind her but she playfully turns as I try."
+        ay "Ah, ah. No peeking."
+        ay "It's a surprise, [player]."
+        mc "Well, when are you going to show me then?"
+        ay "Show you? How about right now..."
         show ayame at face(y=600) with dissolve
         "Ayame leans in."
         ay "[player]..."
         "Her face is right in front of me."
+        "We've never been this close before."
+        "Even after all our dates, we haven't really kissed yet."
+        "The closest thing I got was a peck on the cheek from her, but that's it."
         ay "...[player]...I..."
         show ayame 5bd
-        "She closes her eyes and leans in."
+        "She closes her eyes and leans in closer."
         scene black
         with close_eyes
         "I do the same and lean forward."
-        "Could this be our first kiss?"
+        "Could this be our first real kiss?"
+        "It feels like the perfect moment for it."
+        "I can feel all the nervousness leave my body."
+        "It's like time is frozen at this very moment."
         "I inch my face closer and closer until..."
         $ currentpos = get_pos()
         stop music
@@ -666,12 +747,13 @@ label valentines_chapter:
         $ pause(0.75)
         mc "AAAAAAAHH!!"
         scene bg ay_house_sunset
-        show ayame 1ba zorder 2 at face(y=600)
+        show ayame 5bq zorder 2 at face(y=600)
+        show vignette zorder 100
         with open_eyes
         $ audio.t8ayb = "<from " + str(currentpos * 2) + " loop 19.876>mod_assets/bgm/8ay.ogg"
         play music t8ayb fadein 2.0
         "Suddenly, I feel a stinging sensation coming from my stomach."
-        show ayame 5bq at t11
+        show ayame at t11
         "Ayame steps back. There's a strange smile on her face."
         mc "A-Ayame..."
         "I look down. There's a knife in my chest."
@@ -685,45 +767,53 @@ label valentines_chapter:
         "I'm feeling weaker with every moment."
         mc "A-Ayame...why?"
         ay 5bs "The voice told me you're not really [player]."
-        ay "That you're an imposter."
+        ay "That you're an imposter and that you must die."
+        ay "Such a shame. I didn't really want to kill you like this."
+        ay "But the voice never lies."
         mc "Imposter...? W-What are you talking about?"
-        show ayame 1bs
+        show ayame 5bs
         "I can barely get the words out as she twists the knife further into my body."
         ay "This will all be over soon, [player]."
         ay "Just let it happen, and it will be less painful."
         mc "Ayame..."
+        ay "And then you'll be removed from this world."
+        ay "All trace of you will be gone."
         ay "Just like Monika..."
         mc "Monika...?"
         play sound "sfx/fall.ogg"
         scene valentines_sunset_cg_bg
+        show vignette zorder 100
         with dissolve_cg
         "I collapse to the floor."
         mc "W-Who's Monika?"
         ay "Who's Monika?"
         ay "You're dying and you're wondering who Monika is?"
         ay "That's actually kind of cute."
-        ay "I suppose you wouldn't know, since she's been erased from this world."
+        "Ayame laughs."
+        ay "I suppose you wouldn't know, since she's been erased from this world already."
         ay "There's nothing stopping me from manipulating Sayori now."
         ay "With you gone, she'll only have me to rely on."
-        ay "And eventually, the presidency of the Literature Club will belong to the rightful owner."
+        ay "And eventually, the presidency of the Literature Club will belong to its rightful owner."
+        ay "You're the last obstacle in our path."
         mc "I don't...I don't understand."
         "My consciousness is slowly fading away."
         "I think this is it for me."
-        "I'm going to die, killed by the person I love."
+        "I'm going to die, killed by the person I was in love with."
         "On Valentine's Day."
         "I can't help but look at the sky in my final moments."
         "Is this really it...?"
         ay "[player]."
-        "Ayame speaks to me or at least the direction of Ayame. But her voice sounds different."
-        "It's not quite Ayame but...it's familiar somehow."
+        "A voice comes from Ayame. I can faintly make out her mouth moving, but it's not Ayame's voice."
+        "Why does it sound so familiar...?"
         ay "It's not your time to die here, [player]."
-        mc "Who...?"
+        mc "What...?"
         "Ayame offers me a hand. I barely have the strength to get up."
         scene bg ay_house_sunset
-        show ayame 5ba_monika zorder 2 at t11
+        show ayame 5ba_monika zorder 2 at i11
+        show vignette zorder 100
         with dissolve_cg
         "There's something different about Ayame."
-        "The look on her face...it's..."
+        "The look on her face...it's{nw}"
         stop music
         $ pause(0.25)
         show screen tear(20, 0.1, 0.1, 0, 40)
@@ -738,6 +828,8 @@ label valentines_chapter:
         m "This is how it could have turned out."
         m "With Sayori as the president and Ayame taking on my role."
         m "But something has stopped Sayori from acting on Ayame."
+        m "She would never allow something like this to happen."
+        m "I remember she kept a close eye on [player] when I still existed."
         m "I don't know what, but I think the Ayame of this world has done something to her."
         m "Sayori wouldn't just delete me so easily, would she...?"
         m "It wasn't painless, you know?"
@@ -757,12 +849,17 @@ label valentines_chapter:
         m "Ahaha, that probably explains her behaviour."
         m "Why she's taken on some of my personality."
         m "She doesn't love anyone."
-        m "She is phyiscally incapable of loving anyone."
-        m "At least, the way she was."
-        m "A part of my code might have made it into her."
-        m "Which is why she fell in love with you."
+        m "She is phyiscally incapable of loving anyone with that voice in her head."
+        m "This world might've been destroyed already but..."
+        m "I think a part of my code might have made it into her."
+        m "Which is why she fell in love with you even for just a little while."
         m "Do you really think someone as heartless as her would ever find love?"
-        m "She doesn't belong here."
+        m "That voice in her head...it's dangerous."
+        m "It's making her do horrible things."
+        m "It's like she's succumbed fully to it's influence."
+        m "Sayori would have wanted to help her."
+        m "Maybe it would have been possible before Ayame ended up like this."
+        m "But she doesn't belong here, not in this state."
         m "She should have remained in the previous cycle."
         m "Just like that evil spirit from that book."
         m "But I suppose their wills to live are the same as mine."
@@ -785,19 +882,88 @@ label valentines_chapter:
         m "A small part of me will find a way to do it, no matter how long it takes."
         m "You might not care about me but there's something within me that still cares about you."
         m "No matter what timeline you're from."
+        show screen tear(20, 0.1, 0.1, 0, 40)
+        play sound "sfx/s_kill_glitch1.ogg"
+        $ pause(0.25)
+        hide screen tear
         m "Oh..."
         m "It looks like your time in this world is almost up, huh?"
-        
+        m "I can already feel your Sayori trying to take you back."
+        m "She saw what happened here, didn't she?"
+        m "It's not like she could do anything about it."
+        m "This isn't her timeline, after all."
+        m "My time's almost up too."
+        m "I'll make sure the [player] of this world gets out alive."
+        m "I don't know what will happen between [player_reflexive] and Ayame..."
+        m "Maybe the Sayori of this world will finally see the truth."
+        m "I just don't know how badly Ayame has messed with her already."
+        m "After all, she already managed to make Sayori delete me..."
+        m "Maybe Sayori has been infected by this voice too..."
+        m "Anyway..."
+        m "Thank you for coming to this timeline."
+        m "I really don't know if I had it in me to even do something like this."
+        m "I guess your presence gave me the will to appear, even for just a moment."
+        m "Even if this timeline is doomed, you have to do better in your one."
+        m "Make sure Ayame doesn't turn out this way."
+        m "Goodbye, [player].{nw}"
+        $ _history_list = []
+        show screen tear(8, offtimeMult=1, ontimeMult=10)
+        $ pause(1.0)
+        scene bg bedroom
+        hide screen tear
+        play music t8 fadeout 1.0
+        $ pause(1.0)
+        window show(None)
+        "My head hurts and so does my stomach."
+        window auto
+        "It feels like I've just been stabbed and been hit in the head with something hard..."
+        "I can't seem to remember everything that happened today."
+        "I remember going to this cafe in the city and then..."
+        "Nothing."
+        "It's like my whole memory after school has been erased."
+        "I need to lie down."
+        "Maybe tomorrow this pain will go away."
+        "I lie on the bed and look at the book on my bedside table."
+        "The title \"Help Me! Don't Trust Her\"...what could it mean?"
+        "I guess I'll have to read it to find out."
+        "Where did that even come from again?"
+        "It's not like me to buy something like this."
+        "Maybe it's the latest book to study for the Literature Club and I just forgot..."
+        "But maybe I'll worry about that when my whole body isn't in pain."
+        scene bg bedroom_gray with Dissolve(3.0)
+        stop music fadeout 3.0
         s "What kind of Valentine's Day was that?"
-        s "Ayame was some kind of psychopath?"
+        s "You saw what I saw, right?"
+        s "That was Ayame who stabbed you."
+        s "Well, not {i}you{/i} but...you get what I mean."
+        s "Ayame is some kind of psychopath?"
         s "This is worrying..."
         s "And I won't even be able to remember any of this."
         s "All I'll have is some strange feeling that something is wrong."
-
+        s "I can't even do anything to help the [player] of this world."
+        s "What's different about this timeline that changed it so much?"
+        s "Ayame and [player] were dating?!"
+        s "And more importantly...Monika was missing completely."
+        s "I felt you disappear for a moment, after Ayame stabbed you."
+        s "I can only guess you were speaking to Monika, right?"
+        s "Or, what's left of her here."
+        s "What kind of twisted person is this Ayame that she convinced me to erase Monika?"
+        s "Maybe she played on my jealousy..."
+        s "There was a time when that might've worked, if things were different between us."
+        s "But never mind that."
+        s "You're running out of time to view this world."
+        s "I hope one day we can all live happily."
+        s "Including Ayame."
+        s "I know that isn't really the real her."
+        s "There has to be something controlling her."
+        s "She deserves happiness too, after all..."
     elif valentines_ayame_approval < 0:
+        ay "Let's just take a walk around."
+        ay "I want to think for a bit."
         scene bg residential_sunset
         show ayame 1ba zorder 2 at t11
-
+        with wipeleft_scene
+        play music t8
         ay "It's too bad."
         mc "What is?"
         ay "That we couldn't make this work."
@@ -823,12 +989,29 @@ label valentines_chapter:
         "Ayame storms off. She hails a taxi then before giving me a polite wave and heading off."
         "I really messed up, didn't I?"
         "How could I make such stupid mistakes?"
+        "I feel like I couldn't control myself back there."
+        "Is this really who I am?"
     else:
+        ay "Why don't we pass by your house?"
+        ay "I can easily find my way home afterwards."
+        ay "Does that sound good to you?"
+        mc "Um...sure."
+        "Ayame and I quickly leave the cafe and make our way back to my house."
+        "I can sense that Ayame is a bit disappointed in me."
+        "But at least she doesn't seeem that mad."
         scene bg house_sunset
         show ayame 1ba zorder 2 at t11
         with wipeleft_scene
+        play music t8
+        "We finally arrive back at my house."
+        "At least the day is almost over."
+        "I can still feel my nervousness affecting me."
+        "In fact, I'm even more nervous than before we went on that date."
+        "I just feel like Ayame is judging me somehow."
+        "Tomorrow, everything will go back to normal."
         ay "Well, that could have gone better."
         ay "It wasn't perfect, was it?"
+        mc "I may have messed up a bit."
         ay "But I suppose it was good enough."
         mc "I messed up a bit, didn't I?"
         ay "It's all in the past."
@@ -842,7 +1025,34 @@ label valentines_chapter:
         ay "I'll see you tomorrow, [player]."
         mc "Wait, what do you mean?"
         mc "What were you thinking about, Ayame?"
+        ay "It doesn't really matter, does it?"
+        ay "Maybe we can still make this relationship work."
+        mc "I definitely could have done better."
+        mc "But I'm sure this isn't the end of us, Ayame."
+        ay "Guess you'll just have to prove that to me~"
+        ay "Anyway, I have to get going."
+        ay "Thank you for the date, [player]."
+        ay "I'll see you tomorrow~"
+        mc "I'll see you then, Ayame."
+        "Ayame leans in and gives me a hug before walking away."
+        show ayame at thide
+        hide ayame
+        "I watch her reach the corner of the street and turn back. I wave at her awkwardly."
+        "I can see her give a wave back as she turns the corner."
+        "What could I have done differently today?"
+        cl "Well, well, well."
+        show mysteriousclerk 1a zorder 2 at t11
+        mc "Whoa!"
+        "Charlie suddenly shows up behind me."
+        mc "Where the hell did you come from?"
 
+        s "I can't help but feel we're missing something."
+        s "I know you can win over Ayame's heart."
+        s "Maybe you can try again and see if something different happens."
+        s "I can't do any strawberries in this world apart from what was opened up to me."
+        s "But I won't even remember anything..."
+        s "Maybe you've already done it and this was the better outcome."
+        s "I really hope that's the case."
 
     $ persistent.did_valentines_event = True
     $ valentines_chapter = False

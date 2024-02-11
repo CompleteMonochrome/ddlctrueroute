@@ -2219,7 +2219,7 @@ init -501 screen achievements tag menu:
         default achname = Tooltip("")
         default achdesc = Tooltip("")
         default gridx = 6
-        default gridy = 8
+        default gridy = 10
         default imageshow = None
         default colored = False
 
