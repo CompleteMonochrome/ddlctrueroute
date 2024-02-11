@@ -206,6 +206,9 @@ init -1 style window_flashback is window:
 init -1 style window_christmas is window:
     background Image("mod_assets/gui/textbox_christmas.png", xalign=0.5, yalign=1.0)
 
+init -1 style window_valentines is window:
+    background Image("mod_assets/gui/textbox_valentines.png", xalign=0.5, yalign=1.0)
+
 init -1 style namebox:
     xpos gui.name_xpos
     xanchor gui.name_xalign
@@ -462,7 +465,7 @@ init -501 screen navigation():
         customstarthover_outlines = [(4, "#fac", 0, 0), (2, "#fac", 2, 2)]
         customstartinsensitive_outlines = [(4, "#fce", 0, 0), (2, "#fce", 2, 2)]
 
-        if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2019, 1, 1) + weekrange)) or (currentdate <= (datetime.date(2019, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2020, 1, 1) + weekrange))) and persistent.arc_clear[0]:
+        if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2019, 1, 1) + weekrange)) or (currentdate <= (datetime.date(2019, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2020, 1, 1) + weekrange)) or (currentdate <= (datetime.date(2024, 2, 29)))) and persistent.arc_clear[0]:
             customstartoutlines = [(4, "#228B22", 0, 0), (2, "#228B22", 2, 2)]
             customstarthover_outlines = [(4, "#32CD32", 0, 0), (2, "#32CD32", 2, 2)]
             customstartinsensitive_outlines = [(4, "#00FF00", 0, 0), (2, "#00FF00", 2, 2)]
@@ -500,7 +503,7 @@ init -501 screen navigation():
                                     true=Function(HideConfirmThenName),
                                     false=Start("choose_start")),
                                 no_action=Hide("confirm")),
-                            false=Function(HideConfirmThenName)) text_outlines customstartoutlines text_hover_outlines customstarthover_outlines text_insensitive_outlines customstartinsensitive_outlines
+                            false=Function(HideConfirmThenName))
                         if persistent.arc_clear[0] or persistent.any_bonus_day:
                             textbutton _("Bonus Days") action If(persistent.playername,
                             true=Show(screen="confirm", message="Are you sure you want to see a bonus day?",
@@ -581,7 +584,7 @@ init -501 screen main_menu() tag menu:
         add "menu_art_y_ghost"
         add "menu_art_n_ghost"
     else:
-        if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2019, 1, 1) + weekrange)) or (currentdate <= (datetime.date(2019, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2020, 1, 1) + weekrange))) and persistent.arc_clear[0]:
+        if ((currentdate <= (datetime.date(2018, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2019, 1, 1) + weekrange)) or (currentdate <= (datetime.date(2019, 9, 22) + weekrange)) or (currentdate <= (datetime.date(2020, 1, 1) + weekrange)) or (currentdate <= (datetime.date(2024, 2, 29)))) and persistent.arc_clear[0]:
             add "menu_bg_gray"
         elif persistent.markov_agreed:
             add "menu_bg_evil"
@@ -910,7 +913,7 @@ init -1 python:
         elif persistent.playthrough == 0 and special_chapter:
             return Show(screen="dialog", message="This is an alternate reality. You can't save them.", ok_action=Hide("dialog"))
 
-        elif persistent.playthrough == 0 and christmas_chapter:
+        elif persistent.playthrough == 0 and (christmas_chapter or valentines_chapter):
             return Show(screen="dialog", message="You have no influence on this timeline.", ok_action=Hide("dialog"))
 
         elif persistent.playthrough == 0 and ch16_end_part:
@@ -1893,7 +1896,7 @@ init -501 screen customstart_girlchoice(background,labeltext,chibis,excludemysel
                         size 50
                 text_align 0.5
 
-init -501 screen customstart_twobgchoice(labeltext,bg1,text1,bg2,text2,multi,highlight1=False,highlight2=False):
+init -501 screen customstart_twobgchoice(labeltext,bg1,text1,bg2,text2,multi,highlight1=False,highlight2=False,lock1=False,lock2=False):
 
     default tt = Tooltip("")
 
@@ -1909,41 +1912,74 @@ init -501 screen customstart_twobgchoice(labeltext,bg1,text1,bg2,text2,multi,hig
 
         grid 2 1:
             if multi:
-                imagebutton:
-                    action [ToggleScreenVariable("colora","#0f0","#f00"), ToggleScreenVariable("choicea",True,False), Function(renpy.restart_interaction)]
-                    idle im.Crop(im.Grayscale(bg1), (320, 0, 640, 720))
-                    hover im.Crop(im.MatrixColor(bg1, im.matrix.saturation(0.3)), (320, 0, 640, 720))
-                    selected_idle im.Crop(bg1, (480, 0, 320, 720))
-                    selected_hover im.Crop(im.MatrixColor(bg1, im.matrix.saturation(0.7)), (320, 0, 640, 720))
-                    hovered tt.Action("{color="+colora+"}[text1]{/color}")
-                    selected choicea
-                    hover_sound gui.hover_sound
-                    activate_sound gui.activate_sound
-                imagebutton:
-                    action [ToggleScreenVariable("colorb","#0f0","#f00"), ToggleScreenVariable("choiceb",True,False), Function(renpy.restart_interaction)]
-                    idle im.Crop(im.Grayscale(bg2), (320, 0, 640, 720))
-                    hover im.Crop(im.MatrixColor(bg2, im.matrix.saturation(0.3)), (320, 0, 640, 720))
-                    selected_idle im.Crop(bg2, (320, 0, 640, 720))
-                    selected_hover im.Crop(im.MatrixColor(bg2, im.matrix.saturation(0.7)), (320, 0, 640, 720))
-                    hovered tt.Action("{color="+colorb+"}[text2]{/color}")
-                    selected choiceb
-                    hover_sound gui.hover_sound
-                    activate_sound gui.activate_sound
+                if lock1:
+                    imagebutton:
+                        action [NullAction(), Function(renpy.restart_interaction)]
+                        idle im.Crop(im.Grayscale(bg1), (320, 0, 640, 720))
+                        selected_idle im.Crop(bg1, (480, 0, 320, 720))
+                        selected_hover im.Crop(im.MatrixColor(bg1, im.matrix.saturation(0.7)), (320, 0, 640, 720))
+                        hovered tt.Action("{color="+colora+"}[text1] (Unavailable){/color}")
+                        selected choicea
+                        hover_sound gui.hover_sound
+                else:
+                    imagebutton:
+                        action [ToggleScreenVariable("colora","#0f0","#f00"), ToggleScreenVariable("choicea",True,False), Function(renpy.restart_interaction)]
+                        idle im.Crop(im.Grayscale(bg1), (320, 0, 640, 720))
+                        hover im.Crop(im.MatrixColor(bg1, im.matrix.saturation(0.3)), (320, 0, 640, 720))
+                        selected_idle im.Crop(bg1, (480, 0, 320, 720))
+                        selected_hover im.Crop(im.MatrixColor(bg1, im.matrix.saturation(0.7)), (320, 0, 640, 720))
+                        hovered tt.Action("{color="+colora+"}[text1]{/color}")
+                        selected choicea
+                        hover_sound gui.hover_sound
+                        activate_sound gui.activate_sound
+                if lock2:
+                    imagebutton:
+                        action [NullAction(), Function(renpy.restart_interaction)]
+                        idle im.Crop(im.Grayscale(bg2), (320, 0, 640, 720))
+                        selected_idle im.Crop(bg2, (320, 0, 640, 720))
+                        selected_hover im.Crop(im.MatrixColor(bg2, im.matrix.saturation(0.7)), (320, 0, 640, 720))
+                        hovered tt.Action("{color="+colorb+"}[text2] (Unavailable){/color}")
+                        hover_sound gui.hover_sound
+                else:
+                    imagebutton:
+                        action [ToggleScreenVariable("colorb","#0f0","#f00"), ToggleScreenVariable("choiceb",True,False), Function(renpy.restart_interaction)]
+                        idle im.Crop(im.Grayscale(bg2), (320, 0, 640, 720))
+                        hover im.Crop(im.MatrixColor(bg2, im.matrix.saturation(0.3)), (320, 0, 640, 720))
+                        selected_idle im.Crop(bg2, (320, 0, 640, 720))
+                        selected_hover im.Crop(im.MatrixColor(bg2, im.matrix.saturation(0.7)), (320, 0, 640, 720))
+                        hovered tt.Action("{color="+colorb+"}[text2]{/color}")
+                        selected choiceb
+                        hover_sound gui.hover_sound
+                        activate_sound gui.activate_sound
             else:
-                imagebutton:
-                    action Return(0)
-                    idle im.Crop(im.Grayscale(bg1), (320, 0, 640, 720))
-                    hover im.Crop(bg1, (320, 0, 640, 720))
-                    hovered tt.Action(text1)
-                    hover_sound gui.hover_sound
-                    activate_sound gui.activate_sound
-                imagebutton:
-                    action Return(1)
-                    idle im.Crop(im.Grayscale(bg2), (320, 0, 640, 720))
-                    hover im.Crop(bg2, (320, 0, 640, 720))
-                    hovered tt.Action(text2)
-                    hover_sound gui.hover_sound
-                    activate_sound gui.activate_sound
+                if lock1:
+                    imagebutton:
+                        action [NullAction(), Function(renpy.restart_interaction)]
+                        idle im.Crop(im.Grayscale(bg1), (320, 0, 640, 720))
+                        hovered tt.Action(text1 + " (Unavailable)")
+                        hover_sound gui.hover_sound
+                else:
+                    imagebutton:
+                        action Return(0)
+                        idle im.Crop(im.Grayscale(bg1), (320, 0, 640, 720))
+                        hover im.Crop(bg1, (320, 0, 640, 720))
+                        hovered tt.Action(text1)
+                        hover_sound gui.hover_sound
+                        activate_sound gui.activate_sound
+                if lock2:
+                    imagebutton:
+                        action [NullAction(), Function(renpy.restart_interaction)]
+                        idle im.Crop(im.Grayscale(bg2), (320, 0, 640, 720))
+                        hovered tt.Action(text2 + " (Unavailable)")
+                        hover_sound gui.hover_sound
+                else:
+                    imagebutton:
+                        action Return(1)
+                        idle im.Crop(im.Grayscale(bg2), (320, 0, 640, 720))
+                        hover im.Crop(bg2, (320, 0, 640, 720))
+                        hovered tt.Action(text2)
+                        hover_sound gui.hover_sound
+                        activate_sound gui.activate_sound
 
         label _(labeltext):
             text_style "game_menu_label_text"
@@ -2111,6 +2147,72 @@ init -501 screen customstart_twochoice(background,labeltext,image1,text1,image2,
                 size 40
                 text_align 0.5
 
+init -501 screen bonusdays_bonusdaychoice(background,labeltext,chibis,locked1=False,locked2=False,locked3=False,locked4=False,locked5=False,locked6=False,mc_name=""):
+
+    default tt = Tooltip("")
+
+    add background at show_hide_fade_bg_quick
+
+    style_prefix "choice"
+
+    fixed at show_hide_fade_quick:
+        xalign 0.5
+        yalign 0.5
+
+        label _(labeltext):
+            text_style "game_menu_label_text"
+            xalign 0.5
+            yalign 0.0
+
+        grid 2 3:
+            xalign 0.5
+            yalign 0.6
+            spacing 30
+
+            if locked1:
+                imagebutton idle im.Grayscale("gui/poemgame/s_sticker_1.png") action NullAction() hovered tt.Action("{color=#6ecbfa}Sayori{/color} (Unavailable)") hover_sound gui.hover_sound focus_mask True xalign 0.5
+            else:
+                imagebutton idle "gui/poemgame/s_sticker_1.png" hover "gui/poemgame/s_sticker_2.png" selected_idle "gui/poemgame/s_sticker_2.png" selected_hover "gui/poemgame/s_sticker_2.png" action Return(0) hovered tt.Action("{color=#6ecbfa}Sayori{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True xalign 0.5
+            if locked2:
+                imagebutton idle im.Grayscale("gui/poemgame/m_sticker_1.png") action NullAction() hovered tt.Action("{color=#8ed73a}Monika{/color} (Unavailable)") hover_sound gui.hover_sound focus_mask True xalign 0.5
+            else:
+                imagebutton idle "gui/poemgame/m_sticker_1.png" hover "gui/poemgame/m_sticker_2.png" selected_idle "gui/poemgame/m_sticker_2.png" selected_hover "gui/poemgame/m_sticker_2.png" action Return(1) hovered tt.Action("{color=#8ed73a}Monika{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True xalign 0.5
+            if locked3:
+                imagebutton idle im.Grayscale("mod_assets/gui/poemgame/mh_sticker_1.png") action NullAction() hovered tt.Action("{color=#8ed73a}Monika?{/color} (Unavailable)") hover_sound gui.hover_sound focus_mask True xalign 0.5
+            else:
+                imagebutton idle "mod_assets/gui/poemgame/mh_sticker_1.png" hover "mod_assets/gui/poemgame/mh_sticker_2.png" selected_idle "mod_assets/gui/poemgame/mh_sticker_2.png" selected_hover "mod_assets/gui/poemgame/mh_sticker_2.png" action Return(2) hovered tt.Action("{color=#f21237}Markov{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True xalign 0.5
+            if locked4:
+                imagebutton idle im.Grayscale("mod_assets/gui/poemgame/ay_sticker_1.png") action NullAction() hovered tt.Action("{color=#d28c5e}Ayame{/color} (Unavailable)") hover_sound gui.hover_sound focus_mask True xalign 0.5
+            else:
+                imagebutton idle "mod_assets/gui/poemgame/ay_sticker_1.png" hover "mod_assets/gui/poemgame/ay_sticker_2.png" selected_idle "mod_assets/gui/poemgame/ay_sticker_2.png" selected_hover "mod_assets/gui/poemgame/ay_sticker_2.png" action Return(3) hovered tt.Action("{color=#d28c5e}Ayame{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True xalign 0.5
+            if locked5:
+                imagebutton idle im.Grayscale("mod_assets/gui/poemgame/mc_sticker_1.png") action NullAction() hovered tt.Action("{color=#ffffff}[mc_name]{/color} (Unavailable)") hover_sound gui.hover_sound focus_mask True xalign 0.5
+            else:
+                imagebutton idle "mod_assets/gui/poemgame/mc_sticker_1.png" hover "mod_assets/gui/poemgame/mc_sticker_1.png" selected_idle "mod_assets/gui/poemgame/mc_sticker_1.png" selected_hover "mod_assets/gui/poemgame/mc_sticker_1.png" action Return(4) hovered tt.Action("{color=#ffffff}[mc_name]{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True xalign 0.5
+            if locked6:
+                imagebutton idle im.Grayscale("mod_assets/gui/poemgame/unknown_sticker_1.png") action NullAction() hovered tt.Action("{color=#ffffff}Unknown{/color} (Unavailable)") hover_sound gui.hover_sound focus_mask True xalign 0.5
+            else:
+                imagebutton idle "mod_assets/gui/poemgame/unknown_sticker_1.png" hover "mod_assets/gui/poemgame/unknown_sticker_1.png" selected_idle "mod_assets/gui/poemgame/unknown_sticker_1.png" selected_hover "mod_assets/gui/poemgame/unknown_sticker_1.png" action Return(5) hovered tt.Action("{color=#ffffff}Unknown{/color}") hover_sound gui.hover_sound activate_sound gui.activate_sound focus_mask True xalign 0.5
+
+    fixed at show_hide_fade_quick:
+        vbox:
+            xalign 0.5
+            yalign 0.99
+
+            text tt.value:
+                size 40
+                text_align 0.5
+
+init -501 screen item(item):
+    frame:
+        xalign 0.5
+        yalign 0.3
+        xsize 400
+        ysize 400
+
+        at show_hide_fade_bg_quick
+
+        add item xalign 0.5 yalign 0.5 at show_hide_fade_bg_quick
 
 init -501 screen achievements tag menu:
 

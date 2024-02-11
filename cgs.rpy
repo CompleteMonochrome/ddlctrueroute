@@ -286,6 +286,9 @@ image shared_cg1_y_1:
 image shared_cg1_y_2:
     "mod_assets/images/cg/shared_cg1_y_2.png"
 
+image valentines_sunset_cg_bg:
+    "mod_assets/images/cg/cg_valentines_sunset_bg.png"
+
 image s_kill_bg:
     subpixel True
     "images/cg/s_kill_bg.png"

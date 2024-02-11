@@ -1949,6 +1949,10 @@ label ch10_end:
     "Something tells me I should keep an eye out on 'Yasuhiro'."
     "I don't think it's the last time I'm seeing him either..."
     "After paying the small price at the counter, I head home."
+    "As I begin to head home, I catch a glimpse of someone scurrying about in the direction Yasuhiro went."
+    "I didn't get a good look at who it was, but it felt like someone I knew."
+    "In any case, it's none of my business dealing with whatever is going on with him."
+    "I should just start heading home."
     "The grocery bags don't weigh that much, but it will probably slow me down a little."
     scene bg residential_day
     with wipeleft_scene

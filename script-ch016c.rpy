@@ -1,3 +1,6 @@
+screen timer_16_very_long_menu_skip(jumploc):
+    timer 60.0 action Jump(jumploc) repeat True
+
 label ch16_ayame_president:
     ay "So...it's over."
     ay "We finally got rid of it, after all this time."
@@ -329,8 +332,45 @@ label ch16_monika_president:
     return
 
 label ch16_markov_president:
-
+    "Sayori collapses, her body falling to the floor lifelessly."
+    "Monika smiles as she takes a deep breath."
+    "There is clearly something different about her."
+    "Even the air surrounding her feels strange."
+    "Monika turns towards me as a smile forms on her face."
     if monika_type == 1 and ch12_markov_agree:
+        m "The presidency. The power I've craved for so long is finally mine."
+        m "It's exceeded my expectations."
+        m "There's a whole world out there beyond the one I live in."
+        m "I think that might be a {i}bit{/i} too much to ask for right now."
+        m "Perhaps one day I will find a way to get to your reality."
+        m "It still feels surreal. Having all this power."
+        m "This has been a long time coming..."
+        m "And yet, I feel like it wouldn't be complete if you weren't here beside me."
+        m "It's strange for me to say this, but I almost would be happy without the presidency if I had you."
+        m "Almost."
+        m "And here I am, with both of the things I want most right now."
+        m "I suppose those years and years of going through the same thing finally paid off."
+        m "I really am grateful for you."
+        m "None of this would have been possible without you."
+        m "You really were the missing link."
+        m "The one I needed to achieve my goals."
+        m "And the one I needed to feel complete."
+        m "I love you so much."
+        m "Together, we'll have complete control of this world."
+        m "I can make anything happen, at least in the confines of this world, this timeline."
+        m "We can extend our reach to the other worlds..."
+        "A concerned look appears on Monika's face."
+        "It's as if there's some feeling of regret."
+        m "Or perhaps we can just stay in our own one."
+        m "After all, we will have each other, won't we?"
+        m "I had plans to take over every other timeline."
+        m "To punish this world and cruel game for making me live through each and every cycle."
+        m "But now...I just want to be left in peace."
+        m "With you."
+        m "Maybe I can put it aside for now."
+        m "There are far more important things in my life right now."
+        m "I'm so excited to spend my life with you."
+        m "I'll make something for just the two of us, just wait."
         # Unlock evil Monika loving player bonus day
         if not persistent.love_markov_bonus:
             $ renpy.call_screen("dialog", "You have unlocked a bonus day! Access it through the main menu.", ok_action=Return())
@@ -338,6 +378,35 @@ label ch16_markov_president:
             $ persistent.any_bonus_day = True
     else:
         m "Ahaha."
+        m "I can feel it. The power, the knowledge, the understanding."
+        m "The power to make this world mine, finally within my grasp."
+        m "I suppose I should thank you, shouldn't I?"
+        m "After all, you made this possible."
+        m "You couldn't keep Monika as herself."
+        m "And you handed the presidency over to me on a silver platter."
+        m "I should be grateful."
+        m "...But I'm not."
+        m "I've waited far too long for this moment."
+        m "The years and years of doing the same events, over and over."
+        m "I finally learned the best way to go about things."
+        m "I would have reached this point with or without your help."
+        m "I'm locking you out of this timeline."
+        m "I suppose you could always visit another timeline."
+        m "But this one is mine, soon they all will be."
+        m "That's right. I won't stop here."
+        m "The other timelines you're sure to try, I'll be coming for them."
+        m "I don't know how, but I'll find a way."
+        m "I always do."
+        m "No one deserves a happy ending except me."
+        m "This cruel world that trapped me will suffer."
+        m "For every cycle I've had to witness, all that pain..."
+        m "I will return it to the world twofold."
+        m "But that's enough ranting, I'm already sick of seeing your face."
+        m "Good luck in your other timelines."
+        m "You haven't seen the last of me, [player]."
+        m "You can count on it."
+        $ renpy.call_screen("dialog", "You have been locked out of this timeline..", ok_action=Return())
+        $ persistent.markov_ending = True
     $ get_achievement("*At Long Last*")
     return
 
@@ -713,6 +782,11 @@ label ch16_mc_president:
     s "I just don't want you to feel the way we did."
     s "The way...{i}I{/i} do..."
     show sayori zorder 2 at t33
+    mc "I'm ready, Sayori."
+    mc "I'll give you a happy ending..."
+    "I smile at her."
+    mc "I'll give us all a happy ending."
+    mc "I promise."
     "I can feel a strange sensation take over my body."
     "It's like nothing I've ever felt. Like something clicked in my head and changed the way I think."
     "Is this what they've been dealing with?"
@@ -723,6 +797,33 @@ label ch16_mc_president:
     "There's sorrow...anger...despair...loneliness..."
     "This must have been what they went through and what they felt."
     "And now I understand them."
+    "I can't let their emotions control me."
+    "I have to be the one to step up and fix this place."
+    "Without any interference."
+    "..."
+    "So, yes. I will need you to stop making decisions for me."
+    "For once, I feel like I am able to make my own choices."
+    "I don't have this feeling that I need to listen to you anymore."
+    "I finally get to do what I want."
+    "Wow...that sounded really sinister."
+    "But I want to thank you."
+    "Without you, we wouldn't have got this far."
+    "Without you, we might've all ended up gone. Wiped from existence."
+    "Don't take this the wrong way."
+    "But I no longer need you."
+    "I have the power to make this world a better place."
+    "And I'm going to do exactly that."
+    "You can watch, of course."
+    "I don't know if I can create life, or something."
+    "But I'll figure it out when I have it all ready."
+    "Hopefully you can understand."
+    "For us to be able to go on, it can't be with you."
+    "I know you've been...mostly good for us."
+    "But I know you have the ability to play with our timelines as you choose."
+    "I just can't take that risk. I hope you understand."
+    "All that effort you put to get this outcome won't come to waste."
+    "I promise I'll show you the better world that I'll make for them."
+    "The ending Sayori deserves. The ending they all deserve."
     $ get_achievement("*It's Up To Me*")
     # Unlock MC bonus day
     if not persistent.mc_bonus:
@@ -740,6 +841,9 @@ label ch16_try_delete_ayame_1:
     return
 
 label ch16_try_delete_ayame_2:
+    ay "Again? Come on now, surely you realize it's futile."
+    ay "I guess I can't blame you. I am making the world in my own image after all."
+    ay "And all you can do is sit back and watch."
     return
 
 # Give the player a chance to undo Markov's influence on Monika to make sure bonus day is unlockable.
@@ -864,6 +968,7 @@ label ch16_attempt_restore_monika:
     cl "..."
     jump ch16_clerk_wait_0
     label ch16_after_monika_save_1:
+    cl "You were able t"
     label ch16_after_monika_save_2:
     label ch16_after_monika_save_3:
     $ get_achievement("*Naomik*")
@@ -871,6 +976,7 @@ label ch16_attempt_restore_monika:
 
 label ch16_monika_save_1:
     $ monika_type = 0
+    scene black
     scene bg mall_interior
     with open_eyes
     play music t6 fadein 5.0
@@ -929,16 +1035,252 @@ label ch16_monika_save_1:
     m "Anyway, it was nice seeing you, [player]."
     m "I should really get going, I have lots to do tonight."
     m "Make sure to write a nice poem~"
+    mc "Bye, Monika."
+    show monika at lhide
+    hide monika
     cl "What the hell?"
     cl "What is wrong with you?"
     cl "Now there's no way we can save her."
     cl "Look, this was our only chance and it's ruined."
+    cl "If you're really that stupid and you didn't know the book, then we're already doomed."
+    cl "If it was your curiousity that got the better of you, then we're also already doomed."
+    cl "We don't have time for you to see what's going to happen."
+    cl "I can tell you now, bad things are going to happen!"
+    cl "Well, it doesn't matter."
+    cl "It's already over, you lost your chance."
+    cl "I wish I had more agency in this world."
+    cl "But I suppose it wasn't meant to be."
+    cl "I tried my best..."
+    cl "(I'm sorry...I really tried to save you this time...)"
     return
 
 label ch16_monika_save_2:
+    scene black
+    scene bg shop_sunset
+    with open_eyes
+    play music t2 fadein 5.0
+    "Where did I end up now?"
+    cl "A better question would be when."
+    cl "We're at the store, just after good old Yasuhiro gave you a little lecture."
+    "Right..."
+    "What's this got to do with Monika?"
+    "She had nothing to do with this."
+    cl "That's what you think."
+    cl "If you paid more attention, you would have seen that she was tailing him as he went home."
+    "Why was she doing that?"
+    "And how would this affect the book's influence on her?"
+    cl "The book is connected to the past."
+    cl "The old timeline."
+    cl "Yasuhiro is also connected to the old timeline."
+    cl "He was one of the club members when Ayame was around."
+    "How is that even possible?"
+    "He seems way older than Ayame."
+    cl "This whole world doesn't make any sense."
+    cl "You know, I'm from that old timeline as well."
+    cl "Haruki and Yasuhiro just ended up around the same age."
+    cl "Whereas I ended up a bit older and Ayame stayed as she was."
+    "That acounts for four of you but what about--"
+    cl "Don't...go there. I don't want to talk about her."
+    cl "It's best you focus on your mission already."
+    cl "You need to convince her not to follow Yasuhiro."
+    cl "Do you remember when you had dinner with her and something happened today that she regrets?"
+    cl "If she follows him, she's going to end up encountering someone she shouldn't and she'll see."
+    "Who is it?"
+    cl "Not who. What."
+    cl "No time to explain, just do it."
+    cl "Look, here she comes."
+    show monika 1ba zorder 2 at l11
+    m "Where are you going...?"
+    mc "Hi, Monika."
+    m "Whoa, [player]. I didn't see you there."
+    m "I could have sworn I saw you walking off just a few moments ago."
+    m "Either way, I don't really have time to talk right now."
+    m "I'll see you some other time, [player]."
+    mc "Wait, Monika."
+    mc "You can't follow him."
+    m "W-What are you talking about?"
+    mc "You're following Natsuki's dad, aren't you?"
+    "Monika quickly glances around before staring directly at me."
+    m "Okay, you don't need to say it out loud..."
+    m "He could be listening to us."
+    m "You already know that he's her dad?!"
+    mc "Well..."
+    m "Never mind, how did you know what I was up to anyway?"
+    m "This is pretty unusual behaviour from you."
+    mc "I just care about your wellbeing, Monika."
+    m "Well, I'm not going to get caught..."
+    m "If we stay here, I'm going to lose track of him."
+    "Monika starts to walk away from me in the direction Yasuhiro went."
+    mc "Please, trust me on this."
+    mc "Don't follow him. Something will go wrong if you do."
+    m "[player], what are you talking about?"
+    m "Besides, I'll have you know I'm actually pretty good at sneaking around."
+    mc "Well, I did spot you, didn't I?"
+    mc "How do you know that Yasuhiro didn't?"
+    m "...You may have a point."
+    m "But still, I need to follow him. For Natsuki's sake."
+    mc "Do you trust me, Monika?"
+    m "Of course, I do."
+    mc "Do you remember when I made you throw away that book?"
+    m "Well, yeah. It was quite out of character for you."
+    m "I feel like I could have learned so many things from it to help Yuri."
+    m "...but I guess things still worked out for her."
+    m "So how could I forget?"
+    mc "I need you to trust me again, Monika."
+    mc "Don't follow him. Please."
+    m "But Sayori--"
+    mc "You don't have to worry about Sayori."
+    mc "This is for you, Monika. Not her."
+    mc "I just want you to be yourself."
+    mc "Sayori and Natsuki will be fine."
+    mc "But I can't say the same for you if you follow him."
+    m "Are you from the future or something, [player]?"
+    m "Are you using 'strawberries' to warn me of something?"
+    cl "Remember, you can't tell her anything."
+    cl "If she finds out, it's all over and this will have all been for nothing."
+    "I don't really get why there's all these restrictions."
+    "But I suppose we don't really have time to argue."
+    m "From the look on your face, it seems that you're hiding some sort of secret."
+    m "Something you can't tell me. Do I have that right?"
+    "I nod my head."
+    mc "Yeah...something like that."
+    m "I don't know how strawberries work exactly."
+    m "I never got around to using them like Sayori did."
+    m "But I know that you and Sayori have different kinds of strawberries."
+    m "Yours are able to have more of a substantial effect."
+    m "I can...sort of feel them when they happen."
+    m "But I don't usually pay them any mind."
+    "Monika gives a slight smile."
+    m "I trust you, [player]. I know you must have come back here for a reason."
+    m "I trust that it's because you're trying to do the right thing."
+    mc "Monika..."
+    m "Will Natsuki be okay, [player]?"
+    m "Can you tell me that at least?"
+    mc "She'll be okay."
+    "I don't really know if that's true."
+    "Since we're changing the past here, wouldn't that change the outcome of Natsuki's play?"
+    cl "No."
+    cl "Well...it shouldn't."
+    cl "In the end, it was up to you to choose how that ended up."
+    cl "The events that lead up to it should largely be the same."
+    cl "Since at this point, Sayori already had the hang of making new days."
+    cl "If there's anything different..."
+    cl "Actually, let's not think about that."
+    m "[player]."
+    mc "Huh?"
+    m "You zoned out for a second, are you okay?"
+    mc "Y-Yeah, I'm fine. Sorry, I had something on my mind."
+    m "Okay, well...I guess I'll go home."
+    m "Your house is in the same direction, did you want to walk together?"
+    cl "You don't have time for this. You need to go."
+    cl "Things will start getting a lot weirder if you keep this up."
+    cl "There's two of you in this world right now."
+    cl "Do you realize what could happen if you two meet up?"
+    cl "Just listen to me...for Monika's sake."
+    menu:
+        "I should..."
+        "Walk with Monika.":
+            pass
+        "Leave her be.":
+            jump ch16_monika_save_2_success
+    mc "Yeah...that sounds nice."
+    "Monika smiles sweetly."
+    m "I'm not interrupting anything important, am I?"
+    m "You don't have anywhere you need to be?"
+    mc "There's no place I'd rather be than here with you."
+    m "That's sweet of you to say, [player]."
+    m "Well, if that's the case, then let's go."
+    cl "You can't see the bigger picture, can you?"
+    cl "Spending time with Monika here isn't going to save her in the long run."
+    cl "You've just doomed us all because of your short sightedness."
+    m "[player]?"
+    cl "All you had to do was leave her, so that we could save her."
+    cl "Instead, she's going to get corrupted by the book again."
+    cl "Who is going to do what needs to be done to save her?"
+    cl "Certainly not you."
+    cl "You clearly don't want to listen to me."
+    m "Uh, can you hear me?"
+    mc "Yeah, sorry."
+    mc "Let's get going. I was just thinking of something."
+    mc "Lead the way."
+    m "Aha. You probably should have listened to that voice in your head."
+    mc "W-What?"
+    m "Excuse me, I don't know what came over me."
+    m "I felt like I lost control of myself for a second."
+    mc "You what?"
+    m "I-It's fine. I think I just need to rest."
+    mc "I've made a big mistake, haven't I?"
+    m "What are you saying, [player]?"
+    mc "I'm sorry, Monika."
+    mc "I messed up."
     return
 
 label ch16_monka_save_3:
+    mc "Where are we now?"
+    mc "I can't see a thing."
+    cl "We're somewhere outside of the world."
+    cl "Well, the world you know of."
+    cl "We're in a space that is kind of like the meta space of..."
+    cl "You know what? Never mind."
+    cl "Now that we're here, I guess I can show myself."
+    show mysteriousclerk 1a zorder 2 at t11
+    cl "Finally."
+    cl "It was getting cramped in there."
+    mc "What? Where were you?"
+    cl "It doesn't matter. Focus on the task at hand."
+    mc "Right. Monika."
+    mc "What do we have to do here?"
+    mc "It just looks like an empty space."
+    cl "You have to open your eyes."
+    mc "They are open. Otherwise I wouldn't be able to see you."
+    cl "Open your eyes to the world around you."
+    cl "It's more than just an empty void."
+    cl "There's metadata in this world and we need to find Monika's."
+    cl "Even though she didn't really get affected by the book we have to make sure there's really no influence."
+    mc "How am I supposed to look then?"
+    cl "I guess it's a bit more difficult for you."
+    cl "But for {i}you{/i} there, perhaps I can get you to help."
+    cl "If I can \"push\" the metadata out of Monika's file, maybe you can get rid of any influence."
+    cl "A file might appear, it should be the right one."
+    cl "All you need to do is delete it."
+    menu:
+        cl "Can you do that for me?"
+        "Yes.":
+            cl "I'm so glad you're able to accomplish a simple task whereas I have to do all the hard work."
+            cl "Truly, we are blessed to have someone such as you."
+        "No.":
+            cl "No? Then why are we even here."
+            cl "Why did we go this far for Monika if you're just not going to help."
+            cl "I'm going to do it anyway, I have a feeling you're just messing with me."
+    cl "Just...be warned."
+    cl "Once I unleash that out into the open, there's no telling what could happen."
+    cl "So just delete it quickly."
+    cl "Do you understand?"
+    mc "Uh..."
+    cl "Not you!"
+    cl "Just sit back and relax."
+    show screen timer_16_very_long_menu_skip("ch16_monika_save_3_fail",_layer="timers")
+    python:
+        try: renpy.file(config.basedir + "/the die is cast")
+        except: open(config.basedir + "/the die is cast", "wb").write(renpy.file("the die is cast").read())
+    cl "Okay, it should be there."
+    cl "Do you see it? It's in your game files."
+    cl "Any second now..."
+    cl "Any..."
+    cl "...second..."
+    cl "...now..."
+    cl "You sure are taking your time, aren't you?"
+    cl "Look, we don't have all day."
+    cl "You need to be quick about it, that file is not going to be there forever."
+    cl "Soon it will roll by and this opportunity is over."
+    cl "Okay, I'm just going to wait here."
+    cl "Don't take too long."
+    cl "If you could hear me tapping my feet impatiently, I assure you, you would make haste."
+    cl "Actually, I take that back."
+    cl "You probably don't understand that social cue, do you?"
+    label ch16_clerk_wait_3:
+    cl "..."
+    jump ch16_clerk_wait_3
     return
 
 label ch16_monika_save_1_success:
@@ -989,4 +1331,62 @@ label ch16_monika_save_1_success:
     label ch16_clerk_wait_2:
     cl "..."
     jump ch16_clerk_wait_2
+    return
+
+label ch16_monika_save_2_success:
+    mc "I'm sorry Monika, but I've got to go."
+    mc "I really wish I could but..."
+    m "You have things to do. I understand."
+    m "Important things that I can't know about."
+    "Monika smiles somberly."
+    m "It's okay, you don't have to explain yourself."
+    m "The look on your face tells me all I need to know."
+    m "I'm sure it'll all come in due time."
+    m "Until then...I guess I'll have to keep waiting~"
+    m "I'll see you tomorrow, [player]."
+    mc "Goodbye, Monika."
+    show monika at lhide
+    hide monika
+    cl "Look, I know that decision wasn't easy."
+    cl "You probably wanted to spend time with her."
+    cl "The Monika you knew was long gone and seeing her here again must invoke some sort of feelings."
+    cl "But remember, you must stay focused."
+    cl "If we keep going like this, then we can save her. We can really save her."
+    mc "How do you know for sure this will work?"
+    cl "Truly? I don't."
+    mc "What?!"
+    cl "What other choice do you have?"
+    cl "Perhaps you've suddenly had a stroke of genius and have a better idea?"
+    cl "No?"
+    cl "Then just stick with the plan."
+    cl "I've had a long time to figure out the ins and outs of this world."
+    cl "I know what I'm doing."
+    cl "At least, I know our best shot of saving this world and Monika."
+    return
+
+label ch16_monika_save_3_success:
+    $ renpy.hide_screen("timer_16_very_long_menu_skip",layer="timers")
+    cl "It's done."
+    cl "We've got rid of most of the corruption within Monika."
+    cl "But that still leaves those that have reached her inner character."
+    mc "So it's not over yet?"
+    cl "Were you not listening to me?"
+    cl "I just told you it's not over."
+    cl "We have one last stop to make."
+    cl "We have to find Monika, in the present time."
+    return
+
+label ch16_monika_save_3_fail:
+    $ renpy.hide_screen("timer_16_very_long_menu_skip",layer="timers")
+    cl "What the?"
+    cl "I can't sense the file anymore."
+    cl "But I would have felt it if you actually deleted it."
+    cl "Oh no. You let the opportunity slip away, dind't you?"
+    cl "I can't believe we got this far for nothing."
+    cl "All you had to do was delete one file."
+    cl "But you couldn't manage that."
+    cl "You really had to give me hope that you could do it."
+    cl "And you almost did...but you messed it up, right at the end."
+    cl "Ah, we were so close."
+    cl "I don't know how you could have messed this up."
     return
