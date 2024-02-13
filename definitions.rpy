@@ -5642,6 +5642,7 @@ image bg n_hitroom_gray = im.Grayscale("mod_assets/images/bg/n_hitroom.png")
 image bg ay_house_gray = im.Grayscale("mod_assets/images/bg/ay_house.png")
 image bg ay_livingroom_gray = im.Grayscale("mod_assets/images/bg/ay_livingroom.png")
 image bg beach_day_gray = im.Grayscale("mod_assets/images/bg/beach_day.png")
+image bg residential_sunset_gray = im.Grayscale("mod_assets/images/bg/residential_sunset.png")
 image bg random_gray:
     im.Grayscale("mod_assets/images/bg/n_house_day.png")
     linear 1.5 alpha 1.0
