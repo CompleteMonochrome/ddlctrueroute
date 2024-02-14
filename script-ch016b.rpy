@@ -6996,6 +6996,10 @@ label ch16_mainb:
             show sayori zorder 2 at t33
             ay "You give me the presidency and I end it."
             ay "You won't have to bear that responsibility. I will."
+            
+            # Remove when done
+            call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
+            $ renpy.utter_restart()
         else:
             show monika zorder 3 at f31
             show ayame zorder 2 at t32
@@ -7010,6 +7014,11 @@ label ch16_mainb:
             show ayame 1a zorder 3 at f32
             show sayori zorder 2 at t33
             ay "W-What did you say?"
+
+            # Remove when done
+            call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
+            $ renpy.utter_restart()
+
             show monika zorder 3 at f31
             show ayame zorder 2 at t32
             m "I'll take the stress of doing this away from you, Sayori."
