@@ -1,6 +1,8 @@
 label choose_bonus_day:
     scene black
+    # Disable menu as player chooses options
     $ quick_menu = False
+    $ from_custom_start = True
     play music mend fadeout 1.5
     # Check player gender after input
     if persistent.player_pronouns == 1:

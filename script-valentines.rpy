@@ -10,8 +10,6 @@ label valentines_chapter:
     $ cl_name = "???"
     $ ayame_hair_tied = True
     $ audio.t3r = "<from 0 to 48.0 loop 0>mod_assets/bgm/3r.ogg"
-    # Remove when done
-    $ quick_menu = True
     play music t3r
     if persistent.did_valentines_event:
         s "This feels really familiar..."
@@ -342,7 +340,7 @@ label valentines_chapter:
     "I didn't expect it to be so full."
     "Ayame and I cross the road to get to the cafe."
     scene bg cafe
-    show ayame 4bh zorder 2 at t11
+    show ayame 5bh zorder 2 at t11
     with wipeleft_scene
     "Upon entering, we can see there's a table for two that's empty among the crowd of people."
     "Ayame confirms with the person at the counter that the table is reserved for us."
@@ -352,7 +350,7 @@ label valentines_chapter:
     ay "And besides, this is actually a pretty popular cafe."
     ay "It's no wonder it's filled to the brim!"
     mc "How did you even find this place?"
-    ay 4bh "Actually, it was Yuri who suggested this place."
+    ay 5bh "Actually, it was Yuri who suggested this place."
     mc "Oh, she did?"
     "I guess that's not surprising."
     "Even among the club members, Ayame did seem to talk to Yuri the most."
@@ -437,12 +435,12 @@ label valentines_chapter:
     ay 2be "Me too."
     ay "It's such a beautiful afternoon, isn't it?"
     "Ayame stares out into the street."
-    ay 4bm "It almost makes you want to just spread your wings and fly away."
+    ay 5bm "It almost makes you want to just spread your wings and fly away."
     mc "Spread your wings?"
     ay "To see the world from above and watch everything just feel so insignificant."
-    ay 4bf "Like you could just look at someone and snuff them out."
+    ay 5bf "Like you could just look at someone and snuff them out."
     mc "Snuff them out?"
-    ay 4bc "Ahaha...perhaps that was the wrong choice of words."
+    ay 5bc "Ahaha...perhaps that was the wrong choice of words."
     "Ayame shuffles in her seat awkwardly."
     ay "But I also mean it in a metaphorical sense."
     ay 1bl "I don't want to be confined to the life I have now."
@@ -471,7 +469,7 @@ label valentines_chapter:
             $ valentines_ayame_approval += 1
             mc "I agree, I'd love to spread my wings."
             mc "I feel like I could just escape reality and soar into the clouds without a care in the world."
-            ay 2j "W-Wow."
+            ay 2bj "W-Wow."
             "Ayame looks at me in surprise."
             mc "What?"
             ay 2bd "Ahaha, nothing! I just didn't expect that kind of response from you!"
@@ -528,14 +526,14 @@ label valentines_chapter:
     mc "I think so...?"
     "I don't quite remember what she's talking about."
     "I know I went to her house last week but the details are hazy."
-    ay 4ba "Um...[player]."
+    ay 5ba "Um...[player]."
     ay "You do remember what instrument I'm currently learning, right?"
     ay "I played you a song from my heart with it."
     "This isn't good."
     "I know the instrument but for some reason I can't remember."
     mc "Of course, I do!"
     mc "How could I forget?"
-    ay 4bf "Oh? That's weird, I've forgotten."
+    ay 5bf "Oh? That's weird, I've forgotten."
     ay "Care to remind the both of us?"
     $ instrument_correct = False
     menu:
@@ -546,15 +544,15 @@ label valentines_chapter:
             "I remember I got a capo for her as a gift."
             "That goes on guitars, doesn't it?"
             "It has to be the guitar."
-            ay 4bd "Ahaha. Wrong."
+            ay 5bd "Ahaha. Wrong."
             "A mischievous look forms on Ayame's face."
             mc "What? But I was sure--"
-            ay 4be "Is what I would say, but you're definitely right."
+            ay 5be "Is what I would say, but you're definitely right."
             "I breathe a sigh of relief as I guess correctly."
             ay "I do play the guitar."
             ay "That song I played you last week wasn't finished but it was something I've been practicing for a while."
             mc "Does the song have a name?"
-            ay 4bh "The name of the song is \"My Reality\"."
+            ay 5bh "The name of the song is \"My Reality\"."
             ay "And it wasn't my best rendition of it, by far."
             ay "But The next time I play, it'll be even better."
             ay "I want it to be {i}perfect{/i} and I think I'm just missing the right lyrics for the final verse."
@@ -563,38 +561,38 @@ label valentines_chapter:
             mc "That's smart...I think."
             mc "I'm not really musically talented enough to know how you'd do that."
             mc "But I'm sure if anyone can figure it out, you can."
-            ay 4bd "Aw, thanks for the vote of confidence."
+            ay 5bd "Aw, thanks for the vote of confidence."
         "The piano.":
             $ valentines_ayame_approval -= 1
-            ay 4ba "Um...that's not right."
+            ay 5ba "Um...that's not right."
             ay "I just told you that I wanted to learn the piano."
             ay "Not that I'm currently learning it."
-            ay 4bg "Are you even paying attention to me, [player]?"
+            ay 5bg "Are you even paying attention to me, [player]?"
             mc "Uhh..."
             "She did just mention that, didn't she?"
             "Why would I say something like this?"
             ay "You seriously don't remember?"
-            ay 4bn "After I played you that song?"
+            ay 5bn "After I played you that song?"
             mc "I'm sorry."
             ay "Well...okay. I guess it wasn't really a memorable time for you."
         "The flute.":
             $ valentines_ayame_approval -= 1
-            ay 4bl "The flute?"
+            ay 5bl "The flute?"
             ay "You think I play the flute, [player]?"
             mc "Yes...?"
             "I don't sound confident in my answer."
             "I messed up, didn't I?"
-            ay 4bg "I don't have any immediate plans to play the flute, [player]."
+            ay 5bg "I don't have any immediate plans to play the flute, [player]."
             ay "Nor have I learnt it previously."
             ay "I guess you weren't really paying attention, were you?"
     if not instrument_correct:
-        ay 4ba "I play the guitar, remember?"
+        ay 5ba "I play the guitar, remember?"
         mc "Right! The guitar."
         mc "How could I forget?"
-        ay 4bm "Yeah...how could you...?"
+        ay 5bm "Yeah...how could you...?"
         "Ayame rolls her eyes at me."
         ay "Whatever, it's fine."
-    ay 4bj "Anyway...I was thinking we could make some kind of band if a few people in the club played an instrument."
+    ay 5bj "Anyway...I was thinking we could make some kind of band if a few people in the club played an instrument."
     ay "Doesn't that sound kinda fun?"
     mc "A band? Doesn't the music club already do something like that?"
     ay "Yeah but not for any club activities or anything like that, just for fun."
@@ -647,7 +645,7 @@ label valentines_chapter:
     mc "Okay, Sayori..."
     scene white with dissolve_cg
     scene bg cafe
-    show ayame 1bg zorder 2 at t11
+    show ayame 1bg zorder 2 at i11
     with dissolve_scene_full
     $ style.say_window = style.window_valentines
     mc "I remember her saying she just wanted me to be happy."
@@ -783,14 +781,14 @@ label valentines_chapter:
     "I hope they don't fight over me..."
     "We continue talking and eating our meals for a while."
     if valentines_ayame_approval > 1:
-        show ayame 4bd
+        show ayame 5bd
         "The conversation gets pretty lively."
         "Ayame tells me about the baking she and Natsuki did a few days ago."
         "Apparently Natsuki's mother had to bail them out after they accidentally burnt some cupcakes."
         "There's a lot of lighthearted conversation happening as we finish up what we're eating."
         "Overall, things are going pretty well between us."
     elif valentines_ayame_approval < 0:
-        show ayame 4bg
+        show ayame 5bg
         "Ayame is a bit quieter than usual."
         "Maybe she's thinking about what I said..."
         "Hopefully, I didn't mess up things too badly..."
@@ -798,7 +796,7 @@ label valentines_chapter:
         "I try to bring up something but she either pretends to ignore me or doesn't hear me through the crowd."
         "Overall, things aren't going too great."
     else:
-        show ayame 4bl
+        show ayame 5bl
         "I can't help but think I definitely could have done better."
         "I try to make some lighthearted conversation with Ayame but she seems less talkative than usual."
         "But she doesn't seem that upset at me."
@@ -920,13 +918,13 @@ label valentines_chapter:
     ay "We should get going before it gets dark."
     mc "Alright, where should we go?"
     if valentines_ayame_approval > 3:
-        ay 1bj "Come with me, there's something I want to give you."
+        ay 1be "Come with me, there's something I want to give you."
         ay "I left it at my house. Even if we take a leisurely stroll, we can still make it before dark."
         "Ayame grabs my hand and starts walking in a direction."
         "I follow her lead, wondering what she's got in store for me."
         "She seems pretty excited for it..."
         scene bg ay_house_sunset
-        show ayame 4bj zorder 2 at t11
+        show ayame 5bd zorder 2 at t11
         with wipeleft_scene
         play music t8 fadeout 1.0
         "We arrive at Ayame's house. It's quite a distance from the cafe."
@@ -937,7 +935,7 @@ label valentines_chapter:
         "I guess they just don't want me dating their daughter..."
         mc "I think we had a pretty good time."
         mc "What do you think?"
-        ay 4bh "It was perfect, [player]."
+        ay 5bh "It was perfect, [player]."
         ay "Thank you for that wonderful date."
         ay "It was everything I could have hoped for."
         "Ayame smiles as she rushes to her house."
@@ -952,8 +950,8 @@ label valentines_chapter:
         "This other thing could be anything, knowing her."
         "She's gotten me all this stuff I never knew I needed before."
         "Like a fancy toothbrush or this device for my room that cleans up the air."
-        "I guess she can afford it since her family seems to be really rich."
-        "That's not the reason I'm dating her though..."
+        "I guess she can afford it but I don't want her to just get me expensive stuff because she can."
+        "That's not the reason I'm dating her."
         "I just really like her for who she is. She makes me happy."
         "And I hope I can continue to make her happy."
         "In any case, I definitely wasn't expecting to get a book from her for Valentine's Day."
@@ -962,18 +960,18 @@ label valentines_chapter:
         "And I know she'd do the same for me for something I feel passionate about."
         "Besides, it does make some sense. We are in a Literature Club after all."
         "Maybe we'll end up doing a play of this book..."
-        show ayame 4bd zorder 2 at l11
+        show ayame 5bd zorder 2 at l11
         ay "I'm back~"
         "Ayame comes back with her hands behind her back."
         "She's got a cheeky smile on her face."
         "What's she hiding?"
-        ay 4be "Hope I didn't keep you waiting."
+        ay 5be "Hope I didn't keep you waiting."
         mc "Not at all."
         "I try to take a peek behind her but she playfully turns as I try."
-        ay 4bh "Ah, ah. No peeking."
+        ay 5bh "Ah, ah. No peeking."
         ay "It's a surprise, [player]."
         mc "Well, when are you going to show me then?"
-        ay 4bj "Show you? How about right now..."
+        ay 5bj "Show you? How about right now..."
         show ayame at face(y=600) with dissolve
         "Ayame leans in."
         ay "[player]..."
@@ -982,7 +980,7 @@ label valentines_chapter:
         "Even after all our dates, we haven't really kissed yet."
         "The closest thing I got was a peck on the cheek from her, but that's it."
         ay "...[player]...I..."
-        show ayame 4bd
+        show ayame 5bd
         "She closes her eyes and leans in closer."
         scene black
         with close_eyes
@@ -1040,7 +1038,8 @@ label valentines_chapter:
         ay "Who's Monika?"
         ay "You're dying and you're wondering who Monika is?"
         ay "That's actually kind of cute."
-        "Ayame laughs."
+        "Ayame laughs, but it's not her normal laugh that I'm used to."
+        "It sounds somehow twisted and distorted."
         ay "I suppose you wouldn't know, since she's been erased from this world already."
         ay "There's nothing stopping me from manipulating Sayori now."
         ay "With you gone, she'll only have me to rely on."
@@ -1258,9 +1257,9 @@ label valentines_chapter:
         ay "That you ruined our date for nothing?"
         ay "That your nervousness got the better of you?"
         "Ayame lets out a deep sigh."
-        ay 4bn "Maybe I need to think about it."
+        ay 5bn "Maybe I need to think about it."
         ay "I'm not in the right state of mind right now."
-        ay 4ba "I'll...see you tomorrow."
+        ay 5ba "I'll...see you tomorrow."
         ay "I'll make up my mind by then. I'm sorry."
         show ayame at lhide
         hide ayame
@@ -1347,9 +1346,9 @@ label valentines_chapter:
         mc "But I'm sure this isn't the end of us, Ayame."
         ay 2bj "Guess you'll just have to prove that to me~"
         ay "Anyway, I have to get going."
-        ay 4bj "Thank you for the Valentine's Day date, [player]."
+        ay 5bj "Thank you for the Valentine's Day date, [player]."
         ay "It was definitely an experience for me."
-        ay 4bh "I'll see you tomorrow~"
+        ay 5bh "I'll see you tomorrow~"
         mc "I'll see you then, Ayame."
         "Ayame leans in and gives me a hug before walking away."
         show ayame at thide
@@ -1425,7 +1424,7 @@ label valentines_chapter:
         "But it's too late to worry about that now."
         "Our relationship might be shaky but maybe I can still do better for her in the future."
         "I want to make her happy the way she makes me happy."
-        scene bg house_gray with Dissolve(3.0)
+        scene bg house_sunset_gray with Dissolve(3.0)
         stop music fadeout 3.0
         s "Well...I think things could have gone better for sure."
         s "Maybe you didn't try your best with Ayame."
@@ -1473,3 +1472,4 @@ label valentines_chapter:
     $ style.say_window = style.window
     $ quick_menu = True
     $ renpy.utter_restart()
+    return
