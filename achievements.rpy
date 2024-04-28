@@ -439,69 +439,6 @@ init python:
                             "achieved": False,
                             "hidden": True
                             }
-        persistent.achievements_dict["*A Long Time Coming*"] = {"type": 0,
-                            "title": "A Long Time Coming",
-                            "text": "Finish True Route.",
-                            "icon": "mod_assets/gui/achievements/achtr.png",
-                            "achieved": False,
-                            "hidden": False
-                            }
-        persistent.achievements_dict["*Once Again*"] = {"type": 0,
-                            "title": "Once Again",
-                            "text": "Finish True Route with True Monika as the president.",
-                            "icon": "mod_assets/gui/achievements/achtmpres.png",
-                            "achieved": False,
-                            "hidden": True
-                            }
-        persistent.achievements_dict["*At Long Last*"] = {"type": 0,
-                            "title": "At Long Last",
-                            "text": "Finish True Route with Evil Monika as the president.",
-                            "icon": "mod_assets/gui/achievements/achempres.png",
-                            "achieved": False,
-                            "hidden": True
-                            }
-        persistent.achievements_dict["*Unlimited Strawberries*"] = {"type": 0,
-                            "title": "Unlimited Strawberries",
-                            "text": "Finish True Route with True Sayori as the president.",
-                            "icon": "mod_assets/gui/achievements/achtspres.png",
-                            "achieved": False,
-                            "hidden": True
-                            }
-        persistent.achievements_dict["*For The Good Of All*"] = {"type": 0,
-                            "title": "For The Good Of All",
-                            "text": "Finish True Route with Sayori as the president.",
-                            "icon": "mod_assets/gui/achievements/achspres.png",
-                            "achieved": False,
-                            "hidden": True
-                            }
-        persistent.achievements_dict["*The Plan Revealed*"] = {"type": 0,
-                            "title": "The Plan Revealed",
-                            "text": "Finish True Route with True Ayame as the president.",
-                            "icon": "mod_assets/gui/achievements/achtaypres.png",
-                            "achieved": False,
-                            "hidden": True
-                            }
-        persistent.achievements_dict["*Welcome To The Book Club!*"] = {"type": 0,
-                            "title": "Welcome To The Book Club!",
-                            "text": "Finish True Route with Ayame as the president.",
-                            "icon": "mod_assets/gui/achievements/achaypres.png",
-                            "achieved": False,
-                            "hidden": True
-                            }
-        persistent.achievements_dict["*It's Up To Me*"] = {"type": 0,
-                            "title": "It's Up To Me",
-                            "text": "Finish True Route with the player as the president.",
-                            "icon": "mod_assets/gui/achievements/achmcpres.png",
-                            "achieved": False,
-                            "hidden": True
-                            }
-        persistent.achievements_dict["*Final Route*"] = {"type": 0,
-                            "title": "Final Route",
-                            "text": "Complete the Final Route.",
-                            "icon": "mod_assets/gui/achievements/achfinalroute.png",
-                            "achieved": False,
-                            "hidden": True
-                            }
                                     # "*achievent_name*": {"type": 1, # Progress achievent
                                     #                      "title": "",
                                     #                      "text": "",
@@ -582,6 +519,72 @@ init python:
                         "achieved": False,
                         "hidden": True
                         }
+    
+    # 0.9.8 Bugfix
+    if "*A Long Time Coming" not in persistent.achievements_dict:
+        persistent.achievements_dict["*A Long Time Coming*"] = {"type": 0,
+                            "title": "A Long Time Coming",
+                            "text": "Finish True Route.",
+                            "icon": "mod_assets/gui/achievements/achtr.png",
+                            "achieved": False,
+                            "hidden": False
+                            }
+        persistent.achievements_dict["*Once Again*"] = {"type": 0,
+                            "title": "Once Again",
+                            "text": "Finish True Route with True Monika as the president.",
+                            "icon": "mod_assets/gui/achievements/achtmpres.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*At Long Last*"] = {"type": 0,
+                            "title": "At Long Last",
+                            "text": "Finish True Route with Evil Monika as the president.",
+                            "icon": "mod_assets/gui/achievements/achempres.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*Unlimited Strawberries*"] = {"type": 0,
+                            "title": "Unlimited Strawberries",
+                            "text": "Finish True Route with True Sayori as the president.",
+                            "icon": "mod_assets/gui/achievements/achtspres.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*For The Good Of All*"] = {"type": 0,
+                            "title": "For The Good Of All",
+                            "text": "Finish True Route with Sayori as the president.",
+                            "icon": "mod_assets/gui/achievements/achspres.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*The Plan Revealed*"] = {"type": 0,
+                            "title": "The Plan Revealed",
+                            "text": "Finish True Route with True Ayame as the president.",
+                            "icon": "mod_assets/gui/achievements/achtaypres.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*Welcome To The Book Club!*"] = {"type": 0,
+                            "title": "Welcome To The Book Club!",
+                            "text": "Finish True Route with Ayame as the president.",
+                            "icon": "mod_assets/gui/achievements/achaypres.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*It's Up To Me*"] = {"type": 0,
+                            "title": "It's Up To Me",
+                            "text": "Finish True Route with the player as the president.",
+                            "icon": "mod_assets/gui/achievements/achmcpres.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
+        persistent.achievements_dict["*Final Route*"] = {"type": 0,
+                            "title": "Final Route",
+                            "text": "Complete the Final Route.",
+                            "icon": "mod_assets/gui/achievements/achfinalroute.png",
+                            "achieved": False,
+                            "hidden": True
+                            }
 
     # 0.9.9 update achievements
                             

@@ -4167,10 +4167,13 @@ label ch15_exclusive_sayori_together:
     "Sayori is waiting for me outside."
     "Did I just make her wait for nothing?"
     "Should I just give up looking for it?"
-    "It looks like I'm going to have to."
-    "I probably don't need it anyway."
-    "I'll try looking for it again later."
-    "I definitely didn't move it.{nw}"
+    "As I get up, I notice something from the corner of my eye."
+    "That's it, isn't it?"
+    "But...do I really need to give it to her?"
+    "It just doesn't seem necessary, not anymore."
+    "Maybe I'll just leave it here."
+    "She's fine without it anyway."
+    "I'll get her something better, when we're past all of this.{nw}"
     show screen tear(20, 0.1, 0.1, 0, 40)
     window hide(None)
     play sound "sfx/s_kill_glitch1.ogg"
@@ -4178,7 +4181,7 @@ label ch15_exclusive_sayori_together:
     stop sound
     hide screen tear
     window show(None)
-    "I definitely didn't move it.{fast}"
+    "I'll get her something better, when we're past all of this.{fast}"
     window auto
     "In fact, I didn't get the idea to take it until just now."
     scene bg house

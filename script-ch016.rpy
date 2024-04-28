@@ -16167,6 +16167,65 @@ label ch16_end:
             ay "You don't really have a choice here."
             ay "The sooner we stay, the harder it's going to be to stop Sayori."
             ay "Now, let's get out of here."
+            if ch16_ay_message[0] and ch16_ay_message[1] and not ch16_ay_message[2] and not ch16_ay_message[3] and monika_type != 0:
+                show screen tear(8, offtimeMult=1, ontimeMult=10)
+                window hide(None)
+                stop music
+                $ pause(1.0)
+                scene bg portraitshop_empty
+                show mysteriousclerk 1a zorder 2 at t11
+                hide screen tear
+                $ pause(1.0)
+                window show(None)
+                cl "Hold it."
+                cl "You only activated two of Ayame's triggers, didn't you?"
+                cl "Is that because of what I said earlier?"
+                cl "Is this even the correct timeline for that...?"
+                cl "Heck if I know."
+                cl "Anyway, I suppose I should give you a chance here."
+                mc "W-What? What's happening?"
+                cl "Do you know what you've done in this timeline?"
+                cl "The choices you've made?"
+                mc "What are you talking about?!"
+                menu:
+                    cl "Do you want to save Monika or not?"
+                    "Yes.":
+                        call ch16_attempt_restore_monika
+                    "No.":
+                        cl "Huh? Did I hear you correctly?"
+                        cl "You don't want to save her?"
+                        cl "I don't even..."
+                        cl "Okay, you know what?"
+                        cl "I don't have time to argue with you and whatever dumb reason you may have."
+                        cl "You had your chance, you've thrown it away."
+                        cl "Goodbye. May as well erase your memories of this conversation while we're at it."
+                        mc "Wait!{nw}"
+                label ch16_after_monika_save_fail:
+                $ history_list = []
+                show screen tear(8, offtimeMult=1, ontimeMult=10)
+                window hide(None)
+                stop music
+                $ pause(1.0)
+                scene bg park_day
+                show ayame 1a zorder 2 at f21
+                show monika 1a zorder 2 at t22
+                hide screen tear
+                $ pause(1.0)
+                window show(None)
+                "I find myself staring at Monika."
+                if ch16_saved_monika[2]:
+                    "Something about Monika feels different."
+                    "She looks at me and smiles."
+                    "Her smile feels warm..."
+                    "Did it always feel like that?"
+                else:
+                    "She looks at me with a confused look on her face."
+                    "What was I doing again...?"
+                ay "Hello, [player]?"
+                show ayame zorder 2 at t21
+                mc "Huh...?"
+                show ayame zorder 3 at f21
+                ay "Let's get going. Come on."
             # Monika continue here (so I can find it easier in future)
         elif ch16_ay_companions == 2:
             mc "Couldn't Natsuki figure it out too?"

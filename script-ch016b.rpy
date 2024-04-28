@@ -6988,7 +6988,7 @@ label ch16_mainb:
         ay "I realize you don't have any reason to trust me, Sayori."
         ay "Nor are we on the best terms exactly."
         ay "But hear me out."
-        if monika_type == 0 and not persistent.markov_agreed:
+        if monika_type == 0 and (not persistent.markov_agreed or ch16_saving_monika[2]):
             show ayame zorder 2 at t32
             show sayori 1bv zorder 3 at f33
             s "What is it?"
@@ -6996,7 +6996,38 @@ label ch16_mainb:
             show sayori zorder 2 at t33
             ay "You give me the presidency and I end it."
             ay "You won't have to bear that responsibility. I will."
-            
+            if ch16_ay_level > 5:
+                ay "I'll do what needs to be done."
+            else:
+                ay "There's a new feeling that's come over me."
+                ay "I feel like I can really help."
+            ay "This world doesn't need to end."
+            show monika 1a zorder 3 at f31
+            show ayame zorder 2 at t32
+            m "Ayame, I think I'm more suited for this than you."
+            m "I've been the president before."
+            m "At that time...I wasn't such a great person."
+            m "I found out the truth about this world."
+            m "The truth I'm sure you know all too well, Ayame."
+            show monika zorder 2 at t31
+            show ayame zorder 3 at f32
+            ay "I've known the truth for a while."
+            ay "I've known it since before I first met Sayori."
+            ay "I know things that can really help this world."
+            if ch16_ay_level > 5:
+                ay "There are so many things you can't possibly know, Monika."
+                ay "You haven't been through what I've been through."
+                ay "You have to let me do it, Monika."
+                show monika zorder 3 at f31
+                show ayame zorder 2 at t32
+                m "I know there's something dark in you, Ayame."
+                m "I know that you aren't able to fully shut it down."
+            else:
+                ay "But..."
+                "Ayame sighs."
+                ay "I know you probably know better than I how this world works."
+                ay "There's no doubt that you would be a better president than I."
+                ay "Maybe I can help you, if you let me."
             # Remove when done
             call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
             $ renpy.utter_restart()
@@ -8281,7 +8312,7 @@ label ch16_mainb:
                         "The hand with the shiv on it is shaking violently."
                         "It looks like she's trying her hardest to fight back."
                         show sayori zorder 2 at t33
-                        if persistent.markov_agreed:
+                        if (persistent.markov_agreed and not ch16_saved_monika[2]):
                             "I have this one thought in my head."
                             "It's drowning out everything else."
                             "Sayori must hand over the presidency to Monika."
@@ -8889,6 +8920,15 @@ label ch16_mainb:
                         s "And now that she's gone, there's no one left to stop me from saving the world."
                         "But is she really saving the world?"
                         "I guess that's not up to me, is it?"
+                        mc "Are you really saving the world, Sayori?"
+                        mc "Everyone wanted to stop you."
+                        mc "Tell me what's really going on, Sayori."
+                        s "There's not really any reason to hide it anymore, is there?"
+                        s "To put it plainly, the world is going to end."
+                        mc "What?"
+                        mc "You're kidding. Right, Sayori?"
+                        s "I have the power to do it, [player]."
+                        s "And no...I'm not kidding."
                     else:
                         ay "But I suppose I might as well say it."
                         ay "You answered my question, and I can end it here knowing I did everything I could."
@@ -8985,12 +9025,19 @@ label ch16_mainb:
                     mc "So...am I just supposed to stand here and let this happen?"
                     mc "Is there really nothing I can do?"
                     s "No. There isn't."
+                    s "Anything you could have done are things you should have done in the past."
+                    s "I'm not changing my mind anymore."
+                    show sayori
+                    "Sayori closes her eyes."
+                    s "Goodbye, everyone."
                     # Easy ref 3 - used so I can ctrl F to this later
                     call ch16_sayori_president
     # Check save time of oldest save and give the player a bonus cutscene for their wait
     $ oldest_save_time = get_oldest_save()
     python:
         import datetime
+        epoch_2022 = datetime.datetime(2024, 1, 1, 0, 0, 0).strftime('%s')
+        epoch_2022 = datetime.datetime(2023, 1, 1, 0, 0, 0).strftime('%s')
         epoch_2022 = datetime.datetime(2022, 1, 1, 0, 0, 0).strftime('%s')
         epoch_2021 = datetime.datetime(2021, 1, 1, 0, 0, 0).strftime('%s')
         epoch_2020 = datetime.datetime(2020, 1, 1, 0, 0, 0).strftime('%s')
@@ -9002,7 +9049,24 @@ label ch16_mainb:
     elif oldest_save_time < epoch_2021:
         cl "This has been quite some time coming, hasn't it?"
     elif oldest_save_time < epoch_2022:
-        cl "So it's time to conclude this, isn't it?"
+        cl "So it's time to end this, isn't it?"
+    elif oldest_save_time < epoch_2023:
+        cl "Your patience may finally be rewarded."
+    elif oldest_save_time < epoch_2024:
+        cl "And so the final curtain draws near. And you didn't even have to wait that long, did you?"
+    else:
+        cl "Hello. The end is approaching. But are you really ready?"
+    if monika_type == 1 and ch12_markov_agree:
+        cl "I've noticed something. Something about this Monika."
+        cl "You twisted her, didn't you?"
+        cl "You made her fall in love with you and let her down when it mattered the most."
+        cl "She's under an evil influence now..."
+        cl "But..."
+        cl "I can offer a way to save her."
+        cl "To bring her back."
+        cl "But it won't be easy."
+    cl "Well then...let's get this show on the road."
+
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     jump credits_trueroute

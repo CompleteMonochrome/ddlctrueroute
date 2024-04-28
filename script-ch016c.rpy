@@ -1,6 +1,19 @@
 screen timer_16_very_long_menu_skip(jumploc):
     timer 60.0 action Jump(jumploc) repeat True
 
+screen timer_16_del_metadata():
+    timer 1.0 action Function(metadata_deletecheck) repeat True
+
+init python:
+    def metadata_deletecheck():
+        try:
+            renpy.file(config.basedir + "/monika.meta")
+        except:
+            if not renpy.exists(config.basedir + "/monika.meta"):
+                renpy.hide_screen("menu")
+                renpy.hide_screen("timer_16_del_metadata",layer="timers")
+                renpy.jump("ch16_monika_save_3_success")
+
 label ch16_ayame_president:
     ay "So...it's over."
     ay "We finally got rid of it, after all this time."
@@ -850,7 +863,8 @@ label ch16_try_delete_ayame_2:
 # This is only encounterable if Monika is herself currently, which means he is never encountered
 # outside of Natsuki's date.
 label ch16_attempt_restore_monika:
-    show mysteriousclerk 1a zorder 2 at t11
+    cl "Once again your shenanigans have gotten us into a mess that should have been avoidable."
+    cl "Luckily, I know I way to fix this. Maybe."
     cl "I told you to save her, didn't I?"
     mc "What? Where am I?"
     cl "Did I? I don't remember."
@@ -865,7 +879,13 @@ label ch16_attempt_restore_monika:
     cl "Nod your head if you can."
     "This guy is crazy."
     "Who the hell is he?"
-    "He feels oddly familiar though."
+    if persistent.ch15_sayori_saw_clerk or persistent.ch13_nat_date:
+        "He feels oddly familiar though."
+        "Like I've met him before..."
+        "But it's more than that. It's like he's like me somehow..."
+    else:
+        "There's something about him."
+        "I definitely haven't met him before but he's like me somehow..."
     "I don't know why."
     cl "Ugh, just make [player_reflexive] nod already."
     menu:
@@ -964,13 +984,93 @@ label ch16_attempt_restore_monika:
     cl "Look, I have nothing to say to you if you don't do it now."
     cl "Guess we'll just sit here...wasting time..."
     cl "In silence..."
-    label ch16_clerk_wait_0:
+
+    label ch16_clerk_wait_1:
     cl "..."
-    jump ch16_clerk_wait_0
+    jump ch16_clerk_wait_1
+
     label ch16_after_monika_save_1:
-    cl "You were able t"
+    cl "You did good."
+    "Are we done? Is she going to go back to normal?"
+    cl "Not yet. We may have stopped her from reading the book but we're not finished yet."
+    "What else do we need to do?"
+    cl "Eat the next strawberry and see."
+    cl "Go on..."
+    cl "Now..."
+
+    label ch16_clerk_wait_2:
+    cl "..."
+    jump ch16_clerk_wait_2
+    
     label ch16_after_monika_save_2:
+    cl "Look, I know that decision wasn't easy."
+    cl "You probably wanted to spend time with her."
+    cl "The Monika you knew was long gone and seeing her here again must invoke some sort of feelings."
+    cl "But remember, you must stay focused."
+    cl "If we keep going like this, then we can save her. We can really save her."
+    mc "How do you know for sure this will work?"
+    cl "Truly? I don't."
+    mc "What?!"
+    cl "What other choice do you have?"
+    cl "Perhaps you've suddenly had a stroke of genius and have a better idea?"
+    cl "No?"
+    cl "Then just stick with the plan."
+    cl "I've had a long time to figure out the ins and outs of this world."
+    cl "I know what I'm doing."
+    cl "At least, I know our best shot of saving this world and Monika."
+
     label ch16_after_monika_save_3:
+    scene bg portraitshop_empty
+    "Suddenly, we're back to where we were."
+    "This whole thing is really disorientating."
+    "It looks like [cl_name] is gone too."
+    cl "Did you really think I'd stick around?"
+    cl "This is all up to you now."
+    mc "Is she really going to be okay?"
+    cl "Of course she is."
+    cl "Oh wait."
+    mc "Huh?"
+    cl "Oh no."
+    mc "What is it?"
+    cl "The evil influence is still lingering."
+    mc "What? I thought Monika got rid of it."
+    mc "Did she fail somehow?"
+    cl "No, she didn't fail. She definitely won."
+    cl "The presence is not in Monika...at least not this one."
+    cl "But I can feel it in the world around us."
+    mc "What does that mean?"
+    cl "It means we may have saved the Monika from this timeline..."
+    cl "But the ones from other times may not be so lucky."
+    mc "Can't we save them all?"
+    cl "I doubt it."
+    cl "This is a permanent choice that was made as a result of {i}your{/i} actions."
+    cl "It's up to you if you want to save Monika in every timeline..."
+    cl "If you really do keep coming back to this, I just hope your curiousity doesn't get the better of you."
+    cl "If you do...then I suppose the Monika in that timeline can't be helped."
+    mc "I'll always save her."
+    cl "I'm sure you will, kid."
+    cl "But what about you?"
+    cl "Are you always going to save Monika?"
+    cl "Now that you've exposed her to this permanent influence?"
+    cl "I guess the other me's will have to do a good job at convincing you..."
+    cl "There's probably already versions of Monika that can't be saved already."
+    cl "Ones that have no feeling of love towards you, so they can't be brought back."
+    cl "Those timelines...I hope they're okay."
+    cl "Anyway, no use dwelling on it now."
+    cl "What matters is that you can still save this world..."
+    cl "Well...maybe."
+    cl "I did what I came to do. Call it a mutually beneficial transaction."
+    cl "From here on out, you're on your own."
+    mc "That's it?"
+    cl "What? I'm not gonna hold your hand through all of this."
+    cl "What you do from here should be of your own choice."
+    cl "I had my time already."
+    cl "Goodbye."
+    "I try calling for him a few more times to get an answer."
+    "But it looks like he's really gone."
+    "Did this really work?"
+    cl "Oh yeah and you won't remember any of this. Bye!"
+    mc "Wha--{nw}"
     $ get_achievement("*Naomik*")
     return
 
@@ -1052,7 +1152,20 @@ label ch16_monika_save_1:
     cl "But I suppose it wasn't meant to be."
     cl "I tried my best..."
     cl "(I'm sorry...I really tried to save you this time...)"
-    return
+    cl "Well..."
+    cl "I suppose there's no use dwelling on it now."
+    cl "What's done is done."
+    cl "Or rather, what's not done is not done."
+    mc "I didn't know what to say..."
+    cl "Yeah..."
+    cl "Well, at least you didn't really get my hopes up."
+    cl "May as well put you back where you were."
+    mc "Wait, what do you mean?"
+    cl "And get rid of this whole conversation while we're at it."
+    cl "Safer that way."
+    mc "Does that mean we can't save Monika?"
+    cl "Correct. Goodbye.{nw}"
+    jump ch16_after_monika_save_fail
 
 label ch16_monika_save_2:
     scene black
@@ -1213,7 +1326,30 @@ label ch16_monika_save_2:
     m "What are you saying, [player]?"
     mc "I'm sorry, Monika."
     mc "I messed up."
-    return
+    m "Do you want to talk about it?"
+    mc "I don't think it'll do anything to solve this issue."
+    m "I see..."
+    m "You clearly have a lot on your mind, [player]."
+    m "Maybe you can talk to me about it at school?"
+    "She tries to give a reassuring smile."
+    m "I'll see you later~"
+    show monika at thide
+    hide monike
+    "Monika walks off."
+    "I failed her."
+    cl "You really did."
+    cl "Although I guess it's not entirely your fault."
+    cl "There is someone there who can influence the world who decided not to help her."
+    cl "It's really their fault."
+    cl "But since I can't speak to them directly, I'll just blame you."
+    "What now?"
+    cl "Now, you go back to Ayame and Monika."
+    cl "Without having properly saved her."
+    cl "Who knows what will happen?"
+    cl "I'm not sticking around to find out."
+    cl "Oh, and you're going to forget about all of this."
+    "Wait a second, I{nw}"
+    jump ch16_after_monika_save_fail
 
 label ch16_monka_save_3:
     mc "Where are we now?"
@@ -1260,6 +1396,7 @@ label ch16_monka_save_3:
     cl "Not you!"
     cl "Just sit back and relax."
     show screen timer_16_very_long_menu_skip("ch16_monika_save_3_fail",_layer="timers")
+    show screen timer_16_del_metadata(_layer="timers")
     python:
         try: renpy.file(config.basedir + "/the die is cast")
         except: open(config.basedir + "/the die is cast", "wb").write(renpy.file("the die is cast").read())
@@ -1278,12 +1415,14 @@ label ch16_monka_save_3:
     cl "If you could hear me tapping my feet impatiently, I assure you, you would make haste."
     cl "Actually, I take that back."
     cl "You probably don't understand that social cue, do you?"
+
     label ch16_clerk_wait_3:
     cl "..."
     jump ch16_clerk_wait_3
     return
 
 label ch16_monika_save_1_success:
+    $ ch16_saved_monika[0] = True
     m "How could you have possibly known that?"
     m "Did Sayori put you up to this?"
     mc "No, Sayori definitely didn't do this."
@@ -1321,19 +1460,10 @@ label ch16_monika_save_1_success:
     hide monika
     mc "Yeah..."
     "Monika starts making her way out of the mall."
-    cl "You did good."
-    "Are we done? Is she going to go back to normal?"
-    cl "Not yet. We may have stopped her from reading the book but we're not finished yet."
-    "What else do we need to do?"
-    cl "Eat the next strawberry and see."
-    cl "Go on..."
-    cl "Now..."
-    label ch16_clerk_wait_2:
-    cl "..."
-    jump ch16_clerk_wait_2
-    return
+    jump ch16_after_monika_save_1
 
 label ch16_monika_save_2_success:
+    $ ch16_saved_monika[1] = True
     mc "I'm sorry Monika, but I've got to go."
     mc "I really wish I could but..."
     m "You have things to do. I understand."
@@ -1347,41 +1477,166 @@ label ch16_monika_save_2_success:
     mc "Goodbye, Monika."
     show monika at lhide
     hide monika
-    cl "Look, I know that decision wasn't easy."
-    cl "You probably wanted to spend time with her."
-    cl "The Monika you knew was long gone and seeing her here again must invoke some sort of feelings."
-    cl "But remember, you must stay focused."
-    cl "If we keep going like this, then we can save her. We can really save her."
-    mc "How do you know for sure this will work?"
-    cl "Truly? I don't."
-    mc "What?!"
-    cl "What other choice do you have?"
-    cl "Perhaps you've suddenly had a stroke of genius and have a better idea?"
-    cl "No?"
-    cl "Then just stick with the plan."
-    cl "I've had a long time to figure out the ins and outs of this world."
-    cl "I know what I'm doing."
-    cl "At least, I know our best shot of saving this world and Monika."
-    return
+    jump ch16_after_monika_save_2
 
 label ch16_monika_save_3_success:
     $ renpy.hide_screen("timer_16_very_long_menu_skip",layer="timers")
+    $ ch16_saved_monika[2] = True
     cl "It's done."
-    cl "We've got rid of most of the corruption within Monika."
+    cl "We've gotten rid of most of the corruption within Monika."
     cl "But that still leaves those that have reached her inner character."
     mc "So it's not over yet?"
     cl "Were you not listening to me?"
     cl "I just told you it's not over."
     cl "We have one last stop to make."
     cl "We have to find Monika, in the present time."
-    return
+    mc "The present time?"
+    cl "The present time. Or whatever event is currently happening."
+    cl "She should be back to normal, kind of."
+    cl "We might have deleted some parts of her we shouldn't have."
+    mc "We what?!"
+    cl "There was probably more bad than good."
+    cl "It's possible she'll act a bit differently."
+    mc "I don't know about this anymore..."
+    cl "You don't really have a choice."
+    cl "We have to do this, or she's going to be stuck in this state."
+    cl "Are you ready?"
+    mc "Honestly, I have no idea."
+    mc "At this point, I feel like anything can happen."
+    cl "That's the spirit."
+    cl "Now, let's get back to Monika."
+
+    scene bg club_day
+    show monika 1a zorder 2 at t11
+    with wipeleft_scene
+    m "[player]?"
+    m "What are you doing here?"
+    "Monika frowns."
+    m "Now that I think about it...what am I doing here?"
+    m "The last thing I remember was..."
+    mc "Monika, is that really you?"
+    m "Really me?"
+    m "What do you mean by that?"
+    mc "The last time I saw you, there was something really wrong with you."
+    mc "You weren't yourself."
+    m "You've lost me, [player]."
+    mc "I think something took over your mind."
+    mc "Or...maybe it's still in your mind."
+    mc "I don't know how this all works."
+    mc "I got a lot of help."
+    m "Something took over my mind?"
+    m "Normally what you just said would sound completely ridiculous..."
+    m "But for some reason I believe you."
+    m "It would explain the gap in my memory."
+    m "I don't remember getting back to the club room."
+    m "And there have been some weird things happening lately..."
+    mc "We're not actually in the club, are we?"
+    m "Huh?"
+    m "Who are you talking to?"
+    mc "Uh..."
+    mc "A little help?"
+    cl "You idiot, I can't talk to her."
+    mc "Why not?"
+    cl "She can't hear me for one. We're in a fragment of her--"
+    m "I can hear you."
+    m "Whoever you are."
+    cl "Wait, you can?"
+    m "It would be nice to put a face to a voice."
+    cl "Eh..."
+    mc "Go on, what have you got to lose?"
+    mc "You helped her too, didn't you?"
+    mc "She deserves to meet you."
+    m "He helped me...?"
+    mc "It's a long story."
+    show monika zorder 2 at t21
+    show mysteriousclerk 1a zorder 2 at f22
+    cl "No time to explain."
+    mc "Yeah, the world is collapsing and we need your help to--"
+    show monika zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    m "The world is collapsing?"
+    m "How much did I miss?!"
+    m "Okay, there's no time to waste."
+    m "Let's get out of here."
+    "Monika begins to walk towards the exit."
+    show monika zorder 2 at t21
+    show mysteriousclerk zorder 2 at f22
+    cl "Wait...that probably won't--"
+    "Some invisible force pushes back Monika."
+    play sound "sfx/fall.ogg"
+    show monika at s21
+    "She falls to the floor."
+    cl "--work..."
+    show monika at t21
+    cl "We're not really in the club."
+    cl "We're just here in your cognition."
+    show monika zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    m "Okay...so how do we get out?"
+    show monika zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "Let me finish explaining."
+    cl "Right now, that evil presence is still inside you."
+    cl "They're the ones driving things right now."
+    cl "It's like they've forced you into the back seat of a car."
+    cl "You still exist but you can't make any of the decisions."
+    show mysteriousclerk zorder 2 at t22
+    mc "I thought we got rid of it?"
+    mc "Isn't that what we were doing?"
+    show mysteriousclerk zorder 3 at f22
+    cl "We removed most of it's influence."
+    cl "It's now become weak enough that Monika can take control back."
+    show monika zorder 3 at f21
+    show mysteriousclerk zorder 2 at t21
+    m "And how do I do that?"
+    show monika zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "Well, you have to be the one to do that."
+    cl "You need to believe you're in the same place that it is."
+    cl "And then you'll just end up there."
+    cl "Remember, this is your mind."
+    cl "The only limit is your imagination."
+    cl "Think of like having the power of the presidency."
+    show monika zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    m "How do you know about...?"
+    m "Never mind, that's not important."
+    m "I could never really figure it out."
+    m "I mean I only had it for a few days and could barely make anything happen!"
+    m "As soon as Sayori got it, she was already better than me."
+    m "Maybe if I had more time, then..."
+    show monika zorder 2 at t21
+    show mysteriousclerk zorder 3 at f22
+    cl "Just imagine you're in the same room as it."
+    cl "You can feel its presence, can't you?"
+    cl "Hone in on it. Focus on it."
+    show monika zorder 3 at f21
+    show mysteriousclerk zorder 2 at t22
+    m "You sure know a lot about this..."
+    "Monika closes her eyes and focuses."
+    m "Here goes nothing..."
+    hide monika
+    cl "And she's gone."
+    mc "Where did she go?"
+    cl "I'm not sure."
+    cl "But I suspect instead of bringing it to us..."
+    cl "She brought herself to it."
+    mc "What? We gotta help her!"
+    cl "Calm down. Even if we could help her, there's nothing we can do."
+    cl "This fight is all in her head."
+    cl "We'd only get in the way."
+    mc "Right...if you say so..."
+    mc "Then...how do we get out of here?"
+    cl "Same way we got in."
+    cl "Hang on a second."
+    jump ch16_after_monika_save_3
 
 label ch16_monika_save_3_fail:
     $ renpy.hide_screen("timer_16_very_long_menu_skip",layer="timers")
     cl "What the?"
     cl "I can't sense the file anymore."
     cl "But I would have felt it if you actually deleted it."
-    cl "Oh no. You let the opportunity slip away, dind't you?"
+    cl "Oh no. You let the opportunity slip away, didn't you?"
     cl "I can't believe we got this far for nothing."
     cl "All you had to do was delete one file."
     cl "But you couldn't manage that."
@@ -1389,4 +1644,16 @@ label ch16_monika_save_3_fail:
     cl "And you almost did...but you messed it up, right at the end."
     cl "Ah, we were so close."
     cl "I don't know how you could have messed this up."
-    return
+    cl "This better not be as a result of your curiousity."
+    cl "I suppose there's no point thinking about it now."
+    cl "Monika is lost in this timeline, for good."
+    cl "Okay, well I tried."
+    cl "This is definitely not my fault."
+    mc "What do you mean she's lost?"
+    cl "I mean she's lost."
+    cl "There's no way she's coming back, at least in this timeline."
+    cl "You failed. Game over."
+    mc "Game over...?"
+    cl "Well, not really."
+    cl "Look there's no point in you being here anymore."
+    jump ch16_after_monika_save_fail
