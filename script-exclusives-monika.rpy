@@ -491,7 +491,7 @@ label monika_exclusive_2_friend:
     mc "We even used to walk together to and from school."
     mc "But I never really saw her as more than just my best friend."
     mc "It wasn't until recently that we started walking together again..."
-    mc "And that's partly because she got me to join the Literacy Club."
+    mc "And that's partly because she got me to join the Literature Club."
     mc "Still, I'm glad she feels this way about the club."
     mc "Maybe one day I'll feel the same way."
     m 1b "Well, that's good to know."
