@@ -15,8 +15,14 @@ init python:
                 renpy.jump("ch16_monika_save_3_success")
 
 label ch16_ayame_president:
+    "Ayame lets out a deep sigh."
     ay "So...it's over."
-    ay "We finally got rid of it, after all this time."
+    ay "That was nerve wracking."
+    ay "I really didn't know if I would be able to say the things that I did."
+    ay "But I mean it."
+    ay "I still can't believe it."
+    mc "Believe what?"
+    ay "That we finally got rid of it, after all this time."
     ay "That voice inside my head that's been there for as long as I remember."
     ay "It's gone. It's almost hard to believe."
     ay "I feel kinda empty, but in a good way."
@@ -46,6 +52,8 @@ label ch16_ayame_president:
     ay "It's quite strange...having all this power."
     ay "I never really wanted it but here we are."
     ay "I don't know why you chose me, instead of Sayori."
+    if ch16_ay_companions == 1:
+        ay "Or even Monika."
     ay "Maybe you wanted to see something different."
     ay "A future that doesn't have to be so painful or filled with so much troubles."
     ay "That would be nice, wouldn't it?"
@@ -53,6 +61,8 @@ label ch16_ayame_president:
     ay "I don't know if I can promise that."
     ay "I'd rather tell you the truth than make promises I know I can't keep."
     ay "But I promise to do the right thing, or at least try to."
+    ay "I have to do things my way. The way I see as right."
+    ay "I can't let what others think stray my path."
     ay "I don't want to ruin this for everyone else."
     ay "But I think there needs to be some changes to this world."
     ay "Otherwise, this whole situation is just going to start again."
@@ -63,6 +73,14 @@ label ch16_ayame_president:
     ay "That includes everyone. Monika, Sayori...and me."
     ay "That's right, I'm going to make myself forget about this whole presidency thing."
     ay "After I figure out a way to continue the world automatically."
+    "Ayame giggles."
+    ay "Ahaha...it's kinda funny."
+    mc "What is?"
+    ay "The voice in my head would have never let me give up this much power."
+    ay "But it's gone. I can finally be myself."
+    ay "And this is what I want."
+    "Ayame shakes her head."
+    ay "Oh right! The days thing."
     ay "That's a thing that I need to do, isn't it?"
     ay "They both had to make the days that came, didn't they?"
     ay "And in Sayori's case, she was looking ahead trying to reach the 'perfect' outcome."
@@ -150,7 +168,7 @@ label ch16_old_ayame_president:
     ay "And I understand why."
     mc "What are you talking about, Ayame?"
     ay "It's because of you. You were the new factor."
-    ay "The so called love interest of all the girls was nothing special before."
+    ay "The so called love interest of all the club members was nothing special before."
     ay "[cPlayer_personal] was just a boring person, with nothing going for them."
     ay "But something was different this cycle."
     ay "And that was because of you, wasn't it?"
@@ -424,6 +442,13 @@ label ch16_markov_president:
     return
 
 label ch16_true_sayori_president:
+    s "You deserve to know the truth."
+    s "This is the most bulkerable."
+    "Sayori stops for a second."
+    s "Err...{i}vulnerable{/i} I've ever been."
+    s "I feel like I can do that when I'm around you."
+    s "Just show all of myself, who I really am."
+    s "I didn't know it would end up like this."
     s "I only wanted what was best for all of us."
     s "That's why I wanted to help them."
     s "Why I wanted to solve their problems for them..."
@@ -1657,3 +1682,41 @@ label ch16_monika_save_3_fail:
     cl "Well, not really."
     cl "Look there's no point in you being here anymore."
     jump ch16_after_monika_save_fail
+
+label ch16_special_cutscene_wait_time:
+    # Check save time of oldest save and give the player a bonus cutscene for their wait
+    $ oldest_save_time = get_oldest_save()
+    python:
+        import datetime
+        epoch_2022 = datetime.datetime(2024, 1, 1, 0, 0, 0).strftime('%s')
+        epoch_2022 = datetime.datetime(2023, 1, 1, 0, 0, 0).strftime('%s')
+        epoch_2022 = datetime.datetime(2022, 1, 1, 0, 0, 0).strftime('%s')
+        epoch_2021 = datetime.datetime(2021, 1, 1, 0, 0, 0).strftime('%s')
+        epoch_2020 = datetime.datetime(2020, 1, 1, 0, 0, 0).strftime('%s')
+        epoch_2019 = datetime.datetime(2019, 1, 1, 0, 0, 0).strftime('%s')
+    if oldest_save_time < epoch_2019:
+        cl "Wow, you truly have been waiting a long time."
+    elif oldest_save_time < epoch_2020:
+        cl "You've been waiting a long time, haven't you?"
+    elif oldest_save_time < epoch_2021:
+        cl "This has been quite some time coming, hasn't it?"
+    elif oldest_save_time < epoch_2022:
+        cl "So it's time to end this, isn't it?"
+    elif oldest_save_time < epoch_2023:
+        cl "Your patience may finally be rewarded."
+    elif oldest_save_time < epoch_2024:
+        cl "And so the final curtain draws near. And you didn't even have to wait that long, did you?"
+    else:
+        cl "Hello. The end is approaching. But are you really ready?"
+    if monika_type == 1 and ch12_markov_agree:
+        cl "I've noticed something. Something about this Monika."
+        cl "You twisted her, didn't you?"
+        cl "You made her fall in love with you and let her down when it mattered the most."
+        cl "She's under an evil influence now..."
+        cl "But..."
+        cl "I can offer a way to save her."
+        cl "To bring her back."
+        cl "But it won't be easy."
+    cl "Well then...let's get this show on the road."
+    cl "I hope you remember what was meant to be happening."
+    return

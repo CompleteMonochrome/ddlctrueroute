@@ -2178,7 +2178,7 @@ label ch16_main:
         "He doesn't look at Sayori when he says that."
         "Rather, he stares more intently on me."
         cl 1c "Well, go on then."
-        cl "It's gonna worry him, but you said we were gonna be truthful, right?"
+        cl "It's gonna worry [player_reflexive], but you said we were gonna be truthful, right?"
         show mysteriousclerk zorder 2 at t22
         "Sayori sighs."
         "She looks at me, reaches my eyes then turns away."
@@ -2732,15 +2732,15 @@ label ch16_main:
             show yuri zorder 2 at t33
             m "Find you?"
             m 2d "Was this meant to be a secret hiding spot or something?"
-            m 2a "Anyway, I just saw [player_reflexive] walk this way and followed him."
+            m 2a "Anyway, I just saw [player_reflexive] walk this way and followed [player_reflexive]."
             if monika_type == 0:
-                m "Is it okay if I talk to him?"
+                m "Is it okay if I talk to [player_reflexive]?"
             else:
-                m "I need to speak with him."
+                m "I need to speak with [player_reflexive]."
             show natsuki 2g zorder 3 at f31
             n "I don't know."
             n "We were kind of in the middle of something."
-            n 2s "But that's up to him."
+            n 2s "But that's up to [player_reflexive]."
             show natsuki zorder 2 at t31
             "Something is telling me I should go with Monika."
             "I get the feeling whatever she has to say is probably more important..."
@@ -13188,7 +13188,7 @@ label ch16_end:
             "So I'll just let you enjoy this misguided victory."
             $ style.say_dialogue = style.normal
             "Misguided? What the hell are you talking about?"
-            "I've freed him, how is that misguided?"
+            "I've freed [player_reflexive], how is that misguided?"
             $ style.say_dialogue = style.edited
             "You seem so happy about that."
             $ style.say_dialogue = style.normal

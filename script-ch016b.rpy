@@ -7045,13 +7045,15 @@ label ch16_mainb:
             show ayame 1a zorder 3 at f32
             show sayori zorder 2 at t33
             ay "W-What did you say?"
+            "Ayame seems surprised at Monika's suggestion."
+            "Does she know something?"
+            show ayame zorder 2 at t32
 
             # Remove when done
             call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
             $ renpy.utter_restart()
 
             show monika zorder 3 at f31
-            show ayame zorder 2 at t32
             m "I'll take the stress of doing this away from you, Sayori."
             m "Return the presidency to me, and you won't have to be the one responsible."
             m "It can be me instead."
@@ -7670,9 +7672,82 @@ label ch16_mainb:
                 "Monika smiles weakly."
                 m "[player], it looks like you have all the power."
                 m "The power to end or save this world."
+                show ayame zorder 3 at f32
+                show monika zorder 2 at t31
+                ay "Even when I'm this close..."
+                ay "Even after all these years, it never comes down to my own volition."
+                ay "It's always someone else's choice, isn't it?"
+                "Ayame sighs."
+                ay "It's just not fair..."
+                ay "Then again, when is life ever fair?"
+                show monika zorder 3 at f31
+                show ayame zorder 2 at t32
+                m "I know you'll make the right choice."
+                show sayori zorder 3 at f32
+                $ player_president_choice = True
+                label ch16_sayori_choice_ay_companions_1:
                 menu:
                     m "So who should get the presidency?"
-                    "Me." if sayori_date and sayori_personality == 0 and not persistent.markov_agreed:
+                    "Me." if sayori_date and sayori_personality == 0 and not persistent.markov_agreed and player_president_choice:
+                        "Are you really sure about this?"
+                        "You want to make {i}me{/i} the president of the club?"
+                        "I hope you realize that it's not going to be you."
+                        "I mean...how could it be?"
+                        menu:
+                            "I don't think I'd be the best choice but if you really think so..."
+                            "Yes.":
+                                pass
+                            "No.":
+                                $ player_president_choice = False
+                                "Oh, okay. You do what you think is best."
+                                jump ch16_sayori_choice_ay_companions_1
+                        "Oh...really?"
+                        show sayori zorder 3 at f33
+                        s "You...want to make [player_reflexive] the president?"
+                        s "Is that really what you want?"
+                        show monika zorder 3 at f31
+                        show sayori zorder 2 at t33
+                        m "Is this really a good idea?"
+                        m "We have no idea what could happen, Sayori."
+                        show monika zorder 2 at t31
+                        show sayori zorder 3 at f33
+                        s "Out of everyone here, I trust [player_reflexive] the most."
+                        s "I know they can do a good job as the president."
+                        show ayame zorder 3 at f31
+                        show sayori zorder 2 at t33
+                        ay "This is absurd, Sayori."
+                        ay "You can't seriously be considering this...can you?"
+                        ay "You have no idea what [player_personal] will do."
+                        ay "Not to mention what will actually happen with the world."
+                        ay "They're not even a part of it...just an observer!"
+                        show ayame zorder 2 at t31
+                        show sayori zorder 3 at f33
+                        s "You have it all wrong, Ayame."
+                        s "I'm making {i}[player]{/i} the president."
+                        s "The one who is in front of us right now."
+                        s "Not the observer."
+                        show ayame zorder 3 at f31
+                        show sayori zorder 2 at t32
+                        show monika zorder 3 at f33
+                        "Ayame and Monika" "\"What?!\""
+                        show ayame zorder 2 at t31
+                        show sayori zorder  3 at f32
+                        show monika zorder 2 at t33
+                        s "I trust you to make the right decisions."
+                        s "I think your personality might have rubbed off on [player_reflexive]."
+                        s "Just looking at [player] now, I know that [player_personal]'ll do the right thing."
+                        s "You have so far."
+                        show sayori zorder 2 at t32
+                        mc "Do you really think so, Sayori?"
+                        mc "The idea of being president is..."
+                        show sayori zorder 3 at f32
+                        s "Stop doubting yourself already, [player]."
+                        s "We both believe in you."
+                        s "You can do this."
+                        show ayame zorder 3 at f31
+                        show sayori zorder 2 at t32
+                        ay "I refuse to be left at the whims of [player]."
+                        ay "This is unacceptable, Sayori!"
                         call ch16_mc_president
                     "Monika." if not persistent.markov_agreed:
                         if monika_type == 0 and not persistent.markov_agreed:
@@ -7687,14 +7762,208 @@ label ch16_mainb:
                         else:
                             call ch16_markov_president
                     "Ayame." if not persistent.markov_agreed:
+                        s "You really want to give Ayame the presidency?"
+                        s "I told myself that I would go through with whatever you said."
+                        s "I won't say no to your choice but..."
+                        s "You barely know her, [player]."
+                        s "Is this really what you want?"
+                        show ayame zorder 3 at f32
+                        show sayori zorder 2 at t33
+                        ay "I'm glad you could see reason, [player]."
+                        ay "This doesn't have to be the end of the world."
+                        ay "I can make it better."
+                        show monika zorder 3 at f31
+                        show ayame zorder 2 at t32
+                        m "While I'm glad that you chose not to end the world..."
+                        m "Do you really think this is the best decision?"
+                        m "You have no idea what Ayame will do."
+                        show monika zorder 2 at t31
+                        show ayame zorder 3 at f32
+                        ay "I got us this far, didn't I?"
+                        ay "Can't you trust me?"
+                        ay "Or is that too much to ask for?"
+                        show monika zorder 3 at f31
+                        show ayame zorder 2 at t32
+                        m "I..."
+                        show monika zorder 2 at t31
+                        show ayame zorder 3 at f32
+                        ay "The decision has been made."
+                        ay "Let's make it happen, Sayori."
+                        ay "And I'll show all of you just what I'm capable of."
+                        show ayame zorder 2 at t32
+                        show sayori zorder 3 at f33
+                        s "Alright..."
+                        s "Here we go..."
+                        show sayori zorder 2 at t33
+                        "Sayori makes a few motions with her hand."
+                        show ayame zorder 3 at f32
+                        ay "I can feel a rush of power."
+                        ay "It's so hard to describe."
+                        ay "It's like...like I have the world in the palm of my hand."
+                        ay "Hah...I guess in a way I kind of do."
+                        show monika zorder  3 at f31
+                        show ayame zorder 2 at t32
+                        m "You really gave it to her."
+                        m "I didn't really expect you to do that."
+                        m "But..."
+                        m "It just wasn't meant to be."
+                        show monika zorder 2 at t31
+                        show sayori zorder 3 at f33
+                        s "And...that's it."
+                        s "Just like that, it's all gone."
+                        s "It's funny, I would have thought it would have been more dramatic."
+                        s "Like a part of me would have been ripped apart."
+                        s "But no..."
+                        s "Instead, it's just a peaceful transfer of power."
+                        "Sayori smiles."
+                        s "Maybe I just had it all pictured differently in my head."
+                        s "But this is a relief."
+                        s "It might be a bit surprising for me to say this but..."
+                        s "I'm glad I don't have to be the one responsible for what comes next."
+                        show sayori zorder 2 at t33
                         if ch16_ay_gave_control:
+                            show ayame zorder 3 at f32
+                            ay "Ahaha."
+                            "Something about Ayame's laugh feels...sinister."
+                            ay "Ahahahaha."
+                            show monika zorder 3 at f31
+                            m "Oh no."
+                            m "What have you done?"
+                            show monika zorder 2 at t31
+                            show ayame zorder 3 at f32
+                            $ style.say_dialogue = style.edited
+                            ay "Ahahahahaha."
+                            $ style.say_dialogue = style.normal
+                            "Ayame has a wide smile on her face."
+                            "It doesn't feel....right..."
+                            ay "This is perfect."
+                            show ayame zorder 2 at t32
+                            show sayori zorder 3 at f33
+                            s "A-Ayame? What's going on?"
+                            s "I don't see what's so funny..."
+                            "Sayori looks worried."
+                            "Is something wrong...?"
+                            s "A-Ayame? A-Answer me!"
+                            show ayame zorder 3 at f32
+                            show sayori zorder 2 at t33
+                            ay "Begone."
+                            show sayori at thide
+                            hide sayori
+                            "Sayori disappears instantly."
+                            "One moment she was there, the next..."
+                            ay "You as well."
+                            show monika zorder 3 at f31
+                            show ayame zorder 2 at t32
+                            m "W-Wait!"
+                            show monika at thide
+                            hide monika
+                            show ayame zorder 2 at t11
+                            ay "That was easier than I thought it would be."
+                            ay "I guess having all that time studying the power of the presidency made it easy."
+                            ay "Anyway..."
+                            ay "Now that the riff raff has gone, we can talk."
+                            ay "I suppose I'll allow you that much."
                             call ch16_old_ayame_president
                         else:
+                            show monika zorder 3 at f31
+                            m "I guess all that's left is to see what comes next."
+                            m "Will this really be enough for the world to continue?"
+                            "Monika looks at Ayame, almost as if she was staring into her soul."
+                            m "I don't know you very well, Ayame."
+                            m "I admit I do have have my own suspicions about you."
+                            "Monika smiles."
+                            m "But I do think you want the best for us."
+                            show monika zorder 2 at t31
+                            show ayame zorder 3 at f32
+                            ay "Thanks."
+                            ay "But I don't need your acceptance, Monika."
+                            ay "I'm going to do what I think is right regardless of what anyone thinks."
+                            ay "Maybe you won't agree with everything but that won't stop me."
+                            ay "I have to do things my way, or not at all."
+                            show ayame zorder 2 at t32
+                            show sayori zorder 3 at f33
+                            s "For what it's worth, I think you're going to do a great job."
+                            s "I know all the parts that have been affecting you are gone now."
+                            s "You truly can make your own decisions."
+                            show ayame zorder 3 at f32
+                            show sayori zorder 2 at t33
+                            ay "Thanks for the sentiment."
+                            ay "Now, goodbye the two of you."
+                            show monika at thide
+                            hide monika
+                            show sayori at thide
+                            hide sayori
+                            show ayame zorder 2 at t11
+                            ay "Now it's just the two of us."
                             call ch16_ayame_president
                     "Sayori." if not persistent.markov_agreed:
                         if sayori_date:
+                            s "You choose me?"
+                            s "Even after everything I've done?"
+                            s "After the choice I told you I'm going to make?"
+                            show ayame zorder 3 at f32
+                            show sayori zorder 2 at t33
+                            ay "This is absurd, [player]."
+                            ay "You can't seriously be considering this!"
+                            ay "She's going to end the world!"
+                            show ayame zorder 2 at t32
+                            show monika zorder 3 at f31
+                            m "I see, so this is what you've chosen."
+                            m "Making Sayori the president, once again."
+                            m "Even knowing what she'll do."
+                            show monika zorder 2 at t31
+                            show sayori zorder 3 at f33
+                            s "But why, [player]?"
+                            s "I just..."
+                            "Sayori struggles to get any words out."
+                            s "I..."
+                            show monika zorder 3 at f31
+                            show sayori zorder 2 at t33
+                            m "S-Sayori, are you okay?"
+                            show monika zorder 2 at t31
+                            show ayame zorder 3 at f33
+                            ay "What are you doing?!"
+                            ay "Sayori!"
+                            show monika at thide
+                            show ayame at thide
+                            show sayori zorder 2 at t11
+                            s "{i}WAAAAAaaaaAAAAAAAAHH!!!!{/i}"
+                            s "Ehehe, oops."
+                            s "I guess I got a little carried away."
+                            s "Don't worry, they're not gone."
+                            s "I just...wanted to speak in private."
                             call ch16_true_sayori_president
                         else:
+                            "Sayori sighs."
+                            s "Part of me was hoping you wouldn't say that."
+                            s "That you would somehow go against me."
+                            "Sayori smiles."
+                            s "But another part of me is relieved."
+                            s "It's almost like validation."
+                            show ayame zorder 3 at f32
+                            show sayori zorder 2 at t33
+                            ay "This is absurd, [player]."
+                            ay "You can't seriously be considering this!"
+                            ay "She's going to end the world!"
+                            ay "You're happy to just let it all end like this?"
+                            show monika zorder 3 at f31
+                            show ayame zorder 2 at t32
+                            m "That's your choice then, [player]?"
+                            m "..."
+                            m "I suppose there is no helping it."
+                            show monika zorder 2 at t31
+                            show sayori zorder 3 at f33
+                            s "You guys know what I have to do."
+                            s "I would rather you weren't here for it."
+                            show ayame zorder 3 at f32
+                            show sayori zorder 2 at t33
+                            ay "Please reconsider, Sayori!"
+                            ay "It can't end like this!"
+                            show ayame zorder 2 at t32
+                            show sayori zorder 3 at f33
+                            s "I'm sorry, Ayame."
+                            show ayame at thide
+                            hide ayame
                             call ch16_sayori_president
             else:
                 s "I've really thought about this."
@@ -8017,6 +8286,26 @@ label ch16_mainb:
                         show ayame zorder 3 at f32
                         "...we are at the school."
                         ay "Excellent. Now all I have to do is enact my plan."
+                        show monika zorder 3 at f31
+                        show ayame zorder 2 at t32
+                        m "W-What?"
+                        m "Where are we?"
+                        "Monika looks around."
+                        m "Where's Sayori?"
+                        show monika zorder 3 at f31
+                        show ayame zorder 3 at f32
+                        ay "Surely you aren't that dense, Monika."
+                        ay "You know what I really am, don't you?"
+                        show monika zorder 3 at f31
+                        show ayame zorder 2 at t32
+                        m "..."
+                        show monika zorder 2 at t31
+                        show ayame zorder 3 at f32
+                        ay "It doesn't matter anyway."
+                        ay "Begone."
+                        show monika at hide
+                        hide monika
+                        show ayame zorder 2 at t32
                         # Easy ref 2 - used so I can ctrl F to this later
                         call ch16_old_ayame_president
                     else:
@@ -9032,41 +9321,6 @@ label ch16_mainb:
                     s "Goodbye, everyone."
                     # Easy ref 3 - used so I can ctrl F to this later
                     call ch16_sayori_president
-    # Check save time of oldest save and give the player a bonus cutscene for their wait
-    $ oldest_save_time = get_oldest_save()
-    python:
-        import datetime
-        epoch_2022 = datetime.datetime(2024, 1, 1, 0, 0, 0).strftime('%s')
-        epoch_2022 = datetime.datetime(2023, 1, 1, 0, 0, 0).strftime('%s')
-        epoch_2022 = datetime.datetime(2022, 1, 1, 0, 0, 0).strftime('%s')
-        epoch_2021 = datetime.datetime(2021, 1, 1, 0, 0, 0).strftime('%s')
-        epoch_2020 = datetime.datetime(2020, 1, 1, 0, 0, 0).strftime('%s')
-        epoch_2019 = datetime.datetime(2019, 1, 1, 0, 0, 0).strftime('%s')
-    if oldest_save_time < epoch_2019:
-        cl "Wow, you truly have been waiting a long time."
-    elif oldest_save_time < epoch_2020:
-        cl "You've been waiting a long time, haven't you?"
-    elif oldest_save_time < epoch_2021:
-        cl "This has been quite some time coming, hasn't it?"
-    elif oldest_save_time < epoch_2022:
-        cl "So it's time to end this, isn't it?"
-    elif oldest_save_time < epoch_2023:
-        cl "Your patience may finally be rewarded."
-    elif oldest_save_time < epoch_2024:
-        cl "And so the final curtain draws near. And you didn't even have to wait that long, did you?"
-    else:
-        cl "Hello. The end is approaching. But are you really ready?"
-    if monika_type == 1 and ch12_markov_agree:
-        cl "I've noticed something. Something about this Monika."
-        cl "You twisted her, didn't you?"
-        cl "You made her fall in love with you and let her down when it mattered the most."
-        cl "She's under an evil influence now..."
-        cl "But..."
-        cl "I can offer a way to save her."
-        cl "To bring her back."
-        cl "But it won't be easy."
-    cl "Well then...let's get this show on the road."
-
     call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
     $ renpy.utter_restart()
     jump credits_trueroute
