@@ -5994,13 +5994,17 @@ default persistent.clerk_sayori_bad_ending = False
 default persistent.monika_date_reload = 0
 # Endings
 default persistent.any_bonus_day = False
-default persistent.true_sayori_bonus = False
-default persistent.true_monika_bonus = False
-default persistent.love_markov_bonus = False
-default persistent.ayame_bonus = False
-default persistent.mc_bonus = False
 default persistent.markov_ending = False
+
+define bonus_day_ayame = 0
+define bonus_day_mc = 1
+define bonus_day_monika = 2
+define bonus_day_markov = 3
+define bonus_day_sayori = 4
+define bonus_day_finale = 5
+default persistent.bonus_days_unlocked = [False, False, False, False, False]
 default persistent.bonus_days_completed = [False, False, False, False, False]
+
 default persistent.strawberry_usage = 0
 default persistent.main_story_finished = False
 # Local Save
@@ -6130,7 +6134,17 @@ default ch16_ay_decision_count = 0
 default ch16_m_plantold = False
 default ch16_ay_drink = False
 default ch16_ay_drink_own = False
+
+define ch16_ay_companions_none = 0
+define ch16_ay_companions_monika = 1
+define ch16_ay_companions_lost_natsuki = -2
+define ch16_ay_companions_natsuki = 2
+define ch16_ay_companions_lost_yuri = -3
+define ch16_ay_companions_yuri = 3
+define ch16_ay_companions_lost_natsuki_yuri = -4
+define ch16_ay_companions_natsuki_yuri = 4
 default ch16_ay_companions = 0
+
 default ch16_ay_gave_control = False
 default ch16_end_part = False
 default ch16_play_convince = False

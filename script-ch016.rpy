@@ -6807,12 +6807,6 @@ label ch16_main:
         mc "See you, Ayame."
     return
 
-label ch16_play_normal:
-    return
-
-label ch16_play_bad:
-    return
-
 label ch16_end:
     if ch15_s_together or (monika_type == 0 or (monika_type == 1 and ch12_markov_agree)):
         scene bg library with wipeleft_scene
@@ -8582,6 +8576,7 @@ label ch16_end:
             "Monika puts down the bag she's holding onto one of the desks."
             m "You really should have let me know we'd be in here."
             show sayori 1l zorder 3 at f53
+            show monika zorder 2 at t54
             s "Ehehe, sorry, Monika! I promise it won't happen again."
             s "I just completely forgot that you didn't know."
             show sayori zorder 2 at t53
@@ -14007,7 +14002,7 @@ label ch16_end:
         ay "Who are we taking with us?"
         "Monika.":
             label ch16_ay_skipmenu_1_force_m:
-            $ ch16_ay_companions = 1
+            $ ch16_ay_companions = ch16_ay_companions_monika
             $ renpy.hide_screen("timer_16_long_menu_skip",layer="timers")
             $ quick_menu = True
             ay 1a "You really want to take Monika with us?"
@@ -14115,7 +14110,7 @@ label ch16_end:
             m "So what are we waiting around for?"
             jump ch16_ay_afterskip_1
         "Natsuki." if not ch12_markov_agree:
-            $ ch16_ay_companions = 2
+            $ ch16_ay_companions = ch16_ay_companions_natsuki
             $ renpy.hide_screen("timer_16_long_menu_skip",layer="timers")
             $ quick_menu = True
             $ n_name = "Natsuki's Voice"
@@ -15320,7 +15315,7 @@ label ch16_end:
         mc "It's public property!"
         ay 1n "[player], this world isn't real."
         ay "Destruction of public property should be the least of your concerns."
-        if ch16_ay_companions == -2:
+        if ch16_ay_companions == ch16_ay_companions_lost_natsuki:
             ay "Besides, we already lost Natsuki."
             ay "Do you really want that to have been for nothing?"
         elif ch16_ay_companions == -3:

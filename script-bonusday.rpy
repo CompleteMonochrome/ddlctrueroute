@@ -125,39 +125,39 @@ label new_timelines:
     s "On second though, I don't want to know."
     s "Just make your choice. I don't want anything to do with this."
     s "And even if I did, I don't seem to have any control..."
-    call screen bonusdays_bonusdaychoice("bg notebook-original","Who is the president?",False,True,False,True,True, True,True,player)
+    call screen bonusdays_bonusdaychoice("bg notebook-original","Who is the president?",False,True,False,True,True,True,True,player)
     menu:
         "Who is the president?"
-        "Sayori." if persistent.true_sayori_bonus:
-            $ bonus_chapter = 0
+        "Sayori." if persistent.bonus_days_unlocked[bonus_day_sayori]:
+            $ bonus_chapter = bonus_day_sayori
             jump ch_sayori_bonus
-        "Monika." if persistent.true_monika_bonus or persistent.love_markov_bonus:
-            if persistent.true_monika_bonus and persistent.love_markov_bonus:
+        "Monika." if persistent.bonus_days_unlocked[bonus_day_monika] or persistent.bonus_days_unlocked[bonus_day_markov]:
+            if persistent.bonus_days_unlocked[bonus_day_monika] and persistent.bonus_days_unlocked[bonus_day_markov]:
                 menu:
                     "With the book's influence?"
                     "Yes.":
-                        $ bonus_chapter = 1
+                        $ bonus_chapter = bonus_day_monika
                         jump ch_monika_bonus
                     "No.":
-                        $ bonus_chapter = 2
+                        $ bonus_chapter = bonus_day_markov
                         jump ch_markov_bonus
-            elif persistent.true_monika_bonus:
-                $ bonus_chapter = 1
+            elif persistent.bonus_days_unlocked[bonus_day_monika]:
+                $ bonus_chapter = bonus_day_monika
                 $ s_name = "Sayori"
                 jump ch_monika_bonus
             else:
-                $ bonus_chapter = 2
+                $ bonus_chapter = bonus_day_markov
                 $ s_name = "Sayori"
                 jump ch_markov_bonus
-        "Ayame." if persistent.ayame_bonus:
-            $ bonus_chapter = 3
+        "Ayame." if persistent.bonus_days_unlocked[bonus_day_ayame]:
+            $ bonus_chapter = bonus_day_ayame
             $ s_name = "???"
             jump ch_ayame_bonus
-        "[player]" if persistent.ayame_bonus:
-            $ bonus_chapter = 4
+        "[player]" if persistent.bonus_days_unlocked[bonus_day_mc]:
+            $ bonus_chapter = bonus_day_mc
             $ s_name = "???"
             jump ch_mc_bonus
-        "..." if persistent.bonus_days_completed[0] and persistent.bonus_days_completed[1] and persistent.bonus_days_completed[2] and persistent.bonus_days_completed[3] and persistent.bonus_days_completed[4]:
-            $ bonus_chapter = 5
+        "..." if persistent.bonus_days_completed[bonus_day_ayame] and persistent.bonus_days_completed[bonus_day_mc] and persistent.bonus_days_completed[bonus_day_markov] and persistent.bonus_days_completed[bonus_day_monika] and persistent.bonus_days_completed[bonus_day_sayori]:
+            $ bonus_chapter = bonus_day_finale
             jump ch_finale
     return

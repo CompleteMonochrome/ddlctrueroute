@@ -52,7 +52,7 @@ label ch16_ayame_president:
     ay "It's quite strange...having all this power."
     ay "I never really wanted it but here we are."
     ay "I don't know why you chose me, instead of Sayori."
-    if ch16_ay_companions == 1:
+    if ch16_ay_companions == ch16_ay_companions_monika:
         ay "Or even Monika."
     ay "Maybe you wanted to see something different."
     ay "A future that doesn't have to be so painful or filled with so much troubles."
@@ -149,9 +149,9 @@ label ch16_ayame_president:
     ay "It won't go to waste. I'll make sure of it."
     $ get_achievement("*Welcome To The Book Club!*")
     # Unlock Ayame bonus day
-    if not persistent.ayame_bonus:
+    if not persistent.bonus_days_unlocked[bonus_day_ayame]:
         $ renpy.call_screen("dialog", "You have unlocked a bonus day! Access it through the main menu.", ok_action=Return())
-        $ persistent.ayame_bonus = True
+        $ persistent.bonus_days_unlocked[bonus_day_ayame] = True
         $ persistent.any_bonus_day = True
     return
 
@@ -280,7 +280,6 @@ label ch16_old_ayame_president:
     return
 
 label ch16_monika_president:
-    $ get_achievement("*Once Again*")
     m "It looks like we've come full circle, huh?"
     m "The presidency is back with me."
     m "So of course, that means I'm going to trap you again to make you mine."
@@ -356,10 +355,11 @@ label ch16_monika_president:
     m "There's finally nothing standing in our way."
     m "You'll be with me forever, won't you?"
     # Unlock True Monika bonus day
-    if not persistent.true_monika_bonus:
+    if not persistent.bonus_days_unlocked[bonus_day_monika]:
             $ renpy.call_screen("dialog", "You have unlocked a bonus day! Access it through the main menu.", ok_action=Return())
-            $ persistent.true_monika_bonus = True
+            $ persistent.bonus_days_unlocked[bonus_day_monika] = True
             $ persistent.any_bonus_day = True
+    $ get_achievement("*Once Again*")
     return
 
 label ch16_markov_president:
@@ -403,9 +403,9 @@ label ch16_markov_president:
         m "I'm so excited to spend my life with you."
         m "I'll make something for just the two of us, just wait."
         # Unlock evil Monika loving player bonus day
-        if not persistent.love_markov_bonus:
+        if not persistent.bonus_days_unlocked[bonus_day_markov]:
             $ renpy.call_screen("dialog", "You have unlocked a bonus day! Access it through the main menu.", ok_action=Return())
-            $ persistent.love_markov_bonus = True
+            $ persistent.bonus_days_unlocked[bonus_day_markov] = True
             $ persistent.any_bonus_day = True
     else:
         m "Ahaha."
@@ -533,12 +533,12 @@ label ch16_true_sayori_president:
     s "There won't be any more sadness around to ruin things."
     s "We can all just be happy and have a great time."
     s "Finally..."
-    $ get_achievement("*Unlimited Strawberries*")
     # Unlock True Sayori bonus day
-    if not persistent.true_sayori_bonus:
+    if not persistent.bonus_days_unlocked[bonus_day_sayori]:
         $ renpy.call_screen("dialog", "You have unlocked a bonus day! Access it through the main menu.", ok_action=Return())
-        $ persistent.true_sayori_bonus = True
+        $ persistent.bonus_days_unlocked[bonus_day_sayori] = True
         $ persistent.any_bonus_day = True
+    $ get_achievement("*Unlimited Strawberries*")
     return
 
 label ch16_sayori_president:
@@ -862,12 +862,12 @@ label ch16_mc_president:
     "All that effort you put to get this outcome won't come to waste."
     "I promise I'll show you the better world that I'll make for them."
     "The ending Sayori deserves. The ending they all deserve."
-    $ get_achievement("*It's Up To Me*")
     # Unlock MC bonus day
-    if not persistent.mc_bonus:
+    if not persistent.bonus_days_unlocked[bonus_day_mc]:
         $ renpy.call_screen("dialog", "You have unlocked a bonus day! Access it through the main menu.", ok_action=Return())
-        $ persistent.mc_bonus = True
+        $ persistent.bonus_days_unlocked[bonus_day_mc] = True
         $ persistent.any_bonus_day = True
+    $ get_achievement("*It's Up To Me*")
     return
 
 label ch16_try_delete_ayame_1:
@@ -1241,6 +1241,7 @@ label ch16_monika_save_2:
     "Monika quickly glances around before staring directly at me."
     m "Okay, you don't need to say it out loud..."
     m "He could be listening to us."
+    m "Wait..."
     m "You already know that he's her dad?!"
     mc "Well..."
     m "Never mind, how did you know what I was up to anyway?"

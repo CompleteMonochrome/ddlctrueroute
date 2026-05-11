@@ -59,7 +59,7 @@ label ch16_mainb:
     "Maybe this world is just another copy?"
     "Sayori wouldn't make it that easy, would she?"
     "Okay, I can do this."
-    if ch16_ay_companions <= 0:
+    if ch16_ay_companions <= ch16_ay_companions_none:
         "I was alone before, I can regroup with her again."
     else:
         "I was alone before, I can regroup with them again."
@@ -137,7 +137,7 @@ label ch16_mainb:
     ay "I don't know how long we have, but it's best we act quickly."
     ay "I have a suspicion we don't want to be here for too long."
     mc "Alright..."
-    if ch16_ay_companions == 4:
+    if ch16_ay_companions == ch16_ay_companions_natsuki_yuri:
         ay "But first, you need to do the same for the other two as well."
         mc "How come I can't hear their voices?"
         ay "I...don't know. It might be because I'm the only one you still have a link to."
@@ -229,7 +229,7 @@ label ch16_mainb:
         window show(None)
         y "I-I'm here.{fast} At least, I think I am."
         window auto
-        "Yuri figure raises one of its hand and tries to wave."
+        "Yuri's figure raises one of its hand and tries to wave."
         "Her face, like I expected, started to become shadowed too."
         ay "{i}(There it is again...){/i}"
         y "What are we doing here?"
@@ -920,7 +920,7 @@ label ch16_mainb:
         ay 3m "Ready to go then?"
         mc "No, but let's do it."
         ay "Music to my ears, let's do it."
-    elif ch16_ay_companions == 3:
+    elif ch16_ay_companions == ch16_ay_companions_yuri:
         ay "You have to imagine something for Yuri as well."
         ay "I don't know if she's here because she doesn't have a voice."
         ay "But I can faintly sense her presence."
@@ -1659,7 +1659,7 @@ label ch16_mainb:
         ay 3m "Ready to go then?"
         mc "No, but let's do it."
         ay "Music to my ears, let's do it."
-    elif ch16_ay_companions == 2:
+    elif ch16_ay_companions == ch16_ay_companions_natsuki:
         ay "You have to imagine something for Natsuki as well."
         ay "I don't know if she's here because she doesn't have a voice but she should be."
         ay "I can sense her presence but just barely."
@@ -2403,7 +2403,7 @@ label ch16_mainb:
         ay 3m "Ready to go then?"
         mc "No, but let's do it."
         ay "Music to my ears, let's do it."
-    elif ch16_ay_companions == 1:
+    elif ch16_ay_companions == ch16_ay_companions_monika:
         ay "You need to do the same for Monika as well."
         mc "Why can't I hear her?"
         ay "I...don't know. It might be because I'm the only one you still have a link to."
@@ -3252,7 +3252,7 @@ label ch16_mainb:
         mc "No, but let's do it."
         show ayame zorder 2 at f22
         ay "Music to my ears, let's do it."
-    elif ch16_ay_companions <= 0:
+    elif ch16_ay_companions <= ch16_ay_companions_none:
         ay "So it's just the two of us."
         ay "Which means there's only two minds to figure out what the hell is going on here."
         mc "How did you control that thing anyway?"
@@ -3878,7 +3878,7 @@ label ch16_mainb:
         ay 3m "Ready to go then?"
         mc "No, but let's do it."
         ay "Music to my ears, let's do it."
-    if ch16_ay_companions == 4 or ch16_ay_companions == 3 or ch16_ay_companions == 2 or ch16_ay_companions <= 0:
+    if ch16_ay_companions == ch16_ay_companions_natsuki_yuri or ch16_ay_companions == ch16_ay_companions_yuri or ch16_ay_companions == ch16_ay_companions_natsuki or ch16_ay_companions <= ch16_ay_companions_none:
         "Ayame timidly takes a few steps forward before taking a deep inhale."
         "After a moment, she walks forward."
         "And I, for better or worse, follow right behind her."
@@ -4093,7 +4093,7 @@ label ch16_mainb:
         s "Come on, [player]. You have to stop this."
         s "I really don't know what's gotten over you."
         s "Do you need some help?"
-        if ch16_ay_companions == 4:
+        if ch16_ay_companions == ch16_ay_companions_natsuki_yuri:
             s 1h "I just want to help you accept this reality.{nw}"
             show yuri 1r zorder 2 at i31
             y "Don't listen to her!{nw}"
@@ -4117,7 +4117,7 @@ label ch16_mainb:
             s 1c "Huh?"
             "Sayori turns around."
             s 1h "There's no one there, [player]."
-        elif ch16_ay_companions == 3:
+        elif ch16_ay_companions == ch16_ay_companions_yuri:
             s 1h "I just want to help you accept this reality.{nw}"
             show yuri 1r zorder 2 at i31
             y "Don't listen to her!{nw}"
@@ -4137,7 +4137,7 @@ label ch16_mainb:
             s 1c "Huh?"
             "Sayori turns around."
             s 1h "There's no one there, [player]."
-        elif ch16_ay_companions == 2:
+        elif ch16_ay_companions == ch16_ay_companions_natsuki:
             s 1h "I just want to help you accept this reality.{nw}"
             show natsuki 1e zorder 2 at i33
             n "She's trying to trick you!{nw}"
@@ -4162,10 +4162,10 @@ label ch16_mainb:
         s "Let's do this, together."
         $ sayori_convince = 4
         $ sayori_convince_start = 4
-        if ch16_ay_companions == 4:
+        if ch16_ay_companions == ch16_ay_companions_natsuki_yuri:
             $ sayori_convince = 2
             $ sayori_convince_start = 2
-        elif ch16_ay_companions == 3 or ch16_ay_companions == 2:
+        elif ch16_ay_companions == ch16_ay_companions_yuri or ch16_ay_companions == ch16_ay_companions_natsuki:
             $ sayori_convince = 3
             $ sayori_convince_start = 3
         label sayori_convince_1_4:
@@ -4237,7 +4237,7 @@ label ch16_mainb:
         ay "I fear that as we get closer to the rope, it's only gonna become harder."
         ay 4h "Just stick to your truth, and you'll be fine."
         ay "Don't get tricked."
-        if ch16_ay_companions == 4:
+        if ch16_ay_companions == ch16_ay_companions_natsuki_yuri:
             mc "I thought I heard Natsuki and Yuri's voices while I was there."
             mc "They told me it was a trick..."
             ay 4m "Hmm...that's good. It shows that they're still here somewhere."
@@ -4245,7 +4245,7 @@ label ch16_mainb:
             mc "Did you think she really would?"
             ay 4n "I couldn't sense their souls in this world."
             ay "At least, not after you created their bodies."
-        elif ch16_ay_companions == 3:
+        elif ch16_ay_companions == ch16_ay_companions_yuri:
             mc "I thought I heard Yuri's voice while I was there."
             mc "She told me it was a trick..."
             ay 4m "Hmm...that's good. It shows that she's still here somewhere."
@@ -4253,7 +4253,7 @@ label ch16_mainb:
             mc "Did you think she really would?"
             ay 4n "I couldn't sense her soul in this world."
             ay "At least, not after you created her body."
-        elif ch16_ay_companions == 2:
+        elif ch16_ay_companions == ch16_ay_companions_natsuki:
             mc "I thought I heard Natsuki's voice while I was there."
             mc "She told me it was a trick..."
             ay 4m "Hmm...that's good. It shows that she's still here somewhere."
@@ -4463,17 +4463,17 @@ label ch16_mainb:
             except: pass
             try: os.remove(config.basedir + "/dont be fooled.txt")
             except: pass
-        if ch16_ay_companions == 4:
+        if ch16_ay_companions == ch16_ay_companions_natsuki_yuri:
             python:
                 try: renpy.file(config.basedir + "/wait")
                 except: open(config.basedir + "/wait", "wb").write(renpy.file("wait").read())
                 try: renpy.file(config.basedir + "/do nothing")
                 except: open(config.basedir + "/do nothing", "wb").write(renpy.file("do nothing").read())
-        elif ch16_ay_companions == 3:
+        elif ch16_ay_companions == ch16_ay_companions_yuri:
             python:
                 try: renpy.file(config.basedir + "/wait")
                 except: open(config.basedir + "/wait", "wb").write(renpy.file("wait").read())
-        elif ch16_ay_companions == 2:
+        elif ch16_ay_companions == ch16_ay_companions_natsuki:
             python:
                 try: renpy.file(config.basedir + "/do nothing")
                 except: open(config.basedir + "/do nothing", "wb").write(renpy.file("do nothing").read())
@@ -4979,7 +4979,7 @@ label ch16_mainb:
         s 2bc "The truth is I could end everything right now, if I really wanted to."
         s "But since you're here now, we may as well talk, right?"
         mc "Where is Ayame?"
-        if ch16_ay_companions == 4:
+        if ch16_ay_companions == ch16_ay_companions_natsuki_yuri:
             s 2bd "The three of them are downstairs already."
             s "You were the last one to wake up."
             mc "Three of them? Not just Ayame?"
@@ -4988,7 +4988,7 @@ label ch16_mainb:
             s "What? Why are you looking at me like that?"
             mc "Well, it's just...what you did with them before."
             s 1bj "Do you really think I'd actually hurt them?"
-        elif ch16_ay_companions == 3:
+        elif ch16_ay_companions == ch16_ay_companions_yuri:
             s 2bd "The two of them are downstairs already."
             s "You were the last one to wake up."
             mc "Two of them? Not just Ayame?"
@@ -4997,7 +4997,7 @@ label ch16_mainb:
             s "What? Why are you looking at me like that?"
             mc "Well, it's just...what you did with them before."
             s 1bj "Do you really think I'd actually hurt her?"
-        elif ch16_ay_companions == 2:
+        elif ch16_ay_companions == ch16_ay_companions_natsuki:
             s 2bd "The two of them are downstairs already."
             s "You were the last one to wake up."
             mc "Two of them? Not just Ayame?"
@@ -5060,7 +5060,7 @@ label ch16_mainb:
         s 1bk "Or the truth?"
         s "I already told you that I made up my mind."
         s "There's nothing that can change it now."
-        if ch16_ay_companions > 1:
+        if ch16_ay_companions > ch16_ay_companions_monika:
             mc "You said the others are downstairs, right?"
             s 1bc "I did. I could call them up now if you want."
             s 1ba "But that won't be necessary since they're about to come in anyway."
@@ -5069,7 +5069,7 @@ label ch16_mainb:
             s 1bc "I did. I could call her up now if you want."
             s 1ba "But that won't be necessary since she's about to come in anyway."
         mc "Huh?"
-        if ch16_ay_companions == 4:
+        if ch16_ay_companions == ch16_ay_companions_natsuki_yuri:
             show natsuki 1c zorder 2 at t41
             show yuri 1h zorder 2 at t42
             show ayame 1l zorder 2 at t43
@@ -5116,7 +5116,7 @@ label ch16_mainb:
             y "We really tried, but it wasn't enough."
             show yuri zorder 2 at t42
             show sayori 1bd zorder 3 at f44
-        elif ch16_ay_companions == 3:
+        elif ch16_ay_companions == ch16_ay_companions_yuri:
             show yuri 1h zorder 2 at t42
             show ayame 1l zorder 2 at t43
             show sayori 1ba zorder 2 at t44
@@ -5155,7 +5155,7 @@ label ch16_mainb:
             y "We really tried, but it wasn't enough."
             show yuri zorder 2 at t42
             show sayori 1bd zorder 3 at f44
-        elif ch16_ay_companions == 2:
+        elif ch16_ay_companions == ch16_ay_companions_natsuki:
             show natsuki 1c zorder 2 at t41
             show ayame 1l zorder 2 at t43
             show sayori 1ba zorder 2 at t44
@@ -5228,11 +5228,11 @@ label ch16_mainb:
         s "Don't you agree it's time to stop this?"
         s "I just want our last moments to be happy. If you think that's bad then..."
         s "Well, I suppose I don't need you to think it's good or bad. I just need you to accept."
-        if ch16_ay_companions == 4:
+        if ch16_ay_companions == ch16_ay_companions_natsuki_yuri:
             s "I'll even bring Monika here too. There's no point in fighting anymore."
-        elif ch16_ay_companions == 3:
+        elif ch16_ay_companions == ch16_ay_companions_yuri:
             s "I'll even bring Natsuki and Monika here too. There's no point in fighting anymore."
-        elif ch16_ay_companions == 2:
+        elif ch16_ay_companions == ch16_ay_companions_natsuki:
             s "I'll even bring Yuri and Monika here too. There's no point in fighting anymore."
         else:
             s "I'll even bring the others here too. There's no point in fighting anymore."
@@ -5275,24 +5275,43 @@ label ch16_mainb:
         show ayame zorder 2 at t43
         "It looks like this is the real end world."
         "I must have been caught in one of Sayori's tricks again..."
-        if ch16_ay_companions == 4:
+        if ch16_ay_companions == ch16_ay_companions_natsuki_yuri:
             mc "What happened to Natsuki and Yuri?"
             mc "Where are they?"
             show sayori 1bk zorder 3 at f44
             s "They're...somewhere safe. I'm telling you the truth about that at least."
-        elif ch16_ay_companions == 3:
+            mc "What did you do to her?!"
+            s "I took her away from the world...temporarily. It's safer for her that way."
+            s "But I have their DNA safely stored. They'll be okay."
+            "Is that why she wanted our hair...? She's making...backups of us?"
+            "I can't disagree that they're safer away from Sayori but we came this far together..."
+        elif ch16_ay_companions == ch16_ay_companions_yuri:
             mc "What happened to Yuri?"
             mc "Where is she?"
             show sayori 1bk zorder 3 at f44
             s "She's...somewhere safe. I'm telling you the truth about that at least."
-        elif ch16_ay_companions == 2:
+            mc "What did you do to her?!"
+            s "I took her away from the world...temporarily. It's safer for her that way."
+            s "But I have her DNA safely stored. She'll be okay."
+            "Is that why she wanted our hair...? She's making...backups of us?"
+            "I can't disagree that she's safer away from Sayori but we came this far together..."
+        elif ch16_ay_companions == ch16_ay_companions_natsuki:
             mc "What happened to Natsuki?"
             mc "Where is she?"
             show sayori 1bk zorder 3 at f44
             s "She's...somewhere safe. I'm telling you the truth about that at least."
+            mc "What did you do to her?!"
+            s "I took her away from the world...temporarily. It's safer for her that way."
+            s "But I have her DNA safely stored. She'll be okay."
+            "Is that why she wanted our hair...? She's making...backups of us?"
+            "I can't disagree that she's safer away from Sayori but we came this far together..."
         else:
             show sayori 1bk zorder 3 at f44
             s "Oh no..."
+            s "I should have known I couldn't just remove you from this world."
+            s "Stupid...stupid...!"
+            "Sayori puts a palm on her forehead."
+            s "It doesn't matter anymore..."
         "Sayori looks at Ayame and I and sighs."
         s "I honestly thought I had it. I thought that would be the end."
         s "That we could all finally go to rest."
@@ -5774,7 +5793,7 @@ label ch16_mainb:
         s "Come on, [player]. You have to stop this."
         s "I really don't know what's gotten over you."
         s "Do you need some help?"
-        if ch16_ay_companions == 4:
+        if ch16_ay_companions == ch16_ay_companions_natsuki_yuri:
             s 1h "I just want to help you accept this reality.{nw}"
             show yuri 1r zorder 2 at i31
             y "Don't listen to her!{nw}"
@@ -5798,7 +5817,7 @@ label ch16_mainb:
             s 1c "Huh?"
             "Sayori turns around."
             s 1h "There's no one there, [player]."
-        elif ch16_ay_companions == 3:
+        elif ch16_ay_companions == ch16_ay_companions_yuri:
             s 1h "I just want to help you accept this reality.{nw}"
             show yuri 1r zorder 2 at i31
             y "Don't listen to her!{nw}"
@@ -5818,7 +5837,7 @@ label ch16_mainb:
             s 1c "Huh?"
             "Sayori turns around."
             s 1h "There's no one there, [player]."
-        elif ch16_ay_companions == 2:
+        elif ch16_ay_companions == ch16_ay_companions_natsuki:
             s 1h "I just want to help you accept this reality.{nw}"
             show natsuki 1e zorder 2 at i33
             n "She's trying to trick you!{nw}"
@@ -5910,7 +5929,7 @@ label ch16_mainb:
         ay "I fear that as we get closer to the rope, it's only gonna become harder."
         ay 4h "Just stick to your truth, and you'll be fine."
         ay "Don't get tricked."
-        if ch16_ay_companions == 4:
+        if ch16_ay_companions == ch16_ay_companions_natsuki_yuri:
             mc "I thought I heard Natsuki and Yuri's voices while I was there."
             mc "They told me it was a trick..."
             ay 4m "Hmm...that's good. It shows that they're still here somewhere."
@@ -5918,7 +5937,7 @@ label ch16_mainb:
             mc "Did you think she really would?"
             ay 4n "I couldn't sense their souls in this world."
             ay "At least, not after you created their bodies."
-        elif ch16_ay_companions == 3:
+        elif ch16_ay_companions == ch16_ay_companions_yuri:
             mc "I thought I heard Yuri's voice while I was there."
             mc "She told me it was a trick..."
             ay 4m "Hmm...that's good. It shows that she's still here somewhere."
@@ -5926,7 +5945,7 @@ label ch16_mainb:
             mc "Did you think she really would?"
             ay 4n "I couldn't sense her soul in this world."
             ay "At least, not after you created her body."
-        elif ch16_ay_companions == 2:
+        elif ch16_ay_companions == ch16_ay_companions_natsuki:
             mc "I thought I heard Natsuki's voice while I was there."
             mc "She told me it was a trick..."
             ay 4m "Hmm...that's good. It shows that she's still here somewhere."
@@ -7028,6 +7047,8 @@ label ch16_mainb:
                 ay "I know you probably know better than I how this world works."
                 ay "There's no doubt that you would be a better president than I."
                 ay "Maybe I can help you, if you let me."
+                ay "I'm just so tired of all this conflict."
+                ay "So tired of not being able to do anything about it."
             # Remove when done
             call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
             $ renpy.utter_restart()
@@ -7048,11 +7069,6 @@ label ch16_mainb:
             "Ayame seems surprised at Monika's suggestion."
             "Does she know something?"
             show ayame zorder 2 at t32
-
-            # Remove when done
-            call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
-            $ renpy.utter_restart()
-
             show monika zorder 3 at f31
             m "I'll take the stress of doing this away from you, Sayori."
             m "Return the presidency to me, and you won't have to be the one responsible."
@@ -7625,6 +7641,7 @@ label ch16_mainb:
                 else:
                     m "Sayori, you need to compose yourself."
                     m "You're the president of the club, you know."
+                    m "You can't be acting like that at a moment liek this."
                 show monika zorder 2 at t31
                 show sayori zorder 3 at f33
                 s "Y-You're right."
@@ -8303,9 +8320,11 @@ label ch16_mainb:
                         show ayame zorder 3 at f32
                         ay "It doesn't matter anyway."
                         ay "Begone."
-                        show monika at hide
+                        show monika at thide
                         hide monika
                         show ayame zorder 2 at t32
+                        "Monika seems to vanish into thin air."
+                        "It's just the two of us now..."
                         # Easy ref 2 - used so I can ctrl F to this later
                         call ch16_old_ayame_president
                     else:
@@ -9321,8 +9340,6 @@ label ch16_mainb:
                     s "Goodbye, everyone."
                     # Easy ref 3 - used so I can ctrl F to this later
                     call ch16_sayori_president
-    call screen dialog(message="To be continued!\nThanks for playing, keep an eye out on reddit and discord for updates!", ok_action=Return())
-    $ renpy.utter_restart()
     jump credits_trueroute
 
 # Let Sayori 'help'
@@ -9348,7 +9365,7 @@ label ch16_convince_1_end:
     menu:
         "I agree.":
             pass
-        "No, this isn't right" if (ch16_ay_companions == 4 or ch16_ay_companions == 1 or persistent.markov_agreed):
+        "No, this isn't right" if (ch16_ay_companions == ch16_ay_companions_natsuki_yuri or ch16_ay_companions == ch16_ay_companions_monika or persistent.markov_agreed):
             s 1i "[player], can you please just stop this nonsense?"
             s "Let's just walk to school or we're going to be late."
             mc "Late? Sayori, this doesn't make any sense."
